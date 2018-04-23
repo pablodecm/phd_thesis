@@ -2,11 +2,14 @@ PANDOC=pandoc
 
 BASEDIR=$(CURDIR)
 INPUTDIR=$(BASEDIR)/src
+TEMPLATE=$(BASEDIR)/templates/default.latex
+
 
 pdf:
 	pandoc "$(INPUTDIR)"/*.md \
 	-o "thesis.pdf" \
---top-level-division=chapter \
+	--template "$(TEMPLATE)" \
+  --top-level-division=chapter \
 	--verbose
 
 .PHONY: pdf
