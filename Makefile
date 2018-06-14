@@ -10,6 +10,7 @@ pdf:
 	-o "thesis.pdf" \
 	--template "$(TEMPLATE)" \
   --top-level-division=chapter \
+	--number-sections \
 	--verbose
 
 .PHONY: pdf

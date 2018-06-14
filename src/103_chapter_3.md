@@ -1,4 +1,4 @@
 # Statistical Inference
 
-\epigraph{Like is complicated, but
+\epigraph{Life is complicated, but
   not uninteresting.}{Jerzy Neyman}
