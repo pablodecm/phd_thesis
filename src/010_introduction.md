@@ -1,4 +1,4 @@
-# Introduction
+# Introduction {.unnumbered}
 
 \epigraph{Every new beginning comes from some other beginning's end.}{Seneca}
 
@@ -84,7 +84,7 @@ The mentioned perspective shift combined with the use of practical but
 minimal examples has been really useful to identify possible shortcomings
 on the way data analysis is carried out at the LHC and develop new techniques
 capable of addressing them. However, I am of the opinion the
-projects mentioned and presented in this document not but a first step
-of what is possible and the improvement of data analysis techniques
-and tools is a promising route for the advancement of our understanding
+projects mentioned and presented in this document are not but a first step
+of what is possible; and the betterment of data analysis techniques
+and tools could be a promising route for the advancement of our understanding
 of basic building blocks of the universe.
