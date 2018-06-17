@@ -1,6 +1,6 @@
 # Introduction {.unnumbered}
 
-\epigraph{Every new beginning comes from some other beginning's end.}{Seneca}
+\epigraph{Every new beginning comes from some other beginning's end.}{Seneca the Younger}
 
 Humans strive for understanding the world by seeking explanations
 to the varied natural phenomena happening around us,
@@ -75,16 +75,91 @@ they can be linked to other data-centric disciplines such as statistics
 and machine learning.
 
 The general methodology considered in this work consists on breaking the
-main research goal in a series of applied problems, express them in a
+main research goals in a series of applied problems, express them in a
 domain-generic way and understand what is their role in view of the
 final aim. When possible, the concepts and methods presented will be
-illustrated with simple examples which can be a
-great help to understand their main principles.
+illustrated with simple use cases which can be a
+great help to understand their working principles.
 The mentioned perspective shift combined with the use of practical but
 minimal examples has been really useful to identify possible shortcomings
 on the way data analysis is carried out at the LHC and develop new techniques
-capable of addressing them. However, I am of the opinion the
-projects mentioned and presented in this document are not but a first step
+capable of addressing them. Nevertheless, I am of the opinion the
+projects mentioned and presented here are nothing but the first step
 of what is possible; and the betterment of data analysis techniques
 and tools could be a promising route for the advancement of our understanding
 of basic building blocks of the universe.
+
+Once the work in this thesis as been motivated and put in context,
+its formal structure
+can be discussed in more detail.
+[Chapter @sec:theory] provides
+an overview of our current comprehension of the
+properties and interactions of the fundamental constituents of nature,
+followed by a summary of the limitations of our understanding
+together with the main proposed testable alternative explanations.
+The links between the mathematical description of our universe
+and the computation of experimental will
+be highlighted when describing the theoretical foundations.
+
+The focus will shift in [Chapter @sec:experiment] towards how these
+theories can be experimentally validated through scientific experiments. In
+particular, we will discuss how the design and characteristics of
+general purpose experiments at high-energy colliders are relevant for
+the obtainment of valuable data that gives some insight on the
+fundamental properties of the cosmos. The Compact Muon Experiment (CMS)
+detector at the Large Hadron Collider (LHC) will serve as the default
+example of such an instrument,
+because it is the scientific experiment that served
+as the academic context during my graduate years and the main driver
+of some of the projects include in this report. Experimental modelling and
+simulation will be emphasized in this chapter, due to their importance when
+extracting knowledge from the acquired data.
+
+Indeed, the problem of obtaining useful information from data is so involved
+in modern scientific experiments that a standalone chapter will be centered
+on statistical inference concepts and techniques. In [Chapter @sec:statinf],
+we will review the main approaches for making quantitative statements based
+on data and their shortcomings. Two domain-specific aspects of data-analysis
+in high energy physics will be remarked: the generative-only characteristic
+of accurate experimental models and the challenges of deal with known unknowns
+we are not interested in, commonly referred as nuisance parameters.
+
+Advancements in computational power coupled with
+extensive research effort on the intersection between algorithms and
+statistics during last decades have contributed
+to the development of techniques that deal with the automatic
+improvement at certain objective tasks given some data. An introduction to this
+family of methods, generally referred as machine learning techniques,
+and a review of their
+usefulness for tackling some common data analysis problem in experimental
+particle physics are included in [Chapter @sec:machine_learning]. Some
+non-trivial connections between the use of these techniques and the
+details of the underlying statistical issues will be stressed.
+
+After such a multi-disciplinary survey of the theoretical and experimental
+foundations of our understanding of nature and the relevant
+techniques that allow the extract valuable information from the data,
+[Chapter @sec:lhc_analysis] will present a complete example of an analysis
+at the LHC that applies them to a real-world scenario. Specifically, the use
+case will be the search of evidence of anomalous Higgs boson pair production
+using CMS data at the LHC, which can be a smoking gun pointing to alternative
+explanations to the current theoretical comprehension of the fundamental
+interactions and constituents of the universe.
+
+The aforementioned example will be useful to epitomise the main statistical
+and methodological challenges on the way LHC analyses are carried out. In
+[Chaper @sec:new_techniques], we will try to shed some light on these issues,
+and demonstrate how a novel machine learning technique we have developed
+can deal with one of the most relevant concerns:
+learning summary statistics using inference-aware
+losses that account for the effect of nuisance parameters. The limitations of
+the proposed method as well as alternative solutions to increase the discovery
+potential of the LHC will be explored.
+
+This document will conclude with [Chapter @sec:conclusions], where
+the main contributions and outcomes
+of this work will be summarised
+together with some ideas for future
+extensions and improvements.
+
+<!-- mention the priorisation of ideas over technical details -->
