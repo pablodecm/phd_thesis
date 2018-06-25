@@ -13,61 +13,63 @@ also known as data, has a central role in updating these explicative
 theories, because it can provide quantitative or qualitative
 support of some candidate explanations over others.
 
-However, direct sensory perception and personal information processing has a
+Direct sensory perception and personal information processing has a
 limited investigative reach and it is easily affected by subjective
 conditions. Well understood and calibrated instruments of
 measurement can be used instead for data acquisition, in controlled
-settings referred as scientific experiments, so that
+settings referred to as scientific experiments, so that
 quantifiability and precision are enhanced. The same
 applies to theoretical modelling and experimental data analysis, where robust
-mathematical and computational procedures empower more accurate
+mathematical and computational procedures empower researchers
+to construct more accurate
 descriptions of the world we live in. These establish a
 strong coupling between technology and science, by which technical
 and conceptual innovations allow the development of better tools,
-which in term lead to more scientific knowledge.
+which in turn lead to more scientific knowledge.
 
 The universe is filled with an abundance of
 interesting situations occurring at very
 different time and space scales, so curious observers might
 face a difficult choice when deciding what to focus their scientific
-attention. Nevertheless, there seems to be a complexity hierarchy
+attention on. Nevertheless, there seems to be a complexity hierarchy
 whereby larger physical systems are composed by simpler parts, and
-their properties can be explained by means of their
-constituents interactions. Hence, a worthy path of exploration can
+the properties of the former can be explained by means of those of the latter.
+Hence, a worthy path of exploration can
 start with the study of the most fundamental components of nature and
-their dynamics.  At our current level of understanding,
+their dynamics. At our current level of understanding,
 we can reason this would be a quest motivated solely by curiosity, pushed
 by our desire of making sense of the structure of reality, and not
 a pragmatic proxy for the development of technological applications.
 That will be our motivation to delve into experimental particle
 physics, a discipline dealing with the practical study of the
-most elementary constituents of matter and its interactions.
+most elementary constituents of matter and their interactions.
 
 It is important to remark that the elementary quality of the chosen subject
 of study does not
 imply that the journey towards valuable scientific knowledge in this area
-area will be a simple one. On the contrary, as it will be made evident
-by the following chapters, this undertaking poses grand technical
+will be a simple one. On the contrary, as the following chapters
+will be made evident, this undertaking poses grand technical
 and non-technical challenges which in many cases require novel solutions.
 Furthermore, the problems at hand are often closely related with those
 present in other research or technological fields, so their findings
 and innovations can be repurposed. Oftentimes this can even be a
 bidirectional relation, where the obstacles are challenging or
 original enough that solutions have to go beyond the state of
-the art in the relevant domain. In general, the pursuance of fundamental
-explanations does require solutions for multitude of applied problems.
+the art in the relevant applied domain. In general, the pursuance of fundamental
+explanations does require solutions for multitude of practical problems.
 
-Hence, advances and expertise from other disciplines can accelerate
-significantly the rate of progress in this fundamental research domain.
+Advances and expertise from other disciplines can accelerate
+significantly the rate of progress in a fundamental research domain
+such as experimental particle physics.
 This is specially
-relevant in areas where the infrastructure changes required are low
-such as data analysis. Yet, some
+relevant in areas such as data analysis,
+where the infrastructure changes required in evolving environments are low.
+Yet, some
 barriers exist against the proliferation of interdisciplinarity, such as field
-specific language (also known as scientific jargon) and seemingly unclear
+specific language (also known as jargon) and seemingly unclear
 problem descriptions for collaborators with different backgrounds.
 This document, in addition of presenting the main research
-results of the projects I have been involved during the last years
-as a graduate student,
+results of the projects I have been involved in the recent past,
 will attempt to reduce this communication gap by trying to clearly
 state the main
 data analysis challenges we face in experimental particle physics in a way
@@ -77,78 +79,81 @@ and machine learning.
 The general methodology considered in this work consists on breaking the
 main research goals in a series of applied problems, express them in a
 domain-generic way and understand what is their role in view of the
-final aim. When possible, the concepts and methods presented will be
+final aim. When possible, the presented concepts and methods will be
 illustrated with simple use cases which can be a
 great help to understand their working principles.
 The mentioned perspective shift combined with the use of practical but
 minimal examples has been really useful to identify possible shortcomings
-on the way data analysis is carried out at the LHC and develop new techniques
-capable of addressing them. Nevertheless, I am of the opinion the
+on the way data analysis is carried out at the LHC, as well as to
+develop new techniques
+capable of addressing them. Nevertheless, I am of the opinion that the
 projects mentioned and presented here are nothing but the first step
-of what is possible; and the betterment of data analysis techniques
+of what is possible; and the evolution of data analysis techniques
 and tools could be a promising route for the advancement of our understanding
 of basic building blocks of the universe.
 
-Once the work in this thesis as been motivated and put in context,
-its formal structure
-can be discussed in more detail.
+This thesis is organised as follows.
 [Chapter @sec:theory] provides
 an overview of our current comprehension of the
 properties and interactions of the fundamental constituents of nature,
 followed by a summary of the limitations of our understanding
 together with the main proposed testable alternative explanations.
 The links between the mathematical description of our universe
-and the computation of experimental will
+and the computation of experimental observables will
 be highlighted when describing the theoretical foundations.
 
-The focus will shift in [Chapter @sec:experiment] towards how these
+The focus shifts in [Chapter @sec:experiment] towards how these
 theories can be experimentally validated through scientific experiments. In
-particular, we will discuss how the design and characteristics of
+particular, we discuss how the design and characteristics of
 general purpose experiments at high-energy colliders are relevant for
-the obtainment of valuable data that gives some insight on the
+the attainment of valuable data that yields new insights on the
 fundamental properties of the cosmos. The Compact Muon Experiment (CMS)
-detector at the Large Hadron Collider (LHC) will serve as the default
+detector at the Large Hadron Collider (LHC) serves as the default
 example of such an instrument,
-because it is the scientific experiment that served
-as the academic context during my graduate years and the main driver
+because it is the scientific experiment that provided
+the academic context during my graduate years and the main driver
 of some of the projects include in this report. Experimental modelling and
-simulation will be emphasized in this chapter, due to their importance when
+simulation will be emphasised in this chapter, due to their importance when
 extracting knowledge from the acquired data.
 
 Indeed, the problem of obtaining useful information from data is so involved
 in modern scientific experiments that a standalone chapter will be centered
-on statistical inference concepts and techniques. In [Chapter @sec:statinf],
-we will review the main approaches for making quantitative statements based
+on statistical inference concepts and techniques. In [Chapter @sec:statinf]
+we review the main approaches for making quantitative statements based
 on data and their shortcomings. Two domain-specific aspects of data-analysis
 in high energy physics will be remarked: the generative-only characteristic
-of accurate experimental models and the challenges of deal with known unknowns
+of accurate experimental models and the challenges of dealing with known unknowns
 we are not interested in, commonly referred as nuisance parameters.
 
 Advancements in computational power coupled with
-extensive research effort on the intersection between algorithms and
+extensive research effort at the intersection between computer science and
 statistics during last decades have contributed
 to the development of techniques that deal with the automatic
-improvement at certain objective tasks given some data. An introduction to this
-family of methods, generally referred as machine learning techniques,
+improvement of certain objective tasks given some data. An introduction to this
+family of methods, generally referred to as machine learning techniques,
 and a review of their
 usefulness for tackling some common data analysis problem in experimental
-particle physics are included in [Chapter @sec:machine_learning]. Some
-non-trivial connections between the use of these techniques and the
+particle physics, are included in [Chapter @sec:machine_learning]. Some
+non-trivial connections between the use of those techniques and the
 details of the underlying statistical issues will be stressed.
 
-After such a multi-disciplinary survey of the theoretical and experimental
+The fist four chapters, as outlined above, offer a multi-disciplinary survey
+of the theoretical and experimental
 foundations of our understanding of nature and the relevant
-techniques that allow the extract valuable information from the data,
-[Chapter @sec:lhc_analysis] will present a complete example of an analysis
-at the LHC that applies them to a real-world scenario. Specifically, the use
-case will be the search of evidence of anomalous Higgs boson pair production
+techniques that allow the extract valuable information from the data.
+In contrast,
+[Chapter @sec:lhc_analysis] presents a complete example of an analysis
+at the LHC that applies those techniques to a real-world scenario.
+Specifically, the use
+case will be the search for evidence of anomalous non-resonant
+Higgs boson pair production
 using CMS data at the LHC, which can be a smoking gun pointing to alternative
 explanations to the current theoretical comprehension of the fundamental
 interactions and constituents of the universe.
 
 The aforementioned example will be useful to epitomise the main statistical
 and methodological challenges on the way LHC analyses are carried out. In
-[Chaper @sec:new_techniques], we will try to shed some light on these issues,
+[Chaper @sec:new_techniques], we try to shed some light on these issues,
 and demonstrate how a novel machine learning technique we have developed
 can deal with one of the most relevant concerns:
 learning summary statistics using inference-aware
