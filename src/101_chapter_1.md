@@ -30,7 +30,7 @@ theory that classifies all known types of elementary particles and
 describes their electromagnetic, weak and strong interactions.
 Within this fundamental theory, all known matter and energy phenomena
 can be explained in terms of the kinematics and interactions
-of elementary particles, which can in term be understood as
+of elementary particles, which can in turn be understood as
 local excitations of different fields that permeate our universe.
 
 From a historical perspective, this theory is the product of
@@ -44,14 +44,17 @@ theory that respects a set of symmetries, namely
 a global Poincaré group symmetry (translational, rotational
 and relativistic
 boost invariance) and a local
-$SU(3)_{C}\times SU(2)_{L} \times U(1)_{Y}$ gauge group symmetry. The
+$SU(3)_{C}\times SU(2)_{L} \times U(1)_{Y}$
+group symmetry. The
 latter symmetry group is essential to describe three of the four
 fundamental interactions observed in nature: strong interaction,
 weak interaction and electromagnetic interaction.
 The SM is typically specified using the Lagrangian formalism and depends
 on a total of 19 parameters, which are not predicted by the theory
 but determined through experimental measurements.
-<!-- Standard model zoo image-->
+
+![Standard Model Particles
+](gfx/101_chapter_1/Standard_Model_of_Elementary_Particles.pdf){#fig:standard_model_particles}
 
 In the context of the SM, excitations of the fundamental fields
 give rise to two types of elementary particles: fermions (characterised
@@ -59,5 +62,13 @@ by having half-integer spin) and bosons (characterised by having
 integer spin). Fermions are the fundamental constituents of matter
 are further subdivided into leptons and quarks depending on their 
 interactions.
+
+
+## Beyond the Standard Model
+
+## Computing Observables
+
+
+
 
 
