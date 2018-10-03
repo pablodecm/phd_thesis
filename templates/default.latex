@@ -272,6 +272,8 @@ $endif$
 \def\fps@figure{htbp}
 \makeatother
 
+\PassOptionsToPackage{sorting=none}{biblatex}
+
 $for(header-includes)$
 $header-includes$
 $endfor$

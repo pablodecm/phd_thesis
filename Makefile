@@ -9,7 +9,7 @@ TEMPLATE=$(BASEDIR)/templates/default.latex
 
 pdf: latex
 	$(LATEX2PDF) "$(INPUTDIR)"/thesis.tex
-	$(BIBER) "$(INPUTDIR)"/thesis.bcf
+	$(BIBER) thesis.bcf
 	$(LATEX2PDF) "$(INPUTDIR)"/thesis.tex
 
 	

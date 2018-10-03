@@ -36,7 +36,7 @@ local excitations of different fields that permeate our universe.
 From a historical perspective, this theory is the product of
 a succession of important theoretical developments and experimental
 discoveries over the last century, culminating
-with the discovery of the Higgs boson in 2012.
+with the discovery of the Higgs boson in 2012 [@higgs2012cms;@higgs2012atlas].
 <!-- Higgs discovery reference and historical perspective reference-->
 If a more practical viewpoint is taken, it can be thought
 as the most general but mathematically consistent
@@ -54,7 +54,8 @@ on a total of 19 parameters, which are not predicted by the theory
 but determined through experimental measurements.
 
 ![Standard Model Particles
-](gfx/101_chapter_1/Standard_Model_of_Elementary_Particles.pdf){#fig:standard_model_particles}
+](gfx/101_chapter_1/Standard_Model_of_Elementary_Particles.pdf){
+#fig:standard_model_particles width=70%}
 
 In the context of the SM, excitations of the fundamental fields
 give rise to two types of elementary particles: fermions (characterised
