@@ -45,7 +45,7 @@ a global Poincaré group symmetry (translational, rotational
 and relativistic
 boost invariance) and a local
 $SU(3)_{C}\times SU(2)_{L} \times U(1)_{Y}$
-group symmetry. The
+gauge group symmetry. The
 latter symmetry group is essential to describe three of the four
 fundamental interactions observed in nature: strong interaction,
 weak interaction and electromagnetic interaction.
@@ -62,7 +62,9 @@ give rise to two types of elementary particles: fermions (characterised
 by having half-integer spin) and bosons (characterised by having
 integer spin). Fermions are the fundamental constituents of matter
 are further subdivided into leptons and quarks depending on their 
-interactions.
+interactions. A schematic overview of the fundamental particles
+of the SM and their properties is provided in
+[@Fig:standard_model_particles].
 
 
 ## Beyond the Standard Model

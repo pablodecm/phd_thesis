@@ -22,7 +22,7 @@ will be given to the acquisition, processing and modelling of individual
 experimental observations, commonly referred to as events.
 
 
-## The Large Hadron Collider
+## The LHC accelerator
 
 ## The Compact Muon Solenoid Detector
 
