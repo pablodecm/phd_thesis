@@ -340,6 +340,51 @@ $if(logo)$
 $endif$
 $endif$
 
+
+% custom title page
+\renewcommand{\maketitle}{
+\begin{titlepage}%
+
+\thispagestyle{empty}
+\begin{center}
+ 
+    \noindent
+\begin{figure}
+      \centering
+			\includegraphics{gfx/000_title_page/logo_unipd.pdf}
+\end{figure}
+
+\end{center}
+\begin{flushleft}
+Sede Amministrativa: Universit\`a degli Studi di Padova
+\end{flushleft}
+\begin{flushleft}
+\vspace{1cm}
+Dipartimento di Fisica e Astronomia\\
+Corso di Dottorato di Ricerca in Fisica\\
+Ciclo XXXI
+\end{flushleft}
+\vspace{1cm}
+\begin{center}
+\LARGE
+{\textbf{$title$}}
+\end{center}
+\begin{flushleft}
+\vspace{1.5cm}
+\textbf{Coordinatore del Corso:} Prof. Gianguido Dall'Agata\\
+\vspace{0.5cm}
+\textbf{Supervisore:} Dott. Tommaso Dorigo\\
+\end{flushleft}
+\begin{flushright}
+	\vspace{2cm}
+	\textbf{Dottorando:}  $author$
+\end{flushright}
+\begin{flushleft}
+
+\end{flushleft}
+\end{titlepage}
+}
+
 \begin{document}
 $if(title)$
 $if(beamer)$
