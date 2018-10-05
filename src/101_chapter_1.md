@@ -22,7 +22,7 @@ fundamental structure and properties of the theory, but also
 the methodology followed to compute predictions for observables
 that can be contrasted with empirical data.
 
-## The Standard Model
+## The Standard Model {#sec:standard_model}
 
 The Standard Model (SM) of particle physics is a mathematically
 self-consistent gauge field
@@ -76,25 +76,51 @@ of the SM and their properties is provided in
 [@Fig:standard_model_particles].
 
 
-## Beyond the Standard Model
+## Beyond the Standard Model {#sec:sm_alternatives}
 
 ## Phenenomenology of proton collisions
 
 Once the properties and limitations of the theoretical model that best
 describes the current understanding of the fundamental structure and
 dynamics of nature have been described,
-we can delve into how we can model proton-proton
-collisions from a practical perspective, so theoretical predictions
+we can delve into how to model proton-proton collisions from a 
+quantitative perspective, so theoretical predictions
 can be contrasted with experimental results at the LHC. The focus
-of section is to make sense of the products of high-energy
+of section then is to make sense of the various outcomes of high-energy
 proton-proton collisions and how we can predict their relative
-rates (frequencies of ocurring) given some initial state
-conditions for the interaction.
+rates of ocurring given some initial state
+conditions of the interaction.
 
+A related consideration that is useful as an introduction to the
+aforementioned topic is the question of what outcomes are
+originated as a result of a proton-proton collisions.
+An answer that is somehow circular but compatible with our
+current interpretation of the universe
+is that everything that could be produced would be produced,
+meaning that any outcome that can happen
+in a way that is consistent with the underlying propierties
+of nature is possible. Even though an true description
+the properties of nature is not kwown, as discussed in Section
+[-@sec:standard_model], the Standard Model
+provides an effective model and restricts considerably the space
+of possible outcomes, in a way that can be compared with experimental
+obsertions. It is worth noting that alternatives descriptions of
+nature, such as those motivated by the known limitations of the SM
+and reviewed in Section [-@sec:sm_alternatives], can provide alternative
+mechanism for the production of outcomes that are not allowed by the SM,
+and hence drive the experimental searches for evidence of New Physics.
+
+
+<!-- explain rates and cross sections -->
+
+Let us consider the computation the inclusive cross section
+$\sigma(pp \rightarrow X)$, which is
+proportional to the ocurrence rate, for obtaining a certain set of
+particles $X$ from the interaction of two protons.  
 
 
 $$\sigma(pp \rightarrow X) = \sum_{i,j} \int
-f_i(x_1, \mu_F^2) f_i(x_2, \mu_F^2)
+f_i(x_1, \mu_F^2) f_j(x_2, \mu_F^2)
 \hat{\sigma}_{pp \rightarrow X} (s x_1 x_2,\mu_R^2,\mu_F^2) d x_1 d x_2$$ {#eq:qcd_factorisation} 
 
 
