@@ -35,20 +35,29 @@ local excitations of different fields that permeate our universe.
 
 From a historical perspective, this theory is the product of
 a succession of important theoretical developments and experimental
-discoveries over the last century, culminating
+discoveries over the last century [@weinberg2004making],
+culminating
 with the discovery of the Higgs boson in 2012 [@higgs2012cms;@higgs2012atlas].
-<!-- Higgs discovery reference and historical perspective reference-->
-If a more practical viewpoint is taken, it can be thought
+If a more principled viewpoint is taken, the SM can be thought
 as the most general but mathematically consistent
 theory that respects a set of symmetries, namely
 a global Poincaré group symmetry (translational, rotational
 and relativistic
 boost invariance) and a local
-$SU(3)_{C}\times SU(2)_{L} \times U(1)_{Y}$
+$$G_\textrm{SM} = SU(3)_{C}\otimes SU(2)_{L} \otimes U(1)_{Y}$$ {#eq:sm_gauge_symmetry}
 gauge group symmetry. The
-latter symmetry group is essential to describe three of the four
+$G_\textrm{SM}$ symmetry group is essential to describe three of the four
 fundamental interactions observed in nature: strong interaction,
-weak interaction and electromagnetic interaction.
+weak interaction and electromagnetic interaction. In fact, the
+$SU(3)_{C}$ is associated the strong force and the conservation of
+color while the $SU(2)_{L} \otimes U(1)_{Y}$ is
+retated with electroweak interactions (unification of weak and
+electromagnetic) and the conservation of isospin and
+hypercharge.
+<!--- Check and unify notation L (mean only coupling to left-handed
+fermions) while the other subindex come from the generators --->
+
+ 
 The SM is typically specified using the Lagrangian formalism and depends
 on a total of 19 parameters, which are not predicted by the theory
 but determined through experimental measurements.
@@ -69,7 +78,25 @@ of the SM and their properties is provided in
 
 ## Beyond the Standard Model
 
-## Computing Observables
+## Phenenomenology of proton collisions
+
+Once the properties and limitations of the theoretical model that best
+describes the current understanding of the fundamental structure and
+dynamics of nature have been described,
+we can delve into how we can model proton-proton
+collisions from a practical perspective, so theoretical predictions
+can be contrasted with experimental results at the LHC. The focus
+of section is to make sense of the products of high-energy
+proton-proton collisions and how we can predict their relative
+rates (frequencies of ocurring) given some initial state
+conditions for the interaction.
+
+
+
+$$\sigma(pp \rightarrow X) = \sum_{i,j} \int
+f_i(x_1, \mu_F^2) f_i(x_2, \mu_F^2)
+\hat{\sigma}_{pp \rightarrow X} (s x_1 x_2,\mu_R^2,\mu_F^2) d x_1 d x_2$$ {#eq:qcd_factorisation} 
+
 
 
 
