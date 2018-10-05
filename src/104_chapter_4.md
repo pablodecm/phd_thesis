@@ -3,8 +3,27 @@
 \epigraph{Computers are useless. They can
   only give you answers.}{Pablo Picasso}
 
-## Probabilistic Classification
+Machine learning is an interdisciplinary field that deals with the
+general problem of how
+computers can automatically improve at certain tasks given data. The usefulness
+and range of applicability of such techniques has surged in the last
+decades due to the increse on accesible computational power and
+the extend of useful data available. In this section, a general overview of
+machine learning methods and the main tasks that can adressed with them
+will be provided. Subsequently, the tecnical basis of two specific types of
+thods that will be used in the next chapter will be explored: boosted
+decision trees and neural networks. Last but not least, we will go through
+a brief review of the common past use cases of these techniques at high energy
+physics experiments to adress some of the statiscal issues from
+Chapter [-@sec:statinf].
 
-## Boosted Decision Trees
+## Problem Description
 
-## Neural Networks
+### Probabilistic Classification
+
+## Machine Learning Techniques
+### Boosted Decision Trees
+
+### Neural Networks
+
+## Machine Learning in High Energy Physics
