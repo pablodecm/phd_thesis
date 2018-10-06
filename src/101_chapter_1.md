@@ -92,14 +92,14 @@ rates of ocurring given some initial state
 conditions of the interaction.
 
 A related consideration that is useful as an introduction to the
-aforementioned topic is the question of what outcomes are
-originated as a result of a proton-proton collisions.
-An answer that is somehow circular but compatible with our
+aforementioned topic is the question of what outcomes can
+originate as a result of proton-proton collisions.
+An answer somehow circular but compatible with our
 current interpretation of the universe
 is that everything that could be produced would be produced,
 meaning that any outcome that can happen
 in a way that is consistent with the underlying propierties
-of nature is possible. Even though an true description
+of nature is possible. Even though the true description
 the properties of nature is not kwown, as discussed in Section
 [-@sec:standard_model], the Standard Model
 provides an effective model and restricts considerably the space
@@ -107,21 +107,99 @@ of possible outcomes, in a way that can be compared with experimental
 obsertions. It is worth noting that alternatives descriptions of
 nature, such as those motivated by the known limitations of the SM
 and reviewed in Section [-@sec:sm_alternatives], can provide alternative
-mechanism for the production of outcomes that are not allowed by the SM,
-and hence drive the experimental searches for evidence of New Physics.
+mechanisms for the production of outcomes that are not allowed by the SM,
+and hence often drive the experimental searches for evidence of New Physics.
+
+For those physical processes that could happen as a product of a proton-proton
+collision, under the assumption of validity of a particular theoretical model,
+their total expected rate of ocurrence is one the most relevant
+quantities to be predicted. To ease its experimental interpretation,
+the rate of ocurrence of certain process is commonly
+expressed as as cross section $\sigma$,
+which has dimensions of area and is typically expressed in submultiples
+of barn ($1 \textrm{barm} = 10^{-28} \textrm{m}^2$). The advantage of cross
+sections over rates is that their value is independent from the density
+of the incident particle fluxes. The rate, or probability per unit of time,
+of a process ocurring can be computed simply by multiplying its cross
+section by the instantaneous luminosity $\mathcal{L}(t)$, which
+correspoonds to the number of particles per unit of area per unit of time
+crossing in opposite directions in the collision volume.
+
+Another related concept, which is specially important for simulating
+interactions,
+is the differential cross section $d\sigma$. The rate of
+ocurrence of a physical process commonly depends on some final-state
+variables, such as the angle and energy of outgoing particles. While these
+variables can be integrated over to compute total cross sections $\sigma$,
+the integrand is proportional to the probability density of each
+outcome happening as a function of final-state variables so is
+crucial for modelling their multi-dimensional distributions
+via random sampling. In fact, we will be dealing
+with differential cross sections instead of total process cross section
+in this section for generality.
+
+A complication that has not been addressed yet is that protons are
+composite particles, formed by two up-type quarks
+and one down-type quarks bound together via the strong force.
+The dynamics of proton-proton scaterring are therefore dictated by quantum
+chromodynamics (QCD), which cannot be adressed perturbatively for low
+energies, limiting the first principles computation of relevant
+observables for the most common interactions. Luckily for us,
+the most promising territory being explored in energy colliders correspond
+to higher energies, where relevant interaction outcomes come from the
+hard scattering of proton constituents (referred as partons)
+at high energies, and predictions can
+be perturbatively approximated under the assuming asymptotic
+freedom.
+
+Even for modelling hard scattering processes, non-perturbative input is
+required, mainly the probability of finding a particular proton constituent
+with a certain momentum fraction inside each of the colliding protons,
+refferred as the parton distribution function (PDF).
+The model of the proton as three quarks coupled by strong force 
+is too simple to for modelling such scattering realistically, specially
+at high energies. The continous exchange of gluons between the three 
+constituent quarks effectively generates
+a sea of virtual quark-antiquark pairs from which other partons can
+scatter off. Consequently, in the interaction of two protons, not only
+the constituent quarks, referred as valence quarks, can take part in the
+hard scattering process but also gluons and sea quarks. At time of writing,
+PDFs are not computable from first principles so they
+have to be parametrized and extrapolated from various experimental sources
+including fixed-target proton deep inelastic scattering (DIS) and previous
+collider studies. It is worth noting that the distribution functions depend
+strongly in the energy scale of the process, but the evolution for parton
+densities can be modelled theoretically [cite DGLAP]. Given their relevance
+for computing observables in high-energy colliders,
+several research collaborations such as NNPDF [cite] provide accurate
+estimations that can be readily used for simulation and prediction. In
+Figure [include], the parton distribution functions at two different
+energy scales estimated by one of this collaborations are shown.
 
 
-<!-- explain rates and cross sections -->
-
-Let us consider the computation the inclusive cross section
-$\sigma(pp \rightarrow X)$, which is
-proportional to the ocurrence rate, for obtaining a certain set of
-particles $X$ from the interaction of two protons.  
+<!--- TODO: include GOOD parton distribution function figure -->
+ 
 
 
-$$\sigma(pp \rightarrow X) = \sum_{i,j} \int
+Let us consider the computation the differential cross section for a hard
+scattering process $pp \rightarrow X$, which will be denoted as
+$d\sigma(pp \rightarrow X)$. Here
+$X$ denotes a possible outcome for the interaction, not necesarialy a single
+particle (e.g. a Higgs boson $X=H$) but a set of particles (e.g. a bottom
+quark-antiquark pair $X=b\hat{b}$). According to the QCD factorisation
+theorem [cite], the differential cross section for $d\sigma(pp \rightarrow X)$
+can be expressed as a sum of functions of the partonic cross section 
+$d\hat{\sigma}_{ij \rightarrow X}$:  
+
+$$d\sigma(pp \rightarrow X) = \sum_{i,j} \int
 f_i(x_1, \mu_F^2) f_j(x_2, \mu_F^2)
-\hat{\sigma}_{pp \rightarrow X} (s x_1 x_2,\mu_R^2,\mu_F^2) d x_1 d x_2$$ {#eq:qcd_factorisation} 
+d\hat{\sigma}_{pp \rightarrow X} (s x_1 x_2,\mu_R^2,\mu_F^2) d x_1 d x_2$$ {#eq:qcd_factorisation} 
+
+
+where $i$ and $j$ being the partons involved (e.g. a certain type of quark or
+a gluon), $f_i(x_1, \mu_F^2)$ and  $f_j(x_2, \mu_F^2)$ are their parton distribution
+functions for given momentum fractions $x_1$ and $x_2$ respectively, $\mu_F$ is
+the factorisation scale and $\mu_R$ is the renormalisation scale.
 
 
 
