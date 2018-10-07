@@ -137,7 +137,7 @@ particle physics, are included in [Chapter @sec:machine_learning]. Some
 non-trivial connections between the use of those techniques and the
 details of the underlying statistical issues will be stressed.
 
-The fist four chapters, as outlined above, offer a multi-disciplinary survey
+The first four chapters, as outlined above, offer a multi-disciplinary survey
 of the theoretical and experimental
 foundations of our understanding of nature and the relevant
 techniques that allow the extract valuable information from the data.

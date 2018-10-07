@@ -1,4 +1,4 @@
-# Particle Physics Experiments {#sec:experiment}
+# Experiments at Particle Colliders {#sec:experiment}
 
 \epigraph{Measure what is measurable and make measurable
    what is not so.}{Galileo Galilei (attributed)}

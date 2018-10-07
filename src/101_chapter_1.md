@@ -85,7 +85,24 @@ of theoretical prognotiscation of the existence and some the properties
 of new particles
 (e.g. $Z$, $W^{\pm}$ and Higgs bosons or top quark) to
 the agreement of precise predictions with meticulous experimental
-observations. 
+observations. The fine structure constant $\alpha$ at zero energy scale
+is an example of the latter, the experimentaly determined value being
+compatible with the Standard Model based theoretical prediction up
+to 12 orders of magntitude [cite]. In addition to describing natural phenomena
+with unprecedented accuracy, the SM it is a self-consistent theory that 
+provide non-divergent predictions at the highest energy scales probed to date.
+
+Nevertheless, several shortcomings of the Standard Model are known
+and hence is not considered as a complete theory of natural phenomena
+at the most fundamental scales. Those concerns include unexplained empirically
+observed phenomena such as gravitational interactions, neutrino masses or
+dark matter particle candidates,
+theoretical considerations regarding the stability of vacuum or
+aesthetic principles such as naturalness.
+Hence, it is presumed that the Standad Model is an effective theory, able to
+succesfully describe fundamental processes within a range of energies as
+an approximation fo more complete unified theory.
+
 
 
 ## Phenenomenology of proton collisions {#sec:pheno}
