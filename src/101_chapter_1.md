@@ -78,7 +78,17 @@ of the SM and their properties is provided in
 
 ## Beyond the Standard Model {#sec:sm_alternatives}
 
-## Phenenomenology of proton collisions
+The experimental success of the Standard Model and its main 
+subcomponents QED, QCD and EW unification and
+symmetry breaking is clearly incontestable, ranging from the confirmation
+of theoretical prognotiscation of the existence and some the properties
+of new particles
+(e.g. $Z$, $W^{\pm}$ and Higgs bosons or top quark) to
+the agreement of precise predictions with meticulous experimental
+observations. 
+
+
+## Phenenomenology of proton collisions {#sec:pheno}
 
 Once the properties and limitations of the theoretical model that best
 describes the current understanding of the fundamental structure and
@@ -104,7 +114,7 @@ the properties of nature is not kwown, as discussed in Section
 [-@sec:standard_model], the Standard Model
 provides an effective model and restricts considerably the space
 of possible outcomes, in a way that can be compared with experimental
-obsertions. It is worth noting that alternatives descriptions of
+observations. It is worth noting that alternative descriptions of
 nature, such as those motivated by the known limitations of the SM
 and reviewed in Section [-@sec:sm_alternatives], can provide alternative
 mechanisms for the production of outcomes that are not allowed by the SM,
@@ -113,9 +123,10 @@ and hence often drive the experimental searches for evidence of New Physics.
 For those physical processes that could happen as a product of a proton-proton
 collision, under the assumption of validity of a particular theoretical model,
 their total expected rate of ocurrence is one the most relevant
-quantities to be predicted. To ease its experimental interpretation,
+quantities to predict and compare with observation.
+To ease its experimental interpretation,
 the rate of ocurrence of certain process is commonly
-expressed as as cross section $\sigma$,
+expressed as as a cross section $\sigma$,
 which has dimensions of area and is typically expressed in submultiples
 of barn ($1 \textrm{barn} = 10^{-28} \textrm{m}^2$). The advantage of cross
 sections over rates is that their value is independent from the density
@@ -188,7 +199,8 @@ outcome for the interaction.
 
 Let us consider the computation the differential cross section for a hard
 scattering process $pp \rightarrow X$, which will be denoted as
-$d\sigma(pp \rightarrow X)$. Here
+$d\sigma(pp \rightarrow X)$, for two protons colliding head on
+at center of mass energy $s$. Here
 $X$ denotes a possible outcome for the interaction, not necesarialy a single
 particle (e.g. a Higgs boson $X=H$) but a set of particles (e.g. a bottom
 quark-antiquark pair $X=b\hat{b}$). According to the QCD factorisation
