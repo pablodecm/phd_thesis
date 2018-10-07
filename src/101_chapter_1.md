@@ -117,7 +117,7 @@ quantities to be predicted. To ease its experimental interpretation,
 the rate of ocurrence of certain process is commonly
 expressed as as cross section $\sigma$,
 which has dimensions of area and is typically expressed in submultiples
-of barn ($1 \textrm{barm} = 10^{-28} \textrm{m}^2$). The advantage of cross
+of barn ($1 \textrm{barn} = 10^{-28} \textrm{m}^2$). The advantage of cross
 sections over rates is that their value is independent from the density
 of the incident particle fluxes. The rate, or probability per unit of time,
 of a process ocurring can be computed simply by multiplying its cross
@@ -127,8 +127,10 @@ crossing in opposite directions in the collision volume.
 
 Another related concept, which is specially important for simulating
 interactions,
-is the differential cross section $d\sigma$. The rate of
-ocurrence of a physical process commonly depends on some final-state
+is the differential cross section $d\sigma$. While the initial state
+conditions are fixed, the rate of
+ocurrence of a physical process can be expressed as as a function of
+some final-state
 variables, such as the angle and energy of outgoing particles. While these
 variables can be integrated over to compute total cross sections $\sigma$,
 the integrand is proportional to the probability density of each
@@ -157,8 +159,8 @@ required, mainly the probability of finding a particular proton constituent
 with a certain momentum fraction inside each of the colliding protons,
 refferred as the parton distribution function (PDF).
 The model of the proton as three quarks coupled by strong force 
-is too simple to for modelling such scattering realistically, specially
-at high energies. The continous exchange of gluons between the three 
+is too simplisticfor modelling proton-proton scattering realistically,
+specially at high energies. The continous exchange of gluons between the three 
 constituent quarks effectively generates
 a sea of virtual quark-antiquark pairs from which other partons can
 scatter off. Consequently, in the interaction of two protons, not only
@@ -174,7 +176,10 @@ for computing observables in high-energy colliders,
 several research collaborations such as NNPDF [cite] provide accurate
 estimations that can be readily used for simulation and prediction. In
 Figure [include], the parton distribution functions at two different
-energy scales estimated by one of this collaborations are shown.
+energy scales estimated by one of those collaborations are shown, at lower
+energy scales the valence quarks (up and down) dominate while when we
+extrapolate at higher energies, gluon scattering become the most likely
+outcome for the interaction.
 
 
 <!--- TODO: include GOOD parton distribution function figure -->
@@ -193,13 +198,22 @@ $d\hat{\sigma}_{ij \rightarrow X}$:
 
 $$d\sigma(pp \rightarrow X) = \sum_{i,j} \int
 f_i(x_1, \mu_F^2) f_j(x_2, \mu_F^2)
-d\hat{\sigma}_{pp \rightarrow X} (s x_1 x_2,\mu_R^2,\mu_F^2) d x_1 d x_2$$ {#eq:qcd_factorisation} 
+d\hat{\sigma}_{ij\rightarrow X} (s x_1 x_2,\mu_R^2,\mu_F^2)
+  d x_1 d x_2$$ {#eq:qcd_factorisation} 
 
 
 where $i$ and $j$ being the partons involved (e.g. a certain type of quark or
 a gluon), $f_i(x_1, \mu_F^2)$ and  $f_j(x_2, \mu_F^2)$ are their parton distribution
 functions for given momentum fractions $x_1$ and $x_2$ respectively, $\mu_F$ is
-the factorisation scale and $\mu_R$ is the renormalisation scale.
+the factorisation scale and $\mu_R$ is the renormalisation scale. The
+differential partonic cross section $d\hat{\sigma}_{ij\rightarrow X}$ for
+at center of mass energy of the interacting partons $\hat{s}=s x_1 x_2$,
+can be calculated perturbatively at different expansion orders from
+the Lagrangian density as hinted in Section [-@sec:standard_model]. The
+total cross section  $\sigma(pp \rightarrow X)$ can
+then be attained by integrating out all final state quantities, commonly
+referred as phase space variables, in the differential cross section element
+$d\sigma(pp \rightarrow X)$.
 
 
 
