@@ -1,4 +1,4 @@
-# Theory {#sec:theory}
+# Theory of Fundamental Interactions {#sec:theory}
 
 \epigraph{Nothing in life is to be feared.
   It is only to be understood.}{Marie Skłodowska Curie }

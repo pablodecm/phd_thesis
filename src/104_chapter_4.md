@@ -1,4 +1,4 @@
-# Machine Learning {#sec:machine_learning}
+# Machine Learning in High-Energy Physics {#sec:machine_learning}
 
 \epigraph{Computers are useless. They can
   only give you answers.}{Pablo Picasso}
@@ -26,4 +26,4 @@ Chapter [-@sec:statinf].
 
 ### Neural Networks
 
-## Machine Learning in High Energy Physics
+## Applications in High Energy Physics
