@@ -92,6 +92,9 @@ to 12 orders of magntitude [cite]. In addition to describing natural phenomena
 with unprecedented accuracy, the SM it is a self-consistent theory that 
 provide non-divergent predictions at the highest energy scales probed to date.
 
+### Known Limitations
+
+
 Nevertheless, several shortcomings of the Standard Model are known
 and hence is not considered as a complete theory of natural phenomena
 at the most fundamental scales. Those concerns include unexplained empirically
@@ -101,9 +104,35 @@ theoretical considerations regarding the stability of vacuum or
 aesthetic principles such as naturalness.
 Hence, it is presumed that the Standad Model is an effective theory, able to
 succesfully describe fundamental processes within a range of energies as
-an approximation fo more complete unified theory.
+an approximation fo more complete unified theory. For completeness, the
+main empirical and theoretical concerns are summarised:
 
 
+* **omission of gravitational interactions**: the current formulation of
+ the SM completely disregards the effect of gravity in
+ fundamental interactions, because no consistent quantum descriptions for
+ gravity matching the experimental predictions of the well-established
+ theory of general relativity [cite] have been developed to date. While several
+ theoretical efforts are ongoing, such as loop quantum gravity or string theory,
+ the effect of gravitational interactions at the current experimental
+ high-energy reach is expected to be more than 30 times weaker than the weak
+ interaction and hence can be safely ignored.
+ 
+* **lack of a viable Dark Matter candidate**:
+
+* **unexplained matter-antimatter asymmetry**:
+
+* **origin of neutrino masses**:
+
+* **mismatch between vacuum energy and Dark Energy**:
+
+* **hierarchy and fine-tunning concerns**:
+
+Other possible issues have also been raised, that likely can be adressed once
+the higher precision measurements of the SM become available,
+such as the apparent vacuum meta-stability or the strong CP problem.
+
+### Possible Extensions
 
 ## Phenenomenology of proton collisions {#sec:pheno}
 
