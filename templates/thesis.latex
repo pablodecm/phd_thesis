@@ -1,0 +1,144 @@
+
+% pandoc template heavily based in latex-mimosis example
+\documentclass{templates/mimosis}
+
+\usepackage{metalogo}
+
+
+\usepackage{etoolbox}
+
+\usepackage{epigraph}
+
+\usepackage[%
+  colorlinks = true,
+  citecolor  = RoyalBlue,
+  linkcolor  = RoyalBlue,
+  urlcolor   = RoyalBlue,
+  ]{hyperref}
+
+  $if(biblatex)$
+  \usepackage[$if(biblio-style)$style=$biblio-style$,$endif$$for(biblatexoptions)$$biblatexoptions$$sep$,$endfor$]{biblatex}
+  $for(bibliography)$
+  \addbibresource{$bibliography$}
+  $endfor$
+  $endif$
+  
+$if(title)$
+\title{$title$$if(thanks)$\thanks{$thanks$}$endif$}
+$endif$
+$if(subtitle)$
+\providecommand{\subtitle}[1]{}
+\subtitle{$subtitle$}
+$endif$
+$if(author)$
+\author{$for(author)$$author$$sep$ \and $endfor$}
+$endif$
+$if(institute)$
+\providecommand{\institute}[1]{}
+\institute{$for(institute)$$institute$$sep$ \and $endfor$}
+$endif$
+\date{$date$}
+  
+% title page command
+\renewcommand{\maketitle}{
+  \makeatletter
+  \begin{titlepage}
+    \begin{center}
+    \vspace*{1cm}
+    {  
+      \centering
+      \includegraphics{gfx/000_title_page/logo_unipd.pdf} \\
+    }  
+    {
+      \scshape \Large
+      Universit\`a degli Studi di Padova\\
+    }
+    {
+      \scshape \large
+      Sede Amministrativa: Universit\`a degli Studi di Padova\\
+      Dipartimento di Fisica e Astronomia Galileo Galilei \\     
+    }
+    \vspace*{2cm}
+    {
+      \scshape \large
+      Scuola di Dottorato di Ricerca in Fisica \\
+      Ciclo XXXI \\
+    }
+    \vspace*{2cm}
+    {
+        \scshape \large
+        Tesi di  Dottorato\\
+      }
+      \vspace*{1.5cm}
+      {
+      \scshape \Huge
+       Smart and but not too Long \\[0.5cm]
+       PhD Thesis Title
+      }
+      \vspace{1cm}
+      \begin{flushleft}
+        \textsc{Coordinatore del Corso:} Prof. Gianguido Dall'Agata\\
+        \vspace{0.5cm}
+        \textsc{Supervisore:} Dott. Tommaso Dorigo\\
+      \end{flushleft}
+      \begin{flushright}
+      	\vspace{1cm}
+      	\textsc{Dottorando:}  $author$
+      \end{flushright}        
+    \end{center}
+    \makeatother
+  \end{titlepage}
+  
+  \newpage
+  \null
+  \thispagestyle{empty}
+  \newpage
+}
+
+
+\makeglossaries
+
+
+
+\begin{document}
+
+$if(title)$
+\maketitle
+$endif$
+
+$if(abstract)$
+\begin{abstract}
+$abstract$
+\end{abstract}
+$endif$
+
+$for(include-before)$
+$include-before$
+
+$endfor$
+
+% table of contents
+{
+\hypersetup{linkcolor=}
+\setcounter{tocdepth}{$toc-depth$}
+\tableofcontents
+}
+
+
+$body$
+
+
+$if(biblatex)$
+\printbibliography
+$endif$
+
+$for(include-after)$
+$include-after$
+
+$endfor$
+\end{document}
+
+
+
+
+

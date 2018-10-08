@@ -4,7 +4,7 @@ BIBER=biber
 
 BASEDIR=$(CURDIR)
 INPUTDIR=$(BASEDIR)/src
-TEMPLATE=$(BASEDIR)/templates/default.latex
+TEMPLATE=$(BASEDIR)/templates/thesis.latex
 
 
 pdf: latex
