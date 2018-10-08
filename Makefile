@@ -9,15 +9,15 @@ TEMPLATE=$(BASEDIR)/templates/thesis.latex
 LAST_COMMIT := $(shell git rev-parse HEAD)
 
 pdf: latex
-	$(LATEX2PDF) "$(INPUTDIR)"/thesis.tex
+	$(LATEX2PDF) thesis.tex
 	$(BIBER) thesis.bcf
-	$(LATEX2PDF) "$(INPUTDIR)"/thesis.tex
+	$(LATEX2PDF) thesis.tex
 
 	
 latex:
 	$(PANDOC) "$(INPUTDIR)"/*.md -s \
 	--template "$(TEMPLATE)" \
-	-o "$(INPUTDIR)"/thesis.tex --filter=pandoc-crossref \
+	-o thesis.tex --filter=pandoc-crossref \
 	--filter=pandoc-citeproc --biblatex \
 	--top-level-division=chapter \
 	--variable=draft:true \
