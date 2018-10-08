@@ -48,6 +48,18 @@ $if(institute)$
 \institute{$for(institute)$$institute$$sep$ \and $endfor$}
 $endif$
 \date{$date$}
+
+$if(draft)$
+\usepackage{prelim2e}
+\renewcommand{\PrelimWords}{%
+  Pablo PhD Thesis --
+  $if(commit)$
+    Last Commit $commit$
+  $else$
+    Draft Version
+  $endif$
+}
+$endif$
   
 % title page command
 \renewcommand{\maketitle}{

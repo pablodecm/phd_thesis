@@ -6,6 +6,7 @@ BASEDIR=$(CURDIR)
 INPUTDIR=$(BASEDIR)/src
 TEMPLATE=$(BASEDIR)/templates/thesis.latex
 
+LAST_COMMIT := $(shell git rev-parse HEAD)
 
 pdf: latex
 	$(LATEX2PDF) "$(INPUTDIR)"/thesis.tex
@@ -19,6 +20,8 @@ latex:
 	-o "$(INPUTDIR)"/thesis.tex --filter=pandoc-crossref \
 	--filter=pandoc-citeproc --biblatex \
 	--top-level-division=chapter \
+	--variable=draft:true \
+	--variable=commit:$(LAST_COMMIT) \
 	--verbose
 		
 
