@@ -18,13 +18,32 @@ experiments set up around its collision points. In this chapter, the main
 design characteristics of a general purpose high-energy physics experiment,
 namely the Compact Muon Solenoid (CMS) detector at the LHC, will be explored.
 Given the data-centric nature of the next chapters, particular significance
-will be given to the acquisition, processing and modelling of individual
+will be given to the acquisition, processing and simulation of individual
 experimental observations, commonly referred to as events.
 
 
-## The LHC accelerator
+## The LHC accelerator complex
+
+The Large Hadron Collider (LHC) is the largest and most poweful particle
+accelerator on operation at the time of writing. Its main purpose is to
+accelerate bunches of protons and other heavier nuclei in opposite
+directions to ultra-relativistic velocities, so then can be collimated
+and made interact at high-energies around several specified collision
+points inside specially design detector.
+The LHC machine complex is located at the European
+Organisation for Nuclear Research (CERN) laboratories around
+the Switzerland-France border near Geneva, its most distinctive element being
+a ring of superconductive magnets and accelerating structures
+installed along 26.7 km circular underground tunnel. The setup was designed
+to achieve center-of-mass energies up to 14 TeV for nominal instantaneous
+luminosities reaching $10 \times 10^{34} \textrm{cm}^{-1} \textrm{s}^{-1}$
+for proton-proton collisions.
+
 
 ## The Compact Muon Solenoid Detector
 
-## Event Modelling and Simulation
+## CMS Data Pipelines
+
+
+
 
