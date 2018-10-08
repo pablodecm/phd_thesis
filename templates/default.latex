@@ -5,11 +5,7 @@ $if(colorlinks)$
 $endif$$if(dir)$$if(latex-dir-rtl)$
 \PassOptionsToPackage{RTLdocument}{bidi}
 $endif$$endif$%
-\documentclass[ twoside,openright,titlepage,numbers=noenddot,%1headlines,
-                headinclude,footinclude,cleardoublepage=empty,abstract=on,
-                BCOR=5mm,paper=a4,fontsize=11pt
-                ]{scrreprt}
-                
+\documentclass{templates/mimosis}                
 $if(beamer)$
 \usepackage{pgfpages}
 \setbeamertemplate{caption}[numbered]
@@ -388,6 +384,8 @@ Ciclo XXXI
 \end{flushleft}
 \end{titlepage}
 }
+
+\makeglossaries
 
 \begin{document}
 $if(title)$
