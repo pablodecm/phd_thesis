@@ -113,24 +113,69 @@ main empirical and theoretical concerns are summarised:
  fundamental interactions, because no consistent quantum descriptions for
  gravity matching the experimental predictions of the well-established
  theory of general relativity [cite] have been developed to date. While several
- theoretical efforts are ongoing, such as loop quantum gravity or string theory,
- the effect of gravitational interactions at the current experimental
- high-energy reach is expected to be more than 30 times weaker than the weak
- interaction and hence can be safely ignored.
+ theoretical efforts are ongoing, such as loop quantum gravity [cite]
+ or string theory [cite],
+ the coupling for gravitational interactions at the current experimental
+ high-energy reach is expected to be more than 30 times weaker than for
+ weak interaction, and hence can be safely ignored when computing theoretical
+ predictions.
  
-* **lack of a viable Dark Matter candidate**:
-
-* **unexplained matter-antimatter asymmetry**:
+* **lack of a viable Dark Matter candidate**: through a variety of
+  astrophysical observations, including the observed galaxy rotation
+  curves [cite], gravitational lensing [cite]
+  and the Cosmic Microwave Background (CMB) [cite], there is clear
+  evidence indicating the presence of more gravitational interacting matter
+  in the universe than what is expected by contrasting with the
+  electromagnetic sprectra. It has been estimated that about $85\%$ of
+  massive existing matter in the universe does not notably interact
+  with ordinary matter and radiation [cite], and therefore is referred
+  as *Dark Matter*. While its particular nature is still unknown, scientific
+  consensus seem to favour long-lived cold non-baryonic matter as an explanation,
+  predominatly weakly-interacting massive particles (WIMPs). The three
+  neutrino types are the
+  only WIMP candidates within the Standard Model, but considering
+  the known upper limits on their masses, could only account for very
+  small fraction of dark matter. 
+  
+  
+* **unexplained matter-antimatter asymmetry**: as discussed in
+  Section [-@sec:standard_model], each matter particle in the Standard
+  Model has an anti-matter parner that is identical but with opposite quantum
+  numbers. Because pair creation and anhilation processes are symmetric, but
+  our univese is manifestly dominated by what we refer as matter, some
+  asymmetric interaction proceses ought to exist. Within the SM, some
+  electroweak processes are known to violate CP-symmetry and potentially
+  explain a small part of the observed matter-antimatter asymmetry. New
+  unkwnown CP-symmetry processes, potentially through interactions not
+  included in the SM, are needed to resolve this disparity.
 
 * **origin of neutrino masses**:
 
-* **mismatch between vacuum energy and Dark Energy**:
-
-* **hierarchy and fine-tunning concerns**:
+* **mismatch between vacuum energy and Dark Energy**: in addition of providing
+  evidence for dark matter, astrophysical observations such as studies of the
+  properties of the Cosmic Microwave Background [cite] or the red shift of
+  type Ia supernovae [cite], consistently point to the hyphothesis of
+  an accerating expansion of the current universe. The simplest way to account
+  for this in cosmological models is to include a cosmological constant,
+  which be understood of an intrinsic energy density of the vacuum, exerting
+  a negative pressure and therefore driving the observed expansion of the
+  universe. In fact, in order to reconcile the theoretical models with
+  experimental observations, about $68\%$ of the total energy in the
+  present universe would correspond to these type of unknown energy
+  density, generally referred as *dark energy*. In most quantum field theories,
+  such as the Standard Model, some non-zero zero-point
+  energy originating from quantum fluctuations is expected. However,
+  modern attempts to predict energy densities from QFT are at variance
+  with the observed energy vacuum energy density, some of them differing in
+  120 orders of magnitude [cite].
+  
+  
+* **naturalness, hierarchy and fine-tunning concerns**:
 
 Other possible issues have also been raised, that likely can be adressed once
 the higher precision measurements of the SM become available,
-such as the apparent vacuum meta-stability or the strong CP problem.
+such as the apparent vacuum meta-stability [cite] or
+the strong CP problem [cite].
 
 ### Possible Extensions
 
