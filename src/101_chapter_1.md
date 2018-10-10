@@ -147,10 +147,26 @@ main empirical and theoretical concerns are summarised:
   electroweak processes are known to violate CP-symmetry and potentially
   explain a small part of the observed matter-antimatter asymmetry. New
   unkwnown CP-symmetry processes, potentially through interactions not
-  included in the SM, are needed to resolve this disparity.
+  included in the SM, are needed to resolve the mentioned disparity.
 
-* **origin of neutrino masses**:
+* **origin of neutrino masses**: the Standard Model was developed assumming
+  that neutrinos were massless, yet is currenly well-stablished
+  that neutrinos oscillate between different flavour states [cite], implying 
+  that flavour states are mixing and hence that neutrino masses are
+  very small but different from zero .
+  The SM Lagrangian can be extended to account for the masses of neutrinos
+  in a similar fashion to what is done for leptons and quarks, but their 
+  Yukawa coupling has to be much smaller than for any of the other particles,
+  and it requires the existence of very weakly interacting
+  right-handed neutrinos. An alternative mechanism for including
+  neutrino masses exist, which is based on assuming they are Majorana fermions
+  and hence they are their own anti-particle, which is currently being
+  experimentally tested. It also worth noting that in order to explain the
+  smallness of neutrino masses in a principled way, the Seesaw mechanism [cite]
+  has been proposed, which implictly assummes that the SM is only a
+  low-energy scale effective theory of a more complete unified theory.
 
+  
 * **mismatch between vacuum energy and Dark Energy**: in addition of providing
   evidence for dark matter, astrophysical observations such as studies of the
   properties of the Cosmic Microwave Background [cite] or the red shift of
@@ -170,12 +186,31 @@ main empirical and theoretical concerns are summarised:
   120 orders of magnitude [cite].
   
   
-* **naturalness, hierarchy and fine-tunning concerns**:
+* **naturalness, hierarchy and fine-tunning concerns**: as discussed at the
+  beginning of Section [-@sec:standard_model], the SM can be thought of
+  the most general theory based on  a set symmetries, and its
+  19 [check] parameters (or 24 [check] accounting for neutrino masses)
+  are not obtained from first principles but measured experimentally.
+  Having such a large number of free
+  parameters and observing large differences among their
+  relative magnitude, has been viewed as a theoretical concern from
+  an aesthetic perspective. A related issue is why the electroweak
+  energy scale (epitomised by the Higgs mass) is much smaller than
+  the assumed cut-off scale of the SM, where gravitational
+  interactions become relevant
+  $M_{\textrm{Planck}} \approx 10^{19} \textrm{GeV}$, which is
+  generally referred as the *hierarchy problem*. In the absence of
+  New Physics or additional interaction mechanisms, the only
+  way to obtain the observed Higgs mass from a the bare Higgs
+  mass (at zero energies) is through a very precise cancellation
+  of divergences, which is regarded as an *unnatural* or *fine-tunned*
+  property of the SM theory.
 
-Other possible issues have also been raised, that likely can be adressed once
-the higher precision measurements of the SM become available,
+Other possible issues, in some cases related with those discused,
+have also been raised 
 such as the apparent vacuum meta-stability [cite] or
-the strong CP problem [cite].
+the strong CP problem [cite]. Some of these issues can be clarified
+once the higher precision measurements of the SM become available.
 
 ### Possible Extensions
 
