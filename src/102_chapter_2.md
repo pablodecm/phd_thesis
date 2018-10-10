@@ -22,7 +22,7 @@ will be given to the acquisition, processing and simulation of individual
 experimental observations, commonly referred to as events.
 
 
-## The LHC accelerator complex
+## The Large Hadron Collider
 
 The Large Hadron Collider (LHC) is the largest and most poweful particle
 accelerator on operation at the time of writing. Its main purpose is to
@@ -33,11 +33,68 @@ points inside specially design detector.
 The LHC machine complex is located at the European
 Organisation for Nuclear Research (CERN) laboratories around
 the Switzerland-France border near Geneva, its most distinctive element being
-a ring of superconductive magnets and accelerating structures
-installed along 26.7 km circular underground tunnel. The setup was designed
+a circular ring of superconductive magnets and accelerating structures
+installed along a 26.7 km underground tunnel inherited from the
+Large Electro Positron (LEP) collider [cite], as depicted in Figure
+[-@fig:LHC_overall]. The setup was designed
 to achieve center-of-mass energies up to 14 TeV for nominal instantaneous
 luminosities reaching $10 \times 10^{34} \textrm{cm}^{-1} \textrm{s}^{-1}$
-for proton-proton collisions.
+for proton-proton collisions and hence explore the high-energy frontier of
+particle-physics.
+
+
+![LHC Overall
+](gfx/102_chapter_2/LHC_overall.pdf){
+#fig:LHC_overall width=70%}
+
+The main reason for building a high-energy proton-proton collider such as the
+LHC instead of more powerful electron-positron, given the difficulties
+when computing observables due to being composite particles as described
+in Section [-@sec:pheno], is that proton are considerably more massive
+and hence their synchroton radiation loss is greaty reduced, so the
+accelerated to higher energies and more efficiently. Another
+practical advantage of proton collider is that very high
+collisions rates (i.e. instantaneous
+luminosities) can be technically achieved, which makes them suitable for
+the discovery of rare but interesting physical proceses.
+The LHC and most of its detectors can also be used with to study collisions
+of nuclei from heavier atoms, such as $\textrm{Pb}$, $\textrm{Au}$ 
+or $\textrm{Xe}$ ions,
+which have important scientific use cases such as recreating
+the conditions present in the early universe.
+
+
+
+
+### LHC Injection and Acceleration chain
+
+In order to achieve beam energies of the TeV order, protons have to
+follow several stages of synchronised accelerations through a variety
+subcomponents of the CERN accelerator complex, whose main subcomponents
+as of 2018 are summarised in Figure [add]. The purpose of this section
+is to outline the sequence of steps followed to obtain the high energy
+proton bunches that are used for high-energy collision in the LHC.
+
+The process begins with the extractions a low-energy beam of protons by
+filling a duoplasmatron device
+[@wolf2017handbook] with
+gas from a hydrogen $\textrm{H}_2$ bottle. Those protons are then injected
+into to a linear accelerator, named LINAC2, which boosts them to an energy
+of 50 MeV. The next step of acceleration occurs at the Proton Synchrotron
+Booster (PSB), which receives beams splitted from the
+LINAC2 beam line and increases their energy to 1.4 GeV using four
+superimposed synchroton rings. Promply after, the Proton Synchrotron (PS) 
+further splits and boosts the energy of proton bunches to 25 GeV. The
+penultimate step in the chain is the Super Proton Synchrotron (SPS) which
+accelerates the proton bunches to 450 GeV and injects them in opposite direction
+in the LHC ring.
+
+
+
+
+### LHC Operation and Detectors
+
+
 
 
 ## The Compact Muon Solenoid Detector
