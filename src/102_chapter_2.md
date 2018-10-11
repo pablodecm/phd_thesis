@@ -134,7 +134,17 @@ to the beam pipe.
  
 ### LHC Collisions and Detectors
 
-
+One of the most relevant parameters for a particle collider is the
+instantaneous luminosity $\mathcal{L}(t)$, which already appeared in
+Section [-@sec:pheno] and corresponds to the number of particles
+per unit of area per unit of time crossing each other in the
+interaction volume. Given a certain physical process characterised
+by a cross section $\sigma$, the number of collisions $n_c$ expected
+to ocurr by unit of time, also known as the rate of such collisions,
+can be expressed as:
+$$ \frac{dn_c}{dt} = \mathcal{L}(t) \cdot \sigma$$
+thus the luminosity $\mathcal{L}$ is proportional to the number of
+expected interactions of any given process.
 
 
 ## The Compact Muon Solenoid Detector
