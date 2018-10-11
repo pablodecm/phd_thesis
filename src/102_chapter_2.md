@@ -143,7 +143,7 @@ interaction volume. Given a certain physical process characterised
 by a cross section $\sigma$, the number of collisions $n_c$ expected
 to ocurr by unit of time, also known as the rate of such collisions,
 can be expressed as:
-$$ \frac{dn_c}{dt} = \mathcal{L}(t) \cdot \sigma$$
+$$ \frac{dn_c}{dt} = \mathcal{L}(t) \cdot \sigma$$ {#eq:lumi_rate}
 thus the luminosity $\mathcal{L}$ is proportional to the number of
 expected interactions of any given process. For studing rare
 scattering processes, corresponding to very small cross sections $\sigma$,
@@ -152,7 +152,7 @@ expected total amount such collisions produced per time unit. The
 instantaneous luminosity at the interaction region at a given time
 can be estimated from the characteristics of the proton beams as:
 $$ \mathcal{L} = \frac{n_p^2 n_b f_r \gamma_r}{ 4 \pi \epsilon_n \beta^{*}}
-    \mathcal{F}$$
+    \mathcal{F}$$ {#eq:lumi_beam}
 where $n_p$ is the number of particles per bunch, $n_b$ is the number
 of bunches per beam, $f_r$ is the beam revolution frequency, $\gamma_r$
 is a relativistic suppresion factor, $\epsilon_n$ is the normalised
@@ -163,13 +163,35 @@ small tilt of the beams at the crossing point, characterised by
 the crossing angle $\phi_c$, which avoids parasitic interactions
 between bunches but reduces the luminosity by approximately:
 $$ \mathcal{F} = \left (  1 +
- \left ( \frac{\phi_c \sigma_z}{2\sigma^{*}} \right )^2 \right )^{-1/2} $$
+ \left ( \frac{\phi_c \sigma_z}{2\sigma^{*}} 
+ \right )^2 \right )^{-1/2} $$ {#eq:lumi_factor}
 where $\sigma_z$ is the root mean square (RMS) bunch length and $\sigma^{*}$
 is the RMS of the beam in the transverse direction at the interaction volume.
 The average values of some these parameters and the peak instantaneous
-luminosities for the different proton-proton data acquisition periods
+luminosities for the different years of proton-proton data acquisition periods
+(also known as *runs*)
 at the LHC are summarised in Table [create], which can
 be compared with the peak design luminosity of the LHC  of $\times 10^{34} \textrm{cm}^{-1} \textrm{s}^{-1}$.
+
+From Equation [-@eq:lumi_beam] it can be inferred that that value of
+instantaneous luminosity varies between LHC *fills* depending on the beam
+parameters. In fact, it also varies within a single *fill* with time,
+mainly because the number of average protons per bunch $n_p$ decreases
+due to the collisions at all the interaction points. For convenience,
+a quantity referred as integrated luminosity $\mathcal{L}_\textrm{int}$
+that is computed by integrating over the instantaneous luminosity for a
+given time period $\Delta T = t_1 - t_0$, such as stable collision period
+within a a *fill*, is used:
+$$
+  \mathcal{L}_\textrm{int} = \int_{t_0}^{t_1} \mathcal{L}(t) dt
+$$ {#eq:int_lumi}
+which is proportional to the number of collisions for a given process
+during that period and thus can be used to quantify the amount of data
+acquired. When studying data from different time periods jointly, integrated
+luminosity is additive, even if the beam conditions (e.g. proto
+density) are different as long as the beam energies are matching. Such notion
+will be particularly useful when talking about the amount of data collected
+by a detector during a year or a longer data acquisition period.
 
 
 
