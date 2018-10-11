@@ -97,20 +97,42 @@ directions in the LHC ring.
 
 The main LHC machine is composed by two adjacent proton beam lines
 (also referred as beam pipes) kept at an ultra-high
-vacuum ($10^{-10}-10^{-11} \textrm{mbar}$), in order to reduce
+vacuum ($10^{-10}-10^{-11}~\textrm{mbar}$), in order to reduce
 the likelihood of spurious collisions of the highly-boosted
 hadrons with gas molecules. The proton trajectories are bended
 around the ring using a total of 1232 super-conducting dipole 
 electromagnets,
 each 15 m long and kept at a temperature of 1.9 K using
 superfluid helium, capable of providing very strong magnetic
-fields (up to 8.3 T for a 11850 A current). 
+fields (up to 8.3 T for a 11.8 kA current). For collimation
+of the proton bunches, additional 392 quadrupole magnets are
+placed around the ring. Higher-order multipoles are also interleaved
+to provide finer corections of the beam directio and field geometry.
+Additonal energy to the protons is provided in each revolution
+using 8 radio frequency (RF) cavities per beam line, until the
+protons reach the desired energy (6.5 TeV during the Run II of the
+LHC, lasting between 2015-2018). Given that each cavity can
+provide about 60 keV per revolution, it takes about 20 minutes
+of *ramp* time to reach collision energies.
 
-
-
-
-
-### LHC Operation and Detectors
+During the whole acceration proces, specialised dipole magnets
+are used to kept the beams separated at the four interactions points
+(IPs) and thus avoid collisions. With the purpose of maximising
+the interaction rates, the beams are made more compact (commonly
+referred as *squeezed*) right before switching to collision mode. Once
+the characteristics of the proton beam are suitable, the quadrupoles
+align the beam trayectories and *physiscs* collisions can begin. A stable
+configuration is then adopted by the LHC machine, providing about 7 keV 
+of energy to the beam to account for synchroton radiation losses using
+the RF cavities. If not unexpected problems occur, the proton beams are kept
+circling the LHC ring and colliding at the IPs for several hours until
+the bunch properties are degraded beyond correction,
+a period that typically is referred a LHC *fill*. The *fill* is
+finalised when some problem ocurrs on when all the proton bunches
+are *dumped* (made collide) against graphite absorbers tangent
+to the beam pipe.
+ 
+### LHC Collisions and Detectors
 
 
 
