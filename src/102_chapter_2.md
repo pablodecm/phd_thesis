@@ -193,11 +193,37 @@ density) are different as long as the beam energies are matching. Such notion
 will be particularly useful when talking about the amount of data collected
 by a detector during a year or a longer data acquisition period.
 
+<!-- TODO: add something about measurement of luminosity maybe -->
+<!-- TODO: find out a way to link well to detectors -->
+
+Around the collision volume at each of the interaction points, large
+detectors are positioned in order to reveal and quantitatively
+study the outcomes of the highly-energetic particle scaterrings,
+which can in turn be used to obtain information about the properties
+of fundamental interactions. Four large particle
+experiments are installed at the LHC interaction points:
+
+* **ATLAS** (A Toroidal LHC ApparatuS) [@ATLAS:2008JINST]:
+  is the largest experiment at the LHC, 
+
+* **CMS** (Compact Muon Solenoid) [@CMS:2008JINST]:
+
+* **LHCb** (Large Hadron Collider beauty) [@LHCb:2008JINST]:
+
+* **ALICE** (A Large Ion Collider Experiment) [@ALICE:2008JINST]:
 
 
-## The Compact Muon Solenoid Detector
 
-## CMS Data Pipelines
+
+
+
+
+## The Compact Muon Solenoid
+
+
+### Trigger and Data acquisition
+
+## Event Simulation and Reconstruction
 
 
 
