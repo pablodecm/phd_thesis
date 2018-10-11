@@ -38,7 +38,7 @@ installed along a 26.7 km underground tunnel inherited from the
 Large Electro Positron (LEP) collider [cite], as depicted in Figure
 [-@fig:LHC_overall]. The setup was designed
 to achieve center-of-mass energies up to 14 TeV for nominal instantaneous
-luminosities reaching $10 \times 10^{34} \textrm{cm}^{-1} \textrm{s}^{-1}$
+luminosities reaching $\times 10^{34} \textrm{cm}^{-1} \textrm{s}^{-1}$
 for proton-proton collisions, and hence explore the high-energy frontier of
 particle physics.
 
@@ -119,20 +119,21 @@ During the whole acceration proces, specialised dipole magnets
 are used to kept the beams separated at the four interactions points
 (IPs) and thus avoid collisions. With the purpose of maximising
 the interaction rates, the beams are made more compact (commonly
-referred as *squeezed*) right before switching to collision mode. Once
+referred as *squeezed*) at the interaction region
+right before switching to collision mode. Once
 the characteristics of the proton beam are suitable, the quadrupoles
-align the beam trayectories and *physiscs* collisions can begin. A stable
+align the beam trayectories and *physiscs* collisions begin. A stable
 configuration is then adopted by the LHC machine, providing about 7 keV 
 of energy to the beam to account for synchroton radiation losses using
 the RF cavities. If not unexpected problems occur, the proton beams are kept
 circling the LHC ring and colliding at the IPs for several hours until
 the bunch properties are degraded beyond correction,
-a period that typically is referred a LHC *fill*. The *fill* is
-finalised when some problem ocurrs on when all the proton bunches
-are *dumped* (made collide) against graphite absorbers tangent
-to the beam pipe.
+a period that typically is referred as a LHC *fill*. The *fill* is
+finalised when some problem ocurrs or when all the proton bunches
+insed the ring are *dumped* (made collide) against graphite absorbers
+tangent to the beam pipe.
  
-### LHC Collisions and Detectors
+### LHC Operation and Detectors
 
 One of the most relevant parameters for a particle collider is the
 instantaneous luminosity $\mathcal{L}(t)$, which already appeared in
@@ -144,7 +145,32 @@ to ocurr by unit of time, also known as the rate of such collisions,
 can be expressed as:
 $$ \frac{dn_c}{dt} = \mathcal{L}(t) \cdot \sigma$$
 thus the luminosity $\mathcal{L}$ is proportional to the number of
-expected interactions of any given process.
+expected interactions of any given process. For studing rare
+scattering processes, corresponding to very small cross sections $\sigma$,
+the luminosity would be crucial factor, because it determines the
+expected total amount such collisions produced per time unit. The
+instantaneous luminosity at the interaction region at a given time
+can be estimated from the characteristics of the proton beams as:
+$$ \mathcal{L} = \frac{n_p^2 n_b f_r \gamma_r}{ 4 \pi \epsilon_n \beta^{*}}
+    \mathcal{F}$$
+where $n_p$ is the number of particles per bunch, $n_b$ is the number
+of bunches per beam, $f_r$ is the beam revolution frequency, $\gamma_r$
+is a relativistic suppresion factor, $\epsilon_n$ is the normalised
+beam emittance, $\beta^{*}$ is the transverse size of the beam, and
+$\mathcal{F}$ is an additional luminosity reduction factor. The main
+contribution to the reduction factor $\mathcal{F}$ comes from a
+small tilt of the beams at the crossing point, characterised by
+the crossing angle $\phi_c$, which avoids parasitic interactions
+between bunches but reduces the luminosity by approximately:
+$$ \mathcal{F} = \left (  1 +
+ \left ( \frac{\phi_c \sigma_z}{2\sigma^{*}} \right )^2 \right )^{-1/2} $$
+where $\sigma_z$ is the root mean square (RMS) bunch length and $\sigma^{*}$
+is the RMS of the beam in the transverse direction at the interaction volume.
+The average values of some these parameters and the peak instantaneous
+luminosities for the different proton-proton data acquisition periods
+at the LHC are summarised in Table [create], which can
+be compared with the peak design luminosity of the LHC  of $\times 10^{34} \textrm{cm}^{-1} \textrm{s}^{-1}$.
+
 
 
 ## The Compact Muon Solenoid Detector
