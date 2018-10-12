@@ -66,7 +66,7 @@ the conditions present in the early universe, in this work we will
 be focussing on proton-proton collisions.
 
 
-### LHC Injection and Acceleration Chain
+### Injection and Acceleration Chain
 
 In order to achieve beam energies of the TeV order, protons have to
 follow several stages of synchronised accelerations through a variety
@@ -133,7 +133,7 @@ finalised when some problem ocurrs or when all the proton bunches
 insed the ring are *dumped* (made collide) against graphite absorbers
 tangent to the beam pipe.
  
-### LHC Operation and Detectors
+### Operation Parameters and Detectors
 
 One of the most relevant parameters for a particle collider is the
 instantaneous luminosity $\mathcal{L}(t)$, which already appeared in
@@ -239,16 +239,24 @@ experiments are installed at the LHC interaction points:
   as well as shedding some light on the processes that took
   a few microseconds after the Big Bang.
   
-  
-  
 
-
-
+Additionally, three smaller experiments are built around the mentioned
+detectors with specific research purposes: TOTEM [@TOTEM:2008JINST],
+LHCf [@LHCf:2008JINT] and MoEDAL [@MoEDAL:2014PP]. Both TOTEM and LHCf
+are built investigate features of forward physics interactions, where
+scattering products remain the original proton trayectories,
+and hence they are set up tangent to the LHC beamline at the sides of
+CMS and ATLAS interactions points respectively. MoeDAL is instead built
+at the same experimental space than LHCb and its main aim is to search
+for evidence of production of magnetic monopoles and other highly ionising
+stable massive particles.
 
 
 
 
 ## The Compact Muon Solenoid {#sec:cms}
+
+### Geometry and Subcomponents
 
 
 ### Trigger and Data Acquisition
