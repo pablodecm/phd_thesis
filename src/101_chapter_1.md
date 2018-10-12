@@ -50,17 +50,13 @@ $G_\textrm{SM}$ symmetry group is essential to describe three of the four
 fundamental interactions observed in nature: strong interaction,
 weak interaction and electromagnetic interaction. In fact, the
 $SU(3)_{C}$ is associated the strong force and the conservation of
-color while the $SU(2)_{L} \otimes U(1)_{Y}$ is
-retated with electroweak interactions (unification of weak and
+color while the $SU(2)_{L} \otimes U(1)_{Y}$ symmetry instead is
+related with electroweak interactions (i.e. unification of weak and
 electromagnetic) and the conservation of isospin and
 hypercharge.
-<!--- Check and unify notation L (mean only coupling to left-handed
-fermions) while the other subindex come from the generators --->
-
- 
 The SM is typically specified using the Lagrangian formalism and depends
 on a total of 19 parameters, which are not predicted by the theory
-but determined through experimental measurements.
+from first principles but determined through experimental measurements.
 
 ![Standard Model Particles
 ](gfx/101_chapter_1/Standard_Model_of_Elementary_Particles.pdf){
@@ -74,6 +70,21 @@ are further subdivided into leptons and quarks depending on their
 interactions. A schematic overview of the fundamental particles
 of the SM and their properties is provided in
 [@Fig:standard_model_particles].
+
+
+### Quantum Field Theory Basics
+
+
+### Quantum Chromodynamics
+
+
+### Electroweak Interactions
+
+
+### Symmetry Breaking and the Higgs Boson
+
+### Standard Model Lagrangian
+
 
 
 ## Beyond the Standard Model {#sec:sm_alternatives}
