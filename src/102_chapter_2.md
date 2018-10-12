@@ -263,11 +263,18 @@ testing alternative explanations of nature such as extra dimensions
 or supersymmetry, as well as looking for evidence of particle
 dark matter particle candidates.
 
-In spite of having ambitious research goals, its principle of operation is
-rather simple, it reduces to the detection of the outgoing
+In spite of having such ambitious research goals,
+the principle of operation of CMS is
+rather simple, it can be reduced to the detection of the outgoing
 particles produced as a result of high-energy interactions between
-protons and the meaurement of their most relevant properties such as
-their momenta, energy or their type. 
+protons and the identification and measurement of their most
+relevant properties, such as momenta and energies. These is done
+by combining the information acquired by a large number of
+simpler detecting elements placed in layers around the
+collision region. The properties
+and kinematics of several of those final state detected
+particles can often be combined to compute observables of
+more complex objects.
 
 ### Experimental Geometry
 
