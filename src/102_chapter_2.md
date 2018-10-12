@@ -204,13 +204,43 @@ of fundamental interactions. Four large particle
 experiments are installed at the LHC interaction points:
 
 * **ATLAS** (A Toroidal LHC ApparatuS) [@ATLAS:2008JINST]:
-  is the largest experiment at the LHC, 
+  the largest experiment at the LHC, designed as a
+  general-purpose detector to study the various products of high-energy
+  interactions, specially those of high-luminosity proton-proton collisions.
+  While one of the most important 
+  scientific goals of the ATLAS experiment was to discover Higgs boson
+  and provide a detailed study of its properties, it was also build with
+  the aim of extensive testing of Beyond the Standard Model (BSM) theories.
 
 * **CMS** (Compact Muon Solenoid) [@CMS:2008JINST]:
+  the other general-purpose experiment at the LHC, sharing most of the
+  research goals with ATLAS, but opting for an alternative
+  design and a different choice of detector technologies
+  making it considerably more compact. It is the
+  detector that collected the data use in the analysis in Chapter
+  [-@sec:lhc_analysis] and
+  hence is described extensively in Section [-@sec:cms].
 
 * **LHCb** (Large Hadron Collider beauty) [@LHCb:2008JINST]:
+  operating at a lower range of luminosity than ATLAS or CMS,
+  by deliverately separating the beams, this experiment
+  focusses on very accurate precision measurements of the
+  properties and rate decays of b-quark and c-quark hadrons
+  as well as the search for indirect evidence of new physics
+  leading to CP violation in heavy flavour physics phenomena.
 
 * **ALICE** (A Large Ion Collider Experiment) [@ALICE:2008JINST]:
+  a heavy-ion collisions detector, designed to study the dynamics
+  quark-gluon plasma,
+  a high energy density state of strongly interacting matter,
+  as it expands and coold down. Such studies can lead to
+  a better understanding of color confinement and other relevant
+  QCD problems,
+  as well as shedding some light on the processes that took
+  a few microseconds after the Big Bang.
+  
+  
+  
 
 
 
@@ -218,10 +248,10 @@ experiments are installed at the LHC interaction points:
 
 
 
-## The Compact Muon Solenoid
+## The Compact Muon Solenoid {#sec:cms}
 
 
-### Trigger and Data acquisition
+### Trigger and Data Acquisition
 
 ## Event Simulation and Reconstruction
 
