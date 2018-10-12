@@ -252,11 +252,43 @@ for evidence of production of magnetic monopoles and other highly ionising
 stable massive particles.
 
 
-
-
 ## The Compact Muon Solenoid {#sec:cms}
 
-### Geometry and Subcomponents
+The Compact Muon Solenoid (CMS) is a general purpose detector placed
+about 100 meters underground around one of the collision points of the
+Large Hadron Collider (LHC) ring. It was designed to carry out
+experimental research on a wide range of high-energy physics phenomena,
+including searching for the Higgs boson and studying its properties,
+testing alternative explanations of nature such as extra dimensions
+or supersymmetry, as well as looking for evidence of particle
+dark matter particle candidates.
+
+In spite of having ambitious research goals, its principle of operation is
+rather simple, it reduces to the detection of the outgoing
+particles produced as a result of high-energy interactions between
+protons and the meaurement of their most relevant properties such as
+their momenta, energy or their type. 
+
+### Experimental Geometry
+
+Given the geometry of the detector, the coordinate system used is
+centred at geometrical center of the nominal interaction point
+inside the detector. The $x$ axis point inwards towards the LHC ring
+origin, while the $y$ axis points vertically upward toward the terrestial
+surface. The $z$ axis hence tangent to the beam line, increasing in the
+counter-clockwise direction when looking at the LHC ring from above. Given
+the expected symmetries for detection,
+spherical coordinates are a convenient representation, where $\phi$ is the
+angle from the $x$ axis in transverse plane (i.e. $x$-$y$ plane), and $\theta$
+is the polar angle with respect to the LHC plane using a consistent sign
+convention with the previous definition of the $z$ and $y$ axes.
+
+ 
+ 
+$$\eta = - \ln \left ( \tan \frac{\theta}{2} \right ) $$ {#eq:pseudo_rapidity}
+
+
+### Subcomponents
 
 
 ### Trigger and Data Acquisition
