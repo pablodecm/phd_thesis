@@ -7,3 +7,7 @@ https://commons.wikimedia.org/wiki/File:Cern-accelerator-complex.svg
 **LHC Overall**
 
 https://cds.cern.ch/record/1708849
+
+**CMS Detector**
+
+https://cms-docdb.cern.ch/cgi-bin/DocDB/ShowDocument?docid=11514

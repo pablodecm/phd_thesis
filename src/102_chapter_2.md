@@ -282,10 +282,14 @@ and statistical inference in the form of interval estimates
 on parameters of interest or hypothesis testing 
 of alternative explanations.
 
+![CMS detector
+](gfx/102_chapter_2/CMS_detector.pdf){
+#fig:CMS_detector width=90%}
+
 ### Experimental Geometry
 
 Given the geometry of the detector, the coordinate system used is
-centred at geometrical centre of the nominal interaction point
+centred at centre of the nominal interaction point
 inside the detector. The $x$ axis point inwards towards the LHC ring
 origin, while the $y$ axis points vertically upward toward the terrestrial
 surface. The $z$ axis hence tangent to the beam line, increasing in the
@@ -302,6 +306,10 @@ $$\eta = - \ln \left ( \tan \frac{\theta}{2} \right ) $$ {#eq:pseudo_rapidity}
 
 
 ### Subcomponents
+
+The CMS detector is built inside and around a large cylindrical coil of
+superconductive wire, forming a 6 m diameter solenoid magnet that can
+provide an almost homogenous magnetic field of 3.8 T.
 
 
 ### Trigger and Data Acquisition
