@@ -22,7 +22,7 @@ dimensional summary statistics.
 ## Problem Definition
 
 ### Confidence Intervals
-### Hyphotesis Testing
+### Hypothesis Testing
 
 ### Likelihood-Free Inference
 
