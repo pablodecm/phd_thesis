@@ -97,9 +97,9 @@ of new particles
 (e.g. $Z$, $W^{\pm}$ and Higgs bosons or top quark) to
 the agreement of precise predictions with meticulous experimental
 observations. The fine structure constant $\alpha$ at zero energy scale
-is an example of the latter, the experimentaly determined value being
+is an example of the latter, the experimentally determined value being
 compatible with the Standard Model based theoretical prediction up
-to 12 orders of magntitude [cite]. In addition to describing natural phenomena
+to 12 orders of magnitude [cite]. In addition to describing natural phenomena
 with unprecedented accuracy, the SM it is a self-consistent theory that 
 provide non-divergent predictions at the highest energy scales probed to date.
 
@@ -113,8 +113,8 @@ observed phenomena such as gravitational interactions, neutrino masses or
 dark matter particle candidates,
 theoretical considerations regarding the stability of vacuum or
 aesthetic principles such as naturalness.
-Hence, it is presumed that the Standad Model is an effective theory, able to
-succesfully describe fundamental processes within a range of energies as
+Hence, it is presumed that the Standard Model is an effective theory, able to
+successfully describe fundamental processes within a range of energies as
 an approximation fo more complete unified theory. For completeness, the
 main empirical and theoretical concerns are summarised:
 
@@ -137,12 +137,12 @@ main empirical and theoretical concerns are summarised:
   and the Cosmic Microwave Background (CMB) [cite], there is clear
   evidence indicating the presence of more gravitational interacting matter
   in the universe than what is expected by contrasting with the
-  electromagnetic sprectra. It has been estimated that about $85\%$ of
+  electromagnetic spectra. It has been estimated that about $85\%$ of
   massive existing matter in the universe does not notably interact
   with ordinary matter and radiation [cite], and therefore is referred
   as *Dark Matter*. While its particular nature is still unknown, scientific
   consensus seem to favour long-lived cold non-baryonic matter as an explanation,
-  predominatly weakly-interacting massive particles (WIMPs). The three
+  predominantly weakly-interacting massive particles (WIMPs). The three
   neutrino types are the
   only WIMP candidates within the Standard Model, but considering
   the known upper limits on their masses, could only account for very
@@ -151,17 +151,17 @@ main empirical and theoretical concerns are summarised:
   
 * **unexplained matter-antimatter asymmetry**: as discussed in
   Section [-@sec:standard_model], each matter particle in the Standard
-  Model has an anti-matter parner that is identical but with opposite quantum
-  numbers. Because pair creation and anhilation processes are symmetric, but
-  our univese is manifestly dominated by what we refer as matter, some
-  asymmetric interaction proceses ought to exist. Within the SM, some
+  Model has an anti-matter partner that is identical but with opposite quantum
+  numbers. Because pair creation and annihilation processes are symmetric, but
+  our universe is manifestly dominated by what we refer as matter, some
+  asymmetric interaction processes ought to exist. Within the SM, some
   electroweak processes are known to violate CP-symmetry and potentially
   explain a small part of the observed matter-antimatter asymmetry. New
-  unkwnown CP-symmetry processes, potentially through interactions not
+  unknown CP-symmetry processes, potentially through interactions not
   included in the SM, are needed to resolve the mentioned disparity.
 
-* **origin of neutrino masses**: the Standard Model was developed assumming
-  that neutrinos were massless, yet is currenly well-stablished
+* **origin of neutrino masses**: the Standard Model was developed assuming
+  that neutrinos were massless, yet is currently well-stablished
   that neutrinos oscillate between different flavour states [cite], implying 
   that flavour states are mixing and hence that neutrino masses are
   very small but different from zero .
@@ -174,15 +174,15 @@ main empirical and theoretical concerns are summarised:
   and hence they are their own anti-particle, which is currently being
   experimentally tested. It also worth noting that in order to explain the
   smallness of neutrino masses in a principled way, the Seesaw mechanism [cite]
-  has been proposed, which implictly assummes that the SM is only a
+  has been proposed, which implicitly assumes that the SM is only a
   low-energy scale effective theory of a more complete unified theory.
 
   
 * **mismatch between vacuum energy and Dark Energy**: in addition of providing
   evidence for dark matter, astrophysical observations such as studies of the
   properties of the Cosmic Microwave Background [cite] or the red shift of
-  type Ia supernovae [cite], consistently point to the hyphothesis of
-  an accerating expansion of the current universe. The simplest way to account
+  type Ia supernovae [cite], consistently point to the hypothesis of
+  an accelerating expansion of the current universe. The simplest way to account
   for this in cosmological models is to include a cosmological constant,
   which be understood of an intrinsic energy density of the vacuum, exerting
   a negative pressure and therefore driving the observed expansion of the
@@ -225,7 +225,7 @@ once the higher precision measurements of the SM become available.
 
 ### Possible Extensions
 
-## Phenenomenology of proton collisions {#sec:pheno}
+## Phenomenology of proton collisions {#sec:pheno}
 
 Once the properties and limitations of the theoretical model that best
 describes the current understanding of the fundamental structure and
@@ -235,7 +235,7 @@ quantitative perspective, so theoretical predictions
 can be contrasted with experimental results at the LHC. The focus
 of section then is to make sense of the various outcomes of high-energy
 proton-proton collisions and how we can predict their relative
-rates of ocurring given some initial state
+rates of occurring given some initial state
 conditions of the interaction.
 
 A related consideration that is useful as an introduction to the
@@ -245,9 +245,9 @@ An answer somehow circular but compatible with our
 current interpretation of the universe
 is that everything that could be produced would be produced,
 meaning that any outcome that can happen
-in a way that is consistent with the underlying propierties
+in a way that is consistent with the underlying properties
 of nature is possible. Even though the true description
-the properties of nature is not kwown, as discussed in Section
+the properties of nature is not known, as discussed in Section
 [-@sec:standard_model], the Standard Model
 provides an effective model and restricts considerably the space
 of possible outcomes, in a way that can be compared with experimental
@@ -259,25 +259,25 @@ and hence often drive the experimental searches for evidence of New Physics.
 
 For those physical processes that could happen as a product of a proton-proton
 collision, under the assumption of validity of a particular theoretical model,
-their total expected rate of ocurrence is one the most relevant
+their total expected rate of occurrence is one the most relevant
 quantities to predict and compare with observation.
 To ease its experimental interpretation,
-the rate of ocurrence of certain process is commonly
+the rate of occurrence of certain process is commonly
 expressed as as a cross section $\sigma$,
 which has dimensions of area and is typically expressed in submultiples
 of barn ($1 \textrm{barn} = 10^{-28} \textrm{m}^2$). The advantage of cross
 sections over rates is that their value is independent from the density
 of the incident particle fluxes. The rate, or probability per unit of time,
-of a process ocurring can be computed simply by multiplying its cross
+of a process occurring can be computed simply by multiplying its cross
 section by the instantaneous luminosity $\mathcal{L}(t)$, which
-correspoonds to the number of particles per unit of area per unit of time
+corresponds to the number of particles per unit of area per unit of time
 crossing in opposite directions in the collision volume.
 
 Another related concept, which is specially important for simulating
 interactions,
 is the differential cross section $d\sigma$. While the initial state
 conditions are fixed, the rate of
-ocurrence of a physical process can be expressed as as a function of
+occurrence of a physical process can be expressed as as a function of
 some final-state
 variables, such as the angle and energy of outgoing particles. While these
 variables can be integrated over to compute total cross sections $\sigma$,
@@ -291,8 +291,9 @@ in this section for generality.
 A complication that has not been addressed yet is that protons are
 composite particles, formed by two up-type quarks
 and one down-type quarks bound together via the strong force.
-The dynamics of proton-proton scaterring are therefore dictated by quantum
-chromodynamics (QCD), which cannot be adressed perturbatively for low
+The dynamics of proton-proton scattering are therefore dictated by quantum
+chromodynamics (QCD), which cannot be addressed using perturbation
+theory for low
 energies, limiting the first principles computation of relevant
 observables for the most common interactions. Luckily for us,
 the most promising territory being explored in energy colliders correspond
@@ -305,17 +306,17 @@ freedom.
 Even for modelling hard scattering processes, non-perturbative input is
 required, mainly the probability of finding a particular proton constituent
 with a certain momentum fraction inside each of the colliding protons,
-refferred as the parton distribution function (PDF).
+referred as the parton distribution function (PDF).
 The model of the proton as three quarks coupled by strong force 
-is too simplisticfor modelling proton-proton scattering realistically,
-specially at high energies. The continous exchange of gluons between the three 
+is too simplistic for modelling proton-proton scattering realistically,
+specially at high energies. The continuous exchange of gluons between the three 
 constituent quarks effectively generates
 a sea of virtual quark-antiquark pairs from which other partons can
-scatter off. Consequently, in the interaction of two protons, not only
+scatter-off. Consequently, in the interaction of two protons, not only
 the constituent quarks, referred as valence quarks, can take part in the
 hard scattering process but also gluons and sea quarks. At time of writing,
 PDFs are not computable from first principles so they
-have to be parametrized and extrapolated from various experimental sources
+have to be parametrised and extrapolated from various experimental sources
 including fixed-target proton deep inelastic scattering (DIS) and previous
 collider studies. It is worth noting that the distribution functions depend
 strongly in the energy scale of the process, but the evolution for parton
@@ -338,7 +339,7 @@ Let us consider the computation the differential cross section for a hard
 scattering process $pp \rightarrow X$, which will be denoted as
 $d\sigma(pp \rightarrow X)$, for two protons colliding head on
 at center of mass energy $s$. Here
-$X$ denotes a possible outcome for the interaction, not necesarialy a single
+$X$ denotes a possible outcome for the interaction, not necessarily a single
 particle (e.g. a Higgs boson $X=H$) but a set of particles (e.g. a bottom
 quark-antiquark pair $X=b\hat{b}$). According to the QCD factorisation
 theorem [cite], the differential cross section for $d\sigma(pp \rightarrow X)$

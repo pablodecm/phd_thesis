@@ -6,7 +6,7 @@
 In this chapter, the problem of extracting quantitative
 information about the validity or properties of the different
 theoretical models (see Chapter [-@sec:theory]) can be made given the
-data experimental data acquited in a controlled setting (see Chapter
+data experimental data acquired in a controlled setting (see Chapter
 [-@sec:experiment]) will be tackled. We will begin by formally defining
 common inference problems in experimental high-energy physics and how they
 can be tackled with classical techniques.

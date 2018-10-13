@@ -3,14 +3,14 @@
 \epigraph{Measure what is measurable and make measurable
    what is not so.}{Galileo Galilei (attributed)}
 
-In Chapter [-@sec:theory], the most succesful testable theory to date
-describing succesfully the properties and dynamics of our universe at the most fundamental scales has been reviewed.
+In Chapter [-@sec:theory], the most successful testable theory to date
+describing successfully the properties and dynamics of our universe at the most fundamental scales has been reviewed.
 Nevertheless, clear limitations of the Standard Model as it is currently
 formulated are known,
 such as the complete omission of gravity forces or the absence of viable
 dark matter candidates, motivating the quest for alternative
 unified descriptions of the physical world. A direct
-path to verify the predictions of the Standard Model up to high acurracy
+path to verify the predictions of the Standard Model up to high accuracy
 and test alternative theoretical models is to collide high energy particles
 in a controlled setting and quantitatively study the properties scattering
 particles produced. That is the aim of the Large Hadron Collider (LHC) and the
@@ -24,7 +24,7 @@ experimental observations, commonly referred to as events.
 
 ## The Large Hadron Collider
 
-The Large Hadron Collider (LHC) is the largest and most poweful particle
+The Large Hadron Collider (LHC) is the largest and most powerful particle
 accelerator on operation at the time of writing. Its main purpose is to
 accelerate bunches of protons and other heavier nuclei in opposite
 directions to ultra-relativistic velocities, so then can be collimated
@@ -51,12 +51,12 @@ The main reason for building a high-energy proton-proton collider such as the
 LHC instead of more powerful electron-positron, given the difficulties
 when computing observables, due to protons being composite particles as described
 in Section [-@sec:pheno], is that proton are considerably more massive
-and hence their synchroton radiation loss is greaty reduced, so the
+and hence their synchrotron radiation loss is greatly reduced, so the
 accelerated to higher energies and more efficiently. Another
 practical advantage of proton colliders is that very high
 collisions rates (i.e. instantaneous
 luminosities) can be technically achieved, which makes them suitable for
-the discovery of rare but interesting physical proceses.
+the discovery of rare but interesting physical processes.
 While the LHC and most of its detectors can also be used with to study
 collisions
 of nuclei from heavier atoms, such as $\textrm{Pb}$, $\textrm{Au}$ 
@@ -87,9 +87,9 @@ filling a duoplasmatron device
 gas from a hydrogen $\textrm{H}_2$ bottle. Those protons are then injected
 into to a linear accelerator, named LINAC2, which boosts them to an energy
 of 50 MeV. The next step of acceleration occurs at the Proton Synchrotron
-Booster (PSB), which receives beams splitted from the
+Booster (PSB), which receives beams split from the
 LINAC2 beam line and increases their energy to 1.4 GeV using four
-superimposed synchroton rings. Promply after, the Proton Synchrotron (PS) 
+superimposed synchrotron rings. Promptly after, the Proton Synchrotron (PS) 
 further splits and boosts the energy of proton bunches to 25 GeV. The
 penultimate step of the chain is the Super Proton Synchrotron (SPS) which
 accelerates the proton bunches to 450 GeV and injects them in opposite
@@ -107,30 +107,30 @@ superfluid helium, capable of providing very strong magnetic
 fields (up to 8.3 T for a 11.8 kA current). For collimation
 of the proton bunches, additional 392 quadrupole magnets are
 placed around the ring. Higher-order multipoles are also interleaved
-to provide finer corections of the beam directio and field geometry.
-Additonal energy to the protons is provided in each revolution
+to provide finer corrections of the beam direction and field geometry.
+Additional energy to the protons is provided in each revolution
 using 8 radio frequency (RF) cavities per beam line, until the
 protons reach the desired energy (6.5 TeV during the Run II of the
 LHC, lasting between 2015-2018). Given that each cavity can
 provide about 60 keV per revolution, it takes about 20 minutes
 of *ramp* time to reach collision energies.
 
-During the whole acceration proces, specialised dipole magnets
+During the whole acceleration process, specialised dipole magnets
 are used to kept the beams separated at the four interactions points
 (IPs) and thus avoid collisions. With the purpose of maximising
 the interaction rates, the beams are made more compact (commonly
 referred as *squeezed*) at the interaction region
 right before switching to collision mode. Once
 the characteristics of the proton beam are suitable, the quadrupoles
-align the beam trayectories and *physiscs* collisions begin. A stable
+align the beam trajectories and *physiscs* collisions begin. A stable
 configuration is then adopted by the LHC machine, providing about 7 keV 
-of energy to the beam to account for synchroton radiation losses using
+of energy to the beam to account for synchrotron radiation losses using
 the RF cavities. If not unexpected problems occur, the proton beams are kept
 circling the LHC ring and colliding at the IPs for several hours until
 the bunch properties are degraded beyond correction,
 a period that typically is referred as a LHC *fill*. The *fill* is
-finalised when some problem ocurrs or when all the proton bunches
-insed the ring are *dumped* (made collide) against graphite absorbers
+finalised when some problem occurs or when all the proton bunches
+inside the ring are *dumped* (made collide) against graphite absorbers
 tangent to the beam pipe.
  
 ### Operation Parameters and Detectors
@@ -141,7 +141,7 @@ Section [-@sec:pheno] and corresponds to the number of particles
 per unit of area per unit of time crossing each other in the
 interaction volume. Given a certain physical process characterised
 by a cross section $\sigma$, the number of collisions $n_c$ expected
-to ocurr by unit of time, also known as the rate of such collisions,
+to occur by unit of time, also known as the rate of such collisions,
 can be expressed as:
 $$ \frac{dn_c}{dt} = \mathcal{L}(t) \cdot \sigma$$ {#eq:lumi_rate}
 thus the luminosity $\mathcal{L}$ is proportional to the number of
@@ -155,7 +155,7 @@ $$ \mathcal{L} = \frac{n_p^2 n_b f_r \gamma_r}{ 4 \pi \epsilon_n \beta^{*}}
     \mathcal{F}$$ {#eq:lumi_beam}
 where $n_p$ is the number of particles per bunch, $n_b$ is the number
 of bunches per beam, $f_r$ is the beam revolution frequency, $\gamma_r$
-is a relativistic suppresion factor, $\epsilon_n$ is the normalised
+is a relativistic suppression factor, $\epsilon_n$ is the normalised
 beam emittance, $\beta^{*}$ is the transverse size of the beam, and
 $\mathcal{F}$ is an additional luminosity reduction factor. The main
 contribution to the reduction factor $\mathcal{F}$ comes from a
@@ -188,7 +188,7 @@ $$ {#eq:int_lumi}
 which is proportional to the number of collisions for a given process
 during that period and thus can be used to quantify the amount of data
 acquired. When studying data from different time periods jointly, integrated
-luminosity is additive, even if the beam conditions (e.g. proto
+luminosity is additive, even if the beam conditions (e.g. proton
 density) are different as long as the beam energies are matching. Such notion
 will be particularly useful when talking about the amount of data collected
 by a detector during a year or a longer data acquisition period.
@@ -223,7 +223,7 @@ experiments are installed at the LHC interaction points:
 
 * **LHCb** (Large Hadron Collider beauty) [@LHCb:2008JINST]:
   operating at a lower range of luminosity than ATLAS or CMS,
-  by deliverately separating the beams, this experiment
+  by deliberately separating the beams, this experiment
   focusses on very accurate precision measurements of the
   properties and rate decays of b-quark and c-quark hadrons
   as well as the search for indirect evidence of new physics
@@ -233,7 +233,7 @@ experiments are installed at the LHC interaction points:
   a heavy-ion collisions detector, designed to study the dynamics
   quark-gluon plasma,
   a high energy density state of strongly interacting matter,
-  as it expands and coold down. Such studies can lead to
+  as it expands and cools down. Such studies can lead to
   a better understanding of color confinement and other relevant
   QCD problems,
   as well as shedding some light on the processes that took
@@ -244,8 +244,8 @@ Additionally, three smaller experiments are built around the mentioned
 detectors with specific research purposes: TOTEM [@TOTEM:2008JINST],
 LHCf [@LHCf:2008JINT] and MoEDAL [@MoEDAL:2014PP]. Both TOTEM and LHCf
 are built investigate features of forward physics interactions, where
-scattering products remain the original proton trayectories,
-and hence they are set up tangent to the LHC beamline at the sides of
+scattering products remain the original proton trajectories,
+and hence they are set up tangent to the LHC beam line at the sides of
 CMS and ATLAS interactions points respectively. MoeDAL is instead built
 at the same experimental space than LHCb and its main aim is to search
 for evidence of production of magnetic monopoles and other highly ionising
@@ -278,16 +278,16 @@ more complex objects, such as the invariant mass of an
 intermediate particle. After collecting data from a large
 number of collisions, a subset of relevance of the data
 can be compared with the expected theoretical predictions
-and statiscal inference in the form of interval estimates
-for parameters of interest or hyphotesis testing 
-of alternative explanations can be carried out.
+and statistical inference in the form of interval estimates
+on parameters of interest or hypothesis testing 
+of alternative explanations.
 
 ### Experimental Geometry
 
 Given the geometry of the detector, the coordinate system used is
-centred at geometrical center of the nominal interaction point
+centred at geometrical centre of the nominal interaction point
 inside the detector. The $x$ axis point inwards towards the LHC ring
-origin, while the $y$ axis points vertically upward toward the terrestial
+origin, while the $y$ axis points vertically upward toward the terrestrial
 surface. The $z$ axis hence tangent to the beam line, increasing in the
 counter-clockwise direction when looking at the LHC ring from above. Given
 the expected symmetries for detection,

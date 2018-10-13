@@ -167,4 +167,4 @@ of this work will be summarised
 together with some ideas for future
 extensions and improvements.
 
-<!-- mention the priorisation of ideas over technical details -->
+<!-- mention the prioritisation of ideas over technical details -->
