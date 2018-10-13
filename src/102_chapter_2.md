@@ -269,12 +269,18 @@ rather simple, it can be reduced to the detection of the outgoing
 particles produced as a result of high-energy interactions between
 protons and the identification and measurement of their most
 relevant properties, such as momenta and energies. These is done
-by combining the information acquired by a large number of
-simpler detecting elements placed in layers around the
+by putting together the information acquired by a large number of
+simple detecting elements, placed in layers around the
 collision region. The properties
 and kinematics of several of those final state detected
 particles can often be combined to compute observables of
-more complex objects.
+more complex objects, such as the invariant mass of an
+intermediate particle. After collecting data from a large
+number of collisions, a subset of relevance of the data
+can be compared with the expected theoretical predictions
+and statiscal inference in the form of interval estimates
+for parameters of interest or hyphotesis testing 
+of alternative explanations can be carried out.
 
 ### Experimental Geometry
 
