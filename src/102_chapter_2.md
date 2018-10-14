@@ -30,7 +30,7 @@ accelerator on operation at the time of writing. Its main purpose is to
 accelerate bunches of protons and other heavier nuclei in opposite
 directions to ultra-relativistic velocities, so then can be collimated
 and made interact at high-energies around several specified collision
-points inside specially design detector.
+points inside specially designed detectors.
 The LHC machine complex is located at the European
 Organisation for Nuclear Research (CERN) laboratories around
 the Switzerland-France border near Geneva, its most distinctive element being
@@ -51,12 +51,12 @@ particle physics.
 The main reason for building a high-energy proton-proton collider such as the
 LHC instead of a more powerful electron-positron, given the difficulties
 when computing observables due to protons being composite particles as described
-in Section [-@sec:pheno], is that proton are considerably more massive
-and hence their synchrotron radiation loss is greatly reduced, so the
-accelerated to higher energies and more efficiently. Another
+in Section [-@sec:pheno], is that protons are considerably more massive
+and thus their synchrotron radiation loss is greatly reduced, so they can be
+accelerated to higher energies more efficiently. Another
 practical advantage of proton colliders is that very high
 collisions rates (i.e. instantaneous
-luminosities) can be technically achieved, which makes them suitable for
+luminosities) are technically achievable, which makes them suitable for
 the discovery of rare but interesting physical processes.
 While the LHC and most of its detectors can also be used with to study
 collisions
@@ -72,7 +72,8 @@ be focussing on proton-proton collisions.
 In order to achieve beam energies of the TeV order, protons have to
 follow several stages of synchronised accelerations through a variety
 subcomponents of the CERN accelerator complex, whose main subcomponents
-as of 2018 are summarised in Figure [add]. The purpose of this section
+as of 2018 are summarised in Figure [-@fig:fig:CERN_Acc_complex].
+The purpose of this section
 is to outline the sequence of steps followed to obtain the high energy
 proton bunches that are used for high-energy collisions at the LHC.
 
@@ -82,7 +83,7 @@ proton bunches that are used for high-energy collisions at the LHC.
 #fig:CERN_Acc_complex width=70%}
 
 
-The process begins with the extractions a low-energy beam of protons by
+The process begins with the extraction of a low-energy beam of protons by
 filling a duoplasmatron device
 [@wolf2017handbook] with
 gas from a hydrogen $\textrm{H}_2$ bottle. Those protons are then injected
@@ -106,7 +107,7 @@ electromagnets,
 each 15 m long and kept at a temperature of 1.9 K using
 superfluid helium, capable of providing very strong magnetic
 fields (up to 8.3 T for a 11.8 kA current). For collimation
-of the proton bunches, additional 392 quadrupole magnets are
+of the proton bunches, 392 additional quadrupole magnets are
 placed around the ring. Higher-order multipoles are also interleaved
 to provide finer corrections of the beam direction and field geometry.
 Additional energy to the protons is provided in each revolution
@@ -118,7 +119,8 @@ of *ramp* time to reach collision energies.
 
 During the whole acceleration process, specialised dipole magnets
 are used to kept the beams separated at the four interactions points
-(IPs) and thus avoid collisions. With the purpose of maximising
+(IPs) and hence avoid collisions during that time.
+With the purpose of maximising
 the interaction rates, the beams are made more compact (commonly
 referred as *squeezed*) at the interaction region
 right before switching to collision mode. Once
