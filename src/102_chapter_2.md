@@ -4,7 +4,8 @@
    what is not so.}{Galileo Galilei (attributed)}
 
 In Chapter [-@sec:theory], the most successful testable theory to date
-describing successfully the properties and dynamics of our universe at the most fundamental scales has been reviewed.
+describing the properties and dynamics of our universe at the most
+fundamental scales has been reviewed.
 Nevertheless, clear limitations of the Standard Model as it is currently
 formulated are known,
 such as the complete omission of gravity forces or the absence of viable
@@ -48,8 +49,8 @@ particle physics.
 #fig:LHC_overall width=70%}
 
 The main reason for building a high-energy proton-proton collider such as the
-LHC instead of more powerful electron-positron, given the difficulties
-when computing observables, due to protons being composite particles as described
+LHC instead of a more powerful electron-positron, given the difficulties
+when computing observables due to protons being composite particles as described
 in Section [-@sec:pheno], is that proton are considerably more massive
 and hence their synchrotron radiation loss is greatly reduced, so the
 accelerated to higher energies and more efficiently. Another
@@ -280,7 +281,7 @@ number of collisions, a subset of relevance of the data
 can be compared with the expected theoretical predictions
 and statistical inference in the form of interval estimates
 on parameters of interest or hypothesis testing 
-of alternative explanations.
+of alternative explanations can be performed.
 
 ![CMS detector
 ](gfx/102_chapter_2/CMS_detector.pdf){
@@ -309,7 +310,10 @@ $$\eta = - \ln \left ( \tan \frac{\theta}{2} \right ) $$ {#eq:pseudo_rapidity}
 
 The CMS detector is built inside and around a large cylindrical coil of
 superconductive wire, forming a 6 m diameter solenoid magnet that can
-provide an almost homogenous magnetic field of 3.8 T.
+provide an homogenous magnetic field of 3.8 T. Particle detection
+and identification is achieved using several layers if sub-detectors with
+specialised functions, almost covering the full solid angle around the
+interaction region, as depicted in Figure [-@fig:CMS_detector].
 
 
 ### Trigger and Data Acquisition
