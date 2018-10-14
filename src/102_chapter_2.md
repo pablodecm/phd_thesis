@@ -257,12 +257,12 @@ stable massive particles.
 
 The Compact Muon Solenoid (CMS) is a general purpose detector placed
 about 100 meters underground around one of the collision points of the
-Large Hadron Collider (LHC) ring. It was designed to carry out
+Large Hadron Collider (LHC) ring. It has been designed to carry out
 experimental research on a wide range of high-energy physics phenomena,
 including searching for the Higgs boson and studying its properties,
 testing alternative explanations of nature such as extra dimensions
-or supersymmetry, as well as looking for evidence of particle
-dark matter particle candidates.
+or supersymmetry, and looking for evidence of direct production of particle
+dark matter candidates.
 
 In spite of having such ambitious research goals,
 the principle of operation of CMS is
@@ -283,6 +283,28 @@ and statistical inference in the form of interval estimates
 on parameters of interest or hypothesis testing 
 of alternative explanations can be performed.
 
+The CMS detector is built inside and around a large cylindrical coil of
+superconductive wire, forming a 6 m diameter solenoid magnet that can
+provide an homogenous magnetic field of 3.8 T. Particle detection
+and identification are achieved using several layers of sub-detectors with
+specialised functions, almost covering the full solid angle around the
+interaction region, as depicted in Figure [-@fig:CMS_detector]. Inside
+the solenoid volume, a particle tracker made of silicon pixel and strip
+detectors, a lead tungstate crystal electromagnetic calorimeter (ECAL)
+and a brass-scintillator hadronic calorimeter (HCAL) are placed, each of
+the composed of a barrel and two endcap sections. A large muon detection
+system, composed of cathode strip chambers (CSC),
+resistive plate chambers (RPC) and drift tubes (DT),
+is embedded in the steel flux-return yoke outside the solenoid. Furthermore,
+extensive forward calorimetry complements the coverage provided by
+the barrel and endcap sections.
+A more detailed review of the detection principles and capabilities
+for each detector component are included
+in Section [-@sec:cms_subcomponents], yet the detector performance
+technical design report [@CMS:TDR_Detector_Performance]
+and references therein are recommended
+for a more specialised account.
+
 ![CMS detector
 ](gfx/102_chapter_2/CMS_detector.pdf){
 #fig:CMS_detector width=90%}
@@ -290,10 +312,10 @@ of alternative explanations can be performed.
 ### Experimental Geometry
 
 Given the geometry of the detector, the coordinate system used is
-centred at centre of the nominal interaction point
+centred at the nominal interaction point
 inside the detector. The $x$ axis point inwards towards the LHC ring
 origin, while the $y$ axis points vertically upward toward the terrestrial
-surface. The $z$ axis hence tangent to the beam line, increasing in the
+surface. The $z$ axis is thus tangent to the beam line, increasing in the
 counter-clockwise direction when looking at the LHC ring from above. Given
 the expected symmetries for detection,
 spherical coordinates are a convenient representation, where $\phi$ is the
@@ -302,18 +324,20 @@ is the polar angle with respect to the LHC plane using a consistent sign
 convention with the previous definition of the $z$ and $y$ axes.
 
  
- 
 $$\eta = - \ln \left ( \tan \frac{\theta}{2} \right ) $$ {#eq:pseudo_rapidity}
 
 
-### Subcomponents
+$$y = \frac{1}{2} \ln \left ( \frac{E+p_z}{E-p_z} \right ) $$ {#eq:rapidity}
 
-The CMS detector is built inside and around a large cylindrical coil of
-superconductive wire, forming a 6 m diameter solenoid magnet that can
-provide an homogenous magnetic field of 3.8 T. Particle detection
-and identification is achieved using several layers if sub-detectors with
-specialised functions, almost covering the full solid angle around the
-interaction region, as depicted in Figure [-@fig:CMS_detector].
+
+$$\Delta \phi_{ab} = \min \left( | \phi_b-\phi_a|,
+  2 \pi - | \phi_b - \phi_a| \right)$$ {#eq:delta_phi}
+
+$$ \Delta R = \sqrt{ (\Delta \eta)^2 + (\Delta \phi)^2 }$$ {#eq:delta_r}
+
+### Subcomponents {#sec:cms_subcomponents}
+
+
 
 
 ### Trigger and Data Acquisition
