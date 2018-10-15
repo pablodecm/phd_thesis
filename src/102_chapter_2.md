@@ -428,7 +428,8 @@ magnetic flux lines are closed by a 10000 ton return yoke,
 composed by a series of magnetised iron blocks interleaved
 with the muon detectors in the outer part of CMS, providing
 a magnetic field about 2T in the opposite direction.
-The characteristics of the 
+The remaining elements of the CMS magnetic spectrometer,
+which are the 
 detector systems used to estimate the curved particle
 trajectories, commonly
 referred as *tracks*, for all charged particles and for escaping
@@ -438,6 +439,13 @@ respectively.
 
 ### Tracking System {#sec:cms_tracking}
 
+The inner tracker is the detector system that is the closest to the
+interaction point, and its functions include the estimation of
+the charged particles trajectories, used to provide a measurement
+of their momenta as described in Section [-@sec:cms_magnet],
+and also to allow the positional determination of interaction
+or decay vertices by extrapolating the trajectories inside
+the interaction region.
 
 ### Electromagnetic Calorimeter
 
