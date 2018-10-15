@@ -124,6 +124,8 @@ $endif$
 
 \begin{document}
 
+\pagenumbering{roman} 
+
 $if(title)$
 \maketitle
 $endif$
@@ -145,6 +147,10 @@ $endfor$
 \setcounter{tocdepth}{$toc-depth$}
 \tableofcontents
 }
+
+\clearpage
+
+\pagenumbering{arabic} 
 
 
 $body$

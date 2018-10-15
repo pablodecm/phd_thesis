@@ -15,7 +15,8 @@ pdf: latex
 
 	
 latex:
-	$(PANDOC) "$(INPUTDIR)"/*.md -s \
+	$(PANDOC) "$(INPUTDIR)"/0[0-1]0_*.md \
+	"$(INPUTDIR)"/10*.md -s \
 	--template "$(TEMPLATE)" \
 	-o thesis.tex --filter=pandoc-crossref \
 	--filter=pandoc-citeproc --biblatex \
