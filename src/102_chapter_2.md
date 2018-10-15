@@ -318,18 +318,50 @@ centred at the nominal interaction point
 inside the detector. The $x$ axis point inwards towards the LHC ring
 origin, while the $y$ axis points vertically upward toward the terrestrial
 surface. The $z$ axis is thus tangent to the beam line, increasing in the
-counter-clockwise direction when looking at the LHC ring from above. Given
-the expected symmetries for detection,
+counter-clockwise direction when looking at the LHC ring from above.
+Considering
+the expected symmetries for particle production,
 spherical coordinates are a convenient representation, where $\phi$ is the
 angle from the $x$ axis in transverse plane (i.e. $x$-$y$ plane), and $\theta$
 is the polar angle with respect to the LHC plane using a consistent sign
 convention with the previous definition of the $z$ and $y$ axes.
 
+As mentioned before, particle momentum is the main observable of the detected
+particles. The energy is simply a function of the momentum and the mass of
+the particle, as shown by the relation $E^2 = p^2 + m^2$, expressed in
+natural units ($c=1$). 
+Because the $x$ and $y$ momentum components
+are insensitive
+to the initial state boost in the $z$ direction due to the stochastic
+differences in parton momenta, and are measured with more accurately as
+a result of
+the design of the detector, it is common to refer separately to the total
+transverse momentum quantity $p_T = \sqrt{p_x^2 + p_y^2} = |p| \sin \theta$
+and its transverse plane angle $\phi$. While the $z$ component of the momentum
+could be specified directly either by using $p_z$ or by the angle $\theta$,
+the differences of any of those observables between two particles detected
+on an event depend
+on the initial parton state boost $\beta$ on the $z$ direction,
+which varies between different
+collisions and it is hard to estimate precisely in the laboratory
+frame of reference.
+
+Since that would complicate the statistical analysis
+and the definition of derived observables, an alternative observable
+can be defined based on the rapidity $y$, which is defined as:
+$$y = \frac{1}{2} \ln \left ( \frac{E+p_z}{E-p_z} \right ) $$ {#eq:rapidity}
+and whose value on a under a $z$-axis boost can be easily obtained by adding
+an additive factor
+$y'=y-\textrm{tanh}^{-1} \beta$, and hence differences on rapidity between
+two particles in a collision $\Delta y = | y_b - y_a |$ are invarian to
+Lorentz boost in the $z$ direction. 
+
+
+
  
 $$\eta = - \ln \left ( \tan \frac{\theta}{2} \right ) $$ {#eq:pseudo_rapidity}
 
 
-$$y = \frac{1}{2} \ln \left ( \frac{E+p_z}{E-p_z} \right ) $$ {#eq:rapidity}
 
 
 $$\Delta \phi_{ab} = \min \left( | \phi_b-\phi_a|,
