@@ -1,4 +1,4 @@
-# Experiments at Particle Colliders {#sec:experiment}
+identified# Experiments at Particle Colliders {#sec:experiment}
 
 \epigraph{Measure what is measurable and make measurable
    what is not so.}{Galileo Galilei (attributed)}
@@ -333,7 +333,8 @@ natural units ($c=1$).
 Because the $x$ and $y$ momentum components
 are insensitive
 to the initial state boost in the $z$ direction due to the stochastic
-differences in parton momenta, and are measured with more accurately as
+differences in parton momenta in the initial state,
+and are measured with more accurately as
 a result of
 the design of the detector, it is common to refer separately to the total
 transverse momentum quantity $p_T = \sqrt{p_x^2 + p_y^2} = |p| \sin \theta$
@@ -353,21 +354,37 @@ $$y = \frac{1}{2} \ln \left ( \frac{E+p_z}{E-p_z} \right ) $$ {#eq:rapidity}
 and whose value on a under a $z$-axis boost can be easily obtained by adding
 an additive factor
 $y'=y-\textrm{tanh}^{-1} \beta$, and hence differences on rapidity between
-two particles in a collision $\Delta y = | y_b - y_a |$ are invarian to
-Lorentz boost in the $z$ direction. 
-
-
-
- 
+two particles in a collision $\Delta y = | y_b - y_a |$ are invariant to
+Lorentz boost in the $z$ direction. Because the rapidity depends on
+the total energy/momentum of the particle, which might not be possible to
+measure to high precisions in hadron collider detectors,
+it is more suitable to approximate it using
+the *pseudo-rapidity* $\eta$, defined as: 
 $$\eta = - \ln \left ( \tan \frac{\theta}{2} \right ) $$ {#eq:pseudo_rapidity}
+that only depends on the polar angle $\theta$ with respect to the LHC plane.
+The *pseudo-rapidity* $\eta$
+and it is equal to the rapidity $y$ for massless particles, and a very
+effective approximation in the highly-relativistic limit, when $E\gg m$.
+It is useful observing that for particle produced in the transverse
+plane, thus $\theta=\pi/2$, their *pseudo-rapidity* is $\eta=0$. Instead, in
+the limit of fully forward particles, when $\theta \rightarrow 0$ or
+$\theta \rightarrow \pi$, their *pseudo-rapidity* becomes
+$\eta \rightarrow  +\infty$ and $\eta \rightarrow  -\infty$, respectively.
 
-
-
-
-$$\Delta \phi_{ab} = \min \left( | \phi_b-\phi_a|,
-  2 \pi - | \phi_b - \phi_a| \right)$$ {#eq:delta_phi}
-
+Oftentimes, angular distances between two particles in an event are very
+powerful observables to cluster observed particles or
+isolate interesting collisions. The distances between two particles, indentified
+with $a$ and $b$ subindexes, in the transverse $\Delta \phi$ and
+forward direction $\Delta \eta$ can be computed as:
+$$\Delta \phi = \min \left( | \phi_b-\phi_a|,
+  2 \pi - | \phi_b - \phi_a| \right) \quad \textrm{and} \quad
+  \Delta \eta = | \eta_b - \eta_a| $$ {#eq:delta_phi_eta}
+while the total angular distance $\Delta R$ between the two particles
+is instead defined as:
 $$ \Delta R = \sqrt{ (\Delta \eta)^2 + (\Delta \phi)^2 }$$ {#eq:delta_r}
+which is invariant to boosts in the $z$ direction in the highly-relativistic
+limit, and would be particularly practical to cluster the products of the
+hadronization of quarks and gluons as detailed in Section [-@sec:event].
 
 ### Subcomponents {#sec:cms_subcomponents}
 
@@ -376,7 +393,7 @@ $$ \Delta R = \sqrt{ (\Delta \eta)^2 + (\Delta \phi)^2 }$$ {#eq:delta_r}
 
 ### Trigger and Data Acquisition
 
-## Event Simulation and Reconstruction
+## Event Simulation and Reconstruction {#sec:event}
 
 
 
