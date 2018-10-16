@@ -439,13 +439,51 @@ respectively.
 
 ### Tracking System {#sec:cms_tracking}
 
-The inner tracker is the detector system that is the closest to the
+The inner tracking system is the detector that is the closest to the
 interaction point, and its functions include the estimation of
 the charged particles trajectories, used to provide a measurement
 of their momenta as described in Section [-@sec:cms_magnet],
-and also to allow the positional determination of interaction
+as well as allowing the positional determination of interaction
 or decay vertices by extrapolating the trajectories inside
-the interaction region.
+the interaction region. The detection charged particle trajectories,
+or *tracks* for short, it is carried out by several silicon
+detector layers placed non-uniformly around the collision volume,
+as shown in Figure [-@fig:CMS_tracker]. The placement is of layers is
+symmetric in $\phi$, the outermost layers contained within
+a supporting cylindrical structure of 2.5 m of diameter and 5.8 m
+of length.
+
+![CMS Tracking System
+](gfx/102_chapter_2/tracker_colour.pdf){
+#fig:CMS_tracker width=90%}
+
+The detector is composed of two main parts: a silicon pixel detector
+system situated very close to the interaction point and
+a much larger strip detector arrangement
+placed outside the former. The disposition on the detecting layers allows
+to detect tracks within a pseudo-rapidity range defined by $|\eta| < 2.5$.
+Both systems have to deal with the efficient tracking of
+hundred of charged particles, at a rate of
+40 MHz, typically produced from each bunch crossing. A successful
+apparatus in such a environment requires a short response time, as
+well as to be composed of many small detecting elements.  The latter
+property is commonly referred as *high-granularity*, and allows to
+keep the number of detected track points (i.e. *hits*) per detector
+unit at acceptable levels.
+
+Being so close to the collision region, the set-up has to
+sustain very high particle fluxes during long periods of time,
+up $1 \textrm{MHz}/\textrm{mm}^{2}$ at the first pixel layer. Therefore,
+resistance to radiation damage of the detecting elements and the
+accompanying electronics, dubbed as *radiation-hardness*,
+is an essential specification. Additionally, the amount of material
+present in the particle trajectories has to be kept to a minimum,
+to avoid stochastic secondary interactions that would degrade the
+precision and efficiency of track determination. The used of silicon
+detector technologies is thus motivated by a combination of all
+previously mentioned reasons.
+
+
 
 ### Electromagnetic Calorimeter
 

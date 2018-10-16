@@ -11,3 +11,9 @@ https://cds.cern.ch/record/1708849
 **CMS Detector**
 
 https://cms-docdb.cern.ch/cgi-bin/DocDB/ShowDocument?docid=11514
+
+**CMS Tracker**
+
+From *CMS Physics : Technical Design Report Volume 1:
+Detector Performance and Software*
+https://cds.cern.ch/record/922757?ln=en
