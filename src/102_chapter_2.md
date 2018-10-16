@@ -479,9 +479,31 @@ accompanying electronics, dubbed as *radiation-hardness*,
 is an essential specification. Additionally, the amount of material
 present in the particle trajectories has to be kept to a minimum,
 to avoid stochastic secondary interactions that would degrade the
-precision and efficiency of track determination. The used of silicon
-detector technologies is thus motivated by a combination of all
-previously mentioned reasons.
+precision and efficiency of track determination. The use of silicon
+semiconductor detector technologies [@spieler2005semiconductor]
+in the CMS tracking system is thus motivated
+by a combination of all previously mentioned reasons. In total,
+the CMS tracking system is composed of 1440 pixel detector modules
+and 15148 strip detector modules, accounting for an active
+area over $200 \textrm{m}^2$.
+
+The pixel detector, the innermost detecting system of the CMS
+experiment, is comprised by a total of 66 million silicon
+cells placed in 1440 modules around the collision region. Each pixel
+cell has an area of $100\times150\mu\:\textrm{m}^2$ and a thickness
+of $285\:\mu\textrm{m}$, and provides two-dimensional local
+track hit coordinates with a resolution around in the cell surface
+plane about $20\:\mu\textrm{m}$, that can in turn be used
+to compute the
+global three-dimensional hit location with high accuracy after
+accounting for the precise location of the detecting
+module. As depicted in Figure [-@fig:CMS_tracker], the pixel
+detector is composed by three *barrel* (i.e.
+placed around the collision region in an cylindrical
+arrangement) layers, located at radii of 4.4 cm ,7.3 cm and 10.2
+cm respectively, and two forward disk at each side at
+distance of 34.5 cm and 46.6 cm from the nominal interaction point.
+
 
 
 
