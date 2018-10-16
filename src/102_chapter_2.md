@@ -136,7 +136,7 @@ finalised when some problem occurs or when all the proton bunches
 inside the ring are *dumped* (made collide) against graphite absorbers
 tangent to the beam pipe.
  
-### Operation Parameters and Detectors
+### Operation Parameters
 
 One of the most relevant parameters for a particle collider is the
 instantaneous luminosity $\mathcal{L}(t)$, which already appeared in
@@ -199,9 +199,14 @@ by a detector during a year or a longer data acquisition period.
 <!-- TODO: add something about measurement of luminosity maybe -->
 <!-- TODO: find out a way to link well to detectors -->
 
+### Multiple Interactions
+
+
+### Experiments
+
 Around the collision volume at each of the interaction points, large
 detectors are positioned in order to reveal and quantitatively
-study the outcomes of the highly-energetic particle scaterrings,
+study the outcomes of the highly-energetic particle scattering,
 which can in turn be used to obtain information about the properties
 of fundamental interactions. Four large particle
 experiments are installed at the LHC interaction points:
@@ -504,7 +509,10 @@ arrangement) layers, located at radii of 4.4 cm ,7.3 cm and 10.2
 cm respectively, and two forward disk at each side at
 distance of 34.5 cm and 46.6 cm from the nominal interaction point.
 
-
+The rest of the tracking system, placed outside the pixel detector just
+described, is constituted of several
+silicon strip detector modules organised in different sub-detectors,
+as shown in Figure [-@fig:CMS_tracker].
 
 
 ### Electromagnetic Calorimeter
@@ -517,7 +525,11 @@ distance of 34.5 cm and 46.6 cm from the nominal interaction point.
 
 ### Trigger and Data Acquisition
 
-## Event Simulation and Reconstruction {#sec:event}
+## Event Data Analysis {#sec:event}
+
+### Simulation
+
+### Reconstruction
 
 
 
