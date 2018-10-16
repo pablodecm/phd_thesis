@@ -238,6 +238,8 @@ proton-proton collisions and how we can predict their relative
 rates of occurring given some initial state
 conditions of the interaction.
 
+### Main Observables
+
 A related consideration that is useful as an introduction to the
 aforementioned topic is the question of what outcomes can
 originate as a result of proton-proton collisions.
@@ -288,6 +290,8 @@ via random sampling. In fact, we will be dealing
 with differential cross sections instead of total process cross section
 in this section for generality.
 
+### Parton Distribution Functions
+
 A complication that has not been addressed yet is that protons are
 composite particles, formed by two up-type quarks
 and one down-type quarks bound together via the strong force.
@@ -334,6 +338,8 @@ outcome for the interaction.
 <!--- TODO: include GOOD parton distribution function figure -->
  
 
+### Factorisation of Hard Processes
+
 
 Let us consider the computation the differential cross section for a hard
 scattering process $pp \rightarrow X$, which will be denoted as
@@ -365,7 +371,7 @@ then be attained by integrating out all final state quantities, commonly
 referred as phase space variables, in the differential cross section element
 $d\sigma(pp \rightarrow X)$.
 
-
+### Hadronization and Parton Showers
 
 
 
