@@ -623,7 +623,7 @@ decayed to two closely-spaced photons.
 
 ### Hadronic Calorimeter
 
-The purpose of the CMS hadron calorimeter (HCAL) is to measure the energy
+The purpose of the hadron calorimeter (HCAL) is to measure the energy
 and position of all long-lived neutral or charged mesons and baryons
 produced as a result of the collision, typically including pions, kaons,
 protons and neutrons. The main detecting elements of this sub-detector
@@ -640,7 +640,32 @@ energy with the help of careful calibration.
 ](gfx/102_chapter_2/HCAL.pdf){
 #fig:CMS_hcal width=70%}
 
+The different segments of the CMS HCAL are shown in Figure [-@fig:CMS_hcal].
+After the ECAL but still inside the solenoid volume,
+the barrel section of the hadronic calorimeter (HB) as
+well as two endcap sections (HE) at each side are placed, providing
+pseudo-rapidity coverages of $|\eta| < 1.3$ and  $1.3 < |\eta| < 3.0$,
+respectively. Both the HB and HE section are composed of a stack of brass
+plates with plastic scintillator tiles in between, providing a total of
+$5.6\lambda_I$ at $\eta=0$ and $11.8\lambda_I$ at $\eta=3$,
+where $\lambda_I$ is the hadronic interaction length. Given that the limited
+space inside the solenoid and the fact that about 11$\lambda_I$ are required
+to absorb about 99% of the total energy of the hadrons at the expected energy
+ranges, the hadronic calorimeter system is complemented by an outer
+detector (HO) outside of the solenoid. The HO is composed of five rings
+of scintillator tiles, effectively using the solenoid material as
+absorbing material. Because the absorbing material path length is shorter
+around $\eta=0$, the central ring is shielded by a large iron plates and 
+an additional layer of scintillating material, yielding a total
+absorber length over $11.8\lambda_I$ and therefore improving its measuring
+capabilities.
 
+Over 70000 thin plastic scintillator tiles are placed between
+and after absorber plates. The size of those plates depends on
+their geometrical placement and are aligned according to their angular
+coordinates between layers, so each longitudinal projection corresponds to
+$\Delta\eta\times\Delta\phi= 0.087\times0.087$ within the HB coverage region
+and $\Delta\eta\times\Delta\phi= 0.17\times0.17$ outside it.
 
 ### Muon System {#sec:cms_muon}
 
