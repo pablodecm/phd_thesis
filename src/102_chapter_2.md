@@ -593,10 +593,10 @@ energy resolution. The lengths of the crystal blocks in the EB and EE amount
 to $25.8\mathcal{X}_0$ and $24.7\mathcal{X}_0$, which ensures that
 effectively all the energy is deposited in inside the detectors.
 
-Another advantage of $\textrm{PbWO}_4$ crystals is they double
-as scintillating material,
-because the resulting shower energy is absorbed and partially emitted back
-as visible light, with a yield spectrum maxium in the blue-violet range
+Another advantage of  lead tungstate crystals it is that $\textrm{PbWO}_4$
+is also a scintillating material,
+thus the resulting shower energy is absorbed and partially emitted back
+as visible light, with a yield spectrum maximum in the blue-violet range
 around 430 nm. The reemission process is also very fast, about 80% of the
 scintillating light is emitted within 25 ns of absorption, which
 is the time until the next LHC bunch crossing occurs. The scintillator
@@ -622,6 +622,25 @@ decayed to two closely-spaced photons.
 
 
 ### Hadronic Calorimeter
+
+The purpose of the CMS hadron calorimeter (HCAL) is to measure the energy
+and position of all long-lived neutral or charged mesons and baryons
+produced as a result of the collision, typically including pions, kaons,
+protons and neutrons. The main detecting elements of this sub-detector
+are an assortment of sampling calorimeters, interleaving brass plates as
+absorber material and a plastic scintillator tiles as active
+medium, the former causing the deposition of energy in the form of secondary
+particles by means of interactions with the material nuclei and the latter
+converting a part of that energy to visible light. The light from each tile
+is captured by a thin optical fibre and carried to a photodetector, producing
+electric signal that can be used to measure the total amount of deposited
+energy with the help of careful calibration.  
+
+![CMS Hadronic Calorimeter
+](gfx/102_chapter_2/HCAL.pdf){
+#fig:CMS_hcal width=70%}
+
+
 
 ### Muon System {#sec:cms_muon}
 
