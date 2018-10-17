@@ -581,7 +581,32 @@ of 61200 blocks in the EB and another 7324 blocks for each EE part.
 The sides facing the IP in the barrel section have dimensions
 of $22\times22\ \textrm{mm}^2$ and a length of 23 cm, while the
 front-facing sides of those in the endcaps are slightly larger at
-$29\times29\ \textrm{mm}^2$ with a length of 22 cm.
+$28.6\times28.6\ \textrm{mm}^2$ with a length of 22 cm. The
+advantages of using lead tungstate crystal include its very short
+radiation length $\mathcal{X}_0=0.89\textrm{cm}$, which characterises the
+longitudinal energy loss profile $E(E) = E_0 e^{x/\mathcal{X}_0}$, as well
+as its small Moliere radius of 2.19 cm, which defines the radius
+containing average transversal radius
+containing 90% of the shower energy, leading to narrow showers
+which contributes to improved position and
+energy resolution. The lengths of the crystal blocks in the EB and EE amount
+to $25.8\mathcal{X}_0$ and $24.7\mathcal{X}_0$, which ensures that
+effectively all the energy is deposited in inside the detectors.
+
+Another advantage of $\textrm{PbWO}_4$ crystals is they double
+as scintillating material,
+because the resulting shower energy is absorbed and partially emitted back
+as visible light, with a yield spectrum maxium in the blue-violet range
+around 430 nm. The reemission process is also very fast, about 80% of the
+scintillating light is emitted within 25 ns of absorption, which
+is the time until the next LHC bunch crossing occurs. The scintillator
+light propagates through the crystal effectively due to its high
+transparency and reaches the photodetectors attached to the end
+of the crystal trapezoids. Avalanche photodiodes (APD) are used for
+light detection and amplification at the barrel crystals while
+vacuum phototriodes (VPT) are used for the endcaps, given
+their different radiation hardness and sensitivity to
+magnetic fields. 
 
 In addition to the EE and EB, a sampling
 detector referred as pre-shower electromagnetic calorimeter,
@@ -592,7 +617,7 @@ in the endcap to provide higher granularity in the forward
 region. The main purpose of the pre-shower extension is to
 distinguish high-energy photons coming directly from the
 collision region and high energy neutral pions that have
-decayed to two-close photons.
+decayed to two closely-spaced photons.
 
 
 
