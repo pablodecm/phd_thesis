@@ -511,8 +511,36 @@ distance of 34.5 cm and 46.6 cm from the nominal interaction point.
 
 The rest of the tracking system, placed outside the pixel detector just
 described, is constituted of several
-silicon strip detector modules organised in different sub-detectors,
-as shown in Figure [-@fig:CMS_tracker].
+silicon strip detector modules organised in different four sub-detectors,
+referred as TIB, TID, TOB and TEC in Figure [-@fig:CMS_tracker].
+The inner part of the strip tracker, adjacent to the pixel detector,
+is composed of four barrel layers of strip modules
+constituting the tracker inner
+barrel (TIB) section, and 3 module layers arranged in disks at at each side
+forming the tracker inner disk (TID). Further away from the interaction
+region, the outer strip tracker, comprising of six barrel layers in
+the tracker outer barrel (TOB) and nine disks at each side forming
+the tracker endcaps (TEC). The strip specifications varies depending
+on the sub-detector, with thicknesses ranging from $320\:\mu\textrm{m}$
+to $500\:\mu\textrm{m}$, and pitches (i.e. distances between
+strips) from $80\:\mu\textrm{m}$ to $184\:\mu\textrm{m}$.
+
+The strips
+are placed longitudinally parallel to the beam line in the barrel
+modules and radially
+in the perpendicular plane in the endcap disks, with
+silicon strip lengths ranging from 10 cm to 20 cm, and in an overlapping
+tiled setting (see Figure [-@fig:CMS_tracker])
+Each strip layer provides a single local coordinate for a particle track
+hit, aligned with $\phi$ both the barrel and the endcap disk. A second
+coordinate can be easily obtained taking into account the placement
+on the module, thus obtaining the $r$ coordinate in the barrel
+and $z$ in the endcap disks. In order to provide information about
+the unknown coordinate in each case, some layers of the tracker
+(in blue colour in Figure [-@fig:CMS_tracker]) are composed of
+two modules instead on one, with a small tilt of 0.1 rad that allows
+to obtain a precise 3D coordinate for a track hit by combining the
+two local coordinates and their module positions. 
 
 
 ### Electromagnetic Calorimeter
