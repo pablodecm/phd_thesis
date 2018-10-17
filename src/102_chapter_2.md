@@ -545,6 +545,31 @@ two local coordinates and their module positions.
 
 ### Electromagnetic Calorimeter
 
+The function of the CMS Electronic Calorimeter (ECAL) is to measure
+the total energy of the electrons, positrons
+and photons that reach that part
+of the detector, by means of their *electromagnetic showers*. In order
+attain such task, over 61000 scintillating lead tungstate
+$\textrm{PbWO}_4$ transparent crystals are
+placed inside the solenoid magnet, right outside the tracking system,
+covering the solid angle around the interaction point as depicted
+in Figure [-@fig:CMS_ecal].
+When a high energy electron or a positron enters the dense crystal
+material rapidly decelerates and emits photons through bremsstrahlung
+radiation. High energy photons from electron/positron deceleration or
+directly from the collision, instead produce a positron-electron
+pairs through matter interaction, that in turn radiate photon through
+bremsstrahlung processes. The chain of processes, referred as
+*electromagnetic shower* keeps occurring until the energy of the
+photons goes below the pair production threshold or the energy
+loss of the electrons/positrons happens through alternative
+mechanisms.
+
+![CMS Electromagnetic Calorimeter
+](gfx/102_chapter_2/ecal_from_tdr.pdf){
+#fig:CMS_ecal width=90%}
+
+
 
 ### Hadronic Calorimeter
 
