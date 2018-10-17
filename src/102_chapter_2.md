@@ -664,8 +664,29 @@ Over 70000 thin plastic scintillator tiles are placed between
 and after absorber plates. The size of those plates depends on
 their geometrical placement and are aligned according to their angular
 coordinates between layers, so each longitudinal projection corresponds to
-$\Delta\eta\times\Delta\phi= 0.087\times0.087$ within the HB coverage region
-and $\Delta\eta\times\Delta\phi= 0.17\times0.17$ outside it.
+an approximate area $\Delta\eta\times\Delta\phi= 0.087\times0.087$ within
+the HB coverage region and $\Delta\eta\times\Delta\phi= 0.17\times0.17$ 
+outside it. When secondary particles go through the scintillating tiles,
+part of the energy is absorbed and promptly released as violet-blue visible
+light, over 65% of the total amount of emitted light within 25 ns (i.e. period
+between bunch-crossing). The light is collected and guided through thin optical
+wavelength-shifting fibres that change the light to the green spectrum
+region, then through standard optical fibres until reaching readout boxes
+that contain hybrid photodiodes (HPD). The optical signal for each alignment
+of tiles are added optically to a single readout for most of the radial
+projections, with the
+exception of those in the intersections between the barrel and endcaps, that
+are kept in two or three separate channels in order to ease calibration
+procedures.
+
+The last element in the HCAL system is the forward hadronic calorimeter (HF),
+situated 11.6 m at each side of the interaction point, adjacent to the
+beam pipe, and providing detection capabilities for particles with
+pseudo-rapidities in the range $3.0 < |\eta| < 5.2$. The HF greatly increases
+the pseudo-rapidity energy measurement for charged and neutral particles,
+allowing a near hermetic (full solid angle) coverage, and hence allow the
+estimation of missing energy in the event such that corresponding to
+neutrinos leaving CMS undetected, as will be discussed in Section [-@sec:event].
 
 ### Muon System {#sec:cms_muon}
 
