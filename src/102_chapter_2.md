@@ -549,25 +549,50 @@ The function of the CMS Electronic Calorimeter (ECAL) is to measure
 the total energy of the electrons, positrons
 and photons that reach that part
 of the detector, by means of their *electromagnetic showers*. In order
-attain such task, over 61000 scintillating lead tungstate
+attain such task, scintillating lead tungstate
 $\textrm{PbWO}_4$ transparent crystals are
 placed inside the solenoid magnet, right outside the tracking system,
 covering the solid angle around the interaction point as depicted
 in Figure [-@fig:CMS_ecal].
 When a high energy electron or a positron enters the dense crystal
-material rapidly decelerates and emits photons through bremsstrahlung
+material, it rapidly decelerates and emits photons through bremsstrahlung
 radiation. High energy photons from electron/positron deceleration or
-directly from the collision, instead produce a positron-electron
+directly from the collision region, instead produce a positron-electron
 pairs through matter interaction, that in turn radiate photon through
 bremsstrahlung processes. The chain of processes, referred as
 *electromagnetic shower* keeps occurring until the energy of the
 photons goes below the pair production threshold or the energy
 loss of the electrons/positrons happens through alternative
-mechanisms.
+mechanisms. The resulting low energy photons from the electromagnetic
+shower produce visible range light in the scintillating but
+transparent crystal, which is detected, amplified and collected by
+photodetectors placed at the end of each lead tungstate crystal.
 
 ![CMS Electromagnetic Calorimeter
 ](gfx/102_chapter_2/ecal_from_tdr.pdf){
 #fig:CMS_ecal width=90%}
+
+The ECAL is composed of two main parts, the barrel calorimeter (EB) 
+section covering pseudo-rapidities up to $|\eta| < 1.479$, and two
+symmetrically positioned endcap calorimeters (EE) further
+extending the coverage to $|\eta|< 3.0$. The trapezoid-shaped
+crystals are placed radially around the collision region, a total
+of 61200 blocks in the EB and another 7324 blocks for each EE part.
+The sides facing the IP in the barrel section have dimensions
+of $22\times22\ \textrm{mm}^2$ and a length of 23 cm, while the
+front-facing sides of those in the endcaps are slightly larger at
+$29\times29\ \textrm{mm}^2$ with a length of 22 cm.
+
+In addition to the EE and EB, a sampling
+detector referred as pre-shower electromagnetic calorimeter,
+based on two layers of lead absorber followed by two layers
+of silicon strip
+detectors, is placed right before the lead tungstate crystals
+in the endcap to provide higher granularity in the forward
+region. The main purpose of the pre-shower extension is to
+distinguish high-energy photons coming directly from the
+collision region and high energy neutral pions that have
+decayed to two-close photons.
 
 
 
