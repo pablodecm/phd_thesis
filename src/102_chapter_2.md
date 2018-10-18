@@ -816,7 +816,7 @@ trigger (HLT), a a second step reducing it to the required 1 kHz and that
 is instead carried out by a computer farm.
 
 
-## Event Data Analysis {#sec:event}
+## Event Simulation and Reconstruction {#sec:event}
 
 The raw account of the readout of all detectors after a single bunch crossing,
 as well as any derived representation of it, is commonly
@@ -843,19 +843,23 @@ expected for a given set of particles produced a collision. Realistic modelling
 of high-energy physics collisions in high-dimensional representations 
 can be achieved through simulation.
 
-In this section, a review of the
-approach followed to obtain realistic simulations is first described to provide
-a generative and practical view of the physical mechanisms that are happening
-both in the collision and along the detector. Afterwards, the inverse process
-is tackled which is considerably harder and often ill-defined,
-namely how can we estimate the
+In this section, a generative view of the main physical mechanisms
+that are happening both in the proton-proton collisions and when particles
+propagate through the CMS detector is first included. Such overview doubles as
+an introduction of the next section, where a description
+of how realistic simulations of the detector readouts (i.e. events)
+can be obtained using computational tools is provided. 
+Afterwards, the inverse process is tackled, which is considerably harder
+and often ill-defined, namely how can we estimate the
 set of primary particles that were produced in the collision given the
-detector readout, through reconstruction.
+detector readout, through event reconstruction techniques.
 
 
-### Simulation
+### A Generative View
 
-### Reconstruction
+### Event Simulation
+
+### Event Reconstruction
 
 
 
