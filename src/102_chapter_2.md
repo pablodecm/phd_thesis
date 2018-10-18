@@ -752,6 +752,19 @@ strength of the magnetic field, expected radiation
 fluxes and signal readout times, three different
 types of gaseous detectors are used: drift tubes (DT),
 cathode strip chambers (CSC) and resistive place chambers (RPC).
+In the barrel section where the particle flux is not
+expected to be very high, four layers of drift tubes (DT)
+are arranged cylindrically around the solenoid magnet,
+covering a pseudo-rapidity range $|\eta| < 1.2$. On the endcap
+section instead, due to higher radiation fluxes and magnetic
+field non-uniformity, multi-wire cathode strip chambers (CSC)
+are used, with a detecting pseudo-rapidity coverage of
+$0.9 < |\eta| < 2.4$. Both DT and CSC detectors can achieve
+very high position resolution, but their signal
+readout time and time resolution is not as good, thus a series
+of fast but resistive plate chambers (RPC) are positioned both
+in the barrer and the endcap sections, up pseudo-rapidities
+$|\eta| < 1.6$.
 
 
 ### Trigger and Data Acquisition
