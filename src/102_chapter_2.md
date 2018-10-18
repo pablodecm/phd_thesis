@@ -797,7 +797,25 @@ information of collisions that could be maximally useful to study the properties
 of fundamental interactions in subsequent data analyses. The decision system
 that makes the choice of wether to record or filter out the detailed detector
 readouts for a given collision, is commonly referred as *trigger*, 
-and is based on a fast and possibly asynchronous analysis of such readouts.
+and is based on a fast and possibly asynchronous analysis of those readouts. In
+particular, such process is typically focussed on the most relevant properties
+of one or a subset of detected particles, such as their type, charge or
+the magnitude and direction of their momenta.
+
+A flexible and sparse representation of all CMS detector readouts
+for a given collision that keeps sufficient information for detailed
+analyses is of the order of a few megabytes (i.e. $\mathcal{O}(1)\ \textrm{MB}$).
+Because of the technical capabilities of the storage system,
+the total data acquisition rate is limited to less that 10 Gb/s,
+hence the trigger system has to reduce the rate of collision
+readouts from 40 MHz to about 1 kHz. As a compromise between processing
+speed and requirement adaptability, the trigger system of CMS is divided
+in two stages: the level 1 trigger (L1), which is a custom-hardware based
+solution that reduces the detector readout rate to 100 kHz, and the high-level
+trigger (HLT), a a second step reducing it to the required 1 kHz and that
+is instead carried out by a computer farm.
+
+
 
 ## Event Data Analysis {#sec:event}
 
