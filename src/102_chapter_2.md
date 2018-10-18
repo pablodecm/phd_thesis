@@ -709,6 +709,50 @@ of long and short fibres, the type of shower can be inferred.
 
 ### Muon System {#sec:cms_muon}
 
+The scientific objective of the CMS muon sub-system, or outer tracker,
+it is to identify, determine the charge and measure the momenta of high
+energy muons, that can pass through all the other detector systems
+without a significant energy loss. While the trajectory can be
+detected in the inner tracker, the around of energy loss due to
+bremsstrahlung is much smaller than that of electron or positrons
+due to its much heavier mass
+(given that $\sigma_{\textrm{bremsstrahlung}} \propto 1/m^2$) 
+and hence the do not
+deposit a significant fraction of their energy in the ECAL or
+the HCAL. The simplest way then to augment the amount of information
+about muons obtained from the tracker is to place additional
+tracking detectors outside the solenoid, while sustaining a high
+magnetic field that can curve the muon trajectories by using
+large blocks of ferromagnetic material as *flux-return yokes*.
+
+![CMS Muon Detectors
+](gfx/102_chapter_2/cms_muon.pdf){#fig:CMS_muon width=70%}
+
+The muon system is the most external sub-detector of CMS
+and it is based on gaseous tracking detector technologies,
+given the large volumes covered. The principle of action of
+gaseous detectors is rather simple, charged particles
+passing through the gas ionise gas molecules in their path,
+which start moving due to a high electric field between
+conducing wires, producing an electrical signal
+that can be readout. The time dependency of the signal
+on the different readout wires can be used to inferred
+the particle trajectory with high precision, an in some
+cases built-in signal amplification can be achieved
+due to secondary ionisation by
+the choice of a gas mixture combined with high electric
+field gradients.
+
+An overview of the various detectors
+of the muons system and their geometrical placement
+around the solenoid magnet cylinder is depicted
+in Figure [-@fig:CMS_muon]. Due to a combination
+of criteria regarding uniformity and strength
+strength of the magnetic field, expected radiation
+fluxes and signal readout times, three different
+types of gaseous detectors are used: drift tubes (DT),
+cathode strip chambers (CSC) and resistive place chambers (RPC).
+
 
 ### Trigger and Data Acquisition
 
