@@ -136,7 +136,7 @@ finalised when some problem occurs or when all the proton bunches
 inside the ring are *dumped* (made collide) against graphite absorbers
 tangent to the beam pipe.
  
-### Operation Parameters
+### Operation Parameters {#sec:op_pars}
 
 One of the most relevant parameters for a particle collider is the
 instantaneous luminosity $\mathcal{L}(t)$, which already appeared in
@@ -199,7 +199,7 @@ by a detector during a year or a longer data acquisition period.
 <!-- TODO: add something about measurement of luminosity maybe -->
 <!-- TODO: find out a way to link well to detectors -->
 
-### Multiple Interactions
+### Multiple Interactions {#sec:pile_up}
 
 
 ### Experiments
@@ -763,11 +763,41 @@ $0.9 < |\eta| < 2.4$. Both DT and CSC detectors can achieve
 very high position resolution, but their signal
 readout time and time resolution is not as good, thus a series
 of fast but resistive plate chambers (RPC) are positioned both
-in the barrer and the endcap sections, up pseudo-rapidities
+in the barrel and the endcap sections, up pseudo-rapidities
 $|\eta| < 1.6$.
 
 
 ### Trigger and Data Acquisition
+
+As discussed in Section [-@sec:pheno], the occurrence of
+relevant processes that can provide information about the physical
+properties of fundamental interaction in
+proton-proton collisions is purely stochastic given some initial conditions,
+plus their relative frequency is
+very rare compared with known
+phenomena. In order increase the expected chances of 
+recording interesting phenomena, the LHC collides 40 million 
+high-density proton bunches every second inside the CMS
+detector. Furthermore, 
+as discussed in Section [-@sec:pile_up], tens of
+proton-proton interactions typically happen 
+within each bunch crossing.
+The CMS sub-systems are hence detecting a good fraction of 100s of particles
+produced as a result of the interactions at each bunch crossing,
+in addition of being subjected to instrumental noise or external radiation
+sources such as cosmic rays. 
+
+The combined readout of all sub-detectors
+each 25 ns amounts to a large amount of data, due to the total number
+of sub-system channels, even if efficient techniques for 
+representation and compression of information are used. Given that technical
+limitations on the amount of data that can be recorded exist,
+a practical choice for data acquisition is keeping only the detailed detector
+information of collisions that could be maximally useful to study the properties
+of fundamental interactions in subsequent data analyses. The decision system
+that makes the choice of wether to record or filter out the detailed detector
+readouts for a given collision, is commonly referred as *trigger*, 
+and is based on a fast and possibly asynchronous analysis of such readouts.
 
 ## Event Data Analysis {#sec:event}
 
