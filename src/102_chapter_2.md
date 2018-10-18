@@ -816,8 +816,42 @@ trigger (HLT), a a second step reducing it to the required 1 kHz and that
 is instead carried out by a computer farm.
 
 
-
 ## Event Data Analysis {#sec:event}
+
+The raw account of the readout of all detectors after a single bunch crossing,
+as well as any derived representation of it, is commonly
+referred to as *an event*, and is the most fundamental type of observation
+in high-energy data analyses. All approaches to extract
+useful conclusions from CMS data are based on this information unit
+or simplifications or simplifications thereof. This is because for practical
+purposes, statistical independence between events can be assumed with
+some caveats (e.g. out-of-time pile-up or detector malfunctioning). Therefore,
+data analyses are reduced to the task of comparison between the observations
+and the expected predicted frequencies for different types of events.
+
+The dimensionality of an event evidently depends on its data representation,
+simpler representations being lower-dimensional and easing the comparison
+with theoretical predictions, at the cost of possibly losing
+some useful information. A principled way to obtain lower dimensional
+representations of an event is to attempt given its raw detector readouts
+is to attempt to list the primary particles that were produced
+in the main proton-proton interaction of the collision and their properties,
+done through a process generally referred as *reconstruction*. Nevertheless, 
+for carrying out successfully the aforesaid task it is convenient to
+being able to have a detailed model of the detector readout output that is
+expected for a given set of particles produced a collision. Realistic modelling
+of high-energy physics collisions in high-dimensional representations 
+can be achieved through simulation.
+
+In this section, a review of the
+approach followed to obtain realistic simulations is first described to provide
+a generative and practical view of the physical mechanisms that are happening
+both in the collision and along the detector. Afterwards, the inverse process
+is tackled which is considerably harder and often ill-defined,
+namely how can we estimate the
+set of primary particles that were produced in the collision given the
+detector readout, through reconstruction.
+
 
 ### Simulation
 
