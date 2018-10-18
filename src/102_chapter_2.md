@@ -680,13 +680,32 @@ are kept in two or three separate channels in order to ease calibration
 procedures.
 
 The last element in the HCAL system is the forward hadronic calorimeter (HF),
-situated 11.6 m at each side of the interaction point, adjacent to the
+situated 11.15 m at each side of the interaction point, adjacent to the
 beam pipe, and providing detection capabilities for particles with
 pseudo-rapidities in the range $3.0 < |\eta| < 5.2$. The HF greatly increases
 the pseudo-rapidity energy measurement for charged and neutral particles,
 allowing a near hermetic (full solid angle) coverage, and hence allow the
 estimation of missing energy in the event such that corresponding to
 neutrinos leaving CMS undetected, as will be discussed in Section [-@sec:event].
+Because the radiation fluxes are extremely high in the forward region and
+there a no depth constraints, a different detector design is used,
+based on 165 cm of steel absorber plates and quartz fibres aligned of the
+z-axis, each with an effective detecting
+area of $\Delta\eta\times\Delta\phi= 0.17\times0.17$.
+
+
+The fibres running along the HF detect and guide the Cherenkov light of the
+charged secondary particles produced in the showers to photomultipliers
+tubes (PMT) placed behind a 40 cm thick steel and polyethylene shield.
+In this pseudo-rapidity range, the also HF serves also as an electromagnetic
+calorimeter, and being able to disentangle the energy contributions
+from electromagnetic and hadronic showers is quite useful for
+many physics data analysis use cases. Given that electromagnetic showers
+are much shorter than hadronic showers, only half of the fibres
+start close to the face of the absorber plates closest to the IP,
+the rest other starting at a depth of 22 cm. By comparing the readouts
+of long and short fibres, the type of shower can be inferred.
+
 
 ### Muon System {#sec:cms_muon}
 
