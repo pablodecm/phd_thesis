@@ -174,7 +174,8 @@ The average values of some these parameters and the peak instantaneous
 luminosities for the different years of proton-proton data acquisition periods
 (also known as *runs*)
 at the LHC are summarised in Table [create], which can
-be compared with the peak design luminosity of the LHC  of $\times 10^{34} \textrm{cm}^{-1} \textrm{s}^{-1}$.
+be compared with the peak design luminosity of the LHC  of
+$1 \times 10^{34} \textrm{cm}^{-1} \textrm{s}^{-1}$.
 
 From Equation [-@eq:lumi_beam] it can be inferred that that value of
 instantaneous luminosity varies between LHC *fills* depending on the beam
@@ -199,7 +200,40 @@ by a detector during a year or a longer data acquisition period.
 <!-- TODO: add something about measurement of luminosity maybe -->
 <!-- TODO: find out a way to link well to detectors -->
 
-### Multiple Interactions {#sec:pile_up}
+### Multiple Hadron Interactions {#sec:pile_up}
+
+Given the high density of protons in each bunch at the collision
+points, several proton-proton interactions are very likely
+to happen in each crossing, a phenomenon that is commonly referred to
+as *pileup*. After multiple interactions occur,
+the products of all interactions go through the surrounding
+detectors at the almost the same time, which complicates
+the interpretation of the detector readouts as the product of a
+single interaction. The number of proton-proton
+interactions for each crossing is effectively a random variable,
+however its expected value is proportional to the instantaneous luminosity
+and the total cross section of processes that produce detectable
+remnants in the detectors, mainly originating from low-energy inelastic proton
+scattering processes.
+
+In fact, at the collision point of one of the general purpose detectors at
+the LHC,
+the most likely outcome of any given bunch crossing at the nominal design
+luminosity of $1 \times 10^{34} \textrm{cm}^{-1} \textrm{s}^{-1}$ is
+about 25 *soft* scattering interactions (i.e. low momentum transfer),
+producing hundreds of low energy particles all around the collision
+region, as depicted in Figure [add].
+Quite rarely, given the small relative cross section of *hard*
+scattering processes in comparison with the total scattering
+cross section as discussed in Section [-@sec:pheno],
+some of the produced interactions might involve a large momentum 
+transfer between partons,
+which is characteristic of the fundamental
+physical processes of special interest at the LHC,
+such as the production of a Higgs boson. 
+
+
+
 
 
 ### Experiments
@@ -827,15 +861,17 @@ or simplifications or simplifications thereof. This is because for practical
 purposes, statistical independence between events can be assumed with
 some caveats (e.g. out-of-time pile-up or detector malfunctioning). Therefore,
 data analyses are reduced to the task of comparison between the observations
-and the expected predicted frequencies for different types of events.
+and the expected predicted frequencies of events with different
+characteristics.
 
 The dimensionality of an event evidently depends on its data representation,
 simpler representations being lower-dimensional and easing the comparison
 with theoretical predictions, at the cost of possibly losing
 some useful information. A principled way to obtain lower dimensional
-representations of an event is to attempt given its raw detector readouts
-is to attempt to list the primary particles that were produced
-in the main proton-proton interaction of the collision and their properties,
+representations of an event given its raw detector readouts
+is to attempt to infer all the primary particles that were produced
+in the main proton-proton interaction of the collision and as well as 
+estimate their main properties,
 done through a process generally referred as *reconstruction*. Nevertheless, 
 for carrying out successfully the aforesaid task it is convenient to
 being able to have a detailed model of the detector readout output that is
@@ -856,6 +892,10 @@ detector readout, through event reconstruction techniques.
 
 
 ### A Generative View
+
+![CMS Transverse View.
+](gfx/102_chapter_2/CMS_transverse.pdf){
+#fig:CMS_transverse width=70%}
 
 ### Event Simulation
 
