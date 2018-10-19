@@ -216,23 +216,31 @@ and the total cross section of processes that produce detectable
 remnants in the detectors, mainly originating from low-energy inelastic proton
 scattering processes.
 
+![Multiple interactions in a single bunch crossing as recorded
+by the CMS detector during a special high-pile up luminosity
+at the end of 2016 [@McCauley:2231915].
+The reconstructed interaction vertices are shown using orange
+circles while the yellow lines represent the trajectories
+of charged particles.
+](gfx/102_chapter_2/highpileup1_4.png){#fig:pileup width=70%}
+
 In fact, at the collision point of one of the general purpose detectors at
 the LHC,
 the most likely outcome of any given bunch crossing at the nominal design
 luminosity of $1 \times 10^{34} \textrm{cm}^{-1} \textrm{s}^{-1}$ is
 about 25 *soft* scattering interactions (i.e. low momentum transfer),
 producing hundreds of low energy particles all around the collision
-region, as depicted in Figure [add].
+region, as depicted in Figure [-@fig:pileup].
 Quite rarely, given the small relative cross section of *hard*
 scattering processes in comparison with the total scattering
 cross section as discussed in Section [-@sec:pheno],
-some of the produced interactions might involve a large momentum 
+one of the produced interactions might involve a large momentum 
 transfer between partons,
 which is characteristic of the fundamental
 physical processes of special interest at the LHC,
-such as the production of a Higgs boson. 
-
-
+such as the production of a Higgs boson. The probability of two or more
+hard interactions happening in the same bunch crossing is really low,
+and can be safely neglected for any practical purposes.
 
 
 
