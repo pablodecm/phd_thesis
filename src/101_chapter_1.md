@@ -71,7 +71,7 @@ are further subdivided into leptons and quarks depending on their
 interactions. A schematic overview of the fundamental particles
 of the SM and their properties is provided in
 [@Fig:standard_model_particles]. Three particle generations
-are known for both quarks and leptons, each containing a pair particles
+are known for both quarks and leptons, each containing a pair of particles
 with different masses. For quarks, the heavier is referred as up-type and
 the lighter as down-type. Instead, for leptons we distinguish the heavier
 charged particles (electron, muon and tau) from its corresponding light
@@ -88,12 +88,21 @@ or by explicitly denoting the charge sign (e.g. positron
 $e^+$). Neutrinos are the only fermions that do not carry electrical
 charge and might be their own antiparticle.
 
+The mediators of all interactions are referred as gauge boson, and
+are characterised by having spin 1. To model the strong interaction
+colour charge exchanges, a total of eight independent
+strong force mediators, named as *gluons*, are needed. Gluons
+carry colour charge themselves and thus participate in colour
+interactions with other gluons, which leads to a phenomenon known
+as *colour confinement*, which will be discussed in
+Section [-@sec:qcd_detail] in more detail.
+
 
 
 ### Quantum Field Theory Basics
 
 
-### Quantum Chromodynamics
+### Quantum Chromodynamics {#sec:qcd_detail}
 
 
 ### Electroweak Interactions
