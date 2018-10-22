@@ -219,7 +219,7 @@ scattering processes.
 ![Multiple interactions in a single bunch crossing as recorded
 by the CMS detector during a special high-pile up luminosity
 at the end of 2016 [@McCauley:2231915].
-The reconstructed interaction vertices are shown using orange
+The reconstructed primary interaction vertices are shown using orange
 circles while the yellow lines represent the trajectories
 of charged particles.
 ](gfx/102_chapter_2/highpileup1_4.png){#fig:pileup width=70%}
@@ -241,6 +241,30 @@ physical processes of special interest at the LHC,
 such as the production of a Higgs boson. The probability of two or more
 hard interactions happening in the same bunch crossing is really low,
 and can be safely neglected for any practical purposes.
+Nevertheless, the outcome of each hard interaction of interest
+will be overlapping in the detector volume with the product of
+all other soft interaction that occurred on the same bunch crossing,
+greatly complicating the task of *event reconstruction* as will
+be discussed in Section [-@sec:event]. This also motivates the use
+of *pileup mitigation* techniques, heavily based on accurate
+detectors that can extrapolate and differentiate the primary
+interaction vertices of the collisions from the charged particle
+trajectories.
+
+In addition to multiple hadron interactions per bunch crossing, the goal
+of recording the outcome of a very high number of proton interactions
+leads to a different experimental complication. As illustrated in
+Equation [-@eq:lumi_rate], a simple way to increase the
+luminosity is to increase the number of total proton bunches per beam $n_b$.
+This fact is exploited in the nominal proton fill scheme of the LHC by having
+a total of 2808 proton bunches in each beam, corresponding to a bunch
+separation of only approximately 7.5 m. Hence the time separation between bunch
+crossing is about 25 ns, which is of the same order than the response time
+of many of the detector technologies used at the LHC. The readout from a
+a particular bunch crossing can therefore be affected by the detector occupation
+caused by the previous or subsequent crossings, in what is referred to
+as *out-of-time pileup*, that becomes an important consideration for detector
+design in high-luminosity environments.
 
 
 
