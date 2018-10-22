@@ -33,6 +33,11 @@ can be explained in terms of the kinematics and interactions
 of elementary particles, which can in turn be understood as
 local excitations of different fields that permeate our universe.
 
+
+![Standard Model Particles
+](gfx/101_chapter_1/Standard_Model_of_Elementary_Particles.pdf){
+#fig:standard_model_particles width=70%}
+
 From a historical perspective, this theory is the product of
 a succession of important theoretical developments and experimental
 discoveries over the last century [@weinberg2004making],
@@ -58,10 +63,6 @@ The SM is typically specified using the Lagrangian formalism and depends
 on a total of 19 parameters, which are not predicted by the theory
 from first principles but determined through experimental measurements.
 
-![Standard Model Particles
-](gfx/101_chapter_1/Standard_Model_of_Elementary_Particles.pdf){
-#fig:standard_model_particles width=70%}
-
 In the context of the SM, excitations of the fundamental fields
 give rise to two types of elementary particles: fermions (characterised
 by having half-integer spin) and bosons (characterised by having
@@ -69,7 +70,24 @@ integer spin). Fermions are the fundamental constituents of matter
 are further subdivided into leptons and quarks depending on their 
 interactions. A schematic overview of the fundamental particles
 of the SM and their properties is provided in
-[@Fig:standard_model_particles].
+[@Fig:standard_model_particles]. Three particle generations
+are known for both quarks and leptons, each containing a pair particles
+with different masses. For quarks, the heavier is referred as up-type and
+the lighter as down-type. Instead, for leptons we distinguish the heavier
+charged particles (electron, muon and tau) from its corresponding light
+and neutrally charged neutrinos. Regular matter is largely made of the
+first generation of quarks and electrons, given that  higher generations
+rapidly decay to quickly to lower generations characterised by
+smaller masses. All fermions interact via the weak force but
+only quarks carry colour charge and are subjected to the strong
+force. For each fermion in the SM, there is a another particle with
+identical properties but opposite quantum numbers, globally referred
+as antimatter, and denoted for each particle with the anti prefix
+and a bar over the symbol (e.g. up antiquark $\bar{u}$) 
+or by explicitly denoting the charge sign (e.g. positron 
+$e^+$). Neutrinos are the only fermions that do not carry electrical
+charge and might be their own antiparticle.
+
 
 
 ### Quantum Field Theory Basics
