@@ -434,5 +434,19 @@ $d\sigma(pp \rightarrow X)$.
 ### Hadronization and Parton Showers
 
 
+![Diagram of a proton-proton collision, adapted from [@Hoche:2014rga].
+The dark green ellipses following the tree parallel arrows represent the
+incoming hadrons. The main interaction between partons is shown in
+red colour, producing a tree-like structure of decays, in turn
+producing partons that rapidly transition to hadrons (light green ellipses)
+and decay (dark green circles) as well as soft photon radiation (yellow lines).
+The blue lines represent the  interaction between partons and the path of the
+the initial hadron remnants followed by light blue ellipses. For completion,
+an additional hard interaction within the same hadron-hadron process is
+shown in purple,
+which often has to be accounted for to obtain realistic simulations.
+](gfx/101_chapter_1/event_shower.pdf){
+#fig:standard_model_particles width=70%}
+
 
 
