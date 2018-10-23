@@ -359,6 +359,16 @@ at high energies, and predictions can
 be perturbatively approximated under the assuming asymptotic
 freedom.
 
+
+::: {#fig:subfigs_pdfs .subfigures}
+![Low Energy Scale
+](gfx/101_chapter_1/nnpdf31nnlo-10.pdf){#fig:pdf_low width=49%}
+![High Energy Scale
+](gfx/101_chapter_1/nnpdf31nnlo-1e4.pdf){#fig:pdf_high width=49%}
+
+Parton Distribution Functions.
+:::
+
 Even for modelling hard scattering processes, non-perturbative input is
 required, mainly the probability of finding a particular proton constituent
 with a certain momentum fraction inside each of the colliding protons,
@@ -376,25 +386,16 @@ have to be parametrised and extrapolated from various experimental sources
 including fixed-target proton deep inelastic scattering (DIS) and previous
 collider studies. It is worth noting that the distribution functions depend
 strongly in the energy scale of the process, but the evolution for parton
-densities can be modelled theoretically [cite DGLAP]. Given their relevance
+densities can be modelled theoretically
+[@Altarelli:1977zs;@Dokshitzer:1977sg;@Gribov:1972ri]. Given their relevance
 for computing observables in high-energy colliders,
-several research collaborations such as NNPDF [cite] provide accurate
+several research collaborations such as NNPDF [@Ball:2017nwa] provide accurate
 estimations that can be readily used for simulation and prediction. In
-Figure [include], the parton distribution functions at two different
+Figure [-@fig:subfigs_pdfs], the parton distribution functions at two different
 energy scales estimated by one of those collaborations are shown, at lower
 energy scales the valence quarks (up and down) dominate while when we
 extrapolate at higher energies, gluon scattering become the most likely
 outcome for the interaction.
-
-
-::: {#fig:subfigs_pdfs .subfigures}
-![Low Energy Scale
-](gfx/101_chapter_1/nnpdf31nnlo-10.pdf){#fig:pdf_low width=49%}
-![High Energy Scale
-](gfx/101_chapter_1/nnpdf31nnlo-1e4.pdf){#fig:pdf_high width=49%}
-
-Parton Distribution Functions.
-:::
 
 
 ### Factorisation of Hard Processes
