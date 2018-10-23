@@ -904,12 +904,13 @@ representations of an event given its raw detector readouts
 is to attempt to infer all the primary particles that were produced
 in the main proton-proton interaction of the collision and as well as 
 estimate their main properties,
-done through a process generally referred as *reconstruction*. Nevertheless, 
+done through a process generally referred as *event reconstruction*.
+Nevertheless, 
 for carrying out successfully the aforesaid task it is convenient to
 being able to have a detailed model of the detector readout output that is
-expected for a given set of particles produced a collision. Realistic modelling
-of high-energy physics collisions in high-dimensional representations 
-can be achieved through simulation.
+expected for a given set of particles produced in a collision.
+Realistic modelling of high-energy physics collisions in high-dimensional
+representations  can be achieved through simulation.
 
 In this section, a generative view of the main physical mechanisms
 that are happening both in the proton-proton collisions and when particles
@@ -925,11 +926,37 @@ detector readout, through event reconstruction techniques.
 
 ### A Generative View
 
-![CMS Transverse View.
+When two high-density proton bunches in opposite directions
+pass through each other inside the collision region of CMS,
+several proton-proton interactions can occur as discussed
+in Section [-@sec:pile_up]. While most of the interactions will
+correspond to a small energy transfer between the interacting
+partons, given that the total interaction cross section is
+heavily dominated by soft scattering processes, a small fraction
+of collisions would include physically interesting process
+such as the production of heavy intermediate particles (e.g. a
+Higgs boson). The absolute and differential rates 
+for such *hard* processes can be predicted as outlined
+in Section [-@sec:factorisation]. Therefore, for a specific process
+in a proton-proton interaction, realistic high-dimensional
+modelling of the intermediate particles can be
+obtained by repeated sampling of the parton distribution
+functions and phase space differential cross sections. Subsequent
+decay, hadronization and radiation processes as well as more
+subtle effects and higher order
+corrections, can be then
+accounted for using the techniques mentioned in
+Section [-@sec:parton_showers]. The end result of the mentioned
+procedures is a large dataset of simulated particle
+outcomes for a specific process, each example including
+a set of stable or sufficiently long-lived particles and their
+kinematics properties that would propagate through the detector.
+
+![Transverse view of a section of the CMS detector, adapted from [@Sirunyan:2017ulk].
 ](gfx/102_chapter_2/CMS_transverse.pdf){
 #fig:CMS_transverse width=70%}
 
-### Event Simulation
+### Detector Simulation
 
 ### Event Reconstruction
 

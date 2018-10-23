@@ -398,7 +398,7 @@ extrapolate at higher energies, gluon scattering become the most likely
 outcome for the interaction.
 
 
-### Factorisation of Hard Processes
+### Factorisation of Hard Processes {#sec:factorisation}
 
 
 Let us consider the computation the differential cross section for a hard
@@ -431,7 +431,7 @@ then be attained by integrating out all final state quantities, commonly
 referred as phase space variables, in the differential cross section element
 $d\sigma(pp \rightarrow X)$.
 
-### Hadronization and Parton Showers
+### Hadronization and Parton Showers {#sec:parton_showers}
 
 
 ![Diagram of a proton-proton collision, adapted from [@Hoche:2014rga].
