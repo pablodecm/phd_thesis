@@ -116,8 +116,10 @@ electroweak interactions that give rise to the diverse the interactions
 dynamics of relevance in particle physics experiments.
 
 
+### Quantum Field Theory Basics {#sec:qft_basics}
 
-### Quantum Field Theory Basics
+
+
 
 
 ### Quantum Chromodynamics {#sec:qcd_detail}
@@ -270,6 +272,11 @@ once the higher precision measurements of the SM become available.
 
 ### Possible Extensions
 
+#### Precision Measurements of the SM
+
+
+#### Effective Field Theories
+
 ## Phenomenology of proton collisions {#sec:pheno}
 
 Once the properties and limitations of the theoretical model that best
@@ -380,8 +387,15 @@ extrapolate at higher energies, gluon scattering become the most likely
 outcome for the interaction.
 
 
-<!--- TODO: include GOOD parton distribution function figure -->
- 
+::: {#fig:subfigs_pdfs .subfigures}
+![Low Energy Scale
+](gfx/101_chapter_1/nnpdf31nnlo-10.pdf){#fig:pdf_low width=49%}
+![High Energy Scale
+](gfx/101_chapter_1/nnpdf31nnlo-1e4.pdf){#fig:pdf_high width=49%}
+
+Parton Distribution Functions.
+:::
+
 
 ### Factorisation of Hard Processes
 

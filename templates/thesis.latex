@@ -3,6 +3,7 @@
 \documentclass{templates/mimosis}
 
 \usepackage{metalogo}
+\usepackage{subfig}
 
 
 \usepackage{etoolbox}
