@@ -609,7 +609,7 @@ to obtain a precise 3D coordinate for a track hit by combining the
 two local coordinates and their module positions. 
 
 
-### Electromagnetic Calorimeter
+### Electromagnetic Calorimeter {#sec:cms_ecal}
 
 The function of the CMS Electronic Calorimeter (ECAL) is to measure
 the total energy of the electrons, positrons
@@ -687,7 +687,7 @@ decayed to two closely-spaced photons.
 
 
 
-### Hadronic Calorimeter
+### Hadronic Calorimeter {#sec:cms_hcal}
 
 The purpose of the hadron calorimeter (HCAL) is to measure the energy
 and position of all long-lived neutral or charged mesons and baryons
@@ -979,7 +979,31 @@ $\tau_\mu = 2.2 \mu s$ allows them to travel very large distances
 when highly boosted, as is the case for all the high-energy
 muons coming out from the interaction region. Hence, for the purposes
 of studying LHC collisions they can be considered stable, given
-the unlikeliness of their decay in the detector volume.
+the unlikeliness of their decay in the detector volume at
+the range of energies studied. Because muons are charged particles,
+they leave hits in detector layers of the inner tracker following
+their curved trajectories However,
+due to their high mass, energy loss due to bremsstrahlung is
+not high enough to produce electromagnetic significant
+EM showering in the ECAL.
+After passing through the HCAL without interacting notably, muons
+reach the outer tracking system providing additional trajectory
+points.
+
+The trajectories of high-energy electrons 
+are also recorded by the CMS inner tracker,
+but as mentioned in Section [-@sec:cms_ecal], different from muons
+they rapidly loose energy
+due to bremsstrahlung when they reach the ECAL, produced subsequent
+electromagnetic showers. It is worth noting that within CMS reconstruction
+and analysis, it is common to simply use the term *electron* 
+to refer both to electrons and positrons, their charge inferred from the
+curvature sign of their trajectories. Charged hadrons, largely referring
+by charged pions, kaons and protons, behave similarly to electrons in the
+tracking detector but instead generate much larger hadronic showers
+in the hadronic calorimeter.
+
+
 
 
 ### Detector Simulation
