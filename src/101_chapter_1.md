@@ -88,14 +88,32 @@ or by explicitly denoting the charge sign (e.g. positron
 $e^+$). Neutrinos are the only fermions that do not carry electrical
 charge and might be their own antiparticle.
 
-The mediators of all interactions are referred as gauge boson, and
+The mediators of fundamental interactions are referred as gauge boson, and
 are characterised by having spin 1. To model the strong interaction
 colour charge exchanges, a total of eight independent
-strong force mediators, named as *gluons*, are needed. Gluons
+strong massless force mediators, or *gluons*, are needed. Gluons
 carry colour charge themselves and thus participate in colour
 interactions with other gluons, which leads to a phenomenon known
 as *colour confinement*, which will be discussed in
-Section [-@sec:qcd_detail] in more detail.
+Section [-@sec:qcd_detail] in more detail. The massless
+and neutral *photon* is
+the mediator of the electromagnetic force, while instead
+the massive $Z$, $W^+$ and $W^-$ bosons are exchanged
+through weak interactions. The last piece in the SM is the *Higgs
+boson*, the only fundamental known particle with spin 0. The Higgs boson
+is the quantum excitation of the *Higgs field*, which  also couples with other
+fundamental particles such as the gauge bosons of the weak force,
+effectively generating their mass trough their interaction. The Higgs boson
+and Higgs field play an essential role in the
+electroweak symmetry breaking (EWSB) mechanism, which will be discussed
+in more detail in Section [-@sec:ewsb_higgs].
+
+The rest of this section will be devoted a more mathematically exhaustive
+review of the different components of the Standard Model, starting
+by reviewing the basic formalism of quantum field theories and incrementally
+building on it do describe the characteristics of both the strong and
+electroweak interactions that give rise to the diverse the interactions
+dynamics of relevance in particle physics experiments.
 
 
 
@@ -105,10 +123,10 @@ Section [-@sec:qcd_detail] in more detail.
 ### Quantum Chromodynamics {#sec:qcd_detail}
 
 
-### Electroweak Interactions
+### Electroweak Interactions  {#sec:ew_detail}
 
 
-### Symmetry Breaking and the Higgs Boson
+### Symmetry Breaking and the Higgs Boson {#sec:ewsb_higgs}
 
 ### Standard Model Lagrangian
 
