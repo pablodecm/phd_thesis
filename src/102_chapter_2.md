@@ -956,7 +956,35 @@ kinematics properties that would propagate through the detector.
 ](gfx/102_chapter_2/CMS_transverse.pdf){
 #fig:CMS_transverse width=70%}
 
+In addition to the set of particles in the hard proton-proton
+interaction, the effect of pileup interactions can be accounted by 
+adding the particle outcome of a random number of randomly sampled
+soft interactions matching their approximately expected distribution
+in the collisions given the instantaneous luminosity conditions.
+This final set of long-lived particles produced in the interaction
+region represents a possible particle outcome for a collision assuming
+a given *hard* process occurred. While they cannot be directly
+observed, only indirectly through the detector readouts,
+it is assumed that an analogous set of particles
+is produced as result of each collision in the actual experiment.
+Based on the expected readout that they produce in the different
+CMS detector subcomponents, five main types of detectable particles
+are distinguish: muons, electrons, charged hadrons, neutral hadrons
+and photons.
+
+The traces that each of the mentioned particle types leave in each
+detector sub-system is depicted in Figure [-@fig:CMS_transverse].
+Even though muons are unstable particles, their long mean lifetime
+$\tau_\mu = 2.2 \mu s$ allows them to travel very large distances
+when highly boosted, as is the case for all the high-energy
+muons coming out from the interaction region. Hence, for the purposes
+of studying LHC collisions they can be considered stable, given
+the unlikeliness of their decay in the detector volume.
+
+
 ### Detector Simulation
+
+
 
 ### Event Reconstruction
 
