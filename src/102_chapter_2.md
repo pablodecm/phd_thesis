@@ -945,8 +945,10 @@ functions and phase space differential cross sections. Subsequent
 decay, hadronization and radiation processes as well as more
 subtle effects and higher order
 corrections, can be then
-accounted for using the techniques mentioned in
-Section [-@sec:parton_showers]. The end result of the mentioned
+accounted for using the methods mentioned in
+Section [-@sec:parton_showers], generally
+referred as *Monte Carlo event generation* techniques.
+The end result of the mentioned
 procedures is a large dataset of simulated particle
 outcomes for a specific process, each example including
 a set of stable or sufficiently long-lived particles and their
@@ -1052,11 +1054,38 @@ processes actually occurring.
 
 The latter approach is found to be the most accurate, given the many subtleties
 affecting the detector readout for a given set of generated particles, including
-possible particle decays and material interactions that can occur when
+possible various particle decays and material interactions that can occur when
 the particle is travelling through the detector, the non-uniformity of the magnetic
 field and its effect on the particle trajectories, and
-the intricacy of the detector geometry and their electric response. 
-GEANT4 toolkit [-@Agostinelli:2002hh]
+the intricacy of the detector geometry and their electric response. All these
+effects can be accounted for, to a high degree of validity,
+in a simulator program considering the
+non-deterministic propagation of the particles produce through the
+detector volume. The propagation of each particle through magnetic and
+electric fields can often be treated independently
+though an stochastic chain of time steps, that can an any point branch
+out to produce
+new particles through decays and other secondary particle generating 
+physical processes, so local energy deposits in the different detector
+structures can be recorded. After propagating all particles, the
+combination of all energy deposits in the detecting volumes can
+be used to produce realistic detector responses.
+
+The type of detector simulation is referred as *full simulation*,
+or *fullsim* for short, and it is carried out for CMS generated
+events using a custom implementation of the geometry, properties
+and response of the different detectors as well as the magnetic
+field details, heavily reusing components 
+GEANT4 toolkit [-@Agostinelli:2002hh] for the simulation
+of the passage of particles
+through matter. Additional modules are used to incorporate
+relevant modelling details such as the distribution of
+the interaction vertices in the interaction region, referred
+as *vertex smearing*, and the addition of particles coming
+from additional soft interactions in the same collision
+or from adjacent bunch crossings which can affect the detector
+readouts, denoted as *pileup mixing*.
+
 
 
 ### Event Reconstruction {#sec:event_reco}
