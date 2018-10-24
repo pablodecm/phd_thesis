@@ -142,7 +142,7 @@ of the theoretical and experimental
 foundations of our understanding of nature and the relevant
 techniques that allow the extract valuable information from the data.
 In contrast,
-[Chapter @sec:lhc_analysis] presents a complete example of an analysis
+[Chapter @sec:higgs_pair] presents a complete example of an analysis
 at the LHC that applies those techniques to a real-world scenario.
 Specifically, the use
 case will be the search for evidence of anomalous non-resonant
@@ -153,7 +153,7 @@ interactions and constituents of the universe.
 
 The aforementioned example will be useful to epitomise the main statistical
 and methodological challenges on the way LHC analyses are carried out. In
-[Chaper @sec:new_techniques], we try to shed some light on these issues,
+[Chaper @sec:inferno], we try to shed some light on these issues,
 and demonstrate how a novel machine learning technique we have developed
 can deal with one of the most relevant concerns:
 learning summary statistics using inference-aware
