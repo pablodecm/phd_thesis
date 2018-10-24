@@ -1140,6 +1140,16 @@ of a given analysis.
 
 ### Event Reconstruction {#sec:event_reco}
 
-
+In the previous sections, the generative mechanisms by which signal
+from different particles produce signal in the different detectors and
+how such they can be procedurally simulated, were summarised.
+In contrast with simulated events,
+the set of underlying particles that were produced in the
+interaction region and subsequently detected are not known a priori
+in real collisions. A very helpful task to understand is nature of
+the fundamental interaction that likely happened in a collision is
+to infer the type and properties of the particles that were probably
+produced on a given collision given the detector output, such procedure
+is generally referred as *event reconstruction*.
 
 
