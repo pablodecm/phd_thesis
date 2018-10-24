@@ -1106,9 +1106,36 @@ relevant modelling details such as the distribution of
 the interaction vertices in the interaction region, referred
 as *vertex smearing*, and the addition of particles coming
 from additional soft interactions in the same collision
-or from adjacent bunch crossings which can affect the detector
-readouts, denoted as *pileup mixing*.
+or from adjacent bunch crossings, denoted as *pileup mixing*,
+which can affect the readouts and subsequent
+interpretation due to the overlapping of detector deposits
+and detector sensitivity dead-times.
 
+As can be conjectured by its level of detail, such 
+simulation processes are very time consuming, taking several
+minutes of CPU time give current available computing
+technologies, for producing a realistic detector readout for
+each initial set of particles produced at a primary *hard* interaction.
+Given that oftentimes billions of generated events (i.e. simulated
+observations) of common processes are needed
+for obtain a realistic modelling of known types of interaction (e.g.
+top quark pair production), alternative simulation techniques
+are sometimes used. By trading off some accuracy by simulation speed,
+the modelling of the physical processes and detector responses
+can be simplified, achieving reducing running times considerably,
+up to two orders of magnitude [@Abdullin:2011zz]. Alternatively, as
+initially stated at the beginning of this section, detailed
+simulation can be used to directly parametrise
+low-dimensional summaries of the detector readout, such as the reconstructed
+main quantities that will be presented in the next section, by using approximate
+conditional probability density functions. While this approach, implemented
+in software packages such as DELPHES [@deFavereau:2013fsa],
+is limited by the flexibility and accuracy of the modelling
+of the conditional probabilities,
+it is very useful as a very fast substitute of the full simulation
+chain for simplified studies that aim to obtain an approximate
+estimate the expected sensitivity reach or measurement accuracy
+of a given analysis.
 
 
 ### Event Reconstruction {#sec:event_reco}
