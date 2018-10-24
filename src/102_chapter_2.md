@@ -1019,12 +1019,35 @@ sub-systems. In contrast, when photons reach the electromagnetic calorimeter,
 electron-positron pair-production processes are bound to occur, producing in turn
 electromagnetic showers which can be readout as a ECAL detector signal.
 
+In summary, the physical characteristics of each category of particle
+previously stated
+cause different signatures in the various detector sub-systems, that often
+can be used to distinguish between each type. It is also worth pointing
+out the main attributes each individual detector element readout, which are
+principally
+the angular position in $\eta$ and $\phi$, the distance to
+the interaction point which is given by the detecting element placement
+or the $z$ coordinate,
+and the amount of deposited energy. The latter is specially relevant
+for calorimeter detecting units. The precision of the angular location
+coordinates greatly varies between different detector types depending
+in their granularity, tracking detectors providing more accurate
+position measurements given that their used to extract information
+directly from the particle trajectories.
 
-### Detector Simulation
+### Detector Simulation {#sec:detector_simulation}
+
+While the simplified map between the particle outcome of a given collision
+and the corresponding detector readouts presented in the previous section
+is extremely useful for obtaining a general understanding
+the operation of the CMS detector, it is not detailed enough to model
+realistically the detector readouts given a set of particles generated
+in a collision.
+
+GEANT4 [-@Agostinelli:2002hh]
 
 
-
-### Event Reconstruction
+### Event Reconstruction {#sec:event_reco}
 
 
 
