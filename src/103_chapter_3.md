@@ -1,4 +1,4 @@
-# Modelling and Inference at the LHC {#sec:statinf}
+# Statistical Inference and Modelling at the LHC {#sec:statinf}
 
 \epigraph{Life is complicated, but
   not uninteresting.}{Jerzy Neyman}
