@@ -36,7 +36,7 @@ Organisation for Nuclear Research (CERN) laboratories around
 the Switzerland-France border near Geneva, its most distinctive element being
 a circular ring of superconductive magnets and accelerating structures
 installed along a 26.7 km underground tunnel inherited from the
-Large Electro Positron (LEP) collider [cite], as depicted in Figure
+Large Electron Positron (LEP) collider, as depicted in Figure
 [-@fig:LHC_overall]. The setup was designed
 to achieve center-of-mass energies up to 14 TeV for nominal instantaneous
 luminosities reaching $\times 10^{34} \textrm{cm}^{-1} \textrm{s}^{-1}$
@@ -72,7 +72,7 @@ be focussing on proton-proton collisions.
 In order to achieve beam energies of the TeV order, protons have to
 follow several stages of synchronised accelerations through a variety
 subcomponents of the CERN accelerator complex, whose main subcomponents
-as of 2018 are summarised in Figure [-@fig:fig:CERN_Acc_complex].
+as of 2018 are summarised in Figure [-@fig:CERN_Acc_complex].
 The purpose of this section
 is to outline the sequence of steps followed to obtain the high energy
 proton bunches that are used for high-energy collisions at the LHC.
@@ -969,7 +969,7 @@ it is assumed that an analogous set of particles
 is produced as result of each collision in the actual experiment.
 Based on the expected readout that they produce in the different
 CMS detector subcomponents, five main types of detectable particles
-are distinguish: muons, electrons, charged hadrons, neutral hadrons
+are distinguished: muons, electrons, charged hadrons, neutral hadrons
 and photons.
 
 The traces that each of the mentioned particle types leave in each
@@ -992,9 +992,10 @@ points.
 
 The trajectories of high-energy electrons 
 are also recorded by the CMS inner tracker,
-but as mentioned in Section [-@sec:cms_ecal], different from muons
-they rapidly loose energy
-due to bremsstrahlung when they reach the ECAL, produced subsequent
+but as mentioned in Section [-@sec:cms_ecal], their interactions
+differs from those caused by muons
+they loose energy
+rapidly due to bremsstrahlung when they reach the ECAL, producing subsequent
 electromagnetic showers. It is worth noting that within CMS reconstruction
 and analysis, it is common to simply use the term *electron* 
 to refer both to electrons and positrons, their charge inferred from the
@@ -1003,7 +1004,20 @@ by charged pions, kaons and protons, behave similarly to electrons in the
 tracking detector but instead generate much larger hadronic showers
 in the hadronic calorimeter.
 
-
+Long-lived neutral hadrons, including neutrons and the neutral kaon $K_L^0$,
+follow instead straight lines in the inner detector volume because they
+are not affected by the magnetic field and do not leave any traces when
+passing through the tracking detectors. It is not until neutral hadrons
+reach the calorimeter detectors, chiefly the HCAL, that nuclear interactions
+produce large hadronic showers producing measurable signals that can
+be correlated with the energy deposited. Photons are massless
+and neutral particles, and at the ranges of energies of interest as
+the outcome of particle collisions they are not expected to deposit
+enough energy in the thin inner tracking layers to produce significant
+signal, thus they follow a straight line trajectory to the calorimetry
+sub-systems. In contrast, when photons reach the electromagnetic calorimeter,
+electron-positron pair-production processes are bound to occur, producing in turn
+electromagnetic showers which can be readout as a ECAL detector signal.
 
 
 ### Detector Simulation
