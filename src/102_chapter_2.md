@@ -1042,9 +1042,21 @@ and the corresponding detector readouts presented in the previous section
 is extremely useful for obtaining a general understanding
 the operation of the CMS detector, it is not detailed enough to model
 realistically the detector readouts given a set of particles generated
-in a collision.
+in a collision. Most of the relevant dynamics for modelling, 
+such as interactions between protons, the produced particles and the
+detector material or the detector response are of stochastic nature,
+hence they have to be specified either by sampling
+approximated probability distributions or by a complex probabilistic program
+that goes through a mechanistic simulation of the underlying physical
+processes actually occurring.
 
-GEANT4 [-@Agostinelli:2002hh]
+The latter approach is found to be the most accurate, given the many subtleties
+affecting the detector readout for a given set of generated particles, including
+possible particle decays and material interactions that can occur when
+the particle is travelling through the detector, the non-uniformity of the magnetic
+field and its effect on the particle trajectories, and
+the intricacy of the detector geometry and their electric response. 
+GEANT4 toolkit [-@Agostinelli:2002hh]
 
 
 ### Event Reconstruction {#sec:event_reco}
