@@ -1,6 +1,6 @@
 
 ---
-title: Smart and Not to Long PhD Thesis Title
+title: Statistical Learning and Inference at Particle Collider Experiments
 author: Pablo de Castro Manzano
 date: 30 November 2018
 numbersections: true

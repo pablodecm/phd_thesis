@@ -94,9 +94,9 @@ $endif$
       }
       \vspace*{1.5cm}
       {
-      \scshape \Huge
-       Smart but not too Long \\[0.5cm]
-       PhD Thesis Title
+      \scshape \huge
+       Statistical Learning and Inference\\[0.5cm]
+       at Particle Collider Experiments
       }
       \vspace{1cm}
       \begin{flushleft}
