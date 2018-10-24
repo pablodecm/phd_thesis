@@ -1021,6 +1021,29 @@ sub-systems. In contrast, when photons reach the electromagnetic calorimeter,
 electron-positron pair-production processes are bound to occur, producing in turn
 electromagnetic showers which can be readout as a ECAL detector signal.
 
+The previous classification of particles based on their detectable energy
+remnants in the different detectors, patently disregards a common outcome
+of high energy collisions: neutrinos. Neutrinos only interact via
+weak and gravitational forces, hence the probability of
+interaction with the detecting elements of CMS is negligible, and thus escape
+the experimental area undiscovered. The production of high-energy
+neutrinos, or other weakly-interacting unknown 
+hypothetical particles (e.g. dark matter candidates), can
+nevertheless inferred by the total transverse energy imbalance. While
+the initial longitudinal momentum in
+the laboratory frame is unknown due to the
+proton compositeness, the initial total transverse momentum 
+is evidently zero given that the collision occurs head-on. Given
+that the CMS detecting structures have a near complete angular
+coverage around the interaction points, with the exception of
+very low transverse momentum particles that are lost near
+the beam pipe, the total transverse collision momentum of all detectable
+particles simply by summing the estimation of their transverse momenta
+estimation. Ergo, the quantity $E_T^{\textrm{miss}}=-\sum p_T$ is referred to
+as total missing transverse energy or by the acronym MET, and can
+be used to infer the production of non-detected particles particles such as
+neutrinos.
+
 In summary, the physical characteristics of each category of particle
 previously stated
 cause different signatures in the various detector sub-systems, that often
