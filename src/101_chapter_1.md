@@ -146,7 +146,7 @@ the agreement of precise predictions with meticulous experimental
 observations. The fine structure constant $\alpha$ at zero energy scale
 is an example of the latter, the experimentally determined value being
 compatible with the Standard Model based theoretical prediction up
-to 12 orders of magnitude [cite]. In addition to describing natural phenomena
+to 12 orders of magnitude [@hanneke2008new; @parker2018measurement]. In addition to describing natural phenomena
 with unprecedented accuracy, the SM it is a self-consistent theory that 
 provide non-divergent predictions at the highest energy scales probed to date.
 
@@ -170,9 +170,10 @@ main empirical and theoretical concerns are summarised:
  the SM completely disregards the effect of gravity in
  fundamental interactions, because no consistent quantum descriptions for
  gravity matching the experimental predictions of the well-established
- theory of general relativity [cite] have been developed to date. While several
- theoretical efforts are ongoing, such as loop quantum gravity [cite]
- or string theory [cite],
+ theory of general relativity [@misner2017gravitation] have been developed to date. While several
+ theoretical efforts are ongoing, such as loop quantum
+ gravity [@rovelli2008loop]
+ or string theory [@Polchinski:363850],
  the coupling for gravitational interactions at the current experimental
  high-energy reach is expected to be more than 30 times weaker than for
  weak interaction, and hence can be safely ignored when computing theoretical
