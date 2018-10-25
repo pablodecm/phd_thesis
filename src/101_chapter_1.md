@@ -181,13 +181,14 @@ main empirical and theoretical concerns are summarised:
  
 * **lack of a viable Dark Matter candidate**: through a variety of
   astrophysical observations, including the observed galaxy rotation
-  curves [cite], gravitational lensing [cite]
-  and the Cosmic Microwave Background (CMB) [cite], there is clear
+  curves [@corbelli2000extended], gravitational
+  lensing [@trimble1987existence]
+  and the Cosmic Microwave Background (CMB) [@Ade:2015xua], there is clear
   evidence indicating the presence of more gravitational interacting matter
   in the universe than what is expected by contrasting with the
-  electromagnetic spectra. It has been estimated that about $85\%$ of
+  electromagnetic spectra. It has been thus estimated that about $85\%$ of
   massive existing matter in the universe does not notably interact
-  with ordinary matter and radiation [cite], and therefore is referred
+  with ordinary matter and radiation, and therefore is referred
   as *Dark Matter*. While its particular nature is still unknown, scientific
   consensus seem to favour long-lived cold non-baryonic matter as an explanation,
   predominantly weakly-interacting massive particles (WIMPs). The three
