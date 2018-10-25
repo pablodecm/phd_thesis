@@ -1158,5 +1158,16 @@ of the different particle categories in a given event is unknown, but expected
 to be large given the high-energy and luminosity conditions of proton-proton
 collisions.
 
+A somehow hierarchical strategy is followed to perform event reconstruction
+at CMS experiments. First, the combined properties of
+small groups of low-level readouts for each sub-detector in
+collision are used to construct higher-level summaries that distill
+the information regarding the origin, direction or energy
+of the particles. In a second step, such high level constructs are put together
+by an algorithm based on the expected properties of each particle type,
+to obtain a list of *physical objects* and their relevant attributes,
+which would probably correspond to those that actually were generated in
+the collision.
+
 
 
