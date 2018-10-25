@@ -1181,7 +1181,7 @@ pixel and strip detector, referred to as  *hits*,
 to trajectories of charged particles, simply called *tracks*. This inverse
 measurement problem is tackled in CMS by using a combinatorial
 extension of the Kalman Filter
-algorithm [@Billoir:1990we; @Mankel:334615; @Adam:934067]. In broad terms, 
+algorithm [@Billoir:1990we; @Mankel:334615; @Chatrchyan:2014fea]. In broad terms, 
 the algorithm
 starts by selection sets of two-hit and three-hit associations from
 the inner layers, referred to
@@ -1191,7 +1191,6 @@ all combinations that are deemed compatible. An additional step is then carried
 out, that filters out all candidate tracks under some pre-defined quality
 threshold and removes possible duplicates. Once the set of hits that define
 each track are found, their parameters are fitted again using a more detailed
-prediction step in the Kalman filter, thus obtaining more acurrate estimates
+prediction step in the Kalman filter, thus obtaining more accurate estimates
 for their origin, momentum and direction.
-
 
