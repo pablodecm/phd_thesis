@@ -1194,3 +1194,22 @@ each track are found, their parameters are fitted again using a more detailed
 prediction step in the Kalman filter, thus obtaining more accurate estimates
 for their origin, momentum and direction.
 
+<!-- could mention iterative tracking, multiple seeding, and muon/electron
+tracking-->
+
+The reconstructed charged particle trajectories can be use to identify
+the spatial locations of where proton-proton interactions occurred
+in each bunch crossing, dubbed *primary vertices*, by
+extrapolating them back to the collision region and looking for
+overlapping subsets. In practise, an algorithm for vertex adaptive fitting
+[@Fruhwirth:2007hz] is used in combination with deterministic annealing,
+to identify and compute accurately the vertices location and their
+uncertainty. Most primary vertices
+correspond to soft scattering processes (pileup), and can be used
+to characterise the position and size of the interaction region. In collisions
+where a hard interaction occur, the main primary vertex can often be identified
+with the one whose linked tracks transverse momenta squared sum $\sum p_T^2$
+is the largest. The distinction of a main primary vertex can be used to
+mitigate the effect of pile-up interactions in reconstruction by
+removing the contributions from particles linked to pileup vertices. 
+
