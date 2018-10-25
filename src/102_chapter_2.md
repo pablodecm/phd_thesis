@@ -1163,11 +1163,35 @@ at CMS experiments. First, the combined properties of
 small groups of low-level readouts for each sub-detector in
 collision are used to construct higher-level summaries that distill
 the information regarding the origin, direction or energy
-of the particles. In a second step, such high level constructs are put together
+of the particles. In a second step, such high level constructs are linked
 by an algorithm based on the expected properties of each particle type,
-to obtain a list of *physical objects* and their relevant attributes,
+to obtain a list of *physics objects* and their relevant attributes,
 which would probably correspond to those that actually were generated in
-the collision.
+the collision. Such approach, that is referred as *particle flow * (PF) event
+reconstruction [@Sirunyan:2017ulk] within CMS data analysis techniques,
+has proven very effective to obtain a lower dimensional transformation of
+the detector readout that is greatly simplifies the interpretation
+and categorisation of events based on their particle content.
 
+As mentioned before, the first reconstruction stage encompasses
+the combination of detector traces in each sub-detector system to create
+higher level constructs. In the tracking detector, this amounts to associate
+the location estimate for the signals detected in all layers of the
+pixel and strip detector, referred to as  *hits*,
+to trajectories of charged particles, simply called *tracks*. This inverse
+measurement problem is tackled in CMS by using a combinatorial
+extension of the Kalman Filter
+algorithm [@Billoir:1990we; @Mankel:334615; @Adam:934067]. In broad terms, 
+the algorithm
+starts by selection sets of two-hit and three-hit associations from
+the inner layers, referred to
+as *seeds*, which are then extrapolated outwards and used to gather hits
+in the the other layers by consecutive prediction and update steps, keeping
+all combinations that are deemed compatible. An additional step is then carried
+out, that filters out all candidate tracks under some pre-defined quality
+threshold and removes possible duplicates. Once the set of hits that define
+each track are found, their parameters are fitted again using a more detailed
+prediction step in the Kalman filter, thus obtaining more acurrate estimates
+for their origin, momentum and direction.
 
 
