@@ -132,21 +132,41 @@ that exist for any given location and time. For simplicity, the fields
 in QFT are usually defined in a relativistic
 coordinate system $x = (t, \boldsymbol{x})$ in
 order treat space $\boldsymbol{x}$
-and time $t$ jointly. Let us consider the simplest case, a
+and time $t$ jointly.
+
+To exemplify the fundamentals of the QFT framework, let us consider the
+simplest case, e.g. a
 single scalar field that does not interact with any other field, which
-will be denoted as $\phi(x)$.
-
-
+will be denoted as $\phi(x)$. The dynamics of a field (or several fields)
+in QFT are specified by using the *Lagrangian formalism*, similarly
+to what can be done for system in classical mechanics. However,
+instead of considering the Lagrangian $L$
+which depends the generalised coordinate vector $\boldsymbol{q}(t)$
+and its time derivatives $\dot{\boldsymbol{q}(t)}$, in QFT the Lagrangian
+density $\mathcal{L}$ is commonly used, which depends only on the field
+$\phi (x)$ and its first derivative $\partial_{\mu} \phi (x)$. In fact,
+in an analogous manner to what is done in classical mechanics to
+define the action functional $S_{\textrm{classical}}$, we can define
+the action of the quantum field $S_{\textrm{classical}}$ as a function
+of the Lagrangian density $\mathcal{L}$ as follows:
 $$ S_{\textrm{classical}} = \int L (\boldsymbol{q}(t) ,\dot{\boldsymbol{q}} (t)) dt 
    \quad \Rightarrow \quad
-   S_{\textrm{QFT}}  =  \int \mathcal{L}(\phi, \partial_\mu \phi)\ d^4 x
+   S_{\textrm{QFT}}  =  \int \mathcal{L}(\phi, \partial_{\mu} \phi)\ d^4 x
 $$ {#eq:langrangian_density}
-
+noting that the previous definition would also be valid when
+the Lagrangian depends on multiple fields and their derivatives instead of
+a single free scalar field. Identically to what is done in classical systems,
+we can attempt to solve for the field that minimises the action,
+i.e. $\delta S=0$. With the help of some functional calculus [@Goldberg:2244785],
+it is possible obtain the relativistic field theory version of
+the Euler-Langrange equation:
 $$\partial_\mu \left ( \frac{\partial \mathcal{L}}
                              {\partial (\partial_\mu\phi)}
                \right ) 
   - \frac{\partial\mathcal{L}}{\partial\phi} = 0
 $$  {#eq:euler_lagrange}
+which would still apply to each field in the case that
+several a Lagrangian including several fields is considered.
 
 ### Quantum Chromodynamics {#sec:qcd_detail}
 
