@@ -118,9 +118,22 @@ dynamics of relevance in particle physics experiments.
 
 ### Quantum Field Theory Basics {#sec:qft_basics}
 
+As hinted in the previous section, in quantum field theory (QFT), observed
+particles are understood as excitations of fields that extend the whole
+universe. Quantum field theory unifies the physical foundations
+of quantum mechanics and special relativity, and can be used to
+accurately describe phenomena in systems where relativistic and
+quantum effects are relevant, such as interaction between highly
+relativistic particles.
 
+$$ S_{\textrm{classical}} = \int L (\dot{\boldsymbol{q}},\boldsymbol{q}, t ) dt 
+   \quad \Rightarrow \quad
+   S_{\textrm{QFT}}  =  \int \mathcal{L}(\phi, \partial_\mu \phi)\ d^4 x $$ {#eq:langrangian_density}
 
-
+$$\partial_\mu \left ( \frac{\partial \mathcal{L}}
+                             {\partial (\partial_\mu\phi)}
+               \right ) 
+  - \frac{\partial\mathcal{L}}{\partial\phi} = 0$$  {#eq:euler_lagrange}
 
 ### Quantum Chromodynamics {#sec:qcd_detail}
 
