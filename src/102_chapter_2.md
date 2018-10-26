@@ -1197,19 +1197,44 @@ for their origin, momentum and direction.
 <!-- could mention iterative tracking, multiple seeding, and muon/electron
 tracking-->
 
-The reconstructed charged particle trajectories can be use to identify
+The reconstructed charged particle trajectories can be used to identify
 the spatial locations of where proton-proton interactions occurred
 in each bunch crossing, dubbed *primary vertices*, by
 extrapolating them back to the collision region and looking for
-overlapping subsets. In practise, an algorithm for vertex adaptive fitting
+overlapping subsets. In practise, a custom algorithm for vertex
+adaptive fitting
 [@Fruhwirth:2007hz] is used in combination with deterministic annealing,
-to identify and compute accurately the vertices location and their
-uncertainty. Most primary vertices
+to identify and compute the vertices location and their
+uncertainty more accurately. Most primary vertices
 correspond to soft scattering processes (pileup), and can be used
 to characterise the position and size of the interaction region. In collisions
 where a hard interaction occur, the main primary vertex can often be identified
 with the one whose linked tracks transverse momenta squared sum $\sum p_T^2$
-is the largest. The distinction of a main primary vertex can be used to
+is the largest. The distinction of a main primary vertex is useful to
 mitigate the effect of pile-up interactions in reconstruction by
 removing the contributions from particles linked to pileup vertices. 
+
+Regarding the calorimeter detector readouts, the first step comprises
+the clustering low-level deposits in each sub-detector, so has to identify
+the energy remnants left by each individual particle. The clustering procedure
+starts by finding the calorimeter cells where the amount of deposited energy
+are local maxima, referred to as *seed* deposits.
+The deposits in contiguous energy cells are grouped together until
+their energy is smaller than twice the expected noise level,
+forming larger *topological clusters*. Because such clusters the results of
+the overlapping of the energy deposited by two or more particles, the final
+clusters are identified by fitting a Gaussian-mixture model via
+the expectation-maximisation algorithm, using the number of initial
+seeds present in the cluster as the number of Gaussian components in the
+mixture. The fitted cluster amplitudes are thus expected to be
+heavily correlated with energy deposited by an individual particle, but
+an extensive calibration based on a detailed simulation of the detector
+and the assumed particle type. The resulting calibrated clusters in each
+sub-detector (ECAL, HCAL and HF) will be instrumental for improve the energy
+measurement of charged hadrons, identifying measure the energy of neutral
+hadrons and photons and as well as to facilitate the identification and
+reconstruction of electrons.
+
+
+
 
