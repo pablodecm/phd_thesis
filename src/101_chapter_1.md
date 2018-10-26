@@ -124,16 +124,29 @@ universe. Quantum field theory unifies the physical foundations
 of quantum mechanics and special relativity, and can be used to
 accurately describe phenomena in systems where relativistic and
 quantum effects are relevant, such as interaction between highly
-relativistic particles.
+relativistic particles. In QFT, all the known physical processes
+in the universe are explained in terms of the state and dynamics
+of set of fundamental tensor fields. A tensor field can be defined as
+continuous and differentiable set of values, such a scalar or a vector,
+that exist for any given location and time. For simplicity, the fields 
+in QFT are usually defined in a relativistic
+coordinate system $x = (t, \boldsymbol{x})$ in
+order treat space $\boldsymbol{x}$
+and time $t$ jointly. Let us consider the simplest case, a
+single scalar field that does not interact with any other field, which
+will be denoted as $\phi(x)$.
 
-$$ S_{\textrm{classical}} = \int L (\dot{\boldsymbol{q}},\boldsymbol{q}, t ) dt 
+
+$$ S_{\textrm{classical}} = \int L (\boldsymbol{q}(t) ,\dot{\boldsymbol{q}} (t)) dt 
    \quad \Rightarrow \quad
-   S_{\textrm{QFT}}  =  \int \mathcal{L}(\phi, \partial_\mu \phi)\ d^4 x $$ {#eq:langrangian_density}
+   S_{\textrm{QFT}}  =  \int \mathcal{L}(\phi, \partial_\mu \phi)\ d^4 x
+$$ {#eq:langrangian_density}
 
 $$\partial_\mu \left ( \frac{\partial \mathcal{L}}
                              {\partial (\partial_\mu\phi)}
                \right ) 
-  - \frac{\partial\mathcal{L}}{\partial\phi} = 0$$  {#eq:euler_lagrange}
+  - \frac{\partial\mathcal{L}}{\partial\phi} = 0
+$$  {#eq:euler_lagrange}
 
 ### Quantum Chromodynamics {#sec:qcd_detail}
 
