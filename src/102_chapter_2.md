@@ -1214,7 +1214,7 @@ is the largest. The distinction of a main primary vertex is useful to
 mitigate the effect of pile-up interactions in reconstruction by
 removing the contributions from particles linked to pileup vertices. 
 
-Regarding the calorimeter detector readouts, the first step comprises
+Regarding the calorimeter detector readouts, the initial step comprises
 the clustering low-level deposits in each sub-detector, so has to identify
 the energy remnants left by each individual particle. The clustering procedure
 starts by finding the calorimeter cells where the amount of deposited energy
@@ -1234,6 +1234,34 @@ sub-detector (ECAL, HCAL and HF) will be instrumental for improve the energy
 measurement of charged hadrons, identifying measure the energy of neutral
 hadrons and photons and as well as to facilitate the identification and
 reconstruction of electrons.
+
+Once the basic *elements* for event reconstruction have been constructed,
+charged particle tracks and calorimeter cluster are linked together
+to form *blocks*. This step is an attempt to group the various
+traces that particle can leave in the various sub-detectors, by linking
+pairs of elements based on their distance in the $(\eta,\phi)$ plane
+and other properties depending of the specific sub-systems considered. When
+considering links between inner tracker and the calorimeter clusters,
+the curvature of the tracks and considerations regarding the detector
+geometry are taken into account. Calorimeter cluster-to-cluster
+links between the HCAL and ECAL, and between the ECAL and the pre-shower
+clusters are also sought. Additionally, ECAL clusters possibly created by
+bremsstrahlung photons can also be linked to electron-like tracks if they
+are consistent with an extrapolation of the track tangent. Finally, links
+between two tracks due subsequent photon conversion via pair production
+also considered if the sum of track momenta matches the mentioned
+electron-like track tangent.
+
+The outcome of the aforementioned procedure is a set of blocks of elements
+for a given collision readout,
+formed by associating elements that have been directly linked or share
+a common link with other elements. The following reconstruction step
+is referred as *object identification*, and its to
+associate blocks to a list of particle candidates, also known as
+*physics objects*. This is done secuentially, starting out by the
+objects that more easily identified (e.g. muons) and progressively
+masking out the blocks that are considered for each object until
+all particles candidates have been reconstructed.
 
 
 
