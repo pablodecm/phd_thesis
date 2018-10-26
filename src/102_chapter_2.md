@@ -1258,7 +1258,7 @@ formed by associating elements that have been directly linked or share
 a common link with other elements. The following reconstruction step
 is referred as *object identification*, and its to
 associate blocks to a list of particle candidates, also known as
-*physics objects*. This is done secuentially, starting out by the
+*physics objects*. This is done sequentially, starting out by the
 objects that more easily identified (e.g. muons) and progressively
 masking out the blocks that are considered for each object until
 all particles candidates have been reconstructed.
