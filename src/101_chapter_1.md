@@ -491,9 +491,47 @@ orders are considered, the final state phase space integration over
 many particles can rapidly become intractable. This motivates the use
 of *Monte Carlo integration* techniques, specially those based
 on importance sampling such as [vegas]{.smallcaps} [@Lepage:1977sw],
-which provide convergence rates independent of the integral dimensionality. In fact, the initial state integration regarding
-over parton types and momenta fractions can be carried out
-jointly.
+which provide convergence rates that scale well with the integral
+dimensionality by randomly sampling the multi-dimensional space.
+In fact, the initial state integration
+over parton types and momenta fractions can also be carried out
+jointly with these methods, greatly simplifying the computation procedure.
+The resulting weighted random samples can be used to estimate not only
+the total cross section, but also any other observable or
+distribution that is a function of the differential
+cross section $d\sigma(pp \rightarrow X)$. A common observable that is often
+used in experimental high energy physics is the efficiency $\epsilon$,
+or fraction of observations from a given process  $pp \rightarrow X$ that
+are expected to satisfy a given condition that is a function of the final state
+details.
+
+<!-- weighted efficiency formula -->
+
+Nevertheless, in particle collider experiments typically we cannot measure
+directly the properties of final states of the particles produced in
+the hard scattering, either because of the characteristics of the detector,
+the decay/hadronisation of particles producing to other secondary particles or
+due to additional physical effects occurring in a bunch crossing not accounted
+in Equation [-@eq:qcd_factorisation] such as additional collision products
+due to multiple interactions or processes comprising the proton
+remnants. Thus it is very useful for modelling to consider the problem
+of generation of realistic collision products. Taking into consideration
+that some of the computational techniques including
+subsequent physical processes and a detailed simulation of the detectors
+are considerably resource intensive, as will be detailed in
+Section [-@sec:parton_showers] and Section [-@sec:detector_simulation]
+respectively, the use of weighted samples are is not very efficient. Hence,
+for the generation of simulated products of high-energy collision, also
+referred as *event generation*, an acceptance-rejection sampling step
+is carried out to obtain an unweighted sample, where the relative
+frequency of each simulated outcome is expected to match its
+theoretical prediction. After such procedure, calculation of all observables
+is also simplified, because the weight of all samples can be taken
+as any constant, e.g. $w=1$, therefore the computations of quantities
+such as efficiencies given become trivial.
+
+<!-- unweighted efficiency formula -->
+
 
 ### Hadronization and Parton Showers {#sec:parton_showers}
 
