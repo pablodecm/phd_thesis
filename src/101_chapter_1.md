@@ -136,7 +136,7 @@ and time $t$ jointly.
 
 To exemplify the fundamentals of the QFT framework, let us consider the
 simplest case, e.g. a
-single scalar field that does not interact with any other field, which
+single field that does not interact with any other field, which
 will be denoted as $\phi(x)$. The dynamics of a field (or several fields)
 in QFT are specified by using the *Lagrangian formalism*, similarly
 to what can be done for system in classical mechanics. However,
@@ -155,7 +155,7 @@ $$ S_{\textrm{classical}} = \int L (\boldsymbol{q}(t) ,\dot{\boldsymbol{q}} (t))
 $$ {#eq:langrangian_density}
 noting that the previous definition would also be valid when
 the Lagrangian depends on multiple fields and their derivatives instead of
-a single free scalar field. Identically to what is done in classical systems,
+a single free field. Identically to what is done in classical systems,
 we can attempt to solve for the field that minimises the action,
 i.e. $\delta S=0$. With the help of some functional calculus [@Goldberg:2244785],
 it is possible obtain the relativistic field theory version of
@@ -446,7 +446,7 @@ extrapolate at higher energies, gluon scattering become the most likely
 outcome for the interaction.
 
 
-### Factorisation of Hard Processes {#sec:factorisation}
+### Factorisation and Generation of Hard Processes {#sec:factorisation}
 
 
 Let us consider the computation the differential cross section for a hard
@@ -456,7 +456,8 @@ at center of mass energy $s$. Here
 $X$ denotes a possible outcome for the interaction, not necessarily a single
 particle (e.g. a Higgs boson $X=H$) but a set of particles (e.g. a bottom
 quark-antiquark pair $X=b\hat{b}$). According to the QCD factorisation
-theorem [cite], the differential cross section for $d\sigma(pp \rightarrow X)$
+theorem [@Collins:1989gx], the differential cross section for
+$d\sigma(pp \rightarrow X)$
 can be expressed as a sum of functions of the partonic cross section 
 $d\hat{\sigma}_{ij \rightarrow X}$:  
 
@@ -476,10 +477,27 @@ can be calculated perturbatively at different expansion orders from
 the Lagrangian density as hinted in Section [-@sec:standard_model]. The
 total cross section  $\sigma(pp \rightarrow X)$ can
 then be attained by integrating out all final state quantities, commonly
-referred as phase space variables, in the differential cross section element
-$d\sigma(pp \rightarrow X)$.
+referred as phase space variables, in the differential total
+cross section element $d\sigma(pp \rightarrow X)$. It is worth pointing out
+that is simple cases (small number of particles in the final
+state) is often possible to integrate out the final state phase space
+variables directly in the partonic differential cross section
+$d\sigma(ij \rightarrow X)$, and thus directly
+compute the total cross section by a similar parton distribution
+function integration as the one used in Equation [-@eq:qcd_factorisation].
+
+However, as more more complex final states or higher perturbative
+orders are considered, the final state phase space integration over
+many particles can rapidly become intractable. This motivates the use
+of *Monte Carlo integration* techniques, specially those based
+on importance sampling such as [vegas]{.smallcaps} [@Lepage:1977sw],
+which provide convergence rates independent of the integral dimensionality. In fact, the initial state integration regarding
+over parton types and momenta fractions can be carried out
+jointly.
 
 ### Hadronization and Parton Showers {#sec:parton_showers}
+
+
 
 
 ![Diagram of a proton-proton collision, adapted from [@Hoche:2014rga].

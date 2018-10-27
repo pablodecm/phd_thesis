@@ -24,7 +24,6 @@ thesis.tex: src/*.md before
 	--variable=draft:true \
 	--variable=commit:$(LAST_COMMIT) \
 	--include-before-body=before.tex
-	--verbose
 
 before: src/00[1-9]_*.md
 	$(PANDOC) "$(INPUTDIR)"/00[1-9]_*.md \
