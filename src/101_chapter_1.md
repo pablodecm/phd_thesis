@@ -501,7 +501,7 @@ the total cross section, but also any other observable or
 distribution that is a function of the differential
 cross section $d\sigma(pp \rightarrow X)$. A common observable that is often
 used in experimental high energy physics is the efficiency $\epsilon$,
-or fraction of observations from a given process  $pp \rightarrow X$ that
+or fraction of observations from a specific process  $pp \rightarrow X$ that
 are expected to satisfy a given condition that is a function of the final state
 details.
 
@@ -510,35 +510,54 @@ details.
 Nevertheless, in particle collider experiments typically we cannot measure
 directly the properties of final states of the particles produced in
 the hard scattering, either because of the characteristics of the detector,
-the decay/hadronisation of particles producing to other secondary particles or
+the decay/hadronisation of particles producing other secondary particles or
 due to additional physical effects occurring in a bunch crossing not accounted
-in Equation [-@eq:qcd_factorisation] such as additional collision products
+in Equation [-@eq:qcd_factorisation], such as additional collision products
 due to multiple interactions or processes comprising the proton
 remnants. Thus it is very useful for modelling to consider the problem
 of generation of realistic collision products. Taking into consideration
-that some of the computational techniques including
-subsequent physical processes and a detailed simulation of the detectors
+that some of the computational techniques for including
+subsequent physical processes and the detailed simulation of the detectors
 are considerably resource intensive, as will be detailed in
 Section [-@sec:parton_showers] and Section [-@sec:detector_simulation]
-respectively, the use of weighted samples are is not very efficient. Hence,
+respectively, the use of weighted samples are is not a
+very efficient approach. Hence,
 for the generation of simulated products of high-energy collision, also
 referred as *event generation*, an acceptance-rejection sampling step
 is carried out to obtain an unweighted sample, where the relative
 frequency of each simulated outcome is expected to match its
 theoretical prediction. After such procedure, calculation of all observables
 is also simplified, because the weight of all samples can be taken
-as any constant, e.g. $w=1$, therefore the computations of quantities
-such as efficiencies given become trivial.
+as any constant, e.g. a unitary weight $w=1$, therefore the computations
+of quantities such as efficiencies becomes trivial.
 
 <!-- unweighted efficiency formula -->
-
+<!-- NLO matrix elements and other details -->
 
 ### Hadronization and Parton Showers {#sec:parton_showers}
 
+In order to link the hard scattering process outcome
+with the actual observable quantities that can be detected in an
+experiment, it is necessary to account for the radiation of
+soft gluons or quarks form the initial or final state partons in
+the collision
+as well as the conversion of formation of hadrons from any
+free parton due to colour confinement (see Section [-@sec:qcd_detail]).
+Additional processes that affect the collision outcome include
+secondary interaction between the protons, as well as the decays
+decays of unstable particles generated. 
+An example of the typical complexity of the physical
+processes occurring as a result of a single high-energy proton-proton
+scattering are included in Figure [-@fig:event_shower].
+These and other subtle effects
+(e.g. colour reconnection) are accounted by *parton showering* (PS) programs,
+that take as the input the the generated particle outcome of the
+hard scattering and 
+return a set of the resulting stable particles that would propagate
+through the detector. 
 
-
-
-![Diagram of a proton-proton collision, adapted from [@Hoche:2014rga].
+![Diagram of a proton-proton collision and the underlying physical
+processes occurring therein, adapted from [@Hoche:2014rga].
 The dark green ellipses following the tree parallel arrows represent the
 incoming hadrons. The main interaction between partons is shown in
 red colour, producing a tree-like structure of decays, in turn
@@ -550,7 +569,7 @@ an additional hard interaction within the same hadron-hadron process is
 shown in purple,
 which often has to be accounted for to obtain realistic simulations.
 ](gfx/101_chapter_1/event_shower.pdf){
-#fig:standard_model_particles width=70%}
+#fig:event_shower width=70%}
 
 
 
