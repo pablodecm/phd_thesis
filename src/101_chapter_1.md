@@ -320,6 +320,20 @@ once the higher precision measurements of the SM become available.
 
 ### Possible Extensions
 
+The known limitations stated in the previous section have motivated
+the development of alternative theories for describing fundamental
+interactions. Given the quantitative success of the Standard Model,
+most of the known proposed theoretical models are either extensions of
+the SM or its associated predictions can be effectively
+reduced to those of the SM at the energy range current being
+explored in particle physics experiments. The set of alternative
+that have been proposed is to substantial to be exhaustively listed
+here, specially accounted that many of the alternatives include
+additional free parameters that greatly modify the expected
+theoretical observables.
+
+<!-- maybe mention SUSY and extra-dimensions as canonical BSM -->
+
 #### Precision Measurements of the SM
 
 
