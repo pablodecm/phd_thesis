@@ -336,6 +336,14 @@ theoretical observables.
 
 #### Precision Measurements of the SM
 
+Due the existing large space of alternatives to the SM from a theoretical
+standpoint, the exploration of all possibilities through dedicated searches
+becomes unattainable. An alternative way to possibly obtain quantitative
+information pointing to extension of the SM is to measure its most relevant
+observables with high precision. If significant discrepancies are found
+between the experimental measurement and the theoretical prediction of
+those observables, it could be evidence pointing to New Physics outside
+the SM. 
 
 #### Effective Field Theories
 
