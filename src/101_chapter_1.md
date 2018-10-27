@@ -165,8 +165,38 @@ $$\partial_\mu \left ( \frac{\partial \mathcal{L}}
                \right ) 
   - \frac{\partial\mathcal{L}}{\partial\phi} = 0
 $$  {#eq:euler_lagrange}
-which would still apply to each field in the case that
-several a Lagrangian including several fields is considered.
+where $\partial_\mu=\partial/\partial x_\mu$  and the repetition
+of the coordinate index $\mu \in \{0,1,2,3\}$ means summation over
+the product. The previous relation would still apply to each field
+in the case that a Lagrangian including several fields was
+considered. Therefore,
+given a Lagrangian, we can use Equation [-@eq:euler_lagrange]
+to obtain their equations of motion. As an example, let us consider
+the following Lagrangian $\mathcal{L}_\textrm{Dirac}$, which  is a function of
+a bispinor field $\psi$, a 4-dimensional complex vector field that
+can represent a field whose excitations behave like fermions of mass
+$m$:
+$$\mathcal{L}_\textrm{Dirac}
+  =\bar{\psi} (i\gamma^\mu \partial_{\mu} - m)\psi
+$$ {#eq:dirac_lagrangian}
+where $\gamma^\mu$ are the gamma matrices and 
+$\bar{\psi}=\psi^\dag \gamma^0$ is the spinor adjoint. As the chosen naming
+for the previous Lagrangian $\mathcal{L}_\textrm{Dirac}$ gave away,
+the Euler-Lagrange relation obtained by
+minimising the action $\delta S=0$, can be used to obtain field equations
+of motion that correspond to the Dirac equation [@Peskin:257493] for the
+spinor field and its adjoint:
+$$ i\gamma^\mu \partial_{\mu} \psi - m \psi=0 \quad \textrm{and} \quad
+   i\gamma^\mu \bar{\psi} \partial_{\mu} + m\bar{\psi}=0
+$$ {#eq:dirac_equation}
+as well as the well-known Klein-Gordon equation
+$(\partial^\partial_\mu + m^2)\psi$,
+where $\partial^\mu=\partial/\partial x^\mu$.
+
+To shed some light on how such free field can represent actual fermions,
+such as electrons or positrons, it can be quantised by considering a
+plane wave expansion and defining creation and annihilation operators.
+
 
 ### Quantum Chromodynamics {#sec:qcd_detail}
 
