@@ -189,13 +189,16 @@ spinor field and its adjoint:
 $$ i\gamma^\mu \partial_{\mu} \psi - m \psi=0 \quad \textrm{and} \quad
    i\gamma^\mu \bar{\psi} \partial_{\mu} + m\bar{\psi}=0
 $$ {#eq:dirac_equation}
-as well as the well-known Klein-Gordon equation
-$(\partial^\partial_\mu + m^2)\psi$,
-where $\partial^\mu=\partial/\partial x^\mu$.
+as well as the well-known Klein-Gordon equation component-wise
+$(\partial^\mu \partial_\mu + m^2)\psi=0$,
+where $\partial^\mu=\partial/\partial x^\mu$. Both Dirac and
+Klein-Gordon equations were proposed in the context fo relativistic
+formulation of quantum mechanics.
 
-To shed some light on how such free field can represent actual fermions,
-such as electrons or positrons, it can be quantised by considering a
-plane wave expansion and defining creation and annihilation operators.
+To shed some light on how a field like $\psi$ can represent actual fermions
+in the universe, such as electrons or positrons, it can be quantised
+by considering a plane wave expansion and defining creation and
+annihilation operators.
 
 
 ### Quantum Chromodynamics {#sec:qcd_detail}
