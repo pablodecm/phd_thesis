@@ -1360,21 +1360,34 @@ and obtain higher momentum resolution.
 
 Once muons, electrons and isolated photons in the event have been
 identified, the remaining particle-flow blocks (i.e. linked tracks
-and/or calorimeters deposits) are interpreted as either 
-neutral or charged *PF candidates*. These physics object candidates
+and/or calorimeters deposits) are interpreted as either as
+neutral or charged *PF candidates* [@Sirunyan:2017ulk].
+These physics object candidates
 account for charged and neutral hadrons coming from the hadronisation
 of partons produced in the collision or their subsequent decays,
 as well as non-isolated photons radiated during those processes.
 When the aim is studying high-energy fundamental interactions
 that produce partons or other parton-decaying intermediate particles
 (e.g. $H \rightarrow b \bar{b}$), such reconstructed objects are not
-so directly practical because their individual momenta cannot be linked
+directly practical because their individual momenta cannot be linked
 with original parton momentum. This is because the processes of
-hadronisation, decays and associated radiation are stochastic, producing
+fragmentation, hadronisation, decays 
+and associated radiation are stochastic, producing
 tree-like structures with multiple leafs as discussed
 in Section [@sec:parton_showers],
 difficulting attempts to uniquely identify each parton with its
 decay chain.
+
+A possible way to construct simpler observables that can be
+linked with the original partons is to create composite objects based
+the remaining candidates through clustering. These objects,
+referred to as *jets*, are an attempt to represent the chain of hadrons
+and radiated energy produced, so the original parton energy and momentum
+can be recovered from the summed of the components. They can geometrically
+viewed as cones coming from the interaction region, covering an angular
+area $\Delta R$ of a given size in a given direction, that contains 
+a collimated set of hadrons and radiated photons flying away in a similar
+direction.
 
 
 #### Missing Transverse Energy
