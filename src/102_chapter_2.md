@@ -1270,7 +1270,7 @@ common to specify additional selection criteria based on over the
 resulting set of objects based on their properties within each analysis
 to reduce the rate of fake or wrong reconstruction.
 The rest of this section is devoted
-to discuss in more detail the identification and common
+to discuss in more detail the identification, calibration and common
 selection requirements on the main reconstructed objects
 that are used within
 physical analyses.
@@ -1302,8 +1302,23 @@ the rejection of signals from very energetic
 hadrons produced in the collision that are able to transverse
 the dense calorimeter and magnet section and still produce a response
 in the muon detectors, that are referred to as *punch-through* hadrons.
+In addition, muons are a common product of the decay of hadrons and
+thus is important to differentiate between muons likely produce in
+the primary interaction, or *prompt muons*, and those produce
+in a secondary decay of another particle. The amount of energy
+deposited around the muon trajectory, called *muon isolation*, as well
+as the distance to the primary vertex are important variables for
+such distinction.
 
 #### Electron and Photon Reconstruction
+
+Electron reconstruction is instead more challenging because it uses
+the readouts from the inner tracker and the ECAL, both detector
+being sensitive to additional charged particles coming
+out from the detector volume, and the latter also to high-energy photons.
+Additionally, electrons loose energy in their curved trajectories
+through the tracker complicating an accurate track reconstruction.
+
 
 #### Jet Reconstruction
 
