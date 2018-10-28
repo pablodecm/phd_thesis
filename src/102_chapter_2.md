@@ -382,7 +382,7 @@ for a more specialised account.
 ](gfx/102_chapter_2/CMS_detector.pdf){
 #fig:CMS_detector width=90%}
 
-### Experimental Geometry
+### Experimental Geometry {#sec:exp_geom}
 
 Given the geometry of the detector, the coordinate system used is
 centred at the nominal interaction point
@@ -1376,7 +1376,12 @@ and associated radiation are stochastic, producing
 tree-like structures with multiple leafs as discussed
 in Section [@sec:parton_showers],
 difficulting attempts to uniquely identify each parton with its
-decay chain.
+decay chain. In addition, contributions from additional
+soft pileup interaction can further complicate the mentioned assignment,
+while this factor is lessen by charged hadron subtraction techniques (CHS)
+[@CMS:2014ata] based on removing candidates not associated with a
+primary vertex.
+
 
 A possible way to construct simpler observables that can be
 linked with the original partons is to create composite objects based
@@ -1405,10 +1410,49 @@ direct comparison with generation level observables. In
 particular, in the analysis described in Chapter [-@sec:higgs_pair],
 the default jet CMS reconstruction is extensively used, which is
 based on the $\textrm{anti-k}_T$ algorithm [@Cacciari:2008gp]. This
-is a sequential algorithm, also referred as
-hierarchical agglomerative clustering in statistical terms,
+is a sequential algorithm, also classified as
+hierarchical agglomerative clustering in statistical language,
 starting assigning each candidate to each cluster and successively 
-merging them according to the following distances:
+merging them according to the following distances between two
+jets indexes as i and j respectively:
+$$ d_{ij} = \min ( p_{Ti}^{2a}, p_{Tj}^{2a}) \frac{\Delta R_{ij}^2}{R^2}
+\quad \textrm{and} \quad
+d_{iB} = p_{Ti}^{2a}
+$$ {#eq:antikt_distance}
+where $\Delta R_{ij}^2$ is the $\eta-\phi$ plane distance as defined
+in Section [-@sec:exp_geom],  $p_{Ti}^{2a}$ and $p_{Tj}^{2a}$
+are the transverse momenta of each jet, $R$ is the size parameter
+and $a=-1$ for the $\textrm{anti-k}_T$ algorithm. The algorithm
+starts by computing all distances $d_{ij}$ and $d_{iB}$ for all
+initial candidates, which are placed in a list. If the minimum
+corresponds to given distance between two candidates $d_{ij}$
+then both candidates are removed from the candidate list
+and group together by summing their
+four momenta forming a composite object, which is in turn 
+added to the list. Alternatively, if the minimum distance
+is $d_{iB}$, the $i$ candidate is assigned as a jet and removed
+from the list. Such procedure is recursively applied until
+the list is empty, because all single and composite candidates
+have been grouped with other candidates or defined as a jets of 
+a given size $R$. The choice of the parameter $R$ has to provide
+a balance between covering all the radiation form the initial
+parton and being increasingly affected by noise by soft
+particles. During the data taking period considered in
+Chapter [-@sec:higgs_pair], a cone size $R=0.4$ was used for the
+default jet collection, used in the analysis. Larger jet (e.g. $R=0.8$)
+cones are used in analyses
+that include final states with highly boosted intermediate
+particles, that produce a collimated set of hadrons and radiation
+when they decay, commonly with internal structure
+that can be exploited to improve the sensitivity.
+Alternative sequential clustering 
+algorithms can be defined by considering a different value
+of $a$ in Equation [-@eq:antikt_distance], but a negative choice
+for the exponent $a$ as used in the $\textrm{anti-k}_T$ algorithm
+higher transverse momenta particles are clustered first and thus
+the final jet outcome is less sensitive to soft pileup contributions
+and radiation.
+
 
 #### Missing Transverse Energy
 
