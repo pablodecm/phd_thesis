@@ -292,7 +292,7 @@ experiments are installed at the LHC interaction points:
   design and a different choice of detector technologies
   making it considerably more compact. It is the
   detector that collected the data use in the analysis in Chapter
-  [-@sec:lhc_analysis] and
+  [-@sec:higgs_pair] and
   hence is described extensively in Section [-@sec:cms].
 
 * **LHCb** (Large Hadron Collider beauty) [@LHCb:2008JINST]:
@@ -1158,6 +1158,8 @@ of the different particle categories in a given event is unknown, but expected
 to be large given the high-energy and luminosity conditions of proton-proton
 collisions.
 
+#### Reconstruction at CMS: Particle Flow Algorithm
+
 A somehow hierarchical strategy is followed to perform event reconstruction
 at CMS experiments. First, the combined properties of
 small groups of low-level readouts for each sub-detector in
@@ -1256,13 +1258,29 @@ The outcome of the aforementioned procedure is a set of blocks of elements
 for a given collision readout,
 formed by associating elements that have been directly linked or share
 a common link with other elements. The following reconstruction step
-is referred as *object identification*, and its to
-associate blocks to a list of particle candidates, also known as
+is referred as *object identification*, and its based in the
+association of blocks to a list of particle candidates, also known as
 *physics objects*. This is done sequentially, starting out by the
 objects that more easily identified (e.g. muons) and progressively
 masking out the blocks that are considered for each object until
-all particles candidates have been reconstructed.
+all particles candidates have been reconstructed. The reconstruction
+process is rather conservative, given that most CMS data analysis
+share the same reconstructed *physics objects*, therefore it is
+common to specify additional selection criteria based on over the
+resulting set of objects based on their properties within each analysis
+to reduce the rate of fake or wrong reconstruction.
+The rest of this section is devoted
+to discuss in more detail the identification and common
+selection requirements on the main reconstructed objects
+that are used within
+physical analyses.
 
+#### Muons
 
+#### Electrons
+
+#### Jets
+
+#### Missing Transverse Energy
 
 
