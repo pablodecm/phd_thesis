@@ -1383,12 +1383,18 @@ linked with the original partons is to create composite objects based
 the remaining candidates through clustering. These objects,
 referred to as *jets*, are an attempt to represent the chain of hadrons
 and radiated energy produced, so the original parton energy and momentum
-can be recovered from the summed of the components. They can geometrically
-viewed as cones coming from the interaction region, covering an angular
-area $\Delta R$ of a given size in a given direction, that contains 
-a collimated set of hadrons and radiated photons flying away in a similar
-direction.
-
+can be recovered from the summed of the components. They can be
+geometrically viewed as cones coming from the interaction region,
+covering an angular area $\Delta R$ of a given size in an outwards
+direction, that contains 
+a collimated set of hadrons and radiated photons flying away a
+direction similar to the original parton. Several jet clustering
+algorithm exist, each characterised by a given a size or resolution
+parameter $R$ and a recombination scheme, defining how
+candidates are merged to create the composite clustered object. In
+particular, in the analysis described in Chapter [@sec:higgs_pair],
+the default jet CMS reconstruction is extensively used, which is
+based on the $\textrm{anti-k}_T$ algorithm [@Cacciari:2008gp].
 
 #### Missing Transverse Energy
 
