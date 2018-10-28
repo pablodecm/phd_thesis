@@ -924,7 +924,7 @@ set of primary particles that were produced in the collision given the
 detector readout, through event reconstruction techniques.
 
 
-### A Generative View
+### A Generative View {#sec:gen_view}
 
 When two high-density proton bunches in opposite directions
 pass through each other inside the collision region of CMS,
@@ -1039,7 +1039,8 @@ coverage around the interaction points, with the exception of
 very low transverse momentum particles that are lost near
 the beam pipe, the total transverse collision momentum of all detectable
 particles simply by summing the estimation of their transverse momenta
-estimation. Ergo, the quantity $E_T^{\textrm{miss}}=-\sum p_T$ is referred to
+estimation. Ergo, the quantity $E_T^{\textrm{miss}}= || - \sum \vec{p}_T ||$
+is referred to
 as total missing transverse energy or by the acronym MET, and can
 be used to infer the production of non-detected particles particles such as
 neutrinos.
@@ -1453,7 +1454,57 @@ higher transverse momenta particles are clustered first and thus
 the final jet outcome is less sensitive to soft pileup contributions
 and radiation.
 
+The energy and momenta of the resulting jets is not expected
+to match accurately that of the original partons, due to the compound
+effect of detector readout and or non-linearities, as well
+as effect from pileup contribution. This motivates the
+application of a set of corrections, referred to as
+*jet energy corrections* (JECs) [@Khachatryan:2016kdb],
+that greatly reduce this discrepancies by
+sequentially shifting and rescaling the jet four-momenta based
+on extensive calibrations obtained from simulation.
 
-#### Missing Transverse Energy
+<!-- could expand a little bit in energy calibration and quote
+expected uncertainties -->
+
+So far, jets have been defined as a experimental simplification
+of hadronisation, decay and fragmentation chains
+in order to estimate  the energy and the momenta
+of initial partons produced in the collision, and we have ignored
+the other properties of the original parton. In particular, information
+regarding the flavour of the initial parton can be instrumental
+to distinguish event containing jets coming from high-energy
+processes with physical interesting intermediate
+particles like a Higgs boson $H$ or top quarks/antiquarks,
+which predominantly decay to $b$ quarks. Heavy flavour $b$ quarks,
+and to a lesser extense also for $c$ quarks, hadronise producing $B$ (and
+$C$) mesons that have lifetimes long enough to fly away from the
+primary vertex before decaying. 
+
+<!-- extend b-tagging -->
+
+#### Missing Transverse Energy {#sec:met_pf}
+
+As hinted in Section [-@sec:gen_view], neutrinos are a frequent
+product of high-energy proton-proton collisions that leave the detector
+undetected. Nevertheless, the presence of neutrinos
+(or other hypothetically weakly-interacting particles) can be
+inferred by the total momenta imbalance in the transverse plane
+of the event. Within the Particle-Flow reconstruction framework,
+this accounts to computing the vectorial sum of the transverse
+momenta of all PF reconstructed objects:
+$$ \vec{p}_T^\textrm{miss} =  \sum \vec{p}_{Ti}^\textrm{miss}$$ {#eq:met_pf}
+where $\vec{p}_T^\textrm{miss}$ is the total missing transverse
+momentum, whose Euclidean norm modulo is the missing 
+transverse energy $E_T^\textrm{miss}$, and $\vec{p}_{Ti}^\textrm{miss}$ is
+the transverse momentum each PF candidate.
+
+It is worth remarking that some hadron decay processes can produce
+neutrinos and therefore of a non-zero transverse
+missing energy $E_T^\textrm{miss}$ does not necessarily mean that
+weakly-interacting particles were produced in the hard
+interaction or by its direct products. Furthermore, any mis-detections
+or mis-measurements of the momenta of some of the produced particles
+can lead to transverse energy imbalances.
 
 
