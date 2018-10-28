@@ -1275,11 +1275,37 @@ selection requirements on the main reconstructed objects
 that are used within
 physical analyses.
 
-#### Muons
+#### Muon Reconstruction
 
-#### Electrons
+Muons can be though of as the easiest object to identify given the
+observed detector readouts, because a their are the only particle often
+reaches the outer tracking systems (i.e. muon detecting system).
+Furthermore, the detecting volume far away from the interaction region
+is much larger and hence the density of
+particle trajectories are considerably lower. The sparse particle hits
+in each of the muon detector systems are linked to form tracks that
+can be combined using a Kalman filter, similarly to what was done
+for the inner tracker as described earlier this section. The augment
+the measurement accuracy and reduce the fake rate, in analysis
+directly studying final states including muons, oftentimes the
+a matching between the track segments in the muon detectors and
+a those in the inner tracker. The details and performance of the
+reconstruction procedure depend on the momenta of the muon, and
+are described in more detail the following
+reference [@Chatrchyan:2014fea].
 
-#### Jets
+The main challenges of muon reconstruction include the
+dismissal of muons coming produced by cosmic-rays hitting the
+atmosphere and going through the CMS detector, simply dubbed
+as *cosmic muons*, as well as
+the rejection of signals from very energetic
+hadrons produced in the collision that are able to transverse
+the dense calorimeter and magnet section and still produce a response
+in the muon detectors, that are referred to as *punch-through* hadrons.
+
+#### Electron and Photon Reconstruction
+
+#### Jet Reconstruction
 
 #### Missing Transverse Energy
 
