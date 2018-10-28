@@ -1343,6 +1343,17 @@ as well as isolation requirements, the latter ensuring that not
 significant energy from hadrons was deposited around the electron
 trajectory.
 
+High-energy photons are identified and reconstructed using
+only the calorimeter [@Khachatryan:2015iwa],
+when the energy distribution in the ECAL
+calorimeter cells is consistent with that expected from a photon
+shower. Energy isolation requirements are also essential
+to distinguish photons
+coming from hadron or secondary radiative decays from those
+originated as a direct product of the primary interaction Additional
+quality and fine-tuned calibration is often used, for example in the
+$H \rightarrow \gamma \gamma$ analysis, to reduce the fake rate
+and obtain higher momentum resolution.
 
 #### Jet Reconstruction
 
