@@ -1391,10 +1391,24 @@ a collimated set of hadrons and radiated photons flying away a
 direction similar to the original parton. Several jet clustering
 algorithm exist, each characterised by a given a size or resolution
 parameter $R$ and a recombination scheme, defining how
-candidates are merged to create the composite clustered object. In
-particular, in the analysis described in Chapter [@sec:higgs_pair],
+candidates are combined to create the composite clustered object.
+
+Due to
+the properties of hadronisation and QCD radiation proceses,
+a common requirement
+for such clustering algorithms is they do not change significantly
+when a particle is splitted in two collinear ones (i.e. they
+are *collinear safe*)
+or additional soft radiation is produced by one of the clustered
+particles (i.e. they are *infrared safe*), which greatly simplifies
+direct comparison with generation level observables. In
+particular, in the analysis described in Chapter [-@sec:higgs_pair],
 the default jet CMS reconstruction is extensively used, which is
-based on the $\textrm{anti-k}_T$ algorithm [@Cacciari:2008gp].
+based on the $\textrm{anti-k}_T$ algorithm [@Cacciari:2008gp]. This
+is a sequential algorithm, also referred as
+hierarchical agglomerative clustering in statistical terms,
+starting assigning each candidate to each cluster and successively 
+merging them according to the following distances:
 
 #### Missing Transverse Energy
 
