@@ -28,7 +28,9 @@ thesis.tex: src/*.md before
 before: src/00[1-9]_*.md
 	$(PANDOC) "$(INPUTDIR)"/00[1-9]_*.md \
 	-o before.tex
-	
-			
+
+clean:
+	rm -f *.pdf *.out *aux *bbl *blg *log *toc \
+	      *.ptb *.tod *.fls *.fdb_latexmk *.lof	
 
 .PHONY: pdf

@@ -1316,8 +1316,32 @@ Electron reconstruction is instead more challenging because it uses
 the readouts from the inner tracker and the ECAL, both detector
 being sensitive to additional charged particles coming
 out from the detector volume, and the latter also to high-energy photons.
-Additionally, electrons loose energy in their curved trajectories
-through the tracker complicating an accurate track reconstruction.
+Furthermore, electrons loose energy in their curved trajectories
+through the tracker complicating an accurate track reconstruction. The
+latter can be accounted for during the track reconstruction by
+using a Gaussian-Sum filter extension fo the Kalman filter
+[@Adam:2005bya] algorithm, which can be used to model the
+previously mentioned non-linearities. The procedural details
+of the identification and property measurement for electrons
+depend on their transverse momenta, lower energy electrons more accurately
+associated using the inner tracker hits while the electromagnetic
+calorimeter is more useful at higher energy ranges, these and other
+details are further discussed in the following
+reference [@Khachatryan:2015hwa].
+
+The electron momentum direction is measured using the
+track information, while the energy is estimated by combining both
+information from the tracking and calorimeter detectors. In order
+to obtain precise energy and momentum estimates, under 5% in the
+full pseudo-rapidity range, a calibration step is required to correct
+for non-clustered energy deposits and pile-up contributions. Similarly
+to what is done for muons, additional quality criteria can be applied to
+distinguish between the electrons produced in the primary interaction
+and those coming from hadronic decays or converted photons, including
+conditions of several track-based and calorimeter-based observables
+as well as isolation requirements, the latter ensuring that not
+significant energy from hadrons was deposited around the electron
+trajectory.
 
 
 #### Jet Reconstruction
