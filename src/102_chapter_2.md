@@ -1158,7 +1158,7 @@ of the different particle categories in a given event is unknown, but expected
 to be large given the high-energy and luminosity conditions of proton-proton
 collisions.
 
-#### Reconstruction at CMS: Particle Flow Algorithm
+#### Reconstruction at CMS: Particle-Flow Algorithm
 
 A somehow hierarchical strategy is followed to perform event reconstruction
 at CMS experiments. First, the combined properties of
@@ -1169,7 +1169,7 @@ of the particles. In a second step, such high level constructs are linked
 by an algorithm based on the expected properties of each particle type,
 to obtain a list of *physics objects* and their relevant attributes,
 which would probably correspond to those that actually were generated in
-the collision. Such approach, that is referred as *particle flow * (PF) event
+the collision. Such approach, that is referred as *particle-flow * (PF) event
 reconstruction [@Sirunyan:2017ulk] within CMS data analysis techniques,
 has proven very effective to obtain a lower dimensional transformation of
 the detector readout that is greatly simplifies the interpretation
@@ -1349,13 +1349,33 @@ when the energy distribution in the ECAL
 calorimeter cells is consistent with that expected from a photon
 shower. Energy isolation requirements are also essential
 to distinguish photons
-coming from hadron or secondary radiative decays from those
-originated as a direct product of the primary interaction Additional
+coming from hadron or secondary radiative decays, which
+will be discussed together with hadrons, from those
+originated as a direct product of the primary interaction. Additional
 quality and fine-tuned calibration is often used, for example in the
 $H \rightarrow \gamma \gamma$ analysis, to reduce the fake rate
 and obtain higher momentum resolution.
 
 #### Jet Reconstruction
+
+Once muons, electrons and isolated photons in the event have been
+identified, the remaining particle-flow blocks (i.e. linked tracks
+and/or calorimeters deposits) are interpreted as either 
+neutral or charged *PF candidates*. These physics object candidates
+account for charged and neutral hadrons coming from the hadronisation
+of partons produced in the collision or their subsequent decays,
+as well as non-isolated photons radiated during those processes.
+When the aim is studying high-energy fundamental interactions
+that produce partons or other parton-decaying intermediate particles
+(e.g. $H \rightarrow b \bar{b}$), such reconstructed objects are not
+so directly practical because their individual momenta cannot be linked
+with original parton momentum. This is because the processes of
+hadronisation, decays and associated radiation are stochastic, producing
+tree-like structures with multiple leafs as discussed
+in Section [@sec:parton_showers],
+difficulting attempts to uniquely identify each parton with its
+decay chain.
+
 
 #### Missing Transverse Energy
 
