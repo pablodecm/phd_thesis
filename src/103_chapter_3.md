@@ -48,11 +48,11 @@ we expect the readout output, which can be effectively treated as a
 random variable $\boldsymbol{x}$, is distributed and how such distribution
 is related with the (theoretical) parameters we are interested in measuring
 in the experiment. We would like then to model the probability density
-distribution function generating the a given observation $\boldsymbol{x}$
+distribution function generating the a given observation $\boldsymbol{x}_i$
 conditional on the parameters
 of interest, that is:
 $$ 
-  \boldsymbol{x} \sim p ( \boldsymbol{x}|\boldsymbol{\theta} )
+  \boldsymbol{x}_i \sim p ( \boldsymbol{x}|\boldsymbol{\theta} )
 $$ {#eq:cond_density}
 where $\boldsymbol{\theta} \in \mathcal{\Theta} \subseteq \mathbb{R}^p$ 
 denotes all the parameters we are interested in and affect
@@ -82,17 +82,35 @@ aforementioned reflection is that the underlying
 process generating $\boldsymbol{x}$ is a *mixture model*, it can be expressed
 as the probabilistic composition of samples from multiple probabilistic
 distributions corresponding to different types of interaction
-processes occurring in the collision. Is we knew the probabilistic
+processes occurring in the collision. If we knew the probabilistic
 distribution function of each mixture component
 $p_i(\boldsymbol{x}|\boldsymbol{\theta})$ then 
 $p ( \boldsymbol{x}|\boldsymbol{\theta} )$ could be expressed as: 
 $$
 p ( \boldsymbol{x}|\boldsymbol{\theta} ) =
-\sum^K_i \phi_i \ p_i ( \boldsymbol{x}|\boldsymbol{\theta} )
+\sum^K \phi_j \ p_j ( \boldsymbol{x}|\boldsymbol{\theta} )
 $$ {#eq:mixture_pdf}
-where $K$ is the number of mixture components and $\phi_i$ is the mixture
-weight/fraction, i.e. probability for a samples to be originated by
-each mixture component $i$.
+where $K$ is the number of mixture components and $\phi_j$ is the mixture
+weight/fraction, i.e. probability for a sample to be originated from
+each mixture component $j$. Practically, each
+$p_j(\boldsymbol{x}|\boldsymbol{\theta})$ will be intractable due to the
+same reason making  $p ( \boldsymbol{x}|\boldsymbol{\theta} )$
+intractable, thus a more sensible description of the mixture model
+is the generative definition, described by the following
+two-step sampling procedure:
+$$ z_i \sim \textrm{Categorical}(\boldsymbol{\phi}) 
+\quad \longrightarrow  \quad
+\boldsymbol{x}_i \sim p_{z_i}( \boldsymbol{x} | \boldsymbol{\theta})
+$$ {#eq:mixture_gen}
+describing sampling and random integer $z_i$ from a random
+categorical distribution
+with support $\{0, \dots, K -1 \}$ and subsequently sampling the corresponding
+mixture components indexed by  $z_i$, where
+$\boldsymbol{\phi} = \{\phi_0, \dots, \phi_{K-1} \}$
+is the vector of probabilities for each of the mixture components.
+<!-- to include a graphical model or not to include a graphical model -->
+ 
+
 
 ### Confidence Intervals
 
