@@ -118,7 +118,10 @@ extracting knowledge from the acquired data.
 
 Indeed, the problem of obtaining useful information from data is so involved
 in modern scientific experiments that a standalone chapter will be centered
-on statistical inference concepts and techniques. In [Chapter @sec:statinf]
+on statistical inference concepts and techniques. In fact, it could 
+be argued that the inference is the ultimate goal of particle
+physics experiments, providing a key connection between
+theory and experiment. In [Chapter @sec:statinf]
 we review the main approaches for making quantitative statements based
 on data and their shortcomings. Two domain-specific aspects of data-analysis
 in high energy physics will be remarked: the generative-only characteristic
