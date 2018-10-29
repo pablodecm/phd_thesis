@@ -21,7 +21,26 @@ dimensional summary statistics.
 
 ## Problem Definition
 
+Let us suppose that we record a collection of detector readouts
+$D = \{\boldsymbol{x}_0,...,\boldsymbol{x}_n\}$ for a total $n$ bunch crossings
+at a particle collider experiment, such as CMS at the LHC (see Section
+[-@sec:cms]). Note that vector notation is used for each individual readout,
+also referred to as event, because for mathematical simplification
+we will be assuming that each detector observation can be embedded
+as a member of a fixed size
+$d$-dimensional space, i.e. $\boldsymbol{x} \in \mathcal{X}
+\subseteq \mathbb{R}^d$, even though variable-size sets or tree-like
+structures might be a more compact and useful representation in practise,
+as will be discussed later.
+As an starting point,
+let us assume that the detector readout for every bunch crossing
+is recorded, i.e. no trigger filtering system as the one described in
+[Section @sec:trigger] is in place, hence after each bunch crossing $i$ a
+given raw detector readout $\boldsymbol{x}_i$ will be obtained.
+
+
 ### Confidence Intervals
+
 ### Hypothesis Testing
 
 ### Likelihood-Free Inference

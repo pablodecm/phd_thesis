@@ -268,7 +268,7 @@ design in high-luminosity environments.
 
 
 
-### Experiments
+### Experiments {#sec:lhc_experiments}
 
 Around the collision volume at each of the interaction points, large
 detectors are positioned in order to reveal and quantitatively
@@ -833,7 +833,7 @@ in the barrel and the endcap sections, up pseudo-rapidities
 $|\eta| < 1.6$.
 
 
-### Trigger and Data Acquisition
+### Trigger and Data Acquisition {#sec:trigger}
 
 As discussed in Section [-@sec:pheno], the occurrence of
 relevant processes that can provide information about the physical
