@@ -393,7 +393,7 @@ proton-proton collisions and how we can predict their relative
 rates of occurring given some initial state
 conditions of the interaction.
 
-### Main Observables
+### Main Observables {#sec:main_obs}
 
 A related consideration that is useful as an introduction to the
 aforementioned topic is the question of what outcomes can
