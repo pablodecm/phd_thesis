@@ -1,4 +1,4 @@
-# Statistical Inference and Modelling at the LHC {#sec:statinf}
+# Statistical Modelling and Inference at the LHC {#sec:statinf}
 
 \epigraph{Life is complicated, but
   not uninteresting.}{Jerzy Neyman}
@@ -146,10 +146,34 @@ two components $a$ and $b$ in $H$ can be substituted by $c$,
 where $\phi_c = \phi_a + \phi_b$ and
 $$p_c(\boldsymbol{x}|\boldsymbol{\theta})=
   \frac{\phi_a}{\phi_a+\phi_b} \ p_a(\boldsymbol{x}|\boldsymbol{\theta}) +
-  \frac{\phi_a}{\phi_a+\phi_b} \ p_b(\boldsymbol{x}|\boldsymbol{\theta})
-$$ {#eq:mixture}
+  \frac{\phi_b}{\phi_a+\phi_b} \ p_b(\boldsymbol{x}|\boldsymbol{\theta})
+$$ {#eq:mixture_mixing}
 which can be applied recursively to reduce the number of components in
 the set.
+
+A convenient definition for the set $H$ is one that is aligned with
+the way theoretical calculations are carried out, given that the
+relative probability for a given process $\phi_{pp\rightarrow X}$
+will be proportional to its total cross section $\sigma (pp\rightarrow X)$,
+while its readout distribution will depend on its differential
+cross section $d\sigma (pp\rightarrow X)$ and its support. In fact, given
+that the total and differential cross section are proportional to
+the matrix element squared (see [Section @sec:qft_basics])
+of a given process $d\sigma (pp\rightarrow X) \propto |\mathcal{M}|^2$,
+it is often possible to further divide each process in the cross product
+of Feynman diagram expansions (including interference terms), 
+which can be very useful notion for a some analysis use cases,
+and is related with the approach that will be
+used in [Chapter @sec:higgs_pair].
+
+Oftentimes, we are interested in studying a subset of all the hard 
+interaction processes, we will referred as signal set of process
+$S \subset H$. This can be a single type of physical process
+$\sigma (pp\rightarrow X)$, e.g. the inclusive production of a pair
+of Higgs bosons $\sigma (pp\rightarrow HH + \textrm{other})$, or
+several, which in can be effectively viewed as one mixture
+component using [Equation @eq:mixture_mixing].
+
 
 
 
