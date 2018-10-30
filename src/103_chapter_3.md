@@ -19,7 +19,9 @@ a non-parametric sample likelihoods, which in turn demands for lower
 dimensional summary statistics.
 
 
-## Statistical Modelling Narrative
+## Statistical Modelling
+
+### Overview
 
 Let us suppose that we record a collection of raw detector readouts
 $D = \{\boldsymbol{x}_0,...,\boldsymbol{x}_n\}$ for a total $n$ bunch crossings
@@ -43,6 +45,8 @@ a reasonable approximation if the experimental conditions
 are stable during the acquisition period as discussed at the
 beginning of [Section @sec:event], consequently the event ordering
 or index $i$ are not relevant.
+
+#### Experiment Outcome
 
 Within such framework, we could begin by posing the question of how
 we expect the readout output, which can be effectively treated as a
@@ -71,6 +75,8 @@ physical processes that generate the readouts in the detectors
 are overly complex, and realistic modelling can only be obtained
 through simulation, as jointly reviewed
 in [Section @sec:pheno] and [Section @sec:event]. 
+
+#### Mixture Structure
 
 While a detailed
 closed-form description of $p(\boldsymbol{x}|\boldsymbol{\theta})$
@@ -115,6 +121,8 @@ noting that the generative approach might be more convenient for
 the actual estimation of expectation values when the mixture
 component distributions $p_j(\boldsymbol{x}|\boldsymbol{\theta})$
 are not tractable.
+
+#### Mixture Components
 
 The mixture model structure can be directly link to the physical processes
 happening in fundamental proton-proton collisions and detectors,
@@ -166,6 +174,8 @@ which can be very useful notion for a some analysis use cases,
 and is related with the approach that will be
 used in [Chapter @sec:higgs_pair].
 
+#### Signal and Background
+
 Oftentimes, we are interested in studying a subset $S \subset H$
 of all the hard  interaction processes, that will referred to as signal
 set. This can be a single type of physical process
@@ -191,24 +201,52 @@ distribution $p_S(\boldsymbol{x}|\boldsymbol{\theta})$. As previously
 mentioned, the former is proportional to the cross section of the
 signal processes $\sigma_S$ while the latter can include properties
 such the mass of a intermediate particle resonance (e.g. the Higgs
-mass) or the general behaviour of the differential distribution (i.e.
+mass $m_H$) or the general behaviour of the differential
+distribution (i.e.
 using unfolding methods to remove the experimental effects,
 which are not discusses in this work). Those parametric proxies can
 then be used compared with the theoretical predictions of the SM
 or the alternative considered, in order to exclude or
 constrain its fundamental parameters.
 
+#### Event Selection
+
+Given the mixture model structure expected for 
+$p ( \boldsymbol{x}|\boldsymbol{\theta} )$ and the fact we only
+interested in a small amount of the readout generating
+processes for each collision, because in general $\phi_S \ll
+\phi_B \ll \phi_{\textrm{not-hard}}$, the effect of trigger
+or any other *event selection* can be considered.
 
 
+### Simulation 
 
 
-### Confidence Intervals
+#### High-Dimensional Modelling
+
+####  Hidden Variables
+
+### Dimensionality Reduction
+  
+#### Event Reconstruction
+
+#### Summary Statistics
+
+#### Synthetic Likelihood
+
+### Known Unknowns
+
+#### Nuisance Parameters
+
+#### Background Estimation
+
+
+## Statistical Inference
+
+### Parameter Estimation
 
 ### Hypothesis Testing
 
 ### Likelihood-Free Inference
 
-## Summary Statistics
-
-## Statistical Methods
 
