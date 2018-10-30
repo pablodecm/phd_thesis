@@ -121,8 +121,36 @@ happening in fundamental proton-proton collisions and detectors,
 as described in previous chapters. As an additional simplification for now,
 let us neglect the effect of multiple particle interactions,
 as were described in [Section @sec:pile_up]. For each proton bunch
-crossing, hard interactions between partons might or might
-not occur, given the stochastic nature of the scattering processes.
+crossing, hard interactions (i.e. associated with
+a large characteristic energy scale $Q^2$, whose cut-off does not have
+be specified for this particular argument) between partons might or might
+not occur, given the stochastic nature of the scattering processes. We
+could nevertheless associate a probability for a hard interaction happening
+$\phi_{\textrm{hard}}$, as well to it not happening
+$\phi_{\textrm{not-hard}} = 1-\phi_{\textrm{hard}}$. Given the proton colliding
+conditions at the LHC, the latter case is much more likely, i.e.
+$\phi_{\textrm{not-hard}} \gg \phi_{\textrm{hard}}$.
+
+However, we can further break each previously mentioned category in
+sub-components corresponding to different types of processes. 
+The hard interaction category can itself be expressed as a mixture
+of all physical interactions, that can produce a hard scattering, so the
+probability $\phi_{\textrm{hard}}$ can be expresses as the following
+sum:
+$$ \phi_{\textrm{hard}} = \phi_0 + \dots + \phi_n = \sum_{k \in H} \phi_k $$
+where the $H$ represents a given set of independent contributions $k$, each
+characterised by a distribution $p_j(\boldsymbol{x}|\boldsymbol{\theta})$,
+from all different processes that produce hard scatterings. Such set is not
+uniquely defined, given that any
+two components $a$ and $b$ in $H$ can be substituted by $c$,
+where $\phi_c = \phi_a + \phi_b$ and
+$$p_c(\boldsymbol{x}|\boldsymbol{\theta})=
+  \frac{\phi_a}{\phi_a+\phi_b} \ p_a(\boldsymbol{x}|\boldsymbol{\theta}) +
+  \frac{\phi_a}{\phi_a+\phi_b} \ p_b(\boldsymbol{x}|\boldsymbol{\theta})
+$$ {#eq:mixture}
+which can be applied recursively to reduce the number of components in
+the set.
+
 
 
 ### Confidence Intervals
