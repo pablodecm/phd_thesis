@@ -19,10 +19,10 @@ a non-parametric sample likelihoods, which in turn demands for lower
 dimensional summary statistics.
 
 
-## Problem Definition
+## Statistical Modelling Narrative
 
 Let us suppose that we record a collection of raw detector readouts
-$R = \{\boldsymbol{x}_0,...,\boldsymbol{x}_n\}$ for a total $n$ bunch crossings
+$D = \{\boldsymbol{x}_0,...,\boldsymbol{x}_n\}$ for a total $n$ bunch crossings
 at a particle collider experiment, such as CMS at the LHC (see Section
 [-@sec:cms]). Note that vector notation is used for each individual readout,
 also referred to as event, because for mathematical simplification
@@ -43,6 +43,7 @@ a reasonable approximation if the experimental conditions
 are stable during the acquisition period as discussed at the
 beginning of [Section @sec:event], consequently the event ordering
 or index $i$ are not relevant.
+
 Within such framework, we could begin by posing the question of how
 we expect the readout output, which can be effectively treated as a
 random variable $\boldsymbol{x}$, is distributed and how such distribution
@@ -102,14 +103,26 @@ $$ z_i \sim \textrm{Categorical}(\boldsymbol{\phi})
 \quad \longrightarrow  \quad
 \boldsymbol{x}_i \sim p_{z_i}( \boldsymbol{x} | \boldsymbol{\theta})
 $$ {#eq:mixture_gen}
-describing sampling and random integer $z_i$ from a random
-categorical distribution
-with support $\{0, \dots, K -1 \}$ and subsequently sampling the corresponding
-mixture components indexed by  $z_i$, where
+describing sampling and random integer $z_i \in \{0, \dots, K -1 \}$ from a random
+categorical distribution and subsequently sampling the corresponding
+mixture component indexed by  $z_i$, where
 $\boldsymbol{\phi} = \{\phi_0, \dots, \phi_{K-1} \}$
 is the vector of probabilities for each of the mixture components.
 <!-- to include a graphical model or not to include a graphical model -->
- 
+For here onwards, mixture models might in some cases be portrayed by
+using the analytical depiction as in [Equation @eq:mixture_pdf], always
+noting that the generative approach might be more convenient for
+the actual estimation of expectation values when the mixture
+component distributions $p_j(\boldsymbol{x}|\boldsymbol{\theta})$
+are not tractable.
+
+The mixture model structure can be directly link to the physical processes
+happening in fundamental proton-proton collisions and detectors,
+as described in previous chapters. As an additional simplification for now,
+let us neglect the effect of multiple particle interactions,
+as were described in [Section @sec:pile_up]. For each proton bunch
+crossing, hard interactions between partons might or might
+not occur, given the stochastic nature of the scattering processes.
 
 
 ### Confidence Intervals
