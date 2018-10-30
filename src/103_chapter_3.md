@@ -166,13 +166,38 @@ which can be very useful notion for a some analysis use cases,
 and is related with the approach that will be
 used in [Chapter @sec:higgs_pair].
 
-Oftentimes, we are interested in studying a subset of all the hard 
-interaction processes, we will referred as signal set of process
-$S \subset H$. This can be a single type of physical process
+Oftentimes, we are interested in studying a subset $S \subset H$
+of all the hard  interaction processes, that will referred to as signal
+set. This can be a single type of physical process
 $\sigma (pp\rightarrow X)$, e.g. the inclusive production of a pair
 of Higgs bosons $\sigma (pp\rightarrow HH + \textrm{other})$, or
 several, which in can be effectively viewed as one mixture
-component using [Equation @eq:mixture_mixing].
+component using [Equation @eq:mixture_mixing]. We can accordingly define
+the background subset $B = H - S$, as all the result of all
+other generating processes in $H$ that we are not interested in,
+definition which could also be extended to include collisions where
+not-hard processes occurred if needed. Such distinction between generating
+processes of interest $S$ and background $B$ is at the roots of every
+analysis at the LHC, and it is motivated by the fact that small
+changes of the parameters of the SM or its theoretical extensions/alternatives
+affect a only a subset of the produced processes, those that are governed
+by the interactions linked to the parameter.
+
+As a matter of a fact, customarily statistical inference at the LHC
+is not carried out directly on the parameters of the SM or the
+extension being studied, but on the relative frequency of the set
+of processes of interest $\phi_S$ or the properties of its 
+distribution $p_S(\boldsymbol{x}|\boldsymbol{\theta})$. As previously
+mentioned, the former is proportional to the cross section of the
+signal processes $\sigma_S$ while the latter can include properties
+such the mass of a intermediate particle resonance (e.g. the Higgs
+mass) or the general behaviour of the differential distribution (i.e.
+using unfolding methods to remove the experimental effects,
+which are not discusses in this work). Those parametric proxies can
+then be used compared with the theoretical predictions of the SM
+or the alternative considered, in order to exclude or
+constrain its fundamental parameters.
+
 
 
 
