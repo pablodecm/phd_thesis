@@ -212,11 +212,24 @@ constrain its fundamental parameters.
 #### Event Selection
 
 Given the mixture model structure expected for 
-$p ( \boldsymbol{x}|\boldsymbol{\theta} )$ and the fact we only
+$p ( \boldsymbol{x}|\boldsymbol{\theta} )$ and the fact we are only
 interested in a small amount of the readout generating
 processes for each collision, because in general $\phi_S \ll
 \phi_B \ll \phi_{\textrm{not-hard}}$, the effect of trigger
-or any other *event selection* can be considered.
+or any other *event selection* can be considered. The role of
+event selection is reduce the fraction of events that do not
+contain useful information for the inference task of interest.
+In general mathematical
+terms, an event
+selection can be thought as indicator function of a given
+subset of the set of possible detector readouts
+$\mathcal{C} \subseteq \mathcal{X}$, defined as:
+
+$$\mathbb{1}_\mathcal{C}(x) =
+  \begin{cases}
+    1 \ \textrm{if} \ x \in A \\
+    0 \ \textrm{if} \ x \notin A \\
+  \end{cases}$$ {#eq:indicator}
 
 
 ### Simulation 
