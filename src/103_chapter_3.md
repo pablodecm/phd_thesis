@@ -218,17 +218,26 @@ processes for each collision, because in general $\phi_S \ll
 \phi_B \ll \phi_{\textrm{not-hard}}$, the effect of trigger
 or any other *event selection* can be considered. The role of
 event selection is reduce the fraction of events that do not
-contain useful information for the inference task of interest.
+contain useful information for the inference task of interest. In the case
+of trigger selection, it is a technical requirement in order reduce
+the rate of detector readouts recorded to current technological
+capabilities, as discussed in [Section @sec:trigger]. For analysis selection
+instead, as will be discussed in [Chapter @sec:higgs_pair], it is used to reduce
+the expected contribution of background processes that are not well-modelled
+by simulation, as well as to the increase the expected fraction of signal
+events in synthetic counting likelihoods those that will be detailed in
+[Section @sec:synthetic_likelihood].
+
 In general mathematical
-terms, an event
+terms, any deterministic event
 selection can be thought as indicator function of a given
 subset of the set of possible detector readouts
-$\mathcal{C} \subseteq \mathcal{X}$, defined as:
+$\mathcal{C} \subseteq \mathcal{X}$, that can be defined as:
 
 $$\mathbb{1}_\mathcal{C}(x) =
   \begin{cases}
-    1 \ \textrm{if} \ x \in A \\
-    0 \ \textrm{if} \ x \notin A \\
+    1 \ \textrm{if} \ x \in C \\
+    0 \ \textrm{if} \ x \notin C \\
   \end{cases}$$ {#eq:indicator}
 
 
@@ -245,7 +254,7 @@ $$\mathbb{1}_\mathcal{C}(x) =
 
 #### Summary Statistics
 
-#### Synthetic Likelihood
+#### Synthetic Likelihood {#sec:synthetic_likelihood}
 
 ### Known Unknowns
 
