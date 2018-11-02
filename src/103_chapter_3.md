@@ -266,36 +266,62 @@ readouts before any statistical analysis is carried out. The structure
 of the statistical model $g(\boldsymbol{x} | \boldsymbol{\theta} )$
 resulting after applying an arbitrary selection 
 $\mathbb{1}_\mathcal{C}(\boldsymbol{x})$ on a mixture model as the one
-described in [Equation @eq:cond_density] can be deduced by multiplying
+described in [Equation @eq:cond_density] can be obtained by multiplying
 the probability density by $\mathbb{1}_\mathcal{C}(\boldsymbol{x})$ and
 including the relevant normalisation term:
-$$ \begin{aligned}
+$$ 
 g(\boldsymbol{x} | \boldsymbol{\theta} ) = \frac{
  \mathbb{1}_\mathcal{C}(\boldsymbol{x})
   \sum^K \phi_j \ p_j ( \boldsymbol{x}|\boldsymbol{\theta})}{
   \int \left (\mathbb{1}_\mathcal{C}(\boldsymbol{x}) 
   \sum^K \phi_j \ p_j ( \boldsymbol{x}|\boldsymbol{\theta}) \right ) 
   d \boldsymbol{x}}
-  \\ =
-  \sum^K \frac{ \phi_j 
-  \int \mathbb{1}_\mathcal{C}(\boldsymbol{x})
-  p_j ( \boldsymbol{x}|\boldsymbol{\theta}) d \boldsymbol{x}
+  =
+  \sum^K \left (  \frac{ \phi_j 
+  \epsilon_j
   }{
   \sum^K \phi_j
-  \int \mathbb{1}_\mathcal{C}(\boldsymbol{x})
-  p_j (\boldsymbol{x}|\boldsymbol{\theta}) d \boldsymbol{x}
-  } g_j (\boldsymbol{x}|\boldsymbol{\theta})
-  = \sum^K \chi_j g_j (\boldsymbol{x}|\boldsymbol{\theta})
-\end{aligned}$$
+  \epsilon_j
+  } \right ) g_j (\boldsymbol{x}|\boldsymbol{\theta})
+$$ {#eq:mixture_after_cut}
+where 
+$g_j (\boldsymbol{x}|\boldsymbol{\theta}) =
+\mathbb{1}_\mathcal{C}(\boldsymbol{x}) p_j (\boldsymbol{x}|\boldsymbol{\theta})
+ / \epsilon_j$ is the probability density function of each mixture component after
+the selection,
+$\epsilon=\int \mathbb{1}_\mathcal{C}(\boldsymbol{x}) p_j
+(\boldsymbol{x}|\boldsymbol{\theta})$ is the *efficiency* on the selection
+on each mixture and the integral sign in the denominator in the last
+expression has been simplified by noting that
+$\int g_j ( \boldsymbol{x}|\boldsymbol{\theta}) d \boldsymbol{x} = 1$.
+From [Equation @eq:mixture_after_cut] it becomes clear that the
+statistical model after any event selection is also a mixture model,
+whose mixture components are $g_j (\boldsymbol{x}|\boldsymbol{\theta})$
+and mixture fractions are $\chi_j=\phi_j\epsilon_j/\sum^K \phi_j\epsilon_j$,
+which will be very relevant to build statistical models of the observed
+data after an event event selection is in place.
 
-$\int g_j ( \boldsymbol{x}|\boldsymbol{\theta}) d \boldsymbol{x} = 1$
-
-
-
+So far, no explicit assumptions on the probability distribution functions
+of each mixture component $j$ or the details of the event
+selection function $\mathbb{1}_\mathcal{C}(\boldsymbol{x})$ have
+been considered, in order to keep the previously developed modelling
+framework as general as possible. In the next sections, it will become
+increasingly clear how $p_j (\boldsymbol{x}|\boldsymbol{\theta})$
+(and in turn $g_j (\boldsymbol{x}|\boldsymbol{\theta})$ and the efficiency
+$\epsilon_j$) can be modelled by generating simulated detector readouts
+produced by a given process $j$.
 
 ### Simulation 
 
-
+The physical principles underlying the simulation of detector observations,
+or event, for a given hard proton-proton interaction process were reviewed
+in [Section @sec:pheno] and [Section @sec:event]. Instead of focussing
+on the procedural details of event generation, the focus of this section
+is the study of the simulation chain as a generative statistical model,
+together with its basic structure and properties, that will be
+useful later on to understand many analysis techniques that are commonly
+used in experimental particle physics.
+ 
 #### High-Dimensional Modelling
 
 ####  Latent Variables
