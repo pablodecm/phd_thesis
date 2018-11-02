@@ -230,7 +230,8 @@ events in synthetic counting likelihoods those that will be detailed in
 
 In general mathematical
 terms, any deterministic event
-selection can be thought as indicator function of a given
+selection can be thought as indicator function
+$\mathbb{1}_\mathcal{C} : \longrightarrow \{0,1\}$,  of a given
 subset of the set of possible detector readouts
 $\mathcal{C} \subseteq \mathcal{X}$, that can be defined as:
 
@@ -240,6 +241,16 @@ $$\mathbb{1}_\mathcal{C}(x) =
     0 \ \textrm{if} \ x \notin C \\
   \end{cases}$$ {#eq:indicator}
 
+where the specific definition of of such function depends
+on the definition of the subset $\mathcal{C}$, e.g. a simple cut on
+a one-dimensional function of the readout $f(x) > t_{{\textrm{cut}}}$. The
+event selection, given than an indicator function
+can be also be viewed as a boolean predicate function,
+can also be a combination of operations from other subsets, e.g. if the
+set $\mathcal{C}=\mathcal{A} \cap \mathcal{B}$ is the intersection
+between two subsets, the indicator
+function of $C$ can be simply expressed as the product
+$\mathbb{1}_\mathcal{C}=\mathbb{1}_\mathcal{A} \cdot \mathbb{1}_\mathcal{B}$.
 
 ### Simulation 
 
