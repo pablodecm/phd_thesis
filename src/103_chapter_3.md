@@ -231,33 +231,75 @@ events in synthetic counting likelihoods those that will be detailed in
 In general mathematical
 terms, any deterministic event
 selection can be thought as indicator function
-$\mathbb{1}_\mathcal{C} : \longrightarrow \{0,1\}$,  of a given
+$\mathbb{1}_\mathcal{C} : \mathcal{X} \longrightarrow \{0,1\}$,  of a given
 subset of the set of possible detector readouts
 $\mathcal{C} \subseteq \mathcal{X}$, that can be defined as:
 
-$$\mathbb{1}_\mathcal{C}(x) =
+$$\mathbb{1}_\mathcal{C}(\boldsymbol{x}) =
   \begin{cases}
-    1 \ \textrm{if} \ x \in C \\
-    0 \ \textrm{if} \ x \notin C \\
+    1 \ \textrm{if} \ \mathbf{x} \in C \\
+    0 \ \textrm{if} \ \mathbf{x} \notin C \\
   \end{cases}$$ {#eq:indicator}
 
 where the specific definition of of such function depends
 on the definition of the subset $\mathcal{C}$, e.g. a simple cut on
-a one-dimensional function of the readout $f(x) > t_{{\textrm{cut}}}$. The
-event selection, given than an indicator function
-can be also be viewed as a boolean predicate function,
-can also be a combination of operations from other subsets, e.g. if the
+a one-dimensional function
+$f : \mathcal{X} \longrightarrow T \subseteq \mathcal{R}$
+of the readout $f(\boldsymbol{x}) > t_{{\textrm{cut}}}$. Any
+indicator function
+can be also be viewed as a boolean predicate function, so the event selection
+can also be a combination of operations selection, i.e. if the
 set $\mathcal{C}=\mathcal{A} \cap \mathcal{B}$ is the intersection
 between two subsets, the indicator
 function of $C$ can be simply expressed as the product
 $\mathbb{1}_\mathcal{C}=\mathbb{1}_\mathcal{A} \cdot \mathbb{1}_\mathcal{B}$.
+This framework is flexible enough to represent all deterministic event
+selections, and it could also be extended
+by an independent non-deterministic
+term to represent *trigger prescales* without affecting the succeeding
+treatment.
+
+In practise, in particle physics colliders, a given selection
+$\mathbb{1}_\mathcal{C}(\boldsymbol{x})$ would be have been imposed on the
+recorded detector
+readouts before any statistical analysis is carried out. The structure
+of the statistical model $g(\boldsymbol{x} | \boldsymbol{\theta} )$
+resulting after applying an arbitrary selection 
+$\mathbb{1}_\mathcal{C}(\boldsymbol{x})$ on a mixture model as the one
+described in [Equation @eq:cond_density] can be deduced by multiplying
+the probability density by $\mathbb{1}_\mathcal{C}(\boldsymbol{x})$ and
+including the relevant normalisation term:
+$$ \begin{aligned}
+g(\boldsymbol{x} | \boldsymbol{\theta} ) = \frac{
+ \mathbb{1}_\mathcal{C}(\boldsymbol{x})
+  \sum^K \phi_j \ p_j ( \boldsymbol{x}|\boldsymbol{\theta})}{
+  \int \left (\mathbb{1}_\mathcal{C}(\boldsymbol{x}) 
+  \sum^K \phi_j \ p_j ( \boldsymbol{x}|\boldsymbol{\theta}) \right ) 
+  d \boldsymbol{x}}
+  \\ =
+  \sum^K \frac{ \phi_j 
+  \int \mathbb{1}_\mathcal{C}(\boldsymbol{x})
+  p_j ( \boldsymbol{x}|\boldsymbol{\theta}) d \boldsymbol{x}
+  }{
+  \sum^K \phi_j
+  \int \mathbb{1}_\mathcal{C}(\boldsymbol{x})
+  p_j (\boldsymbol{x}|\boldsymbol{\theta}) d \boldsymbol{x}
+  } g_j (\boldsymbol{x}|\boldsymbol{\theta})
+  = \sum^K \chi_j g_j (\boldsymbol{x}|\boldsymbol{\theta})
+\end{aligned}$$
+
+$\int g_j ( \boldsymbol{x}|\boldsymbol{\theta}) d \boldsymbol{x} = 1$
+
+
+
 
 ### Simulation 
 
 
 #### High-Dimensional Modelling
 
-####  Hidden Variables
+####  Latent Variables
+
 
 ### Dimensionality Reduction
   
