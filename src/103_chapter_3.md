@@ -311,7 +311,7 @@ increasingly clear how $p_j (\boldsymbol{x}|\boldsymbol{\theta})$
 $\epsilon_j$) can be modelled by generating simulated detector readouts
 produced by a given process $j$.
 
-### Simulation 
+### Simulation as Generative Modelling
 
 The physical principles underlying the simulation of detector readouts,
 or events, for a given hard proton-proton interaction process were reviewed
@@ -345,8 +345,79 @@ full detector readout
 $\boldsymbol{x} \in \mathcal{X} \subseteq \mathbb{R}^d$
 as the only observable variable, given that any other observable
 can be expressed as a function of the raw readout, as will be discussed
-in [Section @sec:dim_reduction].
+in [Section @sec:dim_reduction]. The probability density
+function of the data $p ( \boldsymbol{x}|\boldsymbol{\theta} )$ from
+a generative standpoint can be written as an integration of the
+joint distribution $p(\boldsymbol{x}, \boldsymbol{z} | \boldsymbol{\theta})$
+over all latent variables $\boldsymbol{z}$ of an event:
+$$p ( \boldsymbol{x}|\boldsymbol{\theta} ) =
+\int p(\boldsymbol{x}, \boldsymbol{z} | \boldsymbol{\theta})d\boldsymbol{z}
+$$ {#eq:as_integration}
+where  $\boldsymbol{\theta}$ is a vector with all model parameters, which
+normally are global (same for all the observations) and include
+the theory parameters of interest as well as any other parameter that
+affect the detector readouts. While the true generative model of the data
+$p(\boldsymbol{x}, \boldsymbol{z} | \boldsymbol{\theta})$ is unknown,
+the knowledge about the underlying physical processes described in
+in [Section @sec:pheno] and [Section @sec:event], can be used to build
+a generative approximation of
+$p(\boldsymbol{x}, \boldsymbol{z} | \boldsymbol{\theta})$ which can
+describe the observed data realistically and be used to carry out
+inference on the parameters of interest.
 
+In fact, one of the most relevant latent variables at
+particle colliders has been already introduced with the generative
+definition of a mixture model in [Equation @eq:mixture_gen], the
+mixture assignment integer $z_i \in \{0, \dots, K -1 \}$. This
+latent variable represents which type of fundamental
+interaction occurred in the event, and is useful to exemplify the
+main property of latent variables: that they are not observed
+but only can inferred. Let us consider the problem finding out the
+type of interaction $j$ that caused a single detector readout
+observation $\boldsymbol{x}_i$. As long as $\boldsymbol{x}_i$
+is in the support space of more than one of the mixture
+components $p_j( \boldsymbol{x}|\boldsymbol{\theta})$, which
+is almost always the case, only probabilistic
+statements about the type of interaction originating $\boldsymbol{x}_i$
+can be made, even if $p_j( \boldsymbol{x}|\boldsymbol{\theta})$ are known.
+In practise, $p_j( \boldsymbol{x}|\boldsymbol{\theta})$ are not known thus
+analytically so probabilistic classification techniques
+can be used to estimate the conditional probabilities based
+on simulated samples, as discussed in [Chapter @sec:machine_learning].
+
+####  Structure of Generative Model
+
+Other than the basic mixture model structure, our understanding of the
+underlying physical process occurring in proton-proton collisions
+can be used to recognise additional structure in the generative
+model by means of factorising the joint distribution
+$p(\boldsymbol{x}, \boldsymbol{z} | \boldsymbol{\theta})$ in conditional
+factors matching the various simulation steps and their dependencies:
+$$p(\boldsymbol{x}, \boldsymbol{z} | \boldsymbol{\theta}) =
+p ( \boldsymbol{x} | \boldsymbol{z}_\textrm{d})
+p ( \boldsymbol{z}_\textrm{d} | \boldsymbol{z}_\textrm{s})
+p ( \boldsymbol{z}_\textrm{s} | \boldsymbol{z}_\textrm{p})
+\sum^K \phi_j(\boldsymbol{\theta})
+\ p_j ( \boldsymbol{z}_\textrm{p}|\boldsymbol{\theta})
+$$ {#eq:factor_joint}
+where $p_j ( \boldsymbol{z}_\textrm{p}|\boldsymbol{\theta})$ is
+the conditional probability density of a given set of parton-level four-momenta
+particles outcome for a particular fundamental process $j$,
+characterised by the latent representation $\boldsymbol{z}_\textrm{p}$,
+as a function of the theory parameters,
+$p( \boldsymbol{z}_\textrm{s} | \boldsymbol{z}_\textrm{p})$ is the conditional
+density of a given parton-shower outcome
+$\boldsymbol{z}_\textrm{s}$  as a function of the parton-level outcome,
+$p ( \boldsymbol{z}_\textrm{d} | \boldsymbol{z}_\textrm{s})$ is the conditional
+density of a
+set of detector interactions and readout noise $\boldsymbol{z}_\textrm{d}$
+as a function of the parton-shower output, and
+$p ( \boldsymbol{x} | \boldsymbol{z}_\textrm{d})$ is the conditional
+density of a given detector readout as a function of the interactions
+and detector noise.
+
+
+#### Re-Weighting of Simulated Observations
 
 
 ### Dimensionality Reduction {#sec:dim_reduction}
