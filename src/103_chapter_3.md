@@ -397,25 +397,35 @@ $$p(\boldsymbol{x}, \boldsymbol{z} | \boldsymbol{\theta}) =
 p ( \boldsymbol{x} | \boldsymbol{z}_\textrm{d})
 p ( \boldsymbol{z}_\textrm{d} | \boldsymbol{z}_\textrm{s})
 p ( \boldsymbol{z}_\textrm{s} | \boldsymbol{z}_\textrm{p})
-\sum^K \phi_j(\boldsymbol{\theta})
-\ p_j ( \boldsymbol{z}_\textrm{p}|\boldsymbol{\theta})
+\sum^K p ( z_i|\boldsymbol{\theta})
+\ p ( \boldsymbol{z}_\textrm{p}|\boldsymbol{\theta}, z_i)
 $$ {#eq:factor_joint}
-where $p_j ( \boldsymbol{z}_\textrm{p}|\boldsymbol{\theta})$ is
+where $p( z_i|\boldsymbol{\theta}) = \phi_j(\boldsymbol{\theta})$
+is the probability of
+a given type of process occurring, $p_j ( \boldsymbol{z}_\textrm{p}|\boldsymbol{\theta})$ is
 the conditional probability density of a given set of parton-level four-momenta
-particles outcome for a particular fundamental process $j$,
-characterised by the latent representation $\boldsymbol{z}_\textrm{p}$,
+particles outcome for a fundamental process indexed by the latent
+variable $z_i \in \mathcal{Z}_i$,
+characterised by the latent representation
+$\boldsymbol{z}_\textrm{p} \in \mathcal{Z}_\textrm{p}$,
 as a function of the theory parameters,
 $p( \boldsymbol{z}_\textrm{s} | \boldsymbol{z}_\textrm{p})$ is the conditional
 density of a given parton-shower outcome
-$\boldsymbol{z}_\textrm{s}$  as a function of the parton-level outcome,
+$\boldsymbol{z}_\textrm{s} \in \mathcal{Z}_\textrm{d}$ 
+as a function of the parton-level outcome,
 $p ( \boldsymbol{z}_\textrm{d} | \boldsymbol{z}_\textrm{s})$ is the conditional
 density of a
-set of detector interactions and readout noise $\boldsymbol{z}_\textrm{d}$
+set of detector interactions and readout noise
+$\boldsymbol{z}_\textrm{d} \in \mathcal{Z}_\textrm{d}$
 as a function of the parton-shower output, and
 $p ( \boldsymbol{x} | \boldsymbol{z}_\textrm{d})$ is the conditional
-density of a given detector readout as a function of the interactions
+density of a given detector readout
+$\boldsymbol{x} \in \mathcal{X}$
+as a function of the interactions
 and detector noise.
 
+<!-- compare latent space dimensionality, mentioned that sub-factorisation
+and that parameters of interest typically only affect the mixture factor-->
 
 #### Re-Weighting of Simulated Observations
 
