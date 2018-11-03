@@ -313,21 +313,43 @@ produced by a given process $j$.
 
 ### Simulation 
 
-The physical principles underlying the simulation of detector observations,
-or event, for a given hard proton-proton interaction process were reviewed
+The physical principles underlying the simulation of detector readouts,
+or events, for a given hard proton-proton interaction process were reviewed
 in [Section @sec:pheno] and [Section @sec:event]. Instead of focussing
 on the procedural details of event generation, the focus of this section
 is the study of the simulation chain as a generative statistical model,
 together with its basic structure and properties, that will be
-useful later on to understand many analysis techniques that are commonly
+useful later to understand many analysis techniques that are commonly
 used in experimental particle physics.
+
+For simplicity, we will be considering the statistical model describing
+a dataset of detector readouts $D = \{\boldsymbol{x}_0,...,\boldsymbol{x}_n\}$
+before any event selection, what was referred as
+$p ( \boldsymbol{x}|\boldsymbol{\theta} )$  in the previous section.
+Always noting that the distribution after
+any arbitrary deterministic
+event selection $\mathbb{1}_\mathcal{C}(\boldsymbol{x})$
+is also a mixture model (see [Equation @eq:mixture_after_cut])
+and samples under the corresponding probability distribution functions
+and mixture fractions $g_j (\boldsymbol{x}|\boldsymbol{\theta})$ and
+$\chi_j$ can be easily obtained from the non-selected simulated events,
+as it is actually done in practise.
  
-#### High-Dimensional Modelling
+####  Observable and Latent Variables
 
-####  Latent Variables
+The first step to define a generative statistical model is to define
+what are the observed variables and what are the hidden quantities,
+referred to as *latent variables*, that explain the structure in the data.
+For particle collider experiments, such as CMS, we can often consider the
+full detector readout
+$\boldsymbol{x} \in \mathcal{X} \subseteq \mathbb{R}^d$
+as the only observable variable, given that any other observable
+can be expressed as a function of the raw readout, as will be discussed
+in [Section @sec:dim_reduction].
 
 
-### Dimensionality Reduction
+
+### Dimensionality Reduction {#sec:dim_reduction}
   
 #### Event Reconstruction
 
