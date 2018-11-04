@@ -306,9 +306,9 @@ of each mixture component $j$ or the details of the event
 selection function $\mathbb{1}_\mathcal{C}(\boldsymbol{x})$ have
 been considered, in order to keep the previously developed modelling
 framework as general as possible. In the next sections, it will become
-increasingly clear how $p_j (\boldsymbol{x}|\boldsymbol{\theta})$
-(and in turn $g_j (\boldsymbol{x}|\boldsymbol{\theta})$ and the efficiency
-$\epsilon_j$) can be modelled by generating simulated detector readouts
+increasingly clear how $p_j (\boldsymbol{x}|\boldsymbol{\theta})$,
+and in turn $g_j (\boldsymbol{x}|\boldsymbol{\theta})$ and the efficiency
+$\epsilon_j$, can be modelled by generating simulated detector readouts
 produced by a given process $j$.
 
 ### Simulation as Generative Modelling
@@ -424,8 +424,38 @@ $\boldsymbol{x} \in \mathcal{X}$
 as a function of the interactions
 and detector noise.
 
-<!-- compare latent space dimensionality, mentioned that sub-factorisation
-and that parameters of interest typically only affect the mixture factor-->
+The dimensionality of the latent space greatly
+increases with each simulation step, from a single integer for $\mathcal{Z}_i$,
+$\mathcal{O}(10)$ parton four-momenta variables within $\mathcal{Z}_p$,
+$\mathcal{O}(100)$ after the parton-shower $\mathcal{Z}_s$,
+to $\mathcal{O}(10^8)$ in
+the detector interaction latent space $\mathcal{Z}_d$ and also
+the observable readout space $\mathcal{X}$. In the factorisation presented
+in [Equation @eq:factor_joint], the dependency on the parameters has
+only be made explicit for $p( z_i|\boldsymbol{\theta})$
+and $p ( \boldsymbol{z}_\textrm{p}|\boldsymbol{\theta}, z_i)$, that is because
+the theoretical parameters of interest $\boldsymbol{\theta}$
+often only affect the rate of the different fundamental processes
+and their differential distributions, which correspond to the mentioned
+conditional probability distributions. In the actual simulation chain,
+all conditional factors typically depend on additional parameters which
+might be uncertain, whose effect and modelling will be discussed in
+[Section @sec:known_unknowns].
+
+As previously mentioned, computer programs can be used to realistically
+simulate detector observations. For simulated observations, not only
+the final readout is observed, but all latent variables can be obtained
+from the intermediate steps of the generative chain. These variables,
+in particular $z_p$ and $z_s$, are commonly
+referred as *generator level observables*, and are extremely useful to
+construct techniques that approximate the latent variables from the
+detector readouts. In fact, the whole simulation chain can be even viewed
+as a probabilistic program [@Casado:2017cif;@Baydin:2018npr],
+thus each of the factors in
+[Equation @eq:factor_joint] can be further broken down as a sequence
+of random samples, which can be used to speed up latent variable
+inference based on the execution traces.
+
 
 #### Re-Weighting of Simulated Observations
 
@@ -438,7 +468,7 @@ and that parameters of interest typically only affect the mixture factor-->
 
 #### Synthetic Likelihood {#sec:synthetic_likelihood}
 
-### Known Unknowns
+### Known Unknowns {#sec:known_unknowns}
 
 #### Nuisance Parameters
 
