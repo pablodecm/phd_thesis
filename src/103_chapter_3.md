@@ -397,14 +397,16 @@ $$p(\boldsymbol{x}, \boldsymbol{z} | \boldsymbol{\theta}) =
 p ( \boldsymbol{x} | \boldsymbol{z}_\textrm{d})
 p ( \boldsymbol{z}_\textrm{d} | \boldsymbol{z}_\textrm{s})
 p ( \boldsymbol{z}_\textrm{s} | \boldsymbol{z}_\textrm{p})
-\sum^K p ( z_i|\boldsymbol{\theta})
-\ p ( \boldsymbol{z}_\textrm{p}|\boldsymbol{\theta}, z_i)
+\sum^K_j p ( z_i  = j |\boldsymbol{\theta})
+\ p ( \boldsymbol{z}_\textrm{p}|\boldsymbol{\theta}, z_i  = j)
 $$ {#eq:factor_joint}
-where $p( z_i|\boldsymbol{\theta}) = \phi_j(\boldsymbol{\theta})$
+where $p( z_i = j|\boldsymbol{\theta}) = \phi_j(\boldsymbol{\theta})$
 is the probability of
-a given type of process occurring, $p_j ( \boldsymbol{z}_\textrm{p}|\boldsymbol{\theta})$ is
+a given type of process occurring,
+$p_j ( \boldsymbol{z}_\textrm{p}|\boldsymbol{\theta}, z_i  = j)$ is
 the conditional probability density of a given set of parton-level four-momenta
-particles outcome for a fundamental process indexed by the latent
+particles outcome for a group of fundamental proton interaction processes
+$pp \longrightarrow X$ indexed by the latent
 variable $z_i \in \mathcal{Z}_i$,
 characterised by the latent representation
 $\boldsymbol{z}_\textrm{p} \in \mathcal{Z}_\textrm{p}$,
@@ -455,6 +457,40 @@ thus each of the factors in
 [Equation @eq:factor_joint] can be further broken down as a sequence
 of random samples, which can be used to speed up latent variable
 inference based on the execution traces.
+
+Some joint factorisations are specially useful for data analysis and simulation,
+such as making explicit the dependency between
+the differential partonic cross sections and the parton configuration
+in the collision, which allows to factor out the density of
+parton distribution latent variables $\boldsymbol{z}_\textrm{PDF}$
+(i.e. flavour and momenta
+of each interacting parton and factorisation scale $\mu_F^2$, as
+depicted in [Section @sec:factorisation]). Each mixture
+component $j$ in [Equation @eq:factor_joint], which represents a group
+of fundamental interactions between protons $pp \longrightarrow X$, can be
+expressed as the product of the probability of a given parton configuration
+$p(\boldsymbol{z}_\textrm{PDF}|\boldsymbol{\theta}_\textrm{PDF})$ 
+and a mixture over all parton configurations that can
+that produce $pp \longrightarrow X$, referred as $L$ in the following
+expression:
+$$
+p(z_i|\boldsymbol{\theta})
+\ p ( \boldsymbol{z}_\textrm{p}|\boldsymbol{\theta}, z_i) = 
+p(\boldsymbol{z}_\textrm{PDF}|\boldsymbol{\theta}_\textrm{PDF})
+\sum^L_g p(z_f = g| \boldsymbol{\theta}, z_\textrm{PDF})
+p ( \boldsymbol{z}_\textrm{p}|\boldsymbol{\theta}, z_f = g)
+$$ {#eq:pdf_factorisation}
+where $p(z_f = g| \boldsymbol{\theta}, z_\textrm{PDF})$ is the 
+relative probability of given partonic process $g$ given
+a parton configuration $\boldsymbol{z}_\textrm{PDF}$ and
+$p(\boldsymbol{z}_\textrm{p}|\boldsymbol{\theta}, z_f = g)$ is the probability
+distribution function of the parton-level outcome particles for a given
+partonic process $g$, which is proportional to the partonic differential cross
+section $d\sigma(ij \rightarrow X)$. This factorisation is basically
+a probabilistic model version of [Equation @eq:qcd_factorisation], 
+dealing with the QCD factorisation of the parton distribution functions and the
+hard process differential cross section.
+
 
 
 #### Re-Weighting of Simulated Observations
