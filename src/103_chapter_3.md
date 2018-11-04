@@ -491,10 +491,47 @@ a probabilistic model version of [Equation @eq:qcd_factorisation],
 dealing with the QCD factorisation of the parton distribution functions and the
 hard process differential cross section.
 
+Another relevant phenomena that can be explicitated in the joint distribution
+$p(\boldsymbol{x}, \boldsymbol{z} | \boldsymbol{\theta})$ is the effect of
+multiple hadron interactions in the collision, or pileup, as discussed in
+[Section @sec:pile_up]. Given that each proton-proton interaction is
+independent from each other and the possible hard interaction in the
+bunch crossing, the effect of pileup interactions can be considered by
+augmenting
+the factor representing the conditional probability
+density of the detector interaction and noise as a function of the
+hard interaction parton shower output 
+$p ( \boldsymbol{z}_\textrm{d} | \boldsymbol{z}_\textrm{s})$ as follows:
+$$
+p ( \boldsymbol{z}_\textrm{d} | \boldsymbol{z}_\textrm{s}) =
+p(\boldsymbol{z}_\textrm{d} | \boldsymbol{z}_\textrm{s},\boldsymbol{z}_\textrm{pileup})
+p(\boldsymbol{z}_\textrm{pileup} | \boldsymbol{\theta}_\textrm{pileup})
+$$
+where $\boldsymbol{z}_\textrm{pileup}$ is a latent variable representing
+the details about the pileup interactions that happened in a given collision
+(i.e. number of interactions and their corresponding particle outcome),
+and $\boldsymbol{\theta}_\textrm{pileup}$ are the bunch crossing and
+luminosity parameters that affect the pileup distribution.
+
+Further structure in the generative model can be often found, depending
+on the process being generated, the modelling assumptions and the
+latent space representation chosen. As an example,
+it is often useful to factorise out
+$p(z_f = g| \boldsymbol{\theta}, z_\textrm{PDF})
+p(z_f = g| \boldsymbol{\theta}, z_\textrm{PDF})$ the latents subspace
+that depend directly
+on the subset of parameters of interest from those that do not. Sometimes
+the conditional observations in that latent subspace can be analytically
+expressed, or their dimensionality is low enough to use 
+non-parametric density estimation techniques efficiency, which can greatly
+simplify the modelling of changes in the parameters of interest.
 
 
-#### Re-Weighting of Simulated Observations
+#### Re-Weighting of Simulated Observations {#sec:re-weighting}
 
+The mentioned factorisation and structure of the joint distribution
+$p(\boldsymbol{x}, \boldsymbol{z} | \boldsymbol{\theta})$
+greatly simplifies the simulation of realistic observations.
 
 ### Dimensionality Reduction {#sec:dim_reduction}
   
