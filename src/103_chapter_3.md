@@ -506,7 +506,7 @@ $$
 p ( \boldsymbol{z}_\textrm{d} | \boldsymbol{z}_\textrm{s}) =
 p(\boldsymbol{z}_\textrm{d} | \boldsymbol{z}_\textrm{s},\boldsymbol{z}_\textrm{pileup})
 p(\boldsymbol{z}_\textrm{pileup} | \boldsymbol{\theta}_\textrm{pileup})
-$$
+$$ {#eq:pileup_fact}
 where $\boldsymbol{z}_\textrm{pileup}$ is a latent variable representing
 the details about the pileup interactions that happened in a given collision
 (i.e. number of interactions and their corresponding particle outcome),
@@ -527,11 +527,24 @@ non-parametric density estimation techniques efficiency, which can greatly
 simplify the modelling of changes in the parameters of interest.
 
 
-#### Re-Weighting of Simulated Observations {#sec:re-weighting}
+#### Simulated Observations {#sec:re-weighting}
 
-The mentioned factorisation and structure of the joint distribution
+The mentioned mixing structure of the probability distribution function
+$p(\boldsymbol{x} | \boldsymbol{\theta})$
+greatly simplifies the simulation of realistic observations, because
+large datasets $S_j = \{\boldsymbol{x}_0,...,\boldsymbol{x}_m\}$ of
+simulated observations for each type of interaction $j$ can
+be simulated before any event selection. The expected value of any function
+of the detector readout $f(\boldsymbol{x})$ for events coming from
+such given process can be expressed as:
+$$
+\mathbb{E} \left [ f(\boldsymbol{x}) \right ] =  
+$$
+
+In addition, the factorisation of the joint distribution
 $p(\boldsymbol{x}, \boldsymbol{z} | \boldsymbol{\theta})$
-greatly simplifies the simulation of realistic observations.
+can be used to modify the weights of a given simulated observation.
+
 
 ### Dimensionality Reduction {#sec:dim_reduction}
   
