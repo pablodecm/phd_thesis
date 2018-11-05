@@ -650,7 +650,53 @@ As previously mentioned, an advantage of using simulated observations is
 that the latent variables
 $\mathcal{H}_j= \{\boldsymbol{z}_0,...,\boldsymbol{z}_m\}$ for a given simulated
 set of observations $S_j = \{\boldsymbol{x}_0,...,\boldsymbol{x}_m\}$ 
-are known.
+are known. This allows to rewrite the weight 
+$w(\boldsymbol{x}_s,\boldsymbol{z}_s))$ for
+a given event as the ratio of joint distributions:
+$$
+w(\boldsymbol{x}_s, \boldsymbol{z}_s) =
+\frac{p_R(\boldsymbol{x}_s,\boldsymbol{z}_s | \boldsymbol{\theta}_R)}{
+p_Q(\boldsymbol{x}_s,\boldsymbol{z}_s | \boldsymbol{\theta}_Q)
+} = \frac { p_R ( \boldsymbol{x} | \boldsymbol{z}_\textrm{d})
+p_R ( \boldsymbol{z}_\textrm{d} | \boldsymbol{z}_\textrm{s})
+p_R ( \boldsymbol{z}_\textrm{s} | \boldsymbol{z}_\textrm{p})
+p_R ( \boldsymbol{z}_\textrm{p}|\boldsymbol{\theta}_R) }{
+p_Q ( \boldsymbol{x} | \boldsymbol{z}_\textrm{d})
+p_Q ( \boldsymbol{z}_\textrm{d} | \boldsymbol{z}_\textrm{s})
+p_Q ( \boldsymbol{z}_\textrm{s} | \boldsymbol{z}_\textrm{p})
+p_Q ( \boldsymbol{z}_\textrm{p}|\boldsymbol{\theta}_Q)
+}
+$$ {#eq:latent_reweighting}
+where the last term is an expansion of each joint distribution
+as a product of the conditional distributions discussed in
+[Equation @eq:factor_joint]. If the difference between
+$p_R(\boldsymbol{x} | \boldsymbol{\theta}_R)$ and 
+$p_Q(\boldsymbol{x} | \boldsymbol{\theta}_Q)$ is contained
+in one of the factors of the joint distribution, which is
+often the case, most of the factors in [Equation @eq:latent_reweighting]
+and we are left with a much simpler problem of density
+ratio estimation in the latent space. This if often what is done
+to model the effect of a different pileup distribution
+or alternative parton distribution functions, further factoring
+the joint distribution to include explicit dependencies
+with respect to $\boldsymbol{z}_\textrm{pileup}$
+or $\boldsymbol{z}_\textrm{PDF}$, as done in [Equation @eq:pileup_fact]
+and [Equation @eq:pdf_factorisation] respectively. 
+The case when the difference between distributions is contained
+in a subset of the parton-level latent variables is of special relevance,
+because the event weight for a given event $w(\boldsymbol{z}_s)$ 
+can be expressed as the ratio:
+$$
+w(\boldsymbol{z}_s) = \frac{p_R ( \boldsymbol{z}_\textrm{p}|\boldsymbol{\theta}_R)}{p_Q ( \boldsymbol{z}_\textrm{p}|\boldsymbol{\theta}_Q)}
+$$ {#eq:gen_level_reweighting}
+which is referred as *generator-level re-weighting*, and in some casessometimes
+it can even be done analytically. The concept of *re-weighting* will be useful to
+model different parameter points in [Chapter @sec:higgs_pair] with
+single set of simulated observations as well as to understand how
+the effect of varying parameters can be modelled via differentiable
+transformations in [Chapter @sec:inferno].
+
+
 
 ### Dimensionality Reduction {#sec:dim_reduction}
   
