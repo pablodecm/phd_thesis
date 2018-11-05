@@ -571,12 +571,86 @@ p_j ( \boldsymbol{x}|\boldsymbol{\theta} ) d\boldsymbol{x} \approx
 \mathbb{1}_\mathcal{C}(\boldsymbol{x})
 $$ {#eq:montecarlo_obs_sel}
 which corresponds to the mean of $f(\boldsymbol{x})$ for all the
-events that passed the selection.
+events that passed the selection, noting that if all the events would
+pass the selection (i.e. $\mathbb{1}_\mathcal{C}(\boldsymbol{x}) = 1$), then
+[Equation @eq:montecarlo_obs] is recovered.
 
-In addition, the factorisation of the joint distribution
-$p(\boldsymbol{x}, \boldsymbol{z} | \boldsymbol{\theta})$
-can be used to modify the weights of a given simulated observations.
+While we have been dealing independently with the estimation of arbitrary
+expected values for a given mixture component $j$, the computation of
+expected values of any measurable function $f(\boldsymbol{x})$ under the
+total mixture distribution can be easily be expressed as function of
+expectations of mixture components:
+$$
+\mathop{\mathbb{E}}_{x \sim g ( \boldsymbol{x}|\boldsymbol{\theta} )}
+\left [ f(\boldsymbol{x}) \right ] = \int f(\boldsymbol{x})
+\sum^K_j \chi_j g_j (\boldsymbol{x}|\boldsymbol{\theta})
+ d\boldsymbol{x} \approx 
+\sum^{K}_j \chi_j
+\mathop{\mathbb{E}}_{x \sim g_j ( \boldsymbol{x}|\boldsymbol{\theta} )}
+\left [ f(\boldsymbol{x}) \right ] 
+$$ {#eq:montecarlo_obs_mix_sel}
+where $\chi_j=\phi_j\epsilon_j/\sum^K \phi_j\epsilon_j$ 
+is the mixture fraction after selection
+(see [Equation @eq:mixture_after_cut]). While the problem of estimation
+of expected values might seem unrelated to the inference problem at hand,
+in [Chapter @sec:dim_reduction] it will become evident that the construction
+of non-parametric likelihoods of summary statistics can be reduced
+to the estimation of expectation values.
 
+
+ Oftentimes, the simulated observations are generated using somehow a
+different probability distribution than the one inferred data, maybe because
+some of the generating parameters are not known precisely before hand such
+the properties of pileup distributions. Alternatively, we might want to
+use a single set of simulated
+observations to realistically model observables corresponding to a
+different value of the parameters $\boldsymbol{\theta}$ or even to
+compute observables under a different process $j$. Let us suppose that
+the samples were generated under $p_Q(\boldsymbol{x} | \boldsymbol{\theta}_Q)$
+while we want to model samples 
+under  $p_R(\boldsymbol{x} | \boldsymbol{\theta}_R)$, if both distributions
+have the same support, we can express the expectation value under the desired
+distribution as:
+$$
+\mathop{\mathbb{E}}_{x \sim p_R ( \boldsymbol{x}|\boldsymbol{\theta}_Q )}
+\left [ f(\boldsymbol{x}) \right ] = 
+\frac {\int f(\boldsymbol{x}) 
+\frac{p_R ( \boldsymbol{x}|\boldsymbol{\theta}_R )}{
+p_Q ( \boldsymbol{x}|\boldsymbol{\theta}_Q )}  
+p_Q ( \boldsymbol{x}|\boldsymbol{\theta}_Q )  d \boldsymbol{x}}{ 
+\int
+\frac{p_R ( \boldsymbol{x}|\boldsymbol{\theta}_R )}{
+p_Q ( \boldsymbol{x}|\boldsymbol{\theta}_Q )}  
+p_Q ( \boldsymbol{x}|\boldsymbol{\theta}_Q )  d \boldsymbol{x}}  
+\approx   \frac{\sum^{\boldsymbol{x}_s \in S_j }
+w(\boldsymbol{x}_s) f(\boldsymbol{x}_s)}{
+\sum^{\boldsymbol{x}_s \in S_j }
+w(\boldsymbol{x}_s)
+}
+$$ {#eq:reweight_intractable}
+which is analogous to what was done in [Equation @eq:montecarlo_obs],
+but accounting for a weight 
+$w(\boldsymbol{x}_s) = p_R ( \boldsymbol{x}_s|\boldsymbol{\theta}_R )/
+p_Q ( \boldsymbol{x}_s|\boldsymbol{\theta}_Q )$ for each simulated observation.
+This technique can be also used together with an arbitrary event selection 
+$\mathbb{1}_\mathcal{C}(\boldsymbol{x})$ simply
+by considering as event weight the product
+$w_{\mathcal{C}}(\boldsymbol{x}_s) = \mathbb{1}_\mathcal{C} (\boldsymbol{x}) w_(\boldsymbol{x}_s)$, which amounts to summing over the selected events.
+In particle physics experiments, the probability distribution functions
+$p_Q(\boldsymbol{x} | \boldsymbol{\theta}_R)$ and
+$p_Q(\boldsymbol{x} | \boldsymbol{\theta}_R)$ are most likely
+are intractable, thus 
+estimation of $w_{\mathcal{C}}(\boldsymbol{x}_s)$ has either to be carried
+out by non-parametric density estimation in a lower dimensional-space 
+of the detector readouts (discussed in [Section @sec:dim_reduction]) or by
+directly estimating the density ratio via probabilistic classification
+as will be discussed in [Chapter @sec:machine_learning].
+
+As previously mentioned, an advantage of using simulated observations is
+that the latent variables
+$\mathcal{H}_j= \{\boldsymbol{z}_0,...,\boldsymbol{z}_m\}$ for a given simulated
+set of observations $S_j = \{\boldsymbol{x}_0,...,\boldsymbol{x}_m\}$ 
+are known.
 
 ### Dimensionality Reduction {#sec:dim_reduction}
   
