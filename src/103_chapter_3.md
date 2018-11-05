@@ -699,7 +699,21 @@ transformations in [Chapter @sec:inferno].
 
 
 ### Dimensionality Reduction {#sec:dim_reduction}
-  
+
+In the previous overview of the basic statistical modelling principles
+of experimental high-energy physics, the structure and properties
+probability distribution of the full detector
+readout $\boldsymbol{x} \in \mathcal{X}$ has been considered. These
+allows to consider a single observable variable in the generative
+model that has greatly simplified the modelling narrative and
+including the effect of any arbitrary event selection
+$\mathbb{1}_\mathcal{C} (\boldsymbol{x})$. Nevertheless, the
+high-dimensionality of the readout space $\mathcal{X}$ 
+(i.e. $\mathcal{O}(10^8)$) greatly complicates its direct use
+for comparing simulated and recorded observations.
+
+
+
 #### Event Reconstruction
 
 #### Summary Statistics
