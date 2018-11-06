@@ -775,11 +775,87 @@ $\boldsymbol{z}_\textrm{s}$ or $\boldsymbol{z}_\textrm{d}$
 in some cases) that strongly depend on the detector
 readouts and provide a compressed summary of the
 information in the event
-about the parameters of interest $\boldsymbol{\theta}$.
+about the parameters of interest $\boldsymbol{\theta}$. The dimensionality
+of the output of the reconstruction procedure $y_\textrm{reco}$
+depends on the subset of variables considered
+for each physical object, but typically is $\mathcal{O}(100)$ which
+is a significant reduction from
+$\dim(\mathcal{X}) \rightarrow \mathcal{O}(10^8)$.
+
+Due to the detector noise and characteristics, the reconstruction
+function 
+$\boldsymbol{f}_\textrm{reco}(\boldsymbol{x}) :
+\mathcal{X} \longrightarrow \mathcal{Y}_\textrm{reco}$ cannot
+fully recover $\boldsymbol{z}_\textrm{p} \in \mathcal{Z}_\textrm{p}$,
+this is the case for
+neutrinos that leave
+the detector undetected, when the measured four-momenta of a
+given particle differs from the real value or the when the reconstructed
+particle does not even exist in $\boldsymbol{z}_\textrm{p}$. Simulated events
+can then be used to make calibrated probabilistic
+statements of the resulting reconstructed physical objects and their relation
+with the actual unobserved particles going through the detector. Particle
+identification (e.g. jet b-tagging) and fine-tuned momentum regressions 
+on the reconstructed objects can also be though as
+inference of latent variables, which amounts of using a additional
+the detector information around an object to measure more
+precisely its properties, the type of particle that produced the
+detector readouts clustered in the former and a more precise determination
+of the momenta in the latter.
+
+One aspect of the generative model that complicates both
+reconstruction and statistical inference has
+not been discussed yet is that efficient representations of
+the latent spaces of simulated events are not easily represented
+as a fixed-size real vector
+$\boldsymbol{z} \in \mathcal{Z} \subseteq \mathbb{R}^o$. Let us
+consider as an example the parton-level latent information
+$\boldsymbol{z}_\textrm{p}$, which amounts to a short list of particles
+produced. The total number of particles, and the number of particles
+of each type is variable, thus $\boldsymbol{z}_\textrm{p}$
+is better represented by a set (or several sets, one for each
+particle type):
+$$
+\boldsymbol{z}_\textrm{p}^\textrm{set} =
+ \{ \boldsymbol{z}_\textrm{p}^\textrm{i} \ | \
+  i \in \{{1,...,n_\textrm{p}} \} \}
+$$ {#eq:set_parton}
+where $n_\textrm{p}$ is the total number of particles produced
+at parton-level and $\boldsymbol{z}_\textrm{p}^\textrm{i}$ are the
+latent variables associated to each particle (i.e. type, four-momenta, charge,
+colour and spin). A similar set structure can be attributed
+to latent variables describing long-lived particles
+after the  parton-shower $\boldsymbol{z}_\textrm{s}$, while additional
+variables might be associated to each particle (e.g. production vertex)
+and total number and type diversity would be considerably larger.
+Because the number of particles and their type greatly
+varies between different interaction processes, thus mapping this
+structure to observable variable space is very useful. In fact,
+the result of the general event reconstruction process at CMS
+can be expressed also as a set of physical objects:
+$$
+\boldsymbol{y}_\textrm{reco}^\textrm{set} =
+ \{ \boldsymbol{y}_\textrm{reco}^\textrm{i} \ | \
+  i \in \{{1,...,n_\textrm{reco}} \} \}
+$$ {#eq:set_reco}
+where $n_\textrm{reco}$ is the total number of particles
+$\boldsymbol{y}_\textrm{reco}^\textrm{i}$ are the reconstructed variables
+for each physical object (i.e. reconstructed type, reconstructed four-momenta,
+reconstructed charge and any other reconstructed attributes). The calibration
+between the reconstructed physical objects
+$\boldsymbol{y}_\textrm{reco}^\textrm{set}$ and the actual particles produced
+in the collision $\boldsymbol{z}_\textrm{p/s}^\textrm{set}$ hence
+amounts to matching set elements (typically based
+on a $\Delta R$ distance criteria, see [Section @sec:exp_geom]) and the
+comparison of their reconstructed and generated attributes.
+ 
 
 
 
-#### Summary Statistics
+
+
+
+#### Summary Statistics {#sec:summary_statistic}
 
 #### Synthetic Likelihood {#sec:synthetic_likelihood}
 
