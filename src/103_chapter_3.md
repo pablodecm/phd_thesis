@@ -708,11 +708,55 @@ allows to consider a single observable variable in the generative
 model that has greatly simplified the modelling narrative and
 including the effect of any arbitrary event selection
 $\mathbb{1}_\mathcal{C} (\boldsymbol{x})$. Nevertheless, the
-high-dimensionality of the readout space $\mathcal{X}$ 
-(i.e. $\mathcal{O}(10^8)$) greatly complicates its direct use
-for comparing simulated and recorded observations.
+high-dimensionality of the readout space $\boldsymbol{x} \in \mathcal{X}$
+(i.e. $\mathcal{O}(10^8)$) greatly complicates its direct application
+for comparing simulated and recorded observations, and carry out
+any statistical inference procedure.
 
+Furthermore, the high-dimensionality of the raw detector readout
+space $\boldsymbol{x} \in \mathcal{X}$ also makes very difficult
+specifying an effective event selection
+$\mathbb{1}_\mathcal{C} (\boldsymbol{x})$
+that is able to reduce
+the contributions from non-interesting or not well-modelled
+background processes. This motivates the use of a dimensionality reduction
+function
+$\boldsymbol{f}(\boldsymbol{x}) : \mathcal{X} \longrightarrow \mathcal{Y}$,
+from the raw detector readout
+space $\mathcal{X} \subseteq \mathbb{R}^{d}$
+to a lower dimensional space $\mathcal{Y} \subseteq \mathbb{R}^{b}$. Here
+$\boldsymbol{f}(\boldsymbol{x})$ represents any deterministic function
+of the detector readout, but in practise it can implemented by a series
+of consecutive transformations.
 
+Let us denote as $\boldsymbol{y} \in \mathcal{Y}$ the resulting variable
+after the transformation $\boldsymbol{f}(\boldsymbol{x})$ is applied
+to the detector observed detector readout. If the funcion $\boldsymbol{f}$ is
+differentiable in and bijective (i.e. one-to-one correspondance between
+$\boldsymbol{x}$ and $\boldsymbol{y}$), the probably densisty 
+distribution function of $\boldsymbol{y}$ could be obtained as:
+$$
+p(\boldsymbol{y} | \boldsymbol{\theta}) = 
+p(\boldsymbol{x} | \boldsymbol{\theta})
+\left | \det \frac{d\boldsymbol{x} }{d\boldsymbol{y} } \right |  
+$$ {#eq:change_of_vars}
+where the last term is the Jacobian determinant of the inverse
+of $\boldsymbol{f}$. The transformations commonly used in particle
+colliders are non-bijective and sometimes non-differentiable, plus
+[Equation @eq:change_of_vars] is in any case of little use when
+$p(\boldsymbol{x} | \boldsymbol{\theta})$ is intractable.
+
+However, the expectation
+value of $\boldsymbol{y}$ as well any other deterministic
+transformation of the detector readout $\boldsymbol{x}$
+after any arbitrary event selection $\mathbb{1}_\mathcal{C} (\boldsymbol{x})$
+can be obtained using simulated samples for a given interaction
+process as shown in [Equation @eq:montecarlo_obs_sel}],
+independently of whether the transformation
+is invertible or differentiable. In the rest of this section, the main
+procedures followed to reduce the dimensionality of the observable
+space and its objectives from a statistical perspective will
+discussed.
 
 #### Event Reconstruction
 
