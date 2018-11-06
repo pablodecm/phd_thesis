@@ -1,16 +1,18 @@
 # Statistical Modelling and Inference at the LHC {#sec:statinf}
 
-\epigraph{Life is complicated, but
-  not uninteresting.}{Jerzy Neyman}
+\epigraph{Life is complicated, \\
+but not uninteresting.}{Jerzy Neyman}
 
 In this chapter, the problem of extracting quantitative
 information about the validity or properties of the different
 theoretical models (see Chapter [-@sec:theory]) can be made given the
 data experimental data acquired in a controlled setting (see Chapter
 [-@sec:experiment]) will be tackled. We will begin by formally defining
-common inference problems in experimental high-energy physics and how they
-can be tackled with classical techniques.
-Then some relevant particularities of the inference problems
+the properties and structure of the statistical models
+used to link the parameters of interest, followed by a description
+of the inference problems in inference in experimental high-energy physics
+and how they can be tackled with classical and non-classical techniques.
+Some relevant particularities of the inference problems
 at the LHC experiments will be discussed, mainly the
 generative-only nature of the simulation models and the high dimensionality
 of the data. As we will see, both issues are intimately related, the former
@@ -848,14 +850,35 @@ in the collision $\boldsymbol{z}_\textrm{p/s}^\textrm{set}$ hence
 amounts to matching set elements (typically based
 on a $\Delta R$ distance criteria, see [Section @sec:exp_geom]) and the
 comparison of their reconstructed and generated attributes.
- 
 
-
-
-
+The fact that both reconstructed and latent spaces have a variable-size
+set structure, greatly complicates the application of inference and
+learning techniques directly based on
+$\boldsymbol{y}_\textrm{reco}^\textrm{set}$, because they often
+can only deal with a fixed-size vector of real numbers $\mathbb{R}^b$.
+Similarly to what is done for event selection, often the elements
+in the set of reconstructed objects in an event are reduced
+by imposing a given condition based on their attributes (e.g. type,
+isolation or momenta). There exist naive ways to embed a set
+such as $\boldsymbol{y}_\textrm{reco}^\textrm{set}$ as a fixed-size
+vector $\mathbb{R}^b$, such as taking the relevant attributes of
+the first $n_\textrm{sel}$ objects according to an specific
+ordering convention after a given *object selection*
+and possibly padding with a zeros or alternative number the elements
+that do not exist for a given event. Some of the newer machine
+learning techniques that will be presented in [Chapter @sec:machine_learning]
+can deal with variable-size input, such as sequences, sets or graphs inputs,
+by *embedding* them in vector representations internally,
+which provides new
+ways to deal with the mentioned representational issue.
 
 
 #### Summary Statistics {#sec:summary_statistic}
+
+The selected subset of the reconstructed objects 
+$\boldsymbol{y}_\textrm{sel}^\textrm{set}$ or a fixed-size
+representation of them is often still too high-dimensional
+to be considered directly for inference.
 
 #### Synthetic Likelihood {#sec:synthetic_likelihood}
 
