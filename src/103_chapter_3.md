@@ -760,6 +760,25 @@ discussed.
 
 #### Event Reconstruction
 
+The methods of event reconstruction, 
+as described in [Section @sec:event_reco],
+provide a very efficient way to transform the high-dimensional
+detector readout to a lower-dimensional space that can more easily
+interpreted from a physical standpoint. In fact, reconstruction
+can be viewed as a complex procedural technique of inference
+on a subset of the latent variables given the detector
+readout $\boldsymbol{x}$ of an event. These methods attempt
+to walk back the generative chain described in
+[Equation @eq:factor_joint] to recover the subset of the
+parton-level $\boldsymbol{z}_\textrm{p}$ (and
+$\boldsymbol{z}_\textrm{s}$ or $\boldsymbol{z}_\textrm{d}$ 
+in some cases) that strongly depend on the detector
+readouts and provide a compressed summary of the
+information in the event
+about the parameters of interest $\boldsymbol{\theta}$.
+
+
+
 #### Summary Statistics
 
 #### Synthetic Likelihood {#sec:synthetic_likelihood}
