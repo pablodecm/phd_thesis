@@ -1031,10 +1031,25 @@ $n^{\mathcal{C}_i}_j(\boldsymbol{\theta}) =\mathcal{L} \ \sigma_j \
 [Equation @eq:poisson_multichannel] can be used 
 to construct a likelihood to carry out inference on the
 parameters $\boldsymbol{\theta}$ based on the observed value
-of the summary statistic $\boldsymbol{n}_T^\textrm{obs}$.
-
+of the sample summary statistic $\boldsymbol{n}_T^\textrm{obs}$.
 
 #### Sufficient Statistics
+
+The selection count vector $\boldsymbol{n}_T^\textrm{obs}$, which has not been
+specified yet, could be also written
+as sum over a function 
+$\boldsymbol{n}_T(\boldsymbol{x}) : \mathcal{X} \subseteq \mathbb{R}^{d} \longrightarrow \mathcal{Y}
+\subseteq \{0,1\}^b \subset \mathbb{R}^{b}$
+applied for each event
+in $D = \{\boldsymbol{x}_0,...,\boldsymbol{x}_n\}$ as follows:
+$$
+\boldsymbol{n}_T^\textrm{obs}(D) = \sum^{\boldsymbol{x}_i \in D} \boldsymbol{n}_T(\boldsymbol{x})
+$$ {#eq:sum_count_vector}
+where $\boldsymbol{n}_T^\textrm{obs}(D)$ could be described as a summary
+statistic of the whole collection of observations while
+$\boldsymbol{n}_T(\boldsymbol{x}_i)$ summarises a single event
+$\boldsymbol{x}_i$. 
+
 
 
 #### Synthetic Likelihood {#sec:synthetic_likelihood}
