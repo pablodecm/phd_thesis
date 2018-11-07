@@ -241,7 +241,7 @@ $$\mathbb{1}_\mathcal{C}(\boldsymbol{x}) =
   \begin{cases}
     1 \ \textrm{if} \ \mathbf{x} \in C \\
     0 \ \textrm{if} \ \mathbf{x} \notin C \\
-  \end{cases}$$ {#eq:indicator}
+\end{cases}$$ {#eq:indicator}
 
 where the specific definition of of such function depends
 on the definition of the subset $\mathcal{C}$, e.g. a simple cut on
@@ -917,8 +917,42 @@ $$ {#eq:after_sel_prod}
 where the dependency between the distribution function after the event selection
 $g ( \boldsymbol{x}_i|\boldsymbol{\theta} )$ and that before 
 $p ( \boldsymbol{x}_i|\boldsymbol{\theta} )$ was already described in
-[Equation @eq:mixture_after_cut].  
-
+[Equation @eq:mixture_after_cut]. If we only focus on the probability
+distribution of the events in $D_\mathcal{C}$, we would be neglecting
+an important quantity that can also provide information about the
+parameters of interest: the total number of events that pass the event
+selection $n_\mathcal{C}$. Because this quantity depends on the set
+of recorded readouts D, where each individual readout $\boldsymbol{x}_i$
+is assumed independent and identically distributed variable, the total
+number of events selected $n_C$ after a deterministic selection
+can be $\mathbb{1}_\mathcal{C} (\boldsymbol{x})$ can be modelled using
+a binomial distribution:
+$$
+p( n_\mathcal{C} | n, \boldsymbol{\theta}) = \textrm{Binomial}(n, \epsilon)
+\approx \textrm{Poisson}(n\epsilon)
+$$ {#eq:binomial_selection}
+where the dependence with the parameters is contained in the total
+efficiency 
+$\epsilon = \int \mathbb{1}_\mathcal{C}(\boldsymbol{x}) p
+(\boldsymbol{x}|\boldsymbol{\theta})$ and the Poisson approximation is justified
+because the number of trials $n$ is sufficiently bigger (i.e. 40 million
+bunch crossings per second at the CMS detector at the LHC) and the total
+selection efficiencies $\epsilon \leq 0.000025$ already at the trigger level,
+as discussed in [Section @sec:trigger]. The expected value of $n_C$ coincides
+with the Poisson mean $n\epsilon$, and can be more intuitively linked with
+the parameters of interest $\theta$ by making explicit the contributions from
+the different mixture processes:
+$$
+\mathop{\mathbb{E}}_{D \sim p ( D |\boldsymbol{\theta} )}
+\left [ n_\mathcal{C} \right ] = n \sum^{K}_j \phi_j 
+\mathop{\mathbb{E}}_{x \sim p_j ( \boldsymbol{x}|\boldsymbol{\theta} )}
+\left [\mathbb{1}_\mathcal{C} (\boldsymbol{x}) \right ] =
+n \sum^{K}_j \phi_j \epsilon_j
+$$ {#eq:exp_selected}
+where the efficiency for each process
+$\epsilon= \int \mathbb{1}_\mathcal{C}(\boldsymbol{x}) p_j
+(\boldsymbol{x}|\boldsymbol{\theta})$ can be estimated using simulated
+observations as shown in [Equation @eq:montecarlo_eff].
 
 #### Synthetic Likelihood {#sec:synthetic_likelihood}
 
