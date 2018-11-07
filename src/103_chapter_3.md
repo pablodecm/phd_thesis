@@ -982,8 +982,8 @@ processes $\mathbb{1}_\mathcal{C} (\boldsymbol{x})$ can be also expressed as:
 $$
 \mathop{\mathbb{E}}_{D \sim p ( D |\boldsymbol{\theta} )}
 \left [ n_\mathcal{C} \right ] =
-\sum^{K}_j \frac{\mathcal{L} \sigma_j}{n }\epsilon_j =
-\sum^{K}_j \ \mathcal{L} \ \sigma_j \  \epsilon_j
+n \sum^{K}_j \frac{\mathcal{L} \sigma_j}{n }\epsilon_j =
+\mathcal{L} \sum^{K}_j  \ \sigma_j \  \epsilon_j
 $$ {#eq:exp_cross_section}
 where $n_j=\mathcal{L} \ \sigma_j \  \epsilon_j$ is the expected number
 of events coming a given process $j$, that can be estimated with theoretical
@@ -999,14 +999,39 @@ is very effective when the parameter of interest is the cross section
 of a single process $\sigma_S$ and rest of background processes are
 well-modelled
 by theoretical predictions and simulated observation. In that case, if
-all parameters are known, a *cut-and-count* sample-based likelihood can be
-built based on [Equation @eq:binomial_selection], such as:
+all parameters but $\sigma_S$ are known, a *cut-and-count* sample-based
+likelihood can be built based on [Equation @eq:binomial_selection] the
+following probability function:
 $$
-\mathcal{L}( \sigma_S|n_\mathcal{C}^\textrm{obs}) =
-\frac{(n_\mathcal{C}^\textrm{exp})^{n_\mathcal{C}^\textrm{obs}} 
-e^{-n_\mathcal{C}^\textrm{exp}} }{n_\mathcal{C}^\textrm{obs}!}
-$$ {#eq:poisson_likelihood}
+p ( n_\mathcal{C} | \sigma_S) = \textrm{Poisson} 
+\left (\sigma_s\epsilon_s + \sum^{j \in B} \sigma_j\epsilon_j \right)
+$$ {#eq:poisson_simple}
+which can be used to carry out statistical inference about $\sigma_S$
+given an observed number of events that pass the event selection
+$n_\mathcal{C}^\textrm{obs}$ using classical techniques.
 
+The previous concept can be applied to several disjoint
+subsets of $\mathcal{X}$ simultaneously
+$T=\{\mathcal{C}_0,...,\mathcal{C}_b\}$, each characterised by an
+indicator function $\mathbb{1}_{\mathcal{C}_t} (\boldsymbol{x})$ defining
+an arbitrary event selection as long as their intersection is null.
+The probability function for the variable
+$\boldsymbol{n}_T = \{n_{\mathcal{C}_0},...,n_{\mathcal{C}_b}\}$, given
+that each $n_{\mathcal{C}_i}$ is independent, can be obtained as:
+$$
+p ( \boldsymbol{n}_T | \boldsymbol{\theta}) = \prod^{\mathcal{C}_i \in T} 
+\textrm{Poisson} \left (\sum^{j \in K} n^{\mathcal{C}_i}_j(\boldsymbol{\theta}) \right )
+$$ {#eq:poisson_multichannel}
+where $n^{\mathcal{C}_i}_j(\boldsymbol{\theta})$ is the expected number of
+observed events coming from the process $j$ after the selection $\mathcal{C}_i$.
+As long as a parametrisation of $n^{\mathcal{C}_i}_j(\boldsymbol{\theta})$ exist,
+which can be often estimated as
+$n^{\mathcal{C}_i}_j(\boldsymbol{\theta}) =\mathcal{L} \ \sigma_j \ 
+\epsilon^{\mathcal{C}_i}_j(\boldsymbol{\theta})$,
+[Equation @eq:poisson_multichannel] can be used 
+to construct a likelihood to carry out inference on the
+parameters $\boldsymbol{\theta}$ based on the observed value
+of the summary statistic $\boldsymbol{n}_T^\textrm{obs}$.
 
 
 #### Sufficient Statistics
