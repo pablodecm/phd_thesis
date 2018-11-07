@@ -23,7 +23,7 @@ dimensional summary statistics.
 
 ## Statistical Modelling
 
-### Overview
+### Overview {#sec:model_overview}
 
 Let us suppose that we record a collection of raw detector readouts
 $D = \{\boldsymbol{x}_0,...,\boldsymbol{x}_n\}$ for a total $n$ bunch crossings
@@ -733,9 +733,9 @@ of consecutive transformations.
 
 Let us denote as $\boldsymbol{y} \in \mathcal{Y}$ the resulting variable
 after the transformation $\boldsymbol{f}(\boldsymbol{x})$ is applied
-to the detector observed detector readout. If the funcion $\boldsymbol{f}$ is
-differentiable in and bijective (i.e. one-to-one correspondance between
-$\boldsymbol{x}$ and $\boldsymbol{y}$), the probably densisty 
+to the detector observed detector readout. If the function $\boldsymbol{f}$ is
+differentiable in and bijective (i.e. one-to-one correspondence between
+$\boldsymbol{x}$ and $\boldsymbol{y}$), the probably density 
 distribution function of $\boldsymbol{y}$ could be obtained as:
 $$
 p(\boldsymbol{y} | \boldsymbol{\theta}) = 
@@ -778,7 +778,7 @@ in some cases) that strongly depend on the detector
 readouts and provide a compressed summary of the
 information in the event
 about the parameters of interest $\boldsymbol{\theta}$. The dimensionality
-of the output of the reconstruction procedure $y_\textrm{reco}$
+of the output of the reconstruction procedure $\boldsymbol{y}_\textrm{reco}$
 depends on the subset of variables considered
 for each physical object, but typically is $\mathcal{O}(100)$ which
 is a significant reduction from
@@ -875,10 +875,50 @@ ways to deal with the mentioned representational issue.
 
 #### Summary Statistics {#sec:summary_statistic}
 
-The selected subset of the reconstructed objects 
-$\boldsymbol{y}_\textrm{sel}^\textrm{set}$ or a fixed-size
-representation of them is often still too high-dimensional
-to be considered directly for inference.
+The attributes of the subset of reconstructed objects selected in an event
+for a given analysis,
+often as a fixed-size vector
+$\boldsymbol{y}_\textrm{sel} \in \mathcal{Z}_\textrm{sel} \subseteq \mathbb{R}^{b}$
+representation of them,
+are still often too high-dimensional
+to be considered directly for statistical inference. The effectiveness
+of the likelihood-free techniques that will be presented later in this chapter
+strongly depend on the dimensionality of the observable space considered.
+Hence, it is desirable to further combine the reconstructed outputs in
+a lower dimensional summaries, either of each single observation or a set of
+multiple observations.
+
+Insofar we have been dealing with the problem of how a single event
+is distributed $p ( \boldsymbol{x}|\boldsymbol{\theta})$,
+however in practise a collection
+$D = \{\boldsymbol{x}_0,...,\boldsymbol{x}_n\}$ of events
+are considered for inference. Let us first the set $D$,
+before any trigger or event selection, similarly that what was done
+at the beginning of [Section @sec:model_overview].
+Because of the independence between events, the
+probability density of a given set $D$ can be expressed as the product
+of individual probability densities for each event $\boldsymbol{x}_i$:
+$$
+p(D | \boldsymbol{\theta}) = \prod^{\boldsymbol{x}_i \in D}
+p ( \boldsymbol{x}_i|\boldsymbol{\theta} )
+$$ {#eq:before_sel_prod}
+where $p ( \boldsymbol{x}_i|\boldsymbol{\theta} )$ can only be modelled
+realistically
+by forward simulation, and
+has the mixture model structure and latent factorisation discussed before.
+After an arbitrary event selection $\mathbb{1}_\mathcal{C} (\boldsymbol{x})$,
+only a subset of events 
+$D_\mathcal{C} = \{\boldsymbol{x}_0,...,\boldsymbol{x}_{n_\mathcal{C}}\} \subseteq D$,
+which are also independent, so their probability density can be expressed:
+$$
+g(D_\mathcal{C} | \boldsymbol{\theta}) = \prod^{\boldsymbol{x}_i \in D_\mathcal{C}}
+g ( \boldsymbol{x}_i|\boldsymbol{\theta} )
+$$ {#eq:after_sel_prod}
+where the dependency between the distribution function after the event selection
+$g ( \boldsymbol{x}_i|\boldsymbol{\theta} )$ and that before 
+$p ( \boldsymbol{x}_i|\boldsymbol{\theta} )$ was already described in
+[Equation @eq:mixture_after_cut].  
+
 
 #### Synthetic Likelihood {#sec:synthetic_likelihood}
 
