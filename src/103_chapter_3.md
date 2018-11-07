@@ -147,7 +147,8 @@ The hard interaction category can itself be expressed as a mixture
 of all physical interactions, that can produce a hard scattering, so the
 probability $\phi_{\textrm{hard}}$ can be expresses as the following
 sum:
-$$ \phi_{\textrm{hard}} = \phi_0 + \dots + \phi_n = \sum_{k \in H} \phi_k $$
+$$ \phi_{\textrm{hard}} = \phi_0 + \dots + \phi_n = \sum_{k \in H} \phi_k
+$$ {#eq:hard_prob}
 where the $H$ represents a given set of independent contributions $k$, each
 characterised by a distribution $p_j(\boldsymbol{x}|\boldsymbol{\theta})$,
 from all different processes that produce hard scatterings. Such set is not
@@ -885,8 +886,9 @@ to be considered directly for statistical inference. The effectiveness
 of the likelihood-free techniques that will be presented later in this chapter
 strongly depend on the dimensionality of the observable space considered.
 Hence, it is desirable to further combine the reconstructed outputs in
-a lower dimensional summaries, either of each single observation or a set of
-multiple observations.
+a lower dimensional *summary statistics*, either of each single observation
+or a set of multiple observations, so simpler statistical models that
+related the parameters of interest with the observations can be constructed.
 
 Insofar we have been dealing with the problem of how a single event
 is distributed $p ( \boldsymbol{x}|\boldsymbol{\theta})$,
@@ -938,7 +940,10 @@ $\epsilon = \int \mathbb{1}_\mathcal{C}(\boldsymbol{x}) p
 because the number of trials $n$ is sufficiently bigger (i.e. 40 million
 bunch crossings per second at the CMS detector at the LHC) and the total
 selection efficiencies $\epsilon \leq 0.000025$ already at the trigger level,
-as discussed in [Section @sec:trigger]. The expected value of $n_C$ coincides
+as discussed in [Section @sec:trigger]. Such type of stochastic process is
+also referred in the literature as multi-dimensional
+homogenous Poisson point process [@Gardiner:732221].
+The expected value of $n_C$ coincides
 with the Poisson mean $n\epsilon$, and can be more intuitively linked with
 the parameters of interest $\theta$ by making explicit the contributions from
 the different mixture processes:
@@ -952,7 +957,60 @@ $$ {#eq:exp_selected}
 where the efficiency for each process
 $\epsilon= \int \mathbb{1}_\mathcal{C}(\boldsymbol{x}) p_j
 (\boldsymbol{x}|\boldsymbol{\theta})$ can be estimated using simulated
-observations as shown in [Equation @eq:montecarlo_eff].
+observations as shown in [Equation @eq:montecarlo_eff]. In principle,
+all possible processes $j$ that could occurr have to be considered, i.e.
+the case where readout of bunch crossings where no hard collision occurred
+as well as the inclusive contribution of each possible hard process,
+as described in [Equation @eq:hard_prob]. However, if the product the
+expected probability of a given process occurring  $\phi_j$ and the
+event selection efficiency $\epsilon_j$ is low enough
+relative to the total efficiency $\epsilon=\sum^{K}_j \phi_j \epsilon_j$,
+the effect of those mixture components can be safely neglected. 
+
+This is
+often the case for events where no hard collision occurred after some
+basic event selection, that is $\epsilon_\textrm{not-hard} \approx 0$ thus
+can be neglected.
+For the subset of bunch crossing cases where hard interactions occurr,
+the probability of an given type of interaction before any event selection
+might expressed as the product of its cross section $\sigma_j$ and the total
+integrated luminosity during the data taking period $\mathcal{L}$ 
+divided by the total number of bunch crossings, thus
+the expected value for number of observations $n_\mathcal{C}$ after
+an event selection that reduces enough the contribution of non-hard
+processes $\mathbb{1}_\mathcal{C} (\boldsymbol{x})$ can be also expressed as:
+$$
+\mathop{\mathbb{E}}_{D \sim p ( D |\boldsymbol{\theta} )}
+\left [ n_\mathcal{C} \right ] =
+\sum^{K}_j \frac{\mathcal{L} \sigma_j}{n }\epsilon_j =
+\sum^{K}_j \ \mathcal{L} \ \sigma_j \  \epsilon_j
+$$ {#eq:exp_cross_section}
+where $n_j=\mathcal{L} \ \sigma_j \  \epsilon_j$ is the expected number
+of events coming a given process $j$, that can be estimated with theoretical
+input regarding $\sigma_j$, simulated observations to estimate $\epsilon_j$
+and an experimental measurement of the luminosity $\mathcal{L}$.
+
+The number of observations $n_\mathcal{C}$ that pass a given event selection
+$\mathbb{1}_\mathcal{C} (\boldsymbol{x})$, which normally includes trigger
+and some additional analysis dependent selection, is the quantity that serves
+as the basis as the simplest statistical model used in particle physics
+to link theoretical parameters and observations. This type of summary statistic
+is very effective when the parameter of interest is the cross section
+of a single process $\sigma_S$ and rest of background processes are
+well-modelled
+by theoretical predictions and simulated observation. In that case, if
+all parameters are known, a *cut-and-count* sample-based likelihood can be
+built based on [Equation @eq:binomial_selection], such as:
+$$
+\mathcal{L}( \sigma_S|n_\mathcal{C}^\textrm{obs}) =
+\frac{(n_\mathcal{C}^\textrm{exp})^{n_\mathcal{C}^\textrm{obs}} 
+e^{-n_\mathcal{C}^\textrm{exp}} }{n_\mathcal{C}^\textrm{obs}!}
+$$ {#eq:poisson_likelihood}
+
+
+
+#### Sufficient Statistics
+
 
 #### Synthetic Likelihood {#sec:synthetic_likelihood}
 
