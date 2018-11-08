@@ -1261,9 +1261,13 @@ effect is known and can be approximated. For cases where
 simulation does not provided the desired level of accuracy,
 the contribution from some of the mixture components can 
 often by estimated from data directly, using what is referred to
-as data-driven estimation techniques.
+as *data-driven estimation* techniques.
 
 #### Nuisance Parameters
+
+The general definition of nuisance parameters in an statistical model, refers
+to all the parameters of the statistical model that are not of intermediate
+interest but have to be accounted in the inference procedure.
 
 #### Data-Driven Estimation
 
