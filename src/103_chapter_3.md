@@ -23,6 +23,22 @@ dimensional summary statistics.
 
 ## Statistical Modelling
 
+An essential element for carrying out statistical inference is the available of
+an statistical model. In this section, the main characteristics of the statistical
+models used in particle collider analysis will be formally developed from first
+principles. These methodology allows a
+mathematical take on their structure and factorisation, that
+will be useful to establish a formal link between the techniques in
+next chapters and the simulation-based
+generative models that are often used to describe the data. Additionally,
+it is useful to exemplify the role and importance of event selection, even
+reconstruction and dimensionality reduction in the larger statistical
+framework of an LHC analysis, as well as to illustrate the
+main ways to construct synthetic likelihoods
+that efficiently
+connect summaries of the detector observation with the parameters of interest.
+
+
 ### Overview {#sec:model_overview}
 
 Let us suppose that we record a collection of raw detector readouts
