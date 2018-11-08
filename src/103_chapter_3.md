@@ -1048,9 +1048,44 @@ $$ {#eq:sum_count_vector}
 where $\boldsymbol{n}_T^\textrm{obs}(D)$ could be described as a summary
 statistic of the whole collection of observations while
 $\boldsymbol{n}_T(\boldsymbol{x}_i)$ summarises a single event
-$\boldsymbol{x}_i$. 
+$\boldsymbol{x}_i$.
 
+There are infinite ways to choose a lower-dimensional
+summary statistic of the detector readout
+$\boldsymbol{s}((\boldsymbol{x}) : \mathcal{X} \subseteq \mathbb{R}^{d}
+\longrightarrow \mathcal{Y}\subseteq \mathbb{R}^{b}$, including statistics of the
+type $\boldsymbol{n}_T(\boldsymbol{x})$ being a reduced (but still
+infinite) subset of the possible function. Independently on 
+the likelihood-free inference methods considered
+(check [Section @sec:stat_inf]), the need of a
+low-dimensional summary statistic is a direct consequence of
+the *curse of dimensionality*, because the number of simulated observations
+required to realistically model the probability density function
+or compute useful distance measures rapidly increases with the number of
+dimensions.
 
+In general, the selection of a summary statistic
+$\boldsymbol{s}(\boldsymbol{x})$ is far from trivial, and naive choices
+can lead to great losses of useful information about the parameters of 
+interest $\boldsymbol{\theta}$. Classical statistics results characterising
+the properties of the optimal summary statistics for a given
+statistical model and its parameters exist [@hogg1995introduction],
+commonly referred as
+a *sufficient summary statistic*, which contains all the information
+in the observed sample to compute any estimate on the model parameters.
+Sufficient statistics can be formally characterised using the
+Fisher-Neyman factorisation criterion, which states that a summary
+statistic $\boldsymbol{s}(\boldsymbol{x})$ is sufficient if and only if the probability
+distribution function of $\boldsymbol{x}$ can be factorised as follows:
+$$
+p(\boldsymbol{x} | \boldsymbol{\theta}) = 
+q(\boldsymbol{x})
+r(\boldsymbol{s}(\boldsymbol{x}) | \boldsymbol{\theta})
+$$ {#eq:sufficient_single}
+where $q(\boldsymbol{x})$ is a non-negative function that do not depend
+on the parameters and $r(\boldsymbol{x})$ is also a non-negative
+function for which the dependency on the parameters $\boldsymbol{\theta}$
+is a function of the summary statistic $\boldsymbol{s}(\boldsymbol{x})$.
 
 #### Synthetic Likelihood {#sec:synthetic_likelihood}
 
@@ -1061,12 +1096,13 @@ $\boldsymbol{x}_i$.
 #### Background Estimation
 
 
-## Statistical Inference
+## Statistical Inference {#sec:stat_inf}
+
+### Likelihood-Free Inference
 
 ### Parameter Estimation
 
 ### Hypothesis Testing
 
-### Likelihood-Free Inference
 
 
