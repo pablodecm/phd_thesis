@@ -1075,7 +1075,8 @@ a *sufficient summary statistic*, which contains all the information
 in the observed sample to compute any estimate on the model parameters.
 Sufficient statistics can be formally characterised using the
 Fisher-Neyman factorisation criterion, which states that a summary
-statistic $\boldsymbol{s}(\boldsymbol{x})$ is sufficient if and only if the probability
+statistic $\boldsymbol{s}(\boldsymbol{x})$ is sufficient if and only if
+the probability
 distribution function of $\boldsymbol{x}$ can be factorised as follows:
 $$
 p(\boldsymbol{x} | \boldsymbol{\theta}) = 
@@ -1085,7 +1086,27 @@ $$ {#eq:sufficient_single}
 where $q(\boldsymbol{x})$ is a non-negative function that do not depend
 on the parameters and $r(\boldsymbol{x})$ is also a non-negative
 function for which the dependency on the parameters $\boldsymbol{\theta}$
-is a function of the summary statistic $\boldsymbol{s}(\boldsymbol{x})$.
+is a function of the summary statistic $\boldsymbol{s}(\boldsymbol{x})$. The
+definition of sufficient can also be applied to a collection of observations
+$D = \{\boldsymbol{x}_0,...,\boldsymbol{x}_n\}$, in fact if we assume
+they are independent and identically distributed, and
+$\boldsymbol{s}(\boldsymbol{x})$ is sufficient for each observation
+$\boldsymbol{x}_i$,
+we could rewrite [Equation @eq:before_sel_prod] as:
+$$
+p ( D |\boldsymbol{\theta}) =
+\prod^{\boldsymbol{x}_i \in D} q(\boldsymbol{x}) 
+\prod^{\boldsymbol{x}_i \in D}
+r(\boldsymbol{s}(\boldsymbol{x}_i) | \boldsymbol{\theta}) =
+q(D) r(\boldsymbol{s}(D)| \boldsymbol{\theta})
+$$
+where the set of sufficient summary statistic for each observation
+is a summary sufficient summary statistic for the whole dataset
+$\boldsymbol{s}(D) = \{ \ \boldsymbol{s}(\boldsymbol{x}_i) \ | \ \forall \boldsymbol{x}_i  \in D \}$
+and the dependency of on the summary statistic is contained as the product
+of independent factors for each observation.
+
+
 
 #### Synthetic Likelihood {#sec:synthetic_likelihood}
 
