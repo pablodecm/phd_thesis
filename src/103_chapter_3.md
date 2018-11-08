@@ -1224,13 +1224,15 @@ $$
 $$ {#eq:relative_var_integral}
 because the integral of the product of functions is not product of integrals,
 unless is the volume of the selected region $C$
-is infinitesimally small which correspond to null efficiencies anyway.
-
+is infinitesimally small which correspond to null efficiencies anyway. This
+effect also applies if additive variations are considered and can be more
+notable when more parameters are considered.
 
 The previously mentioned modelling issue, even though to our knowledge has not been
 made explicit in the literature before, affects multitude of analyses at the LHC
 that use  *template interpolation*, as implemented in
-the standard statistical libraries used in particle physics experiments.
+the standard statistical libraries used in particle physics experiments
+[@Conway:2011in;@Cranmer:2012sba].
 A possible solution would include doing a multi-dimensional interpolation,
 but it would require evaluating at least all 3-point combinatorial variations
 of the parameters, amounting to a minimum of $3^p$ evaluations of
@@ -1246,9 +1248,24 @@ where the previous assumption fails to describe the data realistically.
 
 ### Known Unknowns {#sec:known_unknowns}
 
+So far we have assumed that the simulated observations can model the data
+and the only parameters $\boldsymbol{\theta}$ that affect the
+generative-model are those we are interested in carrying out inference on.
+However, simulated observation effectively depend on the
+modelling of the physical processes occurring in the proton-proton
+collisions and the detector, of which often we have an approximate
+description. Those mis-modelling effects have to be accounted in the
+inference procedure to obtain unbiased estimates, and are accounted
+by additional *nuisance parameters* in the statistical model when the
+effect is known and can be approximated. For cases where
+simulation does not provided the desired level of accuracy,
+the contribution from some of the mixture components can 
+often by estimated from data directly, using what is referred to
+as data-driven estimation techniques.
+
 #### Nuisance Parameters
 
-#### Background Estimation
+#### Data-Driven Estimation
 
 
 ## Statistical Inference {#sec:stat_inf}
