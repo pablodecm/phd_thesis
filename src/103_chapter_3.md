@@ -1035,7 +1035,7 @@ of the sample summary statistic $\boldsymbol{n}_T^\textrm{obs}$.
 
 #### Sufficient Statistics
 
-The selection count vector $\boldsymbol{n}_T^\textrm{obs}$, which has not been
+The selection count vector $\boldsymbol{n}_T^\textrm{obs}(D)$, which has not been
 specified yet, could be also written
 as sum over a function 
 $\boldsymbol{n}_T(\boldsymbol{x}) : \mathcal{X} \subseteq \mathbb{R}^{d} \longrightarrow \mathcal{Y}
@@ -1052,7 +1052,7 @@ $\boldsymbol{x}_i$.
 
 There are infinite ways to choose a lower-dimensional
 summary statistic of the detector readout
-$\boldsymbol{s}((\boldsymbol{x}) : \mathcal{X} \subseteq \mathbb{R}^{d}
+$\boldsymbol{s}(\boldsymbol{x}) : \mathcal{X} \subseteq \mathbb{R}^{d}
 \longrightarrow \mathcal{Y}\subseteq \mathbb{R}^{b}$, including statistics of the
 type $\boldsymbol{n}_T(\boldsymbol{x})$ being a reduced (but still
 infinite) subset of the possible function. Independently on 
@@ -1106,9 +1106,127 @@ $\boldsymbol{s}(D) = \{ \ \boldsymbol{s}(\boldsymbol{x}_i) \ | \ \forall \boldsy
 and the dependency of on the summary statistic is contained as the product
 of independent factors for each observation.
 
+Because $p(\boldsymbol{x} | \boldsymbol{\theta})$ is not available is closed form
+in particle collider experiments, the general task of finding a sufficient
+summary statistic by analytic means cannot be tackled directly. However, for
+finite mixture models where the only model parameters are a function of
+the mixture coefficients $\phi_j$, probabilistic classification can
+be be used to obtain (approximate) sufficient summary statistics as will
+be discussed in [Chapter @sec:machine_learning]. When the parameters
+of interest or additional unknown parameters affect the mixture components
+$p_j(\boldsymbol{x} | \boldsymbol{\theta})$, the construction of
+sufficient summary statistics cannot be tackled directly, thus information
+is about the parameters $\boldsymbol{\theta}$  is lost in the dimensionality
+reduction step. An automated way to obtain powerful summary statistics
+in those cases using machine learning techniques will be presented in
+[Chapter @sec:inferno].
 
 
 #### Synthetic Likelihood {#sec:synthetic_likelihood}
+
+The advantage of using lower-dimensional summary statistic
+$\boldsymbol{s}(D) : \mathcal{X}_D \subseteq \mathbb{R}^{d\times n}
+\longrightarrow \mathcal{Y}_D \subseteq \mathbb{R}^{b\times n}$ of the
+detector readout collected by the experiment is that often the
+generative-model of $p(\boldsymbol{x} | \boldsymbol{\theta})$ can
+be used to build synthetic likelihoods of $s(D)$ that 
+link the observations with the model parameters, so classical inference
+algorithms can be used. 
+
+For summary statistics of the type $\boldsymbol{n}_T^\textrm{obs}(D) :
+\mathcal{X}_D \subseteq \mathbb{R}^{d \times n } \longrightarrow \mathcal{Y}_D \subseteq \{0,1\}^{b}$
+the likelihood can be expressed as a product of independent Poisson
+count likelihoods as shown in [Equation @eq:poisson_multichannel]. While such
+likelihood can be evaluated for the observed data $D$ and specific parameters
+$\boldsymbol{\theta}_R$, event in the case that $\boldsymbol{\theta}$
+modify the distribution of the mixture components
+$p_j(\boldsymbol{x} | \boldsymbol{\theta})$, by forward approximating 
+$n^{\mathcal{C}_i}_j(\boldsymbol{\theta}_R)$ (or alternatively
+$\epsilon^{\mathcal{C}_i}_j(\boldsymbol{\theta}_R)$) using simulated observations
+for each process $j$ generated for $\boldsymbol{\theta}_R$,
+this process would rapidly become very computationally demanding if it has
+be repeated for each likelihood evaluation during the whole inference process.
+Re-weighting procedures such as those described in
+[Equation @eq:gen_level_reweighting] can often be used to re-use already simulated
+events using $\boldsymbol{\theta}_R$ to model events corresponding
+to different values of the parameters $\boldsymbol{\theta}_Q$.
+
+A more economic approach, commonly used in LHC analysis that use binned
+Poisson likelihoods based on the formalism introduced in
+[Equation @eq:poisson_multichannel], is to parametrise the effect of varying
+parameters by interpolating between the values of the
+$\epsilon^{\mathcal{C}_i}_j(\boldsymbol{\theta}_k)$ (or directly
+$n^{\mathcal{C}_i}_j(\boldsymbol{\theta}_R)$) for different values
+of $k$. Such parametrisation allows the analytical approximation
+of the likelihood originated by [Equation @eq:poisson_multichannel],
+and simplifies the computation of gradients with respect to
+the parameters. This is particularly relevant to model the effect of
+*nuisance parameters*, parameters which are uncertain in out model and have
+to be accounted in the inference procedure, that will be discussed
+in [Section @sec:known_unknowns]. Different interpolation conventions
+exist [@Cranmer:2015nia], but they are normally based on the marginal
+one-dimensional interpolation between the effect of a single parameter $\theta_i \in
+\boldsymbol{\theta}$ at three values (the nominal parameter values
+and the up/down variations), the total effect
+$\epsilon^{\mathcal{C}_i}_j(\boldsymbol{\theta}_k)$ accounted by adding
+absolute or multiplying marginal effects. 
+
+Even if the marginal
+interpolation when a single parameter of interest varies
+is accurate, which is not ensured by the interpolation, and the effect
+of each parameter is factorised in $p_j(\boldsymbol{x} | \boldsymbol{\theta})$,
+the integral definition of $\epsilon^{\mathcal{C}_i}_j (\boldsymbol{\theta}_k)$
+from [Equation @eq:montecarlo_eff], does not ensure that the correlated effect
+of the variation of multiple $\theta_i \in \boldsymbol{\theta}$ is accurately
+modelled. This issue can be easily exemplified, for example for the
+product of relative variations in the two parameter case
+$\boldsymbol{\theta}_R = (\theta^R_0,\theta^R_1)$,
+let us consider the expected
+value for the efficiency after a given selection $\mathbb{1}_{\mathcal{C}_i}(\boldsymbol{x})$:
+$$
+\epsilon^{\mathcal{C}_i}_j (\boldsymbol{\theta}_R)=  \int 
+\mathbb{1}_\mathcal{C}(\boldsymbol{x})
+p_j ( \boldsymbol{x}|\boldsymbol{\theta}_R ) d\boldsymbol{x} =
+\int \mathbb{1}_\mathcal{C}(\boldsymbol{x}) 
+p_j ( \boldsymbol{x}|\boldsymbol{\theta}_Q )
+\frac{p_j ( \boldsymbol{x}| (\theta^R_0,\theta^Q_1))}{p_j ( \boldsymbol{x}|\boldsymbol{\theta}_Q )}
+\frac{p_j ( \boldsymbol{x}| (\theta^Q_0,\theta^R_1))}{p_j ( \boldsymbol{x}|\boldsymbol{\theta}_Q )}
+ d\boldsymbol{x}
+$$ {#eq:relative_var_integral}
+where $\boldsymbol{\theta}_R$ is the parameter point we want to simulate
+by interpolating around a nominal point $\boldsymbol{\theta}_Q$. The last
+expression in [Equation @eq:relative_var_integral] is only correct
+if the effect of each parameter is independent. However, it becomes evident
+that the previous expression does not simplify to:
+$$
+\epsilon^{\mathcal{C}_i}_j (\boldsymbol{\theta}_R) \neq
+\epsilon^{\mathcal{C}_i}_j (\boldsymbol{\theta}_Q)
+\frac{\epsilon^{\mathcal{C}_i}_j (\boldsymbol{\theta}_R)}{
+\epsilon^{\mathcal{C}_i}_j (\boldsymbol{\theta}_Q)}
+\frac{\epsilon^{\mathcal{C}_i}_j (\boldsymbol{\theta}_R)}{
+\epsilon^{\mathcal{C}_i}_j (\boldsymbol{\theta}_Q)}
+$$ {#eq:relative_var_integral}
+because the integral of the product of functions is not product of integrals,
+unless is the volume of the selected region $C$
+is infinitesimally small which correspond to null efficiencies anyway.
+
+
+The previously mentioned modelling issue, even though to our knowledge has not been
+made explicit in the literature before, affects multitude of analyses at the LHC
+that use  *template interpolation*, as implemented in
+the standard statistical libraries used in particle physics experiments.
+A possible solution would include doing a multi-dimensional interpolation,
+but it would require evaluating at least all 3-point combinatorial variations
+of the parameters, amounting to a minimum of $3^p$ evaluations of
+$\epsilon^{\mathcal{C}_i}_j (\boldsymbol{\theta})$, where $p$ is the number
+of parameters. Alternatively, the basis of the approach presented in
+[Chapter @sec:inferno], where the variation of the parameters and
+its derivatives are computed in place over the simulated observations by
+specifying the full computational graph could also be used in analyses
+where the previous assumption fails to describe the data realistically.
+
+<!-- TODO: parametric and non-parametric likelihood -->
+
 
 ### Known Unknowns {#sec:known_unknowns}
 
