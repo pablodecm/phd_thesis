@@ -1467,6 +1467,21 @@ pair production decaying to four b-quarks.
 
 ## Statistical Inference {#sec:stat_inf}
 
+In the previous section, the main characteristics of the generative
+statistical model $p(D | \boldsymbol{\theta})$ used
+to related the parameters $\boldsymbol{\theta}$ with the set
+of observations $D = \{\boldsymbol{x}_0,...,\boldsymbol{x}_n\}$
+at particle collider experiments at the LHC have been reviewed.
+In addition, the role of summary statistics
+as lower dimensional functional transformations of each detector readout
+$\boldsymbol{s}(\boldsymbol{x}_i)$  or even the whole dataset
+$\boldsymbol{s}(D)$, as well has how the effect of additional uncertain
+parameters can be included in the simulation-based generative
+model of the data. In this section, we deal with the actual problem
+of inference once a summary statistic has already been
+chosen and the final statistical model has been specified
+$p(D | \boldsymbol{\theta})$.
+
 ### Likelihood-Free Inference
 
 ### Parameter Estimation
