@@ -1478,11 +1478,14 @@ $\boldsymbol{s}(\boldsymbol{x}_i)$  or even the whole dataset
 $\boldsymbol{s}(D)$, as well has how the effect of additional uncertain
 parameters can be included in the simulation-based generative
 model of the data. In this section, we deal with the actual problem
-of inference once a summary statistic has already been
-chosen and the final statistical model has been specified
-$p(D | \boldsymbol{\theta})$.
+of inference about the subset of parameters of interest
+$\boldsymbol{\theta}_\iota$ once a summary statistic has already been
+chosen and the final statistical model has been fully specified
+$p(\boldsymbol{s}(D) | \boldsymbol{\theta})$, at least by a generative definition. 
 
 ### Likelihood-Free Inference
+
+
 
 ### Parameter Estimation
 
