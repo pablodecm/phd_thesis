@@ -1451,13 +1451,15 @@ the contribution from the mentioned mixture component might have
 to be estimated from experimental observations directly.
 
 The actual procedure used for modelling the contribution for a given
-mixture component $j$ from data depend from the specifics of the
-process and analysis considered, but often includes some re-weighting
+mixture component $j$ from data depend on the specifics of the
+process as well the the details
+analysis considered, but often includes some re-weighting
 factor obtained from simulated observations or additional experimental
 observations with an orthogonal selection criteria. Such data-driven
 estimation techniques are often used for the background processes,
-but are hard to combine with the non-linear summary statistics based
-on machine learning techniques. In the CMS analysis described in
+but are hard to combine with the non-linear summary statistics reconstructed
+by machine learning techniques such as those described in
+[Chapter @sec:machine_learning]. In the CMS analysis presented in
 [Chapter @sec:higgs_pair], we describe and utilise a fully data-driven
 background estimation technique fine-tuned for the modelling of
 the QCD-based multiple jet background for the search of Higgs
