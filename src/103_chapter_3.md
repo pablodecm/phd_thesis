@@ -1429,7 +1429,7 @@ and larger interval width estimates (or exclusion limits)
 on the parameters of interest.
 The choice of summary statistics can effect significantly subsequent inference,
 and while nuisance parameters are usually qualitatively considered when
-building simple summary statistics by physically inspired combinations
+building simple summary statistics by physics-inspired combinations
 of reconstructed variables, they are not regarded at all when the automatic
 multi-variate techniques described in [Chapter @sec:machine_learning]
 are applied to construct complex non-linear observables. This issue is
@@ -1437,6 +1437,31 @@ address by the method proposed in [Chapter @sec:inferno].
 
 #### Data-Driven Estimation
 
+For some fundamental processes, the generative
+modelling provided by simulated observations
+might not be accurate enough for the purposes of a given LHC analysis. 
+In a subset of those cases, the simulated observations can be calibrated
+to better describe the observations in well-modelled data regions, as
+mentioned in the previous section. However, if the description of
+the summary statistics considered in the analysis provided
+by the simulated observations from the process $j$ is substandard,
+e.g. the number of simulated observations that could be 
+realistically simulated is not sufficient, the
+the contribution from the mentioned mixture component might have
+to be estimated from experimental observations directly.
+
+The actual procedure used for modelling the contribution for a given
+mixture component $j$ from data depend from the specifics of the
+process and analysis considered, but often includes some re-weighting
+factor obtained from simulated observations or additional experimental
+observations with an orthogonal selection criteria. Such data-driven
+estimation techniques are often used for the background processes,
+but are hard to combine with the non-linear summary statistics based
+on machine learning techniques. In the CMS analysis described in
+[Chapter @sec:higgs_pair], we describe and utilise a fully data-driven
+background estimation technique fine-tuned for the modelling of
+the QCD-based multiple jet background for the search of Higgs
+pair production decaying to four b-quarks.
 
 ## Statistical Inference {#sec:stat_inf}
 
