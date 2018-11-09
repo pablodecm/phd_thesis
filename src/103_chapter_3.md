@@ -1280,7 +1280,10 @@ These parameters can include uncertain theoretical parameters (e.g.
 top quark mass or expected background rate), account for
 limitation on the experimentally measured parameterisations of certain
 phenomena (e.g. parton density functions uncertainties) or represent
-the accuracy limits of calibration between data and simulation.
+the accuracy limits of calibration between data and simulation. Nuisance
+parameters can also represent additional degrees of freedom in the model
+that cover for possible wrong assumptions or qunatify imprecisions
+due to the limited of simulated observations.
 
 Because the actual generative process for the experimental data is not known
 perfectly, the simulation-based model is extended with additional parameters
@@ -1291,12 +1294,13 @@ $\boldsymbol{\theta}=\{\boldsymbol{\theta}_\iota,\boldsymbol{\theta}_\nu\}$,
 includes both parameters of interest $\boldsymbol{\theta}_\iota$
 and nuisance parameters $\boldsymbol{\theta}_\nu$. While the effect of
 (theoretical) parameters of interest typically only affects the parton-level
-latent factor $p(\boldsymbol{z} | \boldsymbol{\theta})$, some
+latent factor $p(\boldsymbol{z}_\textrm{p} | \boldsymbol{\theta})$, some
 nuisance parameters account for possible mis-modelling in subsequent
 steps of the simulation thus can affect the other factors in
 [Equation @eq:factor_joint].
 
-The effect of variation of nuisance parameters in the summary statistics
+The effect of variation of nuisance parameters for any observable or
+summary statistic
 considered in a given analysis can be estimated by simulating again the
 affected observation with the chosen parameters, which is often prohibitively
 expensive, or by re-weighting already simulated observations as described
@@ -1309,6 +1313,71 @@ are also often used for count vector observables
 $n^{\mathcal{C}_i}_j(\boldsymbol{\theta})$, as discussed in
 [Equation @eq:relative_var_eff] together with possible solutions
 to mentioned issues.
+
+The re-weighting approach from [Equation @eq:reweight_intractable] is
+extremely
+effective to model the effect of parameters in the conditional factor
+that deal with low-dimensional latent variables, such as
+$p(\boldsymbol{z}_\textrm{p} | \boldsymbol{\theta})$, because the rest of the factors
+in the joint distribution simplify and we are left with a low-dimensionality
+density estimation problem (even analytically tractable in some cases).
+For conditional factors that deal with higher dimensional latent or
+observable spaces, such as
+$p(\boldsymbol{z}_\textrm{d} |\boldsymbol{z}_\textrm{s}, \boldsymbol{\theta})$
+or
+$p(\boldsymbol{x} |\boldsymbol{z}_\textrm{d}, \boldsymbol{\theta})$,
+the ratio can be very hard to estimate unless additional simplifications
+are done. For those nuisance parametes, it is easier to consider the effect on
+the lower-dimensional summary statistic instead of the detector readout $x$,
+because the ratio:
+$$
+w(\boldsymbol{s}(\boldsymbol{x})) =
+\frac{p_R(\boldsymbol{s}(\boldsymbol{x})|\boldsymbol{\theta}_R)}{
+p_Q(\boldsymbol{s}(\boldsymbol{x})|\boldsymbol{\theta}_Q)}
+$$ {#eq:reweight_summary}
+can be simpler to estimate through density estimation or approximately
+factorise if the summary statistic was chosen carefully. This fact
+motivates an alternative way to model the effect of some of the nuisance
+parameters,
+specially those related with the differences in the reconstructed
+objects observables between simulation and data after calibration. Let us
+consider the case where summary statistics
+$\boldsymbol{s}(\boldsymbol{x}) : \mathcal{X} \subseteq \mathbb{R}^{d}
+\longrightarrow \mathcal{Y}_\textrm{sum} \subseteq \mathbb{R}^{b}$
+are effectively function of the
+reconstructed objects
+and its properties $\boldsymbol{y}_\textrm{reco} \in \mathcal{Y}_\textrm{reco}$,
+which can be schematically
+represented by the following function composition chain:
+$$
+\mathcal{X} \overset{f}{\longrightarrow} \mathcal{Y}_\textrm{reco} \overset{g}{\longrightarrow} \mathcal{Y}_\textrm{sum}
+$$ {#eq:composition_summary}
+where $\boldsymbol{y}_\textrm{reco} = f(\boldsymbol{x})$ and
+$\boldsymbol{y}_\textrm{sum} = g(\boldsymbol{y}_\textrm{reco})$. This
+compositional approach can be extended to include also event selection
+at trigger or analysis level, or other intermediate
+summaries of $\boldsymbol{x}$ complementary to reconstruction, as part
+of the definition of the summary statistic $\boldsymbol{s}(\boldsymbol{x})$.
+In all cases where $s(\boldsymbol{x})$ is a deterministic function,s which
+in expectation all differences between simulated
+observations and data originate from the differences between the
+simulation-based generative 
+definition of $p(\boldsymbol{x} | \boldsymbol{\theta})$ and the true
+unknown generative process $p_\textrm{true}(\boldsymbol{x})$. While
+evaluating and parametrising this differences directly by studying
+the raw detector output is quite convoluted, the differences can
+be corrected and their uncertainty assessed for the
+lower-dimensional intermediate states of the composition chain depicted
+in [Equation @eq:composition_summary]. For example, if the momenta a
+certain subset of the reconstructed objects $\boldsymbol{y}_\textrm{reco}$
+statistically differs between the experimental data and
+the simulated observations, based on a subset of the data that
+is assumed to be well-modelled, the momenta of simulated observations
+can be corrected to better model the data, and the statistical
+accuracy of such procedure due to the different factors can be lead
+to a set of nuisance parameters that describe the limit of our
+the mentioned calibration.
+
 
 The inference results of a given analysis depend strongly on the
 assumptions implicit in the statistical model. The determination,
