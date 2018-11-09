@@ -1350,10 +1350,10 @@ and its properties $\boldsymbol{y}_\textrm{reco} \in \mathcal{Y}_\textrm{reco}$,
 which can be schematically
 represented by the following function composition chain:
 $$
-\mathcal{X} \overset{f}{\longrightarrow} \mathcal{Y}_\textrm{reco} \overset{g}{\longrightarrow} \mathcal{Y}_\textrm{sum}
+\mathcal{X} \overset{g}{\longrightarrow} \mathcal{Y}_\textrm{reco} \overset{h}{\longrightarrow} \mathcal{Y}_\textrm{sum}
 $$ {#eq:composition_summary}
-where $\boldsymbol{y}_\textrm{reco} = f(\boldsymbol{x})$ and
-$\boldsymbol{y}_\textrm{sum} = g(\boldsymbol{y}_\textrm{reco})$. This
+where $\boldsymbol{y}_\textrm{reco} = g(\boldsymbol{x})$ and
+$\boldsymbol{y}_\textrm{sum} = h(\boldsymbol{y}_\textrm{reco})$. This
 compositional approach can be extended to include also event selection
 at trigger or analysis level, or other intermediate
 summaries of $\boldsymbol{x}$ complementary to reconstruction, as part
@@ -1368,7 +1368,9 @@ evaluating and parametrising this differences directly by studying
 the raw detector output is quite convoluted, the differences can
 be corrected and their uncertainty assessed for the
 lower-dimensional intermediate states of the composition chain depicted
-in [Equation @eq:composition_summary]. For example, if the momenta a
+in [Equation @eq:composition_summary]. 
+
+For example, if the momenta a
 certain subset of the reconstructed objects $\boldsymbol{y}_\textrm{reco}$
 statistically differs between the experimental data and
 the simulated observations, based on a subset of the data that
@@ -1376,15 +1378,62 @@ is assumed to be well-modelled, the momenta of simulated observations
 can be corrected to better model the data, and the statistical
 accuracy of such procedure due to the different factors can be lead
 to a set of nuisance parameters that describe the limit of our
-the mentioned calibration.
+the mentioned calibration as function of the value of
+$\boldsymbol{y}_\textrm{reco}$. The effect of such nuisance
+parameter can be often modelled in the simulation using
+by a function of the simulated intermediate outputs, e.g.
+in the case of reconstructed objects:
+$$
+\mathop{\mathbb{E}}_{\boldsymbol{x} \sim  p( \boldsymbol{x}| \boldsymbol{\theta} )}
+\left [ \boldsymbol{s}(\boldsymbol{x}) \right ] = 
+\mathop{\mathbb{E}}_{\boldsymbol{y}_\textrm{reco} \sim  p( \boldsymbol{y}_\textrm{reco}| \boldsymbol{\theta}_o )}
+\left [ h(r(\boldsymbol{y}_\textrm{reco}, \boldsymbol{\theta}_\rho))\right ]
+$$ {#eq:exp_rep}
+so $p( \boldsymbol{x}| \boldsymbol{\theta} )$ can be approximated
+by computing observables after
+applying the re-parametrisation
+$r(\boldsymbol{y}_\textrm{reco}, \boldsymbol{\theta}_\rho)$ the
+simulated observations,
+where $\boldsymbol{\theta}_\rho$ is the vector of parameters
+representing the different uncertainty factors.
 
+In general, the effects of all relevant 
+nuisance parameters can be modelled
+by a combination of simulated observation re-weighting by
+$w(\boldsymbol{x}_i,\boldsymbol{z}_i | \boldsymbol{\theta}_w )$
+and transformations of intermediate simulated observations
+$\boldsymbol{y}_\textrm{new} = r(\boldsymbol{y}_\textrm{sim},\boldsymbol{z}_i | \boldsymbol{\theta}_\rho)$. The former is based is based on
+importance sampling to estimate the properties of a different
+distribution that the one sampled originally from, while the latter
+assumes that the mis-modelling can be accounted by a parametrisation
+of the simulated intermediate observables. While it has not been
+used so far in LHC analysis to our knowledge, if the functions
+$w(\boldsymbol{x}_i,\boldsymbol{z}_i | \boldsymbol{\theta}_w )$
+and $r(\boldsymbol{y}_\textrm{sim},\boldsymbol{z}_i | \boldsymbol{\theta}_\rho)$
+are differentiable or can approximated by differentiable functions,
+the gradient (and higher order derivatives) with
+respect to the parameters $\boldsymbol{\theta}$ of any expectation
+value can be very efficiently approximated, which can be very useful
+for statistical inference (e.g. likelihood minisation) and it is
+one of the core concepts of the technique presented
+in [Chapter @sec:inferno].
 
 The inference results of a given analysis depend strongly on the
 assumptions implicit in the statistical model. The determination,
 assessment and practical definition the effect of nuisance parameters
 that are relevant for a given analysis is one the most challenging
-yet important aspects in experimental particle physics at the LHC.
-
+yet important aspects in experimental particle physics at the LHC. When
+nuisance parameters are quantitatively taking into account in the statistical
+model, the lead to an increase of the uncertainty on the parameters of interest
+and larger interval width estimates (or exclusion limits)
+on the parameters of interest.
+The choice of summary statistics can effect significantly subsequent inference,
+and while nuisance parameters are usually qualitatively considered when
+building simple summary statistics by physically inspired combinations
+of reconstructed variables, they are not regarded at all when the automatic
+multi-variate techniques described in [Chapter @sec:machine_learning]
+are applied to construct complex non-linear observables. This issue is
+address by the method proposed in [Chapter @sec:inferno].
 
 #### Data-Driven Estimation
 
