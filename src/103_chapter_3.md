@@ -21,7 +21,7 @@ a non-parametric sample likelihoods, which in turn demands for lower
 dimensional summary statistics.
 
 
-## Statistical Modelling
+## Statistical Modelling {#sec:stat_model}
 
 An essential element for carrying out statistical inference is the available of
 an statistical model. In this section, the main characteristics of the statistical
@@ -1221,23 +1221,31 @@ $$
 \epsilon^{\mathcal{C}_i}_j (\boldsymbol{\theta}_Q)}
 \frac{\epsilon^{\mathcal{C}_i}_j (\boldsymbol{\theta}_R)}{
 \epsilon^{\mathcal{C}_i}_j (\boldsymbol{\theta}_Q)}
-$$ {#eq:relative_var_integral}
+$$ {#eq:relative_var_eff}
 because the integral of the product of functions is not product of integrals,
 unless is the volume of the selected region $C$
 is infinitesimally small which correspond to null efficiencies anyway. This
 effect also applies if additive variations are considered and can be more
 notable when more parameters are considered.
 
-The previously mentioned modelling issue, even though to our knowledge has not been
+The previously mentioned modelling issue, even though to best of
+our knowledge has not been
 made explicit in the literature before, affects multitude of analyses at the LHC
 that use  *template interpolation*, as implemented in
 the standard statistical libraries used in particle physics experiments
 [@Conway:2011in;@Cranmer:2012sba].
 A possible solution would include doing a multi-dimensional interpolation,
-but it would require evaluating at least all 3-point combinatorial variations
+but it would naively require evaluating at least all 3-point combinatorial variations
 of the parameters, amounting to a minimum of $3^p$ evaluations of
 $\epsilon^{\mathcal{C}_i}_j (\boldsymbol{\theta})$, where $p$ is the number
-of parameters. Alternatively, the basis of the approach presented in
+of parameters. If the effect of the parameters can be factored out in the
+joint distribution and the same simulated event set can be modified to describe
+each marginal variation, as reviewed around [Equation @eq:latent_reweighting],
+the non-marginal terms can be estimated from the
+product of per-event marginal terms by considering the finite sum approximation
+of the last expression in [Equation @eq:relative_var_integral], which would
+only require $(2p+1)$ parameter variation evaluations.
+Alternatively, the basis of the approach presented in
 [Chapter @sec:inferno], where the variation of the parameters and
 its derivatives are computed in place over the simulated observations by
 specifying the full computational graph could also be used in analyses
@@ -1266,8 +1274,48 @@ as *data-driven estimation* techniques.
 #### Nuisance Parameters
 
 The general definition of nuisance parameters in an statistical model, refers
-to all the parameters of the statistical model that are not of intermediate
-interest but have to be accounted in the inference procedure.
+to all the uncertain parameters of the statistical model that are not
+of intermediate interest but have to be accounted in the inference procedure.
+These parameters can include uncertain theoretical parameters (e.g.
+top quark mass or expected background rate), account for
+limitation on the experimentally measured parameterisations of certain
+phenomena (e.g. parton density functions uncertainties) or represent
+the accuracy limits of calibration between data and simulation.
+
+Because the actual generative process for the experimental data is not known
+perfectly, the simulation-based model is extended with additional parameters
+that portray the possible variability on the distribution of the detector
+readouts. The formalism developed in the previous part of
+[Section @sec:stat_model] still applies, noting that the parameter vector
+$\boldsymbol{\theta}=\{\boldsymbol{\theta}_\iota,\boldsymbol{\theta}_\nu\}$,
+includes both parameters of interest $\boldsymbol{\theta}_\iota$
+and nuisance parameters $\boldsymbol{\theta}_\nu$. While the effect of
+(theoretical) parameters of interest typically only affects the parton-level
+latent factor $p(\boldsymbol{z} | \boldsymbol{\theta})$, some
+nuisance parameters account for possible mis-modelling in subsequent
+steps of the simulation thus can affect the other factors in
+[Equation @eq:factor_joint].
+
+The effect of variation of nuisance parameters in the summary statistics
+considered in a given analysis can be estimated by simulating again the
+affected observation with the chosen parameters, which is often prohibitively
+expensive, or by re-weighting already simulated observations as described
+in [Equation @eq:latent_reweighting], which is much faster and reduces
+the statistical fluctuations between variations associated with the
+random sampling of the full latent space. Unprincipled modelling
+shortcuts such as considering the additive or multiplicative effect of
+marginal efficiencies to account for combined effects
+are also often used for count vector observables
+$n^{\mathcal{C}_i}_j(\boldsymbol{\theta})$, as discussed in
+[Equation @eq:relative_var_eff] together with possible solutions
+to mentioned issues.
+
+The inference results of a given analysis depend strongly on the
+assumptions implicit in the statistical model. The determination,
+assessment and practical definition the effect of nuisance parameters
+that are relevant for a given analysis is one the most challenging
+yet important aspects in experimental particle physics at the LHC.
+
 
 #### Data-Driven Estimation
 
