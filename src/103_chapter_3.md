@@ -1508,14 +1508,44 @@ While the evaluation of the likelihood for complex generative models
 rapidly becomes in practical, specially when the space of observations
 or parameters is very high-dimensional, various statistical techniques
 for dealing with with this cases exist, generally referred to as
-*likelihood-free* or *simulation-based* inference techniques.
+*likelihood-free* or *simulation-based* inference techniques. A well
+stablished group of techniques for inference when the likelihood
+function is unknown is referred to as Approximate Bayesian Computation (ABC)
+[@rubin1984bayesianly; @beaumont2002approximate]. The fundamental concept
+behind ABC is the simulation of a simulated sample
+$S_0 = \{\boldsymbol{x}_0,...,\boldsymbol{x}_m\}$$
+using a given vector of parameters $\boldsymbol{\theta}_0$, which is then
+compared using a distance criteria to the actual observed dataset $D$. If
+the data and the simulation are close enough, then
+$\boldsymbol{\theta}_0$ is kept as sample from the approximate posterior. The
+previous process is repeated until the posterior is estimated with the
+desired accuracy, the final quality of the posterior approximation
+strongly depending on the distance definition. When the dimensionality
+of the output is high, a summary statistic vector has
+$\boldsymbol{s}(\boldsymbol{x})$ has in practise to be used for increasing
+the computational efficiency of the previous procedure.
 
 The approach for carrying our inference in the
-particle physics experiments at the LHC is somehow different from the
-mentioned techniques,
-similarly the observations are reduced to a lower-dimensional summary
-statistic space, but then a synthetic likelihood is oftentimes constructed
-so standard inference techniques can be applied.
+particle physics experiments at the LHC is somehow related from the
+mentioned family of techniques. The observations are also reduced
+to a lower-dimensional summary
+statistic space, but then a synthetic likelihood is constructed
+so standard inference techniques can be applied. The likelihood
+is often based on the product of Poisson count terms, as
+depicted in [Equation @eq:poisson_simple] and [Equation @eq:poisson_multichannel],
+where the dependence on the expectations
+on the parameters is based on the simulation and the mixture
+structure. Alternative approaches include the use of a simple one-dimensional
+parametrisation for a continuous background and a bump-like signal,
+which is common when the reconstructed intermediate mass of
+an intermediate object is used as summary statistic and its response is
+well-controlled. An additional alternative approach, which has not been
+used in LHC analysis to date, could be to use non-parametric density
+estimation techniques to obtain a synthetic likelihood directly
+from simulated data, which has been recently referred as Approximate
+Frequentist Computation (AFC) [@Brehmer:2018eca].
+
+
 
 ### Parameter Estimation
 
