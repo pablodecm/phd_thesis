@@ -3,7 +3,7 @@
 \epigraph{Every new beginning comes from some other beginning's end.}{Seneca the Younger}
 
 Humans strive for understanding the world by seeking explanations
-to the varied natural phenomena happening around us,
+to the varied natural phenomena happening around them,
 and accumulating the resulting knowledge in models that
 can be used to predict and shape the future reality.
 The scientific method provides a formal framework for carrying out these
@@ -11,7 +11,7 @@ investigations and checking the validity of the current description of
 our environment. Recorded experience of assumed known origin,
 also known as data, has a central role in updating these explicative
 theories, because it can provide quantitative or qualitative
-support of some candidate explanations over others.
+support to some candidate explanations over others.
 
 Direct sensory perception and personal information processing has a
 limited investigative reach and it is easily affected by subjective
@@ -48,7 +48,7 @@ It is important to remark that the elementary quality of the chosen subject
 of study does not
 imply that the journey towards valuable scientific knowledge in this area
 will be a simple one. On the contrary, as the following chapters
-will be made evident, this undertaking poses grand technical
+will make evident, this undertaking poses grand technical
 and non-technical challenges which in many cases require novel solutions.
 Furthermore, the problems at hand are often closely related with those
 present in other research or technological fields, so their findings
@@ -56,7 +56,7 @@ and innovations can be repurposed. Oftentimes this can even be a
 bidirectional relation, where the obstacles are challenging or
 original enough that solutions have to go beyond the state of
 the art in the relevant applied domain. In general, the pursuance of fundamental
-explanations does require solutions for multitude of practical problems.
+explanations does require solutions to a multitude of practical problems.
 
 Advances and expertise from other disciplines can accelerate
 significantly the rate of progress in a fundamental research domain
@@ -68,7 +68,7 @@ Yet, some
 barriers exist against the proliferation of interdisciplinarity, such as field
 specific language (also known as jargon) and seemingly unclear
 problem descriptions for collaborators with different backgrounds.
-This document, in addition of presenting the main research
+This document, in addition to presenting the main research
 results of the projects I have been involved in the recent past,
 will attempt to reduce this communication gap by trying to clearly
 state the main
@@ -78,7 +78,7 @@ and machine learning.
 
 The general methodology considered in this work consists on breaking the
 main research goals in a series of applied problems, express them in a
-domain-generic way and understand what is their role in view of the
+domain-generic way, and understand what is their role in view of the
 final aim. When possible, the presented concepts and methods will be
 illustrated with simple use cases which can be a
 great help to understand their working principles.
@@ -104,15 +104,16 @@ be highlighted when describing the theoretical foundations.
 
 The focus shifts in [Chapter @sec:experiment] towards how these
 theories can be experimentally validated through scientific experiments. In
-particular, we discuss how the design and characteristics of
+particular, the discussion verses around how the design and characteristics of
 general purpose experiments at high-energy colliders are relevant for
 the attainment of valuable data that yields new insights on the
 fundamental properties of the cosmos. The Compact Muon Experiment (CMS)
 detector at the Large Hadron Collider (LHC) serves as the default
 example of such an instrument,
 because it is the scientific experiment that provided
-the academic context during my graduate years and the main driver
-of some of the projects include in this report. Experimental modelling and
+the academic context during my graduate (and late undergraduate)
+years and the main driver
+of some of the projects included in this report. Experimental modelling and
 simulation will be emphasised in this chapter, due to their importance when
 extracting knowledge from the acquired data.
 
@@ -125,7 +126,7 @@ theory and experiment. In [Chapter @sec:statinf]
 we review the problem at hand in particle colliders form
 a formal statistical perspective as well
 list the main approaches for making quantitative statements based
-on data and their shortcomings. Two domain-specific aspects of data-analysis
+on data and their shortcomings. Two domain-specific aspects of data analysis
 in high energy physics will be remarked: the generative-only characteristic
 of accurate experimental models and the challenges of dealing with known unknowns
 we are not interested in, commonly referred as nuisance parameters.
