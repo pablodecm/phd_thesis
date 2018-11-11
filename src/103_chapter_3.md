@@ -1481,11 +1481,41 @@ model of the data. In this section, we deal with the actual problem
 of inference about the subset of parameters of interest
 $\boldsymbol{\theta}_\iota$ once a summary statistic has already been
 chosen and the final statistical model has been fully specified
-$p(\boldsymbol{s}(D) | \boldsymbol{\theta})$, at least by a generative definition. 
+$p(\boldsymbol{s}(D) | \boldsymbol{\theta})$. 
 
 ### Likelihood-Free Inference
 
+One of the main properties of the statistical models at particle colliders
+that was the focus of the last section was their generative-only nature,
+whereby their probability density $p(\boldsymbol{x} | \boldsymbol{\theta})$
+cannot be expressed analytically, but only
+by means of forward simulated observation. This fact greatly difficults the
+application of standard inference techniques which require the
+explicit definition of a likelihood:
+$$\mathcal{L}(\boldsymbol{\theta} | D) =\prod^{\boldsymbol{x}_i \in D}
+ p(\boldsymbol{x}_i | \boldsymbol{\theta})
+$$ {#eq:likelihood_definition}
+in order to make quantitative statements about the parameters of interest,
+because it expresses the extend the values of the parameters of interest
+are consistent with the observed data .
+Problems where the likelihood cannot be expressed directly are common
+in many scientific disciplines, because a link between
+observations and the underlying parameters can often only by provided by
+a probabilistic computer program as the system under study
+becomes increasingly complex.
 
+While the evaluation of the likelihood for complex generative models
+rapidly becomes in practical, specially when the space of observations
+or parameters is very high-dimensional, various statistical techniques
+for dealing with with this cases exist, generally referred to as
+*likelihood-free* or *simulation-based* inference techniques.
+
+The approach for carrying our inference in the
+particle physics experiments at the LHC is somehow different from the
+mentioned techniques,
+similarly the observations are reduced to a lower-dimensional summary
+statistic space, but then a synthetic likelihood is oftentimes constructed
+so standard inference techniques can be applied.
 
 ### Parameter Estimation
 
