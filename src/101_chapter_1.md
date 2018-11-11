@@ -1,6 +1,6 @@
 # Theory of Fundamental Interactions {#sec:theory}
 
-\epigraph{Nothing in life is to be feared.
+\epigraph{Nothing in life is to be feared. \\
   It is only to be understood.}{Marie Skłodowska Curie }
 
 Scientific theories are frameworks describing natural phenomena that are
@@ -12,13 +12,13 @@ the Standard Model (SM) of particle physics is a scientific theory that
 provides a very accurate description of most of the observed properties
 and dynamics of the universe around us. It is constructed upon an innovative
 theoretical framework, generally referred as quantum field theory (QFT),
-and principles regarding basic symmetries.
+and principles regarding fundamental symmetries of the laws of nature.
 In this chapter, a non-exhaustive introduction to this theory and its
 descriptive reach will be provided together with a summary of the known
 limitations and possible extensions or alternatives.
 Given the experimental character of the research discussed in the following
 chapters, the aim of this chapter is not solely the discussion of the
-fundamental structure and properties of the theory, but also
+basic structure and properties of the theory, but also
 the methodology followed to compute predictions for observables
 that can be contrasted with empirical data.
 
@@ -43,7 +43,7 @@ a succession of important theoretical developments and experimental
 discoveries over the last century [@weinberg2004making],
 culminating
 with the discovery of the Higgs boson in 2012 [@higgs2012cms;@higgs2012atlas].
-If a more principled viewpoint is taken, the SM can be thought
+If a more principled viewpoint is taken, the SM can be thought of
 as the most general but mathematically consistent
 theory that respects a set of symmetries, namely
 a global Poincaré group symmetry (translational, rotational
@@ -55,10 +55,10 @@ $G_\textrm{SM}$ symmetry group is essential to describe three of the four
 fundamental interactions observed in nature: strong interaction,
 weak interaction and electromagnetic interaction. In fact, the
 $SU(3)_{C}$ is associated the strong force and the conservation of
-color while the $SU(2)_{L} \otimes U(1)_{Y}$ symmetry instead is
+its charge, called colour, while the $SU(2)_{L} \otimes U(1)_{Y}$ symmetry instead is
 related with electroweak interactions (i.e. unification of weak and
 electromagnetic) and the conservation of isospin and
-hypercharge.
+weak hypercharge.
 The SM is typically specified using the Lagrangian formalism and depends
 on a total of 19 parameters, which are not predicted by the theory
 from first principles but determined through experimental measurements.
@@ -66,29 +66,31 @@ from first principles but determined through experimental measurements.
 In the context of the SM, excitations of the fundamental fields
 give rise to two types of elementary particles: fermions (characterised
 by having half-integer spin) and bosons (characterised by having
-integer spin). Fermions are the fundamental constituents of matter
+integer spin). Fermions are the fundamental constituents of matter,
+and they
 are further subdivided into leptons and quarks depending on their 
 interactions. A schematic overview of the fundamental particles
 of the SM and their properties is provided in
 [@Fig:standard_model_particles]. Three particle generations
 are known for both quarks and leptons, each containing a pair of particles
-with different masses. For quarks, the heavier is referred as up-type and
+with different masses. For quarks, the heavier is referred to as up-type and
 the lighter as down-type. Instead, for leptons we distinguish the heavier
-charged particles (electron, muon and tau) from its corresponding light
-and neutrally charged neutrinos. Regular matter is largely made of the
+charged particles (electron, muon and tau) from their corresponding light
+and uncharged neutrinos. Regular matter is largely made of the
 first generation of quarks and electrons, given that  higher generations
-rapidly decay to quickly to lower generations characterised by
+rapidly decay quickly to lower generations characterised by
 smaller masses. All fermions interact via the weak force but
 only quarks carry colour charge and are subjected to the strong
 force. For each fermion in the SM, there is a another particle with
-identical properties but opposite quantum numbers, globally referred
+identical properties but opposite quantum numbers, globally referred to
 as antimatter, and denoted for each particle with the anti prefix
 and a bar over the symbol (e.g. up antiquark $\bar{u}$) 
 or by explicitly denoting the charge sign (e.g. positron 
 $e^+$). Neutrinos are the only fermions that do not carry electrical
 charge and might be their own antiparticle.
 
-The mediators of fundamental interactions are referred as gauge boson, and
+The mediators of the strong, weak and electromagnetic fundamental interactions
+are referred to as gauge bosons, and
 are characterised by having spin 1. To model the strong interaction
 colour charge exchanges, a total of eight independent
 strong massless force mediators, or *gluons*, are needed. Gluons
@@ -98,12 +100,12 @@ as *colour confinement*, which will be discussed in
 Section [-@sec:qcd_detail] in more detail. The massless
 and neutral *photon* is
 the mediator of the electromagnetic force, while instead
-the massive $Z$, $W^+$ and $W^-$ bosons are exchanged
-through weak interactions. The last piece in the SM is the *Higgs
+the massive $Z$, $W^+$ and $W^-$ bosons mediate
+weak interactions. The last piece in the SM is the *Higgs
 boson*, the only fundamental known particle with spin 0. The Higgs boson
 is the quantum excitation of the *Higgs field*, which  also couples with other
 fundamental particles such as the gauge bosons of the weak force,
-effectively generating their mass trough their interaction. The Higgs boson
+effectively generating their mass through their interaction. The Higgs boson
 and Higgs field play an essential role in the
 electroweak symmetry breaking (EWSB) mechanism, which will be discussed
 in more detail in Section [-@sec:ewsb_higgs].
@@ -112,21 +114,21 @@ The rest of this section will be devoted a more mathematically exhaustive
 review of the different components of the Standard Model, starting
 by reviewing the basic formalism of quantum field theories and incrementally
 building on it do describe the characteristics of both the strong and
-electroweak interactions that give rise to the diverse the interactions
+electroweak interactions that give rise to the diverse interactions
 dynamics of relevance in particle physics experiments.
 
 
-### Quantum Field Theory Basics {#sec:qft_basics}
+### Essentials of Quantum Field Theory {#sec:qft_basics}
 
 As hinted in the previous section, in quantum field theory (QFT), observed
-particles are understood as excitations of fields that extend the whole
+particles are understood as excitations of fields that extend through whole
 universe. Quantum field theory unifies the physical foundations
 of quantum mechanics and special relativity, and can be used to
 accurately describe phenomena in systems where relativistic and
 quantum effects are relevant, such as interaction between highly
 relativistic particles. In QFT, all the known physical processes
 in the universe are explained in terms of the state and dynamics
-of set of fundamental tensor fields. A tensor field can be defined as
+of set of fundamental tensor fields. A tensor field can be defined as a
 continuous and differentiable set of values, such a scalar or a vector,
 that exist for any given location and time. For simplicity, the fields 
 in QFT are usually defined in a relativistic
@@ -168,8 +170,8 @@ $$  {#eq:euler_lagrange}
 where $\partial_\mu=\partial/\partial x_\mu$  and the repetition
 of the coordinate index $\mu \in \{0,1,2,3\}$ means summation over
 the product. The previous relation would still apply to each field
-in the case that a Lagrangian including several fields was
-considered. Therefore,
+in the case that a Lagrangian including several fields were
+considered; therefore,
 given a Lagrangian, we can use Equation [-@eq:euler_lagrange]
 to obtain their equations of motion. As an example, let us consider
 the following Lagrangian $\mathcal{L}_\textrm{Dirac}$, which  is a function of
@@ -218,12 +220,12 @@ annihilation operators.
 The experimental success of the Standard Model and its main 
 subcomponents QED, QCD and EW unification and
 symmetry breaking is clearly incontestable, ranging from the confirmation
-of theoretical prognotiscation of the existence and some the properties
+of theoretical prognostiscation of the existence and some the properties
 of new particles
 (e.g. $Z$, $W^{\pm}$ and Higgs bosons or top quark) to
 the agreement of precise predictions with meticulous experimental
 observations. The fine structure constant $\alpha$ at zero energy scale
-is an example of the latter, the experimentally determined value being
+is an example of the latter, with its experimentally determined value being
 compatible with the Standard Model based theoretical prediction up
 to 12 orders of magnitude [@hanneke2008new; @parker2018measurement]. In addition to describing natural phenomena
 with unprecedented accuracy, the SM it is a self-consistent theory that 
@@ -232,7 +234,8 @@ provide non-divergent predictions at the highest energy scales probed to date.
 ### Known Limitations
 
 
-Nevertheless, several shortcomings of the Standard Model are known
+In spite of the successes mentioned above,
+several shortcomings of the Standard Model are known
 and hence is not considered as a complete theory of natural phenomena
 at the most fundamental scales. Those concerns include unexplained empirically
 observed phenomena such as gravitational interactions, neutrino masses or
@@ -245,7 +248,7 @@ an approximation fo more complete unified theory. For completeness, the
 main empirical and theoretical concerns are summarised:
 
 
-* **omission of gravitational interactions**: the current formulation of
+* **Omission of gravitational interactions**: the current formulation of
  the SM completely disregards the effect of gravity in
  fundamental interactions, because no consistent quantum descriptions for
  gravity matching the experimental predictions of the well-established
@@ -258,7 +261,7 @@ main empirical and theoretical concerns are summarised:
  weak interaction, and hence can be safely ignored when computing theoretical
  predictions.
  
-* **lack of a viable Dark Matter candidate**: through a variety of
+* **Lack of a viable Dark Matter candidate**: through a variety of
   astrophysical observations, including the observed galaxy rotation
   curves [@corbelli2000extended], gravitational
   lensing [@trimble1987existence]
@@ -272,14 +275,14 @@ main empirical and theoretical concerns are summarised:
   consensus seem to favour long-lived cold non-baryonic matter as an explanation,
   predominantly weakly-interacting massive particles (WIMPs). The three
   neutrino types are the
-  only WIMP candidates within the Standard Model, but considering
-  the known upper limits on their masses, could only account for very
-  small fraction of dark matter. 
+  only WIMP within the Standard Model, but considering
+  the known upper limits on their masses, they can account for a very
+  small fraction of the total mass of dark matter in the universe. 
   
   
-* **unexplained matter-antimatter asymmetry**: as discussed in
+* **Unexplained matter-antimatter asymmetry**: as discussed in
   Section [-@sec:standard_model], each matter particle in the Standard
-  Model has an anti-matter partner that is identical but with opposite quantum
+  Model has an identical anti-matter possessing opposite quantum
   numbers. Because pair creation and annihilation processes are symmetric, but
   our universe is manifestly dominated by what we refer as matter, some
   asymmetric interaction processes ought to exist. Within the SM, some
@@ -288,36 +291,38 @@ main empirical and theoretical concerns are summarised:
   unknown CP-symmetry processes, potentially through interactions not
   included in the SM, are needed to resolve the mentioned disparity.
 
-* **origin of neutrino masses**: the Standard Model was developed assuming
+* **Origin of neutrino masses**: the Standard Model was developed assuming
   that neutrinos were massless, yet is currently well-stablished
   that neutrinos oscillate between different flavour states [cite], implying 
   that flavour states are mixing and hence that neutrino masses are
-  very small but different from zero .
+  very small but different from zero.
   The SM Lagrangian can be extended to account for the masses of neutrinos
   in a similar fashion to what is done for leptons and quarks, but their 
-  Yukawa coupling has to be much smaller than for any of the other particles,
+  Yukawa coupling has to be much smaller than of any of the other particles,
   and it requires the existence of very weakly interacting
   right-handed neutrinos. An alternative mechanism for including
-  neutrino masses exist, which is based on assuming they are Majorana fermions
-  and hence they are their own anti-particle, which is currently being
+  neutrino masses exists, and it is based on assuming that these
+  particles are Majorana fermions
+  and hence they are their own anti-particle. This hypothesis is currently being
   experimentally tested. It also worth noting that in order to explain the
   smallness of neutrino masses in a principled way, the Seesaw mechanism [cite]
   has been proposed, which implicitly assumes that the SM is only a
   low-energy scale effective theory of a more complete unified theory.
 
   
-* **mismatch between vacuum energy and Dark Energy**: in addition of providing
+* **Mismatch between vacuum energy and Dark Energy**: in addition of providing
   evidence for dark matter, astrophysical observations such as studies of the
-  properties of the Cosmic Microwave Background [cite] or the red shift of
+  properties of the Cosmic Microwave Background [cite] or the redshift of
   type Ia supernovae [cite], consistently point to the hypothesis of
   an accelerating expansion of the current universe. The simplest way to account
   for this in cosmological models is to include a cosmological constant,
-  which be understood of an intrinsic energy density of the vacuum, exerting
+  which should be understood as an intrinsic energy density of the vacuum,
+  exerting
   a negative pressure and therefore driving the observed expansion of the
   universe. In fact, in order to reconcile the theoretical models with
   experimental observations, about $68\%$ of the total energy in the
-  present universe would correspond to these type of unknown energy
-  density, generally referred as *dark energy*. In most quantum field theories,
+  present universe would correspond to this type of unknown energy
+  density, generally referred to as *dark energy*. In most quantum field theories,
   such as the Standard Model, some non-zero zero-point
   energy originating from quantum fluctuations is expected. However,
   modern attempts to predict energy densities from QFT are at variance
@@ -325,10 +330,11 @@ main empirical and theoretical concerns are summarised:
   120 orders of magnitude [cite].
   
   
-* **naturalness, hierarchy and fine-tunning concerns**: as discussed at the
+* **Naturalness, hierarchy and fine-tunning concerns**: as discussed at the
   beginning of Section [-@sec:standard_model], the SM can be thought of
   the most general theory based on  a set symmetries, and its
-  19 [check] parameters (or 24 [check] accounting for neutrino masses)
+  19 [check] parameters (or 24 [check] accounting for neutrino masses
+  and mixing matrix)
   are not obtained from first principles but measured experimentally.
   Having such a large number of free
   parameters and observing large differences among their
@@ -336,16 +342,16 @@ main empirical and theoretical concerns are summarised:
   an aesthetic perspective. A related issue is why the electroweak
   energy scale (epitomised by the Higgs mass) is much smaller than
   the assumed cut-off scale of the SM, where gravitational
-  interactions become relevant
+  interactions become relevant at
   $M_{\textrm{Planck}} \approx 10^{19} \textrm{GeV}$, which is
   generally referred as the *hierarchy problem*. In the absence of
   New Physics or additional interaction mechanisms, the only
   way to obtain the observed Higgs mass from a the bare Higgs
   mass (at zero energies) is through a very precise cancellation
-  of divergences, which is regarded as an *unnatural* or *fine-tunned*
+  of divergences, which is regarded as an *unnatural* or *fine-tuned*
   property of the SM theory.
 
-Other possible issues, in some cases related with those discused,
+Other possible issues, in some cases related with those discussed,
 have also been raised 
 such as the apparent vacuum meta-stability [cite] or
 the strong CP problem [cite]. Some of these issues can be clarified
@@ -360,8 +366,8 @@ most of the known proposed theoretical models are either extensions of
 the SM or its associated predictions can be effectively
 reduced to those of the SM at the energy range current being
 explored in particle physics experiments. The set of alternative
-that have been proposed is to substantial to be exhaustively listed
-here, specially accounted that many of the alternatives include
+that have been proposed is too substantial to be exhaustively listed
+here, especially given that many of the alternatives include
 additional free parameters that greatly modify the expected
 theoretical observables.
 
@@ -410,7 +416,7 @@ provides an effective model and restricts considerably the space
 of possible outcomes, in a way that can be compared with experimental
 observations. It is worth noting that alternative descriptions of
 nature, such as those motivated by the known limitations of the SM
-and reviewed in Section [-@sec:sm_alternatives], can provide alternative
+and reviewed in Section [-@sec:sm_alternatives], may provide alternative
 mechanisms for the production of outcomes that are not allowed by the SM,
 and hence often drive the experimental searches for evidence of New Physics.
 
@@ -426,11 +432,11 @@ of barn ($1 \textrm{barn} = 10^{-28} \textrm{m}^2$). The advantage of cross
 sections over rates is that their value is independent from the density
 of the incident particle fluxes. The rate, or probability per unit of time,
 of a process occurring can be computed simply by multiplying its cross
-section by the instantaneous luminosity $\mathcal{L}(t)$, which
+section by the instantaneous luminosity $\mathcal{L}_\textrm{inst}$, which
 corresponds to the number of particles per unit of area per unit of time
 crossing in opposite directions in the collision volume.
 
-Another related concept, which is specially important for simulating
+Another related concept, which is especially important for simulating
 interactions,
 is the differential cross section $d\sigma$. While the initial state
 conditions are fixed, the rate of
@@ -457,38 +463,38 @@ energies, limiting the first principles computation of relevant
 observables for the most common interactions. Luckily for us,
 the most promising territory being explored in energy colliders correspond
 to higher energies, where relevant interaction outcomes come from the
-hard scattering of proton constituents (referred as partons)
+hard scattering of proton constituents (referred as to partons)
 at high energies, and predictions can
 be perturbatively approximated under the assuming asymptotic
 freedom.
 
 
 ::: {#fig:subfigs_pdfs .subfigures}
-![Low Energy Scale
+![Low Energy Scale $\mu^2 = 10 \textrm{GeV}^2$
 ](gfx/101_chapter_1/nnpdf31nnlo-10.pdf){#fig:pdf_low width=49%}
-![High Energy Scale
+![High Energy Scale$\mu^2 = 10^4 \textrm{GeV}^2$
 ](gfx/101_chapter_1/nnpdf31nnlo-1e4.pdf){#fig:pdf_high width=49%}
 
 Parton Distribution Functions.
 :::
 
-Even for modelling hard scattering processes, non-perturbative input is
+Even for modelling hard scattering processes, a non-perturbative input is
 required, mainly the probability of finding a particular proton constituent
 with a certain momentum fraction inside each of the colliding protons,
-referred as the parton distribution function (PDF).
+referred to as the parton distribution function (PDF).
 The model of the proton as three quarks coupled by strong force 
 is too simplistic for modelling proton-proton scattering realistically,
 specially at high energies. The continuous exchange of gluons between the three 
 constituent quarks effectively generates
 a sea of virtual quark-antiquark pairs from which other partons can
-scatter-off. Consequently, in the interaction of two protons, not only
-the constituent quarks, referred as valence quarks, can take part in the
-hard scattering process but also gluons and sea quarks. At time of writing,
+scatter off. Consequently, in the interaction of two protons, not only
+the constituent quarks, referred as to valence quarks, can take part in the
+hard scattering process but also gluons and sea quarks. At the time of writing,
 PDFs are not computable from first principles so they
 have to be parametrised and extrapolated from various experimental sources
 including fixed-target proton deep inelastic scattering (DIS) and previous
 collider studies. It is worth noting that the distribution functions depend
-strongly in the energy scale of the process, but the evolution for parton
+strongly in the energy scale of the process, yet the evolution for parton
 densities can be modelled theoretically
 [@Altarelli:1977zs;@Dokshitzer:1977sg;@Gribov:1972ri]. Given their relevance
 for computing observables in high-energy colliders,
@@ -509,8 +515,9 @@ scattering process $pp \rightarrow X$, which will be denoted as
 $d\sigma(pp \rightarrow X)$, for two protons colliding head on
 at center of mass energy $s$. Here
 $X$ denotes a possible outcome for the interaction, not necessarily a single
-particle (e.g. a Higgs boson $X=H$) but a set of particles (e.g. a bottom
-quark-antiquark pair $X=b\hat{b}$). According to the QCD factorisation
+particle and the proton remnants (e.g. a Higgs boson $X=H + \textrm{other}$),
+but a set of particles (e.g. a bottom
+quark-antiquark pair $X=b\hat{b} + \textrm{other}$). According to the QCD factorisation
 theorem [@Collins:1989gx], the differential cross section for
 $d\sigma(pp \rightarrow X)$
 can be expressed as a sum of functions of the partonic cross section 
@@ -522,7 +529,7 @@ d\hat{\sigma}_{ij\rightarrow X} (s x_1 x_2,\mu_R^2,\mu_F^2)
   d x_1 d x_2$$ {#eq:qcd_factorisation} 
 
 
-where $i$ and $j$ being the partons involved (e.g. a certain type of quark or
+where $i$ and $j$ indicate the partons involved (e.g. a certain type of quark or
 a gluon), $f_i(x_1, \mu_F^2)$ and  $f_j(x_2, \mu_F^2)$ are their parton distribution
 functions for given momentum fractions $x_1$ and $x_2$ respectively, $\mu_F$ is
 the factorisation scale and $\mu_R$ is the renormalisation scale. The
@@ -541,10 +548,10 @@ $d\sigma(ij \rightarrow X)$, and thus directly
 compute the total cross section by a similar parton distribution
 function integration as the one used in Equation [-@eq:qcd_factorisation].
 
-However, as more more complex final states or higher perturbative
+As more more complex final states or higher perturbative
 orders are considered, the final state phase space integration over
 many particles can rapidly become intractable. This motivates the use
-of *Monte Carlo integration* techniques, specially those based
+of *Monte Carlo integration* techniques, especially those based
 on importance sampling such as [vegas]{.smallcaps} [@Lepage:1977sw],
 which provide convergence rates that scale well with the integral
 dimensionality by randomly sampling the multi-dimensional space.
@@ -562,29 +569,30 @@ details.
 
 <!-- weighted efficiency formula -->
 
-Nevertheless, in particle collider experiments typically we cannot measure
-directly the properties of final states of the particles produced in
+In collider experiments typically we cannot measure
+directly the properties of final states produced in
 the hard scattering, either because of the characteristics of the detector,
-the decay/hadronisation of particles producing other secondary particles or
+the decay/hadronisation of particles producing other secondary particles, or
 due to additional physical effects occurring in a bunch crossing not accounted
 in Equation [-@eq:qcd_factorisation], such as additional collision products
 due to multiple interactions or processes comprising the proton
-remnants. Thus it is very useful for modelling to consider the problem
+remnants. Thus it is very useful in the construction of the complete
+mode to consider the problem
 of generation of realistic collision products. Taking into consideration
 that some of the computational techniques for including
 subsequent physical processes and the detailed simulation of the detectors
 are considerably resource intensive, as will be detailed in
 Section [-@sec:parton_showers] and Section [-@sec:detector_simulation]
-respectively, the use of weighted samples are is not a
+respectively, the use of weighted samples is not a
 very efficient approach. Hence,
-for the generation of simulated products of high-energy collision, also
-referred as *event generation*, an acceptance-rejection sampling step
+for the generation of simulated products of high-energy collisions, also
+referred to as *event generation*, an acceptance-rejection sampling step
 is carried out to obtain an unweighted sample, where the relative
 frequency of each simulated outcome is expected to match its
-theoretical prediction. After such procedure, calculation of all observables
-is also simplified, because the weight of all samples can be taken
-as any constant, e.g. a unitary weight $w=1$, therefore the computations
-of quantities such as efficiencies becomes trivial.
+theoretical prediction. After such procedure, the
+calculation of all observables is also simplified, because the weight of all
+samples can be taken as a constant, e.g. a unitary weight $w=1$, so
+the computation of quantities of interest such as efficiencies becomes trivial.
 
 <!-- unweighted efficiency formula -->
 <!-- NLO matrix elements and other details -->
@@ -599,12 +607,12 @@ the collision
 as well as the conversion of formation of hadrons from any
 free parton due to colour confinement (see Section [-@sec:qcd_detail]).
 Additional processes that affect the collision outcome include
-secondary interaction between the protons, as well as the decays
-decays of unstable particles generated. 
+secondary interactions between the protons, as well as the
+decays for all unstable particles generated. 
 An example of the typical complexity of the physical
 processes occurring as a result of a single high-energy proton-proton
-scattering are included in Figure [-@fig:event_shower].
-These and other subtle effects
+scattering is provided in Figure [-@fig:event_shower].
+These and additional minor effects
 (e.g. colour reconnection) are accounted by *parton showering* (PS) programs,
 that take as the input the the generated particle outcome of the
 hard scattering and 
