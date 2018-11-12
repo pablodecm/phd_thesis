@@ -37,19 +37,55 @@ to improve $E$.
 The first step in order to tackle a problem with machine learning
 techniques is the formal definition of the task $T$, together with
 a quantifiable metric that scores the accuracy on such
-task $P$. In this section, an overview of the most common machine learning
+task $P$. In this section, the most common machine learning
 tasks that are of relevance for their possible use in particle
-collider experiments and similar scientific contexts.
+collider experiments and similar scientific contexts are introduced.
 
-### Probabilistic Classification
+### Probabilistic Classification and Regression
 
+One of the most unassuming, yet versatile, tasks that can be addressed with
+machine learning algorithms is *classification*. A classifier or a
+classification rule is a function
+$f(\boldsymbol{x}) : \mathcal{X} \longrightarrow \mathcal{Y}$ that
+predicts a label $y \in \{0,...,k-1\}$, denoting correspondance to
+on category in a set of of $k$ categories,
+for each input $\boldsymbol{x} \in \mathcal{X}$. The task of
+classification, in the context of machine learning algorithms, is
+to produce classification functions $f(\boldsymbol{x})$ that perform
+increasingly well on a set of data.
+
+Classification is hence often framed as a belonging to a larger
+category of tasks referred to as  *supervised learning*,
+where the goal is predicting the value of an output variable
+$\boldsymbol{y}$ (here a multi-dimensional vector for generality)
+based on the observed values of the input
+variables $\boldsymbol{x}$, based on a *learning set* of $n$ input vectors
+with known output values 
+$L = \{(\boldsymbol{x}_0,\boldsymbol{y}_0),...,(\boldsymbol{x}_n,\boldsymbol{y}_n)\}$.
+The output values $\boldsymbol{y}$ are known in the learning set, because they
+were previously determined by an external method, typically a teacher
+or supervisor looking at past observations, thus explaining the name of these
+family of techniques. From an statistical standpoint, the input observations
+and target values from the learning set can be viewed as
+random variables sampled from an joint probability distribution
+$p(\boldsymbol{x}, \boldsymbol{y})$, which is typically unknown.
+
+The goal of supervised learning is not perform well on the learning set $L$
+used to improve at the specified task, but rather to perform well
+for additional unseen observations sampled from the joint distribution
+$p(\boldsymbol{x}, \boldsymbol{y})$. Supervised
+learning algorithms exploits the conditional relations between the input
+and the output variables, in order to classify new observations 
+better than a random classification rule that does not depend on
+the value of $\boldsymbol{x}$.
 
 <!-- regression, structured output and density estimation -->
 
 
-## Machine Learning Techniques
+## Machine Learning Techniques {#eq:ml_tecniques}
+
 ### Boosted Decision Trees
 
-### Neural Networks
+### Artificial Neural Networks
 
-## Applications in High Energy Physics
+## Applications in High Energy Physics {#eq:ml_hep}
