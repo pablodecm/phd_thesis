@@ -20,7 +20,32 @@ Chapter [-@sec:statinf].
 
 ## Problem Description
 
+Machine learning is the field that deals with
+algorithms, as described by computer programs,
+that are able to *learn* from data. A more formal definition of learning,
+yet general and useful in the context of this work, can be found
+in the literature [@Mitchell:1997:ML:541177]: "A computer program is said
+to learn from experience $E$ with respect to some class of tasks $T$
+and performance measure $P$, if its performance at task in $T$, as
+measured by $P$, improves with experience $E$". The previous sentence
+clearly denotes the three key elements for learning in the context
+of computer algorithms: the task (or class of task) that to be accomplished
+$T$, a quantitative and robust way to measure the performance on those
+tasks $P$ and a set of data that the algorithm can experience in order
+to improve $E$.
+
+The first step in order to tackle a problem with machine learning
+techniques is the formal definition of the task $T$, together with
+a quantifiable metric that scores the accuracy on such
+task $P$. In this section, an overview of the most common machine learning
+tasks that are of relevance for their possible use in particle
+collider experiments and similar scientific contexts.
+
 ### Probabilistic Classification
+
+
+<!-- regression, structured output and density estimation -->
+
 
 ## Machine Learning Techniques
 ### Boosted Decision Trees
