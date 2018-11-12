@@ -70,22 +70,42 @@ and target values from the learning set can be viewed as
 random variables sampled from an joint probability distribution
 $p(\boldsymbol{x}, \boldsymbol{y})$, which is typically unknown.
 
-The goal of supervised learning is not perform well on the learning set $L$
-used to improve at the specified task, but rather to perform well
+The goal of supervised learning is not to perform well on the learning set $L$
+used for improving at the specified task, but rather to perform well
 for additional unseen observations sampled from the joint distribution
 $p(\boldsymbol{x}, \boldsymbol{y})$. Supervised
-learning algorithms exploits the conditional relations between the input
+learning algorithms exploit the conditional relations between the input
 and the output variables, in order to classify new observations 
 better than a random classification rule that does not depend on
-the value of $\boldsymbol{x}$.
+the value of $\boldsymbol{x}$. When using machine learning
+techniques in data analysis at the LHC, as will be reviewed in [Section @sec:ml_hep],
+simulated observations are used instead of expert-labelled past observations.
+Simulated observations correspond to random samples of the joint distribution
+over the latent variables for the generative model
+$p(\boldsymbol{x}, \boldsymbol{z} | \boldsymbol{\theta})$, as described in
+[Section @sec:stat_model].
+
+In fact, the problem of inferring a subset of latent variables $\boldsymbol{z}$
+of the statistical model for the raw detector readouts of
+a collider experiment $\boldsymbol{x}$,
+or from any deterministic function of it $\boldsymbol{s}(\boldsymbol{x})$,
+can be casted as a supervised learning problem. The learning set would consist
+on simulated observations $\boldsymbol{x}_i$ (or a summary of it
+$\boldsymbol{s}(\boldsymbol{x}_i)$), and a matching subset of interest of the
+latent variables $\boldsymbol{y}_i \in \mathcal{Y} \subseteq \mathcal{Z}$.
+The supervised
+learning task can then be viewed as the estimation of the conditional
+expectation value
+$\mathbb{E}_{p(\boldsymbol{y} | \boldsymbol{x} = \boldsymbol{x}_i)} [\boldsymbol{y}]$
+for each given input observation  $\boldsymbol{x}_i$.
 
 <!-- regression, structured output and density estimation -->
 
 
-## Machine Learning Techniques {#eq:ml_tecniques}
+## Machine Learning Techniques {#sec:ml_tecniques}
 
 ### Boosted Decision Trees
 
 ### Artificial Neural Networks
 
-## Applications in High Energy Physics {#eq:ml_hep}
+## Applications in High Energy Physics {#sec:ml_hep}
