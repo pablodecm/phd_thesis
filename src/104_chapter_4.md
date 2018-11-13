@@ -61,16 +61,31 @@ $\boldsymbol{y}$ (here a multi-dimensional vector for generality)
 based on the observed values of the input
 variables $\boldsymbol{x}$, based on a *learning set* of $n$ input vectors
 with known output values 
-$L = \{(\boldsymbol{x}_0,\boldsymbol{y}_0),...,(\boldsymbol{x}_n,\boldsymbol{y}_n)\}$.
+$S = \{(\boldsymbol{x}_0,\boldsymbol{y}_0),...,(\boldsymbol{x}_n,\boldsymbol{y}_n)\}$.
 The output values $\boldsymbol{y}$ are known in the learning set, because they
 were previously determined by an external method, typically a teacher
 or supervisor looking at past observations, thus explaining the name of these
-family of techniques. From an statistical standpoint, the input observations
+family of techniques.
+
+From an statistical standpoint, the input observations
 and target values from the learning set can be viewed as
 random variables sampled from an joint probability distribution
 $p(\boldsymbol{x}, \boldsymbol{y})$, which is typically unknown.
+The family of supervised learning tasks also includes *regression*, which amounts
+construct a $f(\boldsymbol{x})$ that can to predict a numerical
+target output $\boldsymbol{y}$, and *structured output* tasks where the output
+vector $\boldsymbol{y}$ is a vector or a complex data structure where its
+elements are tightly interrelated. As will be reviewed in [Section @sec:ml_hep],
+most analysis problems amenable by machine learning  in high-energy
+physics experiments are framed as classification and regression tasks,
+while the use of structured of structured output task is instead
+not quite extensive. The reconstruction of the set and
+properties of physical objects in an event directly from
+the detector readout could be framed as a structured output task, if it
+was to be approached directly using machine learning algorithms
+instead of the procedures described in [Section @sec:event_reco].
 
-The goal of supervised learning is not to perform well on the learning set $L$
+The goal of supervised learning is not to perform well on the learning set $S$
 used for improving at the specified task, but rather to perform well
 for additional unseen observations sampled from the joint distribution
 $p(\boldsymbol{x}, \boldsymbol{y})$. Supervised
@@ -89,7 +104,7 @@ In fact, the problem of inferring a subset of latent variables $\boldsymbol{z}$
 of the statistical model for the raw detector readouts of
 a collider experiment $\boldsymbol{x}$,
 or from any deterministic function of it $\boldsymbol{s}(\boldsymbol{x})$,
-can be casted as a supervised learning problem. The learning set would consist
+can be casted as a supervised learning problem. The learning set $S$ would consist
 on simulated observations $\boldsymbol{x}_i$ (or a summary of it
 $\boldsymbol{s}(\boldsymbol{x}_i)$), and a matching subset of interest of the
 latent variables $\boldsymbol{y}_i \in \mathcal{Y} \subseteq \mathcal{Z}$.
@@ -97,7 +112,22 @@ The supervised
 learning task can then be viewed as the estimation of the conditional
 expectation value
 $\mathbb{E}_{p(\boldsymbol{y} | \boldsymbol{x} = \boldsymbol{x}_i)} [\boldsymbol{y}]$
-for each given input observation  $\boldsymbol{x}_i$.
+for each given input observation $\boldsymbol{x}_i$, thus characterising
+the probability distribution $p(\boldsymbol{y} | \boldsymbol{x})$.
+
+While several performance measures $P$ are possible for a given task $T$,
+for supervised learning is common to use performance measures that estimate
+expected prediction error $\textrm{EPE}$ of a given predictor function $f(\boldsymbol{x})$,
+which can normally be expressed as:
+$$
+\textrm{EPE}(f) = \mathop{\mathbb{E}}_{
+(\boldsymbol{x},\boldsymbol{y}) \sim p(\boldsymbol{x},\boldsymbol{y})}
+\left [ L(\boldsymbol{y}, f(\boldsymbol{x})) \right ]
+$$ {#eq:exp_pred_err}
+where $L$ is a *loss function*, that quantifies the discrepancy between
+the true output and the prediction. The quantity defined in
+[Equation @eq:exp_pred_err]
+is often also referred to as *test error* or also as *generalisation error*.
 
 <!-- regression, structured output and density estimation -->
 
