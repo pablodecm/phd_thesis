@@ -117,22 +117,91 @@ the probability distribution $p(\boldsymbol{y} | \boldsymbol{x})$.
 
 While several performance measures $P$ are possible for a given task $T$,
 for supervised learning is common to use performance measures that estimate
-expected prediction error $\textrm{EPE}$ of a given predictor function $f(\boldsymbol{x})$,
+the expected prediction error, or risk $R$, of a given predictor
+function $f(\boldsymbol{x})$,
 which can normally be expressed as:
 $$
-\textrm{EPE}(f) = \mathop{\mathbb{E}}_{
+R(f) = \mathop{\mathbb{E}}_{
 (\boldsymbol{x},\boldsymbol{y}) \sim p(\boldsymbol{x},\boldsymbol{y})}
 \left [ L(\boldsymbol{y}, f(\boldsymbol{x})) \right ]
 $$ {#eq:exp_pred_err}
 where $L$ is a *loss function*, that quantifies the discrepancy between
 the true output and the prediction. The quantity defined in
 [Equation @eq:exp_pred_err]
-is often also referred to as *test error* or also as *generalisation error*.
+is often also referred to as *risk*,
+*test error*,  or also as *generalisation error*.
+The optimal model for a given task $T$, thus depends on the definition
+of its loss function $L$, if the objective is minimising the
+expected prediction error. In practice, the expected prediction
+error cannot be estimated
+analytically because $p(\boldsymbol{x}, \boldsymbol{y})$ is not
+unknown, or not tractable in the case of a generative simulation model. The
+generalisation error has thus to be estimated from a subset of labelled
+samples $S'=\{(\boldsymbol{x}_0,\boldsymbol{y}_0),...,(\boldsymbol{x}_n',\boldsymbol{y}_n')\}$
+as follows:
+$$
+R(f) \approx R_\textrm{S'} = \frac{1}{n'}
+\sum_{(\boldsymbol{x}_i,\boldsymbol{y}_i) \in S'} L(\boldsymbol{y}_i,f(\boldsymbol{x}_i))
+$$
+which is also commonly referred to as *empirical risk*
+approximation
+$R_\textrm{S'}$(f) based on the set $S'$. The supervised learning
+problem can be then be stated as
+finding the function $\hat{f}$ from a class of functions $\mathcal{F}$, which
+depends on the particularities of the algorithm, that minimises the empirical
+risk over the learning set $S$:
+$$
+\hat{f} = \textrm{arg min}_{f \in \mathcal{F}} R_S(f)
+$$ {#eq:learning_erm}
+which is referred to as empirical risk minimisation (ERM) [@vapnik1999overview],
+and it is at core of most of the existing learning techniques, such as those
+described in [Section @sec:ml_techniques]. However, the ultimate goal of an
+learning algorithm is to find a function $f*$ that minimises the risk
+or expected prediction error $R(f)$:
+$$
+f^* = \textrm{arg min}_{f \in \mathcal{F}} R(f)
+$$ {#eq:learning_rm}
+where $R(f)$ is the quantity defined in [Equation @eq:exp_pred_err], corresponding
+to the generalisation error, or average expected performance on unseen observations
+sampled from $p(\boldsymbol{x}, \boldsymbol{y})$.
 
-<!-- regression, structured output and density estimation -->
+Because most learning algorithms optimise $f$, or its parameters,
+using the learning set $S$, the empirical risk $R_\textrm{S}(f)$ is not a good
+estimator of the expected generalisation error $R(f)$. In general, 
+$R_\textrm{S}(f)$ underestimates $R_\textrm{S}(f)$ because the statistical
+fluctuations of the finite number of observations in $S$ can be learnt to
+increase the performance on $S$, while they are not useful for prediction
+on a new set of observations. If the family of functions $\mathcal{F}$ conisdered
+in the learning algorithm is flexible enough, which is often the case,
+it is possible to achieve $R_\textrm{S}(f)=0$ for the learning set $S$ while
+the generalisation error $R(f)$ is well away from zero. This effect can
+actually lead to a degradation of the generalisation error while the empirical
+risk in the learning set is decreasing during the learning procedure, which
+is often referred as *over-fitting*.
+
+To compare different prediction functions or to realistically evaluate the
+generalised performance of a given prediction model $f$, it is useful to
+being able to compute unbiased estimates of $R(f)$. The simplest way to
+obtain such estimate is to divide the learning set $S$ in two disjoint
+random subsets $S_\textrm{train}$ and $S_\textrm{test}$. The train subset
+$S_\textrm{train}$ will be used by the learning algorithm to optimise
+the prediction function $f$ by means of empirical risk minimisation, as
+described in [Equation @eq:learning_erm]. The hold-out or test
+subset $S_\textrm{test}$ can then be used to obtain an unbiased estimation
+of the performance of $f$ on unseen observation.
+
+For some learning algorithms,
+the learning procedure, or *training*, is incremental so an estimation
+of the generalisation error as the training evolves is useful to stop
+the training procedure and avoid over-fitting, in what is referred as
+*early stopping*.  In those cases, as well as to compare and ensemble
+the results of various predictor functions, is useful to further sub-divide
+the training set in two disjoint sets.
+
+ 
 
 
-## Machine Learning Techniques {#sec:ml_tecniques}
+## Machine Learning Techniques {#sec:ml_techniques}
 
 ### Boosted Decision Trees
 
