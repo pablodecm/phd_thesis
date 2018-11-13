@@ -191,13 +191,17 @@ subset $S_\textrm{test}$ can then be used to obtain an unbiased estimation
 of the performance of $f$ on unseen observation.
 
 For some learning algorithms,
-the learning procedure, or *training*, is incremental so an estimation
+the learning process, or *training*, is incremental so an estimation
 of the generalisation error as the training evolves is useful to stop
-the training procedure and avoid over-fitting, in what is referred as
-*early stopping*.  In those cases, as well as to compare and ensemble
-the results of various predictor functions, is useful to further sub-divide
-the training set in two disjoint sets.
-
+the training procedure and avoid generalisation degradation
+due over-fitting, in what is referred as *early stopping*.
+In those cases, as well as to compare and ensemble
+the results of various predictor functions and model configurations,
+is useful to hold out a fraction
+of $S_\textrm{train}$ which is commonly referred as validation
+set $S_\textrm{valid}$. Alternative approaches exist to estimate
+the generalisation error exist, including *cross-validation*
+and its variations [add reference].
  
 
 
