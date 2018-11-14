@@ -253,11 +253,11 @@ as zero when the prediction $f(\boldsymbol{x})$ matches the
 target $y$ and one otherwise. The zero-one risk can then be expressed  as:
 $$
 R_{0-1}(f) = \mathop{\mathbb{E}}_{
-(\boldsymbol{x},\boldsymbol{y}) \sim p(\boldsymbol{x},\boldsymbol{y})}
-\left [ \mathbb{1}(\boldsymbol{y} \neq f(\boldsymbol{x})) \right ]
+(\boldsymbol{x},y) \sim p(\boldsymbol{x},y)}
+\left [ \mathbb{1}(y \neq f(\boldsymbol{x})) \right ]
 $$ {#eq:zero_one_risk}
-where $\mathbb{1}(\boldsymbol{y} \neq f(\boldsymbol{x}))$ is an indicator
-function. The zero-one loss is non-differentiable when $\boldsymbol{y} =f(\boldsymbol{x})$
+where $\mathbb{1}(y \neq f(\boldsymbol{x}))$ is an indicator
+function. The zero-one loss is non-differentiable when $y =f(\boldsymbol{x})$
 and its gradients are zero elsewhere, plus it is not convex so the
 minimisation task in [Equation @eq:learning_erm] cannot be
 easily tackled by optimisation algorithms. In fact, it can be proven
@@ -267,10 +267,10 @@ Bayes optimal classifier for the 0-1 loss can nevertheless be easily
 obtained from [Equation @eq:bayes_optimal] as a function
 of the conditional expectation:
 $$
-f_B(\boldsymbol{x}) = \mathop{\textrm{arg min}}_{\boldsymbol{y} \in \mathcal{Y}}  \mathop{\mathbb{E}}_{
-\boldsymbol{y} \sim p(\boldsymbol{y} | \boldsymbol{x})}
-\left [ \mathbb{1}(\boldsymbol{y} \neq f(\boldsymbol{x})) \right ] = 
-\mathop{\textrm{arg max}}_{y \in \mathcal{Y}} p(\boldsymbol{y} | \boldsymbol{x})
+f_B(\boldsymbol{x}) = \mathop{\textrm{arg min}}_{y \in \mathcal{Y}}  \mathop{\mathbb{E}}_{
+y \sim p(\boldsymbol{y} | \boldsymbol{x})}
+\left [ \mathbb{1}(y \neq f(\boldsymbol{x})) \right ] = 
+\mathop{\textrm{arg max}}_{y \in \mathcal{Y}} p(y | \boldsymbol{x})
 $$ {#eq:bayes_optimal}
 thus the optimal classifier amounts to the prediction of the most likely
 output category $y$ for a given input $\boldsymbol{x}$. The previous
@@ -300,9 +300,8 @@ $$
 f_B(\boldsymbol{x}) = \mathop{\textrm{arg min}}_{y \in \mathcal{Y}} 
 \mathop{\mathbb{E}}_{ y \sim p(y | \boldsymbol{x})}
 \left [ L_\textrm{ce} ( y , f(\boldsymbol{x})) \right ] = 
-p(\boldsymbol{y} = 1| \boldsymbol{x})
+p(y = 1| \boldsymbol{x})
 $$ {#eq:bayes_optimal_xe}
-
 
 <!-- basic loss for regression -->
 
