@@ -40,6 +40,9 @@ a quantifiable metric that scores the accuracy on such
 task $P$. In this section, the most common machine learning
 tasks that are of relevance for their possible use in particle
 collider experiments and similar scientific contexts are introduced.
+Simultaneously with the description of the tasks, performance
+measures and data, the main general machine learning concepts
+are reviewed.
 
 ### Probabilistic Classification and Regression
 
@@ -142,7 +145,7 @@ as follows:
 $$
 R(f) \approx R_\textrm{S'} = \frac{1}{n'}
 \sum_{(\boldsymbol{x}_i,\boldsymbol{y}_i) \in S'} L(\boldsymbol{y}_i,f(\boldsymbol{x}_i))
-$$
+$$ {#eq:erm}
 which is also commonly referred to as *empirical risk*
 approximation
 $R_\textrm{S'}$(f) based on the set $S'$. The supervised learning
@@ -190,10 +193,12 @@ described in [Equation @eq:learning_erm]. The hold-out or test
 subset $S_\textrm{test}$ can then be used to obtain an unbiased estimation
 of the performance of $f$ on unseen observation.
 
-For some learning algorithms,
-the learning process, or *training*, is incremental so an estimation
-of the generalisation error as the training evolves is useful to stop
-the training procedure and avoid generalisation degradation
+For many learning algorithms,
+the learning process, or *training*, is iterative: the function $f$
+is optimised incrementally based on the training data.
+In this cases, an estimation
+ generalisation error as the training evolves is useful to stop
+the training procedure and avoid the degradation of generalisation
 due over-fitting, in what is referred as *early stopping*.
 In those cases, as well as to compare and ensemble
 the results of various predictor functions and model configurations,
@@ -201,8 +206,22 @@ is useful to hold out a fraction
 of $S_\textrm{train}$ which is commonly referred as validation
 set $S_\textrm{valid}$. Alternative approaches exist to estimate
 the generalisation error exist, including *cross-validation*
-and its variations [add reference].
- 
+and its variations [@friedman2001elements], which are usually preferred when
+the the amount of training data is reduced.
+
+Another important concept for most machine learning techniques, is that of
+*hyper-parameters*. The majority of machine learning algorithms depend on
+a set of parameters that regulate the flexibility of the family
+of functions $\mathcal{F}$ to consider for empirical risk minimisation as
+well as the details of the optimisation followed to solve the task
+presented in [Equation @eq:learning_erm]. The expected performance of a given
+model depends on these parameters, however their optimal value depends on the
+particularities of the data (e.g. number of input dimensions or number
+of size of the data size). This motivates the notion of *hyper-parameter
+optimisation*, where the performance of the various choices of
+hyper-parameters on the validation set or by mean of cross-validation
+techniques, in order to select the best configuration.
+
 
 
 ## Machine Learning Techniques {#sec:ml_techniques}
