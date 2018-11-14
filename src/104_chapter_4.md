@@ -133,6 +133,7 @@ the true output and the prediction. The quantity defined in
 [Equation @eq:exp_pred_err]
 is often also referred to as *risk*,
 *test error*,  or also as *generalisation error*.
+
 The optimal model for a given task $T$, thus depends on the definition
 of its loss function $L$, if the objective is minimising the
 expected prediction error. In practice, the expected prediction
@@ -154,7 +155,7 @@ finding the function $\hat{f}$ from a class of functions $\mathcal{F}$, which
 depends on the particularities of the algorithm, that minimises the empirical
 risk over the learning set $S$:
 $$
-\hat{f} = \textrm{arg min}_{f \in \mathcal{F}} R_S(f)
+\hat{f} = \mathop{\textrm{arg min}}_{f \in \mathcal{F}} R_S(f)
 $$ {#eq:learning_erm}
 which is referred to as empirical risk minimisation (ERM) [@vapnik1999overview],
 and it is at core of most of the existing learning techniques, such as those
@@ -162,11 +163,33 @@ described in [Section @sec:ml_techniques]. However, the ultimate goal of an
 learning algorithm is to find a function $f*$ that minimises the risk
 or expected prediction error $R(f)$:
 $$
-f^* = \textrm{arg min}_{f \in \mathcal{F}} R(f)
+f^* = \mathop{\textrm{arg min}}_{f \in \mathcal{F}} R(f)
 $$ {#eq:learning_rm}
 where $R(f)$ is the quantity defined in [Equation @eq:exp_pred_err], corresponding
 to the generalisation error, or average expected performance on unseen observations
-sampled from $p(\boldsymbol{x}, \boldsymbol{y})$.
+sampled from $p(\boldsymbol{x}, \boldsymbol{y})$. The previous equation
+can be used to define the optimal prediction function $f_B(\boldsymbol{x})$,
+also referred as *Bayes model*, which represents the minimal error that any
+supervised learning algorithm can achieve due to the intrinsic statistical
+fluctuations and properties in the data.
+$$
+f_B(\boldsymbol{x}) = \mathop{\textrm{arg min}}_{\boldsymbol{y} \in \mathcal{Y}}  \mathop{\mathbb{E}}_{
+\boldsymbol{y} \sim p(\boldsymbol{y} | \boldsymbol{x})}
+\left [ L(\boldsymbol{y}, f(\boldsymbol{x})) \right ]
+$$ {#eq:bayes_optimal}
+where the last term indicates the optimal choice of target and
+can be obtained by explicitly considering the conditional
+expectation in the risk term described in [Equation @eq:learning_rm],
+that is
+$R(h) = \mathbb{E}_{\boldsymbol{x} \sim p(\boldsymbol{x} | \boldsymbol{y})}
+\left [ \mathbb{E}_{\boldsymbol{y} \sim p(\boldsymbol{y} | \boldsymbol{x})}
+\left [ L(\boldsymbol{y}, f(\boldsymbol{x})) \right ] \right ]$, that can
+be obtained using Bayes theorem. The Bayes model $f_B(\boldsymbol{x})$,
+and its corresponding risk $R(f_B)$, also referred as *residual error*,
+can only be estimated if $p(\boldsymbol{x},\boldsymbol{y})$ is known
+and the expectation can be computed analytically,
+which is very rarely the case in real world problem, but it can be useful
+nevertheless when benchmarking techniques in synthetic datasets.
 
 Because most learning algorithms optimise $f$, or its parameters,
 using the learning set $S$, the empirical risk $R_\textrm{S}(f)$ is not a good
@@ -222,6 +245,66 @@ optimisation*, where the performance of the various choices of
 hyper-parameters on the validation set or by mean of cross-validation
 techniques, in order to select the best configuration.
 
+The loss function $L$ of a supervised learning algorithm,
+that quantifies the discrepancies between the prediction and the true
+output target, depends on the task $T$ and formally defines it. A principled
+loss function for classification is the *zero-one loss*, which is defined
+as zero when the prediction $f(\boldsymbol{x})$ matches the
+target $y$ and one otherwise. The zero-one risk can then be expressed  as:
+$$
+R_{0-1}(f) = \mathop{\mathbb{E}}_{
+(\boldsymbol{x},\boldsymbol{y}) \sim p(\boldsymbol{x},\boldsymbol{y})}
+\left [ \mathbb{1}(\boldsymbol{y} \neq f(\boldsymbol{x})) \right ]
+$$ {#eq:zero_one_risk}
+where $\mathbb{1}(\boldsymbol{y} \neq f(\boldsymbol{x}))$ is an indicator
+function. The zero-one loss is non-differentiable when $\boldsymbol{y} =f(\boldsymbol{x})$
+and its gradients are zero elsewhere, plus it is not convex so the
+minimisation task in [Equation @eq:learning_erm] cannot be
+easily tackled by optimisation algorithms. In fact, it can be proven
+that finding the function $f$ in $F$ that minimises directly the 
+$R_{0-1}$ empirical risk for a training sample is a NP-hard problem. The
+Bayes optimal classifier for the 0-1 loss can nevertheless be easily
+obtained from [Equation @eq:bayes_optimal] as a function
+of the conditional expectation:
+$$
+f_B(\boldsymbol{x}) = \mathop{\textrm{arg min}}_{\boldsymbol{y} \in \mathcal{Y}}  \mathop{\mathbb{E}}_{
+\boldsymbol{y} \sim p(\boldsymbol{y} | \boldsymbol{x})}
+\left [ \mathbb{1}(\boldsymbol{y} \neq f(\boldsymbol{x})) \right ] = 
+\mathop{\textrm{arg max}}_{y \in \mathcal{Y}} p(\boldsymbol{y} | \boldsymbol{x})
+$$ {#eq:bayes_optimal}
+thus the optimal classifier amounts to the prediction of the most likely
+output category $y$ for a given input $\boldsymbol{x}$. The previous
+problem is normally referred to as *hard classification*, where the
+objective is to assign a category for each input observation. Because
+most problem in high-energy physics that can be casted as supervised learning,
+are ultimate inference problems as will be reviewed in [Section @sec:ml_hep],
+it more generally more useful to consider the problem of *soft classification*,
+which instead amounts to estimate the class probability for each input
+$\boldsymbol{x}$.
+
+Soft classification is specially useful when the classes are not separable,
+which is often the case for applications in collider experiments. Luckily,
+soft classification is also a consequence of the convex relaxation of the
+zero-one loss of [Equation @eq:zero_one_risk], which is used . For a two-class
+classification problem, e.g signal versus background,
+a useful approximation of the zero-one loss is the binary
+cross entropy, defined as:
+$$
+L_\textrm{ce} ( y , f(\boldsymbol{x})) = -y \log (f(\boldsymbol{x})) - (1-y) \log (1 - f(\boldsymbol{x}))
+$$ {#eq:binary_xe}
+where now the one-dimensional output prediction $f(\boldsymbol{x})$,
+when bounded between 0 and 1, will effectively approximate the conditional
+probability $p(\boldsymbol{y} = 1 | \boldsymbol{x})$. In fact, the Bayes
+optimal model for a binary cross-entropy classifier is:
+$$
+f_B(\boldsymbol{x}) = \mathop{\textrm{arg min}}_{y \in \mathcal{Y}} 
+\mathop{\mathbb{E}}_{ y \sim p(y | \boldsymbol{x})}
+\left [ L_\textrm{ce} ( y , f(\boldsymbol{x})) \right ] = 
+p(\boldsymbol{y} = 1| \boldsymbol{x})
+$$ {#eq:bayes_optimal_xe}
+
+
+<!-- basic loss for regression -->
 
 
 ## Machine Learning Techniques {#sec:ml_techniques}
@@ -231,3 +314,10 @@ techniques, in order to select the best configuration.
 ### Artificial Neural Networks
 
 ## Applications in High Energy Physics {#sec:ml_hep}
+
+### Signal vs Background Classification
+
+### Particle Identification and Regression
+
+
+
