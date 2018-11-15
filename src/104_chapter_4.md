@@ -290,18 +290,54 @@ classification problem, e.g signal versus background,
 a useful approximation of the zero-one loss is the binary
 cross entropy, defined as:
 $$
-L_\textrm{ce} ( y , f(\boldsymbol{x})) = -y \log (f(\boldsymbol{x})) - (1-y) \log (1 - f(\boldsymbol{x}))
+L_\textrm{BCE} ( y , f(\boldsymbol{x})) = -y \log (f(\boldsymbol{x})) - (1-y) \log (1 - f(\boldsymbol{x}))
 $$ {#eq:binary_xe}
 where now the one-dimensional output prediction $f(\boldsymbol{x})$,
-when bounded between 0 and 1, will effectively approximate the conditional
+when bounded between 0 and 1 (e.g. using a sigmoid/logistic function),
+will effectively approximate the conditional
 probability $p(\boldsymbol{y} = 1 | \boldsymbol{x})$. In fact, the Bayes
 optimal model for a binary cross-entropy classifier is:
+$$ \begin{aligned}
+f_B(\boldsymbol{x}) &= \mathop{\mathbb{E}}_{
+(\boldsymbol{x},y) \sim p(\boldsymbol{x},y)}
+\left [ L_\textrm{BCE} ( y , f(\boldsymbol{x}))  \right ] =
+p(y = 1| \boldsymbol{x}) \\
+&= \frac{p(\boldsymbol{x} | y = 1) p(y = 1)}{
+\sum_{\forall y_i \in \{0,1\}}p(\boldsymbol{x} | y = y_i) p(y = y_i)} =
+\left ( 1 +
+\frac{p(\boldsymbol{x} | y = 0) p(y = 0)}{
+p(\boldsymbol{x} | y = 1) p(y = 1)} \right )^{-1}
+\end{aligned}  
+$$ {#eq:bayes_optimal_bce}
+where the second line in the equation is a direct consequence of Bayes
+theorem and from the last term it can be clearly seen that the
+prediction output is monotonous with the density ratio between
+the probability density functions for each category. Simlar results can
+be obtained for the Bayes optimal classifier for other soft
+relaxations of the zero-one function. Machine
+learning binary classifiers will effectively approximate this quantity
+directly from empirical samples, where the prior probabilities of each
+class represent the relative presence of observations from each category.
+
+Binary cross entropy is a subclass of the more general *cross entropy* loss
+function, that can be used for $k$-categories classification, commonly referred
+to as multi-class classification. In these cases, a k-dimensional
+vector target $\boldsymbol{y}$
+is often constructed, where each component $y_i$ is one if the
+observation belongs to the class $i$ or zero otherwise, and the output of
+the prediction function $\boldsymbol{\hat{y}} = f(\boldsymbol{x})$ is also
+a vector of $k$ components. Within this framework, the cross entropy loss
+can then be defined as:
 $$
-f_B(\boldsymbol{x}) = \mathop{\textrm{arg min}}_{y \in \mathcal{Y}} 
-\mathop{\mathbb{E}}_{ y \sim p(y | \boldsymbol{x})}
-\left [ L_\textrm{ce} ( y , f(\boldsymbol{x})) \right ] = 
-p(y = 1| \boldsymbol{x})
-$$ {#eq:bayes_optimal_xe}
+L_\textrm{CE} ( \boldsymbol{y} , f(\boldsymbol{x})) = - \sum_i y_i \log \hat{y}_i
+$$ {#eq:general_ce}
+which can be used to recover [Equation @eq:binary_xe] when $k=2$, considering
+the one-dimensional target and prediction as the the i=1 elements 
+and that $y_0=1-y$ and $\hat{y}_0=1-f(x)$. If the prediction
+output is to represent exclusive class probabilities, as is the goal of soft
+classification, the prediction sum is expected to be one, i.e.
+$\sum_i \hat{y}_i=1$.
+
 
 <!-- basic loss for regression -->
 
