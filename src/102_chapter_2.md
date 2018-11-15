@@ -1,7 +1,7 @@
 # Experiments at Particle Colliders {#sec:experiment}
 
-\epigraph{Measure what is measurable and make measurable
-   what is not so.}{Galileo Galilei (attributed)}
+\epigraph{Measure what is measurable \\
+ and make measurable what is not so.}{Galileo Galilei (attributed)}
 
 In Chapter [-@sec:theory], the most successful testable theory to date
 describing the properties and dynamics of our universe at the most

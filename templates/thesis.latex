@@ -11,6 +11,7 @@
 \usepackage{amsfonts}
 \usepackage{epigraph}
 
+\setlength{\epigraphwidth}{0.6\textwidth}
 
 % some extra math symbols
 \DeclareMathSymbol{\Gamma}{\mathord}{operators}{"00}
