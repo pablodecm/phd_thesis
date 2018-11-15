@@ -347,14 +347,48 @@ $$
                   {\sum_{j=0}^{k} e^{f_j(\boldsymbol{x})/\tau}}
 $${#eq:softmax_function}
 where $f_i$ and $f_j$ refer to the $i$ and $j$ elements of the vector
-function $f(\boldsymbol{x})$ and $\tau$ is a parameter that regulates
-the softness of the operator.
+function $f(\boldsymbol{x})$ and $\tau$ is the temperature,
+a parameter that regulates the softness of the operator which is often
+omitted (i.e. $\tau=1$). In the limit of $\tau \rightarrow 0^{+}$,
+the probability of the largest component will tend to 1 while others to 0.
+The softmax output can be used to represent the probability distribution
+of a categorical distribution in a differentiable way, where the outcome
+represent the probabilities of each of the $k$ possible outcomes, which
+will be useful in [Chapter @sec:inferno].
+When the softmax function and the cross entropy loss are used together
+for multiclass classification, the optimal Bayes model is:
+$$
+\begin{aligned}
+{f_{B,i}} (\boldsymbol{x}) &= \mathop{\mathbb{E}}_{
+(\boldsymbol{x},y) \sim p(\boldsymbol{x},y)}
+\left [ L_\textrm{CE} ( y , f(\boldsymbol{x}))  \right ] =
+p(y = y_i| \boldsymbol{x}) \\
+&= \frac{p(\boldsymbol{x} | y = y_i) p(y = y_i)}{
+\sum_{\forall y_i \in \{0,..., k-1\}}p(\boldsymbol{x} | y = y_i) p(y = y_i)}
+\end{aligned}  
+$$ {#eq:bayes_optimal_bce}
+which can also be expressed as a function of a sum of density ratios
+of the categories.
 
-
-<!-- basic loss for regression -->
+<!-- TODO: basic loss for regression -->
 
 
 ## Machine Learning Techniques {#sec:ml_techniques}
+
+While the focus of the previous section was defining the main problems
+and properties that can be addressed with machine learning techniques,
+details about the actual computational and statistical
+procedures used for learning were not provided. In
+this chapter, the basis of the two classes of algorithms that are used
+in this work will
+be described in detailed: boosted decision trees and artificial neural networks.
+These families of learning methods are also those that are most commonly used for
+doing machine learning in experimental particle physics, mostly to solve
+supervised learning problems, as will be described in [Section @sec:ml_hep].
+The overview included here is by no means comprehensive about the mentioned
+approaches or alternative popular statistical learning techniques such
+as random forests or support vector machines, for which the following references
+provided a more extensive review [@friedman2001elements;@Goodfellow-et-al-2016;@louppe2014understanding].
 
 ### Boosted Decision Trees
 
