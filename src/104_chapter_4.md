@@ -396,6 +396,18 @@ provided a more extensive review [@friedman2001elements;@Goodfellow-et-al-2016;@
 
 ## Applications in High Energy Physics {#sec:ml_hep}
 
+Machine learning techniques, in particular supervised learning, are
+increasingly being used in experimental particle physics analysis
+at the LHC. In this section, the main use cases are described,
+linking the learning task with the statistical
+problems and properties which were described in [Chapter @sec:statinf]. In
+broad terms, most supervised learning at collider experiments
+can be viewed as a way to approximate the latent variables of the
+generative model based on simulated observations. Those latent variable
+approximations are often very informative about the parameters of interest
+and then can be used to construct summary statistics of the observations,
+which allow to carry out likelihood-free inference efficiently.
+
 ### Signal vs Background Classification
 
 ### Particle Identification and Regression
