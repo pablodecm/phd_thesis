@@ -334,9 +334,21 @@ $$ {#eq:general_ce}
 which can be used to recover [Equation @eq:binary_xe] when $k=2$, considering
 the one-dimensional target and prediction as the the i=1 elements 
 and that $y_0=1-y$ and $\hat{y}_0=1-f(x)$. If the prediction
-output is to represent exclusive class probabilities, as is the goal of soft
-classification, the prediction sum is expected to be one, i.e.
-$\sum_i \hat{y}_i=1$.
+output is to generally represent exclusive class probabilities, as is the goal of soft
+classification, the prediction sum is expected to be one. 
+A simple way to ensure the aforementioned property
+is to apply a function that ensures that the prediction outputs are in
+the range $[0,1]$ and normalised so $\sum_i \hat{y}_i=1$. The *softmax function*
+is a common choice in machine learning, which is a generalisation
+of the logistic function to
+$k$ dimensions, an is defined as:
+$$
+\hat{y}_i = \frac{e^{f_i(\boldsymbol{x})/\tau}}
+                  {\sum_{j=0}^{k} e^{f_j(\boldsymbol{x})/\tau}}
+$${#eq:softmax_function}
+where $f_i$ and $f_j$ refer to the $i$ and $j$ elements of the vector
+function $f(\boldsymbol{x})$ and $\tau$ is a parameter that regulates
+the softness of the operator.
 
 
 <!-- basic loss for regression -->
