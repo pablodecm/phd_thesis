@@ -51,7 +51,9 @@ A principled way to determine the Higgs self-coupling, and thus reconstruct
 the scalar potential of the Higgs field that is responsible for spontaneous
 symmetry breaking, is to measure the production of Higgs boson pairs (HH)
 [@Baglio:2012np]. The SM prediction for the inclusive HH production
-cross section for 13 TeV proton-proton collisions can be theoretically
+cross section for 13 TeV proton-proton collisions, assuming
+a $m_\textrm{H}=125.09\ \textrm{GeV}$ [@Aad:2015zhl; @Sirunyan:2017exp],
+can be theoretically
 calculated [@deFlorian:2016spz; @deFlorian:2013jea;
 @Dawson:1998py; @Borowka:2016ehy; @deFlorian:2015moa] obtaining:
 $$
@@ -82,15 +84,35 @@ the LHC experiments, including
 the one presented in this work. Several
 analysis looking for an resonant enhancement of HH production, leading
 to a peak in the reconstructed invariant mass of the Higgs pair due to
-decay of hypothetical mediating particle, have also been performed but these
-type of enhancement is not considered here. Regarding non-resonant
+decay of hypothetical mediating particle, have also been performed
+while that type of HH production is not considered in this analysis.
+Regarding non-resonant
 production of HH pairs at at $\sqrt{s} = 13\ \textrm{TeV}$,
 both ATLAS and CMS collaborations have carried out searches for different
 decay channels including
 $\textrm{b}\bar{\textrm{b}}\textrm{b}\bar{\textrm{b}}$ [@Aaboud:2018knk],
 $\textrm{b}\bar{\textrm{b}}\textrm{l} \nu\textrm{l} \nu$ [@Sirunyan:2017guj],
 $\textrm{b}\bar{\textrm{b}} \tau \tau$ [@Sirunyan:2017djm] and
-$\textrm{b}\bar{\textrm{b}} \gamma \gamma$ [@Sirunyan:2018iwt].
+$\textrm{b}\bar{\textrm{b}} \gamma \gamma$ [@Sirunyan:2018iwt]. In all
+the mentioned analysis, one of the Higgs bosons decays to a
+$\textrm{b}\bar{\textrm{b}}$ quark pair, which its the most likely
+decay (with a branching fraction of 57.7\% for
+$m_\textrm{H}=125\ \textrm{GeV}$ Higgs boson), in order
+to consider a large fraction of expected HH events. The CMS Collaboration
+has also carried out an analysis complementary to the one presented
+in this report, where one of the $\textrm{b}\bar{\textrm{b}}$ is
+highly boosted and thus reconstructed a single large-area jet
+[@Sirunyan:2018qca]. The most stringent expected upper limit on the
+SM HH production cross section to date, about 19 times the SM
+prediction, corresponds to the CMS
+$\textrm{b}\bar{\textrm{b}} \gamma \gamma$
+channel search [@Sirunyan:2017djm], which yielded an observed upper
+limit of 22 times the SM. The ATLAS
+$\textrm{b}\bar{\textrm{b}}\textrm{b}\bar{\textrm{b}}$ channel 
+search has a similar experimental reach [@Aaboud:2018knk], studying the
+same final
+state considered in this analysis but with a different methodology
+regarding summary statistic and background estimation.
 
 ## Anomalous Couplings Extensions
 
