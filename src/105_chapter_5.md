@@ -111,8 +111,15 @@ limit of 22 times the SM. The ATLAS
 $\textrm{b}\bar{\textrm{b}}\textrm{b}\bar{\textrm{b}}$ channel 
 search has a similar experimental reach [@Aaboud:2018knk], studying the
 same final
-state considered in this analysis but with a different methodology
-regarding summary statistic and background estimation.
+state considered in this analysis, however with a different methodology
+regarding their summary statistic and background estimation.
+
+
+The main characteristics and results of an analysis searching for
+HH production, with both Higgs bosons decaying into
+$\textrm{b}\bar{\textrm{b}}$ quark pairs which leading to four
+reconstructed jets, are included in this chapter.
+
 
 ## Anomalous Couplings Extensions
 
