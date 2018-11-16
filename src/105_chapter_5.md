@@ -74,7 +74,23 @@ theories of anomalous couplings [@Carvalho:2016rys], in a way so
 HH production could be observed with the data
 already collected at the LHC.
  
-
+The search of possible beyond the enhancements of HH production motivated
+early searches using $\sqrt{s} = 8\ \textrm{TeV}$ LHC data
+[@Aad:2015uka; @Sirunyan:2017tqo], as well
+as several analyses using data collected during 2015 and 2016 at
+the LHC experiments, including
+the one presented in this work. Several
+analysis looking for an resonant enhancement of HH production, leading
+to a peak in the reconstructed invariant mass of the Higgs pair due to
+decay of hypothetical mediating particle, have also been performed but these
+type of enhancement is not considered here. Regarding non-resonant
+production of HH pairs at at $\sqrt{s} = 13\ \textrm{TeV}$,
+both ATLAS and CMS collaborations have carried out searches for different
+decay channels including
+$\textrm{b}\bar{\textrm{b}}\textrm{b}\bar{\textrm{b}}$ [@Aaboud:2018knk],
+$\textrm{b}\bar{\textrm{b}}\textrm{l} \nu\textrm{l} \nu$ [@Sirunyan:2017guj],
+$\textrm{b}\bar{\textrm{b}} \tau \tau$ [@Sirunyan:2017djm] and
+$\textrm{b}\bar{\textrm{b}} \gamma \gamma$ [@Sirunyan:2018iwt].
 
 ## Anomalous Couplings Extensions
 
