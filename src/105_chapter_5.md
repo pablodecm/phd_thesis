@@ -25,9 +25,46 @@ of Higgs boson pairs,
 the data analysis framework is also used to set upper limits in
 the context of effective field (EFT) theories of anomalous
 couplings, that parametrise possible deviations from the SM. The
-main results presented in this section, have been carry out within
-the CMS Collaboration, and have been published and made public [@Sirunyan:2018tki].
+main results presented in this section have been carry out within
+the CMS Collaboration, and have been made public and published [@Sirunyan:2018tki].
 
 ## Introduction
 
+After the discovery of the Higgs boson (H) in 2012 with the LHC experiments
+[@higgs2012cms; @higgs2012atlas; @Chatrchyan:2013lba], a detailed
+study of its properties has become an important topic in fundamental
+physics. The experimental determinations of its couplings and rates
+of production by the CMS and ATLAS
+collaborations [@Aad:2015zhl; @Khachatryan:2016vau], including
+the recent observations of the associated production of the Higgs
+boson with a
+$\textrm{t}\bar{\textrm{t}}$ quark pair [@Sirunyan:2018hoz; @Aaboud:2018urx],
+are found to be compatible with the standard model (SM) theoretical
+predictions. That said, several predicted properties remain unmeasured
+because the difficulty of their experimental determination, the Higgs boson
+self-coupling being one of the most relevant parameters
+because it can modified by physics beyond the standard 
+model (BSM) [@Dib:2005re; @Grober:2010yv;
+@Contino:2012xk; @Dolan:2012ac; @Dawson:2015oha] .
 
+A principled way to determine the Higgs self-coupling, and thus reconstruct
+the scalar potential of the Higgs field that is responsible for spontaneous
+symmetry breaking, is to measure the production of Higgs boson pairs (HH)
+[@Baglio:2012np].
+
+
+## Anomalous Couplings Extensions
+
+
+## Trigger and Datasets
+
+
+## Analysis Strategy
+
+## Event Selection
+
+## Data-Driven Background Estimation
+
+## Systematic Uncertainties
+
+## Results
