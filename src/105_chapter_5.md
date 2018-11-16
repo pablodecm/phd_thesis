@@ -50,7 +50,30 @@ model (BSM) [@Dib:2005re; @Grober:2010yv;
 A principled way to determine the Higgs self-coupling, and thus reconstruct
 the scalar potential of the Higgs field that is responsible for spontaneous
 symmetry breaking, is to measure the production of Higgs boson pairs (HH)
-[@Baglio:2012np].
+[@Baglio:2012np]. The SM prediction for the inclusive HH production
+cross section for 13 TeV proton-proton collisions can be theoretically
+calculated [@deFlorian:2016spz; @deFlorian:2013jea;
+@Dawson:1998py; @Borowka:2016ehy; @deFlorian:2015moa] obtaining:
+$$
+\sigma(pp \rightarrow HH + jets) = 33.49^{+4.3\%}_{-6.0\%} (\textrm{scale})
+\pm 2.3\% (\alpha_S) \pm 2.1\% (\textrm{PDF})\ \textrm{fb}
+$$ {#eq:higgs_pair_xs}
+where the sources
+of uncertainties listed correspond to factorisation $\mu_\textrm{R}$ and
+renormalisation $\mu_\textrm{F}$ scales, uncertainties in the
+strong coupling constant $\alpha_S$ and as well as the uncertainty
+associated with the parton distribution functions (PDF) respectively. The
+predicted cross section of the HH production process
+in the SM is very small,
+several orders or magnitude smaller those of single Higgs production,
+and thus has not been directly observed the LHC data yet and will likely
+require a dedicated studies at the HL-LHC or other future colliders.
+New physics effects beyond the SM can enhance the HH production
+total and differential cross sections, e.g. as can be modelled by effective
+theories of anomalous couplings [@Carvalho:2016rys], in a way so
+HH production could be observed with the data
+already collected at the LHC.
+ 
 
 
 ## Anomalous Couplings Extensions
