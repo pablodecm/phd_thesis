@@ -201,10 +201,10 @@ SM & 1.0 & 1.0 & 0.0 & 0.0 & 0.0 \\
 ## Event Selection
 
 \begin{table}[htb]
- \caption{Event selection efficiency and number of events per
- $1\ \textrm{fb}^{-1}$ for the SM
+ \caption{Event selection efficiency and number of events expected per
+ each integrated $\ \textrm{fb}^{-1}$ for the standard model
  $\textrm{pp}\rightarrow HH \rightarrow \textrm{b}\bar{\textrm{b}}\textrm{b}\bar{\textrm{b}}$
- production signal.}
+ production process, as estimated from using simulated observations.}
 \centering
  \small
 \begin{tabular}{r l l  c c}
