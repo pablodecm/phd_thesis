@@ -162,6 +162,35 @@ are effective diagrams of BSM interactions.
 ](gfx/105_chapter_5/HH_feynman_diagrams.pdf){
 #fig:HH_feyman_diagrams width=100%}
 
+\begin{table}[htbp]
+\caption{Effective field theory parameters for the anomalous couplings
+benchmarks considered in this analysis, as defined in \cite{Carvalho:2015ttv},
+as well as the modified couplings corresponding to the standard model.}
+ \centering
+ \begin{tabular}{l c c c c c }
+\hline
+Benchmark point & $\kappa_\lambda$ &
+$\kappa_\textrm{t}$ & $c_2$ & $c_\textrm{g}$ & $c_\textrm{2g}$ \\
+\hline
+1 & 7.5 & 1.0 & -1.0 & 0.0 & 0.0 \\
+2  & 1.0 & 1.0 & 0.5 & -0.8 & 0.6\\ 
+3 & 1.0 & 1.0 & -1.5 & 0.0 & -0.8\\ 
+4 & -3.5 & 1.5 & -3.0 & 0.0 & 0.0\\ 
+5  & 1.0 & 1.0 & 0.0 & 0.8 & -1.0\\ 
+6  & 2.4 & 1.0 & 0.0 & 0.2 & -0.2\\ 
+7 & 5.0 & 1.0 & 0.0 & 0.2 & -0.2\\ 
+8 & 15.0 & 1.0 & 0.0 & -1.0 & 1.0\\ 
+9 & 1.0 & 1.0 & 1.0 & -0.6 & 0.6  \\ 
+10 & 10.0 & 1.5 & -1.0 & 0.0 & 0.0\\ 
+11  & 2.4 & 1.0 & 0.0 & 1.0 & -1.0\\ 
+12 & 15.0 & 1.0 & 1.0 & 0.0 & 0.0 \\ 
+Box & 0.0 & 1.0 & 0.0 & 0.0 & 0.0 \\
+\hline
+SM & 1.0 & 1.0 & 0.0 & 0.0 & 0.0 \\
+\hline
+\end{tabular}
+\label{table:benchmarks}
+\end{table}
 
 
 ## Trigger and Datasets
@@ -170,6 +199,52 @@ are effective diagrams of BSM interactions.
 ## Analysis Strategy
 
 ## Event Selection
+
+\begin{table}[htb]
+ \caption{Event selection efficiency and number of events per
+ $1\ \textrm{fb}^{-1}$ for the SM
+ $\textrm{pp}\rightarrow HH \rightarrow \textrm{b}\bar{\textrm{b}}\textrm{b}\bar{\textrm{b}}$
+ production signal.}
+\centering
+ \small
+\begin{tabular}{r l l  c c}
+  \hline
+                             & Produced  & Trigger & $\leq 4 \ \textrm{b}$tags \\
+  \hline
+   N events / fb     & 11.4     & 3.9   & 0.22 \\
+   Relative eff.              &          & 34\%  & 5.6\% \\
+   Efficiency                 &          & 34\%  & 1.9\% \\
+  \hline
+ \end{tabular}    
+ \label{tab:sigEff}
+\end{table}
+
+
+\begin{table}[htbp]
+ \caption{List of reconstruction-based features used as input of the
+ probabilistic classifier.}
+ \centering
+ \begin{tabular}{l l l}
+   \hline
+   HH system     &  H candidates      & Jet variables \\
+   \hline
+   $m_\textrm{X}$, $m_\textrm{HH}$, &
+   $m_{\textrm{H}_1}$, $m_{\textrm{H}_2}$  &
+   $p_{T_j}^{(i=1-4)}$, $\eta_{T_j}^{(i=1-4)}$,  \\
+   $p_T^{\textrm{H}_1 \textrm{H}_2}$        &
+   $p_T^{\textrm{H}_1}$, $p_T^{\textrm{H}_2}$ &
+   $H_T^{\textrm{rest}}$, $H_T$ \\
+   $\cos \theta_{\textrm{H}_1 \textrm{H}_2 -\textrm{H}_1}^{\star}$ &
+   $\cos \theta_{\textrm{H}_1 -j_1}^{\star}$ & 
+   $\textrm{CMVA}_3$, $\textrm{CMVA}_4$, \\
+   &
+   $\Delta R_{jj}^{\textrm{H}_1}$, $\Delta R_{jj}^{\textrm{H}_2}$,
+   $\Delta \phi_{jj}^{\textrm{H}_1}$, $\Delta \phi_{jj}^{\textrm{H}_2}$ & \\
+   \hline
+ \end{tabular}
+ \label{tab:mvaVars}
+\end{table}
+
 
 ## Data-Driven Background Estimation {#sec:bkg_est}
 
