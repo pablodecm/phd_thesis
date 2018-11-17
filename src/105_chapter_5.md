@@ -139,6 +139,30 @@ and is described in [Section @sec:bkg_est].
 
 ## Anomalous Couplings Extensions
 
+$$
+\begin{aligned}
+\mathcal{L}_\textrm{H} = 
+\frac{1}{2} \partial_{\mu}\, \textrm{H} \, \partial^{\mu} \textrm{H} -
+\frac{1}{2} m_\textrm{H}^2 \textrm{H}^2 -
+\kappa_\lambda \,  \lambda_\textrm{SM} v\, \textrm{H}^3 \\
+- \frac{m_\textrm{t}}{v}(v+ {\kappa_\textrm{t}} \,  \textrm{H} +
+ \frac{c_2}{v} \textrm{HH} ) \,( \bar{\textrm{t}}_\textrm{L} \textrm{t}_\textrm{R} + \textrm{h.c.}) \\ 
++ \frac{1}{4} \frac{\alpha_\textrm{S}}{3 \pi v} ( c_\textrm{g} \, \textrm{H} -
+ \frac{ c_\textrm{2g}}{2 v} \,  \textrm{HH}) \,  G^{\mu \nu}G_{\mu\nu}\,
+\end{aligned}
+$$ {#eq:eft_lag}
+
+![Set of HH production Feynman diagrams, representing
+all gluon-gluon fusion at leading order. The interactions
+depicted by (a) and (b) represent processes that are
+expected within the SM, while the contact interactions between
+the Higgs bosons and gluons (c) and (d), as well the contact interaction
+of two Higgs bosons with top quarks (e),
+are effective diagrams of BSM interactions.
+](gfx/105_chapter_5/HH_feynman_diagrams.pdf){
+#fig:HH_feyman_diagrams width=100%}
+
+
 
 ## Trigger and Datasets
 
