@@ -115,10 +115,26 @@ state considered in this analysis, however with a different methodology
 regarding their summary statistic and background estimation.
 
 
-The main characteristics and results of an analysis searching for
-HH production, with both Higgs bosons decaying into
-$\textrm{b}\bar{\textrm{b}}$ quark pairs which leading to four
-reconstructed jets, are included in this chapter.
+A detailed description of the main characteristics and results
+of an analysis searching for
+HH production using CMS experiment data, with both Higgs
+bosons decaying into $\textrm{b}\bar{\textrm{b}}$ quark pairs,
+is included in this chapter. The data considered was acquired 
+by the CMS detector during the year 2016, corresponding to
+an integrated luminosity of $35.9\ \textrm{fb}^{-1}$. In the final
+state considered, each of the four $\textrm{b}$ quark results in a
+distinct reconstructed jet. While it is the most likely
+decay mode for the Higgs pair, a much larger quantity of similar events with
+four and more jets are expected from hard quantum chromodynamics (QCD)
+interactions. The differences between signal and background are used to
+increase the sensitivity by using as a summary statistic the prediction
+of a multivariate probabilistic classifier.
+Because the expected contribution from the QCD multi-jet
+processes is so abundant, it could
+not be modelled with the required precision with the available simulations,
+and a method for carrying out a fully data-driven background estimation
+was developed,
+and is described in [Section @sec:bkg_est].
 
 
 ## Anomalous Couplings Extensions
@@ -131,7 +147,7 @@ reconstructed jets, are included in this chapter.
 
 ## Event Selection
 
-## Data-Driven Background Estimation
+## Data-Driven Background Estimation {#sec:bkg_est}
 
 ## Systematic Uncertainties
 
