@@ -357,7 +357,7 @@ such as the apparent vacuum meta-stability [cite] or
 the strong CP problem [cite]. Some of these issues can be clarified
 once the higher precision measurements of the SM become available.
 
-### Possible Extensions
+### Possible Extensions {#sec:possible_ext}
 
 The known limitations stated in the previous section have motivated
 the development of alternative theories for describing fundamental

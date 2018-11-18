@@ -142,27 +142,21 @@ and is described in [Section @sec:bkg_est].
 At proton-proton colliders, the main production mechanism for a Higgs
 pair is *gluon fusion*. Even at leading order, the interaction includes
 a fermion loop as depicted in the top diagrams of
-[Figure @fig:HH_feynman_diagrams], largely dominated by contribution from
+[Figure @fig:HH_feynman_diagrams], explaining the low expected
+production rate listed in [Equation @eq:higgs_pair_xs],
+which is largely dominated by the contribution from
 top and bottom quarks.
 The most common production mode, labelled as (b) in
 [Figure @fig:HH_feynman_diagrams], features a triangular fermion loop
 followed by the production of an off-self Higgs boson, that in turn
 decays on two on-shell Higgs bosons via a triple Higgs boson interaction
-vertex.
+vertex. In addition, is also possible within the SM at leading order
+to produce a pair of Higgs bosons through a fermion box loop diagram,
+as shown in diagram (a) of [Figure @fig:HH_feynman_diagrams], which
+evidently does not depend on the Higgs self-coupling. Both
+box and triangle loop contributions destructively interfere in the SM
+to give rise to the total HH production amplitude.
 
-
-$$
-\begin{aligned}
-\mathcal{L}_\textrm{H} = 
-\frac{1}{2} \partial_{\mu}\, \textrm{H} \, \partial^{\mu} \textrm{H} -
-\frac{1}{2} m_\textrm{H}^2 \textrm{H}^2 -
-\kappa_\lambda \,  \lambda_\textrm{SM} v\, \textrm{H}^3 \\
-- \frac{m_\textrm{t}}{v}(v+ {\kappa_\textrm{t}} \,  \textrm{H} +
- \frac{c_2}{v} \textrm{HH} ) \,( \bar{\textrm{t}}_\textrm{L} \textrm{t}_\textrm{R} + \textrm{h.c.}) \\ 
-+ \frac{1}{4} \frac{\alpha_\textrm{S}}{3 \pi v} ( c_\textrm{g} \, \textrm{H} -
- \frac{ c_\textrm{2g}}{2 v} \,  \textrm{HH}) \,  G^{\mu \nu}G_{\mu\nu}\,
-\end{aligned}
-$$ {#eq:eft_lag}
 
 ![Set of HH production Feynman diagrams, representing
 all gluon-gluon fusion at leading order. The interactions
@@ -173,6 +167,51 @@ of two Higgs bosons with top quarks (e),
 are effective diagrams of BSM interactions.
 ](gfx/105_chapter_5/HH_feynman_diagrams.pdf){
 #fig:HH_feynman_diagrams width=100%}
+
+New physics at higher energy scales can affect processes and
+observables at the electroweak scale, such as Higgs pair production.
+As reviewed
+in [Section @sec:possible_ext], the effective field theory (EFT) approach
+is a way to calculate observables of possible extensions of the SM
+without being tied to a certain class of BSM model, by adding
+non-renormalisable local interactions. In the context of Higgs
+pair production, the effect of new operators can be parametrised
+by the following effective Lagrangian: 
+$$
+\begin{aligned}
+\mathcal{L}_\textrm{H} = 
+\frac{1}{2} \partial_{\mu}\, \textrm{H} \, \partial^{\mu} \textrm{H} -
+\frac{1}{2} m_\textrm{H}^2 \textrm{H}^2 -
+{\color{red} \kappa_\lambda} \,  \lambda_\textrm{SM} v\, \textrm{H}^3 \\
+- \frac{m_\textrm{t}}{v}(v+ {\color{red}\kappa_\textrm{t}} \,  \textrm{H} +
+ \frac{{\color{red}c_2}}{v} \textrm{HH} ) \,( \bar{\textrm{t}}_\textrm{L} \textrm{t}_\textrm{R} + \textrm{h.c.}) \\ 
++ \frac{1}{4} \frac{\alpha_\textrm{S}}{3 \pi v} ( {\color{red}c_\textrm{g}} \, \textrm{H} -
+ \frac{ {\color{red}c_\textrm{2g}}}{2 v} \,  \textrm{HH}) \,  G^{\mu \nu}G_{\mu\nu}\,
+\end{aligned}
+$$ {#eq:eft_lag}
+
+where $v=246\ \textrm{GeV}$ is the vacuum expectation value of the
+Higgs field. After neglecting the enhanced coupling of the Higgs boson
+with bottom quarks due its experimental constraints and the presence
+of new light particles,
+a total of five EFT parameters remain, which are
+highlighted by red colour in [Equation @eq:eft_lag]. The factors
+$\kappa_\lambda = \lambda_\textrm{HHH}/\lambda_\textrm{SM}$ and
+$\kappa_\textrm{t}= y_\textrm{t}/y_\textrm{SM}$ account for possible
+deviations from the SM of the Higgs boson trilinear coupling and the
+top quark Yukawa coupling, thus effectively
+modifying the relative weight of the SM Feynman diagrams described
+at the beginning of the section. The absolute parameters $c_g$, $c_2g$
+and $c_2$ instead lead to new contact interactions not expected
+within the SM, represented in the (c), (d) and (e) Feynman diagrams
+of [Figure @fig:HH_feynman_diagrams], and which could arise by mediation of heavy particles
+beyond the electroweak scale.
+The previous parametrisation is commonly referred to as
+dimension-six non-linear or anomalous couplings EFT,
+however alternative approaches exist,
+such as the linear EFT which is more appropriate to
+model smaller BSM effects [@Falkowski:2001958].
+
 
 \begin{table}[htbp]
 \caption{Effective field theory parameters for the anomalous couplings
