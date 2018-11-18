@@ -708,7 +708,7 @@ can be expressed as the ratio:
 $$
 w(\boldsymbol{z}_s) = \frac{p_R ( \boldsymbol{z}_\textrm{p}|\boldsymbol{\theta}_R)}{p_Q ( \boldsymbol{z}_\textrm{p}|\boldsymbol{\theta}_Q)}
 $$ {#eq:gen_level_reweighting}
-which is referred as *generator-level re-weighting*, and in some casessometimes
+which is referred as *generator-level re-weighting*, and in some cases
 it can even be done analytically. The concept of *re-weighting* will be useful to
 model different parameter points in [Chapter @sec:higgs_pair] with
 single set of simulated observations as well as to understand how

@@ -212,6 +212,32 @@ however alternative approaches exist,
 such as the linear EFT which is more appropriate to
 model smaller BSM effects [@Falkowski:2001958].
 
+A theoretical prediction for the differential and total cross section
+for each point in the mentioned five-dimensional EFT parameter space
+$(\kappa_\lambda, \kappa_\textrm{t}, c_2, c_\textrm{g}, c_\textrm{2g})$
+can be computed as outlined in [Section @sec:pheno]. The distribution
+of the final state kinematical variables, i.e. the relative angle and
+momenta of the Higgs pair, can depend substantially on the value of some
+of these couplings. A naive grid or random scan of the
+full five-dimensional space would require simulated samples
+of observations at too many EFT points and hence it is not
+feasible. While this signal modelling issue could be tackled by means of
+event re-weighting, as described in [Section @sec:re-weighting], it is
+useful to consider a efficient methodology to represent the main
+properties of the anomalous couplings parameter space where only a reduced
+number of EFT points are considered.
+
+For the analysis presented in this work, a total of twelve EFT 
+points referred to as *benchmarks* are considered, which have
+been chosen via a agglomerative 
+clustering procedure so they represent the main kinematical
+typologies in the parameter space. The details of the
+clustering methodology are detailed in [@Carvalho:2015ttv], but they
+amount to the construction of a distance between the main kinematic
+distributions at generator level of each pair of EFT. The parameters
+corresponding to each of the benchmarks, as well as those corresponding to
+the SM model and the case where Higgs boson self coupling is zero,
+are included in \autoref{table:benchmarks}.
 
 \begin{table}[htbp]
 \caption{Effective field theory parameters for the anomalous couplings
