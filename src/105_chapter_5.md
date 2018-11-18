@@ -137,7 +137,19 @@ was developed,
 and is described in [Section @sec:bkg_est].
 
 
-## Anomalous Couplings Extensions
+## Higgs Pair Production and Anomalous Couplings
+
+At proton-proton colliders, the main production mechanism for a Higgs
+pair is *gluon fusion*. Even at leading order, the interaction includes
+a fermion loop as depicted in the top diagrams of
+[Figure @fig:HH_feynman_diagrams], largely dominated by contribution from
+top and bottom quarks.
+The most common production mode, labelled as (b) in
+[Figure @fig:HH_feynman_diagrams], features a triangular fermion loop
+followed by the production of an off-self Higgs boson, that in turn
+decays on two on-shell Higgs bosons via a triple Higgs boson interaction
+vertex.
+
 
 $$
 \begin{aligned}
@@ -160,7 +172,7 @@ the Higgs bosons and gluons (c) and (d), as well the contact interaction
 of two Higgs bosons with top quarks (e),
 are effective diagrams of BSM interactions.
 ](gfx/105_chapter_5/HH_feynman_diagrams.pdf){
-#fig:HH_feyman_diagrams width=100%}
+#fig:HH_feynman_diagrams width=100%}
 
 \begin{table}[htbp]
 \caption{Effective field theory parameters for the anomalous couplings
