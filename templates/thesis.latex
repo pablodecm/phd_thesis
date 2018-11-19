@@ -66,6 +66,9 @@ $if(institute)$
 $endif$
 \date{$date$}
 
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+
 $if(draft)$
 \usepackage{prelim2e}
 \renewcommand{\PrelimWords}{%

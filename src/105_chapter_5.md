@@ -357,10 +357,44 @@ including only a the subset of
 data corresponding to periods when the relevant detecting systems were
 running regularly and no problematic anomalies were discovered.
 
-Because the rates for the main background processes of
-this analysis are expected to be much higher than those
-of the signal, an efficient online trigger selection is essential
-for maximising the sensitivity of the analysis.
+Because the rates for the main background of
+this analysis, events originating from QCD multi-jet events,
+are expected to be much higher that those of the signal,
+an efficient online trigger selection is essential
+for maximising the sensitivity of the analysis. While standard trigger
+paths that select events with several high-energy jets are available
+in CMS, a more practical strategy is to include some b-tagging
+requirements within the high-level trigger sequence. Hence, this
+analysis re-uses the multi-jet trigger paths that were developed for
+the resonant $\textrm{pp} \rightarrow \textrm{X} \rightarrow \textrm{HH} \rightarrow
+\textrm{b}\bar{\textrm{b}}\textrm{b}\bar{\textrm{b}}$ [@Sirunyan:2018zkk], where $X$
+is a heavy mediating particle, both requiring that at least three jets
+have are b-tagged by the online version of the Combined Secondary
+Vertex (CSV) algorithm [@Sirunyan:2017ezt].
+
+The full specification trigger selection used is rather complex, but
+is represented by a logical OR of the 
+following two HLT trigger paths that were in place
+during the CMS 2016 data taking period:
+
+  - HLT_DoubleJet90_Double30_TripleBTagCSV_p087
+  - HLT_QuadJet45_TripleBTagCSV_p087 
+
+which represent a particular online selection sequence at the HLT, which is
+preceded by a given set of L1 trigger seeds, as conceptually reviewed in
+[Section @sec:trigger]. The L1 trigger paths depend on each of the paths,
+but are logical OR between several conditions requiring a certain number
+of L1 jets over a given energy or the total deposited energy on the
+calorimeter $H_T$ to be over a certain threshold. At the HLT, both paths
+require some quality criteria on the primary vertex reconstructed 
+and at least 4 reconstructed jets within a pseudo-rapidity range
+defined by $|\eta| < 2.6$. The first path requires the momenta of two
+of the reconstructed jets $p_T>90\ \textrm{GeV}$, while for other two
+$p_T>30\ \textrm{GeV}$. The second path instead requires at least
+four reconstructed jets with $p_T>45\ \textrm{GeV}$. As mentioned,
+both paths include a b-tagging requirement, mainly that the value
+of the online CSV discriminator is larger than a working point of 0.87,
+for three of the eight most energetic jets of the event.
 
 
 ## Event Selection {#sec:event_selection}
