@@ -270,17 +270,65 @@ SM & 1.0 & 1.0 & 0.0 & 0.0 & 0.0 \\
 \end{table}
 
 
-## Trigger and Datasets
-
-
 ## Analysis Strategy
 
-## Event Selection
+The goal of this analysis is to carry out statistical inference on
+the occurrence of
+$\textrm{pp} \rightarrow \textrm{HH}\rightarrow
+\textrm{b}\bar{\textrm{b}}\textrm{b}\bar{\textrm{b}}$, as predicted by the
+SM or in BSM effective field theory extensions, based on experimental data
+acquired by the CMS detector on 2016. The type of statistical
+inference applicable to a search is hypothesis testing, as introduced in
+[Section @sec:hypo_test]. In principle, we would like to test whether
+the null hypothesis $H_0$ corresponding to the SM without HH production
+hypothesis can be rejected. If the previous $H_0$ hypothesis cannot be
+rejected, which is
+expected given the previous experimental results, the objective
+instead becomes setting exclusion upper limits on the signal
+cross section for a given model including Higgs pair production,
+thus considering as the null
+hypothesis $H_0$ the SM and BSM models of HH production considered.
+In either case, we would like adapt an analysis strategy
+that maximises the sensitivity to the presence of HH production, which
+amounts to minimising the Type II error rate for a given fixed Type I error
+rate in statistical terms.
+
+The event selection in this analysis will include some custom online requirements,
+which were set at trigger level to reduce the total rate of data collection
+while keeping a large fraction of events relevant for this analysis,
+as well as an offline selection to reduce the contribution
+of background processes that are not well modelled and simplify the
+construction of powerful summary statistics. The online trigger requirements
+as well as the characteristics of the datasets considered in this analysis
+are described in [Section @sec:online_and_datasets], while the event
+selection adopted is included in detail in [Section @sec:event_selection].
+
+After a basic event selection, mainly comprising the filtering of
+events with four or more b-tagged
+jets, a subset including four of the reconstructed jets within each event is
+paired to construct two *di-jet candidates*, as an attempt to recover
+the kinematic properties of the intermediate Higgs boson particles, including
+their reconstructed masses. 
+The information from the two di-jet candidates can in turn be combined
+to compute variables that can approximate the features of the Higgs
+pair system, which are also quite useful for inference. A set of variables
+from the selected jets, the H candidates and the HH system, are combined in
+a single discriminating variable obtained by training a probabilistic
+classification machine learning model, specifically one based on boosted decision
+trees, to separate signal from background, in a analogous manner to what
+was described in [Section @sec:sig_vs_bkg].
+
+
+
+## Trigger and Datasets {#sec:online_and_datasets}
+
+## Event Selection {#sec:event_selection}
 
 \begin{table}[htb]
  \caption{Event selection efficiency and number of events expected per
  each integrated $\ \textrm{fb}^{-1}$ for the standard model
- $\textrm{pp}\rightarrow HH \rightarrow \textrm{b}\bar{\textrm{b}}\textrm{b}\bar{\textrm{b}}$
+ $\textrm{pp}\rightarrow \textrm{HH}
+ \rightarrow \textrm{b}\bar{\textrm{b}}\textrm{b}\bar{\textrm{b}}$
  production process, as estimated from using simulated observations.}
 \centering
  \small

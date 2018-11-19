@@ -1546,10 +1546,11 @@ from simulated data, which has been recently referred as Approximate
 Frequentist Computation (AFC) [@Brehmer:2018eca].
 
 
+### Hypothesis Testing {#sec:hypo_test}
 
 ### Parameter Estimation
 
-### Hypothesis Testing
+
 
 
 

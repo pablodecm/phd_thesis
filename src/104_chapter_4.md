@@ -408,7 +408,7 @@ approximations are often very informative about the parameters of interest
 and then can be used to construct summary statistics of the observations,
 which allow to carry out likelihood-free inference efficiently.
 
-### Signal vs Background Classification
+### Signal vs Background Classification {#sec:sig_vs_bkg}
 
 ### Particle Identification and Regression
 
