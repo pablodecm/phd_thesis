@@ -136,7 +136,7 @@ and a method for carrying out a fully data-driven background estimation
 was developed,
 and is described in [Section @sec:bkg_est].
 
-## Higgs Pair Production and Anomalous Couplings
+## Higgs Pair Production and Anomalous Couplings {#sec:higgs_pair_prod}
 
 At proton-proton colliders, the main production mechanism for a Higgs
 pair is *gluon fusion*. Even at leading order, the interaction includes
@@ -268,8 +268,7 @@ SM & 1.0 & 1.0 & 0.0 & 0.0 & 0.0 \\
 \label{table:benchmarks}
 \end{table}
 
-
-## Analysis Strategy
+## Analysis Strategy {#sec:analisis_strategy}
 
 The goal of this analysis is to carry out statistical inference on
 the occurrence of
@@ -394,7 +393,27 @@ $p_T>30\ \textrm{GeV}$. The second path instead requires at least
 four reconstructed jets with $p_T>45\ \textrm{GeV}$. As mentioned,
 both paths include a b-tagging requirement, mainly that the value
 of the online CSV discriminator is larger than a working point of 0.87,
-for three of the eight most energetic jets of the event.
+for three of the eight most energetic reconstructed jets in the event.
+
+Samples of simulated observations from Higgs pair production are
+simulated using MadGraph5_aMC@NLO [@Alwall:2014hca] at leading-order,
+following the relevant prescriptions, including the loop
+factor on an event-by-event basis detailed in [@Hespel:2014sla]. A total
+of 300000 events have been simulated for the SM model production component,
+as well as an older version of the clustering benchmarks discussed
+in [Section @sec:higgs_pair_prod]
+and the $\kappa_\lambda=0$ box model. Regading the parton
+distribution function used for generation, the NNPDF30_LO_AS_0130_NF_4 n 
+set [@Ball:2014uwa] was used for all samples.
+
+The samples for the benchmark samples listed in \autoref{table:benchmarks},
+or any other EFT point for that matter, can be generated from the
+previous samples by means of generator re-weighting. As described in
+[Section @sec:re-weighting], the latent variables of the simulator can
+be used to model a different sample by computing observables after
+assigning to each event a weight proportional to the ratio between
+probability density functions.
+
 
 
 ## Event Selection {#sec:event_selection}
