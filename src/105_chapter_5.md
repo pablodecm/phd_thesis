@@ -136,7 +136,6 @@ and a method for carrying out a fully data-driven background estimation
 was developed,
 and is described in [Section @sec:bkg_est].
 
-
 ## Higgs Pair Production and Anomalous Couplings
 
 At proton-proton colliders, the main production mechanism for a Higgs
@@ -318,9 +317,51 @@ classification machine learning model, specifically one based on boosted decisio
 trees, to separate signal from background, in a analogous manner to what
 was described in [Section @sec:sig_vs_bkg].
 
+The statistical inference in this analysis is based on constructing
+a binned likelihood of the expected distribution of the classifier
+output for events originated from signal and background processes
+in comparison with the observed data, which also accounts for the
+effect of nuisance parameters as discussed in
+[Section @sec:synthetic_likelihood]. While both the SM and the
+various BSM signal models can be modelled using simulated observations,
+the main background of the analysis, multi-jet QCD production, is hard
+to model by simulation. Thus a data-driven background estimation method,
+described in detail in [Section @sec:bkg_est],
+is used both for training the probabilistic classifier and for modelling
+the background contribution in the binned likelihood.
 
+After including the effect of the relevant sources of systematic
+uncertainty, which are listed in [Section @sec:syst_unc],
+expected and observed upper limits are obtained for
+the $\textrm{pp} \rightarrow \textrm{HH}\rightarrow
+\textrm{b}\bar{\textrm{b}}\textrm{b}\bar{\textrm{b}}$ cross section for each
+of the benchmarks listed in \autoref{table:benchmarks}, as well as for the
+SM HH production process. The results, which are contained in
+[Section @sec:results], are include the upper limit on the mentioned
+cross section a function of the Higgs self-coupling factor parameter
+$\kappa_\lambda$ when $\kappa_\textrm{t}=1$ and the other EFT
+parameters are null. While the analysis could be redone for
+any arbitrary EFT point by recomputing the limits
+for the particular model, the results can also be more
+easily reinterpreted by assuming the limit obtained for
+the closest benchmark.
 
 ## Trigger and Datasets {#sec:online_and_datasets}
+
+The experimental data considered in this analysis was collected by
+the CMS detector in 2016 from proton-proton collisions at
+centre-of-mass energy $\sqrt{s} = 13\ \textrm{TeV}$. The total integrated
+luminosity at the CMS interaction point corresponding to the certified set
+of datasets used in this analysis is $35.9\ \textrm{fb}^{-1}$, i.e.
+including only a the subset of
+data corresponding to periods when the relevant detecting systems were
+running regularly and no problematic anomalies were discovered.
+
+Because the rates for the main background processes of
+this analysis are expected to be much higher than those
+of the signal, an efficient online trigger selection is essential
+for maximising the sensitivity of the analysis.
+
 
 ## Event Selection {#sec:event_selection}
 
@@ -373,6 +414,6 @@ was described in [Section @sec:sig_vs_bkg].
 
 ## Data-Driven Background Estimation {#sec:bkg_est}
 
-## Systematic Uncertainties
+## Systematic Uncertainties {#sec:syst_unc}
 
-## Results
+## Results {#sec:results}
