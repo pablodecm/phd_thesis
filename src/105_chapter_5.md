@@ -471,10 +471,23 @@ is to consider for each event the set of reconstructed particle-flow
 jets with $p_T > 30\ \textrm{GeV}$ and $\lvert \eta \rvert < 2.4$. An event
 is only selected if four or more jet passing those requirement are found.
 
+After filtering out jets with lower energy or out of the inner tracker
+acceptance, at least four of the remaining jets are required to be
+b-tagged to consider the event in the final selection. The medium
+working point of the CMVA discriminator [@Sirunyan:2017ezt], defined
+as the value of the discriminator for which the expected mis-identification
+of light quarks and gluons is 1\% is used as b-tagging criteria. The object
+selection efficiency for jets originating from the b quarks produced in
+the decay of the Higgs boson pairs has been estimated from simulated
+samples to be around 65\%. The absolute and relative selection efficiencies
+of the trigger and offline selection ,
+and the total number of expected events per $\textrm{fb}^{-1}$,
+for the SM HH production process are included in \autoref{tab:sigEff},
+as estimated from the simulated observations.
 
 \begin{table}[htb]
  \caption{Event selection efficiency and number of events expected per
- each integrated $\ \textrm{fb}^{-1}$ for the standard model
+ each integrated $\textrm{fb}^{-1}$ of integrated luminosity for the standard model
  $\textrm{pp}\rightarrow \textrm{HH}
  \rightarrow \textrm{b}\bar{\textrm{b}}\textrm{b}\bar{\textrm{b}}$
  production process, as estimated from using simulated observations.}
@@ -482,7 +495,7 @@ is only selected if four or more jet passing those requirement are found.
  \small
 \begin{tabular}{r l l  c c}
   \hline
-                             & Produced  & Trigger & $\leq 4 \ \textrm{b}$tags \\
+                             & Produced  & Trigger & $\geq 4 \ \textrm{b}$tags \\
   \hline
    N events / fb     & 11.4     & 3.9   & 0.22 \\
    Relative eff.              &          & 34\%  & 5.6\% \\
@@ -491,6 +504,35 @@ is only selected if four or more jet passing those requirement are found.
  \end{tabular}    
  \label{tab:sigEff}
 \end{table}
+
+The goal of the previous selection is to reduce the contribution from
+QCD multi-jet processes and to isolate the set of signal events where
+all the jets from the Higgs pair decays can be fully reconstructed.
+After such selection, the most often value for
+number of events in the selected subset of events is five. The four
+jets with highest CMVA discriminant are chosen as candidates for being
+the decay products of the Higgs bosons. In order to reconstruct
+features of the Higgs boson candidates, a pairing between the selected
+jets has to be defined. The pairing used in this analysis is rather
+simple, the invariant masses for the two Higgs candidates $M_{\textrm{H}_1}$
+and $M_{\textrm{H}_2}$ are computed for the three possible combinations
+of the four jets picked, and the invariant mass difference
+${\Delta M}_{(\textrm{H}_1,\textrm{H}_2)}$ is computed
+for each combination:
+$$
+{\Delta M}_{(\textrm{H}_1,\textrm{H}_2)} = \lvert M_{\textrm{H}_1} - M_{\textrm{H}_2} \rvert
+$$ {#eq:inv_mass_pair}
+so the combination with the smallest mass difference is taken. Alternative
+decay candidates selection and pairing techniques were considered and tested,
+but the fact that these procedure does not explicitly use the mass of the
+Higgs boson, made it very effective to avoid conditioning also the
+distributions of the background processes. The aforementioned procedure
+correctly pairs the jets to form Higgs candidates for approximately 54\%
+of the events. To distinguish between the two Higgs candidates during the
+rest of this repost, leading Higgs $\textrm{H}_1$ will referred to the
+reconstructed Higgs
+candidates with the largest invariant mass while trailing Higgs $\textrm{H}_1$
+to the other candidate.
 
 
 \begin{table}[htbp]
