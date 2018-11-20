@@ -44,7 +44,7 @@ Simultaneously with the description of the tasks, performance
 measures and data, the main general machine learning concepts
 are reviewed.
 
-### Probabilistic Classification and Regression
+### Probabilistic Classification and Regression {#sec:supervised}
 
 One of the most unassuming, yet versatile, tasks that can be addressed with
 machine learning algorithms is *classification*. A classifier or a
@@ -390,7 +390,7 @@ approaches or alternative popular statistical learning techniques such
 as random forests or support vector machines, for which the following references
 provided a more extensive review [@friedman2001elements;@Goodfellow-et-al-2016;@louppe2014understanding].
 
-### Boosted Decision Trees
+### Boosted Decision Trees {#sec:boosted_decision_trees}
 
 ### Artificial Neural Networks
 

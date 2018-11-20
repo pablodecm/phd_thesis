@@ -508,8 +508,8 @@ as estimated from the simulated observations.
 The goal of the previous selection is to reduce the contribution from
 QCD multi-jet processes and to isolate the set of signal events where
 all the jets from the Higgs pair decays can be fully reconstructed.
-After such selection, the most often value for
-number of events in the selected subset of events is five. The four
+After such selection, the most often occurring value for
+number of jet in the selected subset of events is five. The four
 jets with highest CMVA discriminant are chosen as candidates for being
 the decay products of the Higgs bosons. In order to reconstruct
 features of the Higgs boson candidates, a pairing between the selected
@@ -534,6 +534,61 @@ reconstructed Higgs
 candidates with the largest invariant mass while trailing Higgs $\textrm{H}_1$
 to the other candidate.
 
+In this analysis, the final summary statistic considered for inference
+is based on the output of classifier that discriminates signal and background
+observations, which will approximate the likelihood ratio or a
+sufficient summary statistic if the signal and background components are fully
+specified, as discussed in [Section @sec:sig_vs_bkg]. The machine learning
+classification technique used is based on gradient boosted decision trees (BDT),
+a technique that was summarised in [Section @sec:boosted_decision_trees]. The
+implementation from the XGBOOST software library [@chen2016xgboost] was used
+to train a probabilistic classifier using a simulated samples corresponding
+to SM Higgs pair production (i.e. 60\% of the weighted pangea observations) and
+background observation resulting from the data-driven procedure which will
+be described in [Section @sec:bkg_est].
+
+The set of features, or input variables, feed to the probabilistic classifier
+are listed in \autoref{tab:mvaVars}, including both high-level and
+low-level summaries. The set of variables are divided in three subgroups,
+the first corresponding to variables related with the properties
+of the reconstructed Higgs pair HH system, including it invariant
+mass $M_\textrm{HH}$, its total transverse momenta
+$p_T^{\textrm{H}_1 \textrm{H}_2}$ and
+$\cos \theta_{\textrm{H}_1 \textrm{H}_2 -\textrm{H}_1}^{\star}$, where
+$\theta_{\textrm{H}_1 \textrm{H}_2 -\textrm{H}_1}^{\star}$ is the angle
+between the HH system and the leading Higgs boson candidate. Another feature
+that is found to increase the discrimination power of the classifier
+is the $M_\textrm{X}$ variables, defined as:
+$$
+M_\textrm{X} = M_\textrm{HH}
+- \left ( M_{\textrm{H}_1} -  M_\textrm{H} \right )
+- \left ( M_{\textrm{H}_2} -  M_\textrm{H} \right )
+$$ {#eq:mx_classifier}
+where $M_\textrm{H}=125\ \textrm{GeV}$ is the Higgs boson mass. The second
+group of features includes variables associated individually with each
+Higgs boson candidate, such as the reconstructed mass of each paired
+di-jet system $M_{\textrm{H}_1}$ and $M_{\textrm{H}_2}$. The reconstructed
+Higgs candidate masses have the largest discrimination power, because
+its marginal distributions are expected to peak
+around $M_\textrm{H}=125\ \textrm{GeV}$ for the subset of well-paired signal
+events while more spread for background observations. Other features in
+this sub-group include the tranverse momenta of the reconstructed
+Higgs candidates $p_T^{\textrm{H}_1}$ and $p_T^{\textrm{H}_2}$,
+the angular distances between their component jets
+$\Delta R_{jj}^{\textrm{H}_1}$, $\Delta R_{jj}^{\textrm{H}_2}$,
+$\Delta \phi_{jj}^{\textrm{H}_1}$, $\Delta \phi_{jj}^{\textrm{H}_2}$,
+and $\cos \theta_{\textrm{H}_1 \textrm{H}_2 -\textrm{H}_1}^{\star}$,
+where $\theta_{\textrm{H}_1 \textrm{H}_2 -\textrm{H}_1}^{\star}$ is the
+angle between the leading Higgs boson candidate and the leading jet.
+The last group includes variables directly associated to the reconstructed
+jets, including the transverse momenta $p_{T_j}^{(i=1-4)}$ and
+pseudo-rapidity $\eta_{T_j}^{(i=1-4)}$
+of the first four jets, ordered by their value of the CMVA b-tagging
+discriminant as well as the scalar sum of their transverse momenta $H_T$.
+Finally, the scalar $p_T$ sum of all the jets that not used for the
+reconstruction of the Higgs pair system $H_T^{\textrm{rest}}$ and the b-tagging CMVA
+discriminant value for the third and fourth jet 
+$\textrm{CMVA}_3$, $\textrm{CMVA}_4$ are also used.
 
 \begin{table}[htbp]
  \caption{List of reconstruction-based features used as input of the
@@ -543,8 +598,8 @@ to the other candidate.
    \hline
    HH system     &  H candidates      & Jet variables \\
    \hline
-   $m_\textrm{X}$, $m_\textrm{HH}$, &
-   $m_{\textrm{H}_1}$, $m_{\textrm{H}_2}$  &
+   $M_\textrm{X}$, $M_\textrm{HH}$, &
+   $M_{\textrm{H}_1}$, $M_{\textrm{H}_2}$  &
    $p_{T_j}^{(i=1-4)}$, $\eta_{T_j}^{(i=1-4)}$,  \\
    $p_T^{\textrm{H}_1 \textrm{H}_2}$        &
    $p_T^{\textrm{H}_1}$, $p_T^{\textrm{H}_2}$ &
@@ -560,6 +615,15 @@ to the other candidate.
  \label{tab:mvaVars}
 \end{table}
 
+The trained classifier combines the 25 variables from \autoref{tab:mvaVars}
+in a single scalar value, that approximates the conditional probability
+of belonging to the signal conditional on the input $p(y = 1| \boldsymbol{x})$,
+which depends on the relative frequencies of signal and background
+observation in the training dataset, as discussed in [Section @sec:supervised].
+The hyper-parameters have been chosen based on a simple grid search, with
+the help of the scikit-learn software library [@pedregosa2011scikit], based
+on the area under the curve (AUC) of the resulting classifiers on
+a validation hold-out dataset.
 
 ## Data-Driven Background Estimation {#sec:bkg_est}
 
