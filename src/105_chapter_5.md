@@ -403,7 +403,7 @@ of 300000 events have been simulated for the SM model production component,
 as well as an older version of the clustering benchmarks discussed
 in [Section @sec:higgs_pair_prod]
 and the $\kappa_\lambda=0$ box model. Regading the parton
-distribution function used for generation, the NNPDF30_LO_AS_0130_NF_4 n 
+distribution function used for generation, the NNPDF30\_LO\_AS\_0130\_NF\_4 n 
 set [@Ball:2014uwa] was used for all samples.
 
 The samples for the benchmark samples listed in \autoref{table:benchmarks},
@@ -412,8 +412,41 @@ previous samples by means of generator re-weighting. As described in
 [Section @sec:re-weighting], the latent variables of the simulator can
 be used to model a different sample by computing observables after
 assigning to each event a weight proportional to the ratio between
-probability density functions.
+probability density functions. In this case, at parton level at leading
+order, the effect of varying EFT parameters in [Equation @eq:eft_lag]
+can be fully characterised by two
+variables: the Higgs pair invariant mass $m_\textrm{HH}$ and the
+$\lvert \cos \theta^{*} \rvert$, where $\theta^{*}$ is the polar angle of any
+one of the Higgs bosons with the respect to the beam axis. Once this
+two variables are specified, the rest of the simulation does not
+depend on the EFT parameters, this a set of HH production
+simulated events generated for a given vector of EFT parameters
+$\boldsymbol{\theta}_\textrm{EFT}=(\kappa_\lambda, \kappa_\textrm{t}, c_2, c_\textrm{g}, c_\textrm{2g})$
+re-weighted by:
+$$
+w \left ( m_\textrm{HH}, \lvert \cos \theta^{*} \rvert \right ) =
+\frac{p \left ( m_\textrm{HH}, \lvert \cos \theta^{*} \rvert  \ \mid \ {\boldsymbol{\theta}'}_\textrm{EFT} \right )}{
+p(m_\textrm{HH}, \lvert \cos \theta^{*} \rvert \ \mid \ {\boldsymbol{\theta}}_\textrm{EFT})}
+$$ {#eq:eft_weight}
+to model events generated at the EFT point ${\boldsymbol{\theta}'}_\textrm{EFT}$,
+as long as the both the numerator and denominator are not zero. The previous
+concept can be extend to any arbitrary probability distribution
+of $p \left ( m_\textrm{HH}, \lvert \cos \theta^{*} \rvert \right )$, e.g. a large
+sample uniformly distributed in the mentioned 2D-space could be re-weighted
+to model any EFT parameter point. While the density ratio in [Equation @eq:eft_weight]
+can also be estimated exactly as the ratio between the matrix elements [@Wertz:2632195],
+a non-parametric density estimation approach was adopted in this analysis.
 
+A large sample of HH production events was formed by concatenating
+all non-resonant Higgs pair events simulated from each of the 14 samples,
+creating what will be referred to as the *pangea* sample. For all the EFT
+points of interest, 50000 events (300000 for the SM production) 
+were generated at parton level, which is rather inexpensive. The per-event
+weight in [Equation @eq:eft_weight] is estimated by the ratio of 2D-histograms,
+which effectively approximate the mentioned density ratio. The
+*weighted pangea* sample can represent any EFT parameter point at leading order
+by this procedure, so it is used to model the signal characteristics of
+all the models considered in this work.
 
 
 ## Event Selection {#sec:event_selection}
