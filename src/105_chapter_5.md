@@ -451,6 +451,27 @@ all the models considered in this work.
 
 ## Event Selection {#sec:event_selection}
 
+Given the the final state studied in this analysis is characterised
+by the presence of four highly energetic b quarks, the physics objects
+of relevance  are reconstructed jets. The details of the reconstruction
+procedure at CMS were already discussed in [Section @sec:event_reco].
+Advanced jet flavour tagging, in particular b-tagging, is also essential
+to distinguish jets that originate from b quarks from those originating
+from lighter quarks and gluons, and thus very useful to reduce
+the contribution from a large number of QCD multi-jet processes.
+
+The subset of collected events that pass the trigger requirements,
+as well as all the simulated observations, as listed at the beginning
+of [Section @sec:online_and_datasets] undergo a process of
+event reconstruction, producing a representation of the detector
+readout that attempt to recover the latent particle features
+at parton level, as discussed in [Section @sec:event_reco_stat].
+The fist step of the offline event selection
+is to consider for each event the set of reconstructed particle-flow
+jets with $p_T > 30\ \textrm{GeV}$ and $\lvert \eta \rvert < 2.4$. An event
+is only selected if four or more jet passing those requirement are found.
+
+
 \begin{table}[htb]
  \caption{Event selection efficiency and number of events expected per
  each integrated $\ \textrm{fb}^{-1}$ for the standard model

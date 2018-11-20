@@ -777,7 +777,7 @@ procedures followed to reduce the dimensionality of the observable
 space and its objectives from a statistical perspective will
 discussed.
 
-#### Event Reconstruction
+#### Event Reconstruction {#sec:event_reco_stat}
 
 The methods of event reconstruction, 
 as described in [Section @sec:event_reco],
