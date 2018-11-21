@@ -11,6 +11,9 @@
 \usepackage{amsfonts}
 \usepackage{epigraph}
 
+\usepackage{float}
+\floatplacement{figure}{h}
+
 \setlength{\epigraphwidth}{0.6\textwidth}
 
 % some extra math symbols

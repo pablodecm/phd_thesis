@@ -740,7 +740,65 @@ events contained, and is a combination of discrete and
 continuous variables. The discrete requirement for matching original hemispheres
 with those in the library is that they have the same number of jets $N_j^h$ and
 b-tagged jets $N_b^h$, which ensures a similar jet multiplicity distributions
-for the artificial data.
+for the artificial data. The previous condition also avoid creating 
+artificial events that do not pass the event selection, e.g. by combining
+an hemisphere with 2 b-tagged jets with another one including only one
+b-tagged jet, thus resulting in less that four b-tagged jets in the 
+artificial combination. For infrequent jet and b-jet multiplicity categories,
+the discrete condition is relaxed by considering a unique category
+when four jets or b-jets are present in the hemisphere. In addition to
+the mentioned categorisation, the following continuous distance metric
+between the original hemisphere $\boldsymbol{h}_o$ and each hemisphere from
+the library $\boldsymbol{h}_q$ is defined as a measure of similarly:
+$$
+\begin{aligned}
+d(\boldsymbol{h}_o,\boldsymbol{h}_q)^2 =
+\frac{ \left ( M_\textrm{t}(\boldsymbol{h}_o) - M_\textrm{t}(\boldsymbol{h}_q) \right )^2}{
+\textrm{Var}(M_\textrm{t})} +
+\frac{ \left ( T(\boldsymbol{h}_o) - T(\boldsymbol{h}_q) \right )^2}{
+\textrm{Var}(T)} \\ +
+\frac{ \left ( T_a(\boldsymbol{h}_o) - T_a(\boldsymbol{h}_q) \right )^2}{
+\textrm{Var}(T_a)} +
+\frac{ \left ( P_z(\boldsymbol{h}_o) - P_z(\boldsymbol{h}_q) \right )^2}{
+\textrm{Var}(P_z)}
+\end{aligned}
+$$ {#eq:hem_metric}
+where $M_\textrm{t}(\boldsymbol{h})$ is the invariant mass of the system composed of all
+the jets contained in the hemisphere, $T(\boldsymbol{h})$ is the scalar
+sum of all the transverse momenta projection of the all jets of an hemisphere to the thrust
+axis,  $T_a(\boldsymbol{h})$ is instead the scalar sum of the
+transverse momenta projections over a axis orthogonal to the thrust
+axis, and $P_z(\boldsymbol{h})$ is the absolute value of the
+projection of the vectorial sum
+of the jet momenta along the beam axis. The denominators in
+[Equation @eq:hem_metric] are the variance for each of the variables
+and discrete category, as estimated directly from the library of hemispheres,
+in order to reduce the effect of the scale of magnitude of each component
+to the distance metric.
+
+The substitute for each original hemisphere is found by finding
+the $k^\textrm{th}$ nearest-neighbour hemisphere in the library. The
+closest hemisphere ($k=0$), corresponding to zero distance,
+would be the very same original hemisphere which is present in the library.
+Therefore, it makes sense to consider to consider substituting the
+hemisphere witht the $k\geq 1$ nearest neighbour. Assuming forward-backward
+symmetry in the $z$ direction and $\phi$ rotational symmetries, and given
+that the distance metric $d(\boldsymbol{h}_o,\boldsymbol{h}_q)^2$ does
+not depend on the sign and absolute magnitude of those quantities,
+all the jets in the hemisphere can be rotated in $\phi$ or their
+$p_z$ sign to match the original hemisphere properties. It is possible to
+considering different $k$ neighbours for each hemisphere, obtaining a different
+artificial dataset in each case. Each of this artificial datasets can be labelled
+by a tuple $(k_1, k_2)$, where $k_1$ is neighbour used as the substitute
+for the original hemisphere corresponding to a $\Delta \phi >0$ with respect
+to the thrust vector rotated $\pi/2$ clock-wise, and $k_2$ to the
+neighbour substituting the other original hemisphere. Consequently, if up to
+$k_\textrm{max}$ neighbours are considered for each hemispheres, a
+total of $k_\textrm{max}^2$ artificial datasets, each with the same
+size than the original dataset, could be composed by considering all
+the permutations.
+
+
 
 ### Background Validation {#sec:bkg_validation}
 
