@@ -1435,7 +1435,7 @@ multi-variate techniques described in [Chapter @sec:machine_learning]
 are applied to construct complex non-linear observables. This issue is
 address by the method proposed in [Chapter @sec:inferno].
 
-#### Data-Driven Estimation
+#### Data-Driven Estimation {#sec:data_driven}
 
 For some fundamental processes, the generative
 modelling provided by simulated observations

@@ -627,6 +627,80 @@ a validation hold-out dataset.
 
 ## Data-Driven Background Estimation {#sec:bkg_est}
 
+The principal background of this analysis are events with several jets coming
+from multiple quarks and gluon production from QCD processes. While simulated
+observations of multi-jet QCD processes can be generated, and were in fact
+readily available at the time this analysis was carried out,
+they are in practice
+not useful to realistically model the background contribution for the
+purposes of this work. A set of large samples for inclusive QCD multi-jet
+production were produced in the CMS simulation campaign, divided in various
+consecutive range of total generator level scalar transverse momenta sum
+$H_T^{\textrm{gen}}$. Leaving aside issues regarding the accuracy
+of the modelling of high jet multiplicity event provided by current
+leading order plus parton shower generators, the main obstacle for using
+the simulated samples is that their equivalent luminosity in the
+$H_T^{\textrm{gen}}$ relevant for this analysis is several orders of magnitude
+smaller than the actual luminosity.
+
+As a rule of thumb, to accurately model a mixture component using simulated
+samples, the number of simulated events has to be at least 10 times more
+than the number of expected events, or the modelling uncertainty due to
+the limited simulation statistics will greatly degrade
+subsequent inference. This problem is made worse when a significant fraction
+of the simulated sample has to be used for training a probabilistic classifier
+and thus cannot be used for modelling to avoid biased estimation of the
+relevant expected values. A naive solution could be to simulate more events,
+but given the large cross section of low energy QCD processes, the total
+number of QCD inclusive simulated events required
+would be well over 1 billion which is too many given the total simulation
+budget available for the CMS experiment.
+
+Another option, which was initially explored for modelling the
+QCD background in this analysis, was to only simulate events that pass
+a selection at parton level, e.g. with two or more high energy
+b-quarks. This could provide a radical reduction on the total
+computing time needed for simulation, specially
+if combined with the approximate simulation techniques described
+in [Section @sec:detector_simulation], because the associated cross section
+can be greatly reduced. However, such generator level filtering is 
+difficult to implement in a way that relevant events are not omitted
+after the event selection, thus the desired level of modelling
+accuracy was not achieved.
+
+The previously mentioned reasons motivate using data directly
+to estimate the background contribution, as discussed in
+[Section @sec:data_driven]. Data-driven background estimation
+can be notoriously difficult and often several assumptions
+about the properties of the background have to be made. For example,
+the ATLAS analysis with the same goal [@Aaboud:2018knk], models the background
+contribution with an independent data sample characterised
+by the same trigger and section but only two b-tagged reconstructed
+jets, weighted by a factor that is also derived and validated
+from a data side band where not significant signal is expected. While
+that approach is proved effective when using the reconstructed
+$M_\textrm{H}$ distribution for inference, it cannot be easily extended
+when the output of a probabilistic classifier is used as the summary statistic. 
+
+Consequently, a new data-driven background estimation method based
+on the concept of hemisphere mixing and assumptions of the phase
+space characteristics of QCD multi-jet processes,
+was developed for this analysis [@DeCastroManzano:2017yqy]. The technique,
+which is described in [Section @sec:hem_mixing],
+directly attempts to create an artificial dataset using the the whole
+original dataset as input, hence can be used both for training the
+probabilistic classifier and to model the distribution of the
+final summary statistic used for inference. Because some aspects of
+the method are ad-hoc and cannot be formally demonstrated, it has been
+calibrated and then validates using a signal-depleted control region,
+which is discussed in [Section @sec:syst_unc].
+
+
+
+### Hemisphere Mixing {#sec:hem_mixing}
+
+### Background Validation {#sec:bkg_validation}
+
 ## Systematic Uncertainties {#sec:syst_unc}
 
 ## Results {#sec:results}
