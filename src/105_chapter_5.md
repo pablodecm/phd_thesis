@@ -13,7 +13,7 @@ The most probably decay channel for the Higgs boson pairs, where
 each Higgs boson leads to a a $\textrm{b}\bar{\textrm{b}}$, is considered.
 While the aforementioned final state is the most frequent by a considerably
 margin, a large background of similar events is expected from
-multijet QCD processes, which motivates the use of machine learning techniques
+multi-jet QCD processes, which motivates the use of machine learning techniques
 to construct a summary statistic that can exploit the fine differences
 between signal and background for statistical inference. In fact, the
 expected background is so copious that insufficient simulated observations can
@@ -683,8 +683,8 @@ $M_\textrm{H}$ distribution for inference, it cannot be easily extended
 when the output of a probabilistic classifier is used as the summary statistic. 
 
 Consequently, a new data-driven background estimation method based
-on the concept of hemisphere mixing and assumptions of the phase
-space characteristics of QCD multi-jet processes,
+on the concept of hemisphere mixing and some assumptions of the phase
+space characteristics of QCD multi-jet processes
 was developed for this analysis [@DeCastroManzano:2017yqy]. The technique,
 which is described in [Section @sec:hem_mixing],
 directly attempts to create an artificial dataset using the the whole
@@ -692,12 +692,55 @@ original dataset as input, hence can be used both for training the
 probabilistic classifier and to model the distribution of the
 final summary statistic used for inference. Because some aspects of
 the method are ad-hoc and cannot be formally demonstrated, it has been
-calibrated and then validates using a signal-depleted control region,
-which is discussed in [Section @sec:syst_unc].
-
+calibrated and then validated using a signal-depleted control region,
+procedure that is discussed in [Section @sec:syst_unc].
 
 
 ### Hemisphere Mixing {#sec:hem_mixing}
+
+The basis of the data-driven background estimation method proposed is
+to divide each event in two parts, referred to as hemispheres, so each
+can be substituted by an hemisphere from a different event in order
+to produce an artificial dataset. A graphical illustration of the
+hemisphere mixing technique used in this work is provided in
+[Figure @fig:hemisphere_mixing]. The transverse thrust axis, defined
+as the axis in the $x-y$ plane for which the absolute value sum of the
+projections of the transverse momenta of the selected
+subset reconstructed jets is maximal, is used as a reference 
+to divide each original event in two halves perpendicularly
+to the mentioned axis. This procedure is carried out for
+all the collected events that pass the selection described
+in [Section @sec:event_selection], creating a dataset (or library)
+of hemispheres with as many rows as double the number of
+original events. Each half, or hemisphere, can be basically reduced
+a set of reconstructed jets with their directions relative to
+the trust axis. Once the hemisphere library has been created,
+each hemisphere in the original event can be substituted
+by a similar one by from the a different event, once
+an appropriate distance metric has been defined, thus resulting
+in a new artificial dataset.
+
+![Schematic depiction of the hemisphere mixing background
+estimation procedure. The red arrows represent b-tagged
+jets and the blue arrows represent not b-tagged jets
+in a event. The fist step includes finding the thrust axis in the $x-y$
+plane, defined as that for the absolute value sum of the projections
+of the transverse momenta $p_T$ of jets in the event is maximal. The event
+is then divided in two hemispheres, each composed of a set of jets,
+by the plane perpendicular to the thrust axis. All this hemispheres are
+used to create a dataset (or library) of hemispheres. For each original
+event, a artificial event can be created by substituting each original
+hemisphere by some of the close neighbours, once a distance metric
+for hemispheres has been defined.
+](gfx/105_chapter_5/hemisphere_mixing.pdf){
+#fig:hemisphere_mixing width=100%}
+
+The hemisphere distance criteria is a function of the set of reconstructed
+events contained, and is a combination of discrete and
+continuous variables. The discrete requirement for matching original hemispheres
+with those in the library is that they have the same number of jets $N_j^h$ and
+b-tagged jets $N_b^h$, which ensures a similar jet multiplicity distributions
+for the artificial data.
 
 ### Background Validation {#sec:bkg_validation}
 
