@@ -877,6 +877,86 @@ dataset. Only statistical uncertainties are shown.
 
 ### Background Validation {#sec:bkg_validation}
 
+One of the drawbacks of using data-driven methods, is that they are often
+based on a series of implicit assumptions regarding the underlying statistical
+model of the data, which are difficult to demonstrate directly. Therefore,
+a more practical approach to verify the validity of a given background model
+is usually taken, studying its validity in a set of data control region
+where the component under study dominates and the contribution from
+the signal is negligible. For studying the hemisphere mixing method
+in this analysis, two data control regions (CRs) are defined:
+
+- *mass control region* ($M_\textrm{H}$ CR): using the same selection described
+  in in [Section @sec:event_selection], but removing all events around the
+  Higgs candidate masses $90 < M_{\textrm{H}_1} < 150\ \textrm{GeV}$ and
+  $80 < M_{\textrm{H}_1} < 140\ \textrm{GeV}$. This cut in the reconstructed
+  Higgs masses plane considerably reduces the signal contribution, which
+  is expected to peak around $M_\textrm{H} = 125\ \textrm{GeV}$.
+  
+- *b-tag control region* (b-tag CR): b-tagged jets are defined using
+  the loose working point of CMVA, which has a misidentification rate of 10\%
+  and a b-tagging efficiency around 85\% for jets originating from the Higgs pair
+  decay, while filtering out events with any event with medium working
+  point CMVA b-tagged jets.
+
+The relative signal contribution in each of these control regions is
+greatly reduced, and the multi-jet QCD component is the dominant
+background. While for carrying out the mass control region comparison
+is enough to apply an additional cut over the selection, the b-tag
+control region study requires redoing the hemisphere mixing procedure
+on the new set of event with different b-tag jet selection. For both
+control regions, all the relevant one-dimensional marginal distributions
+are found to be in good agreement, as shown for a reduced
+number of important variables that used as input for the classifier
+in [Figure @fig:Figure_004] and [Figure @fig:Figure_005].
+
+
+::: {#fig:Figure_004 .subfigures}
+![first jet transverse momenta $p_{T_j}^1$
+](gfx/105_chapter_5/Figure_004-a.pdf){#fig:Figure_004_a width=49%}
+![first jet pseudo-rapidity $\eta_{j}^1$
+](gfx/105_chapter_5/Figure_004-b.pdf){#fig:Figure_004_b width=49%}
+\
+![first Higgs candidate - first jet $\cos \theta^{*}_{\textrm{H}_1 - j_1}$
+](gfx/105_chapter_5/Figure_004-c.pdf){#fig:Figure_004_c width=49%}
+![lowest CMVA discriminator $\textrm{CMVA}_4$
+](gfx/105_chapter_5/Figure_004-d.pdf){#fig:Figure_004_d width=49%}
+
+Comparison between the background model obtained with the hemisphere
+mixing technique and the data for the $M_\textrm{H}$c control region for
+a set of reconstructed variables used as input of the classifier.
+A correction factor
+obtained from the binned classifier distribution, as described
+in [Section @sec:bkg_validation], has been applied as a weight to the mixed
+dataset. Only statistical uncertainties are shown.
+:::
+
+
+
+::: {#fig:Figure_005 .subfigures}
+![first jet transverse momenta $p_{T_j}^1$
+](gfx/105_chapter_5/Figure_005-a.pdf){#fig:Figure_005_a width=49%}
+![first jet pseudo-rapidity $\eta_{j}^1$
+](gfx/105_chapter_5/Figure_005-b.pdf){#fig:Figure_005_b width=49%}
+\
+![first Higgs candidate mass $M_{\textrm{H}_1}$
+](gfx/105_chapter_5/Figure_005-c.pdf){#fig:Figure_005_c width=49%}
+![second Higgs candidate mass $M_{\textrm{H}_2}$
+](gfx/105_chapter_5/Figure_005-d.pdf){#fig:Figure_005_d width=49%}
+
+Comparison between the background model obtained with the hemisphere
+mixing technique and the data for the b-tag control region for
+a set of reconstructed variables used as input of the classifier.
+A correction factor
+obtained from the binned classifier distribution, as described
+in [Section @sec:bkg_validation], has been applied as a weight to the mixed
+dataset. Only statistical uncertainties are shown.
+:::
+
+
+
+
+
 ## Systematic Uncertainties {#sec:syst_unc}
 
 ## Results {#sec:results}
