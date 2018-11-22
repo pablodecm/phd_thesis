@@ -984,8 +984,20 @@ study to assess and potentially
 correct the hemisphere mixing based background model for the classifier output.
 The bias assessment procedure, schematically depicted in [Figure @fig:Figure_011],
 starts by constructing a very large artificial sample $M$
-by concatenating all the $(k_1,k_2)$ datasets up to a $k_\textrm{max}=10$,
-except those used for training the classifier.
+by concatenating all the permutations of the
+$(k_1,k_2)$ datasets up to a $k_\textrm{max}=10$,
+except those used for training the classifier. A total of 200 smaller datasets,
+referred as replicas $M_i$,
+with the same number of events than the original data are obtained by
+subsampling without replacement $N$ times from the large mixed dataset $M$.
+Each replica dataset is taken as if it was the original dataset, thus the
+hemisphere mixing is applied again to create a set of new
+artificial datasets $R_i$. The classifier output distribution is obtained
+for all the new artificial datasets $R_i$ and compared with the reference
+distribution of the large sample $M$. The median difference between
+the distribution of the classifier output between the large dataset $M$
+and each of the mixed replicas $R_i$ for the final event selection
+is shown in [Figure @fig:Figure_012].
 
 ![Diagram describing the procedure used to estimate the background bias correction.
 All possible combinations of mixed hemispheres except those used for training are
@@ -1000,6 +1012,19 @@ The median difference is taken as bias correction.](gfx/105_chapter_5/Figure_011
 #fig:Figure_011 width=100%}
 
 
+![Bias estimation by resampling, in relative units of the statistical
+uncertainty of the predicted background, used to
+correct the background estimation. The median (red line)
+and the upper and lower one s.d. quantiles (green lines) have been computed
+from 200 subsamples of the re-mixed data comparing the predicted background
+$n^p_b$ with the observed $n^o_b$. The variability due to the limited number of
+subsamples is estimated by bootstrap and it is shown for each estimation using
+a coloured shadow around the quantile estimation.
+The light yellow shadow represents the uncertainty
+due to the limited statistics of the reference observed sample.
+The separation between the one s.d. quantiles is compatible with the
+expected variance if the estimation was Poisson or Gaussian distributed.](gfx/105_chapter_5/Figure_012.pdf){
+#fig:Figure_012 width=100%}
 
 
 ## Systematic Uncertainties {#sec:syst_unc}
