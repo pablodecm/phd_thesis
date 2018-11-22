@@ -910,7 +910,6 @@ are found to be in good agreement, as shown for a reduced
 number of important variables that used as input for the classifier
 in [Figure @fig:Figure_004] and [Figure @fig:Figure_005].
 
-
 ::: {#fig:Figure_004 .subfigures}
 ![first jet transverse momenta $p_{T_j}^1$
 ](gfx/105_chapter_5/Figure_004-a.pdf){#fig:Figure_004_a width=49%}
@@ -930,7 +929,6 @@ obtained from the binned classifier distribution, as described
 in [Section @sec:bkg_validation], has been applied as a weight to the mixed
 dataset. Only statistical uncertainties are shown.
 :::
-
 
 
 ::: {#fig:Figure_005 .subfigures}
@@ -953,6 +951,53 @@ in [Section @sec:bkg_validation], has been applied as a weight to the mixed
 dataset. Only statistical uncertainties are shown.
 :::
 
+While each single variable is well-modelled, the goal of the technique
+is obtain an adequate modelling accuracy in the higher dimensional
+space considered as input of the probabilistic classifier. A way to check
+the quality of such modelling is to compare the classifier output
+distribution for the control region data with the background model. This
+comparison is shown for the $M_\textrm{H}$ control region in
+[Figure @fig:Figure_006]. The same comparison is not straightforward
+to carry out for the b-tag control region, because the classifier was
+trained using the lowest value of the CMVA classifiers, which was lower
+bounded by the medium working point for the standard selection which
+instead is upper bounded by same working point in the b-tag CR.
+While [Figure @fig:Figure_006] shows an reasonable agreement overall,
+a slight background model excess seems to exist in the lower classifier
+output range.
+
+
+![Left: Comparison of the BDT classifier output for data in the
+$M_\textrm{H}$c control region, with the same output computed
+using an artificial dataset by hemisphere mixing. Right: bin-by-bin
+differences between the control region data and the hemisphere
+mixing estimation, divided by their uncertainty, both before (top right)
+and after the bias correction procedure. The pull distributions and its
+parameters when fitted by a Gaussian are also shown. The uncertainty
+after the bias correction has been increased conservatively in order
+to obtain a unitary standard deviation for the residual pull distribution.
+](gfx/105_chapter_5/Figure_006.pdf){
+#fig:Figure_006 width=100%}
+
+The previous mentioned issue has motivated a quantitative
+study to assess and potentially
+correct the hemisphere mixing based background model for the classifier output.
+The bias assessment procedure, schematically depicted in [Figure @fig:Figure_011],
+starts by constructing a very large artificial sample $M$
+by concatenating all the $(k_1,k_2)$ datasets up to a $k_\textrm{max}=10$,
+except those used for training the classifier.
+
+![Diagram describing the procedure used to estimate the background bias correction.
+All possible combinations of mixed hemispheres except those used for training are
+added together to create a large sample $N$ of $96N$ events from which we repeatedly
+subsample without replacement 200 replicas $M_i$ of $N$ events. The hemisphere
+mixing procedure is then carried out again for each of this replicas to produce
+a set of re-mixed data replicas $R_i$.
+The trained multivariate classifier trained is then evaluated over all the events
+of $M$ and each $R_i$ and the histograms of the classifier output are
+compared to obtain a the differences for each of the replicas.
+The median difference is taken as bias correction.](gfx/105_chapter_5/Figure_011.pdf){
+#fig:Figure_011 width=100%}
 
 
 
