@@ -798,6 +798,52 @@ total of $k_\textrm{max}^2$ artificial datasets, each with the same
 size than the original dataset, could be composed by considering all
 the permutations.
 
+The previous technique can be understood taking unto account the QCD
+multi-jet production at leading-order basically amounts to a $2 \rightarrow 2$
+parton scattering process, which is then affected by other phenomena
+such as QCD radiation,
+pileup or multiple interactions. By breaking the event in two hemispheres
+using the transverse thrust, the aim is to separate the outcome of the
+processes associated with each of the two final state partons in
+the mentioned $2 \rightarrow 2$ approximation. The hemisphere
+distance metric is attempts to preserve the main properties of the
+event, while avoiding strong correlations between jets in the two
+hemispheres. The goal of the hemisphere mixing procedure is then
+to obtain an artificial sample where the contributions signal in
+the original dataset are effectively removed. This has been tested
+by injecting up to 100 times the expected SM contributions of
+simulated HH production events to a dataset of simulated
+QCD multi-jet events. The distributions of the various variables
+after hemisphere mixing are compatible with the QCD multi-jet
+component, which is the majority component and not affected by the
+presence of signal.
+
+The hemisphere mixing technique is applied to the data events
+passing the selection described in [Section @sec:event_selection].
+Artificial datasets up to $k_\textrm{max}=10$ have been
+considered, and they are sub-divided in three sets used for training
+the probabilistic classifier (training), 
+validating and optimised the classifier (validation)
+and to estimate the background distribution of the final summary
+statistic (application). The last dataset is referred to as
+application instead of test set because its purpose is not to obtain
+unbiased estimates of the classifier performance but unbiased estimates
+of the classifier output distribution of background events. All the
+artificial datasets are not independent, e.g. the $(1,1)$ and $(1,2)$
+dataset use the same first hemisphere, thus some careful choices are required
+when splitting the mixed datasets. The dataset splitting considered in
+this analysis, using the $(k_1, k_2)$ notation described before, correspond
+to:
+
+  - *training set*: concatenation of $(1,1)$, $(1,2)$, $(2,1)$ and $(2,2)$ mixed datasets
+  - *validation set*: concatenation of $(3,4)$, $(5,6)$, $(7,8)$ and $(9,10)$ mixed datasets
+  - *application set*: concatenation of $(4,3)$, $(6,5)$, $(8,7)$ and $(10,9)$ mixed datasets
+
+noting that the observation in the training set are not fully independent,
+but it is expected that reusing hemispheres in the training sample at most
+might degrade slightly the classifier performance, but does not bias in any way
+the inference results if an independent set is used.
+
 
 
 ### Background Validation {#sec:bkg_validation}
