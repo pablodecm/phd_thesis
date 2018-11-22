@@ -842,8 +842,37 @@ to:
 noting that the observation in the training set are not fully independent,
 but it is expected that reusing hemispheres in the training sample at most
 might degrade slightly the classifier performance, but does not bias in any way
-the inference results if an independent set is used.
+the inference results if an independent set is used. The next section
+is devoted to the validation of the background model in data control regions
+and the development of a methodology to correct for possible biases
+in the final summary statistic expectations. For completion, a comparison
+of the distribution of relevant variables, that are used as input
+to the probabilistic classifier, between
+the QCD multi-jet simulations available and
+those estimated using hemisphere mixing are shown in [Figure @fig:Figure_003].
+The overall agreement is good, yet the statistical uncertainties
+coming from the low $H_T$ range simulated QCD samples is large, as discussed
+as the beginning of this section.
 
+
+::: {#fig:Figure_003 .subfigures}
+![first jet transverse momenta $p_{T_j}^1$
+](gfx/105_chapter_5/Figure_003-a.pdf){#fig:Figure_003_a width=49%}
+![first jet pseudo-rapidity $\eta_{j}^1$
+](gfx/105_chapter_5/Figure_003-b.pdf){#fig:Figure_003_b width=49%}
+\
+![Higgs candidate transverse momenta $p_{T}^{\textrm{H}_1}$
+](gfx/105_chapter_5/Figure_003-c.pdf){#fig:Figure_003_c width=49%}
+![Higgs candidate pair system mass $M_\textrm{HH}$
+](gfx/105_chapter_5/Figure_003-d.pdf){#fig:Figure_003_d width=49%}
+
+Comparison between the background model obtained with the hemisphere
+mixing technique and the simulated observations from QCD processes
+for a set of relevant reconstructed variables. A correction factor
+obtained from the binned classifier distribution, as described
+in [Section @sec:bkg_validation], has been applied as a weight to the mixed
+dataset. Only statistical uncertainties are shown.
+:::
 
 
 ### Background Validation {#sec:bkg_validation}
