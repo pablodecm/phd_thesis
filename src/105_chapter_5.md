@@ -874,6 +874,7 @@ in [Section @sec:bkg_validation], has been applied as a weight to the mixed
 dataset. Only statistical uncertainties are shown.
 :::
 
+\FloatBarrier
 
 ### Background Validation {#sec:bkg_validation}
 
@@ -979,6 +980,7 @@ to obtain a unitary standard deviation for the residual pull distribution.
 ](gfx/105_chapter_5/Figure_006.pdf){
 #fig:Figure_006 width=100%}
 
+
 The previous mentioned issue has motivated a quantitative
 study to assess and potentially
 correct the hemisphere mixing based background model for the classifier output.
@@ -990,14 +992,29 @@ except those used for training the classifier. A total of 200 smaller datasets,
 referred as replicas $M_i$,
 with the same number of events than the original data are obtained by
 subsampling without replacement $N$ times from the large mixed dataset $M$.
-Each replica dataset is taken as if it was the original dataset, thus the
+Each replica dataset is treated as in an analogous manner to
+the original dataset, thus the
 hemisphere mixing is applied again to create a set of new
 artificial datasets $R_i$. The classifier output distribution is obtained
 for all the new artificial datasets $R_i$ and compared with the reference
-distribution of the large sample $M$. The median difference between
+distribution of the large sample $M$, considering a histogram with 80 bins
+of equal width in the full range of the classifier output $[0.0,1.0]$.
+
+The median difference between
 the distribution of the classifier output between the large dataset $M$
-and each of the mixed replicas $R_i$ for the final event selection
-is shown in [Figure @fig:Figure_012].
+and each of the mixed replicas $R_i$ is shown in [Figure @fig:Figure_012]
+for the final event selection. A small bias is found in the recovered
+distribution, which is directly used as a correction to hemisphere mixing
+technique prediction. Similar results are obtained in the
+previously mentioned control region. The effect of the correction
+in the $M_\textrm{H}$ check and pull distribution is also shown in
+[Figure @fig:Figure_006]. The mean of the predicted values mius
+the observed values are compatible with zero in both control regions,
+while the root-mean-squared of the pull distribution is not compatible
+with one in the $M_\textrm{H}$. The uncertainty on the background shape
+per each bin is conservatively
+enlarged until the standard deviation of the pull distribution
+becomes one.
 
 ![Diagram describing the procedure used to estimate the background bias correction.
 All possible combinations of mixed hemispheres except those used for training are
@@ -1026,6 +1043,7 @@ The separation between the one s.d. quantiles is compatible with the
 expected variance if the estimation was Poisson or Gaussian distributed.](gfx/105_chapter_5/Figure_012.pdf){
 #fig:Figure_012 width=100%}
 
+\FloatBarrier
 
 ## Systematic Uncertainties {#sec:syst_unc}
 

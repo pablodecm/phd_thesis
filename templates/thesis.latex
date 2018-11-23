@@ -12,6 +12,7 @@
 \usepackage{epigraph}
 
 \usepackage{float}
+\usepackage{placeins}
 \floatplacement{figure}{h}
 
 \setlength{\epigraphwidth}{0.6\textwidth}
