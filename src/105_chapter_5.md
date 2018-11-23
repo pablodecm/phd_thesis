@@ -1160,6 +1160,33 @@ observations under the SM hypothesis and each of the BSM
 EFT points considered for the signal, and from the bias corrected
 distribution from the data-driven background dataset.
 
+Given the slight mis-modelling for at the lower range of the
+classifier output on the control regions discussed in
+[Section @sec:bkg_validation]. A study studying the variation
+of the expected limit when a non-zero mininum value is considered
+in the likelihood, finding that considering classifier output
+values larger than 0.2 results on a negligible loss on sensitivity
+(i.e. smaller than 2\%) while greatly improving the overall data-background
+compatibility. Only 64 of the initial 80 bins of the classifier distribution
+are used to build the Poisson likelihood used for statistical inference.
+The best-fit distributions for signal, background and data for the
+classifier output are shown in [Figure @fig:Figure_007], while the
+those corresponding to the reconstructed Higgs boson masses are shown
+in [Figure @fig:Figure_008].
+
+Only two mixture components are considered in the the final statistical
+model, signal representing $\textrm{pp} \rightarrow \textrm{HH}  \rightarrow
+\textrm{b}\bar{\textrm{b}}\textrm{b}\bar{\textrm{b}})$ and
+background estimated from data and dominated by QCD multi-jet
+processes and secondarly by top quark production with additional jets.
+The contribution from other hard processes that
+can produce four b-quarks, such as $\textrm{t}\bar{\textrm{t}}\textrm{H}$,
+$\textrm{Z}\textrm{H}$,
+$\textrm{b}\bar{\textrm{b}}\textrm{H}$, and single Higgs boson production
+was estimated from simulated samples and found to be negligible in
+comparison with the considered background uncertainties at the
+current level of experiment sensitivity.
+
 
 ![Results of the for best fit of the statistical model
 of BDT classifier output distribution for the SM HH production signal
