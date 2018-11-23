@@ -1142,3 +1142,109 @@ standard deviation of a set of 100 MC replicas of the NNPDF 3.0 set
 [@Ball:2014uwa].
 
 ## Results {#sec:results}
+
+This section includes the experimental results of the search of
+non-resonant Higgs pair production with CMS data collected during 2016
+at the LHC. The final summary statistic is the distribution of a
+probabilistic classifier output, which was trained on simulated
+events of SM HH production and event resulting from the data-driven
+background estimation technique described in [Section @sec:bkg_est].
+Specifically, a non-parametric sample likelihood composed by a product
+of Poisson count likelihoods is used, where each Poisson factor
+represent a bin of the distribution of the classifier output, in
+an analogous manner to [Equation @eq:poisson_multichannel]. The classifier
+distribution was initially divided in 80 equal sized bins, and the
+expected number of counts from each mixture component and their
+variations due to nuisance parameters were estimated, using simulated
+observations under the SM hypothesis and each of the BSM
+EFT points considered for the signal, and from the bias corrected
+distribution from the data-driven background dataset.
+
+
+![Results of the for best fit of the statistical model
+of BDT classifier output distribution for the SM HH production signal
+for the observed data. In the lower panel a comparison is shown between
+the best fit signal and best fit background subtracted from
+measured data. The band, centred at zero, shows the total
+uncertainty.](gfx/105_chapter_5/Figure_007.pdf){
+#fig:Figure_007 width=75%}
+
+::: {#fig:Figure_008 .subfigures}
+![leading reco. Higgs mass $M_{\textrm{H}_1}$
+](gfx/105_chapter_5/Figure_008-a.pdf){#fig:Figure_008_a width=49%}
+![trailing reco. Higgs mass $M_{\textrm{H}_2}$
+](gfx/105_chapter_5/Figure_008-b.pdf){#fig:Figure_008_b width=49%}
+
+Distributions of the reconstructed Higgs masses for the best
+fit. A correction factor
+obtained from the binned classifier distribution, as described
+in [Section @sec:bkg_validation], has been applied as a weight
+to the mixed
+dataset
+:::
+
+
+\begin{table}[htbp]
+ \caption{Observed and expected upper limits on
+ $\sigma(\textrm{pp} \rightarrow \textrm{HH}  \rightarrow
+\textrm{b}\bar{\textrm{b}}\textrm{b}\bar{\textrm{b}})$ in the SM
+at 95\% CL in units of fb.}
+ \centering
+ \begin{tabular}{l l l l l l l}
+   \hline
+   Category $\textrm{HH}  \rightarrow
+  \textrm{b}\bar{\textrm{b}}\textrm{b}\bar{\textrm{b}}$  & Observed & Expected &
+   -2 s.d. & -1 s.d. & +1 s.d. & +2 s.d. \\
+   \hline  
+SM $$ &   847 &   419  &   221  &   297  &   601  &   834  \\  
+   \hline
+ \end{tabular}
+ \label{tab:limits2}
+\end{table}
+
+\begin{table}[htbp]
+ \centering
+\caption{Observed and expected upper limits on
+ the $\sigma(\textrm{pp} \rightarrow \textrm{HH}  \rightarrow
+ \textrm{b}\bar{\textrm{b}}\textrm{b}\bar{\textrm{b}})$ cross section
+ for the 13 BSM benchmark models listed in \autoref{table:benchmarks} at
+ 95\% CL in units of fb.}
+ \begin{tabular}{l l l l l l l }
+\hline
+Benchmark point & Observed & Expected &
+-2 s.d. & -1 s.d. & +1 s.d. & +2 s.d.  \\
+\hline
+1 &   602  &   295  &   155  &   209  &   424  &   592  \\ 
+2 &   554  &   269  &   141  &   190  &   389  &   548  \\ 
+3 &   705  &   346  &   182  &   245  &   497  &   691  \\ 
+4 &   939  &   461  &   244  &   327  &   662  &   920  \\ 
+5 &   508  &   248  &   131  &   176  &   357  &   501  \\ 
+6 &   937  &   457  &   240  &   323  &   657  &   916  \\ 
+7 &   3510  &   1710  &   905  &   1210  &   2440  &   3390  \\ 
+8 &   686  &   336  &   177  &   238  &   483  &   674  \\ 
+9 &   529  &   259  &   136  &   183  &   373  &   520  \\ 
+10 &   2090  &   1000  &   527  &   709  &   1440  &   2010  \\ 
+11 &   1080  &   525  &   277  &   372  &   755  &   1050  \\ 
+12 &   1744  &   859  &   455  &   611  &   1230  &   1710  \\ 
+Box &   1090  &   542  &   286  &   384  &   775  &   1080  \\
+   \hline
+\end{tabular}
+\label{t:limits}
+\end{table}
+
+![Graphical comparison between the observed and expected upper
+limits at 95\% CL on the
+$\sigma(\textrm{pp} \rightarrow \textrm{HH}  \rightarrow
+\textrm{b}\bar{\textrm{b}}\textrm{b}\bar{\textrm{b}})$ cross
+section for the SM and the 13 BSM models investigated. 
+See Table \ref{table:benchmarks} for their
+respective EFT parameter values.](gfx/105_chapter_5/Figure_009.pdf){
+#fig:Figure_009 width=60%}
+
+
+![Observed and expected $\sigma(\textrm{pp} \rightarrow \textrm{HH}  \rightarrow
+\textrm{b}\bar{\textrm{b}}\textrm{b}\bar{\textrm{b}})$ cross section limits on at 95\% CL
+for values of $\kappa_\lambda$ in the [-20,20] range, assuming  $\kappa_\textrm{t} = 1$; 
+the theoretical prediction with $\kappa_\textrm{t} = 1$ is also
+shown in red colour.](gfx/105_chapter_5/Figure_010.pdf){
+#fig:Figure_010 width=60%}
