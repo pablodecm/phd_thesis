@@ -1100,6 +1100,45 @@ correction procedure described in [Section @sec:bkg_validation]. Because
 the data-driven technique described in the previous section does
 not provide a way to estimate the normalisation of the background, the
 background normalisation is added a nuisance parameter that
-is left unconstraint.
+is left fully unconstraint.
+
+Regarding systematic uncertainties due to nuisance parameters of the
+the simulation-based signal distribution, the most relevant factor
+are the uncertainties in the measure differences between data
+and simulation in b-tagging efficiencies, which is estimated recomputing
+the signal distribution accounting each weight that accounts for
+a one standard deviation factor and interpolating in-between as described
+in [Section @sec:synthetic_likelihood]. The uncertain due to the
+modelling of the pile-up contribution is included by considering the
+different effect of pile-up reweighting when a $\pm4.6\%$ variation
+on the total inelastic cross section value at 13 TeV [@Sirunyan:2018nqx].
+The effect due to the modelling uncertainties in jet energy resolution
+and scale are estimated by smearing or shifting the reconstructed
+jet energy respectively, according to their corresponding uncertainties
+as function of the jet $p_T$and $\lvert \eta \rvert$, and evaluating
+the effect on the final summary statistic. For all the mentioned sources
+of uncertainty, both the effect on the classifier output distribution
+and its normalisation has been considered.
+
+The uncertainty on the trigger efficiency after being corrected by
+the observed discrepancies between the data and simulation amounts
+to a 2\% effect on the signal normalisation. The total signal component
+normalisation is also affected by the uncertainty in the measurement
+of the integrated luminosity $\mathcal{L}_\textrm{int}$, which has
+been estimated during the 2016 data-taking period
+to be $2.5\%$[@CMS:2017sdi]. The effect of
+theoretical uncertainties that affect the simulation samples are
+modelled using per-event weights provided by the simulation software.
+In particular, effect of variation of the renormalisation
+$\mu_\textrm{R}$  and factorisation $\mu_\textrm{F}$ scales on the
+signal efficiency are estimated by taking the maximum and the minimum
+difference with respect to the nominal efficiency when varying
+$\mu_\textrm{R}$ and $\mu_\textrm{F}$ each individually as
+well as both together up and down by a factor of two. For estimating
+the total signal efficiency variation due to parton distribution
+function (PDF) uncertainties, the PDF4LHC recommendations
+[@Butterworth:2015oua] are followed, computing the variation as the
+standard deviation of a set of 100 MC replicas of the NNPDF 3.0 set
+[@Ball:2014uwa].
 
 ## Results {#sec:results}
