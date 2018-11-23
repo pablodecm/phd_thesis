@@ -1271,7 +1271,7 @@ the contribution from some of the mixture components can
 often by estimated from data directly, using what is referred to
 as *data-driven estimation* techniques.
 
-#### Nuisance Parameters
+#### Nuisance Parameters {#sec:nuis_pars}
 
 The general definition of nuisance parameters in an statistical model, refers
 to all the uncertain parameters of the statistical model that are not

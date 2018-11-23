@@ -1040,11 +1040,66 @@ a coloured shadow around the quantile estimation.
 The light yellow shadow represents the uncertainty
 due to the limited statistics of the reference observed sample.
 The separation between the one s.d. quantiles is compatible with the
-expected variance if the estimation was Poisson or Gaussian distributed.](gfx/105_chapter_5/Figure_012.pdf){
+expected variance if the estimation was Poisson or Gaussian
+distributed.](gfx/105_chapter_5/Figure_012.pdf){
 #fig:Figure_012 width=100%}
 
 \FloatBarrier
 
 ## Systematic Uncertainties {#sec:syst_unc}
+
+Both the signal model based on simulated observations and
+data-driven background model in this analysis are not perfectly known,
+hence a set of nuisance parameter in the statistical model have to
+be considered to account for such lack of certainty, as generally
+discussed in [Section @sec:nuis_pars]. Each nuisance parameters, which
+can affect the signal, the background component or both, effectively
+leads to an increase of the uncertainty
+on the parameters of interested or the total interval width
+in cases upper limits are being set as in this analysis, which
+in often referred as systematic uncertainty. A list of the sources
+of systematic uncertainty considered in this analysis, and their
+estimated relative effect in the final limit for the SM Higgs pair
+production, is provided
+on the \autoref{tab:sys}.
+
+\begin{table}[htbp]
+ \caption{List of systematic uncertainties considered in this analysis,
+   and their relative impact on the expected limit for the SM HH production.
+  The relative impact is obtained by fixing the nuisance parameters
+  corresponding to each source and recalculating the expected limit.}
+ \centering
+ \begin{tabular}{l c c}
+   \hline
+   Source        & Affects  & Exp. limit variation \\   
+   \hline
+   Bkg. shape     & bkg.  & 30\%  \\ 
+   Bkg. norm.     & bkg.  & 8.6\%  \\
+   b-tagging eff. & sig  & 2.8\%  \\
+   Pileup        & sig  &       ${<} 0.01\%$ \\
+   Jet energy res.  & sig  &    ${<} 0.01\%$ \\
+   Jet energy scale  & sig  &  ${<} 0.01\%$ \\
+   Int. luminosity    & sig  & ${<} 0.01\%$ \\
+   Trigger eff.  & sig  &      ${<} 0.01\%$ \\
+   $\mu_\textrm{F}$ and $\mu_\textrm{F}$\ scales  & sig  & ${<} 0.01\%$ \\
+   PDF           & sig  &       ${<} 0.01\%$ \\
+   \hline
+ \end{tabular}
+ \label{tab:sys}
+\end{table}
+
+
+The main sources of uncertainty in this analysis
+are those associated with the data-driven background
+model. For each classifier output bin, an independent nuisance
+parameters that accounts for the possible
+variation of the background prediction due to the limited data
+statistics of the articial events used for building the bacground
+model and the accuracy limitations found during the bias
+correction procedure described in [Section @sec:bkg_validation]. Because
+the data-driven technique described in the previous section does
+not provide a way to estimate the normalisation of the background, the
+background normalisation is added a nuisance parameter that
+is left unconstraint.
 
 ## Results {#sec:results}
