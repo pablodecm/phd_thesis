@@ -1174,20 +1174,6 @@ classifier output are shown in [Figure @fig:Figure_007], while the
 those corresponding to the reconstructed Higgs boson masses are shown
 in [Figure @fig:Figure_008].
 
-Only two mixture components are considered in the the final statistical
-model, signal representing $\textrm{pp} \rightarrow \textrm{HH}  \rightarrow
-\textrm{b}\bar{\textrm{b}}\textrm{b}\bar{\textrm{b}})$ and
-background estimated from data and dominated by QCD multi-jet
-processes and secondarly by top quark production with additional jets.
-The contribution from other hard processes that
-can produce four b-quarks, such as $\textrm{t}\bar{\textrm{t}}\textrm{H}$,
-$\textrm{Z}\textrm{H}$,
-$\textrm{b}\bar{\textrm{b}}\textrm{H}$, and single Higgs boson production
-was estimated from simulated samples and found to be negligible in
-comparison with the considered background uncertainties at the
-current level of experiment sensitivity.
-
-
 ![Results of the for best fit of the statistical model
 of BDT classifier output distribution for the SM HH production signal
 for the observed data. In the lower panel a comparison is shown between
@@ -1210,6 +1196,32 @@ to the mixed
 dataset
 :::
 
+Only two mixture components are considered in the the final statistical
+model, signal representing $\textrm{pp} \rightarrow \textrm{HH}  \rightarrow
+\textrm{b}\bar{\textrm{b}}\textrm{b}\bar{\textrm{b}})$ and
+background estimated from data and dominated by QCD multi-jet
+processes and secondarly by top quark production with additional jets.
+The contribution from other hard processes that
+can produce four b-quarks, such as $\textrm{t}\bar{\textrm{t}}\textrm{H}$,
+$\textrm{Z}\textrm{H}$,
+$\textrm{b}\bar{\textrm{b}}\textrm{H}$, and single Higgs boson production
+was estimated from simulated samples and found to be negligible in
+comparison with the considered background uncertainties at the
+current level of experiment sensitivity.
+
+The same statistical model is used to obtain he observed
+and expected 95\% confidence level (CL) upper limits for
+non-resonant $\textrm{pp} \rightarrow \textrm{HH}  \rightarrow
+\textrm{b}\bar{\textrm{b}}\textrm{b}\bar{\textrm{b}}$ production,
+using the asymptotic approximation [@Cowan:2010js] of the
+$\textrm{CL}_\textrm{s}$ criterion
+[@Read:2002hq; @Junk:1999kv; @ATLAS:2011tau], and the so-called LHC test
+statistic, that is based on the profile likelihood ratio. All the
+nuisance parameters are treated by profiling the likelihood. The
+median expected and observed upper limits
+for the SM Higgs pair production, as well as the expected limit
+1 and 2 standard deviation intervals around the median are included in
+Table \ref{tab:limits2}.
 
 \begin{table}[htbp]
  \caption{Observed and expected upper limits on
