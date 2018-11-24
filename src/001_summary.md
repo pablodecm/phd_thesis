@@ -1,5 +1,3 @@
-# Abstract (English) {.unnumbered}
+# Abstract {.unnumbered}
 
-
-# Abstract (Italian) {.unnumbered}
 
