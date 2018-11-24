@@ -1178,7 +1178,8 @@ in [Figure @fig:Figure_008].
 of BDT classifier output distribution for the SM HH production signal
 for the observed data. In the lower panel a comparison is shown between
 the best fit signal and best fit background subtracted from
-measured data. The band, centred at zero, shows the total
+measured data. The dashed band in the lower panel,
+centred at zero, shows the total
 uncertainty.](gfx/105_chapter_5/Figure_007.pdf){
 #fig:Figure_007 width=75%}
 
@@ -1198,9 +1199,9 @@ dataset
 
 Only two mixture components are considered in the the final statistical
 model, signal representing $\textrm{pp} \rightarrow \textrm{HH}  \rightarrow
-\textrm{b}\bar{\textrm{b}}\textrm{b}\bar{\textrm{b}})$ and
+\textrm{b}\bar{\textrm{b}}\textrm{b}\bar{\textrm{b}}$, and
 background estimated from data and dominated by QCD multi-jet
-processes and secondarly by top quark production with additional jets.
+processes and secondarily by top quark production with additional jets.
 The contribution from other hard processes that
 can produce four b-quarks, such as $\textrm{t}\bar{\textrm{t}}\textrm{H}$,
 $\textrm{Z}\textrm{H}$,
@@ -1221,7 +1222,19 @@ nuisance parameters are treated by profiling the likelihood. The
 median expected and observed upper limits
 for the SM Higgs pair production, as well as the expected limit
 1 and 2 standard deviation intervals around the median are included in
-Table \ref{tab:limits2}.
+Table \ref{tab:limits2}. The median expected limit obtained for
+SM HH production is $419\ \textrm{fb}$, which corresponds to
+approximately 37 times the SM expectation, i.e. the cross section
+from [Equation @eq:higgs_pair_xs]  multiplied by the
+$\textrm{b}\bar{\textrm{b}}\textrm{b}\bar{\textrm{b}})$ decay branching
+fraction. The observed limit obtained is $847\ \textrm{fb}$, which
+is about two standard deviations above the expected limit. To facilitate
+the comparison with the analyses carried out in other channels, the
+observed limit corresponds to
+$\sigma \left ( \textrm{pp} \rightarrow \textrm{HH} \right ) 847\ \textrm{fb}
+= 2496\ \textrm{SM}$
+as an upper limit the inclusive HH production cross section of SM-like
+processes.
 
 \begin{table}[htbp]
  \caption{Observed and expected upper limits on
@@ -1240,6 +1253,23 @@ SM $$ &   847 &   419  &   221  &   297  &   601  &   834  \\
  \end{tabular}
  \label{tab:limits2}
 \end{table}
+
+The same procedure was carried out for each of the EFT benchmarks
+previously listed in Table \ref{table:benchmarks}, by re-weighting
+the simulated HH production observation as discusses and evaluating
+the signal distribution under each BSM model considered. The observed
+and expected limits obtained for each of the benchmark points are
+provided in Table \ref{t:limits}. The observed and expected limits
+are also graphically compared
+between the various EFT points and the SM in [Figure @fig:Figure_009].
+The observed limit is also found about two standard deviations over
+the median expected limits, which is explaining by taking into
+account that the same classifier and thus the same background model
+(and its associated fluctuations) is considered in the statistical
+model for all the inference procedures. In particular, the last bins
+of the classifier distribution for the data-driven background
+prediction has a small deficit compared to the observed data,
+as can be seen in [Figure @fig:Figure_007].
 
 \begin{table}[htbp]
  \centering
@@ -1280,6 +1310,19 @@ See Table \ref{table:benchmarks} for their
 respective EFT parameter values.](gfx/105_chapter_5/Figure_009.pdf){
 #fig:Figure_009 width=60%}
 
+In addition to the BSM benchmarks, limits are also obtained
+for the cross section times branching ratio of Higgs pair production
+processes assuming in the EFT framework, varying $\kappa_\lambda$
+in the range $[-20,20]$, while assuming that $\kappa_\textrm{t}=1$
+and the rest of the couplings are zero. The results are shown in
+[Figure @fig:Figure_010], noting that the upper limit changes considerably
+in this range because the distribution of the
+final state properties change considerably, and consequently the
+process efficiency also varies. The EFT cross section prediction
+as a function of $\kappa_\lambda$ and keeping $\kappa_\textrm{t}=1$
+is also shown in the previous figure, noting that no values
+of $\kappa_\lambda$ can be excluding and the currect level of
+experimental sensitivity.
 
 ![Observed and expected $\sigma(\textrm{pp} \rightarrow \textrm{HH}  \rightarrow
 \textrm{b}\bar{\textrm{b}}\textrm{b}\bar{\textrm{b}})$ cross section limits on at 95\% CL
