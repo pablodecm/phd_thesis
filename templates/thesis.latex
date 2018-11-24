@@ -10,6 +10,8 @@
 \usepackage{etoolbox}
 \usepackage{amsfonts}
 \usepackage{epigraph}
+\usepackage{algorithm}
+\usepackage{algpseudocode}
 
 \usepackage{float}
 \usepackage{placeins}

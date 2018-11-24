@@ -1483,7 +1483,7 @@ $\boldsymbol{\theta}_\iota$ once a summary statistic has already been
 chosen and the final statistical model has been fully specified
 $p(\boldsymbol{s}(D) | \boldsymbol{\theta})$. 
 
-### Likelihood-Free Inference
+### Likelihood-Free Inference {#sec:likelihood-free}
 
 One of the main properties of the statistical models at particle colliders
 that was the focus of the last section was their generative-only nature,
