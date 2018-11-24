@@ -1,5 +1,5 @@
-# Abstract {.unnumbered}
+# Abstract (English) {.unnumbered}
 
-\clearpage
 
-# Riassunto {.unnumbered}
+# Abstract (Italian) {.unnumbered}
+

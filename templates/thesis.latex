@@ -5,6 +5,8 @@
 \usepackage{metalogo}
 \usepackage{subfig}
 \usepackage{bbold}
+\usepackage{afterpage}
+
 
 
 \usepackage{etoolbox}
@@ -115,7 +117,7 @@ $endif$
     \vspace*{2cm}
     {
         \scshape \large
-        Tesi di  Dottorato\\
+        PhD Thesis\\
       }
       \vspace*{1.5cm}
       {
@@ -125,13 +127,13 @@ $endif$
       }
       \vspace{1cm}
       \begin{flushleft}
-        \textsc{Coordinatore del Corso:} Prof. Gianguido Dall'Agata\\
+        \textsc{PhD School Coordinator:} Prof. Gianguido Dall'Agata\\
         \vspace{0.5cm}
-        \textsc{Supervisore:} Dott. Tommaso Dorigo\\
+        \textsc{Supervisor:} Dott. Tommaso Dorigo\\
       \end{flushleft}
       \begin{flushright}
-      	\vspace{1cm}
-      	\textsc{Dottorando:}  $author$
+      	\vspace{1.2cm}
+      	\textsc{PhD Candidate:}  $author$
       \end{flushright}        
     \end{center}
     \makeatother
@@ -150,7 +152,7 @@ $endif$
 
 \begin{document}
 
-\pagenumbering{roman} 
+\frontmatter
 
 $if(title)$
 \maketitle
@@ -176,8 +178,7 @@ $endfor$
 
 \clearpage
 
-\pagenumbering{arabic} 
-
+\mainmatter
 
 $body$
 

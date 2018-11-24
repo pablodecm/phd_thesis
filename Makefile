@@ -27,6 +27,7 @@ thesis.tex: src/*.md before
 
 before: src/00[1-9]_*.md
 	$(PANDOC) "$(INPUTDIR)"/00[1-9]_*.md \
+	--top-level-division=chapter \
 	-o before.tex
 
 clean:
