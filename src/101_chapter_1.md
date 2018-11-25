@@ -216,7 +216,7 @@ annihilation operators.
 
 ### Symmetry Breaking and the Higgs Boson {#sec:ewsb_higgs}
 
-### Standard Model Lagrangian
+### Standard Model Lagrangian {#sec:sm_lagrangian}
 
 
 
@@ -393,6 +393,17 @@ those observables, it could be evidence pointing to New Physics outside
 the SM. 
 
 #### Effective Field Theories
+
+In addition carrying out precision measurements and model-specific
+searches, there exist a
+practical way
+to consider possible extensions due to New Physics phenomena occurring
+at a higher energy scale $\Lambda$. Such model-independent approach, that
+is often referred to as *effective field theory* (EFT), allows to compute
+observables by extending the SM Lagrangian from [Section @sec:sm_lagrangian]
+with additional operators:
+
+
 
 ## Phenomenology of proton collisions {#sec:pheno}
 
