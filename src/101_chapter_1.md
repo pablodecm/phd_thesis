@@ -34,7 +34,11 @@ of elementary particles, which can in turn be understood as
 local excitations of different fields that permeate our universe.
 
 
-![Standard Model Particles
+![Schematic overview of the particle content within the SM. Fundamental
+particles include fermions, further subdivided in quarks
+and leptons, and fundamental bosons, including the force mediators
+and the Higgs boson. Diagram adapted from
+[MissMJ](https://commons.wikimedia.org/wiki/File:Standard_Model_of_Elementary_Particles.svg).
 ](gfx/101_chapter_1/Standard_Model_of_Elementary_Particles.pdf){
 #fig:standard_model_particles width=70%}
 
@@ -60,7 +64,8 @@ related with electroweak interactions (i.e. unification of weak and
 electromagnetic) and the conservation of isospin and
 weak hypercharge.
 The SM is typically specified using the Lagrangian formalism and depends
-on a total of 19 parameters, which are not predicted by the theory
+on a total of 19 parameters (not accounting for neutrino masses
+and mixing angles), which are not predicted by the theory
 from first principles but determined through experimental measurements.
 
 In the context of the SM, excitations of the fundamental fields
@@ -71,7 +76,7 @@ and they
 are further subdivided into leptons and quarks depending on their 
 interactions. A schematic overview of the fundamental particles
 of the SM and their properties is provided in
-[@Fig:standard_model_particles]. Three particle generations
+[Figure @Fig:standard_model_particles]. Three particle generations
 are known for both quarks and leptons, each containing a pair of particles
 with different masses. For quarks, the heavier is referred to as up-type and
 the lighter as down-type. Instead, for leptons we distinguish the heavier
@@ -281,7 +286,7 @@ main empirical and theoretical concerns are summarised:
   
   
 * **Unexplained matter-antimatter asymmetry**: as discussed in
-  Section [-@sec:standard_model], each matter particle in the Standard
+  [Section @sec:standard_model], each matter particle in the Standard
   Model has an identical anti-matter possessing opposite quantum
   numbers. Because pair creation and annihilation processes are symmetric, but
   our universe is manifestly dominated by what we refer as matter, some
@@ -293,7 +298,8 @@ main empirical and theoretical concerns are summarised:
 
 * **Origin of neutrino masses**: the Standard Model was developed assuming
   that neutrinos were massless, yet is currently well-stablished
-  that neutrinos oscillate between different flavour states [cite], implying 
+  that neutrinos oscillate between different flavour states
+  [@fukuda1998evidence; @sno2001measurement], implying 
   that flavour states are mixing and hence that neutrino masses are
   very small but different from zero.
   The SM Lagrangian can be extended to account for the masses of neutrinos
@@ -305,15 +311,16 @@ main empirical and theoretical concerns are summarised:
   particles are Majorana fermions
   and hence they are their own anti-particle. This hypothesis is currently being
   experimentally tested. It also worth noting that in order to explain the
-  smallness of neutrino masses in a principled way, the Seesaw mechanism [cite]
+  smallness of neutrino masses in a principled way, the Seesaw mechanism [@Akhmedov:1999tm]
   has been proposed, which implicitly assumes that the SM is only a
   low-energy scale effective theory of a more complete unified theory.
 
   
 * **Mismatch between vacuum energy and Dark Energy**: in addition of providing
   evidence for dark matter, astrophysical observations such as studies of the
-  properties of the Cosmic Microwave Background [cite] or the redshift of
-  type Ia supernovae [cite], consistently point to the hypothesis of
+  properties of the Cosmic Microwave Background [@Ade:2015xua] or the redshift of
+  type Ia supernovae [@riess2004type],
+  consistently point to the hypothesis of
   an accelerating expansion of the current universe. The simplest way to account
   for this in cosmological models is to include a cosmological constant,
   which should be understood as an intrinsic energy density of the vacuum,
@@ -327,14 +334,14 @@ main empirical and theoretical concerns are summarised:
   energy originating from quantum fluctuations is expected. However,
   modern attempts to predict energy densities from QFT are at variance
   with the observed energy vacuum energy density, some of them differing in
-  120 orders of magnitude [cite].
+  120 orders of magnitude [@adler1995vacuum].
   
   
 * **Naturalness, hierarchy and fine-tunning concerns**: as discussed at the
-  beginning of Section [-@sec:standard_model], the SM can be thought of
+  beginning of [Section @sec:standard_model], the SM can be thought of
   the most general theory based on  a set symmetries, and its
-  19 [check] parameters (or 24 [check] accounting for neutrino masses
-  and mixing matrix)
+  19 parameters (or 26 accounting for neutrino masses
+  and mixing angles)
   are not obtained from first principles but measured experimentally.
   Having such a large number of free
   parameters and observing large differences among their
@@ -353,9 +360,10 @@ main empirical and theoretical concerns are summarised:
 
 Other possible issues, in some cases related with those discussed,
 have also been raised 
-such as the apparent vacuum meta-stability [cite] or
-the strong CP problem [cite]. Some of these issues can be clarified
-once the higher precision measurements of the SM become available.
+such as the apparent vacuum meta-stability [@degrassi2012higgs] or
+the strong CP problem [@cheng1988strong]. Some of these issues can be clarified
+once the higher precision measurements of the SM become available, which
+are mainly obtained in particle collider experiments.
 
 ### Possible Extensions {#sec:possible_ext}
 
@@ -611,7 +619,7 @@ secondary interactions between the protons, as well as the
 decays for all unstable particles generated. 
 An example of the typical complexity of the physical
 processes occurring as a result of a single high-energy proton-proton
-scattering is provided in Figure [-@fig:event_shower].
+scattering is provided in [Figure @fig:event_shower].
 These and additional minor effects
 (e.g. colour reconnection) are accounted by *parton showering* (PS) programs,
 that take as the input the the generated particle outcome of the
