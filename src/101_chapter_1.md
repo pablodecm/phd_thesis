@@ -471,19 +471,22 @@ energies, limiting the first principles computation of relevant
 observables for the most common interactions. Luckily for us,
 the most promising territory being explored in energy colliders correspond
 to higher energies, where relevant interaction outcomes come from the
-hard scattering of proton constituents (referred as to partons)
-at high energies, and predictions can
-be perturbatively approximated under the assuming asymptotic
+hard scattering of proton constituents (referred to as partons),
+and predictions can
+be perturbatively approximated under the assumption of asymptotic
 freedom.
 
 
 ::: {#fig:subfigs_pdfs .subfigures}
 ![Low Energy Scale $\mu^2 = 10 \textrm{GeV}^2$
 ](gfx/101_chapter_1/nnpdf31nnlo-10.pdf){#fig:pdf_low width=49%}
-![High Energy Scale$\mu^2 = 10^4 \textrm{GeV}^2$
+![High Energy Scale $\mu^2 = 10^4 \textrm{GeV}^2$
 ](gfx/101_chapter_1/nnpdf31nnlo-1e4.pdf){#fig:pdf_high width=49%}
 
-Parton Distribution Functions.
+Distribution functions for the different
+partons at low and high energies. The contribution from gluons
+shown is 1/10 of the actual contribution. Image adapted from the NNPDF
+collaboration [@Ball:2017nwa].
 :::
 
 Even for modelling hard scattering processes, a non-perturbative input is
@@ -497,7 +500,9 @@ constituent quarks effectively generates
 a sea of virtual quark-antiquark pairs from which other partons can
 scatter off. Consequently, in the interaction of two protons, not only
 the constituent quarks, referred as to valence quarks, can take part in the
-hard scattering process but also gluons and sea quarks. At the time of writing,
+hard scattering process but also gluons and sea quarks.
+
+At the time of writing,
 PDFs are not computable from first principles so they
 have to be parametrised and extrapolated from various experimental sources
 including fixed-target proton deep inelastic scattering (DIS) and previous
@@ -508,7 +513,7 @@ densities can be modelled theoretically
 for computing observables in high-energy colliders,
 several research collaborations such as NNPDF [@Ball:2017nwa] provide accurate
 estimations that can be readily used for simulation and prediction. In
-Figure [-@fig:subfigs_pdfs], the parton distribution functions at two different
+[Figure @fig:subfigs_pdfs], the parton distribution functions at two different
 energy scales estimated by one of those collaborations are shown, at lower
 energy scales the valence quarks (up and down) dominate while when we
 extrapolate at higher energies, gluon scattering become the most likely

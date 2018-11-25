@@ -1,6 +1,6 @@
 # Introduction {.unnumbered}
 
-\epigraph{Every new beginning comes from some other beginning's end.}{Seneca the Younger}
+\epigraph{Every new beginning \\  comes from some other beginning's end.}{Seneca the Younger}
 
 Humans strive for understanding the world by seeking explanations
 to the varied natural phenomena happening around them,
