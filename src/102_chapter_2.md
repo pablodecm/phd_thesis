@@ -826,7 +826,9 @@ large blocks of ferromagnetic material as *flux-return yokes*.
 in the $r-z$ plane, focussing
 on the components of muon system components.
 The detector is symmetric around
-$r=0$, so only the top half is shown. Figure adapted from [@Sirunyan:2018fpa].
+$r=0$ axis and the $z=0$ plane,
+so only the top quarter is shown.
+Figure adapted from [@Sirunyan:2018fpa].
 ](gfx/102_chapter_2/cms_muon.pdf){#fig:CMS_muon width=70%}
 
 The muon system is the most external sub-detector of CMS
