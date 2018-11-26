@@ -419,7 +419,41 @@ an infinite set of operators with any dimension $d_i > 4$ can be considered,
 their effects is expected to be suppressed by $(E/\Lambda)^{d_i - 4}$ thus
 high-dimensional operators can often be neglected.
 
+If all the EFT coefficients $c_i$ are zero or the new energy scale $\Lambda$
+is infinite, the EFT theory reduces to the SM Lagrangian. Instead,
+if $\Lambda \approx
+E$, the effective 
+approximation in [Equation @eq:eft_lagrangian_generic] does not hold,
+and the interactions
+have to realistic modelled using the a complete theoretical description
+of the New Physics scenario. While in general effective field
+theories are not renormalisable, observables and higher-order corrections
+can be computed, because the of the well-defined cutoff energy scale
+$\Lambda$. The best-known example of an EFT that has been used in practise
+is Fermi theory, which is a simplification to compute useful observables
+at low-energies $E \approx 10\ \textrm{MeV}$ rather than an extension of
+the SM, given that the detailed structure of electroweak
+interactions due to $\textrm{W}^{\pm}$ boson mediating $\beta$ decays
+was unknown at the time.
 
+At the LHC and other collider experiments, the main use case of EFT
+is to describe generic extensions of the SM that could arise
+due to New Physics at energy scales that are not directly
+accessible. From an experimental standpoint, the goal is thus to
+constraint the values of the EFT operator 
+coefficients using experimental data. Because the for $d_i=5$ the
+only possible operator is relevant for neutrino
+phenomenology [@weinberg1979baryon], the set
+of Lagrangian operators of interest at collider experiments
+often corresponds to $d_i=6$ dimension operators. The large set
+of possible dimension six operators can be greatly reduced by requiring
+that the main experimentally verified properties of the SM
+are respected, such as the gauge and Poincaré symmetries, or
+baryon number conservation.
+In [Chapter @sec:higgs_pair],
+a subset of dimension six EFT operators are used 
+to study non-resonant extensions of Higgs pair
+production in a model-independent manner.
 
 ## Phenomenology of proton collisions {#sec:pheno}
 
