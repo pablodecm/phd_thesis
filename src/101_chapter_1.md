@@ -398,10 +398,26 @@ In addition carrying out precision measurements and model-specific
 searches, there exist a
 practical way
 to consider possible extensions due to New Physics phenomena occurring
-at a higher energy scale $\Lambda$. Such model-independent approach, that
-is often referred to as *effective field theory* (EFT), allows to compute
+at a higher energy scale $\Lambda$ than the one being probed $E$. Such
+model-independent approach, that
+is often referred to as *effective field theory* (EFT) [@PhysRevD.11.2856;
+@Buchmuller:1985jz], allows to compute
 observables by extending the SM Lagrangian from [Section @sec:sm_lagrangian]
 with additional operators:
+$$
+\mathcal{L}_\textrm{EFT} = \mathcal{L}_\textrm{SM}
++ \sum_i \frac{c_i} { \Lambda^{d_i - 4}} \mathcal{O}_i
+$$ {#eq:eft_lagrangian_generic}
+where $\mathcal{O}_i$ are referred to as *effective operators*, describing
+the characteristics of the new interactions that are considered in the
+extended theory and $c_i$ are the the *EFT or Wilson coefficients* that
+parametrise the strength of those new interactions. The integer $d_i$
+defines the dimension of the operator
+$\textrm{dim} \left( \mathcal{O}_i \right) = \left[ E \right]^{d_i}$,
+and while in principle 
+an infinite set of operators with any dimension $d_i > 4$ can be considered,
+their effects is expected to be suppressed by $(E/\Lambda)^{d_i - 4}$ thus
+high-dimensional operators can often be neglected.
 
 
 
