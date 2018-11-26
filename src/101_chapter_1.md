@@ -38,7 +38,7 @@ local excitations of different fields that permeate our universe.
 particles include fermions, further subdivided in quarks
 and leptons, and fundamental bosons, including the force mediators
 and the Higgs boson. Diagram adapted from
-[MissMJ](https://commons.wikimedia.org/wiki/File:Standard_Model_of_Elementary_Particles.svg).
+[MissMJ (CC BY 3.0 license)](https://commons.wikimedia.org/wiki/File:Standard_Model_of_Elementary_Particles.svg).
 ](gfx/101_chapter_1/Standard_Model_of_Elementary_Particles.pdf){
 #fig:standard_model_particles width=70%}
 

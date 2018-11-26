@@ -46,7 +46,10 @@ highest collision energy, formerly achieved by the Tevatron collider at
 Fermilab.
 
 
-![LHC Overall
+![Depiction of the placement of LHC tunnel and the main experiments
+places at its collision points (ATLAS, ALICE, CMS and LHCb) relative
+to Geneva and the French-Swiss border.
+Image adapted from [@Servicegraphique:1708849].
 ](gfx/102_chapter_2/LHC_overall.pdf){
 #fig:LHC_overall width=70%}
 
@@ -80,7 +83,11 @@ is to outline the sequence of steps followed to obtain the high energy
 proton bunches that are used for high-energy collisions at the LHC.
 
 
-![CERN Accerator Complex
+![Schematic representation of the CERN Accerator Complex, including the
+the relative placement of the experiments as well as the main
+elements of the LHC accelerating chain: LINAC2, PSB, PS, SPS
+and the LHC ring. Figure credit to
+[Forthommel(CC BY-SA 3.0 license)](https://commons.wikimedia.org/wiki/File:Cern-accelerator-complex.svg).
 ](gfx/102_chapter_2/CERN-accelerator-complex.pdf){
 #fig:CERN_Acc_complex width=70%}
 
@@ -382,7 +389,9 @@ technical design report [@CMS:TDR_Detector_Performance]
 and references therein are recommended
 for a more specialised account.
 
-![CMS detector
+![Cutaway view of the CMS detector, based on a three-dimensional representation,
+an highlighting the main detecting systems and characteristics.
+Image has been adapted from [@sakuma2014detector].
 ](gfx/102_chapter_2/CMS_detector.pdf){
 #fig:CMS_detector width=90%}
 
@@ -529,7 +538,13 @@ symmetric in $\phi$, the outermost layers contained within
 a supporting cylindrical structure of 2.5 m of diameter and 5.8 m
 of length.
 
-![CMS Tracking System
+![Cross sectional view of the CMS detector inner tracker
+detector in the $r-z$ plane, detailing the position
+of detecting layers
+as well as the main detector sub-components.
+The tracker is symmetric around
+$r=0$, so only the top half is shown. Figure has been adapted
+from [@Chatrchyan:2014fea].
 ](gfx/102_chapter_2/tracker_colour.pdf){
 #fig:CMS_tracker width=90%}
 
@@ -639,7 +654,10 @@ shower produce visible range light in the scintillating but
 transparent crystal, which is detected, amplified and collected by
 photodetectors placed at the end of each lead tungstate crystal.
 
-![CMS Electromagnetic Calorimeter
+![Cutaway view of the CMS electromagnetic calorimeter, based on a
+tree-dimensional model of the detector geometry. The placement
+of the lead tungstate crystal is shown for part of
+the barrel and endcaps. Figure has been adapted from [@CERN-LHCC-97-033].
 ](gfx/102_chapter_2/ecal_from_tdr.pdf){
 #fig:CMS_ecal width=90%}
 
@@ -707,11 +725,17 @@ is captured by a thin optical fibre and carried to a photodetector, producing
 electric signal that can be used to measure the total amount of deposited
 energy with the help of careful calibration.  
 
-![CMS Hadronic Calorimeter
+![Cross sectional view of the CMS detector hadronic calorimeter (HCAL)
+detector in the $r-z$ plane, depicting the positioning of the various
+detector segments relative to the beam line and the solenoid magnet.
+The HCAL is symmetric around
+$r=0$, so only the top half is shown. Figure adapted from
+[@Chatrchyan:2009ag].
 ](gfx/102_chapter_2/HCAL.pdf){
 #fig:CMS_hcal width=70%}
 
-The different segments of the CMS HCAL are shown in Figure [-@fig:CMS_hcal].
+The different segments of the CMS HCAL
+are shown in [Figure @fig:CMS_hcal].
 After the ECAL but still inside the solenoid volume,
 the barrel section of the hadronic calorimeter (HB) as
 well as two endcap sections (HE) at each side are placed, providing
@@ -757,7 +781,8 @@ pseudo-rapidities in the range $3.0 < |\eta| < 5.2$. The HF greatly increases
 the pseudo-rapidity energy measurement for charged and neutral particles,
 allowing a near hermetic (full solid angle) coverage, and hence allowing the
 estimation of missing energy in the event such that corresponding to
-neutrinos leaving CMS undetected, as will be discussed in Section [-@sec:event].
+neutrinos leaving CMS undetected, as will be discussed in
+[Section @sec:event].
 Because the radiation fluxes are extremely high in the forward region and
 there are no depth constraints, a different detector design is used,
 based on 165 cm of steel absorber plates and quartz fibres aligned of the
@@ -797,7 +822,11 @@ tracking detectors outside the solenoid, while sustaining a high
 magnetic field that can curve the muon trajectories by using
 large blocks of ferromagnetic material as *flux-return yokes*.
 
-![CMS Muon Detectors
+![Cross sectional view of the layout of CMS detector
+in the $r-z$ plane, focussing
+on the components of muon system components.
+The detector is symmetric around
+$r=0$, so only the top half is shown. Figure adapted from [@Sirunyan:2018fpa].
 ](gfx/102_chapter_2/cms_muon.pdf){#fig:CMS_muon width=70%}
 
 The muon system is the most external sub-detector of CMS
@@ -961,7 +990,9 @@ outcomes for a specific process, each example including
 a set of stable or sufficiently long-lived particles and their
 kinematics properties that would propagate through the detector.
 
-![Transverse view of a section of the CMS detector, adapted from [@Sirunyan:2017ulk].
+![Transverse view of a section of the CMS detector and the interactions
+of the various particle types with the detecting sub-components.
+Figure has been adapted from [@Sirunyan:2017ulk].
 ](gfx/102_chapter_2/CMS_transverse.pdf){
 #fig:CMS_transverse width=70%}
 
