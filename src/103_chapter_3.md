@@ -3,40 +3,45 @@
 \epigraph{Life is complicated, \\
 but not uninteresting.}{Jerzy Neyman}
 
-In this chapter, the problem of extracting quantitative
+In this chapter, we will consider the problem of extracting quantitative
 information about the validity or properties of the different
-theoretical models (see Chapter [-@sec:theory]) can be made given the
-data experimental data acquired in a controlled setting (see Chapter
-[-@sec:experiment]) will be tackled. We will begin by formally defining
+theoretical models (see [Chapter @sec:theory]), which can be made given the
+experimental data acquired in a controlled setting (see
+[Chapter @sec:experiment]). We will begin by formally defining
 the properties and structure of the statistical models
 used to link the parameters of interest, followed by a description
-of the inference problems in inference in experimental high-energy physics
+of the inference problems in experimental high-energy physics
 and how they can be tackled with classical and non-classical techniques.
 Some relevant particularities of the inference problems
 at the LHC experiments will be discussed, mainly the
 generative-only nature of the simulation models and the high dimensionality
-of the data. As we will see, both issues are intimately related, the former
+of the data. As we will see, both these issues are intimately related,
+the former
 requiring the use of likelihood-free inference techniques such as constructing
-a non-parametric sample likelihoods, which in turn demands for lower
+non-parametric sample likelihoods, which in turn demands for lower
 dimensional summary statistics.
 
 
 ## Statistical Modelling {#sec:stat_model}
 
-An essential element for carrying out statistical inference is the available of
-an statistical model. In this section, the main characteristics of the statistical
+An essential element for carrying out statistical inference is the
+availability of an adecuate
+a statistical model. In this section, the main characteristics of the statistical
 models used in particle collider analysis will be formally developed from first
-principles. These methodology allows a
-mathematical take on their structure and factorisation, that
-will be useful to establish a formal link between the techniques in
-next chapters and the simulation-based
+principles. This methodology allows a
+mathematical approach on their structure and factorisation. This will
+prove useful to establish a formal link between the techniques discussed
+in the next chapters and the simulation-based
 generative models that are often used to describe the data. Additionally,
-it is useful to exemplify the role and importance of event selection, even
-reconstruction and dimensionality reduction in the larger statistical
-framework of an LHC analysis, as well as to illustrate the
-main ways to construct synthetic likelihoods
-that efficiently
-connect summaries of the detector observation with the parameters of interest.
+the role and importance of event selection, event
+reconstruction and dimensionality reduction - i.e. the compression
+of the relevant information from high-dimensional data into a
+lower-dimensional representation, such as the output of a multivariate
+classifier - will be described in the larger statistical
+framework of an LHC analysis. Lastly, the main
+main approaches commonly followed to construct synthetic likelihoods
+that efficiently connect summaries of the detector observation
+with the parameters of interest will be illustrated.
 
 
 ### Overview {#sec:model_overview}
@@ -46,22 +51,23 @@ $D = \{\boldsymbol{x}_0,...,\boldsymbol{x}_n\}$ for a total $n$ bunch crossings
 at a particle collider experiment, such as CMS at the LHC (see Section
 [-@sec:cms]). Note that vector notation is used for each individual readout,
 also referred to as event, because for mathematical simplification
-we will be assuming that each detector observation can be embedded
+we will be assuming that each detector observation can be embedded - in
+the mathematical sense -
 as a member of a fixed size
 $d$-dimensional space, i.e. $\boldsymbol{x} \in \mathcal{X}
 \subseteq \mathbb{R}^d$, even though variable-size sets or tree-like
-structures might be a more compact and useful representation in practise,
+structures might be a more compact and useful representation in practice,
 as will be discussed later.
 As an starting point,
 let us assume that the detector readout for every bunch crossing
 is recorded, i.e. no trigger filtering system as the one described in
 [Section @sec:trigger] is in place, hence after each bunch crossing $i$ a
 given raw detector readout $\boldsymbol{x}_i$ will be obtained. From
-here onwards, each event/observation/readout will be assumed to
+here onwards, each event/observation/readout will be assumed to be
 independent and identically distributed (i.i.d.),
 a reasonable approximation if the experimental conditions
 are stable during the acquisition period as discussed at the
-beginning of [Section @sec:event], consequently the event ordering
+beginning of [Section @sec:event]; consequently the event ordering
 or index $i$ are not relevant.
 
 #### Experiment Outcome
@@ -71,15 +77,15 @@ we expect the readout output, which can be effectively treated as a
 random variable $\boldsymbol{x}$, is distributed and how such distribution
 is related with the (theoretical) parameters we are interested in measuring
 in the experiment. We would like then to model the probability density
-distribution function generating the a given observation $\boldsymbol{x}_i$
+distribution function generating a given observation $\boldsymbol{x}_i$
 conditional on the parameters
 of interest, that is:
 $$ 
   \boldsymbol{x}_i \sim p ( \boldsymbol{x}|\boldsymbol{\theta} )
 $$ {#eq:cond_density}
 where $\boldsymbol{\theta} \in \mathcal{\Theta} \subseteq \mathbb{R}^p$ 
-denotes all the parameters we are interested in and affect
-the detector outcome of each collision. As will be extensively
+denotes all the parameters we are interested in and affects
+the detector outcome of collisions. As will be extensively
 discussed in this chapter, an analytical or even tractable
 approximation of $p ( \boldsymbol{x}|\boldsymbol{\theta})$
 is not attainable, given that we are considering $\boldsymbol{x}$
@@ -99,12 +105,13 @@ in [Section @sec:pheno] and [Section @sec:event].
 While a detailed
 closed-form description of $p(\boldsymbol{x}|\boldsymbol{\theta})$
 cannot be obtained, we can safely make a very useful remark about its
-basic structure, which is fundamental for simplying the statisical treatment
+basic structure, which is fundamental for simplyfing the statistical treatment
 of particle collider observations and simulations,
-and was already hinted in [Section @sec:main_obs] when discussing
+and was already hinted at in [Section @sec:main_obs] when discussing
 the possible outcomes of fundamental proton-proton interactions. The
 aforementioned reflection is that the underlying
-process generating $\boldsymbol{x}$ is a *mixture model*, it can be expressed
+process generating $\boldsymbol{x}$ can be treated as
+a *mixture model*, which can be expressed
 as the probabilistic composition of samples from multiple probabilistic
 distributions corresponding to different types of interaction
 processes occurring in the collision. If we knew the probabilistic
@@ -142,12 +149,13 @@ are not tractable.
 
 #### Mixture Components
 
-The mixture model structure can be directly link to the physical processes
-happening in fundamental proton-proton collisions and detectors,
+The mixture model structure can be directly linked to the physical processes
+happening in fundamental proton-proton collisions and detectors used to
+study them,
 as described in previous chapters. As an additional simplification for now,
 let us neglect the effect of multiple particle interactions,
-as were described in [Section @sec:pile_up]. For each proton bunch
-crossing, hard interactions (i.e. associated with
+described in [Section @sec:pile_up]. For each proton bunch
+crossing, hard interactions (i.e. ones associated with
 a large characteristic energy scale $Q^2$, whose cut-off does not have
 be specified for this particular argument) between partons might or might
 not occur, given the stochastic nature of the scattering processes. We
@@ -155,19 +163,20 @@ could nevertheless associate a probability for a hard interaction happening
 $\phi_{\textrm{hard}}$, as well to it not happening
 $\phi_{\textrm{not-hard}} = 1-\phi_{\textrm{hard}}$. Given the proton colliding
 conditions at the LHC, the latter case is much more likely, i.e.
-$\phi_{\textrm{not-hard}} \gg \phi_{\textrm{hard}}$.
+$\phi_{\textrm{not-hard}} \gg \phi_{\textrm{hard}}$, yet the relative
+probabilities depend on the energy scale cut-off considered.
 
-However, we can further break each previously mentioned category in
+We can further break each previously mentioned category in
 sub-components corresponding to different types of processes. 
 The hard interaction category can itself be expressed as a mixture
-of all physical interactions, that can produce a hard scattering, so the
+of all physical interactions that can produce a hard scattering, so the
 probability $\phi_{\textrm{hard}}$ can be expresses as the following
 sum:
 $$ \phi_{\textrm{hard}} = \phi_0 + \dots + \phi_n = \sum_{k \in H} \phi_k
 $$ {#eq:hard_prob}
-where the $H$ represents a given set of independent contributions $k$, each
+where $H$ represents a given set of independent contributions $k$, each
 characterised by a distribution $p_j(\boldsymbol{x}|\boldsymbol{\theta})$,
-from all different processes that produce hard scatterings. Such set is not
+from all different processes that produce hard scatterings. Such a set is not
 uniquely defined, given that any
 two components $a$ and $b$ in $H$ can be substituted by $c$,
 where $\phi_c = \phi_a + \phi_b$ and
@@ -175,7 +184,7 @@ $$p_c(\boldsymbol{x}|\boldsymbol{\theta})=
   \frac{\phi_a}{\phi_a+\phi_b} \ p_a(\boldsymbol{x}|\boldsymbol{\theta}) +
   \frac{\phi_b}{\phi_a+\phi_b} \ p_b(\boldsymbol{x}|\boldsymbol{\theta})
 $$ {#eq:mixture_mixing}
-which can be applied recursively to reduce the number of components in
+which can be applied recursively to alter the number of components in
 the set.
 
 A convenient definition for the set $H$ is one that is aligned with
@@ -187,9 +196,10 @@ cross section $d\sigma (pp\rightarrow X)$ and its support. In fact, given
 that the total and differential cross section are proportional to
 the matrix element squared (see [Section @sec:qft_basics])
 of a given process $d\sigma (pp\rightarrow X) \propto |\mathcal{M}|^2$,
-it is often possible to further divide each process in the cross product
+and thanks to the factorisation theorem
+it is often possible to further divide each process into the cross product
 of Feynman diagram expansions (including interference terms), 
-which can be very useful notion for a some analysis use cases,
+which can be a very useful notion for some analysis use cases,
 and is related with the approach that will be
 used in [Chapter @sec:higgs_pair].
 
