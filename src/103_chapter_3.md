@@ -1073,7 +1073,7 @@ of the sample summary statistic $\boldsymbol{n}_T^\textrm{obs}$.
 
 The selection count vector $\boldsymbol{n}_T^\textrm{obs}(D)$, which has not been
 specified yet, could be also written
-as sum over a function 
+as a sum over a function 
 $\boldsymbol{n}_T(\boldsymbol{x}) : \mathcal{X} \subseteq \mathbb{R}^{d} \longrightarrow \mathcal{Y}
 \subseteq \{0,1\}^b \subset \mathbb{R}^{b}$
 applied for each event
@@ -1089,11 +1089,11 @@ $\boldsymbol{x}_i$.
 There are infinite ways to choose a lower-dimensional
 summary statistic of the detector readout
 $\boldsymbol{s}(\boldsymbol{x}) : \mathcal{X} \subseteq \mathbb{R}^{d}
-\longrightarrow \mathcal{Y}\subseteq \mathbb{R}^{b}$, including statistics of the
-type $\boldsymbol{n}_T(\boldsymbol{x})$ being a reduced (but still
-infinite) subset of the possible function. Independently on 
+\longrightarrow \mathcal{Y}\subseteq \mathbb{R}^{b}$. Functions of the
+type $\boldsymbol{n}_T(\boldsymbol{x})$ are a reduced subset, yet still
+infinite, of the possible sapce of functions. Regardless of
 the likelihood-free inference methods considered
-(check [Section @sec:stat_inf]), the need of a
+(see [Section @sec:stat_inf]), the need of a
 low-dimensional summary statistic is a direct consequence of
 the *curse of dimensionality*, because the number of simulated observations
 required to realistically model the probability density function
@@ -1102,13 +1102,14 @@ dimensions.
 
 In general, the selection of a summary statistic
 $\boldsymbol{s}(\boldsymbol{x})$ is far from trivial, and naive choices
-can lead to great losses of useful information about the parameters of 
-interest $\boldsymbol{\theta}$. Classical statistics results characterising
-the properties of the optimal summary statistics for a given
-statistical model and its parameters exist [@hogg1995introduction],
-commonly referred as
-a *sufficient summary statistic*, which contains all the information
-in the observed sample to compute any estimate on the model parameters.
+can lead to large losses of useful information about the parameters of 
+interest $\boldsymbol{\theta}$. Results form classical statistics identifies 
+a *sufficient summary statistic* as the
+the optimal summary statistic to carry out inference for a given
+statistical model and characterises its properties [@hogg1995introduction].
+Such a sufficient statistic
+contains all the information
+in the observed sample useful to compute any estimate on the model parameters.
 Sufficient statistics can be formally characterised using the
 Fisher-Neyman factorisation criterion, which states that a summary
 statistic $\boldsymbol{s}(\boldsymbol{x})$ is sufficient if and only if
@@ -1119,16 +1120,16 @@ p(\boldsymbol{x} | \boldsymbol{\theta}) =
 q(\boldsymbol{x})
 r(\boldsymbol{s}(\boldsymbol{x}) | \boldsymbol{\theta})
 $$ {#eq:sufficient_single}
-where $q(\boldsymbol{x})$ is a non-negative function that do not depend
+where $q(\boldsymbol{x})$ is a non-negative function that does not depend
 on the parameters and $r(\boldsymbol{x})$ is also a non-negative
-function for which the dependency on the parameters $\boldsymbol{\theta}$
+function for which the dependence on the parameters $\boldsymbol{\theta}$
 is a function of the summary statistic $\boldsymbol{s}(\boldsymbol{x})$. The
-definition of sufficient can also be applied to a collection of observations
-$D = \{\boldsymbol{x}_0,...,\boldsymbol{x}_n\}$, in fact if we assume
+definition of sufficiency can also be applied to a collection of observations
+$D = \{\boldsymbol{x}_0,...,\boldsymbol{x}_n\}$. In fact if we assume
 they are independent and identically distributed, and
 $\boldsymbol{s}(\boldsymbol{x})$ is sufficient for each observation
 $\boldsymbol{x}_i$,
-we could rewrite [Equation @eq:before_sel_prod] as:
+we may rewrite [Equation @eq:before_sel_prod] as:
 $$
 p ( D |\boldsymbol{\theta}) =
 \prod^{\boldsymbol{x}_i \in D} q(\boldsymbol{x}) 
@@ -1136,23 +1137,23 @@ p ( D |\boldsymbol{\theta}) =
 r(\boldsymbol{s}(\boldsymbol{x}_i) | \boldsymbol{\theta}) =
 q(D) r(\boldsymbol{s}(D)| \boldsymbol{\theta})
 $$
-where the set of sufficient summary statistic for each observation
-is a summary sufficient summary statistic for the whole dataset
+where the set of sufficient summary statistics for each observation
+is a sufficient summary statistic for the whole dataset
 $\boldsymbol{s}(D) = \{ \ \boldsymbol{s}(\boldsymbol{x}_i) \ | \ \forall \boldsymbol{x}_i  \in D \}$
-and the dependency of on the summary statistic is contained as the product
+and the dependence on the summary statistic is contained as the product
 of independent factors for each observation.
 
-Because $p(\boldsymbol{x} | \boldsymbol{\theta})$ is not available is closed form
+Because $p(\boldsymbol{x} | \boldsymbol{\theta})$ is not available in closed form
 in particle collider experiments, the general task of finding a sufficient
 summary statistic by analytic means cannot be tackled directly. However, for
 finite mixture models where the only model parameters are a function of
 the mixture coefficients $\phi_j$, probabilistic classification can
-be be used to obtain (approximate) sufficient summary statistics as will
-be discussed in [Chapter @sec:machine_learning]. When the parameters
+be used to obtain (approximate) sufficient summary statistics. We wiill
+return to this topic in [Chapter @sec:machine_learning]. When the parameters
 of interest or additional unknown parameters affect the mixture components
 $p_j(\boldsymbol{x} | \boldsymbol{\theta})$, the construction of
 sufficient summary statistics cannot be tackled directly, thus information
-is about the parameters $\boldsymbol{\theta}$  is lost in the dimensionality
+about the parameters $\boldsymbol{\theta}$  is lost in the dimensionality
 reduction step. An automated way to obtain powerful summary statistics
 in those cases using machine learning techniques will be presented in
 [Chapter @sec:inferno].
@@ -1160,11 +1161,11 @@ in those cases using machine learning techniques will be presented in
 
 #### Synthetic Likelihood {#sec:synthetic_likelihood}
 
-The advantage of using lower-dimensional summary statistic
+The advantage of using lower-dimensional summary statistics
 $\boldsymbol{s}(D) : \mathcal{X}_D \subseteq \mathbb{R}^{d\times n}
 \longrightarrow \mathcal{Y}_D \subseteq \mathbb{R}^{b\times n}$ of the
 detector readout collected by the experiment is that often the
-generative-model of $p(\boldsymbol{x} | \boldsymbol{\theta})$ can
+generative model of $p(\boldsymbol{x} | \boldsymbol{\theta})$ can
 be used to build synthetic likelihoods of $s(D)$ that 
 link the observations with the model parameters, so classical inference
 algorithms can be used. 
@@ -1172,22 +1173,23 @@ algorithms can be used.
 For summary statistics of the type $\boldsymbol{n}_T^\textrm{obs}(D) :
 \mathcal{X}_D \subseteq \mathbb{R}^{d \times n } \longrightarrow \mathcal{Y}_D \subseteq \{0,1\}^{b}$
 the likelihood can be expressed as a product of independent Poisson
-count likelihoods as shown in [Equation @eq:poisson_multichannel]. While such
+count likelihoods as shown in [Equation @eq:poisson_multichannel]. Such
 likelihood can be evaluated for the observed data $D$ and specific parameters
-$\boldsymbol{\theta}_R$, event in the case that $\boldsymbol{\theta}$
-modify the distribution of the mixture components
+$\boldsymbol{\theta}_R$, even in the case that $\boldsymbol{\theta}$
+modifies the distribution of the mixture components
 $p_j(\boldsymbol{x} | \boldsymbol{\theta})$, by forward approximating 
 $n^{\mathcal{C}_i}_j(\boldsymbol{\theta}_R)$ (or alternatively
 $\epsilon^{\mathcal{C}_i}_j(\boldsymbol{\theta}_R)$) using simulated observations
-for each process $j$ generated for $\boldsymbol{\theta}_R$,
-this process would rapidly become very computationally demanding if it has
+for each process $j$ generated for $\boldsymbol{\theta}_R$.
+This process would rapidly become computationally very demanding if it has to
 be repeated for each likelihood evaluation during the whole inference process.
 Re-weighting procedures such as those described in
-[Equation @eq:gen_level_reweighting] can often be used to re-use already simulated
+[Equation @eq:gen_level_reweighting] can often be applied
+to re-use already simulated
 events using $\boldsymbol{\theta}_R$ to model events corresponding
 to different values of the parameters $\boldsymbol{\theta}_Q$.
 
-A more economic approach, commonly used in LHC analysis that use binned
+A more economical approach, commonly used in LHC analyses that use binned
 Poisson likelihoods based on the formalism introduced in
 [Equation @eq:poisson_multichannel], is to parametrise the effect of varying
 parameters by interpolating between the values of the
@@ -1197,27 +1199,27 @@ of $k$. Such parametrisation allows the analytical approximation
 of the likelihood originated by [Equation @eq:poisson_multichannel],
 and simplifies the computation of gradients with respect to
 the parameters. This is particularly relevant to model the effect of
-*nuisance parameters*, parameters which are uncertain in out model and have
-to be accounted in the inference procedure, that will be discussed
+*nuisance parameters*, which are uncertain but not of direct interest,
+and have
+to be accounted for in the inference procedure; this issue will be discussed
 in [Section @sec:known_unknowns]. Different interpolation conventions
 exist [@Cranmer:2015nia], but they are normally based on the marginal
 one-dimensional interpolation between the effect of a single parameter $\theta_i \in
-\boldsymbol{\theta}$ at three values (the nominal parameter values
-and the up/down variations), the total effect
-$\epsilon^{\mathcal{C}_i}_j(\boldsymbol{\theta}_k)$ accounted by adding
-absolute or multiplying marginal effects. 
+\boldsymbol{\theta}$ at three equally spaced values (the nominal parameter values
+and the up/down variations). In that case the total effect on
+$\epsilon^{\mathcal{C}_i}_j(\boldsymbol{\theta}_k)$ is accounted by adding
+absolute shifts or multiplying marginal effects. 
 
-Even if the marginal
-interpolation when a single parameter of interest varies
+Even assumming that the marginal
+description when a single parameter of interest varies
 is accurate, which is not ensured by the interpolation, and the effect
 of each parameter is factorised in $p_j(\boldsymbol{x} | \boldsymbol{\theta})$,
 the integral definition of $\epsilon^{\mathcal{C}_i}_j (\boldsymbol{\theta}_k)$
-from [Equation @eq:montecarlo_eff], does not ensure that the correlated effect
+from [Equation @eq:montecarlo_eff] does not ensure that the correlated effect
 of the variation of multiple $\theta_i \in \boldsymbol{\theta}$ is accurately
-modelled. This issue can be easily exemplified, for example for the
+modelled. This issue can be easily exemplified, for example considering the
 product of relative variations in the two parameter case
-$\boldsymbol{\theta}_R = (\theta^R_0,\theta^R_1)$,
-let us consider the expected
+$\boldsymbol{\theta}_R = (\theta^R_0,\theta^R_1)$.  Let us consider the expected
 value for the efficiency after a given selection $\mathbb{1}_{\mathcal{C}_i}(\boldsymbol{x})$:
 $$
 \epsilon^{\mathcal{C}_i}_j (\boldsymbol{\theta}_R)=  \int 
@@ -1231,9 +1233,11 @@ p_j ( \boldsymbol{x}|\boldsymbol{\theta}_Q )
 $$ {#eq:relative_var_integral}
 where $\boldsymbol{\theta}_R$ is the parameter point we want to simulate
 by interpolating around a nominal point $\boldsymbol{\theta}_Q$. The last
-expression in [Equation @eq:relative_var_integral] is only correct
-if the effect of each parameter is independent. However, it becomes evident
-that the previous expression does not simplify to:
+expression in [Equation @eq:relative_var_integral] is only correct when
+the effect of each parameter is independent, i.e. the underlying probability
+density function can be factorised as the product of independent factors.
+However, it becomes evident
+that the previous expression does not simplify:
 $$
 \epsilon^{\mathcal{C}_i}_j (\boldsymbol{\theta}_R) \neq
 \epsilon^{\mathcal{C}_i}_j (\boldsymbol{\theta}_Q)
@@ -1244,14 +1248,16 @@ $$
 $$ {#eq:relative_var_eff}
 because the integral of the product of functions is not product of integrals,
 unless is the volume of the selected region $C$
-is infinitesimally small which correspond to null efficiencies anyway. This
+is infinitesimally small - a case which anyway be irrelevant s it would
+correspond to null efficiencies. This
 effect also applies if additive variations are considered and can be more
 notable when more parameters are considered.
 
-The previously mentioned modelling issue, even though to best of
+The previously mentioned modelling issue, even though to the best of
 our knowledge has not been
-made explicit in the literature before, affects multitude of analyses at the LHC
-that use  *template interpolation*, as implemented in
+made explicit in the literature before, affects a multitude of analyses at
+the LHC, i.e. those that
+use  *template interpolation*, as implemented in
 the standard statistical libraries used in particle physics experiments
 [@Conway:2011in;@Cranmer:2012sba].
 A possible solution would include doing a multi-dimensional interpolation,
@@ -1268,8 +1274,8 @@ only require $(2p+1)$ parameter variation evaluations.
 Alternatively, the basis of the approach presented in
 [Chapter @sec:inferno], where the variation of the parameters and
 its derivatives are computed in place over the simulated observations by
-specifying the full computational graph could also be used in analyses
-where the previous assumption fails to describe the data realistically.
+specifying the full computational graph, could also be used in analyses
+where the discussed assumption fails to realistically describe the data.
 
 <!-- TODO: parametric and non-parametric likelihood -->
 
@@ -1278,39 +1284,39 @@ where the previous assumption fails to describe the data realistically.
 
 So far we have assumed that the simulated observations can model the data
 and the only parameters $\boldsymbol{\theta}$ that affect the
-generative-model are those we are interested in carrying out inference on.
-However, simulated observation effectively depend on the
+generative model are those we are interested in carrying out inference on.
+However, simulated observations effectively depend on the
 modelling of the physical processes occurring in the proton-proton
-collisions and the detector, of which often we have an approximate
+collisions and the detector, of which we only have an approximate
 description. Those mis-modelling effects have to be accounted in the
 inference procedure to obtain unbiased estimates, and are accounted
 by additional *nuisance parameters* in the statistical model when the
 effect is known and can be approximated. For cases where
-simulation does not provided the desired level of accuracy,
+simulation does not provide the desired level of accuracy,
 the contribution from some of the mixture components can 
-often by estimated from data directly, using what is referred to
+often be estimated from data directly, using what is referred to
 as *data-driven estimation* techniques.
 
 #### Nuisance Parameters {#sec:nuis_pars}
 
-The general definition of nuisance parameters in an statistical model, refers
+The general definition of nuisance parameters in a statistical model refers
 to all the uncertain parameters of the statistical model that are not
-of intermediate interest but have to be accounted in the inference procedure.
+of intermediate interest but have to be accounted for in the inference procedure.
 These parameters can include uncertain theoretical parameters (e.g.
 top quark mass or expected background rate), account for
 limitation on the experimentally measured parameterisations of certain
 phenomena (e.g. parton density functions uncertainties) or represent
 the accuracy limits of calibration between data and simulation. Nuisance
 parameters can also represent additional degrees of freedom in the model
-that cover for possible wrong assumptions or qunatify imprecisions
-due to the limited of simulated observations.
+that cover for possible wrong assumptions or quantify imprecisions
+due to the limited number of simulated observations.
 
 Because the actual generative process for the experimental data is not known
 perfectly, the simulation-based model is extended with additional parameters
 that portray the possible variability on the distribution of the detector
 readouts. The formalism developed in the previous part of
 [Section @sec:stat_model] still applies, noting that the parameter vector
-$\boldsymbol{\theta}=\{\boldsymbol{\theta}_\iota,\boldsymbol{\theta}_\nu\}$,
+$\boldsymbol{\theta}=\{\boldsymbol{\theta}_\iota,\boldsymbol{\theta}_\nu\}$ now
 includes both parameters of interest $\boldsymbol{\theta}_\iota$
 and nuisance parameters $\boldsymbol{\theta}_\nu$. While the effect of
 (theoretical) parameters of interest typically only affects the parton-level
@@ -1327,9 +1333,9 @@ expensive, or by re-weighting already simulated observations as described
 in [Equation @eq:latent_reweighting], which is much faster and reduces
 the statistical fluctuations between variations associated with the
 random sampling of the full latent space. Unprincipled modelling
-shortcuts such as considering the additive or multiplicative effect of
-marginal efficiencies to account for combined effects
-are also often used for count vector observables
+shortcuts, such as considering the additive or multiplicative effect of
+marginal efficiencies to account for combined effects,
+are also not uncommonly used for count vector observables
 $n^{\mathcal{C}_i}_j(\boldsymbol{\theta})$, as discussed in
 [Equation @eq:relative_var_eff] together with possible solutions
 to mentioned issues.
@@ -1356,10 +1362,10 @@ w(\boldsymbol{s}(\boldsymbol{x})) =
 p_Q(\boldsymbol{s}(\boldsymbol{x})|\boldsymbol{\theta}_Q)}
 $$ {#eq:reweight_summary}
 can be simpler to estimate through density estimation or approximately
-factorise if the summary statistic was chosen carefully. This fact
+factorise if the summary statistic is chosen carefully. This fact
 motivates an alternative way to model the effect of some of the nuisance
 parameters,
-specially those related with the differences in the reconstructed
+especially those related with the differences in the reconstructed
 objects observables between simulation and data after calibration. Let us
 consider the case where summary statistics
 $\boldsymbol{s}(\boldsymbol{x}) : \mathcal{X} \subseteq \mathbb{R}^{d}
@@ -1378,21 +1384,22 @@ compositional approach can be extended to include also event selection
 at trigger or analysis level, or other intermediate
 summaries of $\boldsymbol{x}$ complementary to reconstruction, as part
 of the definition of the summary statistic $\boldsymbol{s}(\boldsymbol{x})$.
-In all cases where $s(\boldsymbol{x})$ is a deterministic function,s which
-in expectation all differences between simulated
-observations and data originate from the differences between the
+In all cases where $s(\boldsymbol{x})$ is a deterministic function,
+all differences between simulated
+observations and data in any expected observables
+originate from the differences between the
 simulation-based generative 
 definition of $p(\boldsymbol{x} | \boldsymbol{\theta})$ and the true
 unknown generative process $p_\textrm{true}(\boldsymbol{x})$. While
-evaluating and parametrising this differences directly by studying
+the task of evaluating and parametrising these differences directly by studying
 the raw detector output is quite convoluted, the differences can
 be corrected and their uncertainty assessed for the
 lower-dimensional intermediate states of the composition chain depicted
 in [Equation @eq:composition_summary]. 
 
-For example, if the momenta a
+For example, if the momenta of a
 certain subset of the reconstructed objects $\boldsymbol{y}_\textrm{reco}$
-statistically differs between the experimental data and
+statistically differ between experimental data and
 the simulated observations, based on a subset of the data that
 is assumed to be well-modelled, the momenta of simulated observations
 can be corrected to better model the data, and the statistical
@@ -1400,8 +1407,8 @@ accuracy of such procedure due to the different factors can be lead
 to a set of nuisance parameters that describe the limit of our
 the mentioned calibration as function of the value of
 $\boldsymbol{y}_\textrm{reco}$. The effect of such nuisance
-parameter can be often modelled in the simulation using
-by a function of the simulated intermediate outputs, e.g.
+parameter can be often modelled in the simulation by using
+a function of the simulated intermediate outputs, e.g.
 in the case of reconstructed objects:
 $$
 \mathop{\mathbb{E}}_{\boldsymbol{x} \sim  p( \boldsymbol{x}| \boldsymbol{\theta} )}
@@ -1412,7 +1419,7 @@ $$ {#eq:exp_rep}
 so $p( \boldsymbol{x}| \boldsymbol{\theta} )$ can be approximated
 by computing observables after
 applying the re-parametrisation
-$r(\boldsymbol{y}_\textrm{reco}, \boldsymbol{\theta}_\rho)$ the
+$r(\boldsymbol{y}_\textrm{reco}, \boldsymbol{\theta}_\rho)$ to the
 simulated observations,
 where $\boldsymbol{\theta}_\rho$ is the vector of parameters
 representing the different uncertainty factors.
@@ -1422,32 +1429,34 @@ nuisance parameters can be modelled
 by a combination of simulated observation re-weighting by
 $w(\boldsymbol{x}_i,\boldsymbol{z}_i | \boldsymbol{\theta}_w )$
 and transformations of intermediate simulated observations
-$\boldsymbol{y}_\textrm{new} = r(\boldsymbol{y}_\textrm{sim},\boldsymbol{z}_i | \boldsymbol{\theta}_\rho)$. The former is based is based on
-importance sampling to estimate the properties of a different
-distribution that the one sampled originally from, while the latter
+$\boldsymbol{y}_\textrm{new} = r(\boldsymbol{y}_\textrm{sim},\boldsymbol{z}_i | \boldsymbol{\theta}_\rho)$. The former is based on
+importance sampling [@mcbook] to estimate the properties of a different
+distribution than the one sampled originally from, while the latter
 assumes that the mis-modelling can be accounted by a parametrisation
-of the simulated intermediate observables. While it has not been
-used so far in LHC analysis to our knowledge, if the functions
+of the simulated intermediate observables. If the functions
 $w(\boldsymbol{x}_i,\boldsymbol{z}_i | \boldsymbol{\theta}_w )$
 and $r(\boldsymbol{y}_\textrm{sim},\boldsymbol{z}_i | \boldsymbol{\theta}_\rho)$
 are differentiable or can approximated by differentiable functions,
 the gradient (and higher order derivatives) with
 respect to the parameters $\boldsymbol{\theta}$ of any expectation
-value can be very efficiently approximated, which can be very useful
-for statistical inference (e.g. likelihood minisation) and it is
-one of the core concepts of the technique presented
-in [Chapter @sec:inferno].
+value can be very efficiently approximated. This can be very useful
+for statistical inference (e.g. likelihood minimisation),
+while it has not been
+used so far in LHC analysis to our knowledge. This
+one of the core concepts of the technique to construct summary statistics
+presented in [Chapter @sec:inferno].
 
 The inference results of a given analysis depend strongly on the
 assumptions implicit in the statistical model. The determination,
-assessment and practical definition the effect of nuisance parameters
+assessment and practical definition of the effect of nuisance parameters
 that are relevant for a given analysis is one the most challenging
 yet important aspects in experimental particle physics at the LHC. When
-nuisance parameters are quantitatively taking into account in the statistical
-model, the lead to an increase of the uncertainty on the parameters of interest
+nuisance parameters are quantitatively taken into account in the statistical
+model, they lead to an increase of the uncertainty on the parameters of interest
 and larger interval width estimates (or exclusion limits)
 on the parameters of interest.
-The choice of summary statistics can effect significantly subsequent inference,
+The choice of summary statistics may also affect
+significantly subsequent inference,
 and while nuisance parameters are usually qualitatively considered when
 building simple summary statistics by physics-inspired combinations
 of reconstructed variables, they are not regarded at all when the automatic
@@ -1464,7 +1473,7 @@ In a subset of those cases, the simulated observations can be calibrated
 to better describe the observations in well-modelled data regions, as
 mentioned in the previous section. However, if the description of
 the summary statistics considered in the analysis provided
-by the simulated observations from the process $j$ is substandard,
+by the simulated observations from process $j$ is substandard,
 e.g. the number of simulated observations that could be 
 realistically simulated is not sufficient, the
 the contribution from the mentioned mixture component might have
@@ -1475,7 +1484,7 @@ mixture component $j$ from data depend on the specifics of the
 process as well the the details
 analysis considered, but often includes some re-weighting
 factor obtained from simulated observations or additional experimental
-observations with an orthogonal selection criteria. Such data-driven
+observations with an orthogonal selection criterion. Such data-driven
 estimation techniques are often used for the background processes,
 but are hard to combine with the non-linear summary statistics reconstructed
 by machine learning techniques such as those described in
@@ -1489,81 +1498,88 @@ pair production decaying to four b-quarks.
 
 In the previous section, the main characteristics of the generative
 statistical model $p(D | \boldsymbol{\theta})$ used
-to related the parameters $\boldsymbol{\theta}$ with the set
+to relate the parameters $\boldsymbol{\theta}$ with the set
 of observations $D = \{\boldsymbol{x}_0,...,\boldsymbol{x}_n\}$
-at particle collider experiments at the LHC have been reviewed.
-In addition, the role of summary statistics
+have been reviewed.
+In addition, we discussed the role of summary statistics
 as lower dimensional functional transformations of each detector readout
 $\boldsymbol{s}(\boldsymbol{x}_i)$  or even the whole dataset
-$\boldsymbol{s}(D)$, as well has how the effect of additional uncertain
+$\boldsymbol{s}(D)$, as well as how the effect of additional uncertain
 parameters can be included in the simulation-based generative
 model of the data. In this section, we deal with the actual problem
 of inference about the subset of parameters of interest
 $\boldsymbol{\theta}_\iota$ once a summary statistic has already been
-chosen and the final statistical model has been fully specified
-$p(\boldsymbol{s}(D) | \boldsymbol{\theta})$. 
+chosen and the final statistical model
+$p(\boldsymbol{s}(D) | \boldsymbol{\theta})$ has been fully specified. 
 
 ### Likelihood-Free Inference {#sec:likelihood-free}
 
 One of the main properties of the statistical models at particle colliders
-that was the focus of the last section was their generative-only nature,
+we focussed on the last section was their generative-only nature,
 whereby their probability density $p(\boldsymbol{x} | \boldsymbol{\theta})$
 cannot be expressed analytically, but only
-by means of forward simulated observation. This fact greatly difficults the
+by means of forward simulated observation. This fact greatly complicates the
 application of standard inference techniques which require the
-explicit definition of a likelihood:
+explicit definition of a likelihood
 $$\mathcal{L}(\boldsymbol{\theta} | D) =\prod^{\boldsymbol{x}_i \in D}
  p(\boldsymbol{x}_i | \boldsymbol{\theta})
 $$ {#eq:likelihood_definition}
 in order to make quantitative statements about the parameters of interest,
-because it expresses the extend the values of the parameters of interest
-are consistent with the observed data .
+because it expresses the extend to which a set of values for
+the model parameters are consistent with the observed data .
 Problems where the likelihood cannot be expressed directly are common
 in many scientific disciplines, because a link between
-observations and the underlying parameters can often only by provided by
-a probabilistic computer program as the system under study
-becomes increasingly complex.
+observations and the underlying parameters can often only be provided by
+a probabilistic computer program when the system under study
+becomes is sufficiently complex, e.g. can only be described by
+a hierarchy or a sequence
+of stochastic processes.
 
 While the evaluation of the likelihood for complex generative models
-rapidly becomes in practical, specially when the space of observations
+rapidly becomes impractical, especially when the space of observations
 or parameters is very high-dimensional, various statistical techniques
-for dealing with with this cases exist, generally referred to as
+for dealing with these cases exist, generally referred to as
 *likelihood-free* or *simulation-based* inference techniques. A well
-stablished group of techniques for inference when the likelihood
+established group of techniques for inference when the likelihood
 function is unknown is referred to as Approximate Bayesian Computation (ABC)
 [@rubin1984bayesianly; @beaumont2002approximate]. The fundamental concept
-behind ABC is the simulation of a simulated sample
-$S_0 = \{\boldsymbol{x}_0,...,\boldsymbol{x}_m\}$$
+behind ABC is the generation of a simulated sample
+$S_0 = \{\boldsymbol{x}_0,...,\boldsymbol{x}_m\}$
 using a given vector of parameters $\boldsymbol{\theta}_0$, which is then
-compared using a distance criteria to the actual observed dataset $D$. If
+compared using a distance criterion to the actual observed dataset $D$. If
 the data and the simulation are close enough, then
-$\boldsymbol{\theta}_0$ is kept as sample from the approximate posterior. The
-previous process is repeated until the posterior is estimated with the
-desired accuracy, the final quality of the posterior approximation
-strongly depending on the distance definition. When the dimensionality
+$\boldsymbol{\theta}_0$ is retained as sample from the 
+posterior. The
+process is repeated until the posterior is estimated with the
+desired accuracy. The quality of the posterior approximation
+produced by the previous method, as well as the number of
+sampling steps required to reach a given accuracy, strongly
+depends on the distance definition. When the dimensionality
 of the output is high, a summary statistic vector has
-$\boldsymbol{s}(\boldsymbol{x})$ has in practise to be used for increasing
+$\boldsymbol{s}(\boldsymbol{x})$ has in practise to be used to increase
 the computational efficiency of the previous procedure.
 
-The approach for carrying our inference in the
+The approach commonly used when carrying our inference in the
 particle physics experiments at the LHC is somehow related from the
 mentioned family of techniques. The observations are also reduced
 to a lower-dimensional summary
 statistic space, but then a synthetic likelihood is constructed
-so standard inference techniques can be applied. The likelihood
+so that standard inference techniques can be applied. The likelihood
 is often based on the product of Poisson count terms, as
 depicted in [Equation @eq:poisson_simple] and [Equation @eq:poisson_multichannel],
 where the dependence on the expectations
 on the parameters is based on the simulation and the mixture
 structure. Alternative approaches include the use of a simple one-dimensional
 parametrisation for a continuous background and a bump-like signal,
-which is common when the reconstructed intermediate mass of
+which is common when the reconstructed mass of
 an intermediate object is used as summary statistic and its response is
-well-controlled. An additional alternative approach, which has not been
+well-controlled, e.g. a Higgs bosons decaying to two photons.
+An additional alternative approach, which has not been
 used in LHC analysis to date, could be to use non-parametric density
 estimation techniques to obtain a synthetic likelihood directly
-from simulated data, which has been recently referred as Approximate
-Frequentist Computation (AFC) [@Brehmer:2018eca].
+from simulated data. This approach has been recently referred as Approximate
+Frequentist Computation (AFC) [@Brehmer:2018eca], and can be also combined
+with the technique presented in [Chapter @sec:inferno].
 
 
 ### Hypothesis Testing {#sec:hypo_test}
