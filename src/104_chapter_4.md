@@ -172,13 +172,15 @@ sampled from $p(\boldsymbol{x}, \boldsymbol{y})$. The previous equation
 can be used to define the optimal prediction function $f_B(\boldsymbol{x})$,
 also referred as *Bayes model*, which represents the minimal error that any
 supervised learning algorithm can achieve due to the intrinsic statistical
-fluctuations and properties in the data.
+fluctuations and properties in the data. The Bayes model can be expressed
+as:
 $$
 f_B(\boldsymbol{x}) = \mathop{\textrm{arg min}}_{\boldsymbol{y} \in \mathcal{Y}}  \mathop{\mathbb{E}}_{
 \boldsymbol{y} \sim p(\boldsymbol{y} | \boldsymbol{x})}
 \left [ L(\boldsymbol{y}, f(\boldsymbol{x})) \right ]
 $$ {#eq:bayes_optimal}
-where the last term indicates the optimal choice of target and
+where the last term indicates the optimal choice of target $\boldsymbol{y}$ for each
+value of $\boldsymbol{x}$. The previous expression
 can be obtained by explicitly considering the conditional
 expectation in the risk term described in [Equation @eq:learning_rm],
 that is
@@ -188,9 +190,10 @@ $R(h) = \mathbb{E}_{\boldsymbol{x} \sim p(\boldsymbol{x} | \boldsymbol{y})}
 be obtained using Bayes theorem. The Bayes model $f_B(\boldsymbol{x})$,
 and its corresponding risk $R(f_B)$, also referred as *residual error*,
 can only be estimated if $p(\boldsymbol{x},\boldsymbol{y})$ is known
-and the expectation can be computed analytically,
-which is very rarely the case in real world problems, but can be useful
-nevertheless when benchmarking techniques in synthetic datasets.
+and the expectation can be computed analytically. Even though the
+Bayes optimal model cannot be obtained for real world problems, it
+can be useful nevertheless when benchmarking techniques in synthetic
+datasets or for theoretical studies.
 
 Because most learning algorithms optimise $f$, or its parameters,
 using the learning set $S$, the empirical risk $R_\textrm{S}(f)$ is not a good
@@ -220,15 +223,15 @@ of the performance of $f$ on unseen observation.
 For many learning algorithms,
 the learning process, or *training*, is iterative: the function $f$
 is optimised incrementally based on the training data.
-In this cases, an estimation
- generalisation error as the training evolves is useful to stop
+In those cases, an estimation of the
+generalisation error as the training evolves may be useful to stop
 the training procedure and avoid the degradation of generalisation
 due over-fitting, in what is referred as *early stopping*.
 In those cases, as well as to compare and ensemble
 the results of various predictor functions and model configurations,
 is useful to hold out a fraction
 of $S_\textrm{train}$ which is commonly referred as validation
-set $S_\textrm{valid}$. Alternative approaches exist to estimate
+set $S_\textrm{valid}$. Alternative approaches to estimate
 the generalisation error exist, including *cross-validation*
 and its variations [@friedman2001elements], which are usually preferred when
 the the amount of training data is reduced.
@@ -243,8 +246,9 @@ model depends on these parameters, however their optimal value depends on the
 particularities of the data (e.g. number of input dimensions or number
 of size of the data size). This motivates the notion of *hyper-parameter
 optimisation*, where the performance of the various choices of
-hyper-parameters on the validation set or by mean of cross-validation
-techniques, in order to select the best configuration.
+hyper-parameters is evaluated on the validation set or
+by mean of cross-validation techniques, in order to select the best
+configuration.
 
 The loss function $L$ of a supervised learning algorithm,
 which quantifies the discrepancies between the prediction and the true
@@ -264,7 +268,8 @@ a property which makes the
 minimisation task in [Equation @eq:learning_erm] hard to
 tackled by optimisation algorithms. In fact, it can be proven
 that finding the function $f$ in $F$ that minimises directly the 
-$R_{0-1}$ empirical risk for a training sample is a NP-hard problem. The
+$R_{0-1}$ empirical risk with a training sample is a NP-hard
+problem [@nguyen2013algorithms]. The
 Bayes optimal classifier for the 0-1 loss can nevertheless be easily
 obtained from [Equation @eq:bayes_optimal] as a function
 of the conditional expectation:
@@ -280,14 +285,14 @@ problem is normally referred to as *hard classification*, where the
 objective is to assign a category for each input observation. Because
 most problem in high-energy physics that can be cast as supervised learning,
 are ultimate inference problems as will be reviewed in [Section @sec:ml_hep],
-it more generally more useful to consider the problem of *soft classification*,
+it is more generally more useful to consider the problem of *soft classification*,
 which instead amounts to estimate the class probability for each input
 $\boldsymbol{x}$.
 
-Soft classification is specially useful when the classes are not separable,
+Soft classification is especially useful when the classes are not separable,
 which is often the case for applications in collider experiments. Luckily,
-soft classification is also a consequence of the convex relaxation of the
-zero-one loss of [Equation @eq:zero_one_risk], which is used . For a two-class
+soft classification is also a consequence of most convex relaxations of the
+zero-one loss of [Equation @eq:zero_one_risk]. For a two-class
 classification problem, e.g signal versus background,
 a useful approximation of the zero-one loss is the binary
 cross entropy, defined as:
@@ -341,9 +346,9 @@ classification, the prediction sum is expected to be one.
 A simple way to ensure the aforementioned property
 is to apply a function that ensures that the prediction outputs are in
 the range $[0,1]$ and normalised so $\sum_i \hat{y}_i=1$. The *softmax function*
-is a common choice in machine learning, which is a generalisation
+is a common choice in machine learning. It is a generalisation
 of the logistic function to
-$k$ dimensions, an is defined as:
+$k$ dimensions, and is defined as:
 $$
 \hat{y}_i = \frac{e^{f_i(\boldsymbol{x})/\tau}}
                   {\sum_{j=0}^{k} e^{f_j(\boldsymbol{x})/\tau}}
@@ -355,8 +360,8 @@ omitted (i.e. $\tau=1$). In the limit of $\tau \rightarrow 0^{+}$,
 the probability of the largest component will tend to 1 while others to 0.
 The softmax output can be used to represent the probability distribution
 of a categorical distribution in a differentiable way, where the outcome
-represent the probabilities of each of the $k$ possible outcomes, which
-will be useful in [Chapter @sec:inferno].
+represent the probabilities of each of the $k$ possible outcomes. We will
+make use of this function in [Chapter @sec:inferno].
 When the softmax function and the cross entropy loss are used together
 for multiclass classification, the optimal Bayes model is:
 $$
@@ -383,9 +388,9 @@ details about the actual computational and statistical
 procedures used for learning were not provided. In
 this chapter, the basis of the two classes of algorithms that are used
 in this work will
-be described in detailed: boosted decision trees and artificial neural networks.
-These families of learning methods are also those that are most commonly used for
-doing machine learning in experimental particle physics, mostly to solve
+be described in detail: boosted decision trees and artificial neural networks.
+These families of learning methods are also those that are most commonly used
+in machine learning within experimental particle physics, mostly to solve
 supervised learning problems, as will be described in [Section @sec:ml_hep].
 The overview included here is by no means comprehensive about the mentioned
 approaches or alternative popular statistical learning techniques such
