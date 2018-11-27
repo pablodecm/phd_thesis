@@ -9,9 +9,10 @@ computers can automatically improve at certain tasks given data. The usefulness
 and range of applicability of such techniques has surged in the last
 decades due to the increase on accessible computational power and
 the amount of useful data available. In this section, a general overview of
-machine learning methods as well as the main tasks that can addressed with them
-will be provided. Subsequently, the technical basis of two specific types of
-tools used in the next chapters will be explored: boosted
+machine learning methods as well as the main tasks that can be addressed
+with them will be provided. Subsequently, the technical basis of two specific
+types of machine learning methods
+used in the next chapters will be explored: boosted
 decision trees and neural networks. Last but not least, we will go through
 a brief review of the common past use cases of these techniques at high energy
 physics experiments, especially focussing on those cases where they can
@@ -46,18 +47,18 @@ are reviewed.
 
 ### Probabilistic Classification and Regression {#sec:supervised}
 
-One of the most unassuming, yet versatile, tasks that can be addressed with
+One of the conceptually simple, yet versatile, tasks that can be addressed with
 machine learning algorithms is *classification*. A classifier or a
 classification rule is a function
 $f(\boldsymbol{x}) : \mathcal{X} \longrightarrow \mathcal{Y}$ that
-predicts a label $y \in \{0,...,k-1\}$, denoting correspondance to
+predicts a label $y \in \{0,...,k-1\}$, denoting correspondence to a
 on category in a set of of $k$ categories,
 for each input $\boldsymbol{x} \in \mathcal{X}$. The task of
 classification, in the context of machine learning algorithms, is
 to produce classification functions $f(\boldsymbol{x})$ that perform
-increasingly well on a set of data.
+well on an unobserved set of data.
 
-Classification is hence often framed as a belonging to a larger
+Classification is often framed as a belonging to a larger
 category of tasks referred to as  *supervised learning*,
 where the goal is predicting the value of an output variable
 $\boldsymbol{y}$ (here a multi-dimensional vector for generality)
@@ -70,18 +71,18 @@ were previously determined by an external method, typically a teacher
 or supervisor looking at past observations, thus explaining the name of these
 family of techniques.
 
-From an statistical standpoint, the input observations
+From a statistical standpoint, the input observations
 and target values from the learning set can be viewed as
-random variables sampled from an joint probability distribution
+random variables sampled from a joint probability distribution
 $p(\boldsymbol{x}, \boldsymbol{y})$, which is typically unknown.
 The family of supervised learning tasks also includes *regression*, which amounts
-construct a $f(\boldsymbol{x})$ that can to predict a numerical
+to construct a $f(\boldsymbol{x})$ that can to predict a numerical
 target output $\boldsymbol{y}$, and *structured output* tasks where the output
 vector $\boldsymbol{y}$ is a vector or a complex data structure where its
 elements are tightly interrelated. As will be reviewed in [Section @sec:ml_hep],
 most analysis problems amenable by machine learning  in high-energy
 physics experiments are framed as classification and regression tasks,
-while the use of structured of structured output task is instead
+while the use of structured output task is instead
 not quite extensive. The reconstruction of the set and
 properties of physical objects in an event directly from
 the detector readout could be framed as a structured output task, if it
@@ -90,7 +91,7 @@ instead of the procedures described in [Section @sec:event_reco].
 
 The goal of supervised learning is not to perform well on the learning set $S$
 used for improving at the specified task, but rather to perform well
-for additional unseen observations sampled from the joint distribution
+on additional unseen observations sampled from the joint distribution
 $p(\boldsymbol{x}, \boldsymbol{y})$. Supervised
 learning algorithms exploit the conditional relations between the input
 and the output variables, in order to classify new observations 
@@ -107,8 +108,8 @@ In fact, the problem of inferring a subset of latent variables $\boldsymbol{z}$
 of the statistical model for the raw detector readouts of
 a collider experiment $\boldsymbol{x}$,
 or from any deterministic function of it $\boldsymbol{s}(\boldsymbol{x})$,
-can be casted as a supervised learning problem. The learning set $S$ would consist
-on simulated observations $\boldsymbol{x}_i$ (or a summary of it
+can be cast as a supervised learning problem. The learning set $S$ would consist
+of simulated observations $\boldsymbol{x}_i$ (or a summary of it
 $\boldsymbol{s}(\boldsymbol{x}_i)$), and a matching subset of interest of the
 latent variables $\boldsymbol{y}_i \in \mathcal{Y} \subseteq \mathcal{Z}$.
 The supervised
@@ -128,18 +129,18 @@ R(f) = \mathop{\mathbb{E}}_{
 (\boldsymbol{x},\boldsymbol{y}) \sim p(\boldsymbol{x},\boldsymbol{y})}
 \left [ L(\boldsymbol{y}, f(\boldsymbol{x})) \right ]
 $$ {#eq:exp_pred_err}
-where $L$ is a *loss function*, that quantifies the discrepancy between
+where $L$ is a *loss function* that quantifies the discrepancy between
 the true output and the prediction. The quantity defined in
 [Equation @eq:exp_pred_err]
 is often also referred to as *risk*,
 *test error*,  or also as *generalisation error*.
 
-The optimal model for a given task $T$, thus depends on the definition
+The optimal model for a given task $T$ thus depends on the definition
 of its loss function $L$, if the objective is minimising the
 expected prediction error. In practice, the expected prediction
 error cannot be estimated
 analytically because $p(\boldsymbol{x}, \boldsymbol{y})$ is not
-unknown, or not tractable in the case of a generative simulation model. The
+known, or not tractable in the case of a generative simulation model. The
 generalisation error has thus to be estimated from a subset of labelled
 samples $S'=\{(\boldsymbol{x}_0,\boldsymbol{y}_0),...,(\boldsymbol{x}_n',\boldsymbol{y}_n')\}$
 as follows:
@@ -150,7 +151,7 @@ $$ {#eq:erm}
 which is also commonly referred to as *empirical risk*
 approximation
 $R_\textrm{S'}$(f) based on the set $S'$. The supervised learning
-problem can be then be stated as
+problem can then be stated as
 finding the function $\hat{f}$ from a class of functions $\mathcal{F}$, which
 depends on the particularities of the algorithm, that minimises the empirical
 risk over the learning set $S$:
@@ -159,7 +160,7 @@ $$
 $$ {#eq:learning_erm}
 which is referred to as empirical risk minimisation (ERM) [@vapnik1999overview],
 and it is at core of most of the existing learning techniques, such as those
-described in [Section @sec:ml_techniques]. However, the ultimate goal of an
+described in [Section @sec:ml_techniques]. However, the ultimate goal of a
 learning algorithm is to find a function $f*$ that minimises the risk
 or expected prediction error $R(f)$:
 $$
@@ -188,7 +189,7 @@ be obtained using Bayes theorem. The Bayes model $f_B(\boldsymbol{x})$,
 and its corresponding risk $R(f_B)$, also referred as *residual error*,
 can only be estimated if $p(\boldsymbol{x},\boldsymbol{y})$ is known
 and the expectation can be computed analytically,
-which is very rarely the case in real world problem, but it can be useful
+which is very rarely the case in real world problems, but can be useful
 nevertheless when benchmarking techniques in synthetic datasets.
 
 Because most learning algorithms optimise $f$, or its parameters,
@@ -203,12 +204,12 @@ it is possible to achieve $R_\textrm{S}(f)=0$ for the learning set $S$ while
 the generalisation error $R(f)$ is well away from zero. This effect can
 actually lead to a degradation of the generalisation error while the empirical
 risk in the learning set is decreasing during the learning procedure, which
-is often referred as *over-fitting*.
+is often referred to as *over-fitting*.
 
 To compare different prediction functions or to realistically evaluate the
 generalised performance of a given prediction model $f$, it is useful to
-being able to compute unbiased estimates of $R(f)$. The simplest way to
-obtain such estimate is to divide the learning set $S$ in two disjoint
+be able to compute unbiased estimates of $R(f)$. The simplest way to
+obtain such estimate is to divide the learning set $S$ into two disjoint
 random subsets $S_\textrm{train}$ and $S_\textrm{test}$. The train subset
 $S_\textrm{train}$ will be used by the learning algorithm to optimise
 the prediction function $f$ by means of empirical risk minimisation, as
@@ -232,11 +233,11 @@ the generalisation error exist, including *cross-validation*
 and its variations [@friedman2001elements], which are usually preferred when
 the the amount of training data is reduced.
 
-Another important concept for most machine learning techniques, is that of
+Another important concept for most machine learning techniques is that of
 *hyper-parameters*. The majority of machine learning algorithms depend on
 a set of parameters that regulate the flexibility of the family
 of functions $\mathcal{F}$ to consider for empirical risk minimisation as
-well as the details of the optimisation followed to solve the task
+well as the details of the optimisation procedure followed to solve the task
 presented in [Equation @eq:learning_erm]. The expected performance of a given
 model depends on these parameters, however their optimal value depends on the
 particularities of the data (e.g. number of input dimensions or number
@@ -246,7 +247,7 @@ hyper-parameters on the validation set or by mean of cross-validation
 techniques, in order to select the best configuration.
 
 The loss function $L$ of a supervised learning algorithm,
-that quantifies the discrepancies between the prediction and the true
+which quantifies the discrepancies between the prediction and the true
 output target, depends on the task $T$ and formally defines it. A principled
 loss function for classification is the *zero-one loss*, which is defined
 as zero when the prediction $f(\boldsymbol{x})$ matches the
@@ -258,9 +259,10 @@ R_{0-1}(f) = \mathop{\mathbb{E}}_{
 $$ {#eq:zero_one_risk}
 where $\mathbb{1}(y \neq f(\boldsymbol{x}))$ is an indicator
 function. The zero-one loss is non-differentiable when $y =f(\boldsymbol{x})$
-and its gradients are zero elsewhere, plus it is not convex so the
-minimisation task in [Equation @eq:learning_erm] cannot be
-easily tackled by optimisation algorithms. In fact, it can be proven
+and its gradients are zero elsewhere; in addition, it is not convex,
+a property which makes the
+minimisation task in [Equation @eq:learning_erm] hard to
+tackled by optimisation algorithms. In fact, it can be proven
 that finding the function $f$ in $F$ that minimises directly the 
 $R_{0-1}$ empirical risk for a training sample is a NP-hard problem. The
 Bayes optimal classifier for the 0-1 loss can nevertheless be easily
@@ -276,7 +278,7 @@ thus the optimal classifier amounts to the prediction of the most likely
 output category $y$ for a given input $\boldsymbol{x}$. The previous
 problem is normally referred to as *hard classification*, where the
 objective is to assign a category for each input observation. Because
-most problem in high-energy physics that can be casted as supervised learning,
+most problem in high-energy physics that can be cast as supervised learning,
 are ultimate inference problems as will be reviewed in [Section @sec:ml_hep],
 it more generally more useful to consider the problem of *soft classification*,
 which instead amounts to estimate the class probability for each input
