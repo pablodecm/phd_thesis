@@ -675,8 +675,8 @@ might be lost if a low-dimensional
 classification-based summary statistic is used in place
 of $\boldsymbol{x}$. This theoretical observation will be observed
 in practice in [Chapter @sec:inferno], where a new technique to
-construct summary statistics, that is not based on classification, t
-but account for the effect of nuisance parameters is presented.
+construct summary statistics, that is not based on classification,
+but accounts for the effect of nuisance parameters is presented.
 
 
 ### Particle Identification and Regression
