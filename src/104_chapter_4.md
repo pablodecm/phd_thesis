@@ -443,6 +443,33 @@ in [Section @sec:known_unknowns], the resulting classifiers
 would be trained to to optimise the classification objective for
 different distributions.
 
+To understand the role of classification in the larger goal of statistical
+inference of a subset of parameters of interest in a mixture model,
+let us consider the general problem of inference for a two-component
+mixture problem. One of the components will be denoted as signal
+$f_s(\boldsymbol{x}| \boldsymbol{\theta})$ and the other as background
+$f_b(\boldsymbol{x} | \boldsymbol{\theta})$, where  $\boldsymbol{\theta}$ is
+are of all parameters the distributions might depend on. As
+discussed in [Section @sec:mixture_components], it is often the case that
+$f_s(\boldsymbol{x}| \boldsymbol{\theta})$ and
+$f_b(\boldsymbol{x} | \boldsymbol{\theta})$ are not known, observations
+can only be simulated, which will not affect the validity the following
+discussion. The probability
+distribution function of the mixture can be expressed as:
+$$
+p(\boldsymbol{x}| \mu, \boldsymbol{\theta} ) = (1-\mu) f_b(\boldsymbol{x} | \boldsymbol{\theta}) 
+                                                + \mu f_s(\boldsymbol{x} | \boldsymbol{\theta})
+$${#eq:mixture_general}
+where $\mu$ is a parameter corresponding to the signal mixture fraction,
+which will be the only parameter of interest for the time being. As
+discussed in [Section @sec:sig_and_bkg],
+most the of the parameters of interest in analyses at the LHC, such cross
+sections, are proportional to the mixture coefficient of the signal
+in the statistical model.
+The results presented here would also be also be valid if alternative mixture
+coefficient parametrisation such as the one considered in [Section @sec:synthetic_mixture] are used, e.g. $\mu=s/(s+b)$ where $s$ and $b$
+is the expected number of events for signal and background respectively, as
+long as $b$ is known and fixed and $s$ is the only parameter of interest.
 
 #### Likelihood Ratio Approximation {#sec:lr_clf}
 
@@ -451,20 +478,6 @@ different distributions.
 
 #### Sufficient Statistics for Mixture Models  {#sec:sufficiency_clf}
 
-In addition
-Let us consider the general problem of inference for a two-component
-mixture problem.
-While their functional form will not be explicitly specified to keep
-the formulation general, one of the components will be denoted as signal
-$f_s(\boldsymbol{x}| \boldsymbol{\theta})$ and the other as background
-$f_b(\boldsymbol{x} | \boldsymbol{\theta})$, where  $\boldsymbol{\theta}$ is
-are of all parameters the distributions might depend on. The probability
-distribution function of the mixture can then be expressed as:
-$$
-p(\boldsymbol{x}| \mu, \boldsymbol{\theta} ) = (1-\mu) f_b(\boldsymbol{x} | \boldsymbol{\theta}) 
-                                                + \mu f_s(\boldsymbol{x} | \boldsymbol{\theta})
-$${#eq:mixture_general}
-where $\mu$ is a parameter corresponding to the signal mixture fraction.
 Dividing and multiplying by $f_b(\boldsymbol{x} | \boldsymbol{\theta})$ we
 have:
 $$
@@ -477,7 +490,7 @@ $s_{s/ b}= f_s(\boldsymbol{x} | \boldsymbol{\theta}) / f_b(\boldsymbol{x} | \bol
 (or alternatively its inverse) is a sufficient summary statistic for the
 mixture coefficient parameter $\mu$. This would also be the case for
 the parametrization using $s$ and $b$ if the alternative $\mu=s/(s+b)$
-formulation presented for the synthetic problem in Sec. \ref{d-synthetic-mixture}.
+formulation presented for the synthetic problem in .
 
 However, previously in this work (as well as for most studies using
 classifiers to construct summary statistics) we have been using the

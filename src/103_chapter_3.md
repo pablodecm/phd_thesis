@@ -147,7 +147,7 @@ the actual estimation of expectation values when the mixture
 component distributions $p_j(\boldsymbol{x}|\boldsymbol{\theta})$
 are not tractable.
 
-#### Mixture Components
+#### Mixture Components {#sec:mixture_components}
 
 The mixture model structure can be directly linked to the physical processes
 happening in fundamental proton-proton collisions and detectors used to
@@ -203,7 +203,7 @@ which can be a very useful notion for some analysis use cases,
 and is related with the approach that will be
 used in [Chapter @sec:higgs_pair].
 
-#### Signal and  {#sec:sig_and_bkg}
+#### Signal and Background {#sec:sig_and_bkg}
 
 Oftentimes, we are interested in studying a subset $S \subset H$
 of all the hard  interaction processes, which will be referred to as signal
