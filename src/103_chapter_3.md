@@ -1069,7 +1069,7 @@ to construct a likelihood to carry out inference on the
 parameters $\boldsymbol{\theta}$ based on the observed value
 of the sample summary statistic $\boldsymbol{n}_T^\textrm{obs}$.
 
-#### Sufficient Statistics
+#### Sufficient Statistics {#sec:suff_stats}
 
 The selection count vector $\boldsymbol{n}_T^\textrm{obs}(D)$, which has not been
 specified yet, could be also written

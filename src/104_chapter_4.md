@@ -537,78 +537,147 @@ proportional to the following ratio:
 $$
 \Lambda^{-1} \sim
 \frac{p(\boldsymbol{x} | H_1)}{ p(\boldsymbol{x} | H_0 )}  =
-\frac{ (1-\mu_0) p_\textrm{b}(\boldsymbol{x}) +
-  \mu_0 p_\textrm{s}(\boldsymbol{x})}{p_\textrm{b}(\boldsymbol{x})}
+\frac{ (1-\mu_0) p_\textrm{b}(\boldsymbol{x}| \boldsymbol{\theta}) +
+  \mu_0 p_\textrm{s}(\boldsymbol{x}|
+   \boldsymbol{\theta})}{p_\textrm{b}(\boldsymbol{x}|
+   \boldsymbol{\theta})}
 $$ {#eq:lr_one}
 which can in turn be be expressed as:
 $$
 \Lambda^{-1} \sim
-1-\mu) \left ( \frac{p_\textrm{s}(\boldsymbol{x})}{
-                          p_\textrm{b}(\boldsymbol{x})}-1 \right)
+1-\mu) \left ( \frac{p_\textrm{s}(\boldsymbol{x}| \boldsymbol{\theta})}{
+                          p_\textrm{b}(\boldsymbol{x}| \boldsymbol{\theta})}-1 \right)
 $$ {#eq:lr_two}
 thus each factor in likelihood ratio is bijective function of
-the density ratio $p_\textrm{s}(\boldsymbol{x})/p_\textrm{b}(\boldsymbol{x}$.
+the density ratio
+$p_\textrm{s}(\boldsymbol{x}| \boldsymbol{\theta})
+/p_\textrm{b}(\boldsymbol{x}| \boldsymbol{\theta})$.
 The previous density ratio can be approximated by training a classifier
 to distinguish signal and background observations, which is computationally
 more efficient and easier to interpret intuitively 
 than the direct $p(\boldsymbol{x}| H_0)/p(\boldsymbol{x} |H_1)$
 approximation mentioned before.
 
-#### Sufficient Statistics for Mixture Models  {#sec:sufficiency_clf}
+From a statistical inference point of view, supervised machine learning framed
+as the classification of signal versus background can be viewed as a way to
+approximate the likelihood ratio directly from simulated samples, bypassing
+the need of a tractable density function (see [Section @sec:likelihood-free]).
+It is worth noting that because it is only an approximation, in order to
+be useful for inference it requires careful calibration. Such calibration
+is usually carried out using a histogram and an holdout dataset
+of simulated observations, effectively building a synthetic likelihood
+of the whole classifier output range or the number of observed
+events after cut in the classifier is imposed
+(see [Section @sec:synthetic_likelihood]). Alternative density estimation
+techniques could also be used for the calibration step, which could reduce
+the loss of information due to the histogram binning.
 
-Dividing and multiplying by $p_b(\boldsymbol{x} | \boldsymbol{\theta})$ we
-have:
+The effect of nuisance parameters, due to known unknowns,
+have also to be accounted for during the calibration step. The true
+density ratio between signal and background depends on any parameter
+$\boldsymbol{\theta}$ that modifies the signal $p_s(\boldsymbol{x} |
+\boldsymbol{\theta})$ or
+background $p_b(\boldsymbol{x} | \boldsymbol{\theta})$ probability densities,
+thus its approximation using machine learning classification can become
+complicated. In practice, the classifier can be trained for the most
+probable likely value of the nuisance parameters and their effect can
+be adequately accounted during calibration, yet the resulting
+inference will be degraded. While this issue can be somehow
+ameliorated using parametrised classifiers [@baldi2016parameterized],
+the main motivation for using the likelihood ratio - i.e. the
+Neyman-Pearson lemma - does not apply because the hypothesis considered
+are not simple when nuisance parameters are present.
+
+
+#### Sufficient Statistics Interpretation {#sec:sufficiency_clf}
+
+Another interpretation of the use of signal versus background
+classifiers, which more generally applies to any type
+of statistical inference, is based on applying the
+concept of statistical sufficiency (see [Section @sec:suff_stats]). Starting
+from the mixture distribution function in [Equation @eq:mixture_general],
+and both dividing and multiplying by $p_b(\boldsymbol{x} | \boldsymbol{\theta})$
+we obtain:
 $$
-p(\boldsymbol{x}| \mu, \boldsymbol{\theta} ) = f_b(\boldsymbol{x} | \boldsymbol{\theta})   \left ( 1-\mu
-                    + \mu \frac{f_s(\boldsymbol{x} | \boldsymbol{\theta})}{f_b(\boldsymbol{x} | \boldsymbol{\theta})}
+p(\boldsymbol{x}| \mu, \boldsymbol{\theta} ) = p_b(\boldsymbol{x} | \boldsymbol{\theta})   \left ( 1-\mu
+                    + \mu \frac{p_s(\boldsymbol{x} | \boldsymbol{\theta})}{p_b(\boldsymbol{x} | \boldsymbol{\theta})}
                     \right )  
 $${#eq:mixture_div}
 from which we can already prove that the density ratio
-$s_{s/ b}= p_s(\boldsymbol{x} | \boldsymbol{\theta}) /
+$s_{s/ b}(\boldsymbol{x})= p_s(\boldsymbol{x} | \boldsymbol{\theta}) /
            p_b(\boldsymbol{x} | \boldsymbol{\theta})$
 (or alternatively its inverse) is a sufficient summary statistic for the
-mixture coefficient parameter $\mu$. This would also be the case for
-the parametrization using $s$ and $b$ if the alternative $\mu=s/(s+b)$
-formulation presented for the synthetic problem in .
+mixture coefficient parameter $\mu$, according the Fisher-Neyman
+factorisation criterion defined in [Equation @eq:sufficient_single]. The
+density ratio can be approximated directly from signal versus background
+classification as indicated in [Equation @eq:lr_clf].
 
-However, previously in this work (as well as for most studies using
-classifiers to construct summary statistics) we have been using the
-summary statistic 
-$s_{s/(s+b)}= p_s(\boldsymbol{x} | \boldsymbol{\theta}) /
-(p_s(\boldsymbol{x} | \boldsymbol{\theta}) +
- p_b(\boldsymbol{x} | \boldsymbol{\theta}))$ 
-instead of $s_{s/ b}$. The advantage of $s_{s/(s+b)}$ is that it represents
-the conditional probability of one observation $\boldsymbol{x}$ coming
-from the signal assuming a balanced mixture, and hence is bounded between
-zero and one. This greatly simplifies its visualisation and non-parametetric
-likelihood estimation. Taking [@Eq:mixture_div] and manipulating the
-subexpression depending on $\mu$ by adding and subtracting $2\mu$  we have:
+In the analysis presented in [Chapter @sec:higgs_pair] and
+in the synthetic problem considered in [Section @sec:synthetic_mixture],
+as well as for most LHC analysis using
+classifiers to construct summary statistics, the
+summary statistic
 $$
-p(\boldsymbol{x}| \mu, \boldsymbol{\theta} ) = f_b(\boldsymbol{x} | \boldsymbol{\theta})   \left ( 1-3\mu
-                    + \mu \frac{f_s(\boldsymbol{x} | \boldsymbol{\theta}) + f_b(\boldsymbol{x} | \boldsymbol{\theta})}{f_b(\boldsymbol{x} | \boldsymbol{\theta})}
+s_{s/(s+b)}= \frac{p_s(\boldsymbol{x} | \boldsymbol{\theta})}{
+p_s(\boldsymbol{x} | \boldsymbol{\theta}) +
+ p_b(\boldsymbol{x} | \boldsymbol{\theta})}$$  
+instead of $s_{s/ b} (\boldsymbol{x})$ is used.
+The advantage of $s_{s/(s+b)}(\boldsymbol{x})$ is that it represents
+the conditional probability of one observation $\boldsymbol{x}$ coming
+from the signal assuming a balanced mixture, so it can be approximated
+by simply taking the classifier output. In addition, being a probability
+it is bounded between
+zero and one which greatly simplifies its visualisation and non-parametric
+likelihood estimation. Taking [Equation @Eq:mixture_div] and manipulating
+the subexpression depending on $\mu$ by adding and
+subtracting $2\mu$  we have:
+$$
+p(\boldsymbol{x}| \mu, \boldsymbol{\theta} ) = p_b(\boldsymbol{x} | \boldsymbol{\theta})   \left ( 1-3\mu
+                    + \mu \frac{p_s(\boldsymbol{x} | \boldsymbol{\theta}) + p_b(\boldsymbol{x} | \boldsymbol{\theta})}{p_b(\boldsymbol{x} | \boldsymbol{\theta})}
                     \right )  
 $${#eq:mixture_sub}
 which can in turn can be expressed as:
-
 $$
-p(\boldsymbol{x}| \mu, \boldsymbol{\theta} ) = f_b(\boldsymbol{x} | \boldsymbol{\theta})   \left ( 1-3\mu
-                    + \mu \left ( 1- \frac{f_s(\boldsymbol{x} | \boldsymbol{\theta})}{f_s(\boldsymbol{x} | \boldsymbol{\theta})
-                  +f_b(\boldsymbol{x} | \boldsymbol{\theta})} \right )^{-1}
+p(\boldsymbol{x}| \mu, \boldsymbol{\theta} ) = p_b(\boldsymbol{x} | \boldsymbol{\theta})   \left ( 1-3\mu
+                    + \mu \left ( 1- \frac{p_s(\boldsymbol{x} | \boldsymbol{\theta})}{p_s(\boldsymbol{x} | \boldsymbol{\theta})
+                  +p_b(\boldsymbol{x} | \boldsymbol{\theta})} \right )^{-1}
                     \right )  
 $${#eq:mixture_suff}
-hence proving that $s_{s/(s+b)}$ is also a sufficient statistic and theoretically
-justifying its use for inference about $\mu$. The advantage of both $s_{s/(s+b)}$ 
-and $s_{s/b}$ is they are one-dimensional and do not depend on the
+hence proving that $s_{s/(s+b)}(\boldsymbol{x})$
+is also a sufficient statistic and theoretically
+justifying its use for inference about $\mu$. The advantage of both
+$s_{s/(s+b)}(\boldsymbol{x})$ 
+and $s_{s/b}(\boldsymbol{x})$ is that they
+are one-dimensional and do not depend on the
 dimensionality of $\boldsymbol{x}$ hence allowing much more efficient
 non-parametric density estimation from simulated samples. Note that
 we have been only discussing sufficiency with respect to the mixture
 coefficients and not the additional distribution parameters
 $\boldsymbol{\theta}$. In fact, if a subset of $\boldsymbol{\theta}$ 
 parameters are also relevant for inference (e.g. they are nuisance
-parameters) then $s_{s/(s+b)}$ and $s_{s/b}$ are not sufficient statistics
-unless the $f_s(\boldsymbol{x}| \boldsymbol{\theta})$ and
-$f_b(\boldsymbol{x}| \boldsymbol{\theta})$ have very specific functional
-form that allows a similar factorisation. 
+parameters) then $s_{s/(s+b)}(\boldsymbol{x})$ and
+$s_{s/b}(\boldsymbol{x})$ are not sufficient statistics
+unless the $p_s(\boldsymbol{x}| \boldsymbol{\theta})$ and
+$p_b(\boldsymbol{x}| \boldsymbol{\theta})$ have very specific functional
+form that allows a similar factorisation.
+
+In summary, probabilistic
+signal versus background classification is an effective
+proxy to construct summary statistic that asymptotically
+approximate sufficient statistics directly from simulated
+samples, when the distributions of signal
+and background are fully defined and $\mu$ (or $s$ in the alternative
+parametrisation mentioned before) is the only unknown parameter.
+If the statistical model depends on additional nuisance parameters, probabilistic
+classification does not provide any sufficiency guarantees, so useful
+information about that can used to constrain the parameters of interest
+might be lost if a low-dimensional
+classification-based summary statistic is used in place
+of $\boldsymbol{x}$. This theoretical observation will be observed
+in practice in [Chapter @sec:inferno], where a new technique to
+construct summary statistics, that is not based on classification, t
+but account for the effect of nuisance parameters is presented.
+
 
 ### Particle Identification and Regression
 
