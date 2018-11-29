@@ -203,7 +203,7 @@ which can be a very useful notion for some analysis use cases,
 and is related with the approach that will be
 used in [Chapter @sec:higgs_pair].
 
-#### Signal and Background
+#### Signal and  {#sec:sig_and_bkg}
 
 Oftentimes, we are interested in studying a subset $S \subset H$
 of all the hard  interaction processes, which will be referred to as signal

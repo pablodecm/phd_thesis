@@ -405,7 +405,8 @@ provided a more extensive review [@friedman2001elements;@Goodfellow-et-al-2016;@
 
 Machine learning techniques, in particular supervised learning, are
 increasingly being used in experimental particle physics analysis
-at the LHC. In this section, the main use cases are described,
+at the LHC [@Guest:2018yhq].
+In this section, the main use cases are described,
 linking the learning task with the statistical
 problems and properties which were described in [Chapter @sec:statinf]. In
 broad terms, most supervised learning at collider experiments
@@ -417,11 +418,42 @@ which allow to carry out likelihood-free inference efficiently.
 
 ### Signal vs Background Classification {#sec:sig_vs_bkg}
 
+The mixture structure of the statistical model for collisions outcomes,
+discussed in [Chapter @sec:statinf], facilitates its
+framing as a classification problem. Intuitively, the classification
+objective could be
+stated as the separation of detector outcomes coming from processes that
+contain information about the parameters of interest from those that do not,
+which will be referred as signal and background respectively, following
+the same nomenclature from [Section @sec:sig_and_bkg]. The two classes
+are often non-separable - i.e. a given detector outcome $\boldsymbol{x}$
+(or any function of it) could have been produced either by signal or background
+processes, and only probabilistic statements of class assignment can be made.
+
+In order to use supervised machine learning techniques to classify detector
+outcomes, labelled samples are required, yet only the detector readout
+$\boldsymbol{x}$
+is known for collected data. Realistic simulated observations, generated
+specifically to model events from a given set processes (e.g. signal
+and background) can instead be used as training data, where the categorical
+latent variable $z_i$ that represents a given set of processes can
+effectively used as classification label. If the simulator model is
+misspecified, e.g. due to the effect of known unknowns as discussed
+in [Section @sec:known_unknowns], the resulting classifiers
+would be trained to to optimise the classification objective for
+different distributions.
+
+
+#### Likelihood Ratio Approximation {#sec:lr_clf}
+
+
+
+
 #### Sufficient Statistics for Mixture Models  {#sec:sufficiency_clf}
 
+In addition
 Let us consider the general problem of inference for a two-component
-mixture problem, which is very common in scientific disciplines such
-as High Energy Physics.
+mixture problem.
 While their functional form will not be explicitly specified to keep
 the formulation general, one of the components will be denoted as signal
 $f_s(\boldsymbol{x}| \boldsymbol{\theta})$ and the other as background
