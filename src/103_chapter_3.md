@@ -1584,7 +1584,14 @@ with the technique presented in [Chapter @sec:inferno].
 
 ### Hypothesis Testing {#sec:hypo_test}
 
-### Parameter Estimation
+$$
+\Lambda( \mathcal{D}; H_0, H_1) =
+\prod_{\boldsymbol{x} \in \mathcal{D}}
+\frac{p(\boldsymbol{x}| H_0)}{ p(\boldsymbol{x} |H_1)}
+$$ {#eq:likelihood_ratio}
+
+
+### Parameter Estimation {#sec:param_est}
 
 
 

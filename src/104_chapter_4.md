@@ -447,8 +447,8 @@ To understand the role of classification in the larger goal of statistical
 inference of a subset of parameters of interest in a mixture model,
 let us consider the general problem of inference for a two-component
 mixture problem. One of the components will be denoted as signal
-$f_s(\boldsymbol{x}| \boldsymbol{\theta})$ and the other as background
-$f_b(\boldsymbol{x} | \boldsymbol{\theta})$, where  $\boldsymbol{\theta}$ is
+$p_s(\boldsymbol{x}| \boldsymbol{\theta})$ and the other as background
+$p_b(\boldsymbol{x} | \boldsymbol{\theta})$, where  $\boldsymbol{\theta}$ is
 are of all parameters the distributions might depend on. As
 discussed in [Section @sec:mixture_components], it is often the case that
 $f_s(\boldsymbol{x}| \boldsymbol{\theta})$ and
@@ -457,8 +457,8 @@ can only be simulated, which will not affect the validity the following
 discussion. The probability
 distribution function of the mixture can be expressed as:
 $$
-p(\boldsymbol{x}| \mu, \boldsymbol{\theta} ) = (1-\mu) f_b(\boldsymbol{x} | \boldsymbol{\theta}) 
-                                                + \mu f_s(\boldsymbol{x} | \boldsymbol{\theta})
+p(\boldsymbol{x}| \mu, \boldsymbol{\theta} ) = (1-\mu) p_b(\boldsymbol{x} | \boldsymbol{\theta}) 
+                                                + \mu p_s(\boldsymbol{x} | \boldsymbol{\theta})
 $${#eq:mixture_general}
 where $\mu$ is a parameter corresponding to the signal mixture fraction,
 which will be the only parameter of interest for the time being. As
@@ -473,12 +473,90 @@ long as $b$ is known and fixed and $s$ is the only parameter of interest.
 
 #### Likelihood Ratio Approximation {#sec:lr_clf}
 
+Probabilistic classification techniques will effectively approximate
+the conditional probability of each class, as discussed in
+[Equation @eq:bayes_optimal_bce] for the binary classification. A way to
+approximate the density ratio $r(\boldsymbol{x})$ 
+between two arbitrary distribution functions $\rho(\boldsymbol{x})$ and
+$q(\boldsymbol{x})$ is then to train
+a classifier - e.g. a neural network optimising cross-entropy. If samples
+from $\rho(\boldsymbol{x})$ are labelled as $y=1$, while $y=0$ is used
+for observations from $q(\boldsymbol{x})$, the density ratio can be
+approximated from the soft BCE classifier output $s(\boldsymbol{x})$ as:
+$$
+\frac{s(\boldsymbol{x})}{1-s(\boldsymbol{x})} \approx
+\frac{p(y = 1| \boldsymbol{x})}{p(y = 0| \boldsymbol{x})} = 
+\frac{p(\boldsymbol{x} | y = 1) p(y = 1)}{p(\boldsymbol{x} | y = 0) p(y = 0)}
+=  r(\boldsymbol{x}) \frac{p(y = 1)}{p(y = 0)}
+$$ {#eq:lr_clf}
+thus the density ratio  $r(\boldsymbol{x})$ 
+can be approximated by a simple function of the trained classifier output
+directly from samples of observations. The factor
+$p(y = 1)/p(y = 0)$ is independent on $\boldsymbol{x}$, and can
+be simply estimated as the ratio between the total number of observations
+from each category in the training dataset - i.e. equal to 1 if it is
+balanced.
 
+Density ratios are very useful for inference, particularly for
+hypothesis testing, given that the likelihood ratio $\Lambda$
+from [Equation @eq:likelihood_ratio] is the most powerful test
+statistic to distinguish between two simple hypothesis
+and can be expressed as a function of density ratios. Returning
+to the two component mixture from [Equation @eq:mixture_general], for discovery
+the null hypothesis $H_0$ corresponds to background-only
+$p(\boldsymbol{x}| \mu = 0, \boldsymbol{\theta})$ while the alternate
+is often a given mixture of signal and background
+$p(\boldsymbol{x}| \mu = \mu_0, \boldsymbol{\theta})$, where $\mu_0$
+is fixed. For the time being, the other distribution parameters  $\boldsymbol{\theta}$ will be assumed to be known and fixed to
+the same values for both hypothesis.
+The likelihood ratio in this case can be expressed as:
+$$
+\Lambda( \mathcal{D}; H_0, H_1) =
+\prod_{\boldsymbol{x} \in \mathcal{D}}
+\frac{p(\boldsymbol{x}| H_0)}{ p(\boldsymbol{x} |H_1)} =
+\prod_{\boldsymbol{x} \in \mathcal{D}}
+\frac{p(\boldsymbol{x}| \mu = 0, \boldsymbol{\theta})}{
+p(\boldsymbol{x}| \mu = \mu_0, \boldsymbol{\theta})}
+$$ {#eq:lr_mixture}
+where the $p(\boldsymbol{x}| \mu = 0, \boldsymbol{\theta})/p(\boldsymbol{x}|
+\mu_0, \boldsymbol{\theta})$ factor could be approximated from the output
+of a probabilistic classifier trained to distinguish observations from
+$p(\boldsymbol{x}| \mu = 0, \boldsymbol{\theta})$  and those from
+$p(\boldsymbol{x}| \mu = \mu_0, \boldsymbol{\theta})$. A certain $\mu_0$ would  
+have to be specified to generate $p(\boldsymbol{x}| \mu = \mu_0,
+\boldsymbol{\theta})$ observations in order to train the classifier. The
+same classifier output could be repurposed to model the likelihood ratio
+when $H_1$ is $p(\boldsymbol{x}| \mu = \mu_1, \boldsymbol{\theta})$ with
+a simple transformation, yet the mixture structure of the problem allows a
+for a more direct density ratio estimation alternative, which is the
+one regularly used in particle physics analyses.
 
+Let us consider instead the inverse of the likelihood ratio
+$\Lambda$ from [Equation @eq:lr_mixture], each factor term is thus
+proportional to the following ratio:
+$$
+\Lambda^{-1} \sim
+\frac{p(\boldsymbol{x} | H_1)}{ p(\boldsymbol{x} | H_0 )}  =
+\frac{ (1-\mu_0) p_\textrm{b}(\boldsymbol{x}) +
+  \mu_0 p_\textrm{s}(\boldsymbol{x})}{p_\textrm{b}(\boldsymbol{x})}
+$$ {#eq:lr_one}
+which can in turn be be expressed as:
+$$
+\Lambda^{-1} \sim
+1-\mu) \left ( \frac{p_\textrm{s}(\boldsymbol{x})}{
+                          p_\textrm{b}(\boldsymbol{x})}-1 \right)
+$$ {#eq:lr_two}
+thus each factor in likelihood ratio is bijective function of
+the density ratio $p_\textrm{s}(\boldsymbol{x})/p_\textrm{b}(\boldsymbol{x}$.
+The previous density ratio can be approximated by training a classifier
+to distinguish signal and background observations, which is computationally
+more efficient and easier to interpret intuitively 
+than the direct $p(\boldsymbol{x}| H_0)/p(\boldsymbol{x} |H_1)$
+approximation mentioned before.
 
 #### Sufficient Statistics for Mixture Models  {#sec:sufficiency_clf}
 
-Dividing and multiplying by $f_b(\boldsymbol{x} | \boldsymbol{\theta})$ we
+Dividing and multiplying by $p_b(\boldsymbol{x} | \boldsymbol{\theta})$ we
 have:
 $$
 p(\boldsymbol{x}| \mu, \boldsymbol{\theta} ) = f_b(\boldsymbol{x} | \boldsymbol{\theta})   \left ( 1-\mu
@@ -486,7 +564,8 @@ p(\boldsymbol{x}| \mu, \boldsymbol{\theta} ) = f_b(\boldsymbol{x} | \boldsymbol{
                     \right )  
 $${#eq:mixture_div}
 from which we can already prove that the density ratio
-$s_{s/ b}= f_s(\boldsymbol{x} | \boldsymbol{\theta}) / f_b(\boldsymbol{x} | \boldsymbol{\theta})$
+$s_{s/ b}= p_s(\boldsymbol{x} | \boldsymbol{\theta}) /
+           p_b(\boldsymbol{x} | \boldsymbol{\theta})$
 (or alternatively its inverse) is a sufficient summary statistic for the
 mixture coefficient parameter $\mu$. This would also be the case for
 the parametrization using $s$ and $b$ if the alternative $\mu=s/(s+b)$
@@ -494,8 +573,10 @@ formulation presented for the synthetic problem in .
 
 However, previously in this work (as well as for most studies using
 classifiers to construct summary statistics) we have been using the
-summary statistic $s_{s/(s+b)}= f_s(\boldsymbol{x} | \boldsymbol{\theta}) /(
-  f_s(\boldsymbol{x} | \boldsymbol{\theta}) + f_b(\boldsymbol{x} | \boldsymbol{\theta}))$
+summary statistic 
+$s_{s/(s+b)}= p_s(\boldsymbol{x} | \boldsymbol{\theta}) /
+(p_s(\boldsymbol{x} | \boldsymbol{\theta}) +
+ p_b(\boldsymbol{x} | \boldsymbol{\theta}))$ 
 instead of $s_{s/ b}$. The advantage of $s_{s/(s+b)}$ is that it represents
 the conditional probability of one observation $\boldsymbol{x}$ coming
 from the signal assuming a balanced mixture, and hence is bounded between
