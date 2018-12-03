@@ -1400,7 +1400,7 @@ quality and fine-tuned calibration is often used, for example in the
 $H \rightarrow \gamma \gamma$ analysis, to reduce the fake rate
 and obtain higher momentum resolution.
 
-#### Jet Reconstruction
+#### Jet Reconstruction and B-Tagging {#sec:jet_btag}
 
 Once muons, electrons and isolated photons in the event have been
 identified, the remaining particle-flow blocks (i.e. linked tracks

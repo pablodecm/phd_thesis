@@ -681,22 +681,49 @@ but accounts for the effect of nuisance parameters is presented.
 
 ### Particle Identification and Regression {#eq:particle_id_reg}
 
-While the categorical hidden variable $z_i$, denoting the interaction
+While the categorical latent variable $z_i$, denoting the interaction
 process that happened in the collision, is very useful to define an event
 selection or directly as a summary statistic, some information about
-other hidden variables can also be recovered using supervised machine learning.
+other latent variables can also be recovered using supervised machine learning.
 As discussed in [Section @sec:event_reco], event reconstruction techniques
 are used to cluster the raw detector output so the various readouts are
 associated with a list of particles produced in the the collision. It
 is possible that in the near future the algorithmic reconstruction procedure
 might be substituted by supervised learning techniques, training directly
-on simulated data to predict the set of hidden variables at parton level,
+on simulated data to predict the set of latent variables at parton level,
 especially given the recent progress with sequences and other non-tabular
 data structures. For the time being, machine learning techniques are
-instead often used to augment the reconstructed information, mainly for
+instead often used to augment the event reconstruction output, mainly for
 particle identification and fine-tuned regression.
 
+The set of physics objects obtained from event reconstruction, when adequately
+calibrated using simulation, can estimate effectively a subset of the latent
+variables $\boldsymbol{z}$ associated with the resulting parton level
+particles, such as their transverse momenta and direction. Due to the
+limitations of the hand-crafted algorithms, some
+latent information is lost in the standard reconstruction process, particularly
+for composite objects such as jets. Supervised machine learning techniques
+can be used to regress some of these latent variables, using simulated
+data and considering both low-level and high-level features associated
+with the relevant reconstructed objects. These information could be used to
+complement the reconstruction output for each object and design better
+summary statistics, e.g. adding this information as an input to the
+classifiers discussed in [Section @sec:sig_vs_bkg].
+
+The details of the application of machine learning techniques
+in particle identification and regression
+depend on the particle type and the relevant physics case. In the remainder
+of this section, the application of new deep learning techniques to jet
+tagging within CMS is discussed in more detail. The integration
+of deep learning jet taggers with the CMS experiment software
+infrastructure was one of the secondary research goals of the project
+embodied in this document. Leveraging better machine
+learning techniques for jet tagging and regression
+could substantially increase the
+discovery reach of analyses at the LHC that are based on final states
+containing jets, such as the search for Higgs boson pair production
+described in [Section @sec:higgs_pair].
 
 
-
+#### Deep Learning for Jet Tagging
 
