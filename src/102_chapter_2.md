@@ -1533,7 +1533,7 @@ or $\textrm{C}$ hadrons. Figure has been adapted from [@Sirunyan:2017ezt].
 ](gfx/102_chapter_2/Figure_001.pdf){
 #fig:CMS_btag_scheme width=50%}
 
-Certain properties of the decay of $B$ and $C$ hadrons can be used to
+Some properties of the decay of $B$ and $C$ hadrons can be used to
 distinguish heavy flavour jets from those produced by light quarks and gluon
 hadronisation processes. In particular, the lifetimes of heavy flavour hadrons
 are often long enough that they move several millimetres  away from
@@ -1550,8 +1550,49 @@ originating from a particular type of parton, combine quantitative information
 related with the various properties previously mention to distinguish the
 flavour of the parton that generated a given jet.
 
+![Misidentification probability (in log scale) for jets
+originating from $c$ (dashed line) and light quarks or gluons (solid line)
+versus b-tagging efficiency, for different b-tagging algorithms available
+in CMS during 2016. The misspecification probabilistic and efficiencies
+are obtained from the subset of reconstructed jets with a $p_T>20\ \textrm{GeV}$
+from a large $\textrm{t}\bar{\textrm{t}}$ simulated sample.
+Figure has been adapted from [@Sirunyan:2017ezt].
+](gfx/102_chapter_2/Figure_016.pdf){
+#fig:CMS_btag_comp width=70%}
 
-<!-- extend b-tagging -->
+Heavy flavour tagging, particularly b-tagging can very useful for analyses
+considering jets in  final states, such as the search for Higgs pair production
+with CMS data described in [Chapter @sec:higgs_pair]. The misidentification
+versus efficiency curve of the main b-tagging
+algorithms that were available in 2016 for high-energy jets is shown
+in [Figure @fig:CMS_btag_comp]. They differ in the subset of information
+associated to the jet that is considered and the specifics of the 
+multivariate techniques used to construct the final discriminator. The simplest
+b-tagging algorithm, referred to as jet probability (JP) is only based a
+calibrated estimation of the displaced track probabilities. The b-tagging
+discriminators pertaining to the combined secondary vertex (CSV) family
+combine displaced track information with reconstructed secondary vertex.
+The improvement between different CSV-based b-tagging algorithms
+is due to the use of more advanced statistical learning techniques
+and additional discriminating variables [@Sirunyan:2017ezt]. The CMVAv2
+algorithm, which is used in the analysis included in [Chapter @sec:higgs_pair],
+combines the output from JP and CSVv2 algorithms with two taggers that
+combine the information from non-isolated electrons and muons inside
+the jet.
+
+In [Section @eq:particle_id_reg], the role of recent advances in machine
+learning techniques for particle identification and regression are
+discussed in more detail, focussing on the development and integration
+on a new deep learning based multi-category jet tagger referred
+as DeepJet. The DeepJet
+tagger outperforms both CMVAv2 and DeepCSV (which also leverages
+deep learning technologies), while
+providing additional discrimination capabilities (e.g. gluon-quark
+separation). It worth mentioning that jet tagging techniques
+can also be applied for identifying substructure in larger radius
+jets, which are very relevant for analysis where highly boosted
+intermediate objects are expected, but are not discussed in
+this work.
 
 #### Missing Transverse Energy {#sec:met_pf}
 
