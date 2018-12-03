@@ -1521,8 +1521,35 @@ processes with physical interesting intermediate
 particles like a Higgs boson $H$ or top quarks/antiquarks,
 which predominantly decay to $b$ quarks. Heavy flavour $b$ quarks,
 and to a lesser extent also for $c$ quarks, hadronise producing $B$ (and
-$C$) mesons that have lifetimes long enough to fly away from the
+$C$) hadrons that have lifetimes long enough to fly away from the
 primary vertex before decaying. 
+
+![Schematic representation of the features of a heavy-flavour jet
+that can be used for jet tagging including the presence charged tracks, with
+a large impact parameter (IP), that is not compatible with the primary vertex
+(PV),
+and a reconstructed secondary vertex (SV), both due to the decay of $\textrm{B}$
+or $\textrm{C}$ hadrons. Figure has been adapted from [@Sirunyan:2017ezt].
+](gfx/102_chapter_2/Figure_001.pdf){
+#fig:CMS_btag_scheme width=50%}
+
+Certain properties of the decay of $B$ and $C$ hadrons can be used to
+distinguish heavy flavour jets from those produced by light quarks and gluon
+hadronisation processes. In particular, the lifetimes of heavy flavour hadrons
+are often long enough that they move several millimetres  away from
+the primary vertex where they were produce before decaying, when
+highly boosted. Thus, heavy flavour jets are associated with the presence
+of displaced charged tracks and secondary vertices (SV) within the jet,
+as depicted by [Figure @fig:CMS_btag_scheme]. In addition, both
+$\textrm{B}$
+or $\textrm{C}$ hadron decays are characterised by a large decay multiplicity
+(average 5 charged daughters) and a high probability (36\%) of producing
+a lepton in their decays chain. Flavour tagging techniques, often referred
+to as b-tagging or c-tagging when the purpose is to identify a jets
+originating from a particular type of parton, combine quantitative information
+related with the various properties previously mention to distinguish the
+flavour of the parton that generated a given jet.
+
 
 <!-- extend b-tagging -->
 
