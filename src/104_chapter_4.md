@@ -679,7 +679,24 @@ construct summary statistics, that is not based on classification,
 but accounts for the effect of nuisance parameters is presented.
 
 
-### Particle Identification and Regression
+### Particle Identification and Regression {#eq:particle_id_reg}
+
+While the categorical hidden variable $z_i$, denoting the interaction
+process that happened in the collision, is very useful to define an event
+selection or directly as a summary statistic, some information about
+other hidden variables can also be recovered using supervised machine learning.
+As discussed in [Section @sec:event_reco], event reconstruction techniques
+are used to cluster the raw detector output so the various readouts are
+associated with a list of particles produced in the the collision. It
+is possible that in the near future the algorithmic reconstruction procedure
+might be substituted by supervised learning techniques, training directly
+on simulated data to predict the set of hidden variables at parton level,
+especially given the recent progress with sequences and other non-tabular
+data structures. For the time being, machine learning techniques are
+instead often used to augment the reconstructed information, mainly for
+particle identification and fine-tuned regression.
+
+
 
 
 
