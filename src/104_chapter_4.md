@@ -766,7 +766,7 @@ The first attempt to use some of the recent advances in neural networks
 the development for this tagger was to quantify the performance gain
 due to the use of deep neural networks for jet tagging in CMS, which
 was demonstrated effective using a simplified detector simulation
-framework [@Guest:2016iqz]. Thus, a classifier
+framework [@Guest:2016iqz; @deOliveira:2015xxd]. Thus, a classifier
 based on a 5-layer neural network, each layer with 100 nodes using ReLu
 activation functions,
 was trained based on the information considered for the CSVv2
@@ -776,16 +776,47 @@ considered as an input, amounting to 66 variables in total. Another
 change with respect to previous taggers is that flavour tagging
 is posed as a multi-class classification problem, which is
 a principled and simple for tacking the various flavour tagging
-problems simultaneously. Five exclusive categories were defined
+problems simultaneously.
+
+Five exclusive categories were defined
 based different on the generator level hadron information: the
 jet contains exactly one B hadron, at least two B hadrons,
 exactly one C hadrons and no B hadrons, at least two C hadrons 
 and at least two C hadrons and no B hadrons or none of the
-defined categories.
+defined categories. The softmax operator
+(see [Equation @eq:softmax_function]) was used to normalise
+the category output as probabilities and construct a loss
+function based on cross entropy (see [Equation @eq:general_ce]).
+As was shown in [Figure @fig:CMS_btag_comp]
+for b-tagging performance, the DeepCSV tagger is considerably better
+than CSVv2 for the b-jet efficiency/misidentification range - e.g.
+about 25\% more efficient at light jet and gluon mistag rate of $10^{-3}$.
+In fact, DeepCSV outperforms the CMVAv2 super-combined tagger,
+which uses additional leptonic information.
+While not shown in this document, the performance for c-tagging was
+found also comparable with dedicated
+c-taggers [@Sirunyan:2017ezt].
+
+The very favourable results obtained for DeepCSV motivated the use of
+newer machine learning technologies, such as convolutional and
+recurrent layers, which were readily available in open-source
+software libraries [@chollet2015keras; @tensorflow2015-whitepaper]
+and advances in hardware (i.e. more powerful GPUs
+for training). The large amount of jets available in
+simulated data, e.g. in 2016 about $10^9$ $\textrm{t}\bar{\textrm{t}}$
+events were simulated for CMS (each with two b-quarks and probably several
+light quarks), conceptually justifies the use of more complex machine learning
+models because over-fitting is unlikely. Thus, a new multi-class
+jet tagger referred to as DeepJet (yet formely know as DeepFlavour)
+was developed, whose
+architecture is depicted in [Figure @fig:DeepJet_schematic], that can be
+characterised by a more
+involved input structure and both convolutional and recurrent layers.
 
 ![DeepJet schematic. Figure adapted from [@CMS-DP-2018-058].
 ](gfx/104_chapter_4/DeepJet-schematic.pdf){
 #fig:DeepJet_schematic width=90%}
+
 
 
 ![DeepJet performance. Figure adapted from [@CMS-DP-2018-058].
