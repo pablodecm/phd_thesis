@@ -399,7 +399,7 @@ provided a more extensive review [@friedman2001elements;@Goodfellow-et-al-2016;@
 
 ### Boosted Decision Trees {#sec:boosted_decision_trees}
 
-### Artificial Neural Networks
+### Artificial Neural Networks {#sec:ann}
 
 ## Applications in High Energy Physics {#sec:ml_hep}
 
@@ -725,5 +725,24 @@ containing jets, such as the search for Higgs boson pair production
 described in [Section @sec:higgs_pair].
 
 
-#### Deep Learning for Jet Tagging
+#### Deep Learning for Jet Tagging {#sec:deepjet}
+
+The concept of jet tagging, introduced in [Section @sec:jet_btag], is
+based on augmenting the information of reconstructed jets based on
+their properties to provide additional details about latent variables
+associated to the physics object which were not provided by the standard
+reconstruction procedure. Heavy flavour tagging, and in particular b-tagging,
+is extremely useful to distinguish and select events containing
+final states from relevant physical interactions. The efficiency of
+b-tagging algorithms in CMS has been gradually improving for each successive
+data taking period since the first collisions in 2010. The advance in b-tagging
+performance, which was already exemplified by [Figure @fig:CMS_btag_comp],
+is mainly
+due the combined effect of using additional or more accurate
+jet associated information (e.g. secondary vertex reconstruction or lepton
+information) and better statistical learning techniques.
+
+
+
+
 
