@@ -760,6 +760,29 @@ binary classifier that uses other simpler b-tagger outputs as input. Similar
 algorithms based on binary classification have been also developed for
 charm quark tagging and double b-quark tagging for large radius jets.
 
+The first attempt to use some of the recent advances in neural networks
+(see [Section @sec:ann]) for jet tagging within CMS was commissioned using
+2016 data, and it is referred to as DeepCSV tagger. The purpose for
+the development for this tagger was to quantify the performance gain
+due to the use of deep neural networks for jet tagging in CMS, which
+was demonstrated effective using a simplified detector simulation
+framework [@Guest:2016iqz]. Thus, a classifier
+based on a 5-layer neural network, each layer with 100 nodes using ReLu
+activation functions,
+was trained based on the information considered for the CSVv2
+tagger. A vector of variables from up to six
+charged tracks, one secondary vertex and 12 global variables was
+considered as an input, amounting to 66 variables in total. Another
+change with respect to previous taggers is that flavour tagging
+is posed as a multi-class classification problem, which is
+a principled and simple for tacking the various flavour tagging
+problems simultaneously. Five exclusive categories were defined
+based different on the generator level hadron information: the
+jet contains exactly one B hadron, at least two B hadrons,
+exactly one C hadrons and no B hadrons, at least two C hadrons 
+and at least two C hadrons and no B hadrons or none of the
+defined categories.
+
 ![DeepJet schematic. Figure adapted from [@CMS-DP-2018-058].
 ](gfx/104_chapter_4/DeepJet-schematic.pdf){
 #fig:DeepJet_schematic width=90%}
