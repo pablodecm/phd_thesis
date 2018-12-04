@@ -740,9 +740,32 @@ performance, which was already exemplified by [Figure @fig:CMS_btag_comp],
 is mainly
 due the combined effect of using additional or more accurate
 jet associated information (e.g. secondary vertex reconstruction or lepton
-information) and better statistical learning techniques.
+information) and better statistical techniques.
+
+Jet tagging can generally
+be posed as a supervised machine learning classification problem.
+Let us take for example the case of b-tagging, i.e. distinguishing jets
+originating from b-quarks from those originating from lighter quarks
+or gluon, which can be framed as binary classification problem: predicting
+wether a jet is coming from a b-quark or not
+given a set of inputs associated to each jet. The truth label is available
+for simulated samples, that can be used to train the classifier. The CSVv2
+b-tagging algorithm (and older variants) mentioned in
+[Section @sec:jet_btag], is based on the output of
+supervised classifiers trained from simulation, the combination of
+three shallow neural network combination depending on vertex information
+for CSVv2. The CMVAv2 tagger, which is used in the CMS analysis included
+in [Section @sec:higgs_pair], is instead based on a boosted decision tree
+binary classifier that uses other simpler b-tagger outputs as input. Similar
+algorithms based on binary classification have been also developed for
+charm quark tagging and double b-quark tagging for large radius jets.
+
+![DeepJet schematic. Figure adapted from [@CMS-DP-2018-058].
+](gfx/104_chapter_4/DeepJet-schematic.pdf){
+#fig:DeepJet_schematic width=90%}
 
 
-
-
+![DeepJet performance. Figure adapted from [@CMS-DP-2018-058].
+](gfx/104_chapter_4/DeepJet_SF_30GeV.pdf){
+#fig:DeepJet_b_performance width=90%}
 
