@@ -870,7 +870,12 @@ a single model for all the flavour tagging variations. The expected
 relative performance boost, especially when compared non deep learning
 based taggers (CSVv2 or CMVA) can increase significantly the discovery
 potential for analysis based final states with several b-tagged jets,
-such as the one presented in [Chapter @sec:higgs_pair].
+such as the one presented in [Chapter @sec:higgs_pair]. In addition similar
+model architectures have been since successfully applied to large radius
+jet tagging [@CMS-DP-2018-046]
+and could be also extended to other jet related tasks, as providing
+a better jet momenta estimation by means
+of a regression output.
 
 ![Misidentification probability (in log scale) for jets originating
 from c quarks (dashed lines) or light quarks and gluons (solid lines)
@@ -896,3 +901,24 @@ which has rather stringent CPU and memory requirements per event. In addition,
 the [lwtnn]{.smallcaps} open-source library [@daniel_hay_guest_2018_1482645],
 a low-overhead C++ based interface used for the integration of DeepCSV
 did not support multi-input models with recurrent layers at the time.
+
+An alternative path to integrate DeepJet into production was required. Given
+than [TensorFlow]{.smallcaps} backend is based on the C++ programming
+language and a basic interface to evaluating training was also provided,
+the direct evaluation of machine learning model using its
+native [TensorFlow]{.smallcaps} backend was chosen as the best alternative.
+In addition, this way the integration effort and basic interface
+developed could be re-used in future deep learning use cases in the CMS
+experiment (e.g. large radius jet tagging), leading to
+the development of the CMSSSW-DNN module [@marcel_cmssw]. The integration process
+was made more challenging due to the difficulty recovering the same
+features at reconstruction level, the strict memory requirements and
+multi-threading conflicts. After resolving all the mentioned issues
+[@pablodecm_deepjet], the
+output of the DeepJet model at production was verified to match that of the
+training framework [@markus_deepjet] to numerical precision. The successful
+integration, that is currently in use, facilitated the measurement of DeepJet
+b-tagging performance on data for the main discriminator working points,
+as shown in [Figure @fig:DeepJet_b_performance].
+
+
