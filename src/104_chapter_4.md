@@ -854,9 +854,45 @@ b-tagging, c-tagging and double b-tagging. The output probabilities are normalis
 by using the softmax operator (see [Equation @eq:softmax_function]).
 The training loss function was constructed based on cross entropy
 (see [Equation @eq:general_ce]). Additional details regarding
-the training procedure and performance are available at [@stoye2017deepjet].
+the architecture and training procedure are available
+at [@stoye2017deepjet].
 
-![DeepJet performance. Figure adapted from [@CMS-DP-2018-058].
+The b-tagging performance of DeepJet, by means of the misidentification versus
+efficiency curve compared with the DeepCSV tagger, is shown in
+[Figure @fig:DeepJet_b_performance]. The additional model complexity and
+input variables lead to a clear performance improvement, about a 20\%
+additional efficiency at a mistag rate of $10^{-3}$ for light quark
+and gluon originated jets. Larger relative enhancements with respected
+to DeepCSV are seen for b-jet versus c-jet identification. The performance
+for c-tagging and guark-gluon discrimination is slightly improved
+in comparison with dedicated approaches, with the advantage of using
+a single model for all the flavour tagging variations. The expected
+relative performance boost, especially when compared non deep learning
+based taggers (CSVv2 or CMVA) can increase significantly the discovery
+potential for analysis based final states with several b-tagged jets,
+such as the one presented in [Chapter @sec:higgs_pair].
+
+![Misidentification probability (in log scale) for jets originating
+from c quarks (dashed lines) or light quarks and gluons (solid lines)
+as a function of the b-tagging efficiency for both DeepCSV
+and DeepJet taggers. The corrected mistag/efficiency and its uncertainty
+for the loose, medium and tight working points are also included.
+Figure adapted from [@CMS-DP-2018-058].
 ](gfx/104_chapter_4/DeepJet_SF_30GeV.pdf){
 #fig:DeepJet_b_performance width=90%}
 
+While both advances in model architecture and the addition of input features allow
+notable jet tagging performance gains, they can complicate the integration
+of these tools within the CMS experiment software framework [@innocente2001cms],
+which is
+often referred as [CMSSW]{.smallcaps}. Training and performance evaluation
+of both DeepCSV and DeepJet was carried out using the
+[Keras]{.smallcaps} [@chollet2015keras] and [TensorFlow]{.smallcaps}
+[@tensorflow2015-whitepaper] open-source libraries. In order to
+integrate jet tagging models in the standard CMS reconstruction sequence,
+which is run both for acquired and simulated data in commodity hardware in
+a distributed manner around the world in the LHC computing grid [@bird2005lhc],
+which has rather stringent CPU and memory requirements per event. In addition,
+the [lwtnn]{.smallcaps} open-source library [@daniel_hay_guest_2018_1482645],
+a low-overhead C++ based interface used for the integration of DeepCSV
+did not support multi-input models with recurrent layers at the time.
