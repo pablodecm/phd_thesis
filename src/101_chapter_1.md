@@ -204,8 +204,36 @@ formulation of quantum mechanics.
 
 To shed some light on how a field like $\psi$ can represent actual fermions
 in the universe, such as electrons or positrons, it can be quantised
-by considering a plane wave expansion and defining creation and
-annihilation operators.
+by considering a plane wave expansion and defining annihilation operators
+$a_{\boldsymbol{p}}^s$ and $b_{\boldsymbol{p}}^s$, as well as 
+creation $a_{\boldsymbol{p}}^{s\dagger}$ 
+and $b_{\boldsymbol{p}}^{s\dagger}$ operators. The field and its adjoint,
+which can also be thought directly as operators in this context, can
+then be expressed as:
+
+$$
+\psi(x) = \int \frac{d^3p}{(2\pi)^3} \frac{1}{\sqrt{2 E_{\boldsymbol{p}}}}
+\sum_s \left ( a_{\boldsymbol{p}}^s u^s(p) e^{-ipx} +
+b_{\boldsymbol{p}}^{s\dagger} u^s(p) e^{ipx} \right )
+$$ {#eq:field_quant}
+
+$$
+\bar{\psi}(x) = \int \frac{d^3p}{(2\pi)^3} \frac{1}{\sqrt{2 E_{\boldsymbol{p}}}}
+\sum_s \left ( b_{\boldsymbol{p}}^s \bar{v}^s(p) e^{-ipx} +
+a_{\boldsymbol{p}}^{s\dagger} \bar{u}^s(p) e^{ipx} \right )
+$$ {#eq:field_adjoint_quant}
+
+where $u^s (p)$ and $v^s(p)$ and its adjoints are the free particle solutions of the
+Dirac equation, $s$ is their spin and $E_{\boldsymbol{p}}$ their energy.
+The operators in the previous quantisations
+can be used to define arbitrary many-particle states. The vacuum
+state $\ket{0}$ can be defined as the state for which
+$a_{\boldsymbol{p}}^s\ket{0}=b_{\boldsymbol{p}}^s\ket{0}=0$. A single
+free fermion state of momenta $\boldsymbol{p}$ and spin $s$
+can be obtained by applying the creation operators on the vacuum state
+$\ket{\boldsymbol{p}s} = \sqrt{2E_{\boldsymbol{p}}}a_{\boldsymbol{p}}^{s\dagger}\ket{0}$ -
+or alternatively an anti-fermion if the $b_{\boldsymbol{p}}^{s\dagger}$ is used
+instead.
 
 
 ### Quantum Chromodynamics {#sec:qcd_detail}

@@ -15,7 +15,8 @@ pdf: thesis.tex
 
 	
 thesis.tex: src/*.md before
-	$(PANDOC) "$(INPUTDIR)"/0[0-1]0_*.md \
+	$(PANDOC) "$(INPUTDIR)"/latex_macros.md \
+	"$(INPUTDIR)"/0[0-1]0_*.md \
 	"$(INPUTDIR)"/10*.md -s \
 	--template "$(TEMPLATE)" \
 	-o thesis.tex --filter=pandoc-crossref \
