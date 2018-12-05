@@ -801,23 +801,60 @@ The very favourable results obtained for DeepCSV motivated the use of
 newer machine learning technologies, such as convolutional and
 recurrent layers, which were readily available in open-source
 software libraries [@chollet2015keras; @tensorflow2015-whitepaper]
-and advances in hardware (i.e. more powerful GPUs
+as well as advances in hardware (i.e. more powerful GPUs
 for training). The large amount of jets available in
 simulated data, e.g. in 2016 about $10^9$ $\textrm{t}\bar{\textrm{t}}$
 events were simulated for CMS (each with two b-quarks and probably several
 light quarks), conceptually justifies the use of more complex machine learning
 models because over-fitting is unlikely. Thus, a new multi-class
-jet tagger referred to as DeepJet (yet formely know as DeepFlavour)
+jet tagger referred to as DeepJet (formerly know as DeepFlavour)
 was developed, whose
 architecture is depicted in [Figure @fig:DeepJet_schematic], that can be
 characterised by a more
 involved input structure and both convolutional and recurrent layers.
 
-![DeepJet schematic. Figure adapted from [@CMS-DP-2018-058].
+![Scheme of DeepJet tagger architecture. Four different sets of inputs are
+considered: a sequence of charged candidates, a sequence of neutral
+candidates, a sequence of secondary vertices and a 15 global variables.
+Sequences go first through a series of 1x1 convolution filter that learn a more
+compact feature representation and then through a recurrent layer that summarises
+the information of the sequence to in a fixed size vector. All the inputs
+are then feed to a 7-layer dense network. A total of six exclusive output
+categories are
+considered depending on the generator-level
+components: b, bb, leptonic b, c, light or gluon.
+Figure adapted from [@CMS-DP-2018-058].
 ](gfx/104_chapter_4/DeepJet-schematic.pdf){
 #fig:DeepJet_schematic width=90%}
 
+Instead of a fixed input vector, optionally padded with zeroes for the elements
+that did not exist (e.g. not reconstructed secondary vertex has been
+reconstructed), a complex input object is considered for DeepJet.
+Variable-size sequences are directly taken as input
+for charged candidates, neutral candidates and secondary vertices; each
+element in the sequence characterised by 16, 8 and 12 features respectively.
+Each of the three input sequences go through a 3-layers of 1x1 convolutions
+in order to obtain a more compact element representation, 8-dimensional for
+charged candidates and secondary vertices and 4-dimensional for neutral
+candidates. The output of the convolutional layers is connected with a recurrent
+layer, which transforms a variable-size input to fixed-size embedding. The
+fixed-size outputs after the recurrent layer, as well as a set of 15 global jet
+variables, are feed into a 6-layer dense network with 100 (200 for the
+first layer) cells with ReLu activation functions per layer.
 
+A total of six mutually exclusive output categories are considered
+based on the generator-level
+particle content associated to the jet: exactly one B hadron
+that does not decay to a lepton,
+at least two B hadrons, one hadron B decaying to a soft lepton,
+at least one C hadron and no B hadrons, no heavy hadrons but was originated
+from a light quark or not heavy hadrons but was originated from a gluon.
+This tagger aims to provide gluon-quark discrimination in addition to
+b-tagging, c-tagging and double b-tagging. The output probabilities are normalised
+by using the softmax operator (see [Equation @eq:softmax_function]).
+The training loss function was constructed based on cross entropy
+(see [Equation @eq:general_ce]). Additional details regarding
+the training procedure and performance are available at [@stoye2017deepjet].
 
 ![DeepJet performance. Figure adapted from [@CMS-DP-2018-058].
 ](gfx/104_chapter_4/DeepJet_SF_30GeV.pdf){
