@@ -282,9 +282,42 @@ Wicks theorem, which can become rather tedious for high orders. The
 formalism of Feynman diagrams can be used to simplify the computation
 of observables at a given order in the perturbative expansion.
 
-
-
-
+Based on the previous perturbative series expansion, 
+the transition amplitude $\bra{i} \mathcal{S} \ket{f}$
+can be easily linked with scattering observables when denoted as:
+$$
+\bra{i} \mathcal{S} \ket{f} = \bra{i} \boldsymbol{1} \ket{f}
++ i \mathcal{M} (2\pi)^4 \delta^4 \left ( \sum p_i - \sum p_f \right )
+$$ {#eq:matrix_element}
+where the fist term corresponds to not interaction occurring
+and the second includes the matrix element $\mathcal{M}$ 
+including all orders in the perturbative orders and a factor
+making explicit the conservation of momentum between the initial
+and final state particles. The matrix element $\mathcal{M}$, which
+can be computed perturbatively
+as a function of the momenta of the particles
+given final state considered, can be used to define the
+differential cross section:
+$$
+\frac{d \sigma}{d \Phi} \sim | \mathcal{M} |^2 \ \textrm{where} \ 
+d\Phi = (2\pi)^4 \delta^4 \left ( \sum p_i - \sum p_f \right )
+\prod_f \frac{1}{2 E_f} \frac{d^3 \boldsymbol{p}_f}{(2\pi)^3}
+$$ {#eq:diff_cross_section}
+where the proportionality factor is a function of the initial state
+particles momenta and $d\Phi$ is the full phase space
+differential element for
+which can be generally expressed as a product of the
+final state particle momenta differential elements. Total scattering
+rates can be obtained by summing over possible initial and final states
+and integrating over final states. Both differential and total cross
+sections can be truncated at a given perturbative order. The lowest
+expansion order is referred as leading order (LO), yet considering
+additional expansion can greatly increase the prediction accuracy
+so one (NLO) or two (NNLO) orders are often considered, higher orders
+often being too computationally challenging. A truncation at and additional
+order $n$, relative to the lowest interaction order, will provided corrections
+proportional to $\alpha=g^2/(4\pi)$, where the $g$ is the coupling constant
+characteristic of the interaction.
 
 
 ### Quantum Chromodynamics {#sec:qcd_detail}
