@@ -238,16 +238,53 @@ can analogously be defined by the successive application of creation operators
 over momenta space.
 
 In particle colliders, we are instead interested in interacting theories
-rather than free theories, given the we aim to compute cross sections
-and decay rates. Interacting theories can also be characterised
-by their Hamiltonian $H = H_\textrm{free}+ H_\textrm{int}$, 
-which can be expressed as an integral of a function the
-Lagrangian density $\mathcal{L}$, and where $H_\textrm{free}$ is the part
+rather than free theories, given the we aim to compute total
+and differential cross sections. Interacting theories can also be characterised
+by their Hamiltonian density
+$\mathcal{H} = \mathcal{H}_\textrm{free}+ \mathcal{H}_\textrm{int}$, 
+which can be expressed as a function the
+Lagrangian density $\mathcal{H}= \pi^a \dot{\psi}_a - \mathcal{L}$,
+where $\dot{\psi}_a$ is the time derivative of the field and 
+$\pi^a$ is the conjugate momentum. The Hamiltonian density can
+divided in $\mathcal{H}_\textrm{free}$, that is the part
 corresponding to
-the free theory while $H_\textrm{int}$ are the additional terms due to
-interactions. In interacting theries, time-dependence rapidly becomes
-more involved and generally the ground state $\ket{\Omega}$ can be different
+the free theory and $\mathcal{H}_\textrm{int}$ that are the additional terms
+due to interactions. In interacting theories, time-dependence becomes more
+important and depends only on the $\mathcal{H}_\textrm{int}$ component.
+Additionally, the ground state $\ket{\Omega}$ can be different
 from the free theory vacuum state $\ket{0}$.
+
+Let us denote by $\ket{i}=\ket{\psi(t \rightarrow - \infty)}$
+and $\ket{f}=\ket{\psi(t \rightarrow + \infty)}$ some arbitrary
+initial and final multi-particle states respectively, temporarily far before
+and after the actual interaction being studied happened (i.e. around $t=0$).
+The observables of interest, which are discussed in [Section @sec:pheno],
+are a function of the transition amplitude $\bra{i} \mathcal{S} \ket{f}$
+over all possible initial and final states. The transition probability
+$|\bra{i} \mathcal{S} \ket{f}|^2$ is then a function of the $\mathcal{S}$
+which describes the time-evolution from the initial states the the final
+state. The $\mathcal{S}$ matrix can be expressed as a perturbative
+series using the Dyson expansion:
+$$
+\begin{aligned}
+\mathcal{S} &=
+T \left [ \exp \left ( -i  \int_{-\infty}^{\infty} d^4 x \mathcal{H}_\textrm{int} (x) \right ) \right ] \\
+&= \sum_{n=0}^{\infty} \frac{(-i)^n}{n!} \int_{-\infty}^{\infty} d^4 x_1 ... 
+\int_{-\infty}^{\infty} d^4 x_n T \left [ \mathcal{H}_\textrm{int} (x_1) ...
+\mathcal{H}_\textrm{int} (x_n) \right ]
+\end{aligned}
+$$ {#eq:s_matrix}
+where T is an operator ensuring that the Hamiltonian density factors
+$\mathcal{H}_\textrm{int} (x_i)$ are
+order in time. Each time-ordered term in the series can be written as a
+sum of normal (i.e. not time ordered) products of permutations using
+Wicks theorem, which can become rather tedious for high orders. The
+formalism of Feynman diagrams can be used to simplify the computation
+of observables at a given order in the perturbative expansion.
+
+
+
+
 
 
 ### Quantum Chromodynamics {#sec:qcd_detail}
