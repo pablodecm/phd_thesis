@@ -231,9 +231,23 @@ state $\ket{0}$ can be defined as the state for which
 $a_{\boldsymbol{p}}^s\ket{0}=b_{\boldsymbol{p}}^s\ket{0}=0$. A single
 free fermion state of momenta $\boldsymbol{p}$ and spin $s$
 can be obtained by applying the creation operators on the vacuum state
-$\ket{\boldsymbol{p}s} = \sqrt{2E_{\boldsymbol{p}}}a_{\boldsymbol{p}}^{s\dagger}\ket{0}$ -
+$\ket{\boldsymbol{p}, s} = \sqrt{2E_{\boldsymbol{p}}}a_{\boldsymbol{p}}^{s\dagger}\ket{0}$ -
 or alternatively an anti-fermion if the $b_{\boldsymbol{p}}^{s\dagger}$ is used
-instead.
+instead. Multi-particle free states in momenta representation
+can analogously be defined by the successive application of creation operators
+over momenta space.
+
+In particle colliders, we are instead interested in interacting theories
+rather than free theories, given the we aim to compute cross sections
+and decay rates. Interacting theories can also be characterised
+by their Hamiltonian $H = H_\textrm{free}+ H_\textrm{int}$, 
+which can be expressed as an integral of a function the
+Lagrangian density $\mathcal{L}$, and where $H_\textrm{free}$ is the part
+corresponding to
+the free theory while $H_\textrm{int}$ are the additional terms due to
+interactions. In interacting theries, time-dependence rapidly becomes
+more involved and generally the ground state $\ket{\Omega}$ can be different
+from the free theory vacuum state $\ket{0}$.
 
 
 ### Quantum Chromodynamics {#sec:qcd_detail}
