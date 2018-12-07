@@ -322,6 +322,43 @@ characteristic of the interaction.
 
 ### Quantum Chromodynamics {#sec:qcd_detail}
 
+In a hadron colliders such as the LHC, strong interactions
+between quark and gluons are dominant, which can be modelled
+using quantum chromodynamics (QCD). The theory of QCD can
+be linked to a $SU(3)$ symmetry group and is described
+by the following gauge invariant
+Lagrangian density:
+
+$$
+\mathcal{L}_\mathrm{QCD} = \bar{\psi}
+\left( \gamma^\mu D - m_f \right) \psi -
+\frac{1}{4}G^a_{\mu \nu} G^{\mu \nu}_a \quad
+\psi = 
+\begin{bmatrix}
+\psi_r \\ \psi_g \\ \psi_b
+\end{bmatrix}
+$$ {#eq:qcd_lagrangian}
+
+where $\psi$ is a spinor quark field for a given
+flavour $f \in \{ u, d, s, c, b, t\}$ and quark mass $m_f$,
+and each vector component represents a colour degree
+of freedom. Assuming that the Gell-Mann matrices $\lambda^a$
+are used to define a basis for the gluon field
+$A_\mu = 1/2 \lambda^a \sum A_\mu^a$, the covariant
+derivative can be defined as
+$D^\mu= \partial_\mu  - i g_s \, A_\mu$, where
+$g_s$ is the strong interaction coupling.
+In turn, the gluon field strength
+tensor $G^a_{\mu \nu}$ is also
+related with the gluon field components:
+
+$$
+G^a_{\mu \nu} = \partial_\mu A_\nu^a - \partial_\nu A_\mu^a
++ g_s f^{abc}  A_\mu^b A_\nu^c
+$$ {#eq:qcd_gluon_tensor}
+where $f^{abc}$ are the structure constants of the
+$SU(3)$ gauge group.
+
 
 ### Electroweak Interactions  {#sec:ew_detail}
 
