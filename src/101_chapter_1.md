@@ -334,9 +334,9 @@ $$
 \left( \gamma^\mu D - m_f \right) \psi -
 \frac{1}{4}G^a_{\mu \nu} G^{\mu \nu}_a \quad
 \psi = 
-\begin{bmatrix}
+\begin{matrix}
 \psi_r \\ \psi_g \\ \psi_b
-\end{bmatrix}
+\end{matrix}
 $$ {#eq:qcd_lagrangian}
 
 where $\psi$ is a spinor quark field for a given
@@ -356,8 +356,13 @@ $$
 G^a_{\mu \nu} = \partial_\mu A_\nu^a - \partial_\nu A_\mu^a
 + g_s f^{abc}  A_\mu^b A_\nu^c
 $$ {#eq:qcd_gluon_tensor}
-where $f^{abc}$ are the structure constants of the
-$SU(3)$ gauge group.
+where $f^{abc}$ are the structure constant of the
+$SU(3)$ gauge group. The last term accounts for the
+self-interaction of the gluon, which are the massless
+and electrically neutral force mediators. There are
+two properties of QCD that play an important roles
+from from a phenomenological standpoint:
+*asymptotic freedom* and *confinement*.
 
 
 ### Electroweak Interactions  {#sec:ew_detail}
