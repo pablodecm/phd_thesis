@@ -334,9 +334,9 @@ $$
 \left( \gamma^\mu D - m_f \right) \psi -
 \frac{1}{4}G^a_{\mu \nu} G^{\mu \nu}_a \quad
 \psi = 
-\begin{matrix}
+\begin{bmatrix}
 \psi_r \\ \psi_g \\ \psi_b
-\end{matrix}
+\end{bmatrix}
 $$ {#eq:qcd_lagrangian}
 
 where $\psi$ is a spinor quark field for a given
@@ -362,7 +362,26 @@ self-interaction of the gluon, which are the massless
 and electrically neutral force mediators. There are
 two properties of QCD that play an important roles
 from from a phenomenological standpoint:
-*asymptotic freedom* and *confinement*.
+*confinement* and *asymptotic freedom*.
+
+The property of confinement has been postulated to explain why isolated
+quarks or gluons are not found in nature. Quarks have only been found
+as part of hadrons, that are colour-neutral composite particles. Even
+though confinement has not been understood from first principles, because
+because the observables of bound states in QCD at low-energies cannot
+be computed in a perturbative manner, there exist extensive evidence
+both from lattice QCD calculations and experiments. In a bound state
+between quarks, the effective potential includes a term that increases
+proportional to their distance, so when the quarks are separated by
+an external energetic interaction, the additional potential energy generates
+an additional quark-antiquark pair and forming bound states. Similar
+phenomena occur for isolated gluons, which generally is referred as
+hadronization due to colour confinement. In particle colliders, successive
+hadronization and radiation processes lead to parton showers which
+are discussed in [Section @sec:parton_showers].
+
+
+
 
 
 ### Electroweak Interactions  {#sec:ew_detail}
@@ -832,7 +851,7 @@ with the actual observable quantities that can be detected in an
 experiment, it is necessary to account for the radiation of
 soft gluons or quarks form the initial or final state partons in
 the collision
-as well as the conversion of formation of hadrons from any
+as well as the formation of hadrons from any
 free parton due to colour confinement (see Section [-@sec:qcd_detail]).
 Additional processes that affect the collision outcome include
 secondary interactions between the protons, as well as the
