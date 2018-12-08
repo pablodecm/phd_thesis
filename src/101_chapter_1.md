@@ -340,7 +340,9 @@ $$
 $$ {#eq:qcd_lagrangian}
 
 where $\psi$ is a spinor quark field for a given
-flavour $f \in \{ u, d, s, c, b, t\}$ and quark mass $m_f$,
+flavour
+$f \in \{ \textrm{u}, \textrm{d}, \textrm{s},
+\textrm{c}, \textrm{b}, \textrm{t}\}$ and quark mass $m_f$,
 and each vector component represents a colour degree
 of freedom. Assuming that the Gell-Mann matrices $\lambda^a$
 are used to define a basis for the gluon field
@@ -380,9 +382,47 @@ hadronization due to colour confinement. In particle colliders, successive
 hadronization and radiation processes lead to parton showers which
 are discussed in [Section @sec:parton_showers].
 
+Hadrons are then commonly in bound states which can be mesons, formed
+by a quark-antiquark pair $\textrm{q}\bar{\textrm{b}}$, or baryons
+that are composed of three quarks $\textrm{q}\textrm{q}\textrm{q}$. Charged and
+neutral pions $\pi^{+}$ ($\textrm{u}\bar{\textrm{d}}$) and
+$\pi^{0}$ ($(\textrm{u}\bar{\textrm{u}}-\textrm{d}\bar{\textrm{d}})/\sqrt{2}$),
+kaons $\textrm{K}^{+}$ ($\textrm{u}\bar{\textrm{s}}$) and
+$\textrm{K}^{0}$ ($\textrm{d}\bar{\textrm{s}}$) and the $\textrm{J}/\Psi$ meson
+($\textrm{c}\bar{\textrm{c}}$) are among the most common mesons produced
+at particle colliders. Baryons instead include the well-known proton
+($\textrm{u}\textrm{u}\textrm{d}$) and neutron
+($\textrm{u}\textrm{d}\textrm{d}$) that together with electrons are the
+constituents of most of the known matter in the universe. Many more
+short-lived baryons exist [@PhysRevD.98.030001], including the
+recently discovered exotic bound states referred as tretraquarks
+[@PhysRevLett.112.222002]
+and pentaquarks [@Aaij:2015tga]. A details description of the compositeness
+of proton is an essential element for computing LHC observables,
+as reviewed in [Section @sec:pdfs].
 
-
-
+Asymptotic freedom is instead linked with the strength reduction of the
+strong coupling constant when higher energy scales are considered. Let us
+consider a renormalisation energy scale $\mu_R^2$, which has to be often defined
+in order to compute physical observables which otherwise would be divergent
+due higher order perturbative corrections which cannot be easily calculated.
+This effect can be also understood as a coupling that varies with
+the energy scale, which referred to a running couplings. The strong force
+coupling $\alpha_s=g_s^2/(4\pi)$ can thus be approximated as a function of
+the renormalisation energy scale $\mu_R^2$ as follows:
+$$
+\alpha_s(\mu_R^2) = \frac{\alpha_s(\mu_0^2)}{1+\alpha_s(\mu_0^2)
+\frac{33-2n_f}{12\pi} \ln \left ( \frac{\mu_R^2}{\mu_0^2} \right)}
+$$ {#eq:running_coupling}
+where $\alpha_s(\mu_0^2)$ is the measured coupling at a given energy
+and $n_f$ is total number of quark flavours which are assumed to be
+massless in this approximation. The strong interaction thus becomes
+weaker at higher energies (or short distances), thus allowing
+the perturbative computation of some observable related with high-energy
+interactions, as discussed in [Section @sec:pheno].
+It is worth noting that under the mentioned approximation there
+is an energy scale around $200\ \textrm{MeV}$ that would cause the coupling
+to diverge and become infinite.
 
 ### Electroweak Interactions  {#sec:ew_detail}
 
@@ -693,13 +733,13 @@ via random sampling. In fact, we will be dealing
 with differential cross sections instead of total process cross section
 in this section for generality.
 
-### Parton Distribution Functions
+### Parton Distribution Functions {#sec:pdfs}
 
 A complication that has not been addressed yet is that protons are
 composite particles, formed by two up-type quarks
 and one down-type quarks bound together via the strong force.
 The dynamics of proton-proton scattering are therefore dictated by quantum
-chromodynamics (QCD), which cannot be addressed using perturbation
+chromodynamics (see [@sec:qcd_detail]), which cannot be addressed using perturbation
 theory for low
 energies, limiting the first principles computation of relevant
 observables for the most common interactions. Luckily for us,

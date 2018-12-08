@@ -20,11 +20,11 @@ thesis.tex: src/*.md before
 	"$(INPUTDIR)"/10*.md -s \
 	--template "$(TEMPLATE)" \
 	-o thesis.tex --filter=pandoc-crossref \
-	--filter=pandoc-citeproc --biblatex \
+	--biblatex \
 	--top-level-division=chapter \
 	--variable=draft:true \
 	--variable=commit:$(LAST_COMMIT) \
-	--include-before-body=before.tex
+	--include-before-body=before.tex --verbose
 
 before: src/00[1-9]_*.md
 	$(PANDOC) "$(INPUTDIR)"/00[1-9]_*.md \
