@@ -426,6 +426,32 @@ to diverge and become infinite.
 
 ### Electroweak Interactions  {#sec:ew_detail}
 
+The remaining two fundamental interactions between elementary particles
+are the electromagnetic and the weak force. The description of
+the electromagnetic interaction in terms of quantum fields and gauge
+symmetries, leading to the development of quantum electrodynamics (QED),
+prompted a quest for an analogous theory for the weak force. The weak force,
+known to be responsible for the beta decay at the time,
+could effectively be modelled
+using Fermi theory using four-fermion interactions [@fermi1934attempt]
+but was not renormalisable and lacked the predictive capabilities
+and elegance of QED. A large theoretical effort lead to an alternative
+description based on a $SU(2) \otimes U(1)$ symmetry, which unified
+electromagnetic and weak interactions
+[@glashow1961partial; @SALAM1964168], and where the
+weak interaction was mediated by means of charged $W^{\pm}$ and neutral $Z$
+massive vector bosons. Nevertheless, the theory lacked an explanation for
+the mass of the weak mediators, until the so-called
+Brout-Englert-Higgs [@englert1964broken; @higgs1964broken; @guralnik1964global]
+mechanism for spontaneous symmetry breaking (SSB) was conceived. Higgs
+also noted explicitly that the mechanism would effectively create an additional
+scalar field, associated with a new scalar boson, whose existence could
+experimentally testable. The SSB mechanism was then combined with
+$SU(2) \otimes U(1)$ unified theory [@weinberg1967model]
+to give rise to what is now known as *electroweak theory*, which was then
+proved to be renormalisable [@THOOFT1972189].
+
+
 
 ### Symmetry Breaking and the Higgs Boson {#sec:ewsb_higgs}
 
