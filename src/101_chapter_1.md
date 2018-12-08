@@ -464,15 +464,81 @@ chiral components as follows:
 $$
 \psi_\textrm{L} = \textrm{P}_\textrm{L} \psi= \frac{1}{2} (1 - \gamma_5) \psi \quad
 \psi_\textrm{R} = \textrm{P}_\textrm{R} \psi = \frac{1}{2} (1 + \gamma_5) \psi
-$$
+$$ {#eq:chiral_proj}
 where $\textrm{P}_\textrm{L}$ and $\textrm{P}_\textrm{R}$ are the chiral
 projection operators and $\gamma_5=i \gamma_0\gamma_1\gamma_2\gamma_3$ is
 the product of the gamma or Dirac matrices. For massless particles,
 chirality is equal the helicity
-$H=(\boldsymbol{p} \cdot \boldsymbol{p}) /  | \boldsymbol{s} |$
+$H=(\boldsymbol{p} \cdot \boldsymbol{s}) /  | \boldsymbol{p} |$
 which is the sign of the scalar
 product of momenta and spin. For massive particles, chirality is still defined
 but is not identical to helicity which cannot be invariantly defined.
+
+Within the electroweak theory, fermion fields are broken in into
+their left-handed components, which can be expressed as doublets
+that would transform under
+$SU(2)$, and can be denoted as:
+$$
+L_q = \left \{
+\begin{pmatrix} u  \\ d \end{pmatrix}_L ,
+\begin{pmatrix} c \\  s \end{pmatrix}_L ,
+\begin{pmatrix} t  \\ b \end{pmatrix}_L
+ \right\} \quad 
+ L_l = \left \{
+ \begin{pmatrix} \nu_e \\ e\end{pmatrix}_L ,
+ \begin{pmatrix} \nu_\mu \\ \mu \end{pmatrix}_L ,
+ \begin{pmatrix} \mu_\tau \\ \tau \end{pmatrix}_L
+ \right\}  
+$$ {#eq:ew_left}
+and their right handed components, that instead can be expressed as
+singlets only transforming under $U(1)$:
+$$
+R_u = \left \{ u_R, c_R, t_R \right \} \quad
+R_d = \left \{ d_R, s_R, b_R \right \} \quad
+R_l = \left \{ e_R, \mu_R, \tau_R \right \}
+$$ {#eq:ew_right}
+where the right-handed neutrino components are omitted in the electroweak
+theory (and the SM), given they are electrically neutral and would not
+interact weakly when right-handed.
+
+The electroweak interactions then can be made explicit by introducing
+additional boson fields $W= \{ W^1 W^2 W^3 \}$ and $B$ which will
+interact with the fermions. Similarly in structure to QED (and also
+QCD as described in
+[Section @sec:qcd_detail]), the electroweak Lagrangian before
+spontaneous symmetry breaking is composed
+by interaction terms for the previous doublet and singlet fields,
+characterised by a covariant derivative, and kinematic terms for
+both boson fields:
+$$
+\begin{aligned}
+\mathcal{L_\textrm{EW}} =  &
+\sum^{\psi \in \{ L_q, L_l \}} \bar{\psi} (i \gamma_\mu D_L^\mu)\psi +
+\sum^{\psi \in \{ L_q, L_l \}} \bar{\psi} (i \gamma_\mu D_R^\mu)\psi \\
+& - \frac{1}{4}  W_{\mu\nu}W^{\mu\nu} - \frac{1}{4} B_{\mu\nu}B^{\mu\nu}
+\end{aligned}
+$$ {#eq:lagrangian_ew_before}
+where the covariant derivates for left-handed $D_L^\mu$
+and right-handed $D_R^\mu$ fermion fields are respectively defined as:
+$$
+\begin{aligned}
+& D_L^\mu  = \partial^\mu - \frac{1}{2} g_B Y B_\mu  - \frac{1}{2} g_W \sigma W_\mu \\
+&  D_L^\mu  = \partial^\mu - \frac{1}{2} g_B Y B_\mu
+\end{aligned}
+$$
+Where $\sigma = \{ \sigma^0 , \sigma^1, \sigma^2\}$ are the Pauli matrices
+and $g_B$ and $g_W$ are the coupling constants. The $W_{\mu\nu}$ and
+$B_{\mu\nu}$ field strength tensors from kinematic terms can in turn
+be obtained as:
+$$
+\begin{aligned}
+& W^i_{\mu\nu} = \partial_\mu  W^i_\nu - \partial_\mu  W^i_\mu
+- g_W  \epsilon^{ijk} W^i_\mu W^k_\nu \\
+& B_{\mu\nu} =  \partial_\mu  B_\nu - \partial_\mu  B_\mu
+\end{aligned}
+$$
+where $\epsilon^{ijk}$ is the Levi-Civita symbol for each permutation, which
+is the structure constant for $SU(2)$.
 
 
 
