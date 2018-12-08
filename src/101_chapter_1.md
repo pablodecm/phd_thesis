@@ -451,6 +451,29 @@ $SU(2) \otimes U(1)$ unified theory [@weinberg1967model]
 to give rise to what is now known as *electroweak theory*, which was then
 proved to be renormalisable [@THOOFT1972189].
 
+The different testable properties of electroweak phenomena were verified
+by experiments including the existence of weakly-interacting neutral
+charged and neutral currents [@hasert1974observation] and the discovery
+of the massive
+$W^{\pm}$ [@Arnison:1983rp; @Banner:1983jy] and $Z$
+[@Arnison:1983mk; @Bagnaia:1983zx] bosons. Experimental evidence also
+shown that weak interaction was parity violating [@Wu:1957my],
+thus in the electroweak the fermion fields are separated in their
+left-handed $\psi_\textrm{L}$ and right-handed $\psi_\textrm{R}$ 
+chiral components as follows:
+$$
+\psi_\textrm{L} = \textrm{P}_\textrm{L} \psi= \frac{1}{2} (1 - \gamma_5) \psi \quad
+\psi_\textrm{R} = \textrm{P}_\textrm{R} \psi = \frac{1}{2} (1 + \gamma_5) \psi
+$$
+where $\textrm{P}_\textrm{L}$ and $\textrm{P}_\textrm{R}$ are the chiral
+projection operators and $\gamma_5=i \gamma_0\gamma_1\gamma_2\gamma_3$ is
+the product of the gamma or Dirac matrices. For massless particles,
+chirality is equal the helicity
+$H=(\boldsymbol{p} \cdot \boldsymbol{p}) /  | \boldsymbol{s} |$
+which is the sign of the scalar
+product of momenta and spin. For massive particles, chirality is still defined
+but is not identical to helicity which cannot be invariantly defined.
+
 
 
 ### Symmetry Breaking and the Higgs Boson {#sec:ewsb_higgs}
