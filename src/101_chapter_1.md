@@ -502,7 +502,7 @@ theory (and the SM), given they are electrically neutral and would not
 interact weakly when right-handed.
 
 The electroweak interactions then can be made explicit by introducing
-additional boson fields $W= \{ W^1 W^2 W^3 \}$ and $B$ which will
+additional boson fields $W= \{ W^1, W^2, W^3 \}$ and $B$ which will
 interact with the fermions. Similarly in structure to QED (and also
 QCD as described in
 [Section @sec:qcd_detail]), the electroweak Lagrangian before
@@ -525,8 +525,8 @@ $$
 & D_L^\mu  = \partial^\mu - \frac{1}{2} g_B Y B_\mu  - \frac{1}{2} g_W \sigma W_\mu \\
 &  D_R^\mu  = \partial^\mu - \frac{1}{2} g_B Y B_\mu
 \end{aligned}
-$$ {#ew:ew_cov_der}
-Where $\sigma = \{ \sigma^0 , \sigma^1, \sigma^2\}$ are the Pauli matrices
+$$ {#eq:ew_cov_der}
+where $\sigma = \{ \sigma_1 , \sigma_2, \sigma_3\}$ are the Pauli matrices
 and $g_B$ and $g_W$ are the coupling constants. The $W_{\mu\nu}$ and
 $B_{\mu\nu}$ field strength tensors from kinematic terms can in turn
 be obtained as:
@@ -536,7 +536,7 @@ $$
 - g_W  \epsilon^{ijk} W^i_\mu W^k_\nu \\
 & B_{\mu\nu} =  \partial_\mu  B_\nu - \partial_\mu  B_\mu
 \end{aligned}
-$$ {eq:ew_field_tensors}
+$$ {#eq:ew_field_tensors}
 where $\epsilon^{ijk}$ is the Levi-Civita symbol for each permutation, which
 is the structure constant for $SU(2)$.
 
@@ -598,8 +598,20 @@ $$
 \begin{pmatrix} 0\\ v + H \end{pmatrix}
 $$ {#eq:scalar_expansion}
 as a product of a scalar field $H$ and a complex exponential of the
-scalar product of a three-component field $G=\{G_0, G_1, G_2\}$ with
-the Pauli matrices $\sigma$.
+scalar product of a three-component field $G=\{G_1, G_2, G_3\}$ with
+the Pauli matrices $\sigma=\{\sigma_1, \sigma_2, \sigma_3\}$.
+The complex exponential phase
+can be then removed by a $SU(2)$ group rotation, a transformation
+that is often referred as *unitary gauge*. The resulting scalar field
+can simple be expressed as:
+$$
+\phi = \frac{1}{\sqrt{2}}
+\begin{pmatrix} 0\\ v + H \end{pmatrix}
+$$ {#eq:scalar_rotation}
+where three of the four degrees of freedom in [Equation @eq:higgs_su_field],
+which correspond the field $G$ which would otherwise give rise to the
+so-called Goldstone bosons,
+have been removed after the gauge transformation.
 
 ![Depiction of the Mexican hat potential for the scalar field $\phi$. A local
 maximum is present at the origin, but lower energy degenerate minima exist
@@ -608,8 +620,54 @@ from [this TeX StackExchange answer](https://tex.stackexchange.com/a/229226).
 ](gfx/101_chapter_1/mexican_hat.pdf){
 #fig:mexican_hat width=60%}
 
-### Standard Model Lagrangian {#sec:sm_lagrangian}
+Substituting the rotated scalar field from [Equation @eq:scalar_rotation]
+in the Lagrangian described by [Equation @eq:scalar_lagrangian]
+leads to mass-like terms for linear combinations of the $W$ and $B$
+fields. In order to obtain the physical bosons observed in nature, the
+the mass terms have to be make independent by the following
+transformations:
+$$
+W^\pm_\mu = \frac{1}{\sqrt{2}} \left ( W_\mu^1 \mp i W_\mu^2 \right)
+\quad
+\begin{pmatrix} Z_\mu \\ A_\mu \end{pmatrix} =
+\begin{pmatrix} \cos \theta_W  & -\sin \theta_W \\
+\sin \theta_W  & \cos \theta_W \end{pmatrix}
+\begin{pmatrix} W^3_\mu \\ B_\mu \end{pmatrix}
+$$ {#eq:ew_field_change}
+where the field $W^\pm$ are associated with the charged weak bosons,
+the field $Z$ with the neutral weak boson, the electromagnetic
+field $A$ with the photon, and $g_W$ is the Weinberg angle
+which is related with the electroweak couplings according
+the relation $\tan \theta_W = g_B/g_W$. Omitting for now
+the terms related with the $H$ field, the Lagrangian in
+[Equation @eq:scalar_lagrangian] leads to the following
+the mass terms for the electroweak force mediators after
+the unitary gauge and the transformation described
+in [Equation @eq:ew_field_change] have been applied:
+$$
+\begin{aligned}
+\mathcal{L}_\textrm{EW bosons} =&
+\frac{1}{2} \underbrace{\left ( \frac{g_W^2 v^2}{4} \right )}_{m_{W^{+}}^2}
+W^{+}_{\mu} W^{+\mu} +
+\frac{1}{2} \underbrace{\left ( \frac{g_W^2 v^2}{4} \right )}_{m_{W^{-}}^2}
+W^{-}_{\mu} W^{-\mu} + \\
+& \frac{1}{2}
+\underbrace{\left ( \frac{g_W^2 v^2}{4\cos \theta_W} \right )}_{m_Z^2}
+ Z_{\mu} Z^{\mu} +
+\frac{1}{2} \underbrace{(\ 0\ )}_{m_{\gamma}^2} A_{\mu} A^{\mu}
+\end{aligned}
+$$ {#eq:ew_bosons_masses}
+resulting in mass terms for the massive weak bosons which are depend
+to the weak coupling, the Weinberg angle and the vacuum
+expectation value of the Higgs field. The last term for the electromagnetic
+field has only been included to make explicit that no mass term is
+associated with the electromagnetic force carrier $\gamma$.
 
+
+
+
+
+<!-- ### Standard Model Lagrangian {#sec:sm_lagrangian} -->
 
 
 ## Beyond the Standard Model {#sec:sm_alternatives}
