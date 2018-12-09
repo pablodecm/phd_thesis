@@ -523,9 +523,9 @@ and right-handed $D_R^\mu$ fermion fields are respectively defined as:
 $$
 \begin{aligned}
 & D_L^\mu  = \partial^\mu - \frac{1}{2} g_B Y B_\mu  - \frac{1}{2} g_W \sigma W_\mu \\
-&  D_L^\mu  = \partial^\mu - \frac{1}{2} g_B Y B_\mu
+&  D_R^\mu  = \partial^\mu - \frac{1}{2} g_B Y B_\mu
 \end{aligned}
-$$
+$$ {#ew:ew_cov_der}
 Where $\sigma = \{ \sigma^0 , \sigma^1, \sigma^2\}$ are the Pauli matrices
 and $g_B$ and $g_W$ are the coupling constants. The $W_{\mu\nu}$ and
 $B_{\mu\nu}$ field strength tensors from kinematic terms can in turn
@@ -536,13 +536,52 @@ $$
 - g_W  \epsilon^{ijk} W^i_\mu W^k_\nu \\
 & B_{\mu\nu} =  \partial_\mu  B_\nu - \partial_\mu  B_\mu
 \end{aligned}
-$$
+$$ {eq:ew_field_tensors}
 where $\epsilon^{ijk}$ is the Levi-Civita symbol for each permutation, which
 is the structure constant for $SU(2)$.
 
 
-
 ### Symmetry Breaking and the Higgs Boson {#sec:ewsb_higgs}
+
+The problem with the electroweak theory as described by the Lagrangian
+from [Equation @eq:lagrangian_ew_before], which is based on Yang-Mills
+gauge theory formulation, is that it is not possible directly add mass
+term for the fermions nor the weak bosons without breaking the $SU(2)$
+invariance. At the time the mentioned theory was developed, there was
+extensive evidence not only for quark and lepton masses but also
+for the weak boson being massive,
+the latter required to explain why the weak interaction was short-ranged.
+The issue of lacking a theoretical mechanism that explain the mass
+of fermions and weak boson was solved by the spontaneous symmetry
+breaking mechanism [@englert1964broken; @higgs1964broken; @guralnik1964global],
+which is based on postulating the existence of an additional complex scalar
+field $\phi$, which is a $SU(U)$ doublet with the following structure:
+$$
+\phi =
+\begin{pmatrix} \phi^+ \\ \phi^0 \end{pmatrix} =
+\begin{pmatrix} \phi_3 + i\phi_4  \\ \phi_1 + i\phi_2 
+\end{pmatrix}
+$$ {#eq:higgs_su_field}
+where the component notation is made explicit because it will be used later.
+This scalar field is expected to interact with the electroweak fields
+$W$ and $B$ by means of the following Lagrangian:
+$$
+\mathcal{L}_\textrm{scalar} = (D^H_\mu \phi)^\dagger (D^\mu \phi) - V(\phi)
+$$ {#eq:scalar_lagrangian}
+where the covariant derivate in this case is defined as:
+$$
+D_H^\mu  = \partial^\mu - \frac{1}{2} i g_B Y B_\mu  - \frac{1}{2} i g_W \sigma W_\mu 
+$$ {#eq:scalar_cov_der}
+while the minimal form for scalar field potential $V(\phi)$,
+which can be constructed ad-hoc to provide a degenerate vacuum states
+and a local maximum, which would required for spontaneous symmetry breaking,
+$$
+V(\phi) = - \mu^2 \phi^\dagger \phi + frac{1}{2} \lambda (\phi^\dagger \phi )^2
+$$ {#eq:scalar_potential}
+where both the quadratic $\mu^2$ and the quartic
+$\lambda$ self-interaction parameters are defined positive in this sign
+convention. The resulting shape for the potential is often referred
+as *Mexican hat*, and is depicted in [Figure @fig:mexican_hat].
 
 ### Standard Model Lagrangian {#sec:sm_lagrangian}
 
