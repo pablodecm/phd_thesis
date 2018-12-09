@@ -66,7 +66,8 @@ weak hypercharge.
 The SM is typically specified using the Lagrangian formalism and depends
 on a total of 19 parameters (not accounting for neutrino masses
 and mixing angles), which are not predicted by the theory
-from first principles but determined through experimental measurements.
+from first principles, and thus can only be determined through
+experimental measurements.
 
 In the context of the SM, excitations of the fundamental fields
 give rise to two types of elementary particles: fermions (characterised
@@ -1182,13 +1183,13 @@ as well as the formation of hadrons from any
 free parton due to colour confinement (see Section [-@sec:qcd_detail]).
 Additional processes that affect the collision outcome include
 secondary interactions between the protons, as well as the
-decays for all unstable particles generated. 
+decays of all generated unstable particles. 
 An example of the typical complexity of the physical
 processes occurring as a result of a single high-energy proton-proton
 scattering is provided in [Figure @fig:event_shower].
 These and additional minor effects
 (e.g. colour reconnection) are accounted by *parton showering* (PS) programs,
-that take as the input the the generated particle outcome of the
+that take as the input the generated particle outcome of the
 hard scattering and 
 return a set of the resulting stable particles that would propagate
 through the detector. 

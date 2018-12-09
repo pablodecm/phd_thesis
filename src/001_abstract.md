@@ -3,13 +3,13 @@
 
 Advances in data analysis techniques could play a decisive role on the
 discovery reach of particle collider experiments, yet
-the proliferation of expertise from other data-centric
+expertise from other data-centric
 disciplines such as machine learning and statistics
 encounters significant
 barriers, mainly due to the use of domain-specific language
 and constructs.
-A large part of this document, which also doubles as an introduction
-of an analysis searching for non-resonant
+A large part of this document, which also doubles as introduction
+for an analysis searching for non-resonant
 Higgs pair production using data acquired by the CMS detector
 at the LHC, is thus devoted to the redefinition of the relevant
 concepts and problems in experimental particle physics in a way
@@ -29,10 +29,10 @@ more generally) could be understood as an approximate regression of
 hidden variables of the generative model using simulated
 observations, which are often powerful summaries for
 statistical inference. The second concern, mainly the misspecification
-of the model due to known unknowns, it is in practise addressed by
+of the model due to known unknowns, it is in practice addressed by
 the inclusion of nuisance parameters, which can restrict the usefulness
 of machine learning based summaries.
-The previous concepts are used in practice in this work
+These ideas are exploited in this work
 to study the non-resonant
 $\textrm{pp} \rightarrow \textrm{HH} \rightarrow
 \textrm{b}\bar{\textrm{b}}\textrm{b}\bar{\textrm{b}}$
@@ -45,7 +45,7 @@ $\sigma \left( \textrm{pp} \rightarrow \textrm{HH} \rightarrow
 \textrm{b}\bar{\textrm{b}}\textrm{b}\bar{\textrm{b}} \right )$ within the SM.
 In addition,
 some of the insights obtained from the exercise of rephrasing the goal of high
-energy physics analysis as an statistical inference problem are combined with
+energy physics analysis as a statistical inference problem are combined with
 modern machine learning technologies to develop a new technique, referred
 to as inference-aware neural optimisation, that produces
 summary statistics that directly minimise the expected uncertainty of

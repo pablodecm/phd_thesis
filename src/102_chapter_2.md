@@ -3,9 +3,10 @@
 \epigraph{Measure what is measurable \\
  and make measurable what is not so.}{Galileo Galilei (attributed)}
 
-In Chapter [-@sec:theory], the most successful testable theory to date
+In Chapter [-@sec:theory], we reviewed the most successful testable
+theory to date
 describing the properties and dynamics of our universe at the most
-fundamental scales has been reviewed.
+fundamental scales.
 Clear limitations of the Standard Model as it is currently
 formulated are known,
 such as the complete omission of gravity forces or the absence of viable
@@ -136,7 +137,7 @@ right before switching to collision mode. Once
 the characteristics of the proton beam are suitable, the quadrupoles
 align the beam trajectories and collisions begin. A stable
 configuration is then adopted by the LHC machine, providing about 7 keV 
-of energy to the beam to account for synchrotron radiation losses using
+of energy per turn to the beam to account for synchrotron radiation losses using
 the RF cavities. If unexpected problems do not occur, the proton beams are kept
 circling the LHC ring and colliding at the IPs for several hours until
 the bunch properties are degraded beyond correction,
@@ -212,10 +213,10 @@ by a detector during a year or a longer data acquisition period.
 ### Multiple Hadron Interactions {#sec:pile_up}
 
 Given the high density of protons in each bunch at the collision
-points, several proton-proton interactions are very likely
-to happen in each crossing, a phenomenon that is commonly referred to
-as *pileup*. After multiple interactions occur,
-the products of all interactions go through the surrounding
+points, every bunch crossing generates a few dozen proton-proton interactions,
+a phenomenon that is commonly referred to
+as *pileup*. 
+The products of all these interactions go through the surrounding
 detectors at the almost the same time, which complicates
 the interpretation of the detector readouts as the product of a
 single interaction. The number of proton-proton
@@ -267,8 +268,9 @@ leads to a different experimental complication. As illustrated in
 Equation [-@eq:lumi_rate], a simple way to increase the
 luminosity is to increase the number of total proton bunches per beam $n_b$.
 This fact is exploited in the nominal proton fill scheme of the LHC by having
-a total of 2808 proton bunches in each beam, corresponding to a bunch
-separation of only approximately 7.5 m. Hence the time separation between
+a total of 2808 proton bunches in each beam, corresponding to a
+separation between most of the bunches of only approximately 7.5 m.
+Hence the time separation between
 consecutive bunch
 crossing is about 25 ns, which is of the same order as the response time
 of many of the detector elements used at the LHC. The readout from a
@@ -445,7 +447,9 @@ the total energy/momentum of the particle, which might not be possible to
 measure to high precisions in hadron collider detectors,
 it is more suitable to approximate it using
 the *pseudo-rapidity* $\eta$, defined as: 
-$$\eta = - \ln \left ( \tan \frac{\theta}{2} \right ) $$ {#eq:pseudo_rapidity}
+$$\eta = \frac{1}{2} \ln \left ( \frac{p+p_z}{E-p_z} \right ) =
+ \ln \left ( \tan \frac{\theta}{2} \right )
+ $$ {#eq:pseudo_rapidity}
 that only depends on the polar angle $\theta$ with respect to the LHC plane.
 The *pseudo-rapidity* $\eta$
 and it is equal to the rapidity $y$ for massless particles, and a very
@@ -473,7 +477,7 @@ hadronization of quarks and gluons as detailed in Section [-@sec:event].
 
 ### Magnet {#sec:cms_magnet}
 
-The sole purpose of the CMS magnet is to curve
+The purpose of the CMS magnet is to curve
 the trajectories of charged particles coming out the interaction region,
 so their transverse momenta $p_T$ can be accurately estimated, and the
 sign of their charge determined. In order to understand how such
@@ -891,7 +895,7 @@ in addition of being subjected to instrumental noise or external radiation
 sources such as cosmic rays. 
 
 The combined readout of all sub-detectors
-each 25 ns amounts to a large amount of data, due to the total number
+each 25 ns amounts to a large data size, due to the total number
 of sub-system channels, even if efficient techniques for 
 representation and compression of information are used. Given that technical
 limitations on the amount of data that can be recorded exist,
@@ -942,7 +946,7 @@ representations of an event given its raw detector readouts
 is to attempt to reconstruct all the primary particles that were produced
 in the main proton-proton interaction of the collision and as well as 
 estimate their main properties,
-done through a process generally referred as *event reconstruction*.
+through a process generally referred as *event reconstruction*.
 Nevertheless, 
 for carrying out successfully the aforesaid task it is convenient to
 be able to have a detailed model of the detector readout output that is
@@ -1006,7 +1010,7 @@ in the collisions given the instantaneous luminosity conditions.
 This final set of long-lived particles produced in the interaction
 region represents a possible particle outcome for a collision assuming
 a given *hard* process occurred. While they cannot be directly
-observed, only indirectly through the detector readouts,
+observed, but only indirectly inferred through the detector readouts,
 it is assumed that an analogous set of particles
 is produced as result of each collision in the actual experiment.
 Based on the expected readout that they produce in the different
@@ -1066,7 +1070,7 @@ The previous classification of particles based on their detectable energy
 remnants in the different detectors, patently disregards a common outcome
 of high energy collisions: neutrinos. Neutrinos only interact via
 weak and gravitational forces, hence the probability of
-interaction with the detecting elements of CMS is negligible, and thus escape
+interaction with the detecting elements of CMS is negligible. They thus escape
 the experimental area undiscovered. The production of high-energy
 neutrinos, or other weakly-interacting unknown 
 hypothetical particles (e.g. dark matter candidates), can
@@ -1107,17 +1111,18 @@ directly from the particle trajectories.
 While the simplified map between the particle outcome of a given collision
 and the corresponding detector readouts presented in the previous section
 is extremely useful for obtaining a general understanding
-the operation of the CMS detector, it is not detailed enough to model
-realistically the detector readouts given a set of particles generated
+the operation of the CMS detector, it is not detailed enough to
+realistically model the detector readouts given a set of particles generated
 in a collision. Most of the relevant dynamics for modelling, 
 such as interactions between protons, the produced particles and the
-detector material or the detector response are of stochastic nature,
+detector material or the detector response, are of stochastic nature,
 hence they have to be specified either by sampling
 approximated probability distributions or by a complex probabilistic program
 that goes through a mechanistic simulation of the underlying physical
 processes actually occurring.
 
-The latter approach is found to be the most accurate, given the many subtleties
+A detailed simulation a is found to be the most accurate approach,
+given the many subtleties
 affecting the detector readout for a given set of generated particles, including
 possible various particle decays and material interactions that can occur when
 the particle is travelling through the detector, the non-uniformity of the magnetic
@@ -1156,7 +1161,7 @@ and detector sensitivity dead-times.
 As can be conjectured by its level of detail, such 
 simulation processes are very time consuming, taking several
 minutes of CPU time give current available computing
-technologies, for producing a realistic detector readout for
+technologies for producing a realistic detector readout for
 each initial set of particles produced at a primary *hard* interaction.
 Given that oftentimes billions of generated events (i.e. simulated
 observations) of common processes are needed
