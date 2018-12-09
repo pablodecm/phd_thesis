@@ -576,12 +576,37 @@ while the minimal form for scalar field potential $V(\phi)$,
 which can be constructed ad-hoc to provide a degenerate vacuum states
 and a local maximum, which would required for spontaneous symmetry breaking,
 $$
-V(\phi) = - \mu^2 \phi^\dagger \phi + frac{1}{2} \lambda (\phi^\dagger \phi )^2
+V(\phi) = - \mu^2 \phi^\dagger \phi + \frac{1}{2} \lambda (\phi^\dagger \phi )^2
 $$ {#eq:scalar_potential}
 where both the quadratic $\mu^2$ and the quartic
 $\lambda$ self-interaction parameters are defined positive in this sign
 convention. The resulting shape for the potential is often referred
-as *Mexican hat*, and is depicted in [Figure @fig:mexican_hat].
+as *Mexican hat*, and is depicted in [Figure @fig:mexican_hat]. The presence
+of a potential minima different from the origin
+gives rises to a non-zero vacuum expectation value for the scalar
+field:
+$$
+\langle \phi \rangle_0 = \frac{\mu^2}{\lambda} = v^2
+$$ {#eq:scale_vev}
+whose values depends on the $V(\phi)$ potential parameters $\mu^2$ and
+$\lambda$, and it is denoted as $v^2$ for convenience. The non-zero
+vacuum expectation value is thus said to spontaneously break the
+the $SU(2) \otimes U(1)$ symmetry, the consequences made more
+clear when the field is expanding around the minimum:
+$$
+\phi = \frac{1}{\sqrt{2}} \exp(i \frac{\sigma \cdot G}{v})
+\begin{pmatrix} 0\\ v + H \end{pmatrix}
+$$ {#eq:scalar_expansion}
+as a product of a scalar field $H$ and a complex exponential of the
+scalar product of a three-component field $G=\{G_0, G_1, G_2\}$ with
+the Pauli matrices $\sigma$.
+
+![Depiction of the Mexican hat potential for the scalar field $\phi$. A local
+maximum is present at the origin, but lower energy degenerate minima exist
+arount it. The figure was created by adapting the code
+from [this TeX StackExchange answer](https://tex.stackexchange.com/a/229226).
+](gfx/101_chapter_1/mexican_hat.pdf){
+#fig:mexican_hat width=60%}
 
 ### Standard Model Lagrangian {#sec:sm_lagrangian}
 

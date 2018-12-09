@@ -14,7 +14,7 @@ pdf: thesis.tex
 	$(LATEX2PDF) thesis.tex
 
 	
-thesis.tex: src/*.md before
+thesis.tex: src/*.md before gfx/101_chapter_1/mexican_hat.pdf
 	$(PANDOC) "$(INPUTDIR)"/latex_macros.md \
 	"$(INPUTDIR)"/0[0-1]0_*.md \
 	"$(INPUTDIR)"/10*.md -s \
@@ -31,8 +31,12 @@ before: src/00[1-9]_*.md
 	--top-level-division=chapter \
 	-o before.tex
 
+gfx/%.pdf: gfx/%.tex
+	$(LATEX2PDF) -output-directory $(dir $@) $^
+
 clean:
 	rm -f *.pdf *.out *aux *bbl *blg *log *toc \
 	      *.ptb *.tod *.fls *.fdb_latexmk *.lof	
+
 
 .PHONY: pdf
