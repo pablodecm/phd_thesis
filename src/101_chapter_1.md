@@ -661,11 +661,39 @@ resulting in mass terms for the massive weak bosons which are depend
 to the weak coupling, the Weinberg angle and the vacuum
 expectation value of the Higgs field. The last term for the electromagnetic
 field has only been included to make explicit that no mass term is
-associated with the electromagnetic force carrier $\gamma$.
+associated with the electromagnetic force carrier $\gamma$. The terms
+related with the scalar $H$ field (and Higgs boson) are discussed
+later independently.
 
-
-
-
+In addition providing a mechanism that lead to mass terms for
+the weak force bosons, additional interaction of the various
+fermion field with the scalar field $\phi$ can explain their masses.
+These gauge invariant terms are generally referred to as Yukawa
+interaction, and correspond to the following Lagrangian terms:
+$$
+\begin{aligned}
+\mathcal{L}_\textrm{Yukawa} =
+ &- \lambda_l (\bar{L}_l \phi R_l
+ + \bar{R}_l \phi^\dagger L_l ) \\
+ &- \lambda_d (\bar{L}_q \phi R_d
+ + \bar{R}_d \phi^\dagger L_q )\\
+ &- \lambda_u (\bar{L}_q i \sigma_2 \phi^\dagger R_u
+ + \bar{R}_u i \sigma_2 \phi L_q )
+\end{aligned}
+$$ {#eq:Yukawa_Lagrangian}
+where $\lambda_l$ , $\lambda_u$ and $\lambda_f$ are the Yukawa coupling
+parameters. A charge-conjugate transformation
+ $\phi \rightarrow i \sigma_2 \phi^\dagger$ is used to give mass
+ to up-type quarks. For the quark sector, the $\lambda_u$ and $\lambda_d$ coupling can
+be express by a single non diagonal matrix in the flavour basis, referred to as
+Cabibbo-Kobayashi-Maskawa (CKM matrix) [@Cabibbo:1963yz; @Kobayashi:1973fv],
+which can in turn be parametrised
+by three angles and a complex phase. The fact the matrix is not
+diagonal leads to flavour mixing, due to the mass eigenstates being different
+from flavour eigenstates. Another relevant property of fermion masses
+is that after spontaneous symmetry breaking, the fermion mass
+is effectively proportional to its coupling with the Higgs scalar field, which
+is useful to intuitively understand the dominant interactions and decays.
 
 <!-- ### Standard Model Lagrangian {#sec:sm_lagrangian} -->
 
