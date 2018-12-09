@@ -695,6 +695,28 @@ is that after spontaneous symmetry breaking, the fermion mass
 is effectively proportional to its coupling with the Higgs scalar field, which
 is useful to intuitively understand the dominant interactions and decays.
 
+In addition of giving masses to both weak bosons and fermions, the
+remaining field degree of freedom after electroweak symmetry breaking gives
+rise to a scalar field $H$, whose Lagrangian can be obtained substituting
+the [Equation @eq:scalar_rotation] in [Equation @eq:scalar_lagrangian],
+leading to the following terms:
+$$
+\mathcal{H} = \frac{1}{2} \partial_\mu H \partial^\mu -
+- \mu^2 H^2 - \lambda v H^3 - \frac{\lambda}{4} H^3
+$$ {#eq:higgs_lagrangian}
+where the second (quardratic term) can be interpreted as a scalar boson
+with a mass $\sqrt{2\mu^2}$, which is commonly referred as the Higgs
+boson. A particle with a mass of $125.09(24)\ \textrm{GeV}$ [@Aad:2015zhl] 
+and consistent with the expected properties for the Higgs boson was
+discovered in 2012 by the CMS
+and ATLAS collaborations [@higgs2012atlas; @higgs2012cms].
+The cubic $\lambda v$ and quartic $\lambda$
+terms will give rise to self-interaction interaction vertices. The cubic
+or trilinear Higgs is studied using data from the CMS experiment in
+[Chapter @sec:higgs_pair]. The determination of the Higgs self-coupling
+is an important cross-check of the spontaneous symmetry breaking
+mechanism.
+
 <!-- ### Standard Model Lagrangian {#sec:sm_lagrangian} -->
 
 
