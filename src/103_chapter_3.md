@@ -1589,7 +1589,7 @@ framed as a hypothesis testing problem. The goal of statistical
 testing is to make a quantitative statement about how well observed
 data agrees with an underlying model or prediction, which is often referred
 to as a *hypothesis*. The statistical model under consideration
-is often referred to as *null hypothesis* $H_0.  Classical
+is often referred to as *null hypothesis* $H_0$.  Classical
 statistical testing techniques often require the definition of an
 *alternative hypothesis* $H_1$, whole agreement with the data
 is compared with that of the null. A hypothesis is said to be
@@ -1612,14 +1612,62 @@ are very related. A test statistic is in fact a sample summary
 statistic $s(D)$, that is used within statistical test to accept
 or reject hypothesis, so all the concerns regarding
 sufficiency from [Section @sec:suff_stats] also apply. Regarding
-the dimensionality of $t(D)$, while it can be a multi-dimensional
+the dimensionality of $t(D) :
+\mathcal{X}_D \subseteq \mathbb{R}^{d \times n } \longrightarrow \mathcal{T}$,
+while it can be a multi-dimensional
 vector (e.g. could even use $t(D)=(\boldsymbol{x}_0,...,\boldsymbol{x}_n)$),
 a one dimensional variable is only considered in order to simplify
 the process of making calibrated statistical statements.
 
+Let us refer to the test statistic for the observed set of
+observations as $t_\textrm{obs}$ from here onwards. The result of
+the statistical test is wether the hypothesis $H_0$ can be
+rejected in favour of $H_1$ if the null is unlikely enough. In
+practice, in order to make a principled decision,
+a critical region $\mathcal{T}_C \subseteq \mathcal{T}$ in the space of the test
+statistic has to be defined before looking at the set of
+observations. One the critical region has been
+chosen, a test can be then characterised by its *significance*
+level $\alpha$ and *power* $1-\beta$. The significance, which is also
+referred to as the *Type I error rate*, is directly
+related with the probability of rejecting $H_0$ when it is actually
+true. For a given test based on the summary statistic $t(D)$ and its
+critical region $\mathcal{T}_C$,
+the significance level can be defined as:
+$$
+\alpha = P ( t \in \mathcal{T}_C | H_0) =
+\int_{\mathcal{T}_C} g( t| H_0) dt 
+\stackrel{\textrm{1D}}{=} \int_{t_\bold{cut}}^\infty  g( t| H_0) dt
+$$ {#eq:significance_test}
+where $g( t| H_0)$ is the distribution of the test statistic under the null
+hypothesis $H_0$, and the later simplification applies for one-dimensional
+summary statistics where the critical region is defined based
+on a given threshold $t_\textrm{cut}$. The power of a test $1-\beta$ is
+instead defined on the probability of not rejecting the null hypothesis
+when the alternative is actually true, which often referred as
+*type II error rate* $\beta$. The type II error rate $\beta$ can
+be defined as the probability of not being in the critical region
+under the alternative hypothesis:
+$$
+\beta = P ( t \not\in \mathcal{T}_C | H_1) = 
+1 - \int_{\mathcal{T}_C} g( t| H_1) dt 
+\stackrel{\textrm{1D}}{=} - \int_{-\infty}^{t_\bold{cut}}  g( t| H_1) dt
+$$ {#eq:type2_test}
+where $g( t| H_0)$ is the distribution of the test statistic under the
+alternative hypothesis $H_1$, and the last terms corresponds to the
+one dimensional case based on a threshold. Both significance level and
+power of a test depend on the definition of its test statistic and
+critical region.
+The significance level
+of a test $\alpha$is often fixed at a given value in order to reject
+the null in favour of an alternate, while is beneficial to design
+the test so its power is as high as possible (equivalent to having a
+Type II error rate as low as possible).
+
+The advantage of one-dimensional statistics.
 
 $$
-\Lambda( \mathcal{D}; H_0, H_1) =
+\Lambda( \mathcal{D}; H_0, H_1) = \frac{p(D| H_0)}{p(D| H_1)} = 
 \prod_{\boldsymbol{x} \in \mathcal{D}}
 \frac{p(\boldsymbol{x}| H_0)}{ p(\boldsymbol{x} |H_1)}
 $$ {#eq:likelihood_ratio}
