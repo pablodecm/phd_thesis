@@ -1210,7 +1210,7 @@ and the up/down variations). In that case the total effect on
 $\epsilon^{\mathcal{C}_i}_j(\boldsymbol{\theta}_k)$ is accounted by adding
 absolute shifts or multiplying marginal effects. 
 
-Even assumming that the marginal
+Even assuming that the marginal
 description when a single parameter of interest varies
 is accurate, which is not ensured by the interpolation, and the effect
 of each parameter is factorised in $p_j(\boldsymbol{x} | \boldsymbol{\theta})$,
@@ -1715,7 +1715,9 @@ hypotheses.
 This fact motivates the
 use of machine learning techniques
 to approximate the likelihood ratio directly based on simulated observations
-is discussed in [Section @sec:lr_clf]. 
+is discussed in [Section @sec:lr_clf], which then can be calibrated by
+means of non-parametric probability density estimation techniques or
+count-based likelihoods.
 
 Another relevant issue when defining test statistics is that hypothesis
 are rarely simple (or with a composite alternate in the way previously
@@ -1741,6 +1743,64 @@ the use of the profile likelihood ratio, other than it converges to
 the likelihood ratio when the hypothesis are simple, is the
 distribution for large numbers of observations can be effectively
 approximated, as demonstrated by Wilks and Wald [@wilks1938large; @wald1943tests].
+
+For a discussion of the different test statistics based on the profiled
+likelihood ratio as well as their asymptotic approximations,
+the following reference is recommended [@Cowan:2010js]. In
+particular, the used of the *Asimov dataset*, where the observed sample
+summary statistic of the type outlined [Equation @eq:sum_count_vector]
+is assumed to be equal to the expectation is instrumental
+for the technique described in [Section @sec:inferno]. The statistical
+framework of hypothesis testing can also be used to decide wether to reject
+or not reject the null hypothesis in favour of the alternate, which
+is equivalent to the probability of the observed data (or test statistic) under
+the null hypothesis, which is simply referred to as the p-value or
+alternatively as Z-value when standard deviation units are used. When
+the null hypothesis is not rejected $H_0$, the statistical test
+can be recasted to obtain *exclusion upper limits* at a given confidence
+level (usually 95\% is used), as is done in the non-resonant
+Higgs production search included in [Section @sec:higgs_pair].
+
+For obtaining exclusion upper limits, it is useful to define
+a modified test statistic $\widetilde{q}(\mu)$:
+$$
+\widetilde{q}(\mu) =
+\begin{cases}
+-2\ln \frac{L(\mu, \hat{\hat{\boldsymbol{\theta}}}(\mu))}{
+ L(\hat{\mu}, \hat{\boldsymbol{\theta}}(\mu))} \quad
+  &\textrm{if}\ \hat{\mu} < 0 \\
+-2\ln \frac{L(\mu, \hat{\hat{\boldsymbol{\theta}}}(\mu))}{
+  L(\hat{\mu}, \hat{\boldsymbol{\theta}}(\mu))}  \quad
+  &\textrm{if}\ 0 \leq \hat{\mu} \leq \mu \\
+  0 \quad
+  &\textrm{if}\ \hat{\mu} > \mu \\
+\end{cases}
+$$
+which does not regard negative background fluctuations
+or cases where $\hat{\mu} > \mu$ as evidence against $\mu$. When
+using $\widetilde{q}(\mu)$ or similar profile likelihood based test
+one-dimensional test statistics, the observed exclusion upper upper
+limit can be defined as the value of $mu$ for which the probability
+of obtaining a test statistic larger is equal or larger than
+a given confidence level (e.g. $\alpha=0.05$ for 95\% confidence
+intervals), which can be expressed as the following intergral:
+$$
+P(\widetilde{q}(\mu) \geq \alpha | \mu) =
+\int^{\infty}_{\widetilde{q}_\textrm{obs}(\mu)}
+g(\widetilde{q}(\mu) | \mu) dq
+$$ {#eq:observed_limit}
+where $\widetilde{q}_\textrm{obs}(\mu)$ is the observed test statistic and
+$g(\widetilde{q}(\mu) | \mu)$ is the distribution under the alternate
+when the signal fraction is $\mu$. This integral can be approximated
+using Monte Carlo simulated toys or by the asymptotic approximations
+described in [@Cowan:2010js]. An alternative upper limit definition is
+often used to deal with small signal at the cost of over-coverage,
+referred to as CLs procedure
+[@Read:2002hq; @Junk:1999kv],
+in which the exclusion limit is defined as the value of $\mu$
+for which
+$P(\widetilde{q}(\mu) \geq \alpha | \mu)/P(\widetilde{q}(\mu) \geq \alpha | 0) \geq\alpha)$.
+
 
 
 ### Parameter Estimation {#sec:param_est}
