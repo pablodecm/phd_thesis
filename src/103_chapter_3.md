@@ -1584,6 +1584,40 @@ with the technique presented in [Chapter @sec:inferno].
 
 ### Hypothesis Testing {#sec:hypo_test}
 
+Statistical inference experimental particle physics is often
+framed as a hypothesis testing problem. The goal of statistical
+testing is to make a quantitative statement about how well observed
+data agrees with an underlying model or prediction, which is often referred
+to as a *hypothesis*. The statistical model under consideration
+is often referred to as *null hypothesis* $H_0.  Classical
+statistical testing techniques often require the definition of an
+*alternative hypothesis* $H_1$, whole agreement with the data
+is compared with that of the null. A hypothesis is said to be
+*simple*, when all the distribution (or generative model)
+parameters are fully specified, i.e.
+$p(\boldsymbol{x} | H_s) =f(\boldsymbol{x})$ does
+not depend on any non-fixed parameter. A *composite* hypothesis
+instead depends on one or more parameters $\boldsymbol{\theta}$,
+i.e. the distribution under the hypothesis can be expressed as 
+$p(\boldsymbol{x} | H_c) =f(\boldsymbol{x},\boldsymbol{\theta})$.
+
+In order to carry out hypothesis testing based on a set of
+observations $D = \{\boldsymbol{x}_0,...,\boldsymbol{x}_n\}$,
+a *test statistic* $t(D)$ that is a function
+of the observations is constructed. The choice of
+test statistic is especially critical when $\boldsymbol{x}$
+is high-dimensional. The concept of test statistic and summary
+statistic, which was discussed in [Section @sec:summary_statistic],
+are very related. A test statistic is in fact a sample summary
+statistic $s(D)$, that is used within statistical test to accept
+or reject hypothesis, so all the concerns regarding
+sufficiency from [Section @sec:suff_stats] also apply. Regarding
+the dimensionality of $t(D)$, while it can be a multi-dimensional
+vector (e.g. could even use $t(D)=(\boldsymbol{x}_0,...,\boldsymbol{x}_n)$),
+a one dimensional variable is only considered in order to simplify
+the process of making calibrated statistical statements.
+
+
 $$
 \Lambda( \mathcal{D}; H_0, H_1) =
 \prod_{\boldsymbol{x} \in \mathcal{D}}
