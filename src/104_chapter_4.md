@@ -545,11 +545,11 @@ $$ {#eq:lr_one}
 which can in turn be be expressed as:
 $$
 \Lambda^{-1} \sim
-1-\mu) \left ( \frac{p_\textrm{s}(\boldsymbol{x}| \boldsymbol{\theta})}{
+(1-\mu) \left ( \frac{p_\textrm{s}(\boldsymbol{x}| \boldsymbol{\theta})}{
                           p_\textrm{b}(\boldsymbol{x}| \boldsymbol{\theta})}-1 \right)
 $$ {#eq:lr_two}
 thus each factor in likelihood ratio is bijective function of
-the density ratio
+the ratio
 $p_\textrm{s}(\boldsymbol{x}| \boldsymbol{\theta})
 /p_\textrm{b}(\boldsymbol{x}| \boldsymbol{\theta})$.
 The previous density ratio can be approximated by training a classifier
