@@ -19,7 +19,7 @@ physics experiments, especially focussing on those cases where they can
 be used to address some of the statistical issues from
 Chapter [-@sec:statinf].
 
-## Problem Description
+## Problem Description {#sec:problem_description}
 
 Machine learning is the field that deals with
 algorithms, as described by computer programs,

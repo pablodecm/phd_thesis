@@ -1222,14 +1222,17 @@ product of relative variations in the two parameter case
 $\boldsymbol{\theta}_R = (\theta^R_0,\theta^R_1)$.  Let us consider the expected
 value for the efficiency after a given selection $\mathbb{1}_{\mathcal{C}_i}(\boldsymbol{x})$:
 $$
-\epsilon^{\mathcal{C}_i}_j (\boldsymbol{\theta}_R)=  \int 
+\begin{aligned}
+\epsilon^{\mathcal{C}_i}_j (\boldsymbol{\theta}_R) &=  \int 
 \mathbb{1}_\mathcal{C}(\boldsymbol{x})
-p_j ( \boldsymbol{x}|\boldsymbol{\theta}_R ) d\boldsymbol{x} =
+p_j ( \boldsymbol{x}|\boldsymbol{\theta}_R ) d\boldsymbol{x} \\
+&=
 \int \mathbb{1}_\mathcal{C}(\boldsymbol{x}) 
 p_j ( \boldsymbol{x}|\boldsymbol{\theta}_Q )
 \frac{p_j ( \boldsymbol{x}| (\theta^R_0,\theta^Q_1))}{p_j ( \boldsymbol{x}|\boldsymbol{\theta}_Q )}
 \frac{p_j ( \boldsymbol{x}| (\theta^Q_0,\theta^R_1))}{p_j ( \boldsymbol{x}|\boldsymbol{\theta}_Q )}
  d\boldsymbol{x}
+\end{aligned}
 $$ {#eq:relative_var_integral}
 where $\boldsymbol{\theta}_R$ is the parameter point we want to simulate
 by interpolating around a nominal point $\boldsymbol{\theta}_Q$. The last
@@ -1521,7 +1524,7 @@ cannot be expressed analytically, but only
 by means of forward simulated observation. This fact greatly complicates the
 application of standard inference techniques which require the
 explicit definition of a likelihood
-$$\mathcal{L}(\boldsymbol{\theta} | D) =\prod^{\boldsymbol{x}_i \in D}
+$$L(\boldsymbol{\theta} | D) =\prod^{\boldsymbol{x}_i \in D}
  p(\boldsymbol{x}_i | \boldsymbol{\theta})
 $$ {#eq:likelihood_definition}
 in order to make quantitative statements about the parameters of interest,
@@ -1651,7 +1654,7 @@ under the alternative hypothesis:
 $$
 \beta = P ( t \not\in \mathcal{T}_C | H_1) = 
 1 - \int_{\mathcal{T}_C} g( t| H_1) dt 
-\stackrel{\textrm{1D}}{=} - \int_{-\infty}^{t_\bold{cut}}  g( t| H_1) dt
+\stackrel{\textrm{1D}}{=} 1 - \int_{-\infty}^{t_\bold{cut}}  g( t| H_1) dt
 $$ {#eq:type2_test}
 where $g( t| H_0)$ is the distribution of the test statistic under the
 alternative hypothesis $H_1$, and the last terms corresponds to the
@@ -1659,18 +1662,85 @@ one dimensional case based on a threshold. Both significance level and
 power of a test depend on the definition of its test statistic and
 critical region.
 The significance level
-of a test $\alpha$is often fixed at a given value in order to reject
+of a test $\alpha$ is often fixed at a given value in order to reject
 the null in favour of an alternate, while is beneficial to design
 the test so its power is as high as possible (equivalent to having a
 Type II error rate as low as possible).
 
-The advantage of one-dimensional statistics.
-
+From the definition of Type I and Type II errors rates
+in [Equation @eq:significance_test] and [Equation @eq:type2_test],
+it is evident that either the probability
+distribution function of the test statistic under both the the null
+and alternate hypothesis or a way to estimate the integrals from
+simulated observation are required. The main advantage of
+one-dimensional statistics, similarly to low-dimensional summary
+statistics, allow for an efficient estimation of the probability
+distribution function using non-parametric techniques.
+When both the null $H_0$ and alternate hypothesis $H_1$ are simple,
+the Neyman-Pearson lemma [@NeymanPearson1933] states that the
+*likelihood ratio*, which is a one-dimensional test statistic
+defined as:
 $$
 \Lambda( \mathcal{D}; H_0, H_1) = \frac{p(D| H_0)}{p(D| H_1)} = 
 \prod_{\boldsymbol{x} \in \mathcal{D}}
 \frac{p(\boldsymbol{x}| H_0)}{ p(\boldsymbol{x} |H_1)}
 $$ {#eq:likelihood_ratio}
+is the most powerful test statistic at any threshold $t_\textrm{cut}$, which
+is associated with a significance
+$\alpha=P(\Lambda(\mathcal{D}; H_0, H_1) \leq t_\textrm{cut})$. The last
+expansion requires independence between the different observation. While the
+likelihood ratio can be proven to be the most powerful test statistic,
+it cannot be evaluated exactly if the likelihood is not known, which
+often the case for LHC inference problems as discussed in
+[Section @sec:likelihood-free]. The alternate
+hypothesis is usually composite in particle colliders
+because the signal mixture
+fraction $\mu$ (or its cross section equivalently) is one the parameters
+of interest. The likelihood ratio test can nevertheless be expressed
+in this cases a function $\mu$, which will be the most powerful
+test for a given $\mu$.
+
+It is worth noting that while the
+likelihood ratio defined in [Equation @eq:likelihood_ratio] defines the
+most powerful test, the likelihood ratio based on a
+summary statistic $\boldsymbol{s}(D)$ can also be defined, but it not the most
+powerful test for
+inference based on $D$ unless $\boldsymbol{s}(D)$ is a sufficient summary
+statistic with respect to the parameters $\boldsymbol{\theta}$ which fully
+define the null
+$p(\boldsymbol{x} | H_0) = p(\boldsymbol{x} | \boldsymbol{\theta}_0)$
+and alternate
+$p(\boldsymbol{x} | H_1) = p(\boldsymbol{x} | \boldsymbol{\theta}_1)$
+hypotheses.
+This fact motivates the
+use of machine learning techniques
+to approximate the likelihood ratio directly based on simulated observations
+is discussed in [Section @sec:lr_clf]. 
+
+Another relevant issue when defining test statistics is that hypothesis
+are rarely simple (or with a composite alternate in the way previously
+described). The statistical model often depends on additional
+nuisance parameters $\boldsymbol{\theta}$,
+as discussed in [Section @sec:sec:known_unknowns].
+The likelihood ratio
+from [Equation @eq:likelihood_ratio] is not guaranteed to be most the
+powerful test statistic when the hypotheses are composite. In this
+case, often summary statistics based on the *profile likelihood ratio* are
+used, that can be defined for LHC searches as:
+$$
+\lambda(\mu) =
+ \frac{L(\mu, \hat{\hat{\boldsymbol{\theta}}})}{
+ L(\hat{\mu}, \hat{\boldsymbol{\theta}})}
+$$ {#eq:profile_ll}
+where $\hat{\hat{\boldsymbol{\theta}}}$ numerator refers to the value
+of the nuisance
+parameter that maximises the likelihood for a given $\mu$, and $\hat{\mu}$
+and $\hat{\boldsymbol{\theta}}$ in the denominator
+are the standard maximum likelihood estimators. The property that motivates
+the use of the profile likelihood ratio, other than it converges to
+the likelihood ratio when the hypothesis are simple, is the
+distribution for large numbers of observations can be effectively
+approximated, as demonstrated by Wilks and Wald [@wilks1938large; @wald1943tests].
 
 
 ### Parameter Estimation {#sec:param_est}
