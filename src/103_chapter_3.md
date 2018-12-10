@@ -1750,7 +1750,7 @@ the following reference is recommended [@Cowan:2010js]. In
 particular, the used of the *Asimov dataset*, where the observed sample
 summary statistic of the type outlined [Equation @eq:sum_count_vector]
 is assumed to be equal to the expectation is instrumental
-for the technique described in [Section @sec:inferno]. The statistical
+for the technique described in [Chapter @sec:inferno]. The statistical
 framework of hypothesis testing can also be used to decide wether to reject
 or not reject the null hypothesis in favour of the alternate, which
 is equivalent to the probability of the observed data (or test statistic) under
@@ -1759,7 +1759,7 @@ alternatively as Z-value when standard deviation units are used. When
 the null hypothesis is not rejected $H_0$, the statistical test
 can be recasted to obtain *exclusion upper limits* at a given confidence
 level (usually 95\% is used), as is done in the non-resonant
-Higgs production search included in [Section @sec:higgs_pair].
+Higgs production search included in [Chapter @sec:higgs_pair].
 
 For obtaining exclusion upper limits, it is useful to define
 a modified test statistic $\widetilde{q}(\mu)$:
@@ -1780,8 +1780,8 @@ which does not regard negative background fluctuations
 or cases where $\hat{\mu} > \mu$ as evidence against $\mu$. When
 using $\widetilde{q}(\mu)$ or similar profile likelihood based test
 one-dimensional test statistics, the observed exclusion upper upper
-limit can be defined as the value of $mu$ for which the probability
-of obtaining a test statistic larger is equal or larger than
+limit can be defined as the larger value of $mu$ for which the probability
+of obtaining a test statistic is equal or larger than
 a given confidence level (e.g. $\alpha=0.05$ for 95\% confidence
 intervals), which can be expressed as the following intergral:
 $$
@@ -1792,7 +1792,7 @@ $$ {#eq:observed_limit}
 where $\widetilde{q}_\textrm{obs}(\mu)$ is the observed test statistic and
 $g(\widetilde{q}(\mu) | \mu)$ is the distribution under the alternate
 when the signal fraction is $\mu$. This integral can be approximated
-using Monte Carlo simulated toys or by the asymptotic approximations
+using Monte Carlo simulations or by the asymptotic approximations
 described in [@Cowan:2010js]. An alternative upper limit definition is
 often used to deal with small signal at the cost of over-coverage,
 referred to as CLs procedure
@@ -1801,6 +1801,38 @@ in which the exclusion limit is defined as the value of $\mu$
 for which
 $P(\widetilde{q}(\mu) \geq \alpha | \mu)/P(\widetilde{q}(\mu) \geq \alpha | 0) \geq\alpha)$.
 
+Most data analysis at the LHC, and particularly searches such
+the one discussed in [Chapter @sec:higgs_pair],
+are carried out in blinded manner to reduce experimenter's bias,
+i.e. the subset of observations or results 
+relevant for statistical inference are not considered
+or concealed until all the analysis procedures have defined. In order to
+optimise the various analysis component (e.g. selection or summary statistic),
+it useful to compute a figure of merit that is representative of the
+prospective sensitivity of the analysis. The *expected significance*,
+is the expectation value for the probability value from [Equation
+@eq:significance_test] under the alternative hypothesis. The median
+instead of the expectation is often considered to preserve
+monotonicity with Z-values, and several approximations exist
+for simple cut-and-count likelihoods. Both the expected and median significance
+depend on the signal fraction $\mu$ assumed, so they are particularly useful
+to optimise analysis some knowledge about the order of magnitude is $\mu$
+is known.
+
+Alternatively, the expected median upper limit can be defined as the
+exclusion upper limit using the median test statistic
+$\widetilde{q}_\textrm{med}(\mu)$ under
+the null hypothesis instead of the observed statistic. In addition to
+the median expected limit, it is common practise in the LHC searches
+to also compute the so-called 1-sigma and 2-sigma bands, that correspond
+to the $50\pm16$ and $50\pm22.5$ percentiles instead of the median. The
+upper limits bands provide a quantitive estimation
+of the possible limit variation if not signal is present in the data.
+Both the expected significance and the expected upper limit can be estimated
+asymptotically for summary statistics like the one described
+in [Equation @eq:sum_count_vector]. The effect of nuisance parameters
+can be also included in both in the asymptotic approximations or
+the Monte Carlo based estimation.
 
 
 ### Parameter Estimation {#sec:param_est}
