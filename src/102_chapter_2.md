@@ -181,17 +181,17 @@ $$ \mathcal{F} = \left (  1 +
 where $\sigma_z$ is the root mean square (RMS) bunch length and $\sigma^{*}$
 is the RMS of the beam in the transverse direction at the interaction volume.
 The peak instantaneous luminosities per day 
-luminosities for the different years of proton-proton data acquisition periods
+for the different years of proton-proton data acquisition periods
 (also known as *runs*)
 at the LHC are summarised in [Figure @fig:peak_lumi] , which can
 be compared with the peak design luminosity of the LHC of
-$\mathcal{L}_\textrm{design} = 10^{34} \textrm{cm}^{-2} \textrm{s}^{-1} = 10 \textrm{Hz}/\textrm{nb}$.
+$\mathcal{L}_\textrm{design} = 10^{34}\ \textrm{cm}^{-2} \textrm{s}^{-1} = 10\ \textrm{Hz}/\textrm{nb}$.
 
 ![Peak luminosity per day as measured using the CMS detector for the
 all the proton-proton data-taking periods of the LHC to date. Figure from
 [CMS Public Luminosity Results](https://twiki.cern.ch/twiki/bin/view/CMSPublic/LumiPublicResults#Multi_year_plots).
 ](gfx/102_chapter_2/peak_lumi_pp.pdf){
-#fig:CERN_Acc_complex width=100%}
+#fig:peak_lumi width=100%}
 
 From Equation [-@eq:lumi_beam] it can be inferred that that value of
 instantaneous luminosity varies between LHC *fills* depending on the beam
