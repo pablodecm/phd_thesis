@@ -1984,14 +1984,54 @@ Noting that a constant denominator in the likelihood would cancel out at each
 side of [Equation @eq:delta_log], and its equivalent when
 using the profiled likelihood, they can be linked with the profile-likelihood
 ratio test statistic defined in [Equation @eq:profile_lr]. Algorithms
-for likelihood maximaization and the compution of intervals based
+for likelihood maximisation and computation of intervals based
 on the profiled likelihood are implemented in the [minuit]{.smallcaps}
 library [@james1975minuit], which can also account for bounded parameters.
-Confidence interval based on the profiled likelihood will be used
+Confidence intervals based on the profiled likelihood will be used
 for benchmarking different ways for constructing summary statistics
 in [Chapter @sec:inferno].
 
+Another subtlety relevant when dealing with nuisance parameters (which
+also applies in lesser degree to the combination of measurements),
+is that oftentimes nuisance parameters are constraint by theory
+or external measurement. This can be included in the previous
+likelihood-based techniques by considering the likelihood
+as a product of the likelihood derived from the statistical
+model for the set of observations $L_D(D; \boldsymbol{\theta})$
+with the available constraints $L_C^i(\boldsymbol{\theta})$,
+as follows:
+$$
+L_(D; \boldsymbol{\theta}) = L_D(D; \boldsymbol{\theta})
+\prod_{i=0}^{c} L_C^i(\boldsymbol{\theta})
+$$ {#eq:augmented_likelihood}
+where simplified likelihoods (e.g. a normal approximation) are often
+used in the constrain terms $L_C^i(\boldsymbol{\theta})$ but they
+could in principle also depend on an independent set of
+observations. The constrain terms could be also understood as
+prior probability distributions in a Bayesian setting, obtained
+from previous evidence.
 
+In order to obtain approximate confidence intervals from the shape
+of the likelihood or profile likelihood function around the maximum
+likelihood, several likelihood evaluations (together with a constrained
+optimisation problem if $\hat{L}(D; \boldsymbol{\theta}_\iota)$ is
+used) are often required to estimate accurately a confidence interval.
+A cruder but often useful approximation can be obtained from the curvature of
+the negative log-likelihood function at $\boldsymbol{\theta}_{\textrm{ML}}$. In
+more than one dimension, the local curvature can be expressed by the
+Hessian matrix $\boldsymbol{H}$. The Hessian of the
+$- \ln L(D; \boldsymbol{\theta})$  is is also referred as the
+Fisher information matrix ${\boldsymbol{I}(\boldsymbol{\theta})}$ [@fisher_1925]
+and it is defined as:
+$$
+{\boldsymbol{I}(\boldsymbol{\theta})}_{ij}
+=
+{\boldsymbol{H}(\boldsymbol{\theta})}_{ij}
+= \frac{\partial^2}{\partial {\theta_i} \partial {\theta_j}}
+ \left ( - \ln L(D; \boldsymbol{\theta}) \right )
+$$ {#eq:hessian_log}
+which can be evaluated at each given $\boldsymbol{\theta}$, e.g. by using
+numerical differentiation.
 
 
 
