@@ -1837,6 +1837,31 @@ the Monte Carlo based estimation.
 
 ### Parameter Estimation {#sec:param_est}
 
+Another inference problem that can be defined based on the observed
+data, is parameter estimation, whose goal can be generally be defined as
+the determination of the possible or optimal values that the 
+parameters of a statistical model could take to be consistent with
+the observations. Two types of parameter estimation problem
+are often considered: point estimation and interval estimation. If the
+aim is to obtain the best estimate (i.e. a single value) of a 
+vector of parameter based on a set of observation, it is referred to
+as a *point estimation* problem. When we are instead interested
+on using a set of observations to make statistical statements on
+the plausibility of a range or region for the values that the statistical model
+parameters could take, we are dealing with an *interval estimation* problem.
+
+Parameter estimation can be addressed either
+from a classical (i.e. also known as frequentist) standpoint 
+where the true values of the parameter are assumed to be fixed but unknown;
+or from a Bayesian perspective, where probabilistic statements representing
+the degree of belief on the values for the parameters are updated based on
+the set of observation. A classical inference approach is predominantly
+adopted in this document, where the definition of
+probability is based on the relative frequency of the outcome when
+many trials are carried out. Classical interval estimation, often referred
+to as *confidence interval* (or confidence region) estimation is
+strongly related with
+hypothesis testing, as reviewed in [Section @sec:hypo_test].
 
 
 
