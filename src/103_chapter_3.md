@@ -1733,7 +1733,7 @@ $$
 \lambda(\mu) =
  \frac{L(\mu, \hat{\hat{\boldsymbol{\theta}}})}{
  L(\hat{\mu}, \hat{\boldsymbol{\theta}})}
-$$ {#eq:profile_ll}
+$$ {#eq:profile_lr}
 where $\hat{\hat{\boldsymbol{\theta}}}$ numerator refers to the value
 of the nuisance
 parameter that maximises the likelihood for a given $\mu$, and $\hat{\mu}$
@@ -1870,11 +1870,34 @@ P(\hat{\theta}^{-} \leq \theta \leq \hat{\theta}^{+}) = 1 - \alpha
 $$ {#eq:confidence_interval}
 
 where $\hat{\theta}^-$ and $\hat{\theta}^+$ are referred as the lower and
-upper limits. The concept of confidence interval can be extended a
+upper limits. The definition of confidence interval in the context
+of classical parameter estimation is the range of of values for given parameter
+that would contain the true value $100(1-\alpha)\%$ of the times.
+The concept of confidence interval can also be extended a
 confidence region when a multi-dimensional parameter vector is considered.
+While the definition of confidence interval  based on
+its coverage properties is rather simple, its construction 
+based on a set of observations $D = \{\boldsymbol{x}_0,...,\boldsymbol{x}_n\}$
+can be quite challenging. It is worth noting that both upper
+and lower limit are estimators, quantities calculated by applying
+a given produce to the set of observations, and thus
+$\hat{\theta}^- (D)$ and $\hat{\theta}^+ (D)$ explicitly depend on
+the set of data.
 
+The Neyman construction [@10.2307/91337] provides a principled procedure
+to define $100(1-\alpha)\%$  confidence intervals which guarantee
+the property defined in [Equation @eq:confidence_interval], by inverting
+a an ensemble of hypothesis test, as defined in [Section @sec:hypo_test],
+by constructing simulated datasets for the different values
+that parameter $\theta$ can take. Confidence intervals can
+be one-sided, e.g. such as the exclusion upper limits
+defined in [Equation @eq:observed_limit], or two-sided as
+the definition provided in [Equation @eq:confidence_interval]. In particle
+collider analyses, there is often a dichotomy between one-sided intervals
+for null results and two-sided intervals for non-null results, which
+can be solved by extending the Neyman construction with a
+likelihood-ratio ordering criterion [@Feldman:1997qc].
 
-Neyman construction [@10.2307/91337] F-C[@Feldman:1997qc].
 
 
 
