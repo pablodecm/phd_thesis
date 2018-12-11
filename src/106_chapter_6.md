@@ -206,7 +206,7 @@ of choosing an optimal summary statistic
 can be formally expressed as finding a summary statistic $\boldsymbol{s}^{\ast}$
 that minimises the interval width:
 $$
-\boldsymbol{s}^{\ast} = \textrm{argmin}_{\boldsymbol{s}}  \Delta \omega_0.
+\boldsymbol{s}^{\ast} = \textrm{arg min}_{\boldsymbol{s}}  \Delta \omega_0.
 $${#eq:general_task}
 The above construction can be extended to several parameters of
 interest by considering the

@@ -1887,8 +1887,8 @@ the set of data.
 The Neyman construction [@10.2307/91337] provides a principled procedure
 to define $100(1-\alpha)\%$  confidence intervals which guarantee
 the property defined in [Equation @eq:confidence_interval], by inverting
-a an ensemble of hypothesis test, as defined in [Section @sec:hypo_test],
-by constructing simulated datasets for the different values
+a an ensemble of hypothesis test (as defined in [Section @sec:hypo_test]),
+by using simulated datasets for the different values
 that parameter $\theta$ can take. Confidence intervals can
 be one-sided, e.g. such as the exclusion upper limits
 defined in [Equation @eq:observed_limit], or two-sided as
@@ -1897,6 +1897,61 @@ collider analyses, there is often a dichotomy between one-sided intervals
 for null results and two-sided intervals for non-null results, which
 can be solved by extending the Neyman construction with a
 likelihood-ratio ordering criterion [@Feldman:1997qc].
+
+Confidence interval procedures based on the Neyman construction works
+very well for simple statistical models with one or two parameters, however
+it rapidly becomes computationally intractable larger
+the number of parameters. Even though
+the number of parameters of interest in LHC analyses is usually small,
+nuisance parameters play an important role in inference as reviewed in
+[Section @sec:nuis_pars], and cannot be accounted in a straightforward
+manner in the previous procedure. Thus when the total number of
+parameters is high, confidence interval are usually computed
+based on alternative approximations, often based of some of the
+properties of the profiled likelihood ratio discussed in
+[Section @sec:hypo_test].
+
+Before discussing the fundamentals of the confidence interval
+approximations, it is useful to formally define the *maximum likelihood
+estimator* of a parameter $\boldsymbol{\theta}_{\textrm{ML}}$ based on
+a set of observations $D = \{\boldsymbol{x}_0,...,\boldsymbol{x}_n\}$
+as:
+
+$$
+\boldsymbol{\theta}_\textrm{ML} =
+\mathop{\textrm{arg max}}_{\theta \in \mathcal{\theta}} L(D; \boldsymbol{\theta})
+$$ {#eq:max_ll}
+
+where $L(D; \boldsymbol{\theta})$ is the likelihood function given the
+set of observations $D$ which is a function of the model parameters
+$\boldsymbol{\theta}$. The maximum likelihood estimator of model
+parameters was already
+used to define the profile likelihood ratio test statistic in
+[Equation @eq:profile_lr], an is a very common point estimator
+because it is asymptotically consistent and efficient. In addition,
+the maximum likelihood estimator coincides with the *maximum
+a posteriori* (MAP) point estimator in Bayesian inference when the
+parameter priors are uniform.
+
+The shape of the likelihood function around the maximum likelihood
+estimator $\boldsymbol{\theta}_{\textrm{ML}}$ can be used to approximate
+confidence intervals. Using asymptotic theory developed
+Wilks [@wilks1938large], the $100(1-\alpha)\%$ confidence region
+for the parameter vector $\boldsymbol{\theta}$ can be determined
+using the following relation:
+
+$$
+- \ln L(D; \boldsymbol{\theta}) \leq
+- \ln L(D; \boldsymbol{\theta}_{\textrm{ML}}) + \Delta \ln L
+$$ {#eq:delta_log}
+
+where $\ln L(D; \boldsymbol{\theta}_{\textrm{ML}})$ is natural logarithm
+of the likelihood for the maximum likelihood estimator and $\Delta \ln L$
+depends on the number of parameter dimensions and the desired coverage
+$1-\alpha$. For example, the values of  $\boldsymbol{\theta}$
+inside the $68.27\%$ (i.e. 1-sigma) confidence region and one dimensional
+parameter are those for which the previous relation is verified using
+$\Delta \ln L = 0.5$.
 
 
 
