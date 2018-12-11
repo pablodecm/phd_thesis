@@ -2030,8 +2030,33 @@ $$
 = \frac{\partial^2}{\partial {\theta_i} \partial {\theta_j}}
  \left ( - \ln L(D; \boldsymbol{\theta}) \right )
 $$ {#eq:hessian_log}
-which can be evaluated at each given $\boldsymbol{\theta}$, e.g. by using
-numerical differentiation.
-
+which can be evaluated at any given $\boldsymbol{\theta}$, e.g. by using
+numerical differentiation. The Cramér-Rao lower bound
+[@cramer2016mathematical; @rao1992information] provides a link between
+the inverse of the Fisher information matrix and the covariance
+of an unbiased estimator $\hat{\boldsymbol{\theta}}$:
+$$
+\textrm{cov}_{\boldsymbol{\theta}}(\hat{\boldsymbol{\theta}}) \geq
+I(\boldsymbol{\theta})^{-1}
+$${#eq:CRB_ch3}
+which becomes an equality in the large-sample
+limit for an efficient parameter estimator
+such as the maximum likelihood estimator $\boldsymbol{\theta}_\textrm{ML}$.
+The diagonal elements of the inverse of the information
+matrix $\sigma_i^2=\left( I(\boldsymbol{\theta})^{-1} \right)_{ii}$ can used
+to construct a $68\%$ confidence interval for $\theta_i$ parameter
+where the effect of the rest of parameters has been profiled as
+$[\boldsymbol{\theta}_\textrm{ML}-\sigma_i, \boldsymbol{\theta}_\textrm{ML}+\sigma_i]$.
+This approximation is equivalent to
+profiling assuming that the $- \ln L(D; \boldsymbol{\theta})$ can be described
+by a multi-dimensional parabola centered at $\boldsymbol{\theta}_\textrm{ML}$,
+and thus leads to symmetric intervals.
+In Bayesian literature, an analogous approach is used to extend MAP estimation
+in order obtain a multi-dimensional normal approximation for the posterior,
+which is often referred to as Laplace approximation [@laplace1986memoir].
+An advantage of this approximation, that will be used in
+[Chapter @sec:inferno] to construct an inference-aware machine learning
+loss function, is then that can be interpreted both in the context of
+classical and Bayesian inference.
 
 
