@@ -180,12 +180,18 @@ $$ \mathcal{F} = \left (  1 +
  \right )^2 \right )^{-1/2} $$ {#eq:lumi_factor}
 where $\sigma_z$ is the root mean square (RMS) bunch length and $\sigma^{*}$
 is the RMS of the beam in the transverse direction at the interaction volume.
-The average values of some of these parameters and the peak instantaneous
+The peak instantaneous luminosities per day 
 luminosities for the different years of proton-proton data acquisition periods
 (also known as *runs*)
-at the LHC are summarised in Table [create], which can
-be compared with the peak design luminosity of the LHC  of
-$1 \times 10^{34} \textrm{cm}^{-1} \textrm{s}^{-1}$.
+at the LHC are summarised in [Figure @fig:peak_lumi] , which can
+be compared with the peak design luminosity of the LHC of
+$\mathcal{L}_\textrm{design} = 10^{34} \textrm{cm}^{-2} \textrm{s}^{-1} = 10 \textrm{Hz}/\textrm{nb}$.
+
+![Peak luminosity per day as measured using the CMS detector for the
+all the proton-proton data-taking periods of the LHC to date. Figure from
+[CMS Public Luminosity Results](https://twiki.cern.ch/twiki/bin/view/CMSPublic/LumiPublicResults#Multi_year_plots).
+](gfx/102_chapter_2/peak_lumi_pp.pdf){
+#fig:CERN_Acc_complex width=100%}
 
 From Equation [-@eq:lumi_beam] it can be inferred that that value of
 instantaneous luminosity varies between LHC *fills* depending on the beam
@@ -195,7 +201,7 @@ due to the collisions at all the interaction points. For convenience,
 a quantity referred as integrated luminosity $\mathcal{L}_\textrm{int}$
 that is computed by integrating over the instantaneous luminosity for a
 given time period $\Delta T = t_1 - t_0$, such as stable collision period
-within a a *fill*, is used:
+within a *fill*, is used:
 $$
   \mathcal{L}_\textrm{int} = \int_{t_0}^{t_1} \mathcal{L}(t) dt
 $$ {#eq:int_lumi}
