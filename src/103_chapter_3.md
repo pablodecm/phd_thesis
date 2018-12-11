@@ -1859,9 +1859,22 @@ the set of observation. A classical inference approach is predominantly
 adopted in this document, where the definition of
 probability is based on the relative frequency of the outcome when
 many trials are carried out. Classical interval estimation, often referred
-to as *confidence interval* (or confidence region) estimation is
-strongly related with
-hypothesis testing, as reviewed in [Section @sec:hypo_test].
+to as *confidence interval* estimation is
+strongly related with hypothesis testing, as reviewed in
+[Section @sec:hypo_test]. The $100(1-\alpha)\%$ confidence interval (CI)
+for a one-dimensional parameter $\theta$ can defined as the interval
+$[\hat{\theta}^{-},\hat{\theta}^{+}]$:, such that:
+
+$$
+P(\hat{\theta}^{-} \leq \theta \leq \hat{\theta}^{+}) = 1 - \alpha
+$$ {#eq:confidence_interval}
+
+where $\hat{\theta}^-$ and $\hat{\theta}^+$ are referred as the lower and
+upper limits. The concept of confidence interval can be extended a
+confidence region when a multi-dimensional parameter vector is considered.
+
+
+Neyman construction [@10.2307/91337] F-C[@Feldman:1997qc].
 
 
 
