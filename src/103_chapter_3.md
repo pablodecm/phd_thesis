@@ -268,7 +268,8 @@ $$\mathbb{1}_\mathcal{C}(\boldsymbol{x}) =
   \begin{cases}
     1 \ \textrm{if} \ \mathbf{x} \in C \\
     0 \ \textrm{if} \ \mathbf{x} \notin C \\
-\end{cases}$$ {#eq:indicator}
+\end{cases}
+$$ {#eq:indicator}
 
 where the specific definition of such function depends
 on the definition of the subset $\mathcal{C}$, e.g. a simple cut on
@@ -298,6 +299,7 @@ $\mathbb{1}_\mathcal{C}(\boldsymbol{x})$ on a mixture model as the one
 described in [Equation @eq:cond_density] can be obtained by multiplying
 the probability density by $\mathbb{1}_\mathcal{C}(\boldsymbol{x})$ and
 including the relevant normalisation term:
+
 $$ 
 g(\boldsymbol{x} | \boldsymbol{\theta} ) = \frac{
  \mathbb{1}_\mathcal{C}(\boldsymbol{x})
@@ -313,6 +315,7 @@ g(\boldsymbol{x} | \boldsymbol{\theta} ) = \frac{
   \epsilon_j
   } \right ) g_j (\boldsymbol{x}|\boldsymbol{\theta})
 $$ {#eq:mixture_after_cut}
+
 where 
 $g_j (\boldsymbol{x}|\boldsymbol{\theta}) =
 \mathbb{1}_\mathcal{C}(\boldsymbol{x}) p_j (\boldsymbol{x}|\boldsymbol{\theta})
@@ -1919,7 +1922,7 @@ as:
 
 $$
 \boldsymbol{\theta}_\textrm{ML} =
-\mathop{\textrm{arg max}}_{\theta \in \mathcal{\theta}} L(D; \boldsymbol{\theta})
+\mathop{\textrm{arg max}}_{\theta \in \Theta} L(D; \boldsymbol{\theta})
 $$ {#eq:max_ll}
 
 where $L(D; \boldsymbol{\theta})$ is the likelihood function given the
@@ -1951,7 +1954,42 @@ depends on the number of parameter dimensions and the desired coverage
 $1-\alpha$. For example, the values of  $\boldsymbol{\theta}$
 inside the $68.27\%$ (i.e. 1-sigma) confidence region and one dimensional
 parameter are those for which the previous relation is verified using
-$\Delta \ln L = 0.5$.
+$\Delta \ln L = 0.5$. If  $\boldsymbol{\theta}$ is one-dimensional and
+the function $L(D; \boldsymbol{\theta})$ is convex, the confidence
+interval limits $\hat{\theta}^- (D)$ and $\hat{\theta}^+ (D)$
+can be obtained by finding the most extreme values of $\theta$
+that verify [Equation @eq:delta_log] at each side of the
+maximum likelihood estimator $\boldsymbol{\theta}_{\textrm{ML}}$.
+
+As discussed in [Section @sec:nuis_pars], we are often interested on
+confidence intervals for a subset of interest of the statistical
+model $\boldsymbol{\theta}_\iota$, while regarding the others
+as nuisance parameters $\boldsymbol{\theta}_\nu$. The previous
+procedure can be extended for computing approximate confidence interval
+for the parameters of interest, by considering the profiled likelihood
+$\hat{L}(D; \boldsymbol{\theta}_\iota)$
+instead of the full likelihood in [Equation @eq:delta_log],
+which is defined as:
+
+$$
+\hat{L}(D; \boldsymbol{\theta}_\iota) =
+\mathop{\textrm{arg max}}_{\theta_\nu \in \Theta_\nu}
+L(D; \boldsymbol{\theta}_\iota, \boldsymbol{\theta}_\nu)
+$$ {#eq:profiled_ll}
+
+so the nuisance parameters $\boldsymbol{\theta}_\nu$ are profiled by
+considering their values that would maximise the likelihood conditional
+each value of the parameters of interest $\boldsymbol{\theta}_\iota$.
+Noting that a constant denominator in the likelihood would cancel out at each
+side of [Equation @eq:delta_log], and its equivalent when
+using the profiled likelihood, they can be linked with the profile-likelihood
+ratio test statistic defined in [Equation @eq:profile_lr]. Algorithms
+for likelihood maximaization and the compution of intervals based
+on the profiled likelihood are implemented in the [minuit]{.smallcaps}
+library [@james1975minuit], which can also account for bounded parameters.
+Confidence interval based on the profiled likelihood will be used
+for benchmarking different ways for constructing summary statistics
+in [Chapter @sec:inferno].
 
 
 
