@@ -415,6 +415,48 @@ be specified by a differentiable loss function, and they
 can be understood as gradient descent (which will be
 discussed in [Section @sec:ann]) in function space [@mason2000boosting].
 
+While it can be applied to other weak learners, gradient boosting
+is often used to learn ensembles of decision trees. A decision
+tree, is hierarchical branched structure that associates
+an outcome $\boldsymbol{y}$ for each input
+$\boldsymbol{x}\in\mathcal{X}$ by means of partitioning
+the input space in different disjoint subsets $R = (\mathcal{X}_0,
+..., \mathcal{X}_L)$, each associated
+with a constant prediction $\boldsymbol{y}_r$. A generic type
+of decision trees, which is referred to as classification
+and regression trees (CART) [@breiman2017classification] can be expressed
+as a function of the input $t(\boldsymbol{x})$ as a sum over
+the indicator function $\mathbb{1}_\mathcal{X}^r(\boldsymbol{x})$ 
+of each subspace (see [Equation @eq:indicator]) as follows:
+$$
+t(\boldsymbol{x}) = \sum^{\mathcal{X}_r \in R} \boldsymbol{y}_r \mathbb{1}_{\mathcal{X}_r}(\boldsymbol{x}) 
+$$ {#eq:cart_indicator}
+where $\boldsymbol{y}_r$ is the outcome for each subspace, noting the summands
+will be zero for all subsets $\mathcal{X}^r$ except for one because their
+are disjoint. If the outcomes are categorical $\boldsymbol{y}_r$, the resulting
+model $t(\boldsymbol{x})$ is referred as a classification tree. If
+$\boldsymbol{y}_r$ are numerical vectors, $t(\boldsymbol{x})$ is
+a regression tree. In the context of gradient boosting, regression
+trees are often more useful, even for classification tasks, i.e.
+regression trees can be used in conjunction with soft classification
+loss functions (e.g. cross entropy). An schematic representation
+of a regression tree is provided in [Figure @fig:tree], which
+corresponds to the first tree in the ensemble used for signal
+versus background classification in the analysis
+described in [Chapter @sec:higgs_pair].
+
+![Graphical representation of a regression tree. At each node that is not
+a leaf node, the tree is split in two depending on wether based on
+whether a boolean condition is met,
+which based on a threshold for the input variable indexed by the number
+indicated. This corresponds to the first on the ensemble of trees used
+for classification in [Chapter @sec:higgs_pair], which was trained
+using binary cross entropy as loss function.
+](gfx/104_chapter_4/tree.pdf){
+#fig:tree width=80%}
+
+
+\FloatBarrier
 
 ### Artificial Neural Networks {#sec:ann}
 
