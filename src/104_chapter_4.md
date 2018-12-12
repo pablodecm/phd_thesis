@@ -399,6 +399,23 @@ provided a more extensive review [@friedman2001elements;@Goodfellow-et-al-2016;@
 
 ### Boosted Decision Trees {#sec:boosted_decision_trees}
 
+The term *boosted decision trees* (BDT) refers to a large family of
+algorithms that are based on additively constructing ensembles
+of [@freund1997decision ; @friedman2000additive; @friedman2001greedy]
+decision trees for supervised learning tasks
+as those described in [Section @sec:supervised].
+A subset of these techniques, which is often referred as *gradient boosting*,
+are particularly useful for classification and
+regression problems. The basis for these methods is that a strong
+model can be obtained by combining the outcome of a set of weak
+models, e.g. shallow binary decision trees, if they are built
+to minimise the residual error at each stage. Gradient boosting
+algorithms can be applied to any supervised task as long as it can
+be specified by a differentiable loss function, and they
+can be understood as gradient descent (which will be
+discussed in [Section @sec:ann]) in function space [@mason2000boosting].
+
+
 ### Artificial Neural Networks {#sec:ann}
 
 ## Applications in High Energy Physics {#sec:ml_hep}
