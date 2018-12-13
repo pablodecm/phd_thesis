@@ -418,28 +418,32 @@ discussed in [Section @sec:ann]) in function space [@mason2000boosting].
 While it can be applied to other weak learners, gradient boosting
 is often used to learn ensembles of decision trees. A decision
 tree, is hierarchical branched structure that associates
-an outcome $\boldsymbol{y}$ for each input
+an outcome for each input
 $\boldsymbol{x}\in\mathcal{X}$ by means of partitioning
 the input space in different disjoint subsets $R = (\mathcal{X}_0,
 ..., \mathcal{X}_L)$, each associated
-with a constant prediction $\boldsymbol{y}_r$. A generic type
+with a constant prediction $w_r$ for each leaf. A generic type
 of decision trees, which is referred to as classification
 and regression trees (CART) [@breiman2017classification] can be expressed
 as a function of the input $t(\boldsymbol{x})$ as a sum over
 the indicator function $\mathbb{1}_\mathcal{X}^r(\boldsymbol{x})$ 
 of each subspace (see [Equation @eq:indicator]) as follows:
 $$
-t(\boldsymbol{x}) = \sum^{\mathcal{X}_r \in R} \boldsymbol{y}_r \mathbb{1}_{\mathcal{X}_r}(\boldsymbol{x}) 
+t(\boldsymbol{x}) = \sum^{\mathcal{X}_r \in R} w_r \mathbb{1}_{\mathcal{X}_r}(\boldsymbol{x}) 
 $$ {#eq:cart_indicator}
-where $\boldsymbol{y}_r$ is the outcome for each subspace, noting the summands
+where $w_r$ is the outcome for each subspace, noting the summands
 will be zero for all subsets $\mathcal{X}^r$ except for one because their
-are disjoint. If the outcomes are categorical $\boldsymbol{y}_r$, the resulting
+are disjoint. The indicator function $\mathbb{1}_{\mathcal{X}_r}(\boldsymbol{x})$
+of a given subspace is specified by a series of binary decisions on a single
+feature. If the leaf prediction $w_r$ are categorical, the resulting
 model $t(\boldsymbol{x})$ is referred as a classification tree. If
-$\boldsymbol{y}_r$ are numerical vectors, $t(\boldsymbol{x})$ is
+$w_r$ are numerical, $t(\boldsymbol{x})$ is
 a regression tree. In the context of gradient boosting, regression
 trees are often more useful, even for classification tasks, i.e.
 regression trees can be used in conjunction with soft classification
-loss functions (e.g. cross entropy). An schematic representation
+loss functions (e.g. cross entropy). For the rest of this section,
+we will then focus on gradient boosting with regression trees,.
+An schematic representation
 of a regression tree is provided in [Figure @fig:tree], which
 corresponds to the first tree in the ensemble used for signal
 versus background classification in the analysis
@@ -454,6 +458,128 @@ for classification in [Chapter @sec:higgs_pair], which was trained
 using binary cross entropy as loss function.
 ](gfx/104_chapter_4/tree.pdf){
 #fig:tree width=80%}
+
+Given its structural limitations, a single CART tree of small
+maximum depth $d$ performs rather poorly a given supervised
+learning task for complex non-linear problems. If $d$ is very large,
+the problem of learning an optimal tree based on data is
+computationally very demanding, and the resulting model would
+not generalise well to unseen data. This motivates a the use of tree
+ensembles, where the final prediction is composed by the combined
+predictions of several small trees. For an ensemble of $K$ CART trees,
+the final model prediction $T(\boldsymbol{x})$ can be expressed as:
+$$
+T(\boldsymbol{x}) = \sum^K_{j=1} t_j(\boldsymbol{x})
+$$ {#eq:reg_boosting}
+where each $t_j(\boldsymbol{x})$ is a CART model, as
+described in [Equation @eq:cart_indicator]. Other regression tree ensembles
+based on alternative methods such as bagging [@breiman1996bagging] can
+also be expressed by a similar combination of predictions. The learning
+problem in can be expressed as empirical risk minimisation in the space
+of possible tree ensembles over the learning set of labelled observations
+$S=\{(\boldsymbol{x}_0,\boldsymbol{y}_0),...,(\boldsymbol{x}_n',\boldsymbol{y}_n')\}$,
+as discussed in [Equation @eq:learning_erm]. The total empirical risk
+functional $R(T)$ for an ensemble of $K$ trees can usually be written as:
+$$
+R(T) = \sum_{(\boldsymbol{x}_i,\boldsymbol{y}_i) \in S}
+ L(\boldsymbol{y}_i, T(\boldsymbol{x}_i)) + \sum_{j=1}^K \Omega(t_j)
+$$ {#eq:total_risk}
+where $L(\boldsymbol{y}_i, T(\boldsymbol{x}_i))$ is the preferred loss function
+for the task (e.g. binary cross entropy as defined in [Equation @Eq:binary_xe]) and
+$\Omega(t_j)$ is a regularisation term that depends on the properties
+of each tree and controls the complexity of the model
+in order to avoid overfitting.
+
+Because learning the structure and leaf weights $w_r$
+of all trees in the ensemble at the same time is intractable,
+boosting is based on sequentially
+learning trees. At each step each step, a tree $t_j$ is built to improve over
+the previously ensemble of trees $T_{(j-1)}$, the prediction for each
+observation in the learning set a given step $j$
+of the training procedure can then be expressed as:
+$$
+T_j(\boldsymbol{x}_i) =  T_{(j-1)}(\boldsymbol{x}_i) + t_j(\boldsymbol{x}_i)
+$$ {#eq:pred_step_tree}
+which can be used to redefine the equivalent risk from [Equation @eq:total_risk]
+at each training step, where the tree $t_j$ is being created as:
+$$
+R(T_j) = \sum_{(\boldsymbol{x}_i,\boldsymbol{y}_i) \in S}
+ L(\boldsymbol{y}_i, T_{(j-1)}(\boldsymbol{x}_i) + t_j(\boldsymbol{x}_i)) + \sum_{j=1}^K \Omega(t_j)
+$$ {#eq:seq_risk}
+where the loss $L(\boldsymbol{y}_i, T^{(j-1)}(\boldsymbol{x}_i)$ can be expanded
+as a Taylor series assuming that at the step $j$ the ensemble $T^{(j-1)}$ is
+constant. Omitting constant terms, which do not play any role in risk
+minimisation, the risk at a given training step can be expressed as:
+$$
+\begin{aligned}
+R(T_j)  \sim \sum_{(\boldsymbol{x}_i,\boldsymbol{y}_i) \in S} \bigg( &
+\underbrace{\frac{ \partial L(\boldsymbol{y}_i, T_{(j-1)}(\boldsymbol{x}_i))}{
+\partial T_{(j-1)}(\boldsymbol{x}_i)}}_{g_i} t_j(\boldsymbol{x}_i)  \\ &+ 
+\frac{1}{2} \underbrace{\frac{\partial^2 L(\boldsymbol{y}_i, T_{(j-1)}(\boldsymbol{x}_i))}{
+\partial T^{2}_{(j-1)}(\boldsymbol{x}_i)}}_{h_i} t_j^2(\boldsymbol{x}_i) \bigg)
+ + \Omega(t_j)
+\end{aligned}
+$$ {#eq:risk_opt}
+where $g_i$ and $h_i$ are so-called gradient statistics, computed
+using the first and second partial derivatives of the loss
+function with respect to the ensemble prediction at the previous step
+$T_{(j-1)}(\boldsymbol{x}_i)$. At each step the learning problem
+can then be reduced to choosing a tree structure and weights, characterised
+by the function $t_j$, that minimises $R(T_j)$. This
+technique can therefore be applied to any supervised learning tasks as long
+the associated loss function is differentiable.
+
+A common regularisation term, that is used by the [xgboost]{.smallcaps}
+library [@chen2016xgboost]
+used for training the classifier in [Chapter @sec:higgs_pair], is
+a combination of the number of leaves $L$ and the squared sum of the leaf
+weights $w_r$ for all the leaves:
+$$
+\Omega(t_j) = \gamma L + \frac{1}{2} \lambda\sum^{\mathcal{X}_r\in R} w_r^2
+$$ {#eq:regulatisation}
+where $\gamma$ and $\lambda$ are constants that regulate the relative importance
+of each regularisation component. Using the previous regularisation term,
+it is possible to redefine the risk of a given tree structure
+and set of leaf weight at given training step as:
+$$
+ R(T_j)  \sim \sum^{\mathcal{X}_r \in R} \left (
+ w_r \underbrace{\sum^{\boldsymbol{x}_i \in S} g_i \mathbb{1}_{\mathcal{X}_r}(\boldsymbol{x}_i)}_{G_r}
+ + \frac{1}{2} w^2_r \underbrace{\sum^{\boldsymbol{x}_i \in S} ( h_i + \lambda ) \mathbb{1}_{\mathcal{X}_r}(\boldsymbol{x}_i)}_{H_r + \lambda}
+ \right ) + \gamma L
+$$ {#eq:tree_risk_redef}
+where $G_r$ and $H_r$ represent the sum of $g_i$ and $h_i$ over all the
+samples in the learning set that correspond to the leaf indexed by $r$.
+The previous expression can in turn be used to obtain the optimal leaf weight
+$w_r^{\star}$ and simplify the risk at a given step as follows:
+$$
+w_r^{\star} = - \frac{G_r}{H_r + \lambda} \Rightarrow  R(T_j) = - \frac{1}{2}
+\sum^{\mathcal{X}_r \in R} \frac{G^2_r}{H_j + \lambda} + \gamma T
+$$ {#eq:opt_weight_risk}
+where $\mathcal{X}_r$ are the subsets of the input space corresponding to each leaf
+of the last tree $j$. The last expression for $R(T_j)$ can be used to
+compare tree structures to be added to the ensemble in a principled manner.
+
+In practice, the number of possible tree structures is infinite so the
+problem of finding the optimal tree at each step is still intractable.
+A greedy heuristic is instead used, which proceed one level of the tree
+at time. For each input feature, the optimal splitting at a given
+level can be found by maximising the splitting gain, which can be done
+very efficiently by sorting the observations in that feature and finding
+the threshold that maximises the gain $\mathcal{G}$,
+that is defined as:
+$$
+\mathcal{G} = \frac{1}{2} \left( \frac{G_L}{H_L + \lambda}  +
+  \frac{G_R}{H_R + \lambda}
+  - \frac{(G_L+G_R)^2}{H_L + H_R \lambda} \right) + \gamma
+$$ {#eq:tree_gain}
+where $G_L$ and $H_L$ are the sum of gradient statistics
+left of the threshold and $G_R$ and $H_R$ are those
+right of the threshold. If the gain is negative for the whole, no splitting
+is preferred in the considered features. Once the optimal splitting
+is determined for all the features, the features that provides the
+minimal risk as defined in [Equation @eq:opt_weight_risk] is chosen. These
+algorithm is proceeds to the next tree level until the maximum tree depth
+is reached or any additional splitting degrade the performance.
 
 
 \FloatBarrier
