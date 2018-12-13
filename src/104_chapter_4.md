@@ -586,14 +586,15 @@ additional heuristic are often used to improve generalisation. A common
 approach after each step that produces a tree $t_j$
 by the procedure outlined before, is to define ensemble for the next step
 by weighting the constribution from the last three
- $T_j(\boldsymbol{x}_i) =  T_{(j-1)}(\boldsymbol{x}_i) + \epsilon t_j(\boldsymbol{x}_i)$,
-where $\epsilon$ is referred as learning rate or shrinkage. Shrinkage produces
-a less efficient learning procedure, so additional tree are often
-required in the ensemble, but the resulting model is less prone to overfit.
-Other policies include subsampling the set of observations or the feature
+ $T_j(\boldsymbol{x}_i) =  T_{(j-1)}(\boldsymbol{x}_i) + \eta t_j(\boldsymbol{x}_i)$,
+where $\eta$ is referred as learning rate or shrinkage. The use of $\eta<1$ produces
+a less efficient learning procedure, so additional trees are
+required in the ensemble, yet the resulting model is less prone to overfitting.
+Other policies against overfitting include subsampling the set of observations
+or the feature
 vector dimensions. Early stopping, as defined in [Section @sec:supervised],
 can also be trivially applied to boosted tree ensembles simply by leaving
-out the last $n$ trees in the summation so a validation set risk is
+out the last $n$ trees in the summation so the risk over validation set is
 maximised.
 
 \FloatBarrier

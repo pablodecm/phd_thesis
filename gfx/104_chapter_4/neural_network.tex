@@ -1,0 +1,18 @@
+\documentclass{standalone}
+
+\usepackage{neuralnetwork}
+
+\begin{document}
+	\begin{neuralnetwork}[height=6.5]
+		\newcommand{\nodetextclear}[2]{}
+		\newcommand{\nodetextx}[2]{$x_#2$}
+		\newcommand{\nodetexty}[2]{$y_#2$}
+		\inputlayer[count=4, bias=true, title=Input\\layer, text=\nodetextx]
+		\hiddenlayer[count=5, bias=true, title=Hidden\\layer 1, text=\nodetextclear]
+    \linklayers
+    \hiddenlayer[count=5, bias=true, title=Hidden\\layer 2, text=\nodetextclear]
+    \linklayers
+		\outputlayer[count=4, title=Output\\layer, text=\nodetexty] 
+    \linklayers
+	\end{neuralnetwork}
+\end{document}
