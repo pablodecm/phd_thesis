@@ -570,7 +570,7 @@ that is defined as:
 $$
 \mathcal{G} = \frac{1}{2} \left( \frac{G_L}{H_L + \lambda}  +
   \frac{G_R}{H_R + \lambda}
-  - \frac{(G_L+G_R)^2}{H_L + H_R \lambda} \right) + \gamma
+  - \frac{(G_L+G_R)^2}{H_L + H_R + \lambda} \right) + \gamma
 $$ {#eq:tree_gain}
 where $G_L$ and $H_L$ are the sum of gradient statistics
 left of the threshold and $G_R$ and $H_R$ are those
@@ -581,6 +581,20 @@ minimal risk as defined in [Equation @eq:opt_weight_risk] is chosen. These
 algorithm is proceeds to the next tree level until the maximum tree depth
 is reached or any additional splitting degrade the performance.
 
+Boosted tree ensembles are prone to overfitting to the learning set, so
+additional heuristic are often used to improve generalisation. A common
+approach after each step that produces a tree $t_j$
+by the procedure outlined before, is to define ensemble for the next step
+by weighting the constribution from the last three
+ $T_j(\boldsymbol{x}_i) =  T_{(j-1)}(\boldsymbol{x}_i) + \epsilon t_j(\boldsymbol{x}_i)$,
+where $\epsilon$ is referred as learning rate or shrinkage. Shrinkage produces
+a less efficient learning procedure, so additional tree are often
+required in the ensemble, but the resulting model is less prone to overfit.
+Other policies include subsampling the set of observations or the feature
+vector dimensions. Early stopping, as defined in [Section @sec:supervised],
+can also be trivially applied to boosted tree ensembles simply by leaving
+out the last $n$ trees in the summation so a validation set risk is
+maximised.
 
 \FloatBarrier
 
