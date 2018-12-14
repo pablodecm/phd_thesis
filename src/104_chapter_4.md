@@ -641,7 +641,40 @@ is costly. In addition, batch gradient descent is a deterministic
 optimisation method and likely to get stuck at a local minima
 if the optimisation surface is non-convex.
 
-
+A variation of the previous technique, that is referred to as stochastic
+gradient descent (SGD)
+[@robbins1951stochastic], overcomes
+the mentioned issues by using a random subset $B=\{(\boldsymbol{x}_0,\boldsymbol{y}_0),...,
+(\boldsymbol{x}_m,\boldsymbol{y}_m)\}$ of $m$ observations from
+the training set $S$ at each step. If $m$ is small the updates can
+be computed much faster, the trade-off being more noisy estimates of
+$\mathbb{E}_{(\boldsymbol{x}_i,\boldsymbol{y}_i) \in S}
+\nabla_{\boldsymbol{\phi}} \left [
+L(\boldsymbol{y}_i,f(\boldsymbol{x}_i; \boldsymbol{\phi}^t) \right ]$. The
+parameter update rule from [Equation @gradient_descent] in SGD can be instead
+be expressed as:
+$$
+\boldsymbol{\phi}^{t+1} =
+\eta(t) \nabla_{\boldsymbol{\phi}} R_S(\boldsymbol{\phi}^t) =
+\eta(t) \nabla_{\boldsymbol{\phi}}
+\frac{1}{m}
+\sum_{(\boldsymbol{x}_i,\boldsymbol{y}_i) \in B }
+\left ( L(\boldsymbol{y}_i,f(\boldsymbol{x}_i; \boldsymbol{\phi}^t)) +
+\Omega(\boldsymbol{\phi}^t) \right )
+$$ {#eq:stochastic_gradient_descent}
+where $B$ is a random subset of size $m$ of the learning set $S$. In the original
+original formulation $m=1$, yet nowadays a larger value for $m$ is often used
+in what is referred to as mini-batch SGD to obtain balance the estimate noise
+and take advantage of vectorised computations. Several variations of SGD
+exist, which in some cases can provide convergence advantages over the
+previous update rule by using adaptive learning rates or momentum in
+the update dynamics [@ruder2016overview]. Stochastic gradient descent methods
+are a key element for training complex differentiate machine models
+$f(\boldsymbol{x}; \boldsymbol{\phi})$ as
+feed-forward neural networks, which will be discussed in the rest
+of this section. SGD in combination with a non-decomposable loss
+function is also used in [Chapter @sec:inferno] to learn inference-aware
+summary statistics.
 
 ![Graphical representation of a feed-forward neural network
 with two hidden layers,
