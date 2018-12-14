@@ -671,10 +671,39 @@ previous update rule by using adaptive learning rates or momentum in
 the update dynamics [@ruder2016overview]. Stochastic gradient descent methods
 are a key element for training complex differentiate machine models
 $f(\boldsymbol{x}; \boldsymbol{\phi})$ as
-feed-forward neural networks, which will be discussed in the rest
+artificial neural networks, which will be discussed in the rest
 of this section. SGD in combination with a non-decomposable loss
 function is also used in [Chapter @sec:inferno] to learn inference-aware
 summary statistics.
+
+A particularly promising family of parametric functions
+$f(\boldsymbol{x}; \boldsymbol{\phi})$ is referred
+to as *artificial neural networks*. Artificial neural networks
+are differentiable functions based on the composition
+of simple (and possibly non-linear) operations. The simplest type
+of artificial neural network is depicted in [Figure @fig:neural_network],
+which is referred as *feed-forward neural network*, that maps a input
+$\boldsymbol{x}$ to an output $\boldsymbol{y}$ by means of a series
+of forward transformations, referred as neural network layers.
+In the simplest configuration, the values at a given layer $k$ other
+than the input layer can be computed as non-linear transformation
+of the result of a linear combination of the
+output of the previous layer after the addition of a bias term. The previous
+transformation can be expressed very compactly in matrix form as:
+$$
+\boldsymbol{a}^k = g( (\boldsymbol{W}^k)^T \boldsymbol{a}^{k-1} + \boldsymbol{b}^k)
+$$ {#eq:layer_trans}
+where $\boldsymbol{a}^k$ is the outcome in vector notation
+after the layer transformation, $\boldsymbol{a}^{k-1}$ is the vector of values
+from the previous transformation (or $\boldsymbol{a}^0=\boldsymbol{x}$ if
+it is the first layer after the input), $\boldsymbol{W}^k$ a matrix with
+all the linear combination coefficients and $\boldsymbol{b}^k$ is
+the bias vector that is added after linear combination. The activation function
+$g(\boldsymbol{z})$ is applied element-wise, and it is often based on a simple
+non-linear function. The sigmoid function $\sigma(z)=1/(1+e^{z})$
+used to be a common choice for the activation function, but nowadays
+the rectified linear unit  (ReLU) function  $g(\boldsymbol{z})=\max(0,z)$ and
+its variants are most frequently used.
 
 ![Graphical representation of a feed-forward neural network
 with two hidden layers,
@@ -685,6 +714,47 @@ of applying an activation function $g$ to a linear
 combination of the previous layer outputs plus possibly a bias term.
 ](gfx/104_chapter_4/neural_network.pdf){
 #fig:neural_network width=80%}
+
+The full feed-forward model $f(\boldsymbol{x}; \boldsymbol{\phi})$ is
+based on the composition of transformation of the type described in
+[Equation @eq:layer_trans]. When a single transformation is applied,
+i.e. $\boldsymbol{y} = g( (\boldsymbol{W})^T \boldsymbol{x} + \boldsymbol{b})$,
+the model can be referred to as perceptron. If the model is instead based
+on the composition of several transformations, it can also be called
+multi-layer perceptron (MLP), and each of the intermediate
+transformations (which can be composed by an arbitrary number of
+computational units) is referred as hidden layers. The model in
+[Figure @fig:neural_network] is a MLP. The advantage of using models
+based on feed-forward neural networks with hidden layers is that
+they can be used to model any arbitrary function due to the universal
+approximation theorem [@cybenko1989approximation]. In fact, while
+it is still the focus of theoretical research, the use of a large
+number of hidden layers is found to increase the expressivity
+and facilitate the training of powerful neural network models. The
+experimental success of these family techniques has led to the
+concept of *deep learning*,
+where multiple transformations layers are used for learning
+data representations in many learning tasks.
+ 
+A good choice for depth and overall structure for a neural network
+model depends on the problem at hand and characteristic and amount
+of the learning set available, thus it often has to be found
+by trial-and-error, based on the performance on a validation
+set as discussed in [Equation @sec:sec:supervised]. The output size and choice
+of activation function in the last transformation often
+depends on the task at hand. For binary classification
+classification tasks, it is practical to use the sigmoid function
+$\sigma(z)=1/(1+e^{z})$ as the activation function of the last layer,
+in combination with a loss function for soft classification (e.g.
+binary cross entropy from [Equation @eq:binary_xe]). For
+multi-class classification problem, such as the one discussed
+in [Section @sec:deepjet], the size of the output vector usually matches
+the number of the categories given that a softmax function (see
+[Equation @eq:softmax_function])
+is often used in the last layer to approximate conditional
+class probabilities in combination with a cross
+entropy loss (see [Equation @eq:general_ce]).
+
 
 
 ## Applications in High Energy Physics {#sec:ml_hep}
