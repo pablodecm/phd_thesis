@@ -753,7 +753,17 @@ the number of the categories given that a softmax function (see
 [Equation @eq:softmax_function])
 is often used in the last layer to approximate conditional
 class probabilities in combination with a cross
-entropy loss (see [Equation @eq:general_ce]).
+entropy loss (see [Equation @eq:general_ce]). For learning tasks
+different from classification, different output structures
+and constraints might be used, e.g. the output vector size
+in the use case in [Chapter @sec:inferno] corresponds to the
+number of dimensions of the resulting summary statistic, that is
+based on a transformation of the input using a multi-layer neural network.
+
+
+<!-- auto-diff -->
+
+<!-- convolutional and recurrent -->
 
 
 
