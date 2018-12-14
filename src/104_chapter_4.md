@@ -586,7 +586,7 @@ additional heuristic are often used to improve generalisation. A common
 approach after each step that produces a tree $t_j$
 by the procedure outlined before, is to define ensemble for the next step
 by weighting the constribution from the last three
- $T_j(\boldsymbol{x}_i) =  T_{(j-1)}(\boldsymbol{x}_i) + \eta t_j(\boldsymbol{x}_i)$,
+ $T_j(\boldsymbol{x}_i) =  T_{(j-1)}(\boldsymbol{x}_i) + \eta\, t_j(\boldsymbol{x}_i)$,
 where $\eta$ is referred as learning rate or shrinkage. The use of $\eta<1$ produces
 a less efficient learning procedure, so additional trees are
 required in the ensemble, yet the resulting model is less prone to overfitting.
@@ -600,6 +600,59 @@ maximised.
 \FloatBarrier
 
 ### Artificial Neural Networks {#sec:ann}
+
+An alternative way to carry do empirical risk minimisation is
+based on consider function $f(\boldsymbol{x}; \boldsymbol{\phi})$,
+which depends on a vector of parameters $\boldsymbol{\phi}$, and
+attempt to find the values of $\boldsymbol{\phi}$ that minimise
+the risk $R_S(f)$ over the learning set
+ $S=\{(\boldsymbol{x}_0,\boldsymbol{y}_0),...,
+ (\boldsymbol{x}_n,\boldsymbol{y}_n)\}$. If
+$f(\boldsymbol{x}; \boldsymbol{\phi})$ is differentiable with
+respect to the parameter vector $\boldsymbol{\phi}$,
+the minimisation from [Equation @eq:learning_rm],
+can be attempted with gradient-based methods. The simplest
+gradient-based optimisation technique is referred to as *gradient descend* (GD),
+and can be applied to the previous problem by initialising
+the parameter vector at random $\boldsymbol{\phi}^0$ and then iteratively
+updating the model parameters $\boldsymbol{\phi}$ at each step $t$
+according to:
+$$
+\boldsymbol{\phi}^{t+1} =
+\eta(t) \nabla_{\boldsymbol{\phi}} R_S(\boldsymbol{\phi}^t) =
+\eta(t) \nabla_{\boldsymbol{\phi}}
+\frac{1}{n}
+\sum_{(\boldsymbol{x}_i,\boldsymbol{y}_i) \in S}
+\left ( L(\boldsymbol{y}_i,f(\boldsymbol{x}_i; \boldsymbol{\phi}^t)) +
+\Omega(\boldsymbol{\phi}^t) \right )
+$$ {#eq:gradient_descent}
+where $\nabla_{\boldsymbol{\phi}}$ is the gradient operator with
+respect the model parameters, $\eta(t)$ is the learning
+rate or step size and $\Omega(\boldsymbol{\phi})$ is
+a generic generalisation term added to the loss to constrain
+model complexity. Many other gradient-based optimisation
+methods exist [@NoceWrig06], e.g. using second-order derivative information.
+The previous flavour of gradient descent is often referred
+as batch gradient descent, because the whole learning set $S$ is
+used to compute the parameter updates at each step. The previous method
+can be very computationally demanding when the number of observations
+in $S$ is large and the computation of the gradient of the loss
+is costly. In addition, batch gradient descent is a deterministic
+optimisation method and likely to get stuck at a local minima
+if the optimisation surface is non-convex.
+
+
+
+![Graphical representation of a feed-forward neural network
+with two hidden layers,
+which is a function mapping and input $\boldsymbol{x}$ to an output
+$\boldsymbol{y}$ by means simple non-linear transformations. The output
+value of a node each layer (other than the input layer) is the result
+of applying an activation function $g$ to a linear
+combination of the previous layer outputs plus possibly a bias term.
+](gfx/104_chapter_4/neural_network.pdf){
+#fig:neural_network width=80%}
+
 
 ## Applications in High Energy Physics {#sec:ml_hep}
 

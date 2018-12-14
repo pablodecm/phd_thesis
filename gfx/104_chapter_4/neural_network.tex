@@ -1,16 +1,22 @@
 \documentclass{standalone}
 
 \usepackage{neuralnetwork}
+\usepackage{xstring}
+
 
 \begin{document}
 	\begin{neuralnetwork}[height=6.5]
-		\newcommand{\nodetextclear}[2]{}
-		\newcommand{\nodetextx}[2]{$x_#2$}
+		\newcommand{\nodetextx}[2]{%
+      \IfEq{#2}{0}{$b_#1$}{$x_#2$}%
+    }
+    \newcommand{\nodetext}[2]{%
+      \IfEq{#2}{0}{$b_#1$}{}%
+    }
 		\newcommand{\nodetexty}[2]{$y_#2$}
 		\inputlayer[count=4, bias=true, title=Input\\layer, text=\nodetextx]
-		\hiddenlayer[count=5, bias=true, title=Hidden\\layer 1, text=\nodetextclear]
+		\hiddenlayer[count=5, bias=true, title=Hidden\\layer 1, text=\nodetext]
     \linklayers
-    \hiddenlayer[count=5, bias=true, title=Hidden\\layer 2, text=\nodetextclear]
+    \hiddenlayer[count=5, bias=true, title=Hidden\\layer 2, text=\nodetext]
     \linklayers
 		\outputlayer[count=4, title=Output\\layer, text=\nodetexty] 
     \linklayers
