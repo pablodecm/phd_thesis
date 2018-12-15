@@ -804,10 +804,26 @@ or [PyTorch]{.smallcaps} [@paszke2017automatic] can be used to compute
 higher-order gradients (e.g. Hessian matrix elements),
 which are useful in [Chapter @sec:inferno] to build a differentiable
 approximation the covariance matrix based on a summary statistic.
- 
-<!-- convolutional and recurrent -->
 
-
+As mentioned before, reverse mode automatic differentiation can be
+used to computed the gradients of an arbitrary function as long
+as it can be represented as a computation graph containing
+differentiable simple operations. Thus the neural network
+model $f(\boldsymbol{x}; \boldsymbol{\phi})$ is not
+restricted to the composition of layers of the
+type described in [Equation @eq:layer_trans], which are often
+referred as fully connected or dense layers. Alternative function
+components are useful for dealing with data cannot be represented
+by a fixed-length vector [@Goodfellow-et-al-2016], e.g. convolutional layers
+are often useful for working with 2D images while recurrent layers extend the
+application of neural networks to sequences that vary in length between
+observations. Both convolutional and recurrent layers are used in the
+neural network model for jet flavour-tagging described in
+[Equation @sec:deepjet]. Other differentiable neural network
+components have also been developed to deal with permutation
+invariant sets [@zaheer2017deep] or graphs [@henrion2017neural]
+as input data structures, which could have promising applications
+in particle collider experiments analyses.
 
 ## Applications in High Energy Physics {#sec:ml_hep}
 
