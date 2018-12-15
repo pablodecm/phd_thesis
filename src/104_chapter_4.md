@@ -651,7 +651,7 @@ be computed much faster, the trade-off being more noisy estimates of
 $\mathbb{E}_{(\boldsymbol{x}_i,\boldsymbol{y}_i) \in S}
 \nabla_{\boldsymbol{\phi}} \left [
 L(\boldsymbol{y}_i,f(\boldsymbol{x}_i; \boldsymbol{\phi}^t) \right ]$. The
-parameter update rule from [Equation @gradient_descent] in SGD can be instead
+parameter update rule from [Equation @eq:gradient_descent] in SGD can be instead
 be expressed as:
 $$
 \boldsymbol{\phi}^{t+1} =
@@ -661,7 +661,7 @@ $$
 \sum_{(\boldsymbol{x}_i,\boldsymbol{y}_i) \in B }
 \left ( L(\boldsymbol{y}_i,f(\boldsymbol{x}_i; \boldsymbol{\phi}^t)) +
 \Omega(\boldsymbol{\phi}^t) \right )
-$$ {#eq:stochastic_gradient_descent}
+$$ {#eq:sdg}
 where $B$ is a random subset of size $m$ of the learning set $S$. In the original
 original formulation $m=1$, yet nowadays a larger value for $m$ is often used
 in what is referred to as mini-batch SGD to obtain balance the estimate noise
@@ -691,7 +691,8 @@ of the result of a linear combination of the
 output of the previous layer after the addition of a bias term. The previous
 transformation can be expressed very compactly in matrix form as:
 $$
-\boldsymbol{a}^k = g( (\boldsymbol{W}^k)^T \boldsymbol{a}^{k-1} + \boldsymbol{b}^k)
+\boldsymbol{a}^k =
+g( (\boldsymbol{W}^k)^T \boldsymbol{a}^{k-1} + \boldsymbol{b}^k)
 $$ {#eq:layer_trans}
 where $\boldsymbol{a}^k$ is the outcome in vector notation
 after the layer transformation, $\boldsymbol{a}^{k-1}$ is the vector of values
@@ -740,7 +741,7 @@ A good choice for depth and overall structure for a neural network
 model depends on the problem at hand and characteristic and amount
 of the learning set available, thus it often has to be found
 by trial-and-error, based on the performance on a validation
-set as discussed in [Equation @sec:sec:supervised]. The output size and choice
+set as discussed in [Equation @sec:supervised]. The output size and choice
 of activation function in the last transformation often
 depends on the task at hand. For binary classification
 classification tasks, it is practical to use the sigmoid function
@@ -760,9 +761,50 @@ in the use case in [Chapter @sec:inferno] corresponds to the
 number of dimensions of the resulting summary statistic, that is
 based on a transformation of the input using a multi-layer neural network.
 
+The SDG update rule from [Equation @eq:sdg] requires
+the computation of the gradients of the loss function with
+respect to the model parameters. For complex models, e.g.
+those put together by stacking layers as those described in
+[Equation @eq:layer_trans], the computation of derivatives
+by numerical finite differences or symbolic differentiation
+can be rather challenging.
+The former requires the evaluation of the loss function after variations
+for at least twice the number of parameters and are affected
+by round-off and truncation errors, and a naive use of the later
+could instead lead to very large expressions for the exact derivative
+that cannot be easily simplified. Given that a numerical function
+as implemented in a computer program is a sequence of simple operations
+(e.g. addition, subtraction, exponentiation, etc.), it is possible to
+efficiently obtain gradients and other derivatives by applying the chain rule
+repeatedly based on the structure of the program, the derivatives of the
+simple operations and a record of the intermediate values.
 
-<!-- auto-diff -->
-
+The previous
+family of techniques, which will not be discussed in depth in this work,
+are referred as *automatic differentiation* (AD) [@baydin2018automatic].
+The most efficient
+way of computing the gradients of a one-dimensional function
+that depends on many parameters, as the gradient of the
+empirical risk for a batch of observations from [Equation @eq:sgd]
+is by means of reverse-mode automatic differentiation, which is also
+referred to as the *backpropagation* in the context of
+neural network training. The computational cost of computing the full
+gradient of the loss to numerical precision
+using backpropagation is of the same order than
+a single forward evaluation of the loss, which provides a great advantage
+relative finite differences. In addition, when implemented in a computation
+framework, it can be generally applied to any
+numerical function as long as can be expressed as a computational graph,
+e.g. an arbitrary program containing control flow statements, without
+requiring complex expression simplification as would be the case for
+symbolic differentiation. In fact, modern computational
+that include automatic differenciation such as [TensorFlow]{.smallcaps}
+[@tensorflow2015-whitepaper]
+or [PyTorch]{.smallcaps} [@paszke2017automatic] can be used to compute
+higher-order gradients (e.g. Hessian matrix elements),
+which are useful in [Chapter @sec:inferno] to build a differentiable
+approximation the covariance matrix based on a summary statistic.
+ 
 <!-- convolutional and recurrent -->
 
 
