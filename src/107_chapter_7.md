@@ -119,4 +119,25 @@ found in particle physics analysis, it seems clear the worth of standard
 supervised learning techniques to construct summary statistics is bounded
 by the impact of known unknowns.
 
+As machine learning algorithms become increasingly popular in scientific
+contexts, it will be more important to formally describe
+the particularities of the problems we are trying to solve, in
+order to understand wether the tools at hand are answering the right questions.
+Otherwise we
+can be at risk of falling for the anti-pattern
+"*if all you have is a hammer, everything looks like a nail*", which it could
+significantly slow down the pace of scientific progress. This issue
+is particularly pressing for particle collider experiments, where the
+acquired familiarity with a given set of data analysis techniques might
+hinder the rigour in their application relative to the final objective. Some
+effort is then required to make sure of the role of a given tool is aligned
+with the task at hand instead on the subtleties of the tool itself. When
+using advanced statistical techniques or machine learning, the final analysis
+goal is of the upmost relevance and cannot be neglected in favour of
+procedural conventions. iF those measures are coupled with
+open research practices  and a careful use
+of domain-specific language and constructs, in order to promote
+collaboration with other disciplines, it is likely that better tools
+would be developed which could in turn lead to major advancements in this
+research field.
 
