@@ -43,7 +43,7 @@ both in the context of classification and regression. Signal versus background
 probabilistic classification, a common conceptual framework
 for simplifying the event selection
 problem and constructing low-dimensional summaries in high-energy physics,
-has been formally shown
+has been formally proved
 to produce sufficient summary statistics for the mixture coefficients
 when the generative model is fully defined. The usefulness of probabilistic
 classification for such tasks, even in the optimal classifier case, cannot
@@ -54,4 +54,69 @@ learning techniques are also discussed. The use of deep learning
 techniques for advanced jet flavour tagging in CMS are used to exemplify
 the previous use case, which demonstrates the possible performance improvements
 due to the combined use of deep neural networks and non-standard input
-transformations that can deal with sequences.
+transformations that can deal with sequences. Newer machine learning
+methodologies that can
+deal with sets, graphs and other types of non-vector input coupled
+with powerful parallel hardware could be a promising path to substitute
+a larger part of the event reconstruction chain by latent variable
+approximations based on simulated observations, providing higher
+accuracy and higher throughput than hand-tuned algorithms.
+
+An analysis using $35.9\ \textrm{fb}^{-1}$ of data
+collected in 2016 by the CMS detector at the LHC was also included in this
+work. Proton-proton collisions at a centre-of-mass energy of 13 TeV were
+used to study the $\textrm{pp} \rightarrow \textrm{HH} \rightarrow
+\textrm{b}\bar{\textrm{b}}\textrm{b}\bar{\textrm{b}}$
+process in the context of the Standard Model (SM) and anomalous
+couplings effective field theory (EFT) extensions.
+The main challenge in for this LHC analysis was the large background
+contribution from multi-jet QCD processes, so numerous that
+could not be modelled accurately by simulated observations. Hence,
+a data-driven estimation method, referred to as hemisphere mixing, was
+developed and validated on control regions to model the background
+contribution. The final summary statistic used in the analysis
+is based on a the output of a probabilistic classifier, an
+ensemble of gradient boosted decision trees, trained using
+simulated signal observations and artificial events produced by
+the background estimation method. After assessing the different
+sources of systematic uncertainties and including their effect
+in the statistical model, a median expected limit obtained for
+SM HH production of $419\ \textrm{fb}$ was obtained,
+which corresponds to approximately 37 times the SM expectation.
+The observed limit obtained is $847\ \textrm{fb}$, which
+is about two standard deviations above the expected limit. Limits were
+also obtained for a set of EFT benchmarks, which summarise the kinematical
+properties of a large space of EFT models. The results of the
+combination of this analysis with other HH decay channels were also included.
+The estimation of QCD multijet backgrounds will likely remain an
+important issue for
+future jet-based analysis at the LHC, given that the biases of the
+data-driven estimation methods would become more relevant as more
+data is available.
+
+The ultimate goal of LHC analyses is statistical inference, in the form
+of hypothesis testing or parameter estimation. Machine learning techniques
+are useful to approximate latent variables, that then can be used to
+construct powerful summary statistics for inference. In the presence
+of a generative-model that depends on additional uncertain parameters,
+often referred to as nuisance parameters, the merits of classification
+or regression based summary statistics are greatly diminished.
+These concerns have motivated the development of a new family of
+techniques to construct powerful summary statistics that account
+directly for the final inference objective. By building and minimising
+loss functions
+that approximate the expected uncertainty on the parameters of interest,
+also accounting for the effect of nuisance parameter, the
+[INFERNO]{.smallcaps} approach
+can leverage recent machine learning technologies to construct better summary
+statistics for the inference problem at hand. These techniques were applied
+to a series of synthetic problems and were found to significantly outperform
+classification-based summary statistics (e.g. a deep neural network
+and the optimal classifier) when nuisance parameters
+are included in the problem. More experiments are needed to evaluate
+the value of this technique for real-word inference problems, such as those
+found in particle physics analysis, it seems clear the worth of standard
+supervised learning techniques to construct summary statistics is bounded
+by the impact of known unknowns.
+
+
