@@ -5,40 +5,42 @@
 is worth a great deal more than a precise answer
 to the wrong question.}{John Tukey}
 
-By this point, it should have been made evident that powerful
+By this point, it should be evident that powerful
 statistical inference is the ultimate objective of all
 experimental high-energy analyses. Supervised learning
-based on simulated observation or acquired data control
+based on simulated observations or acquired data from control
 regions, and in particular probabilistic classification,
-provides a way to approximate latent variables of
-the generative model,
-that in turn are very useful to construct
-powerful summaries for inference. While this approach is very
+provides a way to extract and approximate estimate of the latent variables of
+the generative model. Those latent variable estimates are 
+in turn very useful to construct
+powerful summary for statistical inference. While this approach is very
 often encountered in experimental high energy physics,
 complex computer simulations are also required for many
 other scientific disciplines, making inference very
 challenging due to the intractability of the likelihood
-evaluation for the observed data. While summary
-statistics based on a powerful supervised learning
-algorithm can be asymptotically optimal in cases the generative
-model is well-defined, such as the output of soft classification
+evaluation for the observed data. Summary
+statistics based on a supervised learning
+algorithms can be asymptotically optimal if the generative
+model is fully defined, as is the case for the output of
+soft classification
 for mixture models where we are interested in the mixture
-coefficients, as demonstrated in [Section @sec:sig_vs_bkg]; their
+coefficients, as demonstrated in [Section @sec:sig_vs_bkg].
+Unfortunately, their
 usefulness can rapidly decrease when additional uncertain parameters
-affect the generative model. As a practical example, 
-in the analysis presented in [Chapter @sec:higgs_pair], the limiting
+affect the generative model. As a practical example,
+in the analysis presented in [Chapter @sec:higgs_pair]. The limiting
 factor for experimental sensitivity was not in the choice of summary
 statistics but rather on the lack of detailed knowledge about
 the expected contribution from background processes, which had to
 be address by the inclusion of nuisance parameters. The technique
 presented in this chapter, referred to as INFERNO
-and published at [@deCastro:2018mgh],
-is an attempt to tackle directly the the problem of constructing
-non-linear summary statistics from an statistical perspective
-that considers the final inference question.
-The key contribution required for achieving such goal,
+and published in [@deCastro:2018mgh],
+is an attempt to tackle directly the problem of constructing
+non-linear summary statistics from a statistical perspective
+that directly addresses the goal of the final inference question.
+The key contribution required for achieving such goal
 is to leverage the technology that has been
-develop for recent machine learning techniques, to build inference-aware
+developed for recent machine learning techniques, to build inference-aware
 loss functions that approximate the
 expected uncertainty on the parameters of interest, accounting
 for the effect of nuisance parameters.
@@ -78,11 +80,11 @@ of resulting statistical inference.
 
 For the particular problem
 of high energy physics data analyses at the LHC, the properties
-of the underlying model making the likelihood
-intractable, yet facilitating the construction of 
+of the underlying generative model discussed in [Chapter @sec:statinf]
+make the likelihood
+intractable, but its structure facilitates the construction of 
 simulation-based likelihoods of low-dimensional
-summary statistic that approximate latent variables,
-have been discussed in depth in [Chapter @sec:statinf].
+summary statistics that approximate latent variables.
 The ultimate aim is nevertheless to extract information
 about Nature from the large amounts of high-dimensional
 data on the subatomic particles produced by energetic collision of protons,
@@ -97,9 +99,8 @@ cannot be analytically computed.
 
 Due to the high dimensionality of the observed data, a low-dimensional summary
 statistic has to be constructed in order to perform inference. A
-well-known result of classical statistics,
-the Neyman-Pearson lemma[@NeymanPearson1933], which was also discussed
-in [Section @sec:hypo_test],
+well-known result of classical statistics, which was also discussed
+in [Section @sec:hypo_test] as the Neyman-Pearson lemma[@NeymanPearson1933],
 establishes that the likelihood-ratio
 $\Lambda(\boldsymbol{x})=p(\boldsymbol{x}| H_0)/p(\boldsymbol{x}| H_1)$ is
 the most powerful test  when two simple hypotheses are considered.
@@ -111,14 +112,14 @@ the problem as supervised learning classification.
 Within high energy physics analysis,
 the nature of the generative model (a mixture of different processes)
 allows the treatment of the problem as
-signal (S) vs background (B) classification [@adam2015higgs],
+signal (S) versus background (B) classification [@adam2015higgs],
 when the task becomes one of effectively estimating
 an approximation of $p_{S}(\boldsymbol{x})/p_{B}(\boldsymbol{x})$ which will
 vary monotonically with the likelihood ratio.
 While the use of classifiers to learn a summary statistic can be effective and
 increase the discovery sensitivity, the simulations used to generate
 the samples which are needed to train the classifier often depend on additional
-uncertain parameters (commonly referred as nuisance parameters).
+uncertain parameters (commonly referred to as nuisance parameters).
 These nuisance parameters are not of immediate interest but
 have to be accounted for in order to make quantitative statements about the
 model parameters based on the available data.
@@ -126,7 +127,7 @@ Classification-based summary statistics
 cannot easily account for those effects, so their inference power is degraded
 when nuisance parameters are finally taken into account.
 
-In this work, we present a new machine learning method to
+In this chapter, we present a new machine learning method to
 construct non-linear sample summary statistics that directly
 optimises the expected amount of information about the subset of
 parameters of interest using simulated samples, by explicitly
@@ -184,7 +185,8 @@ the general task of finding a sufficient summary statistic cannot be tackled
 directly. Hence, alternative methods to build summary statistics have
 to be followed.
 
-For simplicity, let us consider a problem where we are only interested on
+For simplicity, let us consider a problem where we are only interested in
+performing
 statistical inference on a
 single one-dimensional model parameter $\boldsymbol{\omega} = \{ \omega_0\}$
 given some observed data.
@@ -230,13 +232,13 @@ the statistical model as well as the expected effect of nuisance parameters.
   details).](gfx/106_chapter_6/figure1.pdf){#fig:diagram}
 
 The family of summary statistics $\boldsymbol{s}(D)$ considered in this
-work is composed by a neural network model applied to each dataset
+work is based on a neural network model applied to each dataset
 observation $\boldsymbol{f}(\boldsymbol{x}; \boldsymbol{\phi}) :
 \mathcal{X} \subseteq \mathbb{R}^{d} \rightarrow
 \mathcal{Y} \subseteq \mathbb{R}^{b}$,
 whose parameters $\boldsymbol{\phi}$ will be learned during training by means of
 stochastic gradient descent, as will be discussed later. Therefore,
-using set-builder notation the family of summary statistics considered
+using set-builder notation the considered family of summary statistics considered
 can be denoted as:
 $$
 \boldsymbol{s} (D, \boldsymbol{\phi})
@@ -286,7 +288,7 @@ $${#eq:likelihood}
 where the $n/g$ factor accounts for the different number of
 observations in the simulated samples. In cases where the number of
 observations is itself a random variable providing information about
-the parameters of interest, or where the simulated observation are weighted, the
+the parameters of interest, or where the simulated observations are weighted, the
 choice of normalisation of $\mathcal{L}$ may be slightly more involved and
 problem specific, but nevertheless amenable.
 
@@ -334,7 +336,7 @@ is flat in the chosen metric,
 then $\boldsymbol{\theta}_s$ is also the maximum a posteriori
 (MAP) estimator.
 By taking the negative logarithm and expanding in
-$\boldsymbol{\theta}$ around $\boldsymbol{\theta}_s$, we can obtain
+$\boldsymbol{\theta}$ around $\boldsymbol{\theta}_s$, we may obtain
 the Fisher information matrix [@fisher_1925] for the
 Asimov likelihood:
 $$
@@ -346,12 +348,12 @@ $${#eq:fisher_info}
 which can be computed via automatic differentiation
 if the simulation is differentiable and
 included in
-the computation graph or if the effect
+the computation graph, or if the effect
 of varying $\boldsymbol{\theta}$ over the simulated
 dataset $G_s$ can be effectively approximated. While this
 requirement does constrain the applicability of the proposed
 technique to a subset of likelihood-free inference
-problems, it is quite common for e.g. physical sciences
+problems, it is quite common in e.g. physical sciences
 that the effect of the parameters of interest and the
 main nuisance parameters over a sample can be
 approximated by the changes of mixture coefficients
@@ -468,7 +470,7 @@ classification based on simulated datasets
 can be used to learn powerful feature representations and increase
 the sensitivity of an analysis, it does not take into account the
 details of the inference procedure or the effect of nuisance
-parameters like the solution proposed in this work.
+parameters like the solution proposed here.
 
 The first known effort to include the effect of nuisance parameters
 in classification and explain the relation between classification
@@ -498,7 +500,8 @@ a direct regression of the likelihood ratio
 and/or likelihood score in the training losses.
 While extremely promising, the most performing solutions are designed for
 a subset of the inference problems at the LHC and they require considerable changes
-in the way the inference is carried out. The aim of this work is different,
+in the way the inference is carried out. The aim of the algorithm
+proposed here is different,
 as we try to learn sample summary statistics that may act as a
 plug-in replacement of
 classifier-based dimensionality reduction and can be applied to general
@@ -514,7 +517,8 @@ then can be used directly as a summary statistic.
 
 A different path is taken by Louppe et al. [@louppe2017learning],
 where the authors present a adversarial training procedure to enforce a
-pivotal property on a predictive model. The main concern of this
+pivotal property on a predictive model. The main concern we have on
+the use of that approach of that
 approach is that a classifier which is pivotal with respect
 to nuisance parameters might not be optimal, neither for classification
 nor for statistical inference. Instead of aiming for being pivotal, the
@@ -619,7 +623,8 @@ p(\boldsymbol{x}| s, r, \lambda, b) = \frac{b}{ s+b}
  f_b(\boldsymbol{x} | r, \lambda) +
  \frac{s}{s+b} f_s(\boldsymbol{x}).
 $${#eq:mixture_alt}
-This parametrisation is common for physics analyses at the LHC,
+The parametrisation of [Equation @eq:mixture_alt]
+is common for physics analyses at the LHC,
 because theoretical calculations provide information about the expected number
 of observations. If the probability density is known, but the expectation for
 the number of observed events depends on the model parameters, the likelihood
@@ -643,14 +648,14 @@ that $s^{*}(\boldsymbol{x})$ is a sufficient summary statistic with respect to a
 arbitrary two-component mixture model if the only unknown parameter
 is the signal mixture fraction $\mu$ (or alternatively $s$ in the chosen
 parametrisation).
-In practise, the probability density functions of signal and
+In practice, the probability density functions of signal and
 background are not known analytically, and only forward samples are available
 through simulation, so alternative approaches are required.
 
-While the synthetic nature of this example allows to rapidly generate
+The synthetic nature of this example allows to rapidly generate
 training data
 on demand,
-a training dataset of 200,000 simulated observations has been considered,
+yet a training dataset of only 200,000 simulated observations has been considered,
 in order
 to study how the proposed method performs when training data is limited.
 Half of the simulated
@@ -658,7 +663,7 @@ observations correspond to the signal component and half to the background
 component. The latter has been generated using $r=0.0$ and
 $\lambda=3.0$.
 A validation holdout from the training dataset of 200,000
-observations is only used for computing relevant metrics during
+observations is used exclusively for computing relevant metrics during
 training and
 to control over-fitting. The final figures of merit that allow to
 compare different approaches are computed
@@ -667,8 +672,10 @@ For simplicity, mini-batches for each training step are balanced so the same
 number of events from each component is taken both when using
 standard classification or inference-aware losses.
 
-An option is to pose the problem as one of classification
-based on a simulated dataset. A supervised machine learning model such a
+A common treatment of this problem in high-energy physics
+consist of posing the problem as one of classification
+based on a simulated dataset, as discussed in [Section @sec:sig_vs_bkg].
+A supervised machine learning model such a
 neural network can be trained to discriminate signal and background
 observations, considering a fixed parameters $r$ and $\lambda$.
 The output of such a model typically consist in class probabilities
@@ -726,7 +733,7 @@ Instead the effect of $r$ and $\lambda$, both nuisance parameters
 that will define the background distribution, is more easily modelled
 as a transformation of the input data $\boldsymbol{x}$. In particular,
 $r$ is a nuisance parameter that causes a shift on the background
-along the first dimension  and its effect can accounted for in the
+along the first dimension  and its effect may be accounted for in the
 computation graph by simply adding $(r,0.0,0.0)$ to each observation
 in the mini-batch generated from the background distribution.
 Similarly, the effect of $\lambda$ can be modelled by multiplying
@@ -764,7 +771,7 @@ model is trained independently of the benchmark considered. In real-world
 inference scenarios, nuisance parameters have often to be accounted for and
 typically are constrained by prior information or auxiliary measurements.
 For the approach
-presented in this work, inference-aware neural optimisation, the effect of the
+presented here, inference-aware neural optimisation, the effect of the
 nuisance parameters and their constraints can be taken into account during training.
 Hence, 5 different training procedures for \textsc{INFERNO} will be considered,
 one for each of the benchmarks, denoted by the same number. 
@@ -777,7 +784,7 @@ in the problem considered. Instead, for inference-aware classification
 the number of output nodes can be arbitrary and will be denoted with $b$,
 corresponding to the dimensionality of the sample summary statistics.
 The final layer is followed by a softmax activation function and
-a temperature $\tau = 0.1$ for inference-aware learning to ensure
+a temperature $\tau = 0.1$ for inference-aware learning in order to ensure
 that the differentiable approximations are closer to the true
 expectations. Standard
 mini-batch stochastic gradient descent (SGD) is used for training and
