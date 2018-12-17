@@ -8,15 +8,15 @@ and accumulating the resulting knowledge in models that
 can be used to predict and shape the future reality.
 The scientific method provides a formal framework for carrying out these
 investigations and checking the validity of the current description of
-our environment. Recorded experience of assumed known origin,
-also known as data, has a central role in updating these explicative
+our environment. Recorded experiences of assumed known origin,
+also known as data, have a central role in updating these explicative
 theories, because it can provide quantitative or qualitative
 support to some candidate explanations over others.
 
-Direct sensory perception and personal information processing has a
-limited investigative reach and it is easily affected by subjective
-conditions. Well understood and calibrated instruments of
-measurement can be used instead for data acquisition, in controlled
+Direct sensory perception and personal information processing have a
+limited investigative reach and are easily affected by subjective
+conditions. Well understood and calibrated measurement instruments
+can be used instead for data acquisition, in controlled
 settings referred to as scientific experiments, so that
 quantifiability and precision are enhanced. The same
 applies to theoretical modelling and experimental data analysis, where robust
@@ -28,7 +28,7 @@ and conceptual innovations allow the development of better tools,
 which in turn lead to more scientific knowledge.
 
 The universe is filled with an abundance of
-interesting situations occurring at very
+interesting phenomena occurring at very
 different time and space scales, so curious observers might
 face a difficult choice when deciding what to focus their scientific
 attention on. Nevertheless, there seems to be a complexity hierarchy
@@ -44,7 +44,7 @@ That will be our motivation to delve into experimental particle
 physics, a discipline dealing with the practical study of the
 most elementary constituents of matter and their interactions.
 
-It is important to remark that the elementary quality of the chosen subject
+The elementary quality of the chosen subject
 of study does not
 imply that the journey towards valuable scientific knowledge in this area
 will be a simple one. On the contrary, as the following chapters
@@ -80,13 +80,13 @@ The general methodology considered in this work consists on breaking the
 main research goals in a series of applied problems, express them in a
 domain-generic way, and understand what is their role in view of the
 final aim. When possible, the presented concepts and methods will be
-illustrated with simple use cases which can be a
-great help to understand their working principles.
+illustrated with simple use cases when these can help
+understanding their working principles.
 The mentioned perspective shift combined with the use of practical but
 minimal examples has been really useful to identify possible shortcomings
 on the way data analysis is carried out at the LHC, as well as to
 develop new techniques
-capable of addressing them. Nevertheless, I am of the opinion that the
+capable of addressing them. Nevertheless, we believe that the
 projects mentioned and presented here are nothing but the first step
 of what is possible; and the evolution of data analysis techniques
 and tools could be a promising route for the advancement of our understanding
@@ -104,7 +104,7 @@ be highlighted when describing the theoretical foundations.
 
 The focus shifts in [Chapter @sec:experiment] towards how these
 theories can be experimentally validated through scientific experiments. In
-particular, the discussion verses around how the design and characteristics of
+particular, the discussion revolves around how the design and characteristics of
 general purpose experiments at high-energy colliders are relevant for
 the attainment of valuable data that yields new insights on the
 fundamental properties of the cosmos. The Compact Muon Experiment (CMS)
@@ -119,8 +119,8 @@ extracting knowledge from the acquired data.
 
 Indeed, the problem of obtaining useful information from data is so involved
 in modern scientific experiments that a standalone chapter will be centered
-on statistical inference concepts and techniques. In fact, it could 
-be argued that inference is the ultimate goal of particle
+on statistical inference concepts and techniques. Inference is the ultimate
+goal of particle
 physics experiments, providing a key connection between
 theory and experiment. In [Chapter @sec:statinf]
 we review the problem at hand in particle colliders form
@@ -133,7 +133,7 @@ we are not interested in, commonly referred as nuisance parameters.
 
 Advancements in computational power coupled with
 extensive research effort at the intersection between computer science and
-statistics during last decades have contributed
+statistics during the past few decades have contributed
 to the development of techniques that deal with the automatic
 improvement of certain objective tasks given some data. An introduction to this
 family of methods, generally referred to as machine learning techniques,
