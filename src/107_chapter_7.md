@@ -134,10 +134,10 @@ effort is then required to make sure of the role of a given tool is aligned
 with the task at hand instead on the subtleties of the tool itself. When
 using advanced statistical techniques or machine learning, the final analysis
 goal is of the upmost relevance and cannot be neglected in favour of
-procedural conventions. iF those measures are coupled with
-open research practices  and a careful use
-of domain-specific language and constructs, in order to promote
-collaboration with other disciplines, it is likely that better tools
-would be developed which could in turn lead to major advancements in this
-research field.
+procedural conventions. If those measures are coupled with
+open research practices and a careful use
+of domain-specific language and constructs in order to promote
+collaboration with other disciplines, better tools
+are likely to be developed which could in turn lead to major
+advancements in this research field.
 
