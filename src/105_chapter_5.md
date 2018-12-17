@@ -318,7 +318,7 @@ selection is described in detail in [Section @sec:event_selection].
 
 After a basic event selection, mainly comprising the filtering of
 events with four or more b-tagged
-jets, a subset including four of the reconstructed jets within each event is
+jets[^cr_jets], a subset including four of the reconstructed jets within each event is
 paired to construct two *di-jet candidates*, as an attempt to recover
 the kinematic properties of the Higgs bosons, including
 their reconstructed masses. 
@@ -331,6 +331,10 @@ classification model, specifically machine learning model based on
 boosted decision trees (see [Section @sec:boosted_decision_trees]),
 to separate signal from background, in a analogous manner to what
 was described in [Section @sec:sig_vs_bkg].
+
+[^cr_jets]: Events with a different b-tagged jet definition will be
+also used to define a data control region, as will be discussed
+in [Section @sec:bkg_validation].
 
 The statistical inference in this analysis is based on constructing
 a binned likelihood of the expected distribution of the classifier
@@ -773,8 +777,10 @@ for hemispheres has been defined.
 ](gfx/105_chapter_5/hemisphere_mixing.pdf){
 #fig:hemisphere_mixing width=100%}
 
-The inter-hemisphere distance criterion is a function of the set of reconstructed
-jets contained in each hemisphere, and is a combination of discrete and
+The matching between the original and the replacement hemisphere is
+done by finding the pair minimising a inter-hemisphere distance. The
+mentioned distance is a function of the set of reconstructed
+jets contained within each hemisphere, and it is a combination of discrete and
 continuous variables. The discrete requirement for matching original hemispheres
 with those in the library is that they have the same number of jets $N_j^h$ and
 b-tagged jets $N_b^h$, which ensures a similar jet multiplicity distributions
@@ -858,9 +864,12 @@ the original dataset are effectively removed. This has been tested
 by injecting up to 100 times the expected SM contribution of
 simulated HH production events to a dataset of simulated
 QCD multi-jet events. The distributions of the various variables
-after hemisphere mixing are compatible with the QCD multi-jet
-component, which is the majority component and not affected by the
-presence of signal.
+after hemisphere mixing are not affected by the
+presence of signal, and are compatible with the QCD multi-jet
+component, which is the majority component. The level of
+agreement for the variables used as input of the probabilistic
+classifier in a control region will be discussed in more
+detail in [Section @sec:bkg_validation].
 
 The hemisphere mixing technique is applied to the data events
 passing the selection described in [Section @sec:event_selection].
@@ -1061,10 +1070,11 @@ control region is also shown in
 [Figure @fig:Figure_006]. The mean of the predicted values minus
 the observed values are compatible with zero in both control regions,
 while the root-mean-squared of the pull distribution is not compatible
-with one in the $M_\textrm{H}$. The uncertainty on the background shape
-per each bin is conservatively
-enlarged until the standard deviation of the pull distribution
-becomes one.
+with one in the $M_\textrm{H}$. In order to conservatively account
+for the mentioned discrepancy, the variation due to
+the nuisance parameters added per bin to account for the limited statistics
+of the artificial background sample is multiplied by a factor $\alpha=1.9$
+so the previous pull distribution root-mean-square becomes one.
 
 ![Diagram describing the procedure used to estimate the background bias correction.
 All possible combinations of mixed hemispheres except those used for training are
