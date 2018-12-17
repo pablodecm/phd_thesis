@@ -8,7 +8,7 @@ disciplines such as machine learning and statistics
 encounters significant
 barriers, mainly due to the use of domain-specific language
 and constructs.
-A large part of this document, which also doubles as introduction
+A large part of this document, doubling as an introduction
 for an analysis searching for non-resonant
 Higgs pair production using data acquired by the CMS detector
 at the LHC, is thus devoted to the redefinition of the relevant
