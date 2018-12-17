@@ -263,7 +263,7 @@ The observables of interest, which are discussed in [Section @sec:pheno],
 are a function of the transition amplitude $\bra{i} \mathcal{S} \ket{f}$
 over all possible initial and final states. The transition probability
 $|\bra{i} \mathcal{S} \ket{f}|^2$ is then a function of the $\mathcal{S}$
-which describes the time-evolution from the initial states the the final
+which describes the time-evolution from the initial states the final
 state. The $\mathcal{S}$ matrix can be expressed as a perturbative
 series using the Dyson expansion:
 $$
@@ -715,7 +715,7 @@ rise to a scalar field $H$, whose Lagrangian can be obtained substituting
 [Equation @eq:scalar_rotation] in [Equation @eq:scalar_lagrangian],
 leading to the following terms:
 $$
-\mathcal{H} = \frac{1}{2} \partial_\mu H \partial^\mu -
+\mathcal{L}_{H} = \frac{1}{2} \partial_\mu H \partial^\mu -
 - \mu^2 H^2 - \lambda v H^3 - \frac{\lambda}{4} H^3
 $$ {#eq:higgs_lagrangian}
 where the second (quardratic term) can be interpreted as a scalar boson
@@ -740,23 +740,24 @@ of the spontaneous symmetry breaking mechanism.
 The experimental success of the Standard Model and its main 
 subcomponents QED, QCD and EW unification and
 symmetry breaking is clearly incontestable, ranging from the confirmation
-of theoretical prognostiscation of the existence and some the properties
+of theoretical prognostication of the existence and some the properties
 of new particles
 (e.g. $Z$, $W^{\pm}$ and Higgs bosons or top quark) to
 the agreement of precise predictions with meticulous experimental
 observations. The fine structure constant $\alpha$ at zero energy scale
 is an example of the latter, with its experimentally determined value being
-compatible with the Standard Model based theoretical prediction up
-to 12 orders of magnitude [@hanneke2008new; @parker2018measurement]. In addition to describing natural phenomena
+compatible with its Standard Model based theoretical prediction down
+to 12 significant digits [@hanneke2008new; @parker2018measurement].
+In addition to describing natural phenomena
 with unprecedented accuracy, the SM it is a self-consistent theory that 
-provide non-divergent predictions at the highest energy scales probed to date.
+provides non-divergent predictions at the highest energy scales probed to date.
 
 ### Known Limitations
 
 
 In spite of the successes mentioned above,
 several shortcomings of the Standard Model are known
-and hence is not considered as a complete theory of natural phenomena
+and hence the theory is not considered as a complete theory of natural phenomena
 at the most fundamental scales. Those concerns include unexplained empirically
 observed phenomena such as gravitational interactions, neutrino masses or
 dark matter particle candidates,
@@ -792,11 +793,11 @@ main empirical and theoretical concerns are summarised:
   massive existing matter in the universe does not notably interact
   with ordinary matter and radiation, and therefore is referred
   as *Dark Matter*. While its particular nature is still unknown, scientific
-  consensus seem to favour long-lived cold non-baryonic matter as an explanation,
+  consensus seems to favour long-lived cold non-baryonic matter as an explanation,
   predominantly weakly-interacting massive particles (WIMPs). The three
   neutrino types are the
   only WIMP within the Standard Model, but considering
-  the known upper limits on their masses, they can account for a very
+  the known upper limits on their masses, they can only account for a very
   small fraction of the total mass of dark matter in the universe. 
   
   
@@ -812,10 +813,10 @@ main empirical and theoretical concerns are summarised:
   included in the SM, are needed to resolve the mentioned disparity.
 
 * **Origin of neutrino masses**: the Standard Model was developed assuming
-  that neutrinos were massless, yet is currently well-stablished
-  that neutrinos oscillate between different flavour states
+  that neutrinos were massless, yet is currently well established
+  that neutrinos oscillate between different flavour eigenstates
   [@fukuda1998evidence; @sno2001measurement], implying 
-  that flavour states are mixing and hence that neutrino masses are
+  that flavour states mix and hence that neutrino masses are
   very small but different from zero.
   The SM Lagrangian can be extended to account for the masses of neutrinos
   in a similar fashion to what is done for leptons and quarks, but their 
@@ -848,11 +849,11 @@ main empirical and theoretical concerns are summarised:
   such as the Standard Model, some non-zero zero-point
   energy originating from quantum fluctuations is expected. However,
   modern attempts to predict energy densities from QFT are at variance
-  with the observed energy vacuum energy density, some of them differing in
+  with the observed energy vacuum energy density, some of them differing by
   120 orders of magnitude [@adler1995vacuum].
   
   
-* **Naturalness, hierarchy and fine-tunning concerns**: as discussed at the
+* **Naturalness, hierarchy and fine-tuning concerns**: as discussed at the
   beginning of [Section @sec:standard_model], the SM can be thought of
   the most general theory based on  a set symmetries, and its
   19 parameters (or 26 accounting for neutrino masses
@@ -860,7 +861,7 @@ main empirical and theoretical concerns are summarised:
   are not obtained from first principles but measured experimentally.
   Having such a large number of free
   parameters and observing large differences among their
-  relative magnitude, has been viewed as a theoretical concern from
+  relative magnitude has been viewed as a theoretical concern from
   an aesthetic perspective. A related issue is why the electroweak
   energy scale (epitomised by the Higgs mass) is much smaller than
   the assumed cut-off scale of the SM, where gravitational
@@ -874,9 +875,10 @@ main empirical and theoretical concerns are summarised:
   property of the SM theory.
 
 Other possible issues, in some cases related with those discussed,
-have also been raised 
-such as the apparent vacuum meta-stability [@degrassi2012higgs] or
-the strong CP problem [@cheng1988strong]. Some of these issues can be clarified
+have also been raised. On of them is
+the apparent vacuum meta-stability [@degrassi2012higgs] or
+the strong CP problem [@cheng1988strong]. Some of these questions
+can be clarified
 once the higher precision measurements of the SM become available, which
 are mainly obtained in particle collider experiments.
 
@@ -888,7 +890,7 @@ interactions. Given the quantitative success of the Standard Model,
 most of the known proposed theoretical models are either extensions of
 the SM or its associated predictions can be effectively
 reduced to those of the SM at the energy range current being
-explored in particle physics experiments. The set of alternative
+explored in particle physics experiments. The set of alternatives
 that have been proposed is too substantial to be exhaustively listed
 here, especially given that many of the alternatives include
 additional free parameters that greatly modify the expected
@@ -909,15 +911,14 @@ the SM.
 
 #### Effective Field Theories
 
-In addition carrying out precision measurements and model-specific
-searches, there exist a
+In addition to carrying out precision measurements and model-specific
+searches, there exists a
 practical way
 to consider possible extensions due to New Physics phenomena occurring
-at a higher energy scale $\Lambda$ than the one being probed $E$. Such
-model-independent approach, that
-is often referred to as *effective field theory* (EFT) [@PhysRevD.11.2856;
-@Buchmuller:1985jz], allows to compute
-observables by extending the SM Lagrangian from [Section @sec:sm_lagrangian]
+at a higher energy scale $\Lambda$ than the one being probed $E$. The
+model-independent approach often referred to as *effective field theory* (EFT) [@PhysRevD.11.2856;
+@Buchmuller:1985jz] allows to compute
+observables by extending the SM Lagrangian terms from [Section @sec:standard_model]
 with additional operators:
 $$
 \mathcal{L}_\textrm{EFT} = \mathcal{L}_\textrm{SM}
@@ -932,7 +933,8 @@ $\textrm{dim} \left( \mathcal{O}_i \right) = \left[ E \right]^{d_i}$,
 and while in principle 
 an infinite set of operators with any dimension $d_i > 4$ can be considered,
 their effects is expected to be suppressed by $(E/\Lambda)^{d_i - 4}$ thus
-high-dimensional operators can often be neglected.
+high-dimensional operators may be neglected when studying the dominant
+effects of an EFT extension of the SM.
 
 If all the EFT coefficients $c_i$ are zero or the new energy scale $\Lambda$
 is infinite, the EFT theory reduces to the SM Lagrangian. Instead,
@@ -943,8 +945,8 @@ and the interactions
 have to realistic modelled using the a complete theoretical description
 of the New Physics scenario. While in general effective field
 theories are not renormalisable, observables and higher-order corrections
-can be computed, because the of the well-defined cutoff energy scale
-$\Lambda$. The best-known example of an EFT that has been used in practise
+can be computed, because of the well-defined cutoff energy scale
+$\Lambda$. The best-known example of an EFT that has been used in practice
 is Fermi theory, which is a simplification to compute useful observables
 at low-energies $E \approx 10\ \textrm{MeV}$ rather than an extension of
 the SM, given that the detailed structure of electroweak
@@ -1009,8 +1011,8 @@ collision, under the assumption of validity of a particular theoretical model,
 their total expected rate of occurrence is one the most relevant
 quantities to predict and compare with observation.
 To ease its experimental interpretation,
-the rate of occurrence of certain process is commonly
-expressed as as a cross section $\sigma$,
+the rate of occurrence of any given subnuclear is commonly
+expressed as a cross section $\sigma$,
 which has dimensions of area and is typically expressed in submultiples
 of barn ($1 \textrm{barn} = 10^{-28} \textrm{m}^2$). The advantage of cross
 sections over rates is that their value is independent from the density
@@ -1024,13 +1026,14 @@ Another related concept, which is especially important for simulating
 interactions,
 is the differential cross section $d\sigma$. While the initial state
 conditions are fixed, the rate of
-occurrence of a physical process can be expressed as as a function of
+occurrence of a physical process can be expressed as a function of
 some final-state
 variables, such as the angle and energy of outgoing particles. While these
 variables can be integrated over to compute total cross sections $\sigma$,
 the integrand is proportional to the probability density of each
-outcome happening as a function of final-state variables so is
-crucial for modelling their multi-dimensional distributions
+outcome happening as a function of final-state variables, hence its
+evaluation is
+crucial for a correct modelling of their multi-dimensional distributions
 via random sampling. In fact, we will be dealing
 with differential cross sections instead of total process cross section
 in this section for generality.
@@ -1038,19 +1041,21 @@ in this section for generality.
 ### Parton Distribution Functions {#sec:pdfs}
 
 A complication that has not been addressed yet is that protons are
-composite particles, formed by two up-type quarks
-and one down-type quarks bound together via the strong force.
-The dynamics of proton-proton scattering are therefore dictated by quantum
+composite particles, which within a static interpretation can be thought
+of as the combination of two up-type quarks
+and one down-type quark bound together via the strong force.
+The dynamics of proton-proton scattering are then dictated by quantum
 chromodynamics (see [@sec:qcd_detail]), which cannot be addressed using perturbation
 theory for low
 energies, limiting the first principles computation of relevant
-observables for the most common interactions. Luckily for us,
-the most promising territory being explored in energy colliders correspond
-to higher energies, where relevant interaction outcomes come from the
-hard scattering of proton constituents (referred to as partons),
-and predictions can
+observables for the most common interactions.
+That said, predictions regarding the interaction outcomes from the
+hard scattering of proton constituents (referred to as partons) can
 be perturbatively approximated under the assumption of asymptotic
-freedom.
+freedom at high energies. This allows the modelling of very high
+energy collisions at particle colliders, which are the focus
+of most LHC analyses, even if the details
+about the parton structure cannot be calculated.
 
 
 ::: {#fig:subfigs_pdfs .subfigures}
@@ -1065,13 +1070,14 @@ shown is 1/10 of the actual contribution. Image adapted from the NNPDF
 collaboration [@Ball:2017nwa].
 :::
 
-Even for modelling hard scattering processes, a non-perturbative input is
+When modelling hard (i.e. high energy) scattering processes,
+a non-perturbative input is
 required, mainly the probability of finding a particular proton constituent
 with a certain momentum fraction inside each of the colliding protons,
 referred to as the parton distribution function (PDF).
 The model of the proton as three quarks coupled by strong force 
 is too simplistic for modelling proton-proton scattering realistically,
-specially at high energies. The continuous exchange of gluons between the three 
+especially at high energies. The continuous exchange of gluons between the three 
 constituent quarks effectively generates
 a sea of virtual quark-antiquark pairs from which other partons can
 scatter off. Consequently, in the interaction of two protons, not only
@@ -1083,14 +1089,14 @@ PDFs are not computable from first principles so they
 have to be parametrised and extrapolated from various experimental sources
 including fixed-target proton deep inelastic scattering (DIS) and previous
 collider studies. It is worth noting that the distribution functions depend
-strongly in the energy scale of the process, yet the evolution for parton
+strongly on the energy scale of the process, yet the evolution for parton
 densities can be modelled theoretically
 [@Altarelli:1977zs;@Dokshitzer:1977sg;@Gribov:1972ri]. Given their relevance
 for computing observables in high-energy colliders,
 several research collaborations such as NNPDF [@Ball:2017nwa] provide accurate
 estimations that can be readily used for simulation and prediction. In
-[Figure @fig:subfigs_pdfs], the parton distribution functions at two different
-energy scales estimated by one of those collaborations are shown, at lower
+[Figure @fig:subfigs_pdfs] are shown the parton distribution functions at two different
+energy scales estimated by one of those collaborations, at lower
 energy scales the valence quarks (up and down) dominate while when we
 extrapolate at higher energies, gluon scattering become the most likely
 outcome for the interaction.
@@ -1099,14 +1105,15 @@ outcome for the interaction.
 ### Factorisation and Generation of Hard Processes {#sec:factorisation}
 
 
-Let us consider the computation the differential cross section for a hard
+Let us consider the computation of the differential cross section for a hard
 scattering process $pp \rightarrow X$, which will be denoted as
 $d\sigma(pp \rightarrow X)$, for two protons colliding head on
-at center of mass energy $s$. Here
+at centre of mass energy $s$. Here
 $X$ denotes a possible outcome for the interaction, not necessarily a single
 particle and the proton remnants (e.g. a Higgs boson $X=H + \textrm{other}$),
 but a set of particles (e.g. a bottom
-quark-antiquark pair $X=b\hat{b} + \textrm{other}$). According to the QCD factorisation
+quark-antiquark pair $X=\textrm{b}\bar{\textrm{b}} + \textrm{other}$).
+According to the QCD factorisation
 theorem [@Collins:1989gx], the differential cross section for
 $d\sigma(pp \rightarrow X)$
 can be expressed as a sum of functions of the partonic cross section 
@@ -1123,7 +1130,7 @@ a gluon), $f_i(x_1, \mu_F^2)$ and  $f_j(x_2, \mu_F^2)$ are their parton distribu
 functions for given momentum fractions $x_1$ and $x_2$ respectively, $\mu_F$ is
 the factorisation scale and $\mu_R$ is the renormalisation scale. The
 differential partonic cross section $d\hat{\sigma}_{ij\rightarrow X}$ for
-at center of mass energy of the interacting partons $\hat{s}=s x_1 x_2$,
+a centre of mass energy of the interacting partons $\hat{s}=s x_1 x_2$,
 can be calculated perturbatively at different expansion orders from
 the Lagrangian density as hinted in Section [-@sec:standard_model]. The
 total cross section  $\sigma(pp \rightarrow X)$ can
@@ -1166,7 +1173,7 @@ due to additional physical effects occurring in a bunch crossing not accounted
 in Equation [-@eq:qcd_factorisation], such as additional collision products
 due to multiple interactions or processes comprising the proton
 remnants. Thus it is very useful in the construction of the complete
-mode to consider the problem
+model to consider the problem
 of generation of realistic collision products. Taking into consideration
 that some of the computational techniques for including
 subsequent physical processes and the detailed simulation of the detectors
@@ -1216,7 +1223,7 @@ red colour, producing a tree-like structure of decays, in turn
 producing partons that rapidly transition to hadrons (light green ellipses)
 and decay (dark green circles) as well as soft photon radiation (yellow lines).
 The blue lines represent the  interaction between partons and the path of the
-the initial hadron remnants followed by light blue ellipses. For completion,
+the initial hadron remnants followed by light blue ellipses. For completeness,
 an additional hard interaction within the same hadron-hadron process is
 shown in purple,
 which often has to be accounted for to obtain realistic simulations.

@@ -50,7 +50,7 @@ Fermilab.
 ![Depiction of the placement of LHC tunnel and the main experiments
 places at its collision points (ATLAS, ALICE, CMS and LHCb) relative
 to Geneva and the French-Swiss border.
-Image adapted from [@Servicegraphique:1708849].
+The image adapted from [@Servicegraphique:1708849].
 ](gfx/102_chapter_2/LHC_overall.pdf){
 #fig:LHC_overall width=70%}
 
@@ -64,7 +64,7 @@ practical advantage of proton colliders is that very high
 collisions rates (i.e. instantaneous
 luminosities) are technically achievable, which makes them suitable for
 the discovery of rare but interesting physical processes.
-While the LHC and most of its detectors can also be used with to study
+While the LHC and most of its detectors can also be used to study
 collisions
 of nuclei from heavier atoms, such as $\textrm{Pb}$, $\textrm{Au}$ 
 or $\textrm{Xe}$ ions,
@@ -120,7 +120,7 @@ fields (up to 8.3 T for a 11.8 kA current). For collimation
 of the proton bunches, 392 additional quadrupole magnets are
 placed around the ring. Higher-order multipoles are also interleaved
 to provide finer corrections of the beam direction and field geometry.
-Additional energy to the protons is provided in each revolution
+Additional energy is provided to the protons in each revolution
 using 8 radio frequency (RF) cavities per beam line, until the
 protons reach the desired energy (6.5 TeV during the Run II of the
 LHC, which took place between 2015-2018). Given that each cavity can
@@ -134,15 +134,15 @@ With the purpose of maximising
 the interaction rates, the beams are made more compact (commonly
 referred as *squeezed*) at the interaction region
 right before switching to collision mode. Once
-the characteristics of the proton beam are suitable, the quadrupoles
+the characteristics of the proton beams are suitable, the quadrupoles
 align the beam trajectories and collisions begin. A stable
 configuration is then adopted by the LHC machine, providing about 7 keV 
 of energy per turn to the beam to account for synchrotron radiation losses using
-the RF cavities. If unexpected problems do not occur, the proton beams are kept
+the RF cavities. In the absence of problems, the proton beams are kept
 circling the LHC ring and colliding at the IPs for several hours until
 the bunch properties are degraded beyond correction,
 a period that typically is referred as a LHC *fill*. The *fill* is
-finalised when some problem occurs or when all the proton bunches
+terminated when some problem occurs or when all the proton bunches
 inside the ring are *dumped* (made collide) against graphite absorbers
 tangent to the beam pipes.
  
@@ -183,7 +183,7 @@ is the RMS of the beam in the transverse direction at the interaction volume.
 The peak instantaneous luminosities per day 
 for the different years of proton-proton data acquisition periods
 (also known as *runs*)
-at the LHC are summarised in [Figure @fig:peak_lumi] , which can
+at the LHC are summarised in [Figure @fig:peak_lumi], those numbers can
 be compared with the peak design luminosity of the LHC of
 $\mathcal{L}_\textrm{design} = 10^{34}\ \textrm{cm}^{-2} \textrm{s}^{-1} = 10\ \textrm{Hz}/\textrm{nb}$.
 
@@ -194,14 +194,13 @@ all the proton-proton data-taking periods of the LHC to date. Figure from
 #fig:peak_lumi width=100%}
 
 From Equation [-@eq:lumi_beam] it can be inferred that that value of
-instantaneous luminosity varies between LHC *fills* depending on the beam
-parameters. In fact, it also varies within a single *fill* with time,
+instantaneous luminosity varies between LHC fills depending on the beam
+parameters. In fact, it also varies within a single fill with time,
 mainly because the number of average protons per bunch $n_p$ decreases
 due to the collisions at all the interaction points. For convenience,
 a quantity referred as integrated luminosity $\mathcal{L}_\textrm{int}$
 that is computed by integrating over the instantaneous luminosity for a
-given time period $\Delta T = t_1 - t_0$, such as stable collision period
-within a *fill*, is used:
+given time period $\Delta T = t_1 - t_0$ within a fill, is used:
 $$
   \mathcal{L}_\textrm{int} = \int_{t_0}^{t_1} \mathcal{L}(t) dt
 $$ {#eq:int_lumi}
@@ -336,7 +335,7 @@ experiments are installed at the LHC interaction points:
 Additionally, three smaller experiments are built around the mentioned
 detectors with specific research purposes: TOTEM [@TOTEM:2008JINST],
 LHCf [@LHCf:2008JINT] and MoEDAL [@MoEDAL:2014PP]. Both TOTEM and LHCf
-are built to investigate features of forward physics interactions, where
+have been designed to investigate features of forward physics interactions, where
 scattering products remain the original proton trajectories,
 and hence they are set up tangent to the LHC beam line at the sides of
 CMS and ATLAS interactions points respectively. MoeDAL is instead built
@@ -399,7 +398,7 @@ for a more specialised account.
 
 ![Cutaway view of the CMS detector, based on a three-dimensional representation,
 an highlighting the main detecting systems and characteristics.
-Image has been adapted from [@sakuma2014detector].
+The image has been adapted from [@sakuma2014detector].
 ](gfx/102_chapter_2/CMS_detector.pdf){
 #fig:CMS_detector width=90%}
 
@@ -442,23 +441,25 @@ frame of reference.
 Since the dependence on the initial state $z$ boost 
 would complicate the statistical analysis
 and the definition of derived observables, an alternative observable
-can be defined based on the rapidity $y$, which is defined as:
-$$y = \frac{1}{2} \ln \left ( \frac{E+p_z}{E-p_z} \right ) $$ {#eq:rapidity}
-and whose value on a under a $z$-axis boost can be easily obtained by adding
+can be used. The rapidity $y$ is defined as:
+$$
+y = \frac{1}{2} \ln \left ( \frac{E+p_z}{E-p_z} \right )
+$$ {#eq:rapidity}
+and its value on a under a $z$-axis boost can be easily obtained by adding
 an additive factor
-$y'=y-\textrm{tanh}^{-1} \beta$, and hence differences in rapidity between
+$y'=y-\textrm{tanh}^{-1} \beta$. Hence differences in rapidity between
 two particles in a collision $\Delta y = | y_b - y_a |$ are invariant to
 Lorentz boost in the $z$ direction. Because the rapidity depends on
 the total energy/momentum of the particle, which might not be possible to
 measure to high precisions in hadron collider detectors,
-it is more suitable to approximate it using
-the *pseudo-rapidity* $\eta$, defined as: 
+it is more suitable to approximate it. The approximation is referred to as
+the *pseudo-rapidity* $\eta$, and can be defined as: 
 $$\eta = \frac{1}{2} \ln \left ( \frac{p+p_z}{E-p_z} \right ) =
  \ln \left ( \tan \frac{\theta}{2} \right )
  $$ {#eq:pseudo_rapidity}
 that only depends on the polar angle $\theta$ with respect to the LHC plane.
 The *pseudo-rapidity* $\eta$
-and it is equal to the rapidity $y$ for massless particles, and a very
+is equal to the rapidity $y$ for massless particles, and is a very
 effective approximation in the highly-relativistic limit, when $E\gg m$.
 It is useful observing that for particle produced in the transverse
 plane, thus $\theta=\pi/2$, their *pseudo-rapidity* is $\eta=0$. Instead, in
@@ -498,10 +499,10 @@ $$r_T = \frac{p_T}{qB}  \quad
   \Longrightarrow \quad p_T
   [\textrm{GeV/c}] =  0.3 \cdot q[\textrm{e}] \cdot B[\textrm{T}]
   \cdot r_T[\textrm{m}]  $$ {#eq:lorentz_eq}
-where $q$ is the particle charge, and the second equation correspond
+where $q$ is the particle charge, and the second equation corresponds
 to a simplification using units denoted inside the brackets
 adjacent to each quantity ($\textrm{e}$ are electron charge units).
-These simple proportionality relation indicates that the higher
+This simple proportionality relation indicates that the higher
 the momentum of a particle, the larger its radius of curvature.
 Furthermore, the direction of the curvature is determined by the
 sign of the particle charge. For more realistic scenarios, like
@@ -511,26 +512,22 @@ to interaction with the detecting elements, Equation [-@eq:lorentz_eq]
 is only an approximation and the trajectory path can be obtained
 by solving a differential equation.
 
-In the case of CMS, the magnet is generated by a large
+In the case of CMS, the magnetic field is generated by a large
 superconducting solenoid, contained inside a hollow cylinder
 about 13 m long and with an outer radius of 3 m. Very
 high currents, up to 19 kA, circulate along $\textrm{NbTi}$
 wires kept at 4.5 K using a liquid helium cooling system,
 providing an almost homogenous field at the centre
-of the solenoid up to 3.8 T in the $z$ direction. In addtion
+of the solenoid up to 3.8 T in the $z$ direction. In addition
 to the solenoid, the
 magnetic flux lines are closed by a 10000 ton return yoke,
 composed by a series of magnetised iron blocks interleaved
 with the muon detectors in the outer part of CMS, providing
 a magnetic field about 2T in the opposite direction.
 The remaining elements of the CMS magnetic spectrometer,
-which are the 
-detector systems used to estimate the curved particle
-trajectories, commonly
-referred to as *tracks*, for all charged particles and for escaping
-muons are reviewed in Sections [-@sec:cms_tracking] and [-@sec:cms_muon],
-respectively.
-
+referring to the detector systems used to estimate the curved particle
+trajectories (simply referred to as *tracks*) are are reviewed in Sections
+[-@sec:cms_tracking] and [-@sec:cms_muon].
 
 ### Tracking System {#sec:cms_tracking}
 
@@ -543,7 +540,7 @@ or decay vertices by extrapolating the trajectories inside
 the interaction region. The detection of charged particle trajectories,
 or *tracks* for short, is carried out by several silicon
 detector layers placed non-uniformly around the collision volume,
-as shown in Figure [-@fig:CMS_tracker]. The placement is of layers is
+as shown in Figure [-@fig:CMS_tracker]. The placement of layers is
 symmetric in $\phi$, the outermost layers contained within
 a supporting cylindrical structure of 2.5 m of diameter and 5.8 m
 of length.
@@ -574,7 +571,7 @@ unit at acceptable levels.
 
 Being so close to the collision region, the set-up has to
 sustain very high particle fluxes during long periods of time,
-up $1 \textrm{MHz}/\textrm{mm}^{2}$ at the first pixel layer. Therefore,
+up to $1 \textrm{MHz}/\textrm{mm}^{2}$ at the first pixel layer. Therefore,
 resistance to radiation damage of the detecting elements and the
 accompanying electronics, dubbed as *radiation-hardness*,
 is an essential specification. Additionally, the amount of material
@@ -667,7 +664,7 @@ photodetectors placed at the end of each lead tungstate crystal.
 ![Cutaway view of the CMS electromagnetic calorimeter, based on a
 tree-dimensional model of the detector geometry. The placement
 of the lead tungstate crystal is shown for part of
-the barrel and endcaps. Figure has been adapted from [@CERN-LHCC-97-033].
+the barrel and endcaps. The figure has been adapted from [@CERN-LHCC-97-033].
 ](gfx/102_chapter_2/ecal_from_tdr.pdf){
 #fig:CMS_ecal width=90%}
 
@@ -735,11 +732,11 @@ is captured by a thin optical fibre and carried to a photodetector, producing
 electric signal that can be used to measure the total amount of deposited
 energy with the help of careful calibration.  
 
-![Cross sectional view of the CMS detector hadronic calorimeter (HCAL)
+![Cross sectional view of the CMS hadronic calorimeter (HCAL)
 detector in the $r-z$ plane, depicting the positioning of the various
 detector segments relative to the beam line and the solenoid magnet.
 The HCAL is symmetric around
-$r=0$, so only the top half is shown. Figure adapted from
+$r=0$, so only the top half is shown. The figure adapted from
 [@Chatrchyan:2009ag].
 ](gfx/102_chapter_2/HCAL.pdf){
 #fig:CMS_hcal width=70%}
@@ -804,13 +801,14 @@ The fibres running along the HF detect and guide the Cherenkov light of the
 charged secondary particles produced in the showers to photomultipliers
 tubes (PMT) placed behind a 40 cm thick steel and polyethylene shield.
 In this pseudo-rapidity range, the HF serves also as an electromagnetic
-calorimeter, and being able to disentangle the energy contributions
-from electromagnetic and hadronic showers is quite useful for
-many physics data analysis use cases. Given that electromagnetic showers
-are much shorter than hadronic showers, only half of the fibres
+calorimeter. The HF detector has been designed in a specific way
+to disentangle the energy contributions
+from electromagnetic and hadronic showers, which is useful for
+many physics data analyses use cases. Only half of the fibres
 start close to the face of the absorber plates closest to the IP,
-the rest other starting at a depth of 22 cm. By comparing the readouts
-of long and short fibres, the type of shower can be inferred.
+the rest starting at a depth of 22 cm. By comparing the readouts
+from the long and short fibres the type of shower can be inferred,
+given that electromagnetic showers are much shorter than hadronic showers.
 
 
 ### Muon System {#sec:cms_muon}
@@ -823,7 +821,7 @@ without a significant energy loss. While the trajectory can be
 detected in the inner tracker, the around of energy loss due to
 bremsstrahlung is much smaller than that of electron or positrons
 due to its much heavier mass
-(given that $\sigma_{\textrm{bremsstrahlung}} \propto 1/m^2$) 
+(given that the emission probability scales with $1/m^2$) 
 and hence the do not
 deposit a significant fraction of their energy in the ECAL or
 the HCAL. The simplest way then to augment the amount of information
@@ -844,7 +842,7 @@ Figure adapted from [@Sirunyan:2018fpa].
 The muon system is the most external sub-detector of CMS
 and it is based on gaseous tracking detector technologies,
 given the large volumes covered. The principle of action of
-gaseous detectors is rather simple, charged particles
+gaseous detectors is rather simple: charged particles
 passing through the gas ionise gas molecules in their path,
 which start moving due to a high electric field between
 conducing wires, producing an electrical signal
@@ -884,7 +882,7 @@ $|\eta| < 1.6$.
 
 As discussed in Section [-@sec:pheno], the occurrence of
 relevant processes that can provide information about the physical
-properties of fundamental interaction in
+properties of fundamental interactions in
 proton-proton collisions is purely stochastic given some initial conditions,
 plus their relative frequency is
 very rare compared with known
@@ -962,7 +960,7 @@ representations  can be achieved through simulation.
 
 In this section, a generative view of the main physical mechanisms
 that are happening both in the proton-proton collisions and when particles
-propagate through the CMS detector is first included. Such overview doubles as
+propagate through the CMS detector is first discussed. Such overview doubles as
 an introduction of the next section, where a description
 of how realistic simulations of the detector readouts (i.e. events)
 can be obtained using computational tools is provided. 
@@ -1004,7 +1002,7 @@ kinematics properties that would propagate through the detector.
 
 ![Transverse view of a section of the CMS detector and the interactions
 of the various particle types with the detecting sub-components.
-Figure has been adapted from [@Sirunyan:2017ulk].
+The figure has been adapted from [@Sirunyan:2017ulk].
 ](gfx/102_chapter_2/CMS_transverse.pdf){
 #fig:CMS_transverse width=70%}
 
@@ -1054,8 +1052,12 @@ to refer both to electrons and positrons, their charge inferred from the
 curvature sign of their trajectories. Charged hadrons, the term
 here largely referring to charged pions, kaons and protons, behave
 similarly to electrons in the
-tracking detector but instead generate much larger hadronic showers
+tracking detector[^track_caveat] but instead generate much larger
+hadronic showers
 in the hadronic calorimeter.
+
+[^track_caveat]: Tracks from electrons and positrons are different
+due to bremsstrahlung, the radiated photons often recovered in the ECAL.
 
 Long-lived neutral hadrons, including neutrons and the neutral kaon $K_L^0$,
 follow instead straight lines in the inner detector volume because they
@@ -1127,10 +1129,10 @@ approximated probability distributions or by a complex probabilistic program
 that goes through a mechanistic simulation of the underlying physical
 processes actually occurring.
 
-A detailed simulation a is found to be the most accurate approach,
+A detailed simulation is found to be the most accurate approach,
 given the many subtleties
 affecting the detector readout for a given set of generated particles, including
-possible various particle decays and material interactions that can occur when
+various possible particle decays and material interactions that can occur when
 the particle is travelling through the detector, the non-uniformity of the magnetic
 field and its effect on the particle trajectories, and
 the intricacy of the detector geometry and their electric response. All these
@@ -1223,7 +1225,7 @@ by an algorithm based on the expected properties of each particle type,
 to obtain a list of *physics objects* and their relevant attributes,
 which would probably correspond to those that actually were generated in
 the collision. Such approach, that is referred to as *particle-flow * (PF) event
-reconstruction [@Sirunyan:2017ulk] within CMS data analysis techniques,
+reconstruction [@Sirunyan:2017ulk] within CMS,
 has proven very effective to obtain a lower dimensional transformation of
 the detector readout that greatly simplifies the interpretation
 and categorisation of events based on their particle content.
@@ -1263,7 +1265,8 @@ to identify and compute the vertices location and their
 uncertainty more accurately. Most primary vertices
 correspond to soft scattering processes (pileup), and can be used
 to characterise the position and size of the interaction region. In collisions
-where a hard interaction occur, the main primary vertex can often be identified
+where a hard interaction occur, the main primary vertex can effectively
+be identified
 with the one whose linked tracks transverse momenta squared sum $\sum p_T^2$
 is the largest. The distinction of a main primary vertex is useful to
 mitigate the effect of pile-up interactions in reconstruction by
@@ -1290,7 +1293,7 @@ measurement of charged hadrons, identifying measure the energy of neutral
 hadrons and photons and as well as to facilitate the identification and
 reconstruction of electrons.
 
-Once the basic *elements* for event reconstruction have been constructed,
+Once the basic elements for event reconstruction have been constructed,
 charged particle tracks and calorimeter cluster are linked together
 to form *blocks*. This step is an attempt to group the various
 traces that particle can leave in the various sub-detectors, by linking
@@ -1532,7 +1535,7 @@ processes with physical interesting intermediate
 particles like a Higgs boson $H$ or top quarks/antiquarks,
 which predominantly decay to $b$ quarks. Heavy flavour $b$ quarks,
 and to a lesser extent also for $c$ quarks, hadronise producing $B$ (and
-$C$) hadrons that have lifetimes long enough to fly away from the
+$D$) hadrons that have lifetimes long enough to fly away from the
 primary vertex before decaying. 
 
 ![Schematic representation of the features of a heavy-flavour jet
@@ -1540,20 +1543,20 @@ that can be used for jet tagging including the presence charged tracks, with
 a large impact parameter (IP), that is not compatible with the primary vertex
 (PV),
 and a reconstructed secondary vertex (SV), both due to the decay of $\textrm{B}$
-or $\textrm{C}$ hadrons. Figure has been adapted from [@Sirunyan:2017ezt].
+or $\textrm{C}$ hadrons. The figure has been adapted from [@Sirunyan:2017ezt].
 ](gfx/102_chapter_2/Figure_001.pdf){
 #fig:CMS_btag_scheme width=50%}
 
-Some properties of the decay of $B$ and $C$ hadrons can be used to
+Some properties of the decay of $B$ and $D$ hadrons can be used to
 distinguish heavy flavour jets from those produced by light quarks and gluon
 hadronisation processes. In particular, the lifetimes of heavy flavour hadrons
 are often long enough that they move several millimetres  away from
-the primary vertex where they were produce before decaying, when
+the primary vertex where they were produced before decaying, when
 highly boosted. Thus, heavy flavour jets are associated with the presence
 of displaced charged tracks and secondary vertices (SV) within the jet,
 as depicted by [Figure @fig:CMS_btag_scheme]. In addition, both
-$\textrm{B}$
-or $\textrm{C}$ hadron decays are characterised by a large decay multiplicity
+$B$
+or $D$ hadron decays are characterised by a large decay multiplicity
 (average 5 charged daughters) and a high probability (36\%) of producing
 a lepton in their decays chain. Flavour tagging techniques, often referred
 to as b-tagging or c-tagging when the purpose is to identify a jets
@@ -1564,10 +1567,10 @@ flavour of the parton that generated a given jet.
 ![Misidentification probability (in log scale) for jets
 originating from $c$ (dashed line) and light quarks or gluons (solid line)
 versus b-tagging efficiency, for different b-tagging algorithms available
-in CMS during 2016. The misspecification probabilistic and efficiencies
+in CMS during 2016. The misidentification probability and efficiencies
 are obtained from the subset of reconstructed jets with a $p_T>20\ \textrm{GeV}$
 from a large $\textrm{t}\bar{\textrm{t}}$ simulated sample.
-Figure has been adapted from [@Sirunyan:2017ezt].
+The figure has been adapted from [@Sirunyan:2017ezt].
 ](gfx/102_chapter_2/Figure_016.pdf){
 #fig:CMS_btag_comp width=70%}
 
