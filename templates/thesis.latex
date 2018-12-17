@@ -17,7 +17,7 @@
 
 \usepackage{float}
 \usepackage{placeins}
-\floatplacement{figure}{h}
+\floatplacement{figure}{htbp}
 
 \setlength{\epigraphwidth}{0.6\textwidth}
 

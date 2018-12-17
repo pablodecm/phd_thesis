@@ -1206,7 +1206,7 @@ function (PDF) uncertainties, the PDF4LHC recommendations
 standard deviation of a set of 100 MC replicas of the NNPDF 3.0 set
 [@Ball:2014uwa].
 
-## Results {#sec:results}
+## Analysis Results {#sec:results}
 
 This section includes the experimental results of the search of
 non-resonant Higgs pair production with CMS data collected during 2016
@@ -1373,14 +1373,18 @@ Box &   1090  &   542  &   286  &   384  &   775  &   1080  \\
 limits at 95\% CL on the
 $\sigma(\textrm{pp} \rightarrow \textrm{HH}  \rightarrow
 \textrm{b}\bar{\textrm{b}}\textrm{b}\bar{\textrm{b}})$ cross
-section for the SM and the 13 BSM models investigated. 
+section for the SM and the 13 BSM models investigated. The inner
+green bands and the outer yellow bands and correspond
+to the range of percentiles around the median that contain
+the 68\% and 95\% times the upper limit under the background-only
+hypothesis.
 See Table \ref{table:benchmarks} for their
 respective EFT parameter values.](gfx/105_chapter_5/Figure_009.pdf){
-#fig:Figure_009 width=60%}
+#fig:Figure_009 width=50%}
 
 In addition to the BSM benchmarks, limits are also obtained
 for the cross section times branching ratio of Higgs pair production
-processes assuming in the EFT framework, varying $\kappa_\lambda$
+processes in the EFT framework, varying $\kappa_\lambda$
 in the range $[-20,20]$, while assuming that $\kappa_\textrm{t}=1$
 and the rest of the couplings are zero. The results are shown in
 [Figure @fig:Figure_010], noting that the upper limit changes considerably
@@ -1394,7 +1398,82 @@ experimental sensitivity.
 
 ![Observed and expected $\sigma(\textrm{pp} \rightarrow \textrm{HH}  \rightarrow
 \textrm{b}\bar{\textrm{b}}\textrm{b}\bar{\textrm{b}})$ cross section limits at 95\% CL
-for values of $\kappa_\lambda$ in the [-20,20] range, assuming  $\kappa_\textrm{t} = 1$; 
+for values of $\kappa_\lambda$ in the [-20,20] range, assuming  $\kappa_\textrm{t} = 1$.
+The inner
+green band and the outer yellow bands correspond
+to the range of percentiles around the median that contain
+the 68\% and 95\% times the upper limit under the background-only
+hypothesis. 
 the theoretical prediction with $\kappa_\textrm{t} = 1$ is also
 shown in red colour.](gfx/105_chapter_5/Figure_010.pdf){
-#fig:Figure_010 width=60%}
+#fig:Figure_010 width=50%}
+
+## Combination with Other Decay Channels {#sec:combination}
+
+The results of the search presented here have been combined with other
+Higgs pair searches carried out by the CMS collaboration for other
+decay channels for the same data collection period at $\sqrt{13}\ \textrm{TeV}$.
+For the combination, another three decay modes
+are considered in addition to the
+$\textrm{b}\bar{\textrm{b}}\textrm{b}\bar{\textrm{b}}$, where one
+the Higgs decays to a $\textrm{b}\bar{\textrm{b}}$ pair where the
+other decays into $\gamma\gamma$, $\tau\bar{\tau}$ or a pair or
+vector bosons. Combined upper limits where obtained by considering
+the product of the likelihoods, which depend on the HH cross section
+and several nuisance parameters. Some sources of uncertainty that
+are correlated between different channels, such as the luminosity
+or b-tagging uncertainty, where modelled using the same nuisance
+parameters in each individual likelihood. More details on the combination
+procedure are included in the following CMS Public Analysis Note [@CMS-PAS-HIG-17-030].
+
+The 95\% C.L. upper limits for the Higgs
+pair non-resonant production cross
+section $\sigma(\textrm{pp} \rightarrow \textrm{HH})$
+from the $\textrm{pp} \rightarrow \textrm{HH}  \rightarrow
+\textrm{b}\bar{\textrm{b}}\textrm{b}\bar{\textrm{b}}$ can be compared with
+those obtained by the other searches in [Figure @fig:comb_Figure_001]. In the
+same figure, the upper limits for the combination of the four
+decay modes are also shown. The combination results are statistically
+compatible with the SM background contribution.  An median expected limit
+of $12.8$ times the SM expectation is obtained from the combination.
+The combined observed upper limit is $22.2$ times the SM expectation,
+which is well-within the expected variation under the background
+only hypothesis. Analogously to what was done in [Section @sec:results],
+upper limits are also obtained for the cross section times branching ratio
+of Higgs pair production processes in the EFT framework, varying $\kappa_\lambda$
+in the range $[-20,20]$, while assuming that $\kappa_\textrm{t}=1$
+and the rest of the couplings are zero. This results are shown graphically in
+[Figure @fig:comb_Figure_002]; values for the anomalous self-coupling
+$\kappa_\lambda$ in the range $-11.8 < \kappa_\lambda < 18.8$
+are not excluded by the data ($-7.1 < \kappa_\lambda < 13.6$ was the
+expected interval). The aforementioned results make this combination study the
+most sensitive search to date at the LHC for non-resonant HH production.
+Substantial improvements can be expected due to the extensions of each
+analysis to the full Run II dataset.
+
+![Observed and expected $\sigma(\textrm{pp} \rightarrow \textrm{HH})$
+cross section limits relative to the SM for the combination of searches
+for Higgs boson pair production at 95\% CL
+for values of $\kappa_\lambda$ in the [-20,20] range, assuming  $\kappa_\textrm{t} = 1$.
+The inner
+green band and the outer yellow bands correspond
+to the range of percentiles around the median that contain
+the 68\% and 95\% times the upper limit under the background-only
+hypothesis.](gfx/105_chapter_5/comb_Figure_001.pdf){
+#fig:comb_Figure_001 width=60%}
+
+![Observed and expected $\sigma(\textrm{pp} \rightarrow \textrm{HH})$
+cross section limits for the combination of searches
+for Higgs boson pair production at 95\% CL
+for values of $\kappa_\lambda$ in the [-20,20] range, assuming  $\kappa_\textrm{t} = 1$.
+The inner
+green band and the outer yellow bands correspond
+to the range of percentiles around the median that contain
+the 68\% and 95\% times the upper limit under the background-only
+hypothesis. 
+The theoretical prediction with $\kappa_\textrm{t} = 1$ is also
+shown in red colour.](gfx/105_chapter_5/comb_Figure_002.pdf){
+#fig:comb_Figure_002 width=60%}
+
+
+
