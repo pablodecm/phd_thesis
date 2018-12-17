@@ -127,7 +127,7 @@ dynamics of relevance in particle physics experiments.
 ### Essentials of Quantum Field Theory {#sec:qft_basics}
 
 As hinted in the previous section, in quantum field theory (QFT), observed
-particles are understood as excitations of fields that extend through whole
+particles are understood as excitations of fields that extend through the whole
 universe. Quantum field theory unifies the physical foundations
 of quantum mechanics and special relativity, and can be used to
 accurately describe phenomena in systems where relativistic and
@@ -166,7 +166,7 @@ the Lagrangian depends on multiple fields and their derivatives instead of
 a single free field. Identically to what is done in classical systems,
 we can attempt to solve for the field that minimises the action,
 i.e. $\delta S=0$. With the help of some functional calculus [@Goldberg:2244785],
-it is possible obtain the relativistic field theory version of
+it is possible to obtain the relativistic field theory version of
 the Euler-Langrange equation:
 $$\partial_\mu \left ( \frac{\partial \mathcal{L}}
                              {\partial (\partial_\mu\phi)}
@@ -191,7 +191,7 @@ where $\gamma^\mu$ are the gamma matrices and
 $\bar{\psi}=\psi^\dag \gamma^0$ is the spinor adjoint. As the chosen naming
 for the previous Lagrangian $\mathcal{L}_\textrm{Dirac}$ gave away,
 the Euler-Lagrange relation obtained by
-minimising the action $\delta S=0$, can be used to obtain field equations
+minimising the action $\delta S=0$ can be used to obtain field equations
 of motion that correspond to the Dirac equation [@Peskin:257493] for the
 spinor field and its adjoint:
 $$ i\gamma^\mu \partial_{\mu} \psi - m \psi=0 \quad \textrm{and} \quad
@@ -200,16 +200,16 @@ $$ {#eq:dirac_equation}
 as well as the well-known Klein-Gordon equation component-wise
 $(\partial^\mu \partial_\mu + m^2)\psi=0$,
 where $\partial^\mu=\partial/\partial x^\mu$. Both Dirac and
-Klein-Gordon equations were proposed in the context fo relativistic
+Klein-Gordon equations were proposed in the context of a relativistic
 formulation of quantum mechanics.
 
 To shed some light on how a field like $\psi$ can represent actual fermions
-in the universe, such as electrons or positrons, it can be quantised
+in the universe, such as electrons or positrons, can be quantised
 by considering a plane wave expansion and defining annihilation operators
 $a_{\boldsymbol{p}}^s$ and $b_{\boldsymbol{p}}^s$, as well as 
 creation $a_{\boldsymbol{p}}^{s\dagger}$ 
 and $b_{\boldsymbol{p}}^{s\dagger}$ operators. The field and its adjoint,
-which can also be thought directly as operators in this context, can
+which can also be thought of directly as operators in this context, can
 then be expressed as:
 
 $$
@@ -279,7 +279,8 @@ where T is an operator ensuring that the Hamiltonian density factors
 $\mathcal{H}_\textrm{int} (x_i)$ are
 order in time. Each time-ordered term in the series can be written as a
 sum of normal (i.e. not time ordered) products of permutations using
-Wicks theorem, which can become rather tedious for high orders. The
+Wicks theorem [@wick1950evaluation], which can become rather tedious
+for high orders. The
 formalism of Feynman diagrams can be used to simplify the computation
 of observables at a given order in the perturbative expansion.
 
@@ -290,7 +291,7 @@ $$
 \bra{i} \mathcal{S} \ket{f} = \bra{i} \boldsymbol{1} \ket{f}
 + i \mathcal{M} (2\pi)^4 \delta^4 \left ( \sum p_i - \sum p_f \right )
 $$ {#eq:matrix_element}
-where the fist term corresponds to not interaction occurring
+where the fist term corresponds to no interaction occurring
 and the second includes the matrix element $\mathcal{M}$ 
 including all orders in the perturbative orders and a factor
 making explicit the conservation of momentum between the initial
@@ -315,16 +316,16 @@ sections can be truncated at a given perturbative order. The lowest
 expansion order is referred as leading order (LO), yet considering
 additional expansion can greatly increase the prediction accuracy
 so one (NLO) or two (NNLO) orders are often considered, higher orders
-often being too computationally challenging. A truncation at and additional
-order $n$, relative to the lowest interaction order, will provided corrections
-proportional to $\alpha=g^2/(4\pi)$, where the $g$ is the coupling constant
+often being too computationally challenging. A truncation at an additional
+order $n$, relative to the lowest interaction order, will provide corrections
+proportional to $\alpha=g^2/(4\pi)$, where $g$ is the coupling constant
 characteristic of the interaction.
 
 
 ### Quantum Chromodynamics {#sec:qcd_detail}
 
-In a hadron colliders such as the LHC, strong interactions
-between quark and gluons are dominant, which can be modelled
+In a hadron collider such as the LHC, strong interactions
+between quark and gluons are dominant, and they can be modelled
 using quantum chromodynamics (QCD). The theory of QCD can
 be linked to a $SU(3)$ symmetry group and is described
 by the following gauge invariant
@@ -333,7 +334,7 @@ Lagrangian density:
 $$
 \mathcal{L}_\mathrm{QCD} = \bar{\psi}
 \left( \gamma^\mu D - m_f \right) \psi -
-\frac{1}{4}G^a_{\mu \nu} G^{\mu \nu}_a \quad
+\frac{1}{4}G^a_{\mu \nu} G^{\mu \nu}_a, \quad 
 \psi = 
 \begin{bmatrix}
 \psi_r \\ \psi_g \\ \psi_b
@@ -359,7 +360,7 @@ $$
 G^a_{\mu \nu} = \partial_\mu A_\nu^a - \partial_\nu A_\mu^a
 + g_s f^{abc}  A_\mu^b A_\nu^c
 $$ {#eq:qcd_gluon_tensor}
-where $f^{abc}$ are the structure constant of the
+where $f^{abc}$ are the structure constants of the
 $SU(3)$ gauge group. The last term accounts for the
 self-interaction of the gluon, which are the massless
 and electrically neutral force mediators. There are
@@ -368,10 +369,10 @@ from from a phenomenological standpoint:
 *confinement* and *asymptotic freedom*.
 
 The property of confinement has been postulated to explain why isolated
-quarks or gluons are not found in nature. Quarks have only been found
+quarks and gluons are not found in nature. Quarks have only been found
 as part of hadrons, that are colour-neutral composite particles. Even
 though confinement has not been understood from first principles, because
-because the observables of bound states in QCD at low-energies cannot
+the observables of bound states in QCD at low-energies cannot
 be computed in a perturbative manner, there exist extensive evidence
 both from lattice QCD calculations and experiments. In a bound state
 between quarks, the effective potential includes a term that increases
@@ -380,8 +381,8 @@ an external energetic interaction, the additional potential energy generates
 an additional quark-antiquark pair and forming bound states. Similar
 phenomena occur for isolated gluons, which generally is referred as
 hadronization due to colour confinement. In particle colliders, successive
-hadronization and radiation processes lead to parton showers which
-are discussed in [Section @sec:parton_showers].
+hadronization and radiation processes lead to parton showers
+(see [Section @sec:parton_showers]).
 
 Hadrons are then commonly in bound states which can be mesons, formed
 by a quark-antiquark pair $\textrm{q}\bar{\textrm{b}}$, or baryons
@@ -395,10 +396,10 @@ at particle colliders. Baryons instead include the well-known proton
 ($\textrm{u}\textrm{u}\textrm{d}$) and neutron
 ($\textrm{u}\textrm{d}\textrm{d}$) that together with electrons are the
 constituents of most of the known matter in the universe. Many more
-short-lived baryons exist [@PhysRevD.98.030001], including the
-recently discovered exotic bound states referred as tretraquarks
+short-lived baryons exist [@PhysRevD.98.030001], in addition to the
+recently discovered exotic bound states referred as tetraquarks
 [@PhysRevLett.112.222002]
-and pentaquarks [@Aaij:2015tga]. A details description of the compositeness
+and pentaquarks [@Aaij:2015tga]. A detailed description of the compositeness
 of proton is an essential element for computing LHC observables,
 as reviewed in [Section @sec:pdfs].
 
@@ -408,7 +409,8 @@ consider a renormalisation energy scale $\mu_R^2$, which has to be often defined
 in order to compute physical observables which otherwise would be divergent
 due higher order perturbative corrections which cannot be easily calculated.
 This effect can be also understood as a coupling that varies with
-the energy scale, which referred to a running couplings. The strong force
+the energy scale, which is referred to as a "running" coupling constant.
+The strong force
 coupling $\alpha_s=g_s^2/(4\pi)$ can thus be approximated as a function of
 the renormalisation energy scale $\mu_R^2$ as follows:
 $$
@@ -418,12 +420,14 @@ $$ {#eq:running_coupling}
 where $\alpha_s(\mu_0^2)$ is the measured coupling at a given energy
 and $n_f$ is total number of quark flavours which are assumed to be
 massless in this approximation. The strong interaction thus becomes
-weaker at higher energies (or short distances), thus allowing
+weaker at higher energies (or short distances) allowing
 the perturbative computation of some observable related with high-energy
 interactions, as discussed in [Section @sec:pheno].
-It is worth noting that under the mentioned approximation there
-is an energy scale around $200\ \textrm{MeV}$ that would cause the coupling
-to diverge and become infinite.
+The approximation from [Equation @eq:running_coupling] also provides a
+lower bound for the energy scale at which QCD can be treated
+perturbatively, i.e. the denominator becomes
+zero for an energy scale around $200\ \textrm{MeV}$, leading
+to a diverging coupling constant.
 
 ### Electroweak Interactions  {#sec:ew_detail}
 
@@ -441,7 +445,8 @@ description based on a $SU(2) \otimes U(1)$ symmetry, which unified
 electromagnetic and weak interactions
 [@glashow1961partial; @SALAM1964168], and where the
 weak interaction was mediated by means of charged $W^{\pm}$ and neutral $Z$
-massive vector bosons. Nevertheless, the theory lacked an explanation for
+massive vector bosons. Nevertheless, the theory does not provide
+an explanation for
 the mass of the weak mediators, until the so-called
 Brout-Englert-Higgs [@englert1964broken; @higgs1964broken; @guralnik1964global]
 mechanism for spontaneous symmetry breaking (SSB) was conceived. Higgs
@@ -458,8 +463,8 @@ charged and neutral currents [@hasert1974observation] and the discovery
 of the massive
 $W^{\pm}$ [@Arnison:1983rp; @Banner:1983jy] and $Z$
 [@Arnison:1983mk; @Bagnaia:1983zx] bosons. Experimental evidence also
-shown that weak interaction was parity violating [@Wu:1957my],
-thus in the electroweak the fermion fields are separated in their
+showed that weak interaction was parity violating [@Wu:1957my],
+thus in the electroweak theory the fermion fields are separated in their
 left-handed $\psi_\textrm{L}$ and right-handed $\psi_\textrm{R}$ 
 chiral components as follows:
 $$
@@ -469,7 +474,7 @@ $$ {#eq:chiral_proj}
 where $\textrm{P}_\textrm{L}$ and $\textrm{P}_\textrm{R}$ are the chiral
 projection operators and $\gamma_5=i \gamma_0\gamma_1\gamma_2\gamma_3$ is
 the product of the gamma or Dirac matrices. For massless particles,
-chirality is equal the helicity
+chirality is equal to the helicity
 $H=(\boldsymbol{p} \cdot \boldsymbol{s}) /  | \boldsymbol{p} |$
 which is the sign of the scalar
 product of momenta and spin. For massive particles, chirality is still defined
@@ -519,7 +524,7 @@ $$
 & - \frac{1}{4}  W_{\mu\nu}W^{\mu\nu} - \frac{1}{4} B_{\mu\nu}B^{\mu\nu}
 \end{aligned}
 $$ {#eq:lagrangian_ew_before}
-where the covariant derivates for left-handed $D_L^\mu$
+where the covariant derivatives for left-handed $D_L^\mu$
 and right-handed $D_R^\mu$ fermion fields are respectively defined as:
 $$
 \begin{aligned}
@@ -546,24 +551,26 @@ is the structure constant for $SU(2)$.
 
 The problem with the electroweak theory as described by the Lagrangian
 from [Equation @eq:lagrangian_ew_before], which is based on Yang-Mills
-gauge theory formulation, is that it is not possible directly add mass
-term for the fermions nor the weak bosons without breaking the $SU(2)$
+gauge theory formulation, is that it is not possible to directly add mass
+term for the fermions nor the weak bosons to the Lagrangian
+density without breaking the $SU(2)$
 invariance. At the time the mentioned theory was developed, there was
-extensive evidence not only for quark and lepton masses but also
-for the weak boson being massive,
-the latter required to explain why the weak interaction was short-ranged.
-The issue of lacking a theoretical mechanism that explain the mass
+extensive evidence not only for lepton masses but also
+for the weak bosons being massive; the mass required to explain why
+the weak interaction was short-ranged.
+The issue of lacking a theoretical mechanism that could explain the mass
 of fermions and weak boson was solved by the spontaneous symmetry
 breaking mechanism [@englert1964broken; @higgs1964broken; @guralnik1964global],
 which is based on postulating the existence of an additional complex scalar
-field $\phi$, which is a $SU(U)$ doublet with the following structure:
+field $\phi$, which is a $SU(2)$ doublet with the following structure:
 $$
 \phi =
 \begin{pmatrix} \phi^+ \\ \phi^0 \end{pmatrix} =
 \begin{pmatrix} \phi_3 + i\phi_4  \\ \phi_1 + i\phi_2 
 \end{pmatrix}
 $$ {#eq:higgs_su_field}
-where the component notation is made explicit because it will be used later.
+where we made the component notation explicit because it will be
+relevant later.
 This scalar field is expected to interact with the electroweak fields
 $W$ and $B$ by means of the following Lagrangian:
 $$
@@ -571,19 +578,20 @@ $$
 $$ {#eq:scalar_lagrangian}
 where the covariant derivate in this case is defined as:
 $$
-D_H^\mu  = \partial^\mu - \frac{1}{2} i g_B Y B_\mu  - \frac{1}{2} i g_W \sigma W_\mu 
+D_H^\mu  = \partial^\mu - \frac{1}{2} i g_B Y B_\mu  - \frac{1}{2} i g_W \sigma W_\mu.
 $$ {#eq:scalar_cov_der}
-while the minimal form for scalar field potential $V(\phi)$,
-which can be constructed ad-hoc to provide a degenerate vacuum states
-and a local maximum, which would required for spontaneous symmetry breaking,
+The minimal form for scalar field potential $V(\phi)$,
+constructed ad-hoc to provide a degenerate vacuum states
+and a local maximum, a required condition for spontaneous symmetry breaking
+can be expressed as:
 $$
 V(\phi) = - \mu^2 \phi^\dagger \phi + \frac{1}{2} \lambda (\phi^\dagger \phi )^2
 $$ {#eq:scalar_potential}
 where both the quadratic $\mu^2$ and the quartic
 $\lambda$ self-interaction parameters are defined positive in this sign
 convention. The resulting shape for the potential is often referred
-as *Mexican hat*, and is depicted in [Figure @fig:mexican_hat]. The presence
-of a potential minima different from the origin
+as *mexican hat*, and is depicted in [Figure @fig:mexican_hat]. The presence
+of a potential minimum different from the origin
 gives rises to a non-zero vacuum expectation value for the scalar
 field:
 $$
@@ -614,18 +622,22 @@ which correspond the field $G$ which would otherwise give rise to the
 so-called Goldstone bosons,
 have been removed after the gauge transformation.
 
-![Depiction of the Mexican hat potential for the scalar field $\phi$. A local
+![Depiction of the mexican hat potential for the scalar field
+$\phi$[^mexican_ref]. A local
 maximum is present at the origin, but lower energy degenerate minima exist
-arount it. The figure was created by adapting the code
-from [this TeX StackExchange answer](https://tex.stackexchange.com/a/229226).
+arount it.
 ](gfx/101_chapter_1/mexican_hat.pdf){
 #fig:mexican_hat width=60%}
+
+
+[^mexican_ref]: The figure was created by adapting the code
+from [this TeX StackExchange answer](https://tex.stackexchange.com/a/229226).
 
 Substituting the rotated scalar field from [Equation @eq:scalar_rotation]
 in the Lagrangian described by [Equation @eq:scalar_lagrangian]
 leads to mass-like terms for linear combinations of the $W$ and $B$
 fields. In order to obtain the physical bosons observed in nature, the
-the mass terms have to be make independent by the following
+mass terms have to be made independent by the following
 transformations:
 $$
 W^\pm_\mu = \frac{1}{\sqrt{2}} \left ( W_\mu^1 \mp i W_\mu^2 \right)
@@ -642,7 +654,7 @@ which is related with the electroweak couplings according
 the relation $\tan \theta_W = g_B/g_W$. Omitting for now
 the terms related with the $H$ field, the Lagrangian in
 [Equation @eq:scalar_lagrangian] leads to the following
-the mass terms for the electroweak force mediators after
+mass terms for the electroweak force mediators after
 the unitary gauge and the transformation described
 in [Equation @eq:ew_field_change] have been applied:
 $$
@@ -666,9 +678,9 @@ associated with the electromagnetic force carrier $\gamma$. The terms
 related with the scalar $H$ field (and Higgs boson) are discussed
 later independently.
 
-In addition providing a mechanism that lead to mass terms for
+In addition to providing a mechanism that leads to mass terms for
 the weak force bosons, additional interaction of the various
-fermion field with the scalar field $\phi$ can explain their masses.
+fermion fields with the scalar field $\phi$ can explain their masses.
 These gauge invariant terms are generally referred to as Yukawa
 interaction, and correspond to the following Lagrangian terms:
 $$
@@ -684,12 +696,13 @@ $$
 $$ {#eq:Yukawa_Lagrangian}
 where $\lambda_l$ , $\lambda_u$ and $\lambda_f$ are the Yukawa coupling
 parameters. A charge-conjugate transformation
- $\phi \rightarrow i \sigma_2 \phi^\dagger$ is used to give mass
- to up-type quarks. For the quark sector, the $\lambda_u$ and $\lambda_d$ coupling can
-be express by a single non diagonal matrix in the flavour basis, referred to as
+$\phi \rightarrow i \sigma_2 \phi^\dagger$ is used to give mass
+to up-type quarks. For the quark sector,
+the $\lambda_u$ and $\lambda_d$ couplings can
+be expressed by a single non diagonal matrix in the flavour basis, referred to as
 Cabibbo-Kobayashi-Maskawa (CKM matrix) [@Cabibbo:1963yz; @Kobayashi:1973fv],
 which can in turn be parametrised
-by three angles and a complex phase. The fact the matrix is not
+by three angles and a complex phase. The fact that the matrix is not
 diagonal leads to flavour mixing, due to the mass eigenstates being different
 from flavour eigenstates. Another relevant property of fermion masses
 is that after spontaneous symmetry breaking, the fermion mass
@@ -697,9 +710,9 @@ is effectively proportional to its coupling with the Higgs scalar field, which
 is useful to intuitively understand the dominant interactions and decays.
 
 In addition of giving masses to both weak bosons and fermions, the
-remaining field degree of freedom after electroweak symmetry breaking gives
+remaining degree of freedom after electroweak symmetry breaking gives
 rise to a scalar field $H$, whose Lagrangian can be obtained substituting
-the [Equation @eq:scalar_rotation] in [Equation @eq:scalar_lagrangian],
+[Equation @eq:scalar_rotation] in [Equation @eq:scalar_lagrangian],
 leading to the following terms:
 $$
 \mathcal{H} = \frac{1}{2} \partial_\mu H \partial^\mu -
@@ -712,11 +725,12 @@ and consistent with the expected properties for the Higgs boson was
 discovered in 2012 by the CMS
 and ATLAS collaborations [@higgs2012atlas; @higgs2012cms].
 The cubic $\lambda v$ and quartic $\lambda$
-terms will give rise to self-interaction interaction vertices. The cubic
-or trilinear Higgs is studied using data from the CMS experiment in
-[Chapter @sec:higgs_pair]. The determination of the Higgs self-coupling
-is an important cross-check of the spontaneous symmetry breaking
-mechanism.
+terms will give rise to self-interaction interaction vertices. The so-called
+cubic or trilinear Higgs coupling is discussed in a Higgs pair search
+using data from the CMS experiment in [Chapter @sec:higgs_pair].
+The direct determination of the Higgs self-coupling
+is an relevant missing piece, and an important proof of consistency
+of the spontaneous symmetry breaking mechanism.
 
 <!-- ### Standard Model Lagrangian {#sec:sm_lagrangian} -->
 
