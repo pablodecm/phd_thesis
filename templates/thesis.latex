@@ -172,7 +172,9 @@ $endfor$
 % table of contents
 {
 \hypersetup{linkcolor=}
+\cleardoublepage
 \setcounter{tocdepth}{$toc-depth$}
+\currentpdfbookmark{Contents}{name}
 \tableofcontents
 }
 
