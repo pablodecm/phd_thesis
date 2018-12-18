@@ -871,10 +871,24 @@ agreement for the variables used as input of the probabilistic
 classifier in a control region will be discussed in more
 detail in [Section @sec:bkg_validation].
 
+![Comparison ($\chi^2$ score) of the mixed and re-mixed data (see
+[Section @sec:bkg_validation]) as a function
+of the neighbour combination $(k_1, k_2)$. The test score has been calculated
+based on the binned distribution of the probabilistic classifier. The one-sided
+confidence bands for the test score are also included for guidance.
+](gfx/105_chapter_5/chi2_combination.pdf){
+#fig:chi2_combination width=60%}
+
 The hemisphere mixing technique is applied to the data events
 passing the selection described in [Section @sec:event_selection].
 Artificial datasets up to $k_\textrm{max}=10$ have been
-considered, and they are sub-divided in three sets used for training
+considered, given that good modelling was observed until very large
+values of $k_\textrm{max}$. The test score of the compatibility between
+the mixed artificial data as a function of the combination label
+is included in [Figure @fig:chi2_combination], modelling breaks only
+at high values, e.g. $k=128$. All the neighbour combinations
+up to $k_\textrm{max}=10$
+are sub-divided in three sets used for training
 the probabilistic classifier (training), 
 validating and optimised the classifier (validation)
 and to estimate the background distribution of the final summary
