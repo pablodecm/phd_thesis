@@ -623,16 +623,14 @@ which correspond the field $G$ which would otherwise give rise to the
 so-called Goldstone bosons,
 have been removed after the gauge transformation.
 
-![Depiction of the mexican hat potential for the scalar field
-$\phi$[^mexican_ref]. A local
+![Graphical depiction [^mexican_ref] of the mexican hat potential for
+the scalar field
+$\phi$. A local
 maximum is present at the origin, but lower energy degenerate minima exist
 arount it.
 ](gfx/101_chapter_1/mexican_hat.pdf){
 #fig:mexican_hat width=60%}
 
-
-[^mexican_ref]: The figure was created by adapting the code
-from [this TeX StackExchange answer](https://tex.stackexchange.com/a/229226).
 
 Substituting the rotated scalar field from [Equation @eq:scalar_rotation]
 in the Lagrangian described by [Equation @eq:scalar_lagrangian]
@@ -678,6 +676,9 @@ field has only been included to make explicit that no mass term is
 associated with the electromagnetic force carrier $\gamma$. The terms
 related with the scalar $H$ field (and Higgs boson) are discussed
 later independently.
+
+[^mexican_ref]: The figure was created by adapting the code
+from [this TeX StackExchange answer](https://tex.stackexchange.com/a/229226).
 
 In addition to providing a mechanism that leads to mass terms for
 the weak force bosons, additional interaction of the various
