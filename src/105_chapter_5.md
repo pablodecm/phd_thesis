@@ -994,7 +994,7 @@ in [Figure @fig:Figure_004] and [Figure @fig:Figure_005].
 ](gfx/105_chapter_5/Figure_004-d.pdf){#fig:Figure_004_d width=49%}
 
 Comparison between the background model obtained with the hemisphere
-mixing technique and the data for the $M_\textrm{H}$c control region for
+mixing technique and the data for the $M_\textrm{H}$ control region for
 a set of reconstructed variables used as input of the classifier.
 A correction factor
 obtained from the binned classifier distribution, as described
