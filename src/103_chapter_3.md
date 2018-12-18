@@ -3,7 +3,7 @@
 \epigraph{Life is complicated, \\
 but not uninteresting.}{Jerzy Neyman}
 
-In this chapter, we will consider the problem of extracting quantitative
+In this chapter we will consider the problem of extracting quantitative
 information about the validity or properties of the different
 theoretical models (see [Chapter @sec:theory]), which can be made given the
 experimental data acquired in a controlled setting (see
@@ -12,10 +12,10 @@ the properties and structure of the statistical models
 used to link the parameters of interest, followed by a description
 of the inference problems in experimental high-energy physics
 and how they can be tackled with classical and non-classical techniques.
-Some relevant particularities of the inference problems
-at the LHC experiments will be discussed, mainly the
+Some relevant particularities of the inference problems typically of
+interest of the LHC experiments will be discussed, mainly the
 generative-only nature of the simulation models and the high dimensionality
-of the data. As we will see, both these issues are intimately related,
+of the data. As we will see, these issues are intimately related,
 the former
 requiring the use of likelihood-free inference techniques such as constructing
 non-parametric sample likelihoods, which in turn demands for lower
@@ -25,11 +25,11 @@ dimensional summary statistics.
 ## Statistical Modelling {#sec:stat_model}
 
 An essential element for carrying out statistical inference is the
-availability of an adecuate
+availability of an adequate
 a statistical model. In this section, the main characteristics of the statistical
 models used in particle collider analysis will be formally developed from first
 principles. This methodology allows a
-mathematical approach on their structure and factorisation. This will
+mathematical approach to their structure and factorisation. This will
 prove useful to establish a formal link between the techniques discussed
 in the next chapters and the simulation-based
 generative models that are often used to describe the data. Additionally,
@@ -39,7 +39,7 @@ of the relevant information from high-dimensional data into a
 lower-dimensional representation, such as the output of a multivariate
 classifier - will be described in the larger statistical
 framework of an LHC analysis. Lastly, the main
-main approaches commonly followed to construct synthetic likelihoods
+approaches commonly followed to construct synthetic likelihoods
 that efficiently connect summaries of the detector observation
 with the parameters of interest will be illustrated.
 
@@ -47,7 +47,7 @@ with the parameters of interest will be illustrated.
 ### Overview {#sec:model_overview}
 
 Let us suppose that we record a collection of raw detector readouts
-$D = \{\boldsymbol{x}_0,...,\boldsymbol{x}_n\}$ for a total $n$ bunch crossings
+$D = \{\boldsymbol{x}_0,...,\boldsymbol{x}_n\}$ for a total of $n$ bunch crossings
 at a particle collider experiment, such as CMS at the LHC (see Section
 [-@sec:cms]). Note that vector notation is used for each individual readout,
 also referred to as event, because for mathematical simplification
@@ -59,7 +59,7 @@ $d$-dimensional space, i.e. $\boldsymbol{x} \in \mathcal{X}
 structures might be a more compact and useful representation in practice,
 as will be discussed later.
 As an starting point,
-let us assume that the detector readout for every bunch crossing
+let us assume for simplicity that the detector readout for every bunch crossing
 is recorded, i.e. no trigger filtering system as the one described in
 [Section @sec:trigger] is in place, hence after each bunch crossing $i$ a
 given raw detector readout $\boldsymbol{x}_i$ will be obtained. From
@@ -72,7 +72,7 @@ or index $i$ are not relevant.
 
 #### Experiment Outcome
 
-Within such framework, we could begin by posing the question of how
+Within the above framework, we could begin by posing the question of how
 we expect the readout output, which can be effectively treated as a
 random variable $\boldsymbol{x}$, is distributed and how such distribution
 is related with the (theoretical) parameters we are interested in measuring
@@ -108,8 +108,7 @@ cannot be obtained, we can safely make a very useful remark about its
 basic structure, which is fundamental for simplyfing the statistical treatment
 of particle collider observations and simulations,
 and was already hinted at in [Section @sec:main_obs] when discussing
-the possible outcomes of fundamental proton-proton interactions. The
-aforementioned reflection is that the underlying
+the possible outcomes of fundamental proton-proton interactions. The underlying
 process generating $\boldsymbol{x}$ can be treated as
 a *mixture model*, which can be expressed
 as the probabilistic composition of samples from multiple probabilistic
@@ -126,8 +125,9 @@ where $K$ is the number of mixture components and $\phi_j$ is the mixture
 weight/fraction, i.e. probability for a sample to be originated from
 each mixture component $j$. Practically, each
 $p_j(\boldsymbol{x}|\boldsymbol{\theta})$ will be intractable due to the
-same reason making  $p ( \boldsymbol{x}|\boldsymbol{\theta} )$
-intractable, thus a more sensible description of the mixture model
+exact
+same reason that $p ( \boldsymbol{x}|\boldsymbol{\theta} )$
+is intractable, thus a more sensible description of the mixture model
 is the generative definition, described by the following
 two-step sampling procedure:
 $$ z_i \sim \textrm{Categorical}(\boldsymbol{\phi}) 
@@ -229,7 +229,7 @@ of processes of interest $\phi_S$ or the properties of its
 distribution $p_S(\boldsymbol{x}|\boldsymbol{\theta})$. As previously
 mentioned, the former is proportional to the cross section of the
 signal processes $\sigma_S$ while the latter can include properties
-such the mass of a intermediate particle resonance (e.g. the Higgs
+such as the mass of an intermediate particle resonance (e.g. the Higgs
 mass $m_\textrm{H}$) or the general behaviour of the differential
 distribution (i.e.
 using unfolding methods to remove the experimental effects,
@@ -248,10 +248,10 @@ processes for each collision, because in general $\phi_S \ll
 or any other *event selection* should be considered. The role of
 event selection is to reduce the fraction of events that do not
 contain useful information for the inference task of interest.
-Trigger selection can be though of technical requirement,
+Trigger selection can be thought of as a technical requirement,
 reducing the total rate of detector readouts recorded to match
 the available hardware for data acquisition, as discussed in [Section @sec:trigger]. The purpose of analysis selection, as will be discussed
-in [Chapter @sec:higgs_pair], it is instead to reduce
+in [Chapter @sec:higgs_pair], is instead to reduce
 the expected contribution of background processes that are not well-modelled
 by simulation, as well as to the increase the expected fraction of signal
 events in synthetic counting likelihoods, such as those which will be detailed in
@@ -262,7 +262,8 @@ terms, any deterministic event
 selection can be thought of as an indicator function
 $\mathbb{1}_\mathcal{C} : \mathcal{X} \longrightarrow \{0,1\}$,  of a given
 subset of the set of possible detector readouts
-$\mathcal{C} \subseteq \mathcal{X}$. I can be defined as:
+$\mathcal{C} \subseteq \mathcal{X}$. The indicator function
+$\mathbb{1}_\mathcal{C}(\boldsymbol{x})$can be defined as:
 
 $$\mathbb{1}_\mathcal{C}(\boldsymbol{x}) =
   \begin{cases}
@@ -364,7 +365,7 @@ event selection $\mathbb{1}_\mathcal{C}(\boldsymbol{x})$
 is also a mixture model (see [Equation @eq:mixture_after_cut])
 and samples under the corresponding probability distribution functions
 and mixture fractions $g_j (\boldsymbol{x}|\boldsymbol{\theta})$ and
-$\chi_j$ can be easily obtained from the non-selected simulated events,
+$\chi_j$ can easily obtained from the non-selected simulated events,
 as it is actually done in practice.
  
 ####  Observable and Latent Variables
@@ -372,7 +373,7 @@ as it is actually done in practice.
 The first step to  build a generative statistical model is to define
 what are the observed variables and what are the hidden quantities,
 referred to as *latent variables*, that explain the structure in the data.
-For particle collider experiments, such as CMS, we can often consider the
+For particle collider experiments, we may consider the
 full detector readout
 $\boldsymbol{x} \in \mathcal{X} \subseteq \mathbb{R}^d$
 as the only observable variable, given that any other observable
@@ -493,7 +494,7 @@ inference based on the execution traces.
 
 Some joint factorisations are particularly
 useful for data analysis and simulation,
-such as making explicit the dependence between
+such as the one making explicit he dependence between
 the differential partonic cross sections and the parton configuration
 in the collision, which allows to factor out the density of
 parton distribution latent variables $\boldsymbol{z}_\textrm{PDF}$
@@ -549,11 +550,11 @@ and $\boldsymbol{\theta}_\textrm{pileup}$ are the bunch crossing and
 luminosity parameters that affect the pileup distribution.
 
 Further structure in the generative model can be often found, depending
-on the process being generated, the modelling assumptions and the
+on the process being generated, the modelling assumptions, and the
 latent space representation chosen. As an example,
 it is often useful to factorise out
 $p(z_f = g| \boldsymbol{\theta}, z_\textrm{PDF})
-p(z_f = g| \boldsymbol{\theta}, z_\textrm{PDF})$ the latents subspace
+p(z_f = g| \boldsymbol{\theta}, z_\textrm{PDF})$ the latent subspace
 that depends directly
 on the subset of parameters of interest from those that do not. Sometimes
 the conditional observations in that latent subspace can be analytically
@@ -592,7 +593,8 @@ $$
 p_j ( \boldsymbol{x}|\boldsymbol{\theta} ) d\boldsymbol{x} \approx   
 \frac{1}{m} \sum^{\boldsymbol{x}_s \in S_j } \mathbb{1}_\mathcal{C}(\boldsymbol{x})
 $$ {#eq:montecarlo_eff}
-which amounts to simply the number simulated observations that pass the selection
+which simply corresponds to the number of simulated observations
+that pass the selection
 divided by the total number of simulated observations $m$. Lastly, the
 expected value of any measurable function $f(\boldsymbol{x})$ after
 a given event selection $\mathbb{1}_\mathcal{C}(\boldsymbol{x})$ for events
@@ -633,10 +635,10 @@ of non-parametric likelihoods of summary statistics can be reduced
 to the estimation of expectation values.
 
 
- Oftentimes, the simulated observations are generated using somehow a
-different probability distribution than the experimental data, maybe because
-some of the generating parameters are not known precisely beforehand such
-as the properties of pileup distributions. Alternatively, we might want to
+ Oftentimes, the simulated observations are generated using a somewhat
+different probability distribution than that of experimental data, maybe because
+some of the generating parameters are not known precisely beforehand (e.g.
+the properties of pileup interactions). Alternatively, we might want to
 use a single set of simulated
 observations to realistically model observables corresponding to a
 different value of the parameters $\boldsymbol{\theta}$ or even to
@@ -726,11 +728,11 @@ can be expressed as the ratio:
 $$
 w(\boldsymbol{z}_s) = \frac{p_R ( \boldsymbol{z}_\textrm{p}|\boldsymbol{\theta}_R)}{p_Q ( \boldsymbol{z}_\textrm{p}|\boldsymbol{\theta}_Q)}
 $$ {#eq:gen_level_reweighting}
-which is referred as *generator-level re-weighting*, a procedure
+which is referred to as *generator-level re-weighting*, a procedure
 that in some cases
 can even be done analytically. The concept of *re-weighting* will be useful to
 model different parameter points in [Chapter @sec:higgs_pair] with
-single set of simulated observations as well as to understand how
+a single set of simulated observations as well as to understand how
 the effect of varying parameters can be modelled via differentiable
 transformations in [Chapter @sec:inferno].
 
@@ -743,12 +745,12 @@ of experimental high-energy physics, the structure and properties of the
 probability distribution of the full detector
 readout $\boldsymbol{x} \in \mathcal{X}$ has been considered. These
 allow to consider a single observable variable in the generative
-model, a fact which that has greatly simplified the modelling narrative and
+model, a fact which greatly simplifies the modelling narrative and
 also allows to include the effect of any arbitrary event selection as
 a deterministic function $\mathbb{1}_\mathcal{C} (\boldsymbol{x})$.
 Nevertheless, the
 high-dimensionality of the readout space $\boldsymbol{x} \in \mathcal{X}$
-(i.e. $\mathcal{O}(10^8)$) greatly complicates its direct use
+(i.e. $\mathcal{O}(10^8)$) significantly complicates its direct use
 when comparing simulated and recorded observations, and carry out
 any statistical inference procedure.
 
@@ -793,7 +795,7 @@ process as shown in [Equation @eq:montecarlo_obs_sel}],
 independently of whether the transformation
 is invertible or differentiable. In the rest of this section, the main
 procedures followed to reduce the dimensionality of the observable
-space and its objectives from a statistical perspective will
+space and its objectives from a statistical perspective will be
 discussed.
 
 #### Event Reconstruction {#sec:event_reco_stat}
@@ -835,22 +837,22 @@ can then be used to make calibrated probabilistic
 statements of the resulting reconstructed physical objects and their relation
 with the actual unobserved particles going through the detector. Particle
 identification (e.g. jet b-tagging) and fine-tuned momentum regressions 
-on the reconstructed objects can also be though of as
-inference of latent variables, which amounts to using additional
+on the reconstructed objects can also be thought of as
+inference of latent variables, which amounts to using the additional
 the detector information around an object to measure more
 precisely its properties, such as the type of particle that produced the
 detector readouts clustered in the former, and a more precise determination
 of the momenta in the latter.
 
 One aspect of the generative model that complicates both
-reconstruction and statistical inference has
-not which has not been discussed yet is that efficient representations of
+reconstruction and statistical inference which has not
+been discussed yet is that efficient representations of
 the latent spaces of simulated events are not easily represented
 as a fixed-size real vector
 $\boldsymbol{z} \in \mathcal{Z} \subseteq \mathbb{R}^o$. Let us
 consider as an example the parton-level latent information
 $\boldsymbol{z}_\textrm{p}$, which amounts to a short list of
-produced particles. The total number of particles, and the number of particles
+produced particles. The total number of particles and the number of particles
 of each type are variable, thus $\boldsymbol{z}_\textrm{p}$
 is better represented by a set (or several sets, one for each
 particle type):
@@ -947,8 +949,9 @@ by forward simulation, and
 has the mixture model structure and latent factorisation discussed before.
 After an arbitrary event selection $\mathbb{1}_\mathcal{C} (\boldsymbol{x})$,
 only a subset of events 
-$D_\mathcal{C} = \{\boldsymbol{x}_0,...,\boldsymbol{x}_{n_\mathcal{C}}\} \subseteq D$,
-which are also independent, so their probability density can be expressed as:
+$D_\mathcal{C} = \{\boldsymbol{x}_0,...,\boldsymbol{x}_{n_\mathcal{C}}\} \subseteq D$
+remain. These events are also independent,
+so their probability density can be expressed as:
 $$
 g(D_\mathcal{C} | \boldsymbol{\theta}) = \prod^{\boldsymbol{x}_i \in D_\mathcal{C}}
 g ( \boldsymbol{x}_i|\boldsymbol{\theta} )
@@ -964,7 +967,7 @@ selection $n_\mathcal{C}$. Because this quantity depends on the set
 of recorded readouts D, where each individual readout $\boldsymbol{x}_i$
 is assumed to be an independent and identically distributed variable, the total
 number of selected events $n_C$ after a deterministic selection
-can be $\mathbb{1}_\mathcal{C} (\boldsymbol{x})$ can be modelled using
+$\mathbb{1}_\mathcal{C} (\boldsymbol{x})$ can be modelled using
 a binomial distribution:
 $$
 p( n_\mathcal{C} | n, \boldsymbol{\theta}) = \textrm{Binomial}(n, \epsilon)
@@ -1094,7 +1097,7 @@ summary statistic of the detector readout
 $\boldsymbol{s}(\boldsymbol{x}) : \mathcal{X} \subseteq \mathbb{R}^{d}
 \longrightarrow \mathcal{Y}\subseteq \mathbb{R}^{b}$. Functions of the
 type $\boldsymbol{n}_T(\boldsymbol{x})$ are a reduced subset, yet still
-infinite, of the possible sapce of functions. Regardless of
+infinite, of the possible space of functions. Regardless of
 the likelihood-free inference methods considered
 (see [Section @sec:stat_inf]), the need of a
 low-dimensional summary statistic is a direct consequence of
@@ -1108,7 +1111,7 @@ $\boldsymbol{s}(\boldsymbol{x})$ is far from trivial, and naive choices
 can lead to large losses of useful information about the parameters of 
 interest $\boldsymbol{\theta}$. Results form classical statistics identifies 
 a *sufficient summary statistic* as the
-the optimal summary statistic to carry out inference for a given
+the optimal summary statistic to be used for inference for a given
 statistical model and characterises its properties [@hogg1995introduction].
 Such a sufficient statistic
 contains all the information
@@ -1184,7 +1187,7 @@ $p_j(\boldsymbol{x} | \boldsymbol{\theta})$, by forward approximating
 $n^{\mathcal{C}_i}_j(\boldsymbol{\theta}_R)$ (or alternatively
 $\epsilon^{\mathcal{C}_i}_j(\boldsymbol{\theta}_R)$) using simulated observations
 for each process $j$ generated for $\boldsymbol{\theta}_R$.
-This process would rapidly become computationally very demanding if it has to
+This process would rapidly become computationally very demanding if it had to
 be repeated for each likelihood evaluation during the whole inference process.
 Re-weighting procedures such as those described in
 [Equation @eq:gen_level_reweighting] can often be applied
@@ -1220,7 +1223,7 @@ of each parameter is factorised in $p_j(\boldsymbol{x} | \boldsymbol{\theta})$,
 the integral definition of $\epsilon^{\mathcal{C}_i}_j (\boldsymbol{\theta}_k)$
 from [Equation @eq:montecarlo_eff] does not ensure that the correlated effect
 of the variation of multiple $\theta_i \in \boldsymbol{\theta}$ is accurately
-modelled. This issue can be easily exemplified, for example considering the
+modelled. This issue can be easily exemplified, considering the
 product of relative variations in the two parameter case
 $\boldsymbol{\theta}_R = (\theta^R_0,\theta^R_1)$.  Let us consider the expected
 value for the efficiency after a given selection $\mathbb{1}_{\mathcal{C}_i}(\boldsymbol{x})$:
@@ -1254,7 +1257,7 @@ $$
 $$ {#eq:relative_var_eff}
 because the integral of the product of functions is not product of integrals,
 unless is the volume of the selected region $C$
-is infinitesimally small - a case which anyway be irrelevant s it would
+is infinitesimally small - an irrelevant case as it would
 correspond to null efficiencies. This
 effect also applies if additive variations are considered and can be more
 notable when more parameters are considered.
@@ -1300,7 +1303,7 @@ by additional *nuisance parameters* in the statistical model when the
 effect is known and can be approximated. For cases where
 simulation does not provide the desired level of accuracy,
 the contribution from some of the mixture components can 
-often be estimated from data directly, using what is referred to
+often be estimated from data directly, using what are referred to
 as *data-driven estimation* techniques.
 
 #### Nuisance Parameters {#sec:nuis_pars}
@@ -1341,7 +1344,7 @@ the statistical fluctuations between variations associated with the
 random sampling of the full latent space. Unprincipled modelling
 shortcuts, such as considering the additive or multiplicative effect of
 marginal efficiencies to account for combined effects,
-are also not uncommonly used for count vector observables
+are also frequently used for count vector observables
 $n^{\mathcal{C}_i}_j(\boldsymbol{\theta})$, as discussed in
 [Equation @eq:relative_var_eff] together with possible solutions
 to mentioned issues.
@@ -1359,7 +1362,7 @@ $p(\boldsymbol{z}_\textrm{d} |\boldsymbol{z}_\textrm{s}, \boldsymbol{\theta})$
 or
 $p(\boldsymbol{x} |\boldsymbol{z}_\textrm{d}, \boldsymbol{\theta})$,
 the ratio can be very hard to estimate unless additional simplifications
-are done. For those nuisance parametes, it is easier to consider the effect on
+are possible. For those nuisance parameters, it is easier to consider the effect on
 the lower-dimensional summary statistic instead of the detector readout $x$,
 because the ratio:
 $$
@@ -1408,12 +1411,12 @@ certain subset of the reconstructed objects $\boldsymbol{y}_\textrm{reco}$
 statistically differ between experimental data and
 the simulated observations, based on a subset of the data that
 is assumed to be well-modelled, the momenta of simulated observations
-can be corrected to better model the data, and the statistical
-accuracy of such procedure due to the different factors can be lead
-to a set of nuisance parameters that describe the limit of our
-the mentioned calibration as function of the value of
-$\boldsymbol{y}_\textrm{reco}$. The effect of such nuisance
-parameter can be often modelled in the simulation by using
+can be corrected to better model the data. The statistical
+accuracy of such procedure due to the different factors leads
+to a set of nuisance parameters that describe the limit of
+the mentioned calibration as a function of the value of
+$\boldsymbol{y}_\textrm{reco}$. The effect of these type of nuisance
+parameters often be modelled in the simulation by using
 a function of the simulated intermediate outputs, e.g.
 in the case of reconstructed objects:
 $$
@@ -1448,7 +1451,7 @@ respect to the parameters $\boldsymbol{\theta}$ of any expectation
 value can be very efficiently approximated. This can be very useful
 for statistical inference (e.g. likelihood minimisation),
 while it has not been
-used so far in LHC analysis to our knowledge. This
+used so far in LHC analysis to our knowledge. This is
 one of the core concepts of the technique to construct summary statistics
 presented in [Chapter @sec:inferno].
 
@@ -1481,13 +1484,13 @@ mentioned in the previous section. However, if the description of
 the summary statistics considered in the analysis provided
 by the simulated observations from process $j$ is substandard,
 e.g. the number of simulated observations that could be 
-realistically simulated is not sufficient, the
+realistically simulated is not sufficient, then
 the contribution from the mentioned mixture component might have
 to be estimated from experimental observations directly.
 
 The actual procedure used for modelling the contribution for a given
 mixture component $j$ from data depend on the specifics of the
-process as well the the details
+process as well the details
 analysis considered, but often includes some re-weighting
 factor obtained from simulated observations or additional experimental
 observations with an orthogonal selection criterion. Such data-driven
@@ -1521,7 +1524,7 @@ $p(\boldsymbol{s}(D) | \boldsymbol{\theta})$ has been fully specified.
 ### Likelihood-Free Inference {#sec:likelihood-free}
 
 One of the main properties of the statistical models at particle colliders
-we focussed on the last section was their generative-only nature,
+we focussed on in the last section was their generative-only nature,
 whereby their probability density $p(\boldsymbol{x} | \boldsymbol{\theta})$
 cannot be expressed analytically, but only
 by means of forward simulated observation. This fact greatly complicates the
@@ -1531,13 +1534,13 @@ $$L(\boldsymbol{\theta} | D) =\prod^{\boldsymbol{x}_i \in D}
  p(\boldsymbol{x}_i | \boldsymbol{\theta})
 $$ {#eq:likelihood_definition}
 in order to make quantitative statements about the parameters of interest,
-because it expresses the extend to which a set of values for
+because it expresses the extent to which a set of values for
 the model parameters are consistent with the observed data .
 Problems where the likelihood cannot be expressed directly are common
 in many scientific disciplines, because a link between
 observations and the underlying parameters can often only be provided by
 a probabilistic computer program when the system under study
-becomes is sufficiently complex, e.g. can only be described by
+is sufficiently complex, e.g. can only be described by
 a hierarchy or a sequence
 of stochastic processes.
 
@@ -1558,14 +1561,14 @@ $\boldsymbol{\theta}_0$ is retained as sample from the
 posterior. The
 process is repeated until the posterior is estimated with the
 desired accuracy. The quality of the posterior approximation
-produced by the previous method, as well as the number of
+produced by ABC techniques, as well as the number of
 sampling steps required to reach a given accuracy, strongly
-depends on the distance definition. When the dimensionality
-of the output is high, a summary statistic vector has
-$\boldsymbol{s}(\boldsymbol{x})$ has in practise to be used to increase
+depend on the distance definition. When the dimensionality
+of the output is high, a summary statistic vector
+$\boldsymbol{s}(\boldsymbol{x})$ must be used has in practice to increase
 the computational efficiency of the previous procedure.
 
-The approach commonly used when carrying our inference in the
+The approach commonly used when carrying our inference at
 particle physics experiments at the LHC is somehow related from the
 mentioned family of techniques. The observations are also reduced
 to a lower-dimensional summary
@@ -1581,7 +1584,7 @@ which is common when the reconstructed mass of
 an intermediate object is used as summary statistic and its response is
 well-controlled, e.g. a Higgs bosons decaying to two photons.
 An additional alternative approach, which has not been
-used in LHC analysis to date, could be to use non-parametric density
+used in LHC analyses to date, could be to use non-parametric density
 estimation techniques to obtain a synthetic likelihood directly
 from simulated data. This approach has been recently referred as Approximate
 Frequentist Computation (AFC) [@Brehmer:2018eca], and can be also combined
@@ -1597,7 +1600,7 @@ data agrees with an underlying model or prediction, which is often referred
 to as a *hypothesis*. The statistical model under consideration
 is often referred to as *null hypothesis* $H_0$.  Classical
 statistical testing techniques often require the definition of an
-*alternative hypothesis* $H_1$, whole agreement with the data
+*alternative hypothesis* $H_1$, whose agreement with the data
 is compared with that of the null. A hypothesis is said to be
 *simple*, when all the distribution (or generative model)
 parameters are fully specified, i.e.
@@ -1612,8 +1615,8 @@ observations $D = \{\boldsymbol{x}_0,...,\boldsymbol{x}_n\}$,
 a *test statistic* $t(D)$ that is a function
 of the observations is constructed. The choice of
 test statistic is especially critical when $\boldsymbol{x}$
-is high-dimensional. The concept of test statistic and summary
-statistic, which was discussed in [Section @sec:summary_statistic],
+is high-dimensional. The concepts of test statistic and summary
+statistic, the latter discussed in [Section @sec:summary_statistic],
 are very related. A test statistic is in fact a sample summary
 statistic $s(D)$, that is used within statistical test to accept
 or reject hypothesis, so all the concerns regarding
@@ -1627,7 +1630,7 @@ the process of making calibrated statistical statements.
 
 Let us refer to the test statistic for the observed set of
 observations as $t_\textrm{obs}$ from here onwards. The result of
-the statistical test is wether the hypothesis $H_0$ can be
+the statistical test is whether the hypothesis $H_0$ can be
 rejected in favour of $H_1$ if the null is unlikely enough. In
 practice, in order to make a principled decision,
 a critical region $\mathcal{T}_C \subseteq \mathcal{T}$ in the space of the test
@@ -1646,10 +1649,10 @@ $$
 \stackrel{\textrm{1D}}{=} \int_{t_\bold{cut}}^\infty  g( t| H_0) dt
 $$ {#eq:significance_test}
 where $g( t| H_0)$ is the distribution of the test statistic under the null
-hypothesis $H_0$, and the later simplification applies for one-dimensional
+hypothesis $H_0$, and the latter simplification applies for one-dimensional
 summary statistics where the critical region is defined based
 on a given threshold $t_\textrm{cut}$. The power of a test $1-\beta$ is
-instead defined on the probability of not rejecting the null hypothesis
+instead defined by the probability of not rejecting the null hypothesis
 when the alternative is actually true, which often referred as
 *type II error rate* $\beta$. The type II error rate $\beta$ can
 be defined as the probability of not being in the critical region
@@ -1670,14 +1673,14 @@ the null in favour of an alternate, while is beneficial to design
 the test so its power is as high as possible (equivalent to having a
 Type II error rate as low as possible).
 
-From the definition of Type I and Type II errors rates
+From the definition of Type I and Type II error rates
 in [Equation @eq:significance_test] and [Equation @eq:type2_test],
 it is evident that either the probability
-distribution function of the test statistic under both the the null
+distribution function of the test statistic under both the null
 and alternate hypothesis or a way to estimate the integrals from
 simulated observation are required. The main advantage of
 one-dimensional statistics, similarly to low-dimensional summary
-statistics, allow for an efficient estimation of the probability
+statistics, allows for an efficient estimation of the probability
 distribution function using non-parametric techniques.
 When both the null $H_0$ and alternate hypothesis $H_1$ are simple,
 the Neyman-Pearson lemma [@NeymanPearson1933] states that the
@@ -1691,22 +1694,22 @@ $$ {#eq:likelihood_ratio}
 is the most powerful test statistic at any threshold $t_\textrm{cut}$, which
 is associated with a significance
 $\alpha=P(\Lambda(\mathcal{D}; H_0, H_1) \leq t_\textrm{cut})$. The last
-expansion requires independence between the different observation. While the
+expansion requires independence between the different observations. While the
 likelihood ratio can be proven to be the most powerful test statistic,
 it cannot be evaluated exactly if the likelihood is not known, which
 often the case for LHC inference problems as discussed in
 [Section @sec:likelihood-free]. The alternate
 hypothesis is usually composite in particle colliders
 because the signal mixture
-fraction $\mu$ (or its cross section equivalently) is one the parameters
+fraction $\mu$ (or its cross section equivalently) is one of the parameters
 of interest. The likelihood ratio test can nevertheless be expressed
-in this cases a function $\mu$, which will be the most powerful
+in this case a function $\mu$, which will be the most powerful
 test for a given $\mu$.
 
 It is worth noting that while the
 likelihood ratio defined in [Equation @eq:likelihood_ratio] defines the
 most powerful test, the likelihood ratio based on a
-summary statistic $\boldsymbol{s}(D)$ can also be defined, but it not the most
+summary statistic $\boldsymbol{s}(D)$ can also be defined, but it is not the most
 powerful test for
 inference based on $D$ unless $\boldsymbol{s}(D)$ is a sufficient summary
 statistic with respect to the parameters $\boldsymbol{\theta}$ which fully
@@ -1718,7 +1721,8 @@ hypotheses.
 This fact motivates the
 use of machine learning techniques
 to approximate the likelihood ratio directly based on simulated observations
-is discussed in [Section @sec:lr_clf], which then can be calibrated by
+as discussed in [Section @sec:lr_clf]. The likelihood-ratio can then be
+calibrated by
 means of non-parametric probability density estimation techniques or
 count-based likelihoods.
 
@@ -1726,9 +1730,9 @@ Another relevant issue when defining test statistics is that hypothesis
 are rarely simple (or with a composite alternate in the way previously
 described). The statistical model often depends on additional
 nuisance parameters $\boldsymbol{\theta}$,
-as discussed in [Section @sec:sec:known_unknowns].
+as discussed in [Section @sec:known_unknowns].
 The likelihood ratio
-from [Equation @eq:likelihood_ratio] is not guaranteed to be most the
+from [Equation @eq:likelihood_ratio] is not guaranteed to be the most
 powerful test statistic when the hypotheses are composite. In this
 case, often summary statistics based on the *profile likelihood ratio* are
 used, that can be defined for LHC searches as:
@@ -1737,22 +1741,22 @@ $$
  \frac{L(\mu, \hat{\hat{\boldsymbol{\theta}}})}{
  L(\hat{\mu}, \hat{\boldsymbol{\theta}})}
 $$ {#eq:profile_lr}
-where $\hat{\hat{\boldsymbol{\theta}}}$ numerator refers to the value
+where $\hat{\hat{\boldsymbol{\theta}}}$ at the numerator refers to the value
 of the nuisance
 parameter that maximises the likelihood for a given $\mu$, and $\hat{\mu}$
-and $\hat{\boldsymbol{\theta}}$ in the denominator
+and $\hat{\boldsymbol{\theta}}$ at the denominator
 are the standard maximum likelihood estimators. The property that motivates
-the use of the profile likelihood ratio, other than it converges to
-the likelihood ratio when the hypothesis are simple, is the
+the use of the profile likelihood ratio, other than its convergence to
+the likelihood ratio when the hypothesis are simple, is that the
 distribution for large numbers of observations can be effectively
 approximated, as demonstrated by Wilks and Wald [@wilks1938large; @wald1943tests].
 
 For a discussion of the different test statistics based on the profiled
 likelihood ratio as well as their asymptotic approximations,
 the following reference is recommended [@Cowan:2010js]. In
-particular, the used of the *Asimov dataset*, where the observed sample
+particular, the use of the *Asimov dataset*, where the observed sample
 summary statistic of the type outlined [Equation @eq:sum_count_vector]
-is assumed to be equal to the expectation is instrumental
+is assumed to be equal to the expectation, is instrumental
 for the technique described in [Chapter @sec:inferno]. The statistical
 framework of hypothesis testing can also be used to decide wether to reject
 or not reject the null hypothesis in favour of the alternate, which
@@ -1770,7 +1774,7 @@ $$
 \widetilde{q}(\mu) =
 \begin{cases}
 -2\ln \frac{L(\mu, \hat{\hat{\boldsymbol{\theta}}}(\mu))}{
- L(\hat{\mu}, \hat{\boldsymbol{\theta}}(\mu))} \quad
+ L(0, \hat{\boldsymbol{\theta}}(\mu))} \quad
   &\textrm{if}\ \hat{\mu} < 0 \\
 -2\ln \frac{L(\mu, \hat{\hat{\boldsymbol{\theta}}}(\mu))}{
   L(\hat{\mu}, \hat{\boldsymbol{\theta}}(\mu))}  \quad
@@ -1781,12 +1785,12 @@ $$
 $$
 which does not regard negative background fluctuations
 or cases where $\hat{\mu} > \mu$ as evidence against $\mu$. When
-using $\widetilde{q}(\mu)$ or similar profile likelihood based test
+using $\widetilde{q}(\mu)$ or similar profile-likelihood-based
 one-dimensional test statistics, the observed exclusion upper upper
-limit can be defined as the larger value of $mu$ for which the probability
+limit can be defined as the larger value of $\mu$ for which the probability
 of obtaining a test statistic is equal or larger than
 a given confidence level (e.g. $\alpha=0.05$ for 95\% confidence
-intervals), which can be expressed as the following intergral:
+intervals), which can be expressed as the following integral:
 $$
 P(\widetilde{q}(\mu) \geq \alpha | \mu) =
 \int^{\infty}_{\widetilde{q}_\textrm{obs}(\mu)}
@@ -1804,33 +1808,33 @@ in which the exclusion limit is defined as the value of $\mu$
 for which
 $P(\widetilde{q}(\mu) \geq \alpha | \mu)/P(\widetilde{q}(\mu) \geq \alpha | 0) \geq\alpha)$.
 
-Most data analysis at the LHC, and particularly searches such
+Most data analyses at the LHC, and particularly searches such
 the one discussed in [Chapter @sec:higgs_pair],
-are carried out in blinded manner to reduce experimenter's bias,
+are carried out in blinded manner to reduce the experimenter's bias,
 i.e. the subset of observations or results 
 relevant for statistical inference are not considered
 or concealed until all the analysis procedures have defined. In order to
 optimise the various analysis component (e.g. selection or summary statistic),
-it useful to compute a figure of merit that is representative of the
+it is useful to compute a figure of merit that is representative of the
 prospective sensitivity of the analysis. The *expected significance*,
 is the expectation value for the probability value from [Equation
-@eq:significance_test] under the alternative hypothesis. The median
-instead of the expectation is often considered to preserve
+@eq:significance_test] under the alternative hypothesis. Instead, the median
+of the expectation is often considered to preserve
 monotonicity with Z-values, and several approximations exist
 for simple cut-and-count likelihoods. Both the expected and median significance
 depend on the signal fraction $\mu$ assumed, so they are particularly useful
-to optimise analysis some knowledge about the order of magnitude is $\mu$
-is known.
+to optimise analysis where the order of magnitude expected for $\mu$ is known,
+e.g. cross section measurements of SM processes.
 
 Alternatively, the expected median upper limit can be defined as the
 exclusion upper limit using the median test statistic
 $\widetilde{q}_\textrm{med}(\mu)$ under
 the null hypothesis instead of the observed statistic. In addition to
-the median expected limit, it is common practise in the LHC searches
+the median expected limit, it is common practice in LHC searches
 to also compute the so-called 1-sigma and 2-sigma bands, that correspond
 to the $50\pm16$ and $50\pm22.5$ percentiles instead of the median. The
 upper limits bands provide a quantitive estimation
-of the possible limit variation if not signal is present in the data.
+of the possible limit variation if no signal is present in the data.
 Both the expected significance and the expected upper limit can be estimated
 asymptotically for summary statistics like the one described
 in [Equation @eq:sum_count_vector]. The effect of nuisance parameters
@@ -1844,10 +1848,10 @@ Another inference problem that can be defined based on the observed
 data, is parameter estimation, whose goal can be generally be defined as
 the determination of the possible or optimal values that the 
 parameters of a statistical model could take to be consistent with
-the observations. Two types of parameter estimation problem
+the observations. Two types of parameter estimation problems
 are often considered: point estimation and interval estimation. If the
 aim is to obtain the best estimate (i.e. a single value) of a 
-vector of parameter based on a set of observation, it is referred to
+vector of parameter based on a set of observations, it is referred to
 as a *point estimation* problem. When we are instead interested
 on using a set of observations to make statistical statements on
 the plausibility of a range or region for the values that the statistical model
@@ -1858,14 +1862,14 @@ from a classical (i.e. also known as frequentist) standpoint
 where the true values of the parameter are assumed to be fixed but unknown;
 or from a Bayesian perspective, where probabilistic statements representing
 the degree of belief on the values for the parameters are updated based on
-the set of observation. A classical inference approach is predominantly
+the set of observations. A classical inference approach is predominantly
 adopted in this document, where the definition of
 probability is based on the relative frequency of the outcome when
 many trials are carried out. Classical interval estimation, often referred
 to as *confidence interval* estimation is
 strongly related with hypothesis testing, as reviewed in
 [Section @sec:hypo_test]. The $100(1-\alpha)\%$ confidence interval (CI)
-for a one-dimensional parameter $\theta$ can defined as the interval
+for a one-dimensional parameter $\theta$ can be defined as the interval
 $[\hat{\theta}^{-},\hat{\theta}^{+}]$:, such that:
 
 $$
@@ -1874,8 +1878,9 @@ $$ {#eq:confidence_interval}
 
 where $\hat{\theta}^-$ and $\hat{\theta}^+$ are referred as the lower and
 upper limits. The definition of confidence interval in the context
-of classical parameter estimation is the range of of values for given parameter
-that would contain the true value $100(1-\alpha)\%$ of the times.
+of classical parameter estimation is the range of values for a given parameter
+which, upon repeated trials,
+would contain the true value $100(1-\alpha)\%$ of the times.
 The concept of confidence interval can also be extended a
 confidence region when a multi-dimensional parameter vector is considered.
 While the definition of confidence interval  based on
@@ -1890,7 +1895,7 @@ the set of data.
 The Neyman construction [@10.2307/91337] provides a principled procedure
 to define $100(1-\alpha)\%$  confidence intervals which guarantee
 the property defined in [Equation @eq:confidence_interval], by inverting
-a an ensemble of hypothesis test (as defined in [Section @sec:hypo_test]),
+an ensemble of hypothesis test (as defined in [Section @sec:hypo_test]),
 by using simulated datasets for the different values
 that parameter $\theta$ can take. Confidence intervals can
 be one-sided, e.g. such as the exclusion upper limits
@@ -1903,7 +1908,7 @@ likelihood-ratio ordering criterion [@Feldman:1997qc].
 
 Confidence interval procedures based on the Neyman construction works
 very well for simple statistical models with one or two parameters, however
-it rapidly becomes computationally intractable larger
+it rapidly becomes computationally intractable for larger
 the number of parameters. Even though
 the number of parameters of interest in LHC analyses is usually small,
 nuisance parameters play an important role in inference as reviewed in
@@ -1938,7 +1943,7 @@ parameter priors are uniform.
 
 The shape of the likelihood function around the maximum likelihood
 estimator $\boldsymbol{\theta}_{\textrm{ML}}$ can be used to approximate
-confidence intervals. Using asymptotic theory developed
+confidence intervals. Using asymptotic theory developed by
 Wilks [@wilks1938large], the $100(1-\alpha)\%$ confidence region
 for the parameter vector $\boldsymbol{\theta}$ can be determined
 using the following relation:
@@ -1948,11 +1953,11 @@ $$
 - \ln L(D; \boldsymbol{\theta}_{\textrm{ML}}) + \Delta \ln L
 $$ {#eq:delta_log}
 
-where $\ln L(D; \boldsymbol{\theta}_{\textrm{ML}})$ is natural logarithm
+where $\ln L(D; \boldsymbol{\theta}_{\textrm{ML}})$ is the natural logarithm
 of the likelihood for the maximum likelihood estimator and $\Delta \ln L$
 depends on the number of parameter dimensions and the desired coverage
 $1-\alpha$. For example, the values of  $\boldsymbol{\theta}$
-inside the $68.27\%$ (i.e. 1-sigma) confidence region and one dimensional
+inside the $68.27\%$ (i.e. 1-sigma) confidence region and for one dimensional
 parameter are those for which the previous relation is verified using
 $\Delta \ln L = 0.5$. If  $\boldsymbol{\theta}$ is one-dimensional and
 the function $L(D; \boldsymbol{\theta})$ is convex, the confidence
@@ -1978,7 +1983,7 @@ L(D; \boldsymbol{\theta}_\iota, \boldsymbol{\theta}_\nu)
 $$ {#eq:profiled_ll}
 
 so the nuisance parameters $\boldsymbol{\theta}_\nu$ are profiled by
-considering their values that would maximise the likelihood conditional
+considering their values that would maximise the likelihood conditional to
 each value of the parameters of interest $\boldsymbol{\theta}_\iota$.
 Noting that a constant denominator in the likelihood would cancel out at each
 side of [Equation @eq:delta_log], and its equivalent when
@@ -1992,8 +1997,8 @@ for benchmarking different ways for constructing summary statistics
 in [Chapter @sec:inferno].
 
 Another subtlety relevant when dealing with nuisance parameters (which
-also applies in lesser degree to the combination of measurements),
-is that oftentimes nuisance parameters are constraint by theory
+also applies to a lesser degree to the combination of measurements),
+is that oftentimes nuisance parameters are constrained by theory
 or external measurement. This can be included in the previous
 likelihood-based techniques by considering the likelihood
 as a product of the likelihood derived from the statistical
@@ -2043,8 +2048,8 @@ which becomes an equality in the large-sample
 limit for an efficient parameter estimator
 such as the maximum likelihood estimator $\boldsymbol{\theta}_\textrm{ML}$.
 The diagonal elements of the inverse of the information
-matrix $\sigma_i^2=\left( I(\boldsymbol{\theta})^{-1} \right)_{ii}$ can used
-to construct a $68\%$ confidence interval for $\theta_i$ parameter
+matrix $\sigma_i^2=\left( I(\boldsymbol{\theta})^{-1} \right)_{ii}$ may be
+to construct a $68.3\%$ confidence interval for $\theta_i$ parameter
 where the effect of the rest of parameters has been profiled as
 $[\boldsymbol{\theta}_\textrm{ML}-\sigma_i, \boldsymbol{\theta}_\textrm{ML}+\sigma_i]$.
 This approximation is equivalent to
