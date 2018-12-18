@@ -434,8 +434,9 @@ to a diverging coupling constant.
 The remaining two fundamental interactions between elementary particles
 are the electromagnetic and the weak force. The description of
 the electromagnetic interaction in terms of quantum fields and gauge
-symmetries, leading to the development of quantum electrodynamics (QED),
-prompted a quest for an analogous theory for the weak force. The weak force,
+symmetries, leading to the development of quantum electrodynamics (QED)
+in the late 1940s, prompted a quest for an analogous theory for the weak
+force. The weak force,
 known to be responsible for the beta decay at the time,
 could effectively be modelled
 using Fermi theory using four-fermion interactions [@fermi1934attempt]

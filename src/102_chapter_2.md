@@ -1542,17 +1542,20 @@ primary vertex before decaying.
 that can be used for jet tagging including the presence charged tracks, with
 a large impact parameter (IP), that is not compatible with the primary vertex
 (PV),
-and a reconstructed secondary vertex (SV), both due to the decay of $\textrm{B}$
-or $\textrm{C}$ hadrons. The figure has been adapted from [@Sirunyan:2017ezt].
+and a reconstructed secondary vertex (SV), both due to the decay of $B$
+or $C$ hadrons. The figure has been adapted from [@Sirunyan:2017ezt].
 ](gfx/102_chapter_2/Figure_001.pdf){
 #fig:CMS_btag_scheme width=50%}
 
 Some properties of the decay of $B$ and $D$ hadrons can be used to
 distinguish heavy flavour jets from those produced by light quarks and gluon
-hadronisation processes. In particular, the lifetimes of heavy flavour hadrons
-are often long enough that they move several millimetres  away from
-the primary vertex where they were produced before decaying, when
-highly boosted. Thus, heavy flavour jets are associated with the presence
+hadronisation processes. The lifetimes of heavy flavour hadrons
+are often long, e.g. $1.638\pm0.004\ \textrm{ps}$
+and $1.519\pm0.005\ \textrm{ps}$ for $B^{+}$ and $B^{0}$ [@PhysRevD.98.030001],
+respectively. When long-lived hadrons are highly boosted, they can
+move several millimetres away from
+the primary vertex where they were produced before decaying.
+Thus, heavy flavour jets are associated with the presence
 of displaced charged tracks and secondary vertices (SV) within the jet,
 as depicted by [Figure @fig:CMS_btag_scheme]. In addition, both
 $B$
