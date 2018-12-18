@@ -34,15 +34,15 @@ Nuclear Research (CERN).
 
 \vspace{1cm}
 \begin{center}
-\includegraphics[height = 20mm]{gfx/002_foreword/INFN_logo.pdf}
+\includegraphics[height = 20mm]{gfx/002_preface/INFN_logo.pdf}
 \hspace{1 cm}
-\includegraphics[height = 20mm]{gfx/002_foreword/EU_logo.pdf}
+\includegraphics[height = 20mm]{gfx/002_preface/EU_logo.pdf}
 \hspace{1 cm}
-\includegraphics[height = 20mm]{gfx/002_foreword/AMVA4NP_logo.pdf}
+\includegraphics[height = 20mm]{gfx/002_preface/AMVA4NP_logo.pdf}
 \end{center}
 \vspace{0.2 cm}
 \begin{center}
-\includegraphics[height = 20mm]{gfx/002_foreword/CMSlogo.pdf}
+\includegraphics[height = 20mm]{gfx/002_preface/CMSlogo.pdf}
 \hspace{1cm}
-\includegraphics[height = 20mm]{gfx/002_foreword/Logo_CERN.pdf}
+\includegraphics[height = 20mm]{gfx/002_preface/Logo_CERN.pdf}
 \end{center}
