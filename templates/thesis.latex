@@ -2,6 +2,8 @@
 % pandoc template heavily based in latex-mimosis example
 \documentclass{templates/mimosis}
 
+
+
 \usepackage{metalogo}
 \usepackage{subfig}
 \usepackage{bbold}
@@ -39,7 +41,10 @@
   citecolor  = RoyalBlue,
   linkcolor  = RoyalBlue,
   urlcolor   = RoyalBlue,
+  pdfpagelabels
   ]{hyperref}
+  \usepackage[a-1b]{pdfx}
+
   
   \makeatletter
   \def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
