@@ -151,7 +151,7 @@ $$ {#eq:erm}
 which is also commonly referred to as *empirical risk*
 approximation
 $R_\textrm{S'}$(f) based on the set $S'$. The supervised learning
-problem can then be stated as
+problem can then be stated as one of
 finding the function $\hat{f}$ from a class of functions $\mathcal{F}$, which
 depends on the particularities of the algorithm, that minimises the empirical
 risk over the learning set $S$:
@@ -161,7 +161,7 @@ $$ {#eq:learning_erm}
 which is referred to as empirical risk minimisation (ERM) [@vapnik1999overview],
 and it is at core of most of the existing learning techniques, such as those
 described in [Section @sec:ml_techniques]. However, the ultimate goal of a
-learning algorithm is to find a function $f*$ that minimises the risk
+learning algorithm is to find a function $f^*$ that minimises the risk
 or expected prediction error $R(f)$:
 $$
 f^* = \mathop{\textrm{arg min}}_{f \in \mathcal{F}} R(f)
@@ -201,7 +201,7 @@ estimator of the expected generalisation error $R(f)$. In general,
 $R_\textrm{S}(f)$ underestimates $R_\textrm{S}(f)$ because the statistical
 fluctuations of the finite number of observations in $S$ can be learnt to
 increase the performance on $S$, while they are not useful for prediction
-on a new set of observations. If the family of functions $\mathcal{F}$ conisdered
+on a new set of observations. If the family of functions $\mathcal{F}$ considered
 in the learning algorithm is flexible enough, which is often the case,
 it is possible to achieve $R_\textrm{S}(f)=0$ for the learning set $S$ while
 the generalisation error $R(f)$ is well away from zero. This effect can
@@ -234,7 +234,7 @@ of $S_\textrm{train}$ which is commonly referred as validation
 set $S_\textrm{valid}$. Alternative approaches to estimate
 the generalisation error exist, including *cross-validation*
 and its variations [@friedman2001elements], which are usually preferred when
-the the amount of training data is reduced.
+the amount of training data is reduced.
 
 Another important concept for most machine learning techniques is that of
 *hyper-parameters*. The majority of machine learning algorithms depend on
@@ -266,7 +266,7 @@ function. The zero-one loss is non-differentiable when $y =f(\boldsymbol{x})$
 and its gradients are zero elsewhere; in addition, it is not convex,
 a property which makes the
 minimisation task in [Equation @eq:learning_erm] hard to
-tackled by optimisation algorithms. In fact, it can be proven
+tackle by optimisation algorithms. In fact, it can be proven
 that finding the function $f$ in $F$ that minimises directly the 
 $R_{0-1}$ empirical risk with a training sample is a NP-hard
 problem [@nguyen2013algorithms]. The
@@ -283,9 +283,9 @@ thus the optimal classifier amounts to the prediction of the most likely
 output category $y$ for a given input $\boldsymbol{x}$. The previous
 problem is normally referred to as *hard classification*, where the
 objective is to assign a category for each input observation. Because
-most problem in high-energy physics that can be cast as supervised learning,
+most problem in high-energy physics that can be cast as supervised learning
 are ultimate inference problems as will be reviewed in [Section @sec:ml_hep],
-it is more generally more useful to consider the problem of *soft classification*,
+it is generally more useful to consider the problem of *soft classification*,
 which instead amounts to estimate the class probability for each input
 $\boldsymbol{x}$.
 
@@ -339,7 +339,7 @@ $$
 L_\textrm{CE} ( \boldsymbol{y} , f(\boldsymbol{x})) = - \sum_i y_i \log \hat{y}_i
 $$ {#eq:general_ce}
 which can be used to recover [Equation @eq:binary_xe] when $k=2$, considering
-the one-dimensional target and prediction as the the i=1 elements 
+the one-dimensional target and prediction as the i=1 elements 
 and that $y_0=1-y$ and $\hat{y}_0=1-f(x)$. If the prediction
 output is to generally represent exclusive class probabilities, as is the goal of soft
 classification, the prediction sum is expected to be one. 
@@ -387,7 +387,7 @@ and properties that can be addressed with machine learning techniques,
 details about the actual computational and statistical
 procedures used for learning were not provided. In
 this chapter, the basis of the two classes of algorithms that are used
-in this work will
+elsewhere in this work will
 be described in detail: boosted decision trees and artificial neural networks.
 These families of learning methods are also those that are most commonly used
 in machine learning within experimental particle physics, mostly to solve
@@ -412,12 +412,12 @@ models, e.g. shallow binary decision trees, if they are built
 to minimise the residual error at each stage. Gradient boosting
 algorithms can be applied to any supervised task as long as it can
 be specified by a differentiable loss function, and they
-can be understood as gradient descent (which will be
+can be understood as *gradient descent* (which will be
 discussed in [Section @sec:ann]) in function space [@mason2000boosting].
 
 While it can be applied to other weak learners, gradient boosting
 is often used to learn ensembles of decision trees. A decision
-tree, is hierarchical branched structure that associates
+tree is hierarchical branched structure that associates
 an outcome for each input
 $\boldsymbol{x}\in\mathcal{X}$ by means of partitioning
 the input space in different disjoint subsets $R = (\mathcal{X}_0,
@@ -435,15 +435,15 @@ where $w_r$ is the outcome for each subspace, noting the summands
 will be zero for all subsets $\mathcal{X}^r$ except for one because their
 are disjoint. The indicator function $\mathbb{1}_{\mathcal{X}_r}(\boldsymbol{x})$
 of a given subspace is specified by a series of binary decisions on a single
-feature. If the leaf prediction $w_r$ are categorical, the resulting
+feature. If the leaf predictions $w_r$ are categorical, the resulting
 model $t(\boldsymbol{x})$ is referred as a classification tree. If
 $w_r$ are numerical, $t(\boldsymbol{x})$ is
 a regression tree. In the context of gradient boosting, regression
 trees are often more useful, even for classification tasks, i.e.
 regression trees can be used in conjunction with soft classification
 loss functions (e.g. cross entropy). For the rest of this section,
-we will then focus on gradient boosting with regression trees,.
-An schematic representation
+we will then focus on gradient boosting with regression trees.
+A schematic representation
 of a regression tree is provided in [Figure @fig:tree], which
 corresponds to the first tree in the ensemble used for signal
 versus background classification in the analysis
@@ -475,7 +475,7 @@ where each $t_j(\boldsymbol{x})$ is a CART model, as
 described in [Equation @eq:cart_indicator]. Other regression tree ensembles
 based on alternative methods such as bagging [@breiman1996bagging] can
 also be expressed by a similar combination of predictions. The learning
-problem in can be expressed as empirical risk minimisation in the space
+problem can be expressed as empirical risk minimisation in the space
 of possible tree ensembles over the learning set of labelled observations
 $S=\{(\boldsymbol{x}_0,\boldsymbol{y}_0),...,(\boldsymbol{x}_n',\boldsymbol{y}_n')\}$,
 as discussed in [Equation @eq:learning_erm]. The total empirical risk
@@ -493,7 +493,7 @@ in order to avoid overfitting.
 Because learning the structure and leaf weights $w_r$
 of all trees in the ensemble at the same time is intractable,
 boosting is based on sequentially
-learning trees. At each step each step, a tree $t_j$ is built to improve over
+learning trees. At each step, a tree $t_j$ is built to improve over
 the previously ensemble of trees $T_{(j-1)}$, the prediction for each
 observation in the learning set a given step $j$
 of the training procedure can then be expressed as:
@@ -561,7 +561,7 @@ compare tree structures to be added to the ensemble in a principled manner.
 
 In practice, the number of possible tree structures is infinite so the
 problem of finding the optimal tree at each step is still intractable.
-A greedy heuristic is instead used, which proceed one level of the tree
+A greedy heuristic is instead used, which proceeds one level of the tree
 at time. For each input feature, the optimal splitting at a given
 level can be found by maximising the splitting gain, which can be done
 very efficiently by sorting the observations in that feature and finding
@@ -577,9 +577,9 @@ left of the threshold and $G_R$ and $H_R$ are those
 right of the threshold. If the gain is negative for the whole, no splitting
 is preferred in the considered features. Once the optimal splitting
 is determined for all the features, the features that provides the
-minimal risk as defined in [Equation @eq:opt_weight_risk] is chosen. These
-algorithm is proceeds to the next tree level until the maximum tree depth
-is reached or any additional splitting degrade the performance.
+minimal risk as defined in [Equation @eq:opt_weight_risk] is chosen. The
+algorithm then proceeds to the next tree level until the maximum tree depth
+is reached or any additional splitting degrades the performance.
 
 Boosted tree ensembles are prone to overfitting to the learning set, so
 additional heuristic are often used to improve generalisation. A common
@@ -601,7 +601,7 @@ maximised.
 
 ### Artificial Neural Networks {#sec:ann}
 
-An alternative way to carry do empirical risk minimisation is
+An alternative way to carry out empirical risk minimisation is
 based on consider function $f(\boldsymbol{x}; \boldsymbol{\phi})$,
 which depends on a vector of parameters $\boldsymbol{\phi}$, and
 attempt to find the values of $\boldsymbol{\phi}$ that minimise
@@ -612,7 +612,7 @@ $f(\boldsymbol{x}; \boldsymbol{\phi})$ is differentiable with
 respect to the parameter vector $\boldsymbol{\phi}$,
 the minimisation from [Equation @eq:learning_rm],
 can be attempted with gradient-based methods. The simplest
-gradient-based optimisation technique is referred to as *gradient descend* (GD),
+gradient-based optimisation technique is referred to as *gradient descent* (GD),
 and can be applied to the previous problem by initialising
 the parameter vector at random $\boldsymbol{\phi}^0$ and then iteratively
 updating the model parameters $\boldsymbol{\phi}$ at each step $t$
@@ -662,7 +662,7 @@ $$
 \left ( L(\boldsymbol{y}_i,f(\boldsymbol{x}_i; \boldsymbol{\phi}^t)) +
 \Omega(\boldsymbol{\phi}^t) \right )
 $$ {#eq:sdg}
-where $B$ is a random subset of size $m$ of the learning set $S$. In the original
+where $B$ is a random subset of size $m$ of the learning set $S$. In the
 original formulation $m=1$, yet nowadays a larger value for $m$ is often used
 in what is referred to as mini-batch SGD to obtain balance the estimate noise
 and take advantage of vectorised computations. Several variations of SGD
@@ -739,7 +739,7 @@ data representations in many learning tasks.
  
 A good choice for depth and overall structure for a neural network
 model depends on the problem at hand and characteristic and amount
-of the learning set available, thus it often has to be found
+of the learning set available, thus it often has to be defined
 by trial-and-error, based on the performance on a validation
 set as discussed in [Equation @sec:supervised]. The output size and choice
 of activation function in the last transformation often
@@ -872,7 +872,7 @@ inference of a subset of parameters of interest in a mixture model,
 let us consider the general problem of inference for a two-component
 mixture problem. One of the components will be denoted as signal
 $p_s(\boldsymbol{x}| \boldsymbol{\theta})$ and the other as background
-$p_b(\boldsymbol{x} | \boldsymbol{\theta})$, where  $\boldsymbol{\theta}$ is
+$p_b(\boldsymbol{x} | \boldsymbol{\theta})$, where  $\boldsymbol{\theta}$
 are of all parameters the distributions might depend on. As
 discussed in [Section @sec:mixture_components], it is often the case that
 $f_s(\boldsymbol{x}| \boldsymbol{\theta})$ and
@@ -887,11 +887,11 @@ $${#eq:mixture_general}
 where $\mu$ is a parameter corresponding to the signal mixture fraction,
 which will be the only parameter of interest for the time being. As
 discussed in [Section @sec:sig_and_bkg],
-most the of the parameters of interest in analyses at the LHC, such cross
+most the of the parameters of interest in analyses at the LHC, such as cross
 sections, are proportional to the mixture coefficient of the signal
 in the statistical model.
 The results presented here would also be also be valid if alternative mixture
-coefficient parametrisation such as the one considered in [Section @sec:synthetic_mixture] are used, e.g. $\mu=s/(s+b)$ where $s$ and $b$
+coefficient parametrisations such as the one considered in [Section @sec:synthetic_mixture] are used, e.g. $\mu=s/(s+b)$ where $s$ and $b$
 is the expected number of events for signal and background respectively, as
 long as $b$ is known and fixed and $s$ is the only parameter of interest.
 
@@ -918,7 +918,7 @@ can be approximated by a simple function of the trained classifier output
 directly from samples of observations. The factor
 $p(y = 1)/p(y = 0)$ is independent on $\boldsymbol{x}$, and can
 be simply estimated as the ratio between the total number of observations
-from each category in the training dataset - i.e. equal to 1 if it is
+from each category in the training dataset - i.e. equal to 1 if the latter is
 balanced.
 
 Density ratios are very useful for inference, particularly for
@@ -946,7 +946,7 @@ where the $p(\boldsymbol{x}| \mu = 0, \boldsymbol{\theta})/p(\boldsymbol{x}|
 \mu_0, \boldsymbol{\theta})$ factor could be approximated from the output
 of a probabilistic classifier trained to distinguish observations from
 $p(\boldsymbol{x}| \mu = 0, \boldsymbol{\theta})$  and those from
-$p(\boldsymbol{x}| \mu = \mu_0, \boldsymbol{\theta})$. A certain $\mu_0$ would  
+$p(\boldsymbol{x}| \mu = \mu_0, \boldsymbol{\theta})$. A certain $\mu_0$ would
 have to be specified to generate $p(\boldsymbol{x}| \mu = \mu_0,
 \boldsymbol{\theta})$ observations in order to train the classifier. The
 same classifier output could be repurposed to model the likelihood ratio
@@ -1045,7 +1045,7 @@ $$
 s_{s/(s+b)}= \frac{p_s(\boldsymbol{x} | \boldsymbol{\theta})}{
 p_s(\boldsymbol{x} | \boldsymbol{\theta}) +
  p_b(\boldsymbol{x} | \boldsymbol{\theta})}$$  
-instead of $s_{s/ b} (\boldsymbol{x})$ is used.
+is used instead of $s_{s/ b} (\boldsymbol{x})$.
 The advantage of $s_{s/(s+b)}(\boldsymbol{x})$ is that it represents
 the conditional probability of one observation $\boldsymbol{x}$ coming
 from the signal assuming a balanced mixture, so it can be approximated
@@ -1098,7 +1098,7 @@ information about that can used to constrain the parameters of interest
 might be lost if a low-dimensional
 classification-based summary statistic is used in place
 of $\boldsymbol{x}$. This theoretical observation will be observed
-in practice in [Chapter @sec:inferno], where a new technique to
+in practice in [Chapter @sec:inferno], where a new technique is proposed to
 construct summary statistics, that is not based on classification,
 but accounts for the effect of nuisance parameters is presented.
 
@@ -1111,7 +1111,7 @@ selection or directly as a summary statistic, some information about
 other latent variables can also be recovered using supervised machine learning.
 As discussed in [Section @sec:event_reco], event reconstruction techniques
 are used to cluster the raw detector output so the various readouts are
-associated with a list of particles produced in the the collision. It
+associated with a list of particles produced in the collision. It
 is possible that in the near future the algorithmic reconstruction procedure
 might be substituted by supervised learning techniques, training directly
 on simulated data to predict the set of latent variables at parton level,
@@ -1129,9 +1129,9 @@ latent information is lost in the standard reconstruction process, particularly
 for composite objects such as jets. Supervised machine learning techniques
 can be used to regress some of these latent variables, using simulated
 data and considering both low-level and high-level features associated
-with the relevant reconstructed objects. These information could be used to
+with the relevant reconstructed objects. This information could be used to
 complement the reconstruction output for each object and design better
-summary statistics, e.g. adding this information as an input to the
+summary statistics, e.g. adding it as an input to the
 classifiers discussed in [Section @sec:sig_vs_bkg].
 
 The details of the application of machine learning techniques
@@ -1173,9 +1173,9 @@ originating from b-quarks from those originating from lighter quarks
 or gluon, which can be framed as binary classification problem: predicting
 wether a jet is coming from a b-quark or not
 given a set of inputs associated to each jet. The truth label is available
-for simulated samples, that can be used to train the classifier. The CSVv2
+for simulated samples, which can be used to train the classifier. The CSVv2
 b-tagging algorithm (and older variants) mentioned in
-[Section @sec:jet_btag], is based on the output of
+[Section @sec:jet_btag] is based on the output of
 supervised classifiers trained from simulation, the combination of
 three shallow neural network combination depending on vertex information
 for CSVv2. The CMVAv2 tagger, which is used in the CMS analysis included
@@ -1187,7 +1187,7 @@ charm quark tagging and double b-quark tagging for large radius jets.
 The first attempt to use some of the recent advances in neural networks
 (see [Section @sec:ann]) for jet tagging within CMS was commissioned using
 2016 data, and it is referred to as DeepCSV tagger. The purpose for
-the development for this tagger was to quantify the performance gain
+the development of this tagger was to quantify the performance gain
 due to the use of deep neural networks for jet tagging in CMS, which
 was demonstrated effective using a simplified detector simulation
 framework [@Guest:2016iqz; @deOliveira:2015xxd]. Thus, a classifier
@@ -1203,10 +1203,10 @@ a principled and simple for tacking the various flavour tagging
 problems simultaneously.
 
 Five exclusive categories were defined
-based different on the generator level hadron information: the
+based different on the generator level hadron information [^flavour]: the
 jet contains exactly one B hadron, at least two B hadrons,
-exactly one C hadrons and no B hadrons, at least two C hadrons 
-and at least two C hadrons and no B hadrons or none of the
+exactly one C hadrons and no B hadrons, at least two C hadrons and no B hadrons,
+or none of the previously
 defined categories. The softmax operator
 (see [Equation @eq:softmax_function]) was used to normalise
 the category output as probabilities and construct a loss
@@ -1220,6 +1220,11 @@ which uses additional leptonic information.
 While not shown in this document, the performance for c-tagging was
 found also comparable with dedicated
 c-taggers [@Sirunyan:2017ezt].
+
+[^flavour]: Here by B and C hadrons we refer to hadrons containing b-quarks
+  c-quarks as valence quarks respectively,
+  which often have a lifetime large enough
+  to fly away from the primary vertex as discussed in [Section @sec:jet_btag].
 
 The very favourable results obtained for DeepCSV motivated the use of
 newer machine learning technologies, such as convolutional and
@@ -1268,12 +1273,16 @@ first layer) cells with ReLu activation functions per layer.
 
 A total of six mutually exclusive output categories are considered
 based on the generator-level
-particle content associated to the jet: exactly one B hadron
-that does not decay to a lepton,
-at least two B hadrons, one hadron B decaying to a soft lepton,
-at least one C hadron and no B hadrons, no heavy hadrons but was originated
-from a light quark or not heavy hadrons but was originated from a gluon.
-This tagger aims to provide gluon-quark discrimination in addition to
+particle content associated to the jet:
+
+- *b* - exactly one B hadron that does not decay to a lepton.
+- *bb* - at least two B hadrons.
+- *lepb* - one hadron B decaying to a soft lepton
+- *c* - at least one C hadron and no B hadrons
+- *l* - no heavy hadrons but originated from a light quark
+- *g* - no heavy hadrons but was originated from a gluon.
+
+The DeepJet tagger aims to provide gluon-quark discrimination in addition to
 b-tagging, c-tagging and double b-tagging. The output probabilities are normalised
 by using the softmax operator (see [Equation @eq:softmax_function]).
 The training loss function was constructed based on cross entropy
@@ -1286,16 +1295,16 @@ efficiency curve compared with the DeepCSV tagger, is shown in
 [Figure @fig:DeepJet_b_performance]. The additional model complexity and
 input variables lead to a clear performance improvement, about a 20\%
 additional efficiency at a mistag rate of $10^{-3}$ for light quark
-and gluon originated jets. Larger relative enhancements with respected
+and gluon originated jets. Larger relative enhancements with respect
 to DeepCSV are seen for b-jet versus c-jet identification. The performance
-for c-tagging and guark-gluon discrimination is slightly improved
+for c-tagging and quark-gluon discrimination is slightly improved
 in comparison with dedicated approaches, with the advantage of using
 a single model for all the flavour tagging variations. The expected
 relative performance boost, especially when compared non deep learning
 based taggers (CSVv2 or CMVA) can increase significantly the discovery
-potential for analysis based final states with several b-tagged jets,
+potential for analyses targeting final states containing several b-tagged jets,
 such as the one presented in [Chapter @sec:higgs_pair]. In addition similar
-model architectures have been since successfully applied to large radius
+model architectures have since been successfully applied to large radius
 jet tagging [@CMS-DP-2018-046]
 and could be also extended to other jet related tasks, as providing
 a better jet momenta estimation by means
@@ -1319,9 +1328,10 @@ of both DeepCSV and DeepJet was carried out using the
 [Keras]{.smallcaps} [@chollet2015keras] and [TensorFlow]{.smallcaps}
 [@tensorflow2015-whitepaper] open-source libraries. In order to
 integrate jet tagging models in the standard CMS reconstruction sequence,
-which is run both for acquired and simulated data in commodity hardware in
-a distributed manner around the world in the LHC computing grid [@bird2005lhc],
-which has rather stringent CPU and memory requirements per event. In addition,
+which has rather stringent CPU and memory requirements per event
+because it is run for both acquired and simulated data in commodity hardware in
+a distributed manner around the world in the LHC computing grid [@bird2005lhc].
+In addition,
 the [lwtnn]{.smallcaps} open-source library [@daniel_hay_guest_2018_1482645],
 a low-overhead C++ based interface used for the integration of DeepCSV
 did not support multi-input models with recurrent layers at the time.

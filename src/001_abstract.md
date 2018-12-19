@@ -3,7 +3,7 @@
 
 Advances in data analysis techniques could play a decisive role on the
 discovery reach of particle collider experiments, yet
-expertise from other data-centric
+the importing of expertise from other data-centric
 disciplines such as machine learning and statistics
 encounters significant
 barriers, mainly due to the use of domain-specific language
@@ -24,11 +24,7 @@ and the effect of known unknowns. The first issue can
 be linked with the notion of likelihood-free inference
 and the role of low-dimensional summary statistics, that
 can be constructed using machine learning techniques or using
-physically motivated variables. The use of supervised
-machine learning methods (and more generally event reconstruction) could
-be understood as an approximate regression of
-hidden variables of the generative model using simulated
-observations.
+physically motivated variables.
 The second concern, i.e. the misspecification
 of the generative model that is addressed by the inclusion of nuisance
 parameters,
@@ -56,10 +52,10 @@ The technique,
 referred to as inference-aware neural optimisation, produces
 summary statistics that directly minimise the expected uncertainty of
 the parameters of interest, accounting for the effect of nuisance
-parameters. Early results in a synthetic problem demonstrate that the summary
+parameters. Its application to a synthetic problem demonstrates that the summary
 statistics obtained with this method are considerably more effective than
 those obtained by supervised learning approaches when the effect
-of nuisance parameters is significant. If it scales to real-world data scenarios
-at the LHC, extensions of this technique could
+of nuisance parameters is significant. Assuming its scalability
+to real-world data scenarios at the LHC, extensions of this technique could
 be instrumental for analyses dominated by systematic uncertainties.
 
