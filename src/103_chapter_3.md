@@ -195,9 +195,8 @@ while its readout distribution will depend on its differential
 cross section $d\sigma (pp\rightarrow X)$ and its support. In fact, given
 that the total and differential cross section are proportional to
 the matrix element squared (see [Section @sec:qft_basics])
-of a given process $d\sigma (pp\rightarrow X) \propto |\mathcal{M}|^2$,
-and thanks to the factorisation theorem
-it is often possible to further divide each process into the cross product
+of a given process $d\sigma (pp\rightarrow X) \propto |\mathcal{M}|^2$.
+It is often possible to further divide each process into the cross product
 of Feynman diagram expansions (including interference terms), 
 which can be a very useful notion for some analysis use cases,
 and is related with the approach that will be
@@ -219,7 +218,8 @@ non-hard processes occurred if needed. Such distinction between generating
 processes of interest $S$ and background $B$ is at the roots of every
 analysis at the LHC, and it is motivated by the fact that small
 changes of the parameters of the SM or its theoretical extensions/alternatives
-affect only a subset of the produced processes, those that are governed
+affect only a subset of the produced processes at leading order,
+those that are governed
 by the interactions linked to the parameter.
 
 As a matter of a fact, customarily statistical inference at the LHC
@@ -286,9 +286,13 @@ function of $C$ can be simply expressed as the product
 $\mathbb{1}_\mathcal{C}=\mathbb{1}_\mathcal{A} \cdot \mathbb{1}_\mathcal{B}$.
 This framework is flexible enough to represent all deterministic event
 selections, and it could also be extended
-by an independent non-deterministic
-term to represent *trigger prescales* without affecting the rest of the
-considerations presented in this chapter.
+by an independent non-deterministic 
+term without affecting the rest of the
+considerations presented in this chapter. A non-deterministic factor could
+be useful to model for example trigger prescales,
+which are trigger decisions based
+on a randomly selecting a fraction of all the selected events to be recorded,
+ensuring that the total rate are manageable.
 
 In practice, a given selection
 $\mathbb{1}_\mathcal{C}(\boldsymbol{x})$ would have been imposed on the
@@ -432,19 +436,18 @@ p ( \boldsymbol{x} | \boldsymbol{z}_\textrm{d})
 p ( \boldsymbol{z}_\textrm{d} | \boldsymbol{z}_\textrm{s})
 p ( \boldsymbol{z}_\textrm{s} | \boldsymbol{z}_\textrm{p})
 \sum^K_j p ( z_i  = j |\boldsymbol{\theta})
-\ p ( \boldsymbol{z}_\textrm{p}|\boldsymbol{\theta}, z_i  = j)
+p ( \boldsymbol{z}_\textrm{p}|\boldsymbol{\theta}, z_i  = j)
 $$ {#eq:factor_joint}
 where $p( z_i = j|\boldsymbol{\theta}) = \phi_j(\boldsymbol{\theta})$
 is the probability of
 a given type of process $j$ occurring,
 $p ( \boldsymbol{z}_\textrm{p}|\boldsymbol{\theta}, z_i  = j)$ is
 the conditional probability density of a given set of parton-level four-momenta
-particles outcome for a group of fundamental proton interaction processes
-$pp \longrightarrow X$ indexed by the latent
-variable $z_i \in \mathcal{Z}_i$,
-characterised by the latent representation
-$\boldsymbol{z}_\textrm{p} \in \mathcal{Z}_\textrm{p}$,
-as a function of the theory parameters,
+particles (characterised by the latent representation
+$\boldsymbol{z}_\textrm{p} \in \mathcal{Z}_\textrm{p}$) of being the
+outcome of a group of fundamental proton interaction processes
+$pp \longrightarrow X$ indexed by the latent variable $z_i \in \mathcal{Z}_i$,
+as a function of the theory parameters $\boldsymbol{\theta}$,
 $p( \boldsymbol{z}_\textrm{s} | \boldsymbol{z}_\textrm{p})$ is the conditional
 density of a given parton-shower outcome
 $\boldsymbol{z}_\textrm{s} \in \mathcal{Z}_\textrm{d}$ 
@@ -552,12 +555,10 @@ luminosity parameters that affect the pileup distribution.
 Further structure in the generative model can be often found, depending
 on the process being generated, the modelling assumptions, and the
 latent space representation chosen. As an example,
-it is often useful to factorise out
-$p(z_f = g| \boldsymbol{\theta}, z_\textrm{PDF})
-p(z_f = g| \boldsymbol{\theta}, z_\textrm{PDF})$ the latent subspace
+it is often useful to factorise out the latent subspace
 that depends directly
-on the subset of parameters of interest from those that do not. Sometimes
-the conditional observations in that latent subspace can be analytically
+on the subset of parameters of interest from those that do not. 
+The conditional observations in that latent subspace can sometimes be analytically
 expressed, or their dimensionality is low enough to use 
 non-parametric density estimation techniques effectively, which can greatly
 simplify the modelling of changes in the parameters of interest.
@@ -1800,13 +1801,15 @@ where $\widetilde{q}_\textrm{obs}(\mu)$ is the observed test statistic and
 $g(\widetilde{q}(\mu) | \mu)$ is the distribution under the alternate
 when the signal fraction is $\mu$. This integral can be approximated
 using Monte Carlo simulations or by the asymptotic approximations
-described in [@Cowan:2010js]. An alternative upper limit definition is
-often used to deal with small signal at the cost of over-coverage,
+described in [@Cowan:2010js]. An different upper limit definition is
+often used to avoid excluding an alternative hypothesis with
+a fixed probably $\alpha$ even when the analysis has no sensitivity,
 referred to as CLs procedure
 [@Read:2002hq; @Junk:1999kv],
 in which the exclusion limit is defined as the value of $\mu$
 for which
-$P(\widetilde{q}(\mu) \geq \alpha | \mu)/P(\widetilde{q}(\mu) \geq \alpha | 0) \geq\alpha)$.
+$P(\widetilde{q}(\mu) \geq \alpha | \mu)/P(\widetilde{q}(\mu) \geq \alpha | 0) \geq\alpha)$, which solves the mentioned issue
+at the cost of over-coverage.
 
 Most data analyses at the LHC, and particularly searches such
 the one discussed in [Chapter @sec:higgs_pair],
@@ -1832,14 +1835,18 @@ $\widetilde{q}_\textrm{med}(\mu)$ under
 the null hypothesis instead of the observed statistic. In addition to
 the median expected limit, it is common practice in LHC searches
 to also compute the so-called 1-sigma and 2-sigma bands, that correspond
-to the $50\pm16$ and $50\pm22.5$ percentiles instead of the median. The
-upper limits bands provide a quantitive estimation
+to the $50.0\pm34.1$ and $50.0\pm47.7$ percentiles instead of the median. The
+upper limit bands provide a quantitive estimation
 of the possible limit variation if no signal is present in the data.
 Both the expected significance and the expected upper limit can be estimated
 asymptotically for summary statistics like the one described
 in [Equation @eq:sum_count_vector]. The effect of nuisance parameters
 can be also included in both in the asymptotic approximations or
-the Monte Carlo based estimation.
+the Monte Carlo based estimation. The asymptotic approximation are found to 
+be good empirically, within 10\% to 30\% (for situations where the
+number of events is small) of the Monte Carlo based estimation,
+and thus are frequently used for obtaining limits and significances
+in New Physics searches.
 
 
 ### Parameter Estimation {#sec:param_est}
@@ -1847,25 +1854,27 @@ the Monte Carlo based estimation.
 Another inference problem that can be defined based on the observed
 data, is parameter estimation, whose goal can be generally be defined as
 the determination of the possible or optimal values that the 
-parameters of a statistical model could take to be consistent with
-the observations. Two types of parameter estimation problems
+parameters of a statistical model in relation to a set of observations.
+Two types of parameter estimation problems
 are often considered: point estimation and interval estimation. If the
 aim is to obtain the best estimate (i.e. a single value) of a 
 vector of parameter based on a set of observations, it is referred to
 as a *point estimation* problem. When we are instead interested
-on using a set of observations to make statistical statements on
-the plausibility of a range or region for the values that the statistical model
-parameters could take, we are dealing with an *interval estimation* problem.
+on using a set of observations to make statistical statements about
+a range or region for the values that the statistical model
+parameters, we are dealing with an *interval estimation* problem.
 
 Parameter estimation can be addressed either
 from a classical (i.e. also known as frequentist) standpoint 
-where the true values of the parameter are assumed to be fixed but unknown;
+where the true values of the parameter are assumed to be fixed but unknown,
+and intervals represent the region of parameters for which the
+set of observed data could be obtained upon repeated sampling;
 or from a Bayesian perspective, where probabilistic statements representing
 the degree of belief on the values for the parameters are updated based on
 the set of observations. A classical inference approach is predominantly
 adopted in this document, where the definition of
 probability is based on the relative frequency of the outcome when
-many trials are carried out. Classical interval estimation, often referred
+repeated trials are carried out. Classical interval estimation, often referred
 to as *confidence interval* estimation is
 strongly related with hypothesis testing, as reviewed in
 [Section @sec:hypo_test]. The $100(1-\alpha)\%$ confidence interval (CI)

@@ -293,7 +293,7 @@ choice of normalisation of $\mathcal{L}$ may be slightly more involved and
 problem specific, but nevertheless amenable.
 
 In the above construction, the chosen
-family of summary statistics is non-differentiable due to
+family of summary statistics is not differentiable due to
 the $argmax$ operator, so gradient-based updates for the parameters
 cannot be computed. To work around this problem, a differentiable
 approximation $\hat{\boldsymbol{s}}(D ; \boldsymbol{\phi})$ is considered.
