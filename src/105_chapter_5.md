@@ -552,20 +552,38 @@ and $M_{\textrm{H}_2}$ are computed for the three possible combinations
 of the four decay candidate jets, and the invariant mass difference
 ${\Delta M}_{(\textrm{H}_1,\textrm{H}_2)}$ is computed
 for each combination:
+
 $$
 {\Delta M}_{(\textrm{H}_1,\textrm{H}_2)} = \lvert M_{\textrm{H}_1} - M_{\textrm{H}_2} \rvert
 $$ {#eq:inv_mass_pair}
+
 so the combination with the smallest mass difference is taken. Alternative
 decay candidates selection and pairing techniques were considered and tested.
 The fact that the chosen procedure does not explicitly use the mass of the
 Higgs boson made it very effective to avoid conditioning also the
 distributions of the background processes. The aforementioned procedure
 correctly pairs the jets to form Higgs candidates in approximately 54\%
-of the events. To distinguish between the two Higgs candidates during the
+of the events. The distribution of ${\Delta M}_{(\textrm{H}_1,\textrm{H}_2)}$
+and $M_{\textrm{H}_1}$ versus $M_{\textrm{H}_2}$ is shown in
+[Figure @fig:pair_mass]. To distinguish between the two Higgs candidates during the
 rest of this chapter, leading Higgs $\textrm{H}_1$ will used for the
 reconstructed Higgs
 candidates with the largest invariant mass while trailing Higgs $\textrm{H}_1$
-for the other candidate.
+for the other candidate. 
+
+::: {#fig:pair_mass .subfigures}
+![mass difference ${\Delta M}_{(\textrm{H}_1,\textrm{H}_2)}$
+](gfx/105_chapter_5/higgs_diff.pdf){#fig:higgs_diff width=49%}
+![$M_{\textrm{H}_1}$ versus $M_{\textrm{H}_2}$
+](gfx/105_chapter_5/higgs_masses.pdf){#fig:higgs_masses width=49%}
+
+Mass difference ${\Delta M}_{(\textrm{H}_1,\textrm{H}_2)}$ (left)
+and 2D histogram of $M_{\textrm{H}_1}$ versus $M_{\textrm{H}_2}$ (right)
+for simulated signal observations. Only the lower right part of the right
+plots includes observations because the Higgs candidates are ordered by
+mass.
+:::
+
 
 In this analysis, the final summary statistic considered for inference
 is based on the output of classifier that discriminates signal and background
