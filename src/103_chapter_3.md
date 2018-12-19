@@ -115,15 +115,20 @@ as the probabilistic composition of samples from multiple probabilistic
 distributions corresponding to different types of interaction
 processes occurring in the collision. If we knew the probabilistic
 distribution function of each mixture component
-$p_i(\boldsymbol{x}|\boldsymbol{\theta})$ then 
+$p_j(\boldsymbol{x}|\boldsymbol{\theta})$ then 
 $p ( \boldsymbol{x}|\boldsymbol{\theta} )$ could be expressed as: 
 $$
 p ( \boldsymbol{x}|\boldsymbol{\theta} ) =
-\sum^K \phi_j \ p_j ( \boldsymbol{x}|\boldsymbol{\theta} )
+\sum^{K-1}_{j=0} \phi_j \ p_j ( \boldsymbol{x}|\boldsymbol{\theta} )
 $$ {#eq:mixture_pdf}
 where $K$ is the number of mixture components and $\phi_j$ is the mixture
 weight/fraction, i.e. probability for a sample to be originated from
-each mixture component $j$. Practically, each
+each mixture component $j$. The specifics of the mixture expansion as
+well as the total
+number of mixture components are not uniquely defined, yet based
+on the independence of groups of physical processes, as will
+be discussed later.
+Practically, each
 $p_j(\boldsymbol{x}|\boldsymbol{\theta})$ will be intractable due to the
 exact
 same reason that $p ( \boldsymbol{x}|\boldsymbol{\theta} )$
@@ -167,17 +172,19 @@ $\phi_{\textrm{not-hard}} \gg \phi_{\textrm{hard}}$, yet the relative
 probabilities depend on the energy scale cut-off considered.
 
 We can further break each previously mentioned category in
-sub-components corresponding to different types of processes. 
+sub-components corresponding to different types of processes.
 The hard interaction category can itself be expressed as a mixture
-of all physical interactions that can produce a hard scattering, so the
+of groups of physical interactions that can produce
+a hard scattering[^group], so the
 probability $\phi_{\textrm{hard}}$ can be expresses as the following
 sum:
-$$ \phi_{\textrm{hard}} = \phi_0 + \dots + \phi_n = \sum_{k \in H} \phi_k
+$$ \phi_{\textrm{hard}} = \phi_0 + \dots + \phi_{K-2} = \sum_{k \in H} \phi_k
 $$ {#eq:hard_prob}
 where $H$ represents a given set of independent contributions $k$, each
 characterised by a distribution $p_j(\boldsymbol{x}|\boldsymbol{\theta})$,
-from all different processes that produce hard scatterings. Such a set is not
-uniquely defined, given that any
+which depends on the group $j$
+of processes that produce hard scatterings. Such a set is not
+uniquely defined nor its the number of elements, given that any
 two components $a$ and $b$ in $H$ can be substituted by $c$,
 where $\phi_c = \phi_a + \phi_b$ and
 $$p_c(\boldsymbol{x}|\boldsymbol{\theta})=
@@ -185,7 +192,24 @@ $$p_c(\boldsymbol{x}|\boldsymbol{\theta})=
   \frac{\phi_b}{\phi_a+\phi_b} \ p_b(\boldsymbol{x}|\boldsymbol{\theta})
 $$ {#eq:mixture_mixing}
 which can be applied recursively to alter the number of components in
-the set.
+the set. Independently on the basis chosen for the mixture expansion,
+in general it is not possible to infer the latent category $z_i$
+(see [Equation @eq:mixture_pdf) given an observation $\boldsymbol{x}_i$, because
+$\boldsymbol{x}_i$ may be in the support of several mixture components
+$p_j(\boldsymbol{x}|\boldsymbol{\theta})$. Only
+probabilistic statements about the generative group $j$ can be made
+based on the observations. 
+
+[^group]: The term *group/type of interactions* here generally
+  refers to a set of processes that could be generatively modelled
+  independently, not to quantum mechanical amplitudes or intensities
+  of a process.
+  For example, each group can correspond to a group of processes with
+  a given final state (which is latent)
+  $pp \rightarrow X$ which could
+  be modelled by sampling its differential cross section from
+  [Equation @eq:qcd_factorisation] followed by parton showering
+  and detector simulation.
 
 A convenient definition for the set $H$ is one that is aligned with
 the way theoretical calculations are carried out, given that the
@@ -208,7 +232,7 @@ Oftentimes, we are interested in studying a subset $S \subset H$
 of all the hard  interaction processes, which will be referred to as signal
 set in what follows. This can be a single type of physical process
 $\sigma (pp\rightarrow X)$, e.g. the inclusive production of a pair
-of Higgs bosons $\sigma (pp\rightarrow HH + \textrm{other})$, or
+of Higgs bosons $\sigma (pp\rightarrow \textrm{HH} + \textrm{other})$, or
 several, which in can be effectively viewed as one mixture
 component using [Equation @eq:mixture_mixing]. We can accordingly define
 the background subset $B = H - S$, as the result of all
@@ -216,7 +240,7 @@ other generating processes in $H$ that we are not interested in,
 a definition which could also be extended to include collisions where
 non-hard processes occurred if needed. Such distinction between generating
 processes of interest $S$ and background $B$ is at the roots of every
-analysis at the LHC, and it is motivated by the fact that small
+analysis at the LHC and it is motivated by the fact that small
 changes of the parameters of the SM or its theoretical extensions/alternatives
 affect only a subset of the produced processes at leading order,
 those that are governed
@@ -236,7 +260,8 @@ using unfolding methods to remove the experimental effects,
 which are not discusses in this work). Those parametric proxies can
 then be used by comparing them with the theoretical predictions of the SM
 or the alternative considered, in order to exclude or
-constrain its fundamental parameters.
+constrain its fundamental parameters (i.e. those that appear in
+the Lagrangian).
 
 #### Event Selection
 
@@ -308,15 +333,15 @@ including the relevant normalisation term:
 $$ 
 g(\boldsymbol{x} | \boldsymbol{\theta} ) = \frac{
  \mathbb{1}_\mathcal{C}(\boldsymbol{x})
-  \sum^K \phi_j \ p_j ( \boldsymbol{x}|\boldsymbol{\theta})}{
+  \sum^{K-1}_{j=0} \phi_j \ p_j ( \boldsymbol{x}|\boldsymbol{\theta})}{
   \int \left (\mathbb{1}_\mathcal{C}(\boldsymbol{x}) 
-  \sum^K \phi_j \ p_j ( \boldsymbol{x}|\boldsymbol{\theta}) \right ) 
+  \sum^{K-1}_{j=0} \phi_j \ p_j ( \boldsymbol{x}|\boldsymbol{\theta}) \right ) 
   d \boldsymbol{x}}
   =
-  \sum^K \left (  \frac{ \phi_j 
+  \sum^{K-1}_{j=0} \left (  \frac{ \phi_j 
   \epsilon_j
   }{
-  \sum^K \phi_j
+  \sum^{K-1}_{j=0} \phi_j
   \epsilon_j
   } \right ) g_j (\boldsymbol{x}|\boldsymbol{\theta})
 $$ {#eq:mixture_after_cut}
@@ -334,7 +359,7 @@ $\int g_j ( \boldsymbol{x}|\boldsymbol{\theta}) d \boldsymbol{x} = 1$.
 From [Equation @eq:mixture_after_cut] it becomes clear that the
 statistical model after any event selection is also a mixture model,
 whose mixture components are $g_j (\boldsymbol{x}|\boldsymbol{\theta})$
-and mixture fractions are $\chi_j=\phi_j\epsilon_j/\sum^K \phi_j\epsilon_j$.
+and mixture fractions are $\chi_j=\phi_j\epsilon_j/\sum^{K-1}_{j=0} \phi_j\epsilon_j$.
 This fact will be very relevant to build statistical models of the observed
 data after an event event selection is in place.
 
@@ -435,7 +460,7 @@ $$p(\boldsymbol{x}, \boldsymbol{z} | \boldsymbol{\theta}) =
 p ( \boldsymbol{x} | \boldsymbol{z}_\textrm{d})
 p ( \boldsymbol{z}_\textrm{d} | \boldsymbol{z}_\textrm{s})
 p ( \boldsymbol{z}_\textrm{s} | \boldsymbol{z}_\textrm{p})
-\sum^K_j p ( z_i  = j |\boldsymbol{\theta})
+\sum^{K-1}_{j=0} p ( z_i  = j |\boldsymbol{\theta})
 p ( \boldsymbol{z}_\textrm{p}|\boldsymbol{\theta}, z_i  = j)
 $$ {#eq:factor_joint}
 where $p( z_i = j|\boldsymbol{\theta}) = \phi_j(\boldsymbol{\theta})$
@@ -621,13 +646,13 @@ expectations of mixture components:
 $$
 \mathop{\mathbb{E}}_{x \sim g ( \boldsymbol{x}|\boldsymbol{\theta} )}
 \left [ f(\boldsymbol{x}) \right ] = \int f(\boldsymbol{x})
-\sum^K_j \chi_j g_j (\boldsymbol{x}|\boldsymbol{\theta})
+\sum^{K-1}_{j=0} \chi_j g_j (\boldsymbol{x}|\boldsymbol{\theta})
  d\boldsymbol{x} \approx 
-\sum^{K}_j \chi_j
+\sum^{K-1}_{j=0} \chi_j
 \mathop{\mathbb{E}}_{x \sim g_j ( \boldsymbol{x}|\boldsymbol{\theta} )}
 \left [ f(\boldsymbol{x}) \right ] 
 $$ {#eq:montecarlo_obs_mix_sel}
-where $\chi_j=\phi_j\epsilon_j/\sum^K \phi_j\epsilon_j$ 
+where $\chi_j=\phi_j\epsilon_j/\sum^{K-1}_{j=0} \phi_j\epsilon_j$ 
 is the mixture fraction after selection
 (see [Equation @eq:mixture_after_cut]). While the problem of estimation
 of expected values might seem unrelated to the inference problem at hand,
@@ -990,10 +1015,10 @@ the parameters of interest $\theta$ by making explicit the contributions from
 the different mixture processes:
 $$
 \mathop{\mathbb{E}}_{D \sim p ( D |\boldsymbol{\theta} )}
-\left [ n_\mathcal{C} \right ] = n \sum^{K}_j \phi_j 
+\left [ n_\mathcal{C} \right ] = n \sum^{K-1}_{j=0} \phi_j 
 \mathop{\mathbb{E}}_{x \sim p_j ( \boldsymbol{x}|\boldsymbol{\theta} )}
 \left [\mathbb{1}_\mathcal{C} (\boldsymbol{x}) \right ] =
-n \sum^{K}_j \phi_j \epsilon_j
+n \sum^{K-1}_{j=0} \phi_j \epsilon_j
 $$ {#eq:exp_selected}
 where the efficiency for each process
 $\epsilon= \int \mathbb{1}_\mathcal{C}(\boldsymbol{x}) p_j
@@ -1005,7 +1030,7 @@ as well as the inclusive contribution of each possible hard process,
 as described in [Equation @eq:hard_prob]. However, if the product of the
 expected probability of a given process occurring  $\phi_j$ and the
 event selection efficiency $\epsilon_j$ is low enough
-relative to the total efficiency $\epsilon=\sum^{K}_j \phi_j \epsilon_j$,
+relative to the total efficiency $\epsilon=\sum^{K-1}_{j=0} \phi_j \epsilon_j$,
 the effect of those mixture components can be safely neglected. 
 
 The situation discussed above is
@@ -1024,8 +1049,8 @@ processes $\mathbb{1}_\mathcal{C} (\boldsymbol{x})$ can also be expressed as:
 $$
 \mathop{\mathbb{E}}_{D \sim p ( D |\boldsymbol{\theta} )}
 \left [ n_\mathcal{C} \right ] =
-n \sum^{K}_j \frac{\mathcal{L} \sigma_j}{n }\epsilon_j =
-\mathcal{L} \sum^{K}_j  \ \sigma_j \  \epsilon_j
+n \sum^{K-1}_{j=0} \frac{\mathcal{L} \sigma_j}{n }\epsilon_j =
+\mathcal{L} \sum^{K-1}_{j=0}  \ \sigma_j \  \epsilon_j
 $$ {#eq:exp_cross_section}
 where $n_j=\mathcal{L} \ \sigma_j \  \epsilon_j$ is the expected number
 of events coming from a given process $j$, that can be estimated with theoretical
@@ -1062,7 +1087,8 @@ $\boldsymbol{n}_T = \{n_{\mathcal{C}_0},...,n_{\mathcal{C}_b}\}$, given
 that each $n_{\mathcal{C}_i}$ is independent, can be obtained as:
 $$
 p ( \boldsymbol{n}_T | \boldsymbol{\theta}) = \prod^{\mathcal{C}_i \in T} 
-\textrm{Poisson} \left (\sum^{j \in K} n^{\mathcal{C}_i}_j(\boldsymbol{\theta}) \right )
+\textrm{Poisson}
+\left (\sum^{j \in H} n^{\mathcal{C}_i}_j(\boldsymbol{\theta}) \right )
 $$ {#eq:poisson_multichannel}
 where $n^{\mathcal{C}_i}_j(\boldsymbol{\theta})$ is the expected number of
 observed events coming from process $j$ after the selection $\mathcal{C}_i$.
