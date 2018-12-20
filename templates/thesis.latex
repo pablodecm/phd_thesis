@@ -58,6 +58,22 @@
 
 $if(biblatex)$
 \usepackage[sorting=none]{biblatex}
+\DeclareSourcemap{
+ \maps[datatype=bibtex,overwrite=true]{
+  \map{
+    \step[fieldsource=Collaboration, final=true]
+    \step[fieldset=usera, origfieldval, final=true]
+  }
+ }
+}
+
+\renewbibmacro*{author}{%
+  \iffieldundef{usera}{
+    \printnames{author}
+  }{
+    \printfield{usera}
+  }
+}
 $for(bibliography)$
 \addbibresource{$bibliography$}
 $endfor$
