@@ -603,7 +603,9 @@ classifier
 are listed in \autoref{tab:mvaVars}.
 The set of variables are divided in three subgroups,
 the first corresponding to variables related with the properties
-of the reconstructed Higgs pair HH system, including its invariant
+of the reconstructed Higgs pair HH system, which are compared
+for signal and background in [Figure @fig:HH_system_features],
+including its invariant
 mass $M_\textrm{HH}$, its total transverse momentum
 $p_T^{\textrm{H}_1 \textrm{H}_2}$ and
 $\cos \theta_{\textrm{H}_1 \textrm{H}_2 -\textrm{H}_1}^{\star}$, where
@@ -618,13 +620,15 @@ M_\textrm{X} = M_\textrm{HH}
 $$ {#eq:mx_classifier}
 where $M_\textrm{H}=125\ \textrm{GeV}$ is the Higgs boson mass. The second
 group of features includes variables associated individually with each
-Higgs boson candidate, such as the reconstructed mass of each paired
+Higgs boson candidate (see [Figure @fig:di_jet_features] for a comparison of
+marginal
+distributions), such as the reconstructed mass of each paired
 di-jet system $M_{\textrm{H}_1}$ and $M_{\textrm{H}_2}$. The reconstructed
 Higgs candidate masses have the largest discrimination power, because
 their marginal distributions are expected to peak
 around $M_\textrm{H}=125\ \textrm{GeV}$ for the subset of well-paired signal
 events while more spread for background events. Other features in
-this sub-group include the tranverse momenta of the reconstructed
+this sub-group include the transverse momenta of the reconstructed
 Higgs candidates $p_T^{\textrm{H}_1}$ and $p_T^{\textrm{H}_2}$,
 the angular distances between their component jets
 $\Delta R_{jj}^{\textrm{H}_1}$, $\Delta R_{jj}^{\textrm{H}_2}$,
@@ -634,13 +638,22 @@ where $\theta_{\textrm{H}_1 \textrm{H}_2 -\textrm{H}_1}^{\star}$ is the
 angle between the leading Higgs boson candidate and the leading jet.
 The last group includes variables directly associated to the reconstructed
 jets, including the transverse momenta $p_{T_j}^{(i=1-4)}$ and
-pseudo-rapidity $\eta_{T_j}^{(i=1-4)}$
+pseudo-rapidity $\eta^{(i=1-4)}$
 of the first four jets, ordered by their value of the CMVA b-tagging
 discriminant as well as the scalar sum of their transverse momenta $H_T$.
 Finally, the scalar $p_T$ sum of all the jets that were not used for the
 reconstruction of the Higgs pair system $H_T^{\textrm{rest}}$ and the b-tagging CMVA
 discriminant value for the third and fourth jet 
-$\textrm{CMVA}_3$, $\textrm{CMVA}_4$ are also used.
+$\textrm{CMVA}_3$, $\textrm{CMVA}_4$ are also used. The marginal comparison
+of the distributions of signal and background for jet-based based variables
+is shown in [Figure @fig:jet_features]. 
+
+![Comparison of the signal (SM HH production) and background
+(mixed data) distributions for the
+HH system features considered in the probabilistic classifier.
+See \autoref{tab:mvaVars} and associated text for more details.
+](gfx/105_chapter_5/HH_system_features.pdf){
+#fig:HH_system_features width=70%}
 
 \begin{table}[htbp]
  \caption{List of reconstruction-based features used as input of the
@@ -652,7 +665,7 @@ $\textrm{CMVA}_3$, $\textrm{CMVA}_4$ are also used.
    \hline
    $M_\textrm{X}$, $M_\textrm{HH}$, &
    $M_{\textrm{H}_1}$, $M_{\textrm{H}_2}$  &
-   $p_{T_j}^{(i=1-4)}$, $\eta_{T_j}^{(i=1-4)}$,  \\
+   $p_{T_j}^{(i=1-4)}$, $\eta^{(i=1-4)}$,  \\
    $p_T^{\textrm{H}_1 \textrm{H}_2}$        &
    $p_T^{\textrm{H}_1}$, $p_T^{\textrm{H}_2}$ &
    $H_T^{\textrm{rest}}$, $H_T$ \\
@@ -666,6 +679,24 @@ $\textrm{CMVA}_3$, $\textrm{CMVA}_4$ are also used.
  \end{tabular}
  \label{tab:mvaVars}
 \end{table}
+
+
+![Comparison of the signal (SM HH production) and background
+(mixed data) distributions for the
+di-jet features considered in the probabilistic classifier. Di-jet
+candidates are ordered by their mass value.
+See \autoref{tab:mvaVars} and associated text for more details.
+](gfx/105_chapter_5/di_jet_features.pdf){
+#fig:di_jet_features width=95%}
+
+
+![Comparison of the signal (SM HH production) and background
+(mixed data) distributions for the
+jet-based features considered in the probabilistic classifier. Jet
+are ordered by CMVA value.
+See \autoref{tab:mvaVars} and associated text for more details.
+](gfx/105_chapter_5/jet_features.pdf){
+#fig:jet_features width=95%}
 
 The trained classifier combines the 25 variables from \autoref{tab:mvaVars}
 in a single scalar value, that approximates the conditional probability
@@ -706,7 +737,7 @@ and thus cannot be used for computing any expected value, because they
 might lead to biased estimations. A naive solution could be to simulate more events,
 but given the large cross section of low energy QCD processes, the total
 number of QCD inclusive simulated events required
-would be well over 1 billion which is too a large numeber given the total simulation
+would be well over 1 billion which is too a large number given the total simulation
 budget available for the CMS experiment.
 
 Another option, which was initially explored for modelling the
