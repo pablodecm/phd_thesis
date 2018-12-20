@@ -25,8 +25,8 @@ inference in this context: the multi-dimensional nature
 of the models, which can be studied only in generative
 manner
 via forward simulation of observations, and the
-effect of nuisance parameters. The first issue can
-can be tackled with with likelihood-free inference methods coupled
+effect of nuisance parameters. The first issue
+can be tackled with likelihood-free inference methods coupled
 with the use of low-dimensional summary statistics, which may
 be constructed either with machine learning techniques or through
 physically motivated variables (e.g. event reconstruction).
@@ -56,7 +56,7 @@ to a representative set of points of the parameter space of EFT.
 The combination of those results with the ones obtained
 from the study of other decay channels of HH pairs is also discussed. 
 
-In addition, the exercise of re-formulating the goals of high
+In addition, the exercise of reformulating the goals of high
 energy physics analysis as a statistical inference problem is combined with
 modern machine learning technologies to develop a new technique,
 referred to as inference-aware neural optimisation.
