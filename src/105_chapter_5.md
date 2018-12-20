@@ -1021,8 +1021,13 @@ in this analysis, two data control regions (CRs) are defined:
   point of the CMVA discriminator.
 
 The relative signal contribution in each of these control regions is
-greatly reduced, and the multi-jet QCD component is the dominant
-background. While for carrying out the mass control region comparison
+greatly reduced, e.g the expected $n_\textrm{S}/n_\textrm{B}$ ratio in
+the mass (b-tag) control region is only a 16\%(17\%) of that of
+those events inside the $90 < M_{\textrm{H}_1} < 150\ \textrm{GeV}$ and
+$80 < M_{\textrm{H}_1} < 140\ \textrm{GeV}$ region.
+The multi-jet QCD component is still the dominant
+background in both control regions.
+While for carrying out the mass control region comparison
 is enough to apply an additional cut over the selection, the b-tag
 control region study requires redoing the hemisphere mixing procedure
 on the new set of event with different b-tag jet selection. For both
