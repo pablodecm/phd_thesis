@@ -623,7 +623,7 @@ which correspond the field $G$ which would otherwise give rise to the
 so-called Goldstone bosons,
 have been removed after the gauge transformation.
 
-![Graphical depiction [^mexican_ref] of the mexican hat potential for
+![Graphical depiction[^mexican_ref] of the mexican hat potential for
 the scalar field
 $\phi$. A local
 maximum is present at the origin, but lower energy degenerate minima exist
@@ -677,9 +677,6 @@ associated with the electromagnetic force carrier $\gamma$. The terms
 related with the scalar $H$ field (and Higgs boson) are discussed
 later independently.
 
-[^mexican_ref]: The figure was created by adapting the code
-from [this TeX StackExchange answer](https://tex.stackexchange.com/a/229226).
-
 In addition to providing a mechanism that leads to mass terms for
 the weak force bosons, additional interaction of the various
 fermion fields with the scalar field $\phi$ can explain their masses.
@@ -710,6 +707,9 @@ from flavour eigenstates. Another relevant property of fermion masses
 is that after spontaneous symmetry breaking, the fermion mass
 is effectively proportional to its coupling with the Higgs scalar field, which
 is useful to intuitively understand the dominant interactions and decays.
+
+[^mexican_ref]: The figure was created by adapting the code
+from [this TeX StackExchange answer](https://tex.stackexchange.com/a/229226).
 
 In addition of giving masses to both weak bosons and fermions, the
 remaining degree of freedom after electroweak symmetry breaking gives
