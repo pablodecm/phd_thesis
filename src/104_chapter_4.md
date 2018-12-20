@@ -661,7 +661,7 @@ $$
 \sum_{(\boldsymbol{x}_i,\boldsymbol{y}_i) \in B }
 \left ( L(\boldsymbol{y}_i,f(\boldsymbol{x}_i; \boldsymbol{\phi}^t)) +
 \Omega(\boldsymbol{\phi}^t) \right )
-$$ {#eq:sdg}
+$$ {#eq:sgd}
 where $B$ is a random subset of size $m$ of the learning set $S$. In the
 original formulation $m=1$, yet nowadays a larger value for $m$ is often used
 in what is referred to as mini-batch SGD to obtain balance the estimate noise
