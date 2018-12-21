@@ -22,7 +22,6 @@ thesis.tex: src/*.md before gfx/101_chapter_1/mexican_hat.pdf gfx/104_chapter_4/
 	-o thesis.tex --filter=pandoc-crossref \
 	--biblatex \
 	--top-level-division=chapter \
-	--variable=draft:false \
 	--variable=commit:$(LAST_COMMIT) \
 	--include-before-body=before.tex --verbose
 
