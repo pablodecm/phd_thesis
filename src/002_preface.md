@@ -10,11 +10,11 @@ of new statistical learning techniques in particle collider
 experiments. Given the interdisciplinary nature of the topics
 discussed in this thesis, an effort has been made to discuss
 the research issues and solutions in a domain generic manner,
-so the links the fields of statistic and machine learning
+so the links with the fields of statistic and machine learning
 are more evident.
 The price of such attempt has likely been a less cohesive
 narrative, yet I believe that is has been worth the cost
-for a new take on the data analysis problems
+for a different take on the data analysis problems
 at particle colliders.
 
 

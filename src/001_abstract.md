@@ -68,5 +68,5 @@ The application of this technique to a synthetic problem demonstrates that
 the obtained summary statistics are considerable more effective than those
 obtained with standard supervised learning methods, when the effect of
 the nuisance parameters is significant.
-Assuming its scalability to LHC data analysis scenarios, this technique
+Assuming its scalability to LHC data scenarios, this technique
 has ground-breaking potential for analyses dominated by systematic uncertainties.

@@ -82,7 +82,9 @@ are known for both quarks and leptons, each containing a pair of particles
 with different masses. For quarks, the heavier is referred to as up-type and
 the lighter as down-type. Instead, for leptons we distinguish the heavier
 charged particles (electron, muon and tau) from their corresponding light
-and uncharged neutrinos. Regular matter is largely made of the
+and uncharged neutrinos.
+
+Regular matter is largely made of the
 first generation of quarks and electrons, given that  higher generations
 rapidly decay quickly to lower generations characterised by
 smaller masses. All fermions interact via the weak force but
@@ -131,7 +133,7 @@ particles are understood as excitations of fields that extend through the whole
 universe. Quantum field theory unifies the physical foundations
 of quantum mechanics and special relativity, and can be used to
 accurately describe phenomena in systems where relativistic and
-quantum effects are relevant, such as interaction between highly
+quantum effects are relevant, such as interactions between highly
 relativistic particles. In QFT, all the known physical processes
 in the universe are explained in terms of the state and dynamics
 of set of fundamental tensor fields. A tensor field can be defined as a
@@ -147,15 +149,15 @@ simplest case, e.g. a
 single field that does not interact with any other field, which
 will be denoted as $\phi(x)$. The dynamics of a field (or several fields)
 in QFT are specified by using the *Lagrangian formalism*, similarly
-to what can be done for system in classical mechanics. However,
+to what can be done for systems in classical mechanics. However,
 instead of considering the Lagrangian $L$
 which depends the generalised coordinate vector $\boldsymbol{q}(t)$
-and its time derivatives $\dot{\boldsymbol{q}(t)}$, in QFT the Lagrangian
+and its time derivatives $\dot{\boldsymbol{q}}(t)$, in QFT the Lagrangian
 density $\mathcal{L}$ is commonly used, which depends only on the field
-$\phi (x)$ and its first derivative $\partial_{\mu} \phi (x)$. In fact,
-in an analogous manner to what is done in classical mechanics to
+$\phi (x)$ and its first derivative $\partial_{\mu} \phi (x)$.
+In an analogous manner to what is done in classical mechanics to
 define the action functional $S_{\textrm{classical}}$, we can define
-the action of the quantum field $S_{\textrm{classical}}$ as a function
+the action of the quantum field $S_{\textrm{QFT}}$ as a function
 of the Lagrangian density $\mathcal{L}$ as follows:
 $$ S_{\textrm{classical}} = \int L (\boldsymbol{q}(t) ,\dot{\boldsymbol{q}} (t)) dt 
    \quad \Rightarrow \quad
@@ -176,7 +178,7 @@ $$  {#eq:euler_lagrange}
 where $\partial_\mu=\partial/\partial x_\mu$  and the repetition
 of the coordinate index $\mu \in \{0,1,2,3\}$ means summation over
 the product. The previous relation would still apply to each field
-in the case that a Lagrangian including several fields were
+in the case a Lagrangian including several fields was
 considered; therefore,
 given a Lagrangian, we can use Equation [-@eq:euler_lagrange]
 to obtain their equations of motion. As an example, let us consider
@@ -204,12 +206,13 @@ Klein-Gordon equations were proposed in the context of a relativistic
 formulation of quantum mechanics.
 
 To shed some light on how a field like $\psi$ can represent actual fermions
-in the universe, such as electrons or positrons, can be quantised
+in the universe, such as electrons or positrons, the field can be quantised
 by considering a plane wave expansion and defining annihilation operators
 $a_{\boldsymbol{p}}^s$ and $b_{\boldsymbol{p}}^s$, as well as 
 creation $a_{\boldsymbol{p}}^{s\dagger}$ 
 and $b_{\boldsymbol{p}}^{s\dagger}$ operators. The field and its adjoint,
-which can also be thought of directly as operators in this context, can
+which can be thought of directly as operators instead
+of fields in this context, may
 then be expressed as:
 
 $$
@@ -249,22 +252,28 @@ where $\dot{\psi}_a$ is the time derivative of the field and
 $\pi^a$ is the conjugate momentum. The Hamiltonian density can
 divided in $\mathcal{H}_\textrm{free}$, that is the part
 corresponding to
-the free theory and $\mathcal{H}_\textrm{int}$ that are the additional terms
+the free theory, and $\mathcal{H}_\textrm{int}$ that are the additional terms
 due to interactions. In interacting theories, time-dependence becomes more
 important and depends only on the $\mathcal{H}_\textrm{int}$ component.
-Additionally, the ground state $\ket{\Omega}$ can be different
+Additionally, the ground state $\ket{\Omega}$ can be different in interacting
+theories
 from the free theory vacuum state $\ket{0}$.
 
 Let us denote by $\ket{i}=\ket{\psi(t \rightarrow - \infty)}$
 and $\ket{f}=\ket{\psi(t \rightarrow + \infty)}$ some arbitrary
-initial and final multi-particle states respectively, temporarily far before
-and after the actual interaction being studied happened (i.e. around $t=0$).
+initial and final multi-particle states, temporarily far before
+and after the actual interaction being studied happened (i.e. around $t=0$),
+respectively.
 The observables of interest, which are discussed in [Section @sec:pheno],
 are a function of the transition amplitude $\bra{i} \mathcal{S} \ket{f}$
-over all possible initial and final states. The transition probability
-$|\bra{i} \mathcal{S} \ket{f}|^2$ is then a function of the $\mathcal{S}$
-which describes the time-evolution from the initial states the final
-state. The $\mathcal{S}$ matrix can be expressed as a perturbative
+over all possible initial and final states, where
+$\mathcal{S}$ is an operator describing the transition.
+The transition probability,
+which is expressed as the modulus square of the amplitude
+$|\bra{i} \mathcal{S} \ket{f}|^2$, is therefore also
+a function of $\mathcal{S}$, fully describing
+the time-evolution from the initial  the final
+state. The $\mathcal{S}$ operator may be expressed as a perturbative
 series using the Dyson expansion:
 $$
 \begin{aligned}
@@ -275,7 +284,7 @@ T \left [ \exp \left ( -i  \int_{-\infty}^{\infty} d^4 x \mathcal{H}_\textrm{int
 \mathcal{H}_\textrm{int} (x_n) \right ]
 \end{aligned}
 $$ {#eq:s_matrix}
-where T is an operator ensuring that the Hamiltonian density factors
+where $T$ is an operator ensuring that the Hamiltonian density factors
 $\mathcal{H}_\textrm{int} (x_i)$ are
 order in time. Each time-ordered term in the series can be written as a
 sum of normal (i.e. not time ordered) products of permutations using
@@ -291,9 +300,10 @@ $$
 \bra{i} \mathcal{S} \ket{f} = \bra{i} \boldsymbol{1} \ket{f}
 + i \mathcal{M} (2\pi)^4 \delta^4 \left ( \sum p_i - \sum p_f \right )
 $$ {#eq:matrix_element}
-where the fist term corresponds to no interaction occurring
+where the fist term corresponds to no interaction occurring,
 and the second includes the matrix element $\mathcal{M}$ 
-including all orders in the perturbative orders and a factor
+including all orders in the perturbative orders, and multiplied
+by a factor
 making explicit the conservation of momentum between the initial
 and final state particles. The matrix element $\mathcal{M}$, which
 can be computed perturbatively
@@ -363,9 +373,9 @@ $$ {#eq:qcd_gluon_tensor}
 where $f^{abc}$ are the structure constants of the
 $SU(3)$ gauge group. The last term accounts for the
 self-interaction of the gluon, which are the massless
-and electrically neutral force mediators. There are
-two properties of QCD that play an important roles
-from from a phenomenological standpoint:
+and electrically neutral mediators of the strong force. There are
+two properties of QCD that play an important role
+from a phenomenological standpoint:
 *confinement* and *asymptotic freedom*.
 
 The property of confinement has been postulated to explain why isolated
@@ -378,19 +388,23 @@ both from lattice QCD calculations and experiments. In a bound state
 between quarks, the effective potential includes a term that increases
 proportional to their distance, so when the quarks are separated by
 an external energetic interaction, the additional potential energy generates
-an additional quark-antiquark pair and forming bound states. Similar
-phenomena occur for isolated gluons, which generally is referred as
-hadronization due to colour confinement. In particle colliders, successive
+an additional quark-antiquark pair, leading to the formation of bound states.
+Similar
+phenomena occur for isolated gluons, which generally are referred as
+hadronization, and can be understood as a consequence of
+colour confinement. In particle colliders, successive
 hadronization and radiation processes lead to parton showers
 (see [Section @sec:parton_showers]).
 
-Hadrons are then commonly in bound states which can be mesons, formed
-by a quark-antiquark pair $\textrm{q}\bar{\textrm{b}}$, or baryons
-that are composed of three quarks $\textrm{q}\textrm{q}\textrm{q}$. Charged and
+Quark are then only found in bound states, referred to as
+hadrons, which can either be mesons or baryons. Mesons are formed
+by quark-antiquark pairs $\textrm{q}\bar{\textrm{q}}$,
+while baryons are composed of three quarks $\textrm{q}\textrm{q}\textrm{q}$.
+Charged and
 neutral pions $\pi^{+}$ ($\textrm{u}\bar{\textrm{d}}$) and
 $\pi^{0}$ ($(\textrm{u}\bar{\textrm{u}}-\textrm{d}\bar{\textrm{d}})/\sqrt{2}$),
 kaons $\textrm{K}^{+}$ ($\textrm{u}\bar{\textrm{s}}$) and
-$\textrm{K}^{0}$ ($\textrm{d}\bar{\textrm{s}}$) and the $\textrm{J}/\Psi$ meson
+$\textrm{K}^{0}$ ($\textrm{d}\bar{\textrm{s}}$) and the $\textrm{J}/\Psi$
 ($\textrm{c}\bar{\textrm{c}}$) are among the most common mesons produced
 at particle colliders. Baryons instead include the well-known proton
 ($\textrm{u}\textrm{u}\textrm{d}$) and neutron
@@ -421,7 +435,7 @@ where $\alpha_s(\mu_0^2)$ is the measured coupling at a given energy
 and $n_f$ is total number of quark flavours which are assumed to be
 massless in this approximation. The strong interaction thus becomes
 weaker at higher energies (or short distances) allowing
-the perturbative computation of some observable related with high-energy
+the perturbative computation of observables related with high-energy
 interactions, as discussed in [Section @sec:pheno].
 The approximation from [Equation @eq:running_coupling] also provides a
 lower bound for the energy scale at which QCD can be treated
@@ -446,7 +460,7 @@ description based on a $SU(2) \otimes U(1)$ symmetry, which unified
 electromagnetic and weak interactions
 [@glashow1961partial; @SALAM1964168], and where the
 weak interaction was mediated by means of charged $W^{\pm}$ and neutral $Z$
-massive vector bosons. Nevertheless, the theory does not provide
+massive vector bosons. Nevertheless, the theory did not provide
 an explanation for
 the mass of the weak mediators, until the so-called
 Brout-Englert-Higgs [@englert1964broken; @higgs1964broken; @guralnik1964global]
@@ -464,7 +478,7 @@ charged and neutral currents [@hasert1974observation] and the discovery
 of the massive
 $W^{\pm}$ [@Arnison:1983rp; @Banner:1983jy] and $Z$
 [@Arnison:1983mk; @Bagnaia:1983zx] bosons. Experimental evidence also
-showed that weak interaction was parity violating [@Wu:1957my],
+showed that weak interaction were parity violating [@Wu:1957my],
 thus in the electroweak theory the fermion fields are separated in their
 left-handed $\psi_\textrm{L}$ and right-handed $\psi_\textrm{R}$ 
 chiral components as follows:
@@ -583,13 +597,13 @@ D_H^\mu  = \partial^\mu - \frac{1}{2} i g_B Y B_\mu  - \frac{1}{2} i g_W \sigma 
 $$ {#eq:scalar_cov_der}
 The minimal form for scalar field potential $V(\phi)$,
 constructed ad-hoc to provide a degenerate vacuum states
-and a local maximum, a required condition for spontaneous symmetry breaking
-can be expressed as:
+and a local maximum - a required condition for spontaneous symmetry breaking.
+The simplest potential may be expressed as:
 $$
 V(\phi) = - \mu^2 \phi^\dagger \phi + \frac{1}{2} \lambda (\phi^\dagger \phi )^2
 $$ {#eq:scalar_potential}
 where both the quadratic $\mu^2$ and the quartic
-$\lambda$ self-interaction parameters are defined positive in this sign
+$\lambda$ self-interaction parameters are defined positive with this sign
 convention. The resulting shape for the potential is often referred
 as *mexican hat*, and is depicted in [Figure @fig:mexican_hat]. The presence
 of a potential minimum different from the origin
@@ -598,11 +612,11 @@ field:
 $$
 \langle \phi \rangle_0 = \frac{\mu^2}{\lambda} = v^2
 $$ {#eq:scale_vev}
-whose values depends on the $V(\phi)$ potential parameters $\mu^2$ and
+whose values depend on the $V(\phi)$ potential parameters $\mu^2$ and
 $\lambda$, and it is denoted as $v^2$ for convenience. The non-zero
 vacuum expectation value is thus said to spontaneously break the
 the $SU(2) \otimes U(1)$ symmetry, the consequences made more
-clear when the field is expanding around the minimum:
+clear when the field is expanded around the minimum:
 $$
 \phi = \frac{1}{\sqrt{2}} \exp(i \frac{\sigma \cdot G}{v})
 \begin{pmatrix} 0\\ v + H \end{pmatrix}
@@ -613,7 +627,7 @@ the Pauli matrices $\sigma=\{\sigma_1, \sigma_2, \sigma_3\}$.
 The complex exponential phase
 can be then removed by a $SU(2)$ group rotation, a transformation
 that is often referred as *unitary gauge*. The resulting scalar field
-can simple be expressed as:
+can simply be expressed as:
 $$
 \phi = \frac{1}{\sqrt{2}}
 \begin{pmatrix} 0\\ v + H \end{pmatrix}
@@ -623,13 +637,6 @@ which correspond the field $G$ which would otherwise give rise to the
 so-called Goldstone bosons,
 have been removed after the gauge transformation.
 
-![Graphical depiction[^mexican_ref] of the mexican hat potential for
-the scalar field
-$\phi$. A local
-maximum is present at the origin, but lower energy degenerate minima exist
-arount it.
-](gfx/101_chapter_1/mexican_hat.pdf){
-#fig:mexican_hat width=60%}
 
 
 Substituting the rotated scalar field from [Equation @eq:scalar_rotation]
@@ -646,7 +653,7 @@ W^\pm_\mu = \frac{1}{\sqrt{2}} \left ( W_\mu^1 \mp i W_\mu^2 \right)
 \sin \theta_W  & \cos \theta_W \end{pmatrix}
 \begin{pmatrix} W^3_\mu \\ B_\mu \end{pmatrix}
 $$ {#eq:ew_field_change}
-where the field $W^\pm$ are associated with the charged weak bosons,
+where the fields $W^+$ and $W^-$ are associated with the charged weak bosons,
 the field $Z$ with the neutral weak boson, the electromagnetic
 field $A$ with the photon, and $g_W$ is the Weinberg angle
 which is related with the electroweak couplings according
@@ -669,7 +676,7 @@ W^{-}_{\mu} W^{-\mu} + \\
 \frac{1}{2} \underbrace{(\ 0\ )}_{m_{\gamma}^2} A_{\mu} A^{\mu}
 \end{aligned}
 $$ {#eq:ew_bosons_masses}
-resulting in mass terms for the massive weak bosons which are depend
+resulting in mass terms for the massive weak bosons which depend
 to the weak coupling, the Weinberg angle and the vacuum
 expectation value of the Higgs field. The last term for the electromagnetic
 field has only been included to make explicit that no mass term is
@@ -678,10 +685,10 @@ related with the scalar $H$ field (and Higgs boson) are discussed
 later independently.
 
 In addition to providing a mechanism that leads to mass terms for
-the weak force bosons, additional interaction of the various
+the weak force bosons, additional interactions of the various
 fermion fields with the scalar field $\phi$ can explain their masses.
 These gauge invariant terms are generally referred to as Yukawa
-interaction, and correspond to the following Lagrangian terms:
+interactions, and correspond to the following Lagrangian terms:
 $$
 \begin{aligned}
 \mathcal{L}_\textrm{Yukawa} =
@@ -693,7 +700,7 @@ $$
  + \bar{R}_u i \sigma_2 \phi L_q )
 \end{aligned}
 $$ {#eq:Yukawa_Lagrangian}
-where $\lambda_l$ , $\lambda_u$ and $\lambda_f$ are the Yukawa coupling
+where $\lambda_l$ , $\lambda_d$ and $\lambda_u$ are the Yukawa coupling
 parameters. A charge-conjugate transformation
 $\phi \rightarrow i \sigma_2 \phi^\dagger$ is used to give mass
 to up-type quarks. For the quark sector,
@@ -706,21 +713,31 @@ diagonal leads to flavour mixing, due to the mass eigenstates being different
 from flavour eigenstates. Another relevant property of fermion masses
 is that after spontaneous symmetry breaking, the fermion mass
 is effectively proportional to its coupling with the Higgs scalar field, which
-is useful to intuitively understand the dominant interactions and decays.
+is useful to intuitively understand the dominant interactions and decays
+of the Higgs boson.
+
+![Graphical depiction[^mexican_ref] of the mexican hat potential for
+the scalar field
+$\phi$. A local
+maximum is present at the origin, but lower energy degenerate minima exist
+arount it.
+](gfx/101_chapter_1/mexican_hat.pdf){
+#fig:mexican_hat width=60%}
 
 [^mexican_ref]: The figure was created by adapting the code
 from [this TeX StackExchange answer](https://tex.stackexchange.com/a/229226).
 
 In addition of giving masses to both weak bosons and fermions, the
 remaining degree of freedom after electroweak symmetry breaking gives
-rise to a scalar field $H$, whose Lagrangian can be obtained substituting
+rise to a scalar field $H$. The terms of the Lagrangian concerning
+only $H$ may be obtained substituting
 [Equation @eq:scalar_rotation] in [Equation @eq:scalar_lagrangian],
-leading to the following terms:
+leading to the following expression:
 $$
-\mathcal{L}_{H} = \frac{1}{2} \partial_\mu H \partial^\mu -
+\mathcal{L}_{H} = \frac{1}{2} \partial_\mu H \partial^\mu
 - \mu^2 H^2 - \lambda v H^3 - \frac{\lambda}{4} H^3
 $$ {#eq:higgs_lagrangian}
-where the second (quardratic term) can be interpreted as a scalar boson
+where the second (quadratic term) can be interpreted as a scalar boson
 with a mass $\sqrt{2\mu^2}$, which is commonly referred as the Higgs
 boson. A particle with a mass of $125.09(24)\ \textrm{GeV}$ [@Aad:2015zhl] 
 and consistent with the expected properties for the Higgs boson was
@@ -740,7 +757,7 @@ of the spontaneous symmetry breaking mechanism.
 ## Beyond the Standard Model {#sec:sm_alternatives}
 
 The experimental success of the Standard Model and its main 
-subcomponents QED, QCD and EW unification and
+subcomponents QED, QCD, and EW unification and
 symmetry breaking is clearly incontestable, ranging from the confirmation
 of theoretical prognostication of the existence and some the properties
 of new particles
@@ -751,7 +768,7 @@ is an example of the latter, with its experimentally determined value being
 compatible with its Standard Model based theoretical prediction down
 to 12 significant digits [@hanneke2008new; @parker2018measurement].
 In addition to describing natural phenomena
-with unprecedented accuracy, the SM it is a self-consistent theory that 
+with unprecedented accuracy, the SM is a self-consistent theory that 
 provides non-divergent predictions at the highest energy scales probed to date.
 
 ### Known Limitations
@@ -767,7 +784,7 @@ theoretical considerations regarding the stability of vacuum or
 aesthetic principles such as naturalness.
 Hence, it is presumed that the Standard Model is an effective theory, able to
 successfully describe fundamental processes within a range of energies as
-an approximation fo more complete unified theory. For completeness, the
+an approximation of a more complete unified theory. For completeness, the
 main empirical and theoretical concerns are summarised:
 
 
@@ -847,7 +864,8 @@ main empirical and theoretical concerns are summarised:
   universe. In fact, in order to reconcile the theoretical models with
   experimental observations, about $68\%$ of the total energy in the
   present universe would correspond to this type of unknown energy
-  density, generally referred to as *dark energy*. In most quantum field theories,
+  density, generally referred to as *Dark Energy*.
+  In most quantum field theories,
   such as the Standard Model, some non-zero zero-point
   energy originating from quantum fluctuations is expected. However,
   modern attempts to predict energy densities from QFT are at variance
@@ -877,9 +895,9 @@ main empirical and theoretical concerns are summarised:
   property of the SM theory.
 
 Other possible issues, in some cases related with those discussed,
-have also been raised. On of them is
-the apparent vacuum meta-stability [@degrassi2012higgs] or
-the strong CP problem [@cheng1988strong]. Some of these questions
+have also been raised. One of them is
+the apparent vacuum meta-stability [@degrassi2012higgs] and other
+the so-called strong CP problem [@cheng1988strong]. Many of these questions
 can be clarified
 once the higher precision measurements of the SM become available, which
 are mainly obtained in particle collider experiments.
@@ -917,7 +935,8 @@ In addition to carrying out precision measurements and model-specific
 searches, there exists a
 practical way
 to consider possible extensions due to New Physics phenomena occurring
-at a higher energy scale $\Lambda$ than the one being probed $E$. The
+at a higher energy scale $\Lambda$ than the one being probed, which
+will be denoted by $E$. The
 model-independent approach often referred to as *effective field theory* (EFT) [@PhysRevD.11.2856;
 @Buchmuller:1985jz] allows to compute
 observables by extending the SM Lagrangian terms from [Section @sec:standard_model]
@@ -944,12 +963,12 @@ if $\Lambda \approx
 E$, the effective 
 approximation in [Equation @eq:eft_lagrangian_generic] does not hold,
 and the interactions
-have to realistic modelled using the a complete theoretical description
-of the New Physics scenario. While in general effective field
+have to be realistically modelled using the a complete theoretical description
+of the New Physics scenario under study. While in general effective field
 theories are not renormalisable, observables and higher-order corrections
 can be computed, because of the well-defined cutoff energy scale
 $\Lambda$. The best-known example of an EFT that has been used in practice
-is Fermi theory, which is a simplification to compute useful observables
+is Fermi theory, which is a useful simplification to compute EW observables
 at low-energies $E \approx 10\ \textrm{MeV}$ rather than an extension of
 the SM, given that the detailed structure of electroweak
 interactions due to $\textrm{W}^{\pm}$ boson mediating $\beta$ decays
@@ -974,7 +993,7 @@ a subset of dimension six EFT operators are used
 to study non-resonant extensions of Higgs pair
 production in a model-independent manner.
 
-## Phenomenology of proton collisions {#sec:pheno}
+## Phenomenology of Proton Collisions {#sec:pheno}
 
 Once the properties and limitations of the theoretical model that best
 describes the current understanding of the fundamental structure and
@@ -1013,7 +1032,7 @@ collision, under the assumption of validity of a particular theoretical model,
 their total expected rate of occurrence is one the most relevant
 quantities to predict and compare with observation.
 To ease its experimental interpretation,
-the rate of occurrence of any given subnuclear is commonly
+the rate of occurrence of any given subnuclear process is commonly
 expressed as a cross section $\sigma$,
 which has dimensions of area and is typically expressed in submultiples
 of barn ($1 \textrm{barn} = 10^{-28} \textrm{m}^2$). The advantage of cross
@@ -1139,7 +1158,7 @@ total cross section  $\sigma(pp \rightarrow X)$ can
 then be attained by integrating out all final state quantities, commonly
 referred as phase space variables, in the differential total
 cross section element $d\sigma(pp \rightarrow X)$. It is worth pointing out
-that is simple cases (small number of particles in the final
+that for simple cases (small number of particles in the final
 state) is often possible to integrate out the final state phase space
 variables directly in the partonic differential cross section
 $d\sigma(ij \rightarrow X)$, and thus directly
@@ -1176,7 +1195,9 @@ in Equation [-@eq:qcd_factorisation], such as additional collision products
 due to multiple interactions or processes comprising the proton
 remnants. Thus it is very useful in the construction of the complete
 model to consider the problem
-of generation of realistic collision products. Taking into consideration
+of generation of realistic collision products.
+
+Taking into consideration
 that some of the computational techniques for including
 subsequent physical processes and the detailed simulation of the detectors
 are considerably resource intensive, as will be detailed in
@@ -1201,7 +1222,7 @@ In order to link the hard scattering process outcome
 with the actual observable quantities that can be detected in an
 experiment, it is necessary to account for the radiation of
 soft gluons or quarks form the initial or final state partons in
-the collision
+the collision,
 as well as the formation of hadrons from any
 free parton due to colour confinement (see Section [-@sec:qcd_detail]).
 Additional processes that affect the collision outcome include
@@ -1219,7 +1240,7 @@ through the detector.
 
 ![Diagram of a proton-proton collision and the underlying physical
 processes occurring therein, adapted from [@Hoche:2014rga].
-The dark green ellipses following the tree parallel arrows represent the
+The dark green ellipses following the three parallel arrows represent the
 incoming hadrons. The main interaction between partons is shown in
 red colour, producing a tree-like structure of decays, in turn
 producing partons that rapidly transition to hadrons (light green ellipses)

@@ -761,7 +761,7 @@ in the use case in [Chapter @sec:inferno] corresponds to the
 number of dimensions of the resulting summary statistic, that is
 based on a transformation of the input using a multi-layer neural network.
 
-The SDG update rule from [Equation @eq:sdg] requires
+The SDG update rule from [Equation @eq:sgd] requires
 the computation of the gradients of the loss function with
 respect to the model parameters. For complex models, e.g.
 those put together by stacking layers as those described in

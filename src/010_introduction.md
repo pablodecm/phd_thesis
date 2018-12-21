@@ -90,7 +90,7 @@ capable of addressing them. Nevertheless, we believe that the
 projects mentioned and presented here are nothing but the first step
 of what is possible; and the evolution of data analysis techniques
 and tools could be a promising route for the advancement of our understanding
-of basic building blocks of the universe.
+of the basic building blocks of the universe.
 
 This thesis is organised as follows.
 [Chapter @sec:theory] provides
