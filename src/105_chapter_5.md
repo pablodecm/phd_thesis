@@ -410,7 +410,7 @@ sequence is
 preceded by a given set of L1 trigger seeds, as conceptually reviewed in
 [Section @sec:trigger]. The L1 trigger paths are different for
 each of the HLT paths,
-but are based on  the logical OR between several conditions requiring
+but are based on the logical OR between several conditions requiring
 a certain number
 of L1 jets over a given energy or the total deposited energy on the
 calorimeter $H_T$ to be over a certain threshold. At the HLT, both paths
@@ -918,7 +918,8 @@ present in
 the original dataset are effectively removed. This has been tested
 by injecting up to 100 times the expected SM contribution of
 simulated HH production events to a dataset of simulated
-QCD multi-jet events. The distributions of the various variables
+QCD multi-jet events [@DeCastroManzano:2017yqy].
+The distributions of the various variables
 after hemisphere mixing are not affected by the
 presence of signal, and are compatible with the QCD multi-jet
 component, which is the majority component. The level of

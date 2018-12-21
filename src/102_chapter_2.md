@@ -1194,7 +1194,11 @@ of the conditional probabilities,
 it is very useful as a very fast substitute of the full simulation
 chain for simplified studies that aim to obtain an approximate
 estimate the expected sensitivity reach or measurement accuracy
-of a given analysis.
+of a given analysis. Peripherally related with the focus of this work,
+the use of unsupervised machine learning techniques structurally similar
+to those describe in [Section @sec:ann] are being investigated to provide
+a fast simulation alternative without relying in a simplistic
+parameterisations [@Paganini:2017hrr; @deOliveira:2017pjk].
 
 
 ### Event Reconstruction {#sec:event_reco}

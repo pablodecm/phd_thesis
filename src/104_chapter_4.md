@@ -262,7 +262,8 @@ R_{0-1}(f) = \mathop{\mathbb{E}}_{
 \left [ \mathbb{1}(y \neq f(\boldsymbol{x})) \right ]
 $$ {#eq:zero_one_risk}
 where $\mathbb{1}(y \neq f(\boldsymbol{x}))$ is an indicator
-function. The zero-one loss is non-differentiable when $y =f(\boldsymbol{x})$
+function, which was defined in [Equation @eq:indicator].
+The zero-one loss is non-differentiable when $y =f(\boldsymbol{x})$
 and its gradients are zero elsewhere; in addition, it is not convex,
 a property which makes the
 minimisation task in [Equation @eq:learning_erm] hard to
@@ -1109,7 +1110,7 @@ but accounts for the effect of nuisance parameters is presented.
 ### Particle Identification and Regression {#eq:particle_id_reg}
 
 While the categorical latent variable $z_i$, denoting the interaction
-process that happened in the collision, is very useful to define an event
+process that occurred in a given collision, is very useful to define an event
 selection or directly as a summary statistic, information about
 other latent variables can also be recovered using supervised machine learning.
 As discussed in [Section @sec:event_reco], event reconstruction techniques

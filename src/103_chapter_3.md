@@ -343,7 +343,8 @@ on a randomly selecting a fraction of all the selected events to be recorded,
 ensuring that the total rate is manageable.
 
 In practice, a given selection
-$\mathbb{1}_\mathcal{C}(\boldsymbol{x})$ would have been imposed on the
+$\mathbb{1}_\mathcal{C}(\boldsymbol{x})$, likely based on a composition
+of simple criteria, would have been imposed on the
 recorded detector
 readouts before any statistical analysis is carried out. The structure
 of the statistical model $g(\boldsymbol{x} | \boldsymbol{\theta} )$

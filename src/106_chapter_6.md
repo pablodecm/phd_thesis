@@ -117,7 +117,8 @@ allows the treatment of the problem as
 signal (S) versus background (B) classification [@adam2015higgs],
 when the task becomes one of effectively estimating
 an approximation of $p_{S}(\boldsymbol{x})/p_{B}(\boldsymbol{x})$ which will
-vary monotonically with the likelihood ratio.
+vary monotonically with the likelihood ratio. This has been
+discussed at great lengths in [Section @sec:sig_vs_bkg].
 While the use of classifiers to learn a summary statistic can be effective and
 increase the discovery sensitivity, the simulations used to generate
 the samples which are needed to train the classifier often depend on additional
@@ -169,7 +170,7 @@ sufficiency is especially useful to evaluate whether
 summary statistics are informative. In the absence of nuisance
 parameters, classical sufficiency
 can be characterised by means of the factorisation
-criterion:
+criterion (see [Section @sec:dim_reduction] for more details):
 $$
 p(D|\boldsymbol{\omega}) = h(D) g(\boldsymbol{s}(D) | \boldsymbol{\omega} )
 $${#eq:sufficiency}
@@ -292,7 +293,9 @@ observations in the simulated samples. In cases where the number of
 observations is itself a random variable providing information about
 the parameters of interest, or where the simulated observations are weighted, the
 choice of normalisation of $\mathcal{L}$ may be slightly more involved and
-problem specific, but nevertheless amenable.
+problem specific, but nevertheless amenable. Note the relation between the
+summary statistics and likelihoods defined in this section and those
+discussed in [Section @sec:dim_reduction].
 
 In the above construction, the chosen
 family of summary statistics is not differentiable due to
