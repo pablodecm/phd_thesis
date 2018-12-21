@@ -14,8 +14,9 @@ dark matter candidates, motivating the quest for alternative
 unified descriptions of the physical world. A direct
 path to verify the predictions of the Standard Model up to high accuracy
 and test alternative theoretical models is to collide high energy particles
-in a controlled setting and quantitatively study the properties scattering
-particles produced. That is the aim of the Large Hadron Collider (LHC) and the
+in a controlled setting and quantitatively study the properties of
+the particles produced as an outcome of the scattering.
+That is the aim of the Large Hadron Collider (LHC) and the
 experiments set up around its collision points. In this chapter, the main
 design characteristics of a general purpose high-energy physics experiment,
 namely the Compact Muon Solenoid (CMS) detector at the LHC, will be explored.
@@ -36,7 +37,7 @@ The LHC machine complex is located at the European
 Organisation for Nuclear Research (CERN) laboratories at
 the Switzerland-France border near Geneva, its most distinctive element being
 a circular ring of superconductive magnets and accelerating structures
-installed inside a 26.7 km underground tunnel inherited from the
+installed inside a 26.7 km long underground tunnel inherited from the
 Large Electron Positron (LEP) collider, as depicted in Figure
 [-@fig:LHC_overall]. The setup was designed
 to achieve center-of-mass energies up to 14 TeV for nominal instantaneous
@@ -50,7 +51,7 @@ Fermilab.
 ![Depiction of the placement of LHC tunnel and the main experiments
 places at its collision points (ATLAS, ALICE, CMS and LHCb) relative
 to Geneva and the French-Swiss border.
-The image adapted from [@Servicegraphique:1708849].
+The image has been adapted from [@Servicegraphique:1708849].
 ](gfx/102_chapter_2/LHC_overall.pdf){
 #fig:LHC_overall width=70%}
 
@@ -160,7 +161,7 @@ $$ \frac{dn_c}{dt} = \mathcal{L}(t) \cdot \sigma$$ {#eq:lumi_rate}
 thus the luminosity $\mathcal{L}$ is proportional to the number of
 expected interactions of any given process. For studing rare
 scattering processes, corresponding to very small cross sections $\sigma$,
-the luminosity would be crucial factor, because it determines the
+the luminosity is a crucial factor, because it determines the
 expected total amount such collisions produced per time unit. The
 instantaneous luminosity at the interaction region at a given time
 can be estimated from the characteristics of the proton beams as:
@@ -222,7 +223,7 @@ points, every bunch crossing generates a few dozen proton-proton interactions,
 a phenomenon that is commonly referred to
 as *pileup*. 
 The products of all these interactions go through the surrounding
-detectors at the almost the same time, which complicates
+detectors at almost the same time, which complicates
 the interpretation of the detector readouts as the product of a
 single interaction. The number of proton-proton
 interactions for each crossing is effectively a random variable,
@@ -328,7 +329,7 @@ experiments are installed at the LHC interaction points:
   as it expands and cools down. Such studies can lead to
   a better understanding of colour confinement and other relevant
   QCD problems,
-  as well as shedding some light on the processes that took
+  as well as shedding some light on the processes that occurred
   a few microseconds after the Big Bang.
   
 
@@ -383,7 +384,7 @@ interaction region, as depicted in Figure [-@fig:CMS_detector]. Inside
 the solenoid volume, a particle tracker made of silicon pixel and strip
 detectors, a lead tungstate crystal electromagnetic calorimeter (ECAL)
 and a brass-scintillator hadronic calorimeter (HCAL) are placed, each of
-the composed of a barrel and two endcap sections. A large muon detection
+them composed of a barrel and two endcap sections. A large muon detection
 system, composed of cathode strip chambers (CSC),
 resistive plate chambers (RPC) and drift tubes (DT),
 is embedded in the steel flux-return yoke outside the solenoid. Furthermore,
@@ -391,7 +392,7 @@ extensive forward calorimetry complements the coverage provided by
 the barrel and endcap sections.
 A more detailed review of the detection principles and capabilities
 for each detector component are included
-in the following, yet the detector performance
+in the following sections, yet the detector performance
 technical design report [@CMS:TDR_Detector_Performance]
 and references therein are recommended
 for a more specialised account.
@@ -414,8 +415,8 @@ Considering
 the expected symmetries for particle production,
 spherical coordinates are a convenient representation, where $\phi$ is the
 angle from the $x$ axis in transverse plane (i.e. $x$-$y$ plane), and $\theta$
-is the polar angle with respect to the LHC plane using a consistent sign
-convention with the previous definition of the $z$ and $y$ axes.
+is the polar angle with respect to the LHC plane using a sign
+convention consistent with the previous definition of the $z$ and $y$ axes.
 
 As mentioned before, particle momentum is the main observable of the detected
 particles. The energy is simply a function of the momentum and the mass of
@@ -441,11 +442,11 @@ frame of reference.
 Since the dependence on the initial state $z$ boost 
 would complicate the statistical analysis
 and the definition of derived observables, an alternative observable
-can be used. The rapidity $y$ is defined as:
+is used. The rapidity $y$ is defined as:
 $$
 y = \frac{1}{2} \ln \left ( \frac{E+p_z}{E-p_z} \right )
 $$ {#eq:rapidity}
-and its value on a under a $z$-axis boost can be easily obtained by adding
+and its value under a $z$-axis boost $\beta$ is easily obtained by adding
 an additive factor
 $y'=y-\textrm{tanh}^{-1} \beta$. Hence differences in rapidity between
 two particles in a collision $\Delta y = | y_b - y_a |$ are invariant to
@@ -461,14 +462,14 @@ that only depends on the polar angle $\theta$ with respect to the LHC plane.
 The *pseudo-rapidity* $\eta$
 is equal to the rapidity $y$ for massless particles, and is a very
 effective approximation in the highly-relativistic limit, when $E\gg m$.
-It is useful observing that for particle produced in the transverse
-plane, thus $\theta=\pi/2$, their *pseudo-rapidity* is $\eta=0$. Instead, in
+It is useful observing that for particles produced in the transverse
+plane (i.e. $\theta=\pi/2$), their *pseudo-rapidity* is $\eta=0$. Instead, in
 the limit of fully forward particles, when $\theta \rightarrow 0$ or
 $\theta \rightarrow \pi$, their *pseudo-rapidity* becomes
 $\eta \rightarrow  +\infty$ and $\eta \rightarrow  -\infty$, respectively.
 
-Oftentimes, angular distances between two particles in an event are very
-powerful observables to cluster observed particles or
+Oftentimes, angular distances between two particles are very
+useful observables in an collision  to cluster observed particles or
 isolate interesting collisions. The distances between two particles, indentified
 with $a$ and $b$ subindexes, in the transverse $\Delta \phi$ and
 forward direction $\Delta \eta$ can be computed as:
@@ -510,7 +511,7 @@ the magnetic field not being completely homogenous
 or the particle momentum decreasing along its trajectory due
 to interaction with the detecting elements, Equation [-@eq:lorentz_eq]
 is only an approximation and the trajectory path can be obtained
-by solving a differential equation.
+by solving the relevant differential equation.
 
 In the case of CMS, the magnetic field is generated by a large
 superconducting solenoid, contained inside a hollow cylinder
@@ -526,7 +527,7 @@ with the muon detectors in the outer part of CMS, providing
 a magnetic field about 2T in the opposite direction.
 The remaining elements of the CMS magnetic spectrometer,
 referring to the detector systems used to estimate the curved particle
-trajectories (simply referred to as *tracks*) are are reviewed in Sections
+trajectories are reviewed in Sections
 [-@sec:cms_tracking] and [-@sec:cms_muon].
 
 ### Tracking System {#sec:cms_tracking}
@@ -549,7 +550,7 @@ of length.
 detector in the $r-z$ plane, detailing the position
 of detecting layers
 as well as the main detector sub-components.
-The tracker is symmetric around
+The tracker is approximately symmetric around
 $r=0$, so only the top half is shown. Figure has been adapted
 from [@Chatrchyan:2014fea].
 ](gfx/102_chapter_2/tracker_colour.pdf){
@@ -562,14 +563,14 @@ placed outside the former. The disposition on the detecting layers allows
 to detect tracks within a pseudo-rapidity range defined by $|\eta| < 2.5$.
 Both systems have to deal with the efficient tracking of
 hundred of charged particles, at a rate of
-40 MHz, typically produced from each bunch crossing. A successful
+40 MHz, produced from each bunch crossing. A successful
 apparatus in such a environment requires a short response time, as
 well as to be composed of many small detecting elements.  The latter
 property is commonly referred as *high granularity*, and allows to
 keep the number of detected track points (i.e. *hits*) per detector
 unit at acceptable levels.
 
-Being so close to the collision region, the set-up has to
+Being so close to the collision region, the set-up has also to
 sustain very high particle fluxes during long periods of time,
 up to $1 \textrm{MHz}/\textrm{mm}^{2}$ at the first pixel layer. Therefore,
 resistance to radiation damage of the detecting elements and the
@@ -588,17 +589,17 @@ area over $200 \textrm{m}^2$.
 The pixel detector, the innermost detecting system of the CMS
 experiment, is comprised by a total of 66 million silicon
 cells placed in 1440 modules around the collision region. Each pixel
-cell has an area of $100\times150\mu\:\textrm{m}^2$ and a thickness
-of $285\:\mu\textrm{m}$, and provides two-dimensional local
+cell has an area of $100\times150\:\mu\textrm{m}^2$ and a thickness
+of $285\:\mu\textrm{m}$, providing two-dimensional local
 track hit coordinates with a resolution around in the cell surface
 plane about $20\:\mu\textrm{m}$, that can in turn be used
 to compute the
 global three-dimensional hit location with high accuracy after
 accounting for the precise location of the detecting
 module. As depicted in Figure [-@fig:CMS_tracker], the pixel
-detector is composed by three *barrel* (i.e.
+detector is composed by three *barrel* layers (i.e.
 placed around the collision region in an cylindrical
-arrangement) layers, located at radii of 4.4 cm, 7.3 cm and 10.2
+arrangement), located at radii of 4.4 cm, 7.3 cm and 10.2
 cm respectively, and two forward disk at each side at
 distance of 34.5 cm and 46.6 cm from the nominal interaction point.
 
@@ -650,9 +651,9 @@ in Figure [-@fig:CMS_ecal].
 When a high energy electron or a positron enters the dense crystal
 material, it rapidly decelerates and emits photons through bremsstrahlung
 radiation. High energy photons from electron/positron deceleration or
-directly from the collision region, instead produce a positron-electron
-pairs through matter interaction, that in turn radiate photon through
-bremsstrahlung processes. The chain of processes, referred as
+directly coming from the collision region produce positron-electron
+pairs through matter interaction, that in turn radiate more photon through
+bremsstrahlung processes. These chain of processes, referred as
 *electromagnetic shower* keeps occurring until the energy of the
 photons goes below the pair production threshold or the energy
 loss of the electrons/positrons happens through alternative
@@ -679,15 +680,15 @@ of $22\times22\ \textrm{mm}^2$ and a length of 23 cm, while the
 front-facing sides of those in the endcaps are slightly larger at
 $28.6\times28.6\ \textrm{mm}^2$ with a length of 22 cm. The
 advantages of using lead tungstate crystal include its very short
-radiation length $\mathcal{X}_0=0.89\textrm{cm}$, which characterises the
-longitudinal energy loss profile $E(E) = E_0 e^{x/\mathcal{X}_0}$, as well
-as its small Moliere radius of 2.19 cm, which defines the radius
+radiation length $\mathcal{X}_0=0.89\textrm{cm}$ - which characterises the
+longitudinal energy loss profile $E(E) = E_0 e^{x/\mathcal{X}_0}$ - as well
+as its small Moliere radius of 2.19 cm - defining the radius
 containing average transversal radius
-containing 90% of the shower energy, leading to narrow showers
+containing 90% of the shower energy - leading to narrow showers
 which contributes to improved position and
 energy resolution. The lengths of the crystal blocks in the EB and EE amount
 to $25.8\mathcal{X}_0$ and $24.7\mathcal{X}_0$, which ensures that
-effectively all the energy is deposited inside the detectors.
+all the energy is effectively deposited inside the detectors.
 
 Another advantage of  lead tungstate crystals is that $\textrm{PbWO}_4$
 is also a scintillating material,
@@ -725,12 +726,12 @@ produced as a result of the collision, typically including pions, kaons,
 protons and neutrons. The main detecting elements of this sub-detector
 are an assortment of sampling calorimeters, interleaving brass plates as
 absorber material and plastic scintillator tiles as active
-medium, the former causing the deposition of energy in the form of secondary
+medium; the former causing the deposition of energy in the form of secondary
 particles by means of interactions with the material nuclei and the latter
 converting a part of that energy to visible light. The light from each tile
 is captured by a thin optical fibre and carried to a photodetector, producing
-electric signal that can be used to measure the total amount of deposited
-energy with the help of careful calibration.  
+an electric signal that can be used to measure the total amount
+of deposited energy once it has been carefully calibrated.  
 
 ![Cross sectional view of the CMS hadronic calorimeter (HCAL)
 detector in the $r-z$ plane, depicting the positioning of the various
@@ -743,21 +744,21 @@ $r=0$, so only the top half is shown. The figure adapted from
 
 The different segments of the CMS HCAL
 are shown in [Figure @fig:CMS_hcal].
-After the ECAL but still inside the solenoid volume,
-the barrel section of the hadronic calorimeter (HB) as
-well as two endcap sections (HE) at each side are placed, providing
+The barrel section of the hadronic calorimeter (HB) as
+well as two endcap sections (HE) at each side are placed
+after the ECAL but still inside the solenoid volume, providing
 pseudo-rapidity coverages of $|\eta| < 1.3$ and  $1.3 < |\eta| < 3.0$,
-respectively. Both the HB and HE section are composed of a stack of brass
+respectively. Both the HB and HE sections are composed of a stack of brass
 plates with plastic scintillator tiles in between, providing a total of
 $5.6\lambda_I$ at $\eta=0$ and $11.8\lambda_I$ at $\eta=3$,
-where $\lambda_I$ is the hadronic interaction length. Given that the limited
+where $\lambda_I$ is the hadronic interaction length. Given the limited
 space inside the solenoid and the fact that about 11$\lambda_I$ are required
 to absorb about 99% of the total energy of the hadrons at the expected energy
 ranges, the hadronic calorimeter system is complemented by an outer
 detector (HO) outside of the solenoid. The HO is composed of five rings
 of scintillator tiles, effectively using the solenoid material as
 absorbing material. Because the absorbing material path length is shorter
-around $\eta=0$, the central ring is shielded by a large iron plates and 
+around $\eta=0$, the central ring is shielded by large iron plates and 
 an additional layer of scintillating material, yielding a total
 absorber length over $11.8\lambda_I$ and therefore improving its measuring
 capabilities.
@@ -815,11 +816,11 @@ given that electromagnetic showers are much shorter than hadronic showers.
 
 The scientific objective of the CMS muon sub-system, or outer tracker,
 is to identify, determine the charge and measure the momenta of high
-energy muons, which are not only charged particles capable
+energy muons, which are the only type of charged particles capable
 of passing through all the other detector systems
-without a significant energy loss. While the trajectory can be
-detected in the inner tracker, the around of energy loss due to
-bremsstrahlung is much smaller than that of electron or positrons
+without a significant energy loss. While their trajectories can be
+detected in the inner tracker, the amount of energy loss due to
+bremsstrahlung is much smaller than those of electrons or positrons
 due to its much heavier mass
 (given that the emission probability scales with $1/m^2$) 
 and hence the do not
@@ -832,7 +833,7 @@ large blocks of ferromagnetic material as *flux-return yokes*.
 
 ![Cross sectional view of the layout of CMS detector
 in the $r-z$ plane, focussing
-on the components of muon system components.
+on the components of muon system.
 The detector is symmetric around
 $r=0$ axis and the $z=0$ plane,
 so only the top quarter is shown.
@@ -841,13 +842,13 @@ Figure adapted from [@Sirunyan:2018fpa].
 
 The muon system is the most external sub-detector of CMS
 and it is based on gaseous tracking detector technologies,
-given the large volumes covered. The principle of action of
+given the enormous volumes covered. The principle of action of
 gaseous detectors is rather simple: charged particles
 passing through the gas ionise gas molecules in their path,
 which start moving due to a high electric field between
 conducing wires, producing an electrical signal
 that can be read out. The time dependence of the signal
-on the different readout wires can be used to infer
+on the different readout wires is used to infer
 the particle trajectory with high precision, and in some
 cases built-in signal amplification can be achieved
 due to secondary ionisation by
@@ -874,14 +875,14 @@ $0.9 < |\eta| < 2.4$. Both DT and CSC detectors can achieve
 very high position resolution, but their signal
 readout time and time resolution is not as good, thus a series
 of fast but resistive plate chambers (RPC) are positioned both
-in the barrel and the endcap sections, up pseudo-rapidities
+in the barrel and the endcap sections, up to pseudo-rapidities
 $|\eta| < 1.6$.
 
 
 ### Trigger and Data Acquisition {#sec:trigger}
 
 As discussed in Section [-@sec:pheno], the occurrence of
-relevant processes that can provide information about the physical
+relevant processes that may provide information about the physical
 properties of fundamental interactions in
 proton-proton collisions is purely stochastic given some initial conditions,
 plus their relative frequency is
@@ -924,8 +925,8 @@ readouts from 40 MHz to about 1 kHz. As a compromise between processing
 speed and requirement adaptability, the trigger system of CMS is divided
 in two stages: the level 1 trigger (L1), which is a custom-hardware based
 solution that reduces the detector readout rate to 100 kHz, and the high-level
-trigger (HLT), a a second step reducing it to the required 1 kHz and that
-is instead carried out by a computer farm.
+trigger (HLT), a second step reducing it to the required 1 kHz and that
+is instead carried out by a commodity computer farm.
 
 
 ## Event Simulation and Reconstruction {#sec:event}
@@ -948,12 +949,12 @@ with theoretical predictions, at the cost of possibly losing
 some useful information. A principled way to obtain lower dimensional
 representations of an event given its raw detector readouts
 is to attempt to reconstruct all the primary particles that were produced
-in the main proton-proton interaction of the collision and as well as 
+in the main proton-proton interaction of the collision and
 estimate their main properties,
 through a process generally referred as *event reconstruction*.
 Nevertheless, 
 for carrying out successfully the aforesaid task it is convenient to
-be able to have a detailed model of the detector readout output that is
+be able to have a detailed model of the detector readout output
 expected for a given set of particles produced in a collision.
 Realistic modelling of high-energy physics collisions in high-dimensional
 representations  can be achieved through simulation.
@@ -1023,7 +1024,7 @@ are distinguished: muons, electrons, charged hadrons, neutral hadrons
 and photons.
 
 The traces that each of the mentioned particle types leave in each
-detector sub-system is depicted in Figure [-@fig:CMS_transverse].
+detector sub-system are depicted in Figure [-@fig:CMS_transverse].
 Even though muons are unstable particles, their long mean lifetime
 $\tau_\mu = 2.2 \mu s$ allows them to travel very large distances
 when highly boosted, as is the case for all the high-energy
@@ -1043,8 +1044,8 @@ points.
 The trajectories of high-energy electrons 
 are also recorded by the CMS inner tracker,
 but as mentioned in Section [-@sec:cms_ecal], their interactions
-differs from those caused by muons
-they lose energy
+differ from those caused by muons because electrons
+lose energy
 rapidly due to bremsstrahlung when they reach the ECAL, producing subsequent
 electromagnetic showers. It is worth noting that within CMS reconstruction
 and analysis, it is common to simply use the term *electron* 
@@ -1061,15 +1062,16 @@ due to bremsstrahlung, the radiated photons often recovered in the ECAL.
 
 Long-lived neutral hadrons, including neutrons and the neutral kaon $K_L^0$,
 follow instead straight lines in the inner detector volume because they
-are not affected by the magnetic field and do not leave any traces when
+are not affected by the magnetic field neither leave any traces when
 passing through the tracking detectors. It is not until neutral hadrons
 reach the calorimeter detectors, chiefly the HCAL, that nuclear interactions
 produce large hadronic showers producing measurable signals that can
 be correlated with the energy deposited. Photons are massless
-and neutral particles, and at the ranges of energies of interest as
-the outcome of particle collisions they are not expected to deposit
+and neutral particles, and at the ranges of energies of interest characteristic
+of
+the outcome of particle collisions at the LHC are not expected to deposit
 enough energy in the thin inner tracking layers to produce significant
-signal, thus they follow a straight line trajectory to the calorimetry
+signal, thus they also follow a straight line trajectory to the calorimetry
 sub-systems. In contrast, when photons reach the electromagnetic calorimeter,
 electron-positron pair-production processes are bound to occur, producing in turn
 electromagnetic showers which can be readout as a ECAL detector signal.
@@ -1086,12 +1088,13 @@ nevertheless be inferred by the total transverse energy imbalance. While
 the initial longitudinal momentum in
 the laboratory frame is unknown due to the
 proton compositeness, the initial total transverse momentum 
-is very close to zero given that the collision occurs head-on. Given
-that the CMS detecting structures have a near complete angular
+is very close to zero given that the collisions occur head-on. Because
+detecting structures of CMS have a near complete angular
 coverage around the interaction points, with the exception of
 very low transverse momentum particles that are lost near
 the beam pipe, the total transverse collision momentum of all detectable
-particles simply by summing the estimation of their transverse momenta
+particles can be obtained simply by summing the estimation of their
+transverse momenta
 estimation. Ergo, the quantity $E_T^{\textrm{miss}}= || - \sum \vec{p}_T ||$
 is referred to
 as total missing transverse energy or by the acronym MET, and can
@@ -1111,7 +1114,7 @@ and the amount of deposited energy. The latter is especially relevant
 for calorimeter detecting units. The precision of the angular location
 coordinates greatly varies between different detector types depending
 in their granularity, tracking detectors providing more accurate
-position measurements given that their used to extract information
+position measurements given that they extract information
 directly from the particle trajectories.
 
 ### Detector Simulation {#sec:detector_simulation}
@@ -1135,7 +1138,8 @@ affecting the detector readout for a given set of generated particles, including
 various possible particle decays and material interactions that can occur when
 the particle is travelling through the detector, the non-uniformity of the magnetic
 field and its effect on the particle trajectories, and
-the intricacy of the detector geometry and their electric response. All these
+the intricacy of the detector geometry and the electrical response
+of its components. All these
 effects can be accounted for, to a high degree of validity,
 in a simulator program considering the
 non-deterministic propagation of the particles produce through the
@@ -1149,7 +1153,7 @@ structures can be recorded. After propagating all particles, the
 combination of all energy deposits in the detecting volumes can
 be used to produce realistic detector responses.
 
-The type of detector simulation is referred to as *full simulation*,
+Such type of detector simulation is referred to as *full simulation*,
 or *fullsim* for short, and it is carried out for CMS generated
 events using a custom implementation of the geometry, properties
 and response of the different detectors as well as the magnetic
@@ -1168,19 +1172,19 @@ and detector sensitivity dead-times.
 
 As can be conjectured by its level of detail, such 
 simulation processes are very time consuming, taking several
-minutes of CPU time give current available computing
-technologies for producing a realistic detector readout for
+minutes of CPU time given currently available computing
+technologies, for producing a realistic detector readout for
 each initial set of particles produced at a primary *hard* interaction.
 Given that oftentimes billions of generated events (i.e. simulated
 observations) of common processes are needed
-in order to obtain a realistic modelling of known types of interaction,
+in order to obtain a realistic modelling of known types of interactions,
 alternative simulation techniques
 are sometimes used. By trading off some accuracy with simulation speed,
 the modelling of the physical processes and detector responses
-can be simplified, achieving reducing running times considerably,
+can be simplified, reducing running times considerably,
 up to two orders of magnitude [@Abdullin:2011zz]. Alternatively, as
 initially stated at the beginning of this section, detailed
-simulation can be used to directly parametrise
+simulated observations can be used to directly parametrise
 low-dimensional summaries of the detector readout, such as the reconstructed
 main quantities that will be presented in the next section, by using approximate
 conditional probability density functions. While this approach, implemented
@@ -1196,7 +1200,7 @@ of a given analysis.
 ### Event Reconstruction {#sec:event_reco}
 
 In the previous sections, the generative mechanisms by which
-particles produced signals in the different detectors, as well as
+particles produce signals in the different detectors, as well as
 the techniques used to procedurally simulate them with high fidelity,
 were summarised. In contrast with simulated events,
 the set of underlying particles that were produced in the
@@ -1206,19 +1210,20 @@ the fundamental interaction that likely happened in a collision is
 to infer the type and properties of the particles that were probably
 produced on a given collision given the detector output. Such procedure
 is generally referred to as *event reconstruction*. The underlying problem
-for achieving such goal is mainly the assignment of detector readouts
-to the produced particles
-is not an easy one, given that the total number or the relative multiplicities
-of the different particle categories in a given event is unknown, but expected
+for achieving such goal is the assignment of detector readouts
+to the produced particle. This is not a simple problem,
+because the total number or the relative multiplicities
+of the different particle categories in a given event is unknown and
+variable, however expected
 to be large given the high-energy and luminosity conditions of proton-proton
 collisions.
 
 #### Reconstruction at CMS: Particle-Flow Algorithm
 
-A somehow hierarchical strategy is followed to perform event reconstruction
-at CMS experiments. First, the combined properties of
+A hierarchical strategy is followed to perform event reconstruction
+at the CMS experiment. First, the combined properties of
 small groups of low-level readouts for each sub-detector in
-collision are used to construct higher-level summaries that distill
+each collision are used to construct higher-level summaries that distill
 the information regarding the origin, direction or energy
 of the particles. In a second step, such high level constructs are linked
 by an algorithm based on the expected properties of each particle type,
@@ -1232,11 +1237,12 @@ and categorisation of events based on their particle content.
 
 As mentioned before, the first reconstruction stage encompasses
 the combination of detector traces in each sub-detector system to create
-higher level constructs. In the tracking detector, this amounts to associate
-the location estimate for the signals detected in all layers of the
+higher level constructs. In the tracking detector, this amounts to
+the association of
+location estimates for the signals detected in all layers of the
 pixel and strip detector, referred to as  *hits*,
 to trajectories of charged particles, simply called *tracks*. This inverse
-measurement problem is tackled in CMS by using a combinatorial
+measurement problem is approached in CMS by using a combinatorial
 extension of the Kalman Filter
 algorithm [@Billoir:1990we; @Mankel:334615; @Chatrchyan:2014fea]. In broad terms, 
 the algorithm
@@ -1265,7 +1271,7 @@ to identify and compute the vertices location and their
 uncertainty more accurately. Most primary vertices
 correspond to soft scattering processes (pileup), and can be used
 to characterise the position and size of the interaction region. In collisions
-where a hard interaction occur, the main primary vertex can effectively
+where a hard interaction occur, the main primary vertex may effectively
 be identified
 with the one whose linked tracks transverse momenta squared sum $\sum p_T^2$
 is the largest. The distinction of a main primary vertex is useful to
@@ -1273,40 +1279,42 @@ mitigate the effect of pile-up interactions in reconstruction by
 removing the contributions from particles linked to pileup vertices. 
 
 Regarding the calorimeter detector readouts, the initial step comprises
-the clustering low-level deposits in each sub-detector, so it has to identify
+the clustering of low-level deposits in each sub-detector, so as to identify
 the energy remnants left by each individual particle. The clustering procedure
 starts by finding the calorimeter cells where the amount of deposited energy
-are local maxima, referred to as *seed* deposits.
-The deposits in contiguous energy cells are grouped together until
+are local maximal, referred to as *seed* deposits.
+The deposits from contiguous energy cells are grouped together until
 their energy is smaller than twice the expected noise level,
-forming larger *topological clusters*. Because such clusters the results of
+forming larger groups referred to as *topological clusters*.
+Because such clusters might be the result of
 the overlapping of the energy deposited by two or more particles, the final
 clusters are identified by fitting a Gaussian-mixture model via
 the expectation-maximisation algorithm, using the number of initial
 seeds present in the cluster as the number of Gaussian components in the
 mixture. The fitted cluster amplitudes are thus expected to be
-heavily correlated with energy deposited by an individual particle, but
-an extensive calibration based on a detailed simulation of the detector
-and the assumed particle type. The resulting calibrated clusters in each
-sub-detector (ECAL, HCAL and HF) will be instrumental for improve the energy
-measurement of charged hadrons, identifying measure the energy of neutral
-hadrons and photons and as well as to facilitate the identification and
+heavily correlated with the energy deposited by an individual particle,
+however extensive calibration based on a detailed simulation of the detector
+and the assumed particle type is needed for accurate energy
+estimates. The resulting calibrated clusters in each
+sub-detector (ECAL, HCAL and HF) is instrumental for improve the energy
+measurement of charged hadrons, identifying and measuring the energy of neutral
+hadrons and photons, and to facilitate the identification and
 reconstruction of electrons.
 
 Once the basic elements for event reconstruction have been constructed,
-charged particle tracks and calorimeter cluster are linked together
-to form *blocks*. This step is an attempt to group the various
+charged particle tracks and calorimeter clusters are linked together
+to form *blocks*. This step is an attempt to group the different
 traces that particle can leave in the various sub-detectors, by linking
 pairs of elements based on their distance in the $(\eta,\phi)$ plane
 and other properties depending of the specific sub-systems considered. When
-considering links between inner tracker and the calorimeter clusters,
-the curvature of the tracks and details regarding the detector
+considering links between the inner tracker and calorimeter clusters,
+the curvature of the tracks and other details regarding the detector
 geometry are taken into account. Calorimeter cluster-to-cluster
 links between the HCAL and ECAL, and between the ECAL and the pre-shower
 clusters are also sought. Additionally, ECAL clusters possibly created by
 bremsstrahlung photons can also be linked to electron-like tracks if they
 are consistent with an extrapolation of the track tangent. Finally, links
-between two tracks due subsequent photon conversion via pair production
+between two tracks due subsequent photon conversion via pair production are
 also considered if the sum of track momenta matches the mentioned
 electron-like track tangent.
 
@@ -1314,7 +1322,7 @@ The outcome of the aforementioned procedure is a set of blocks of elements
 for a given collision readout,
 formed by associating elements that have been directly linked or share
 a common link with other elements. The following reconstruction step
-is referred to as *object identification*, and its based in the
+is referred to as *object identification*, and it is based in the
 association of blocks to a list of particle candidates, also known as
 *physics objects*. This is done sequentially, starting out by the
 objects that more easily identified (e.g. muons) and progressively
@@ -1322,7 +1330,7 @@ masking out the blocks that are considered for each object until
 all particles candidates have been reconstructed. The reconstruction
 process is rather conservative, given that most CMS data analysis
 share the same reconstructed *physics objects*, therefore it is
-common to specify additional selection criteria based on over the
+common to specify additional selection criteria on the
 resulting set of objects based on their properties within each analysis
 to reduce the rate of fake or wrong reconstruction.
 The rest of this section is devoted
@@ -1342,7 +1350,7 @@ particle trajectories are considerably lower. The sparse particle hits
 in each of the muon detector systems are linked to form tracks that
 can be combined using a Kalman filter, similarly to what is done
 for the inner tracker as described earlier this section. To increase
-the measurement accuracy and reduce the fake rate, in analysis
+the measurement accuracy and reduce the fake rate, for analyses
 directly studying final states including muons, oftentimes
 a matching between the track segments in the muon detectors and
 a those in the inner tracker is required. The details and performance of the
@@ -1358,8 +1366,8 @@ the rejection of signals from very energetic
 hadrons produced in the collision that are able to transverse
 the dense calorimeter and magnet section and still produce a response
 in the muon detectors, that are referred to as *punch-through* hadrons.
-In addition, muons are a common product of the decay of hadrons and it
-thus is important to differentiate between muons likely produce in
+In addition, muons are a common product of the decay of hadrons and it 
+is thus important to differentiate between muons produced in
 the primary interaction, or *prompt muons*, and those produced
 in a secondary decay of another particle. The amount of energy
 deposited around the muon trajectory, called *muon isolation*, as well
@@ -1369,9 +1377,9 @@ such distinction.
 #### Electron and Photon Reconstruction
 
 Electron reconstruction is more challenging because it uses
-the readouts from the inner tracker and the ECAL, both detector
+the readouts from the inner tracker and the ECAL, both detectors
 being sensitive to additional charged particles coming
-out from the detector volume, and the latter also to high-energy photons.
+out from the interaction volume, and the latter also to high-energy photons.
 Furthermore, electrons lose energy in their curved trajectories
 through the tracker, thereby complicating an accurate track
 reconstruction. The
@@ -1396,7 +1404,7 @@ for non-clustered energy deposits and pile-up contributions. Similarly
 to what is done for muons, additional quality criteria can be applied to
 distinguish between the electrons produced in the primary interaction
 and those coming from hadronic decays or converted photons, including
-conditions of several track-based and calorimeter-based observables
+conditions on several track-based and calorimeter-based observables
 as well as isolation requirements, the latter ensuring that no
 significant energy from hadrons was deposited around the electron
 trajectory.
@@ -1407,7 +1415,7 @@ when the energy distribution in the ECAL
 calorimeter cells is consistent with that expected from a photon
 shower. Energy isolation requirements are also essential
 to distinguish photons
-coming from hadron or secondary radiative decays, which
+coming from hadrons or secondary radiative decays, which
 will be discussed together with hadrons, from those
 originated as a direct product of the primary interaction. Additional
 quality and fine-tuned calibration is often used, for example in the
@@ -1418,7 +1426,7 @@ and obtain higher momentum resolution.
 
 Once muons, electrons and isolated photons in the event have been
 identified, the remaining particle-flow blocks (i.e. linked tracks
-and/or calorimeters deposits) are interpreted as either as
+and/or calorimeters deposits) are interpreted either as
 neutral or charged *PF candidates* [@Sirunyan:2017ulk].
 These physics object candidates
 account for charged and neutral hadrons coming from the hadronisation
@@ -1432,10 +1440,10 @@ with original parton momentum. This is because the processes of
 fragmentation, hadronisation, decays 
 and associated radiation are stochastic, producing
 tree-like structures with multiple leafs as discussed
-in Section [@sec:parton_showers],
-difficulting attempts to uniquely identify each parton with its
+in [Section @sec:parton_showers],
+difficulting most attempts to uniquely identify each parton with its
 decay chain. In addition, contributions from additional
-soft pileup interaction can further complicate the mentioned assignment,
+soft pileup interactions may further complicate the mentioned assignment,
 while this factor is lessen by charged hadron subtraction techniques (CHS)
 [@CMS:2014ata] based on removing candidates not associated with a
 primary vertex.
@@ -1468,9 +1476,10 @@ direct comparison with generation level observables. In
 particular, in the analysis described in Chapter [-@sec:higgs_pair],
 the default jet CMS reconstruction is extensively used, which is
 based on the $\textrm{anti-k}_T$ algorithm [@Cacciari:2008gp]. This
-is a sequential algorithm, also classified as
-hierarchical agglomerative clustering in statistical language,
-starting assigning each candidate to each cluster and successively 
+is a sequential algorithm, also referred to as
+hierarchical agglomerative clustering in statistical language. The
+algorithm
+starts by assigning each candidate to each own cluster and successively 
 merging them according to the following distances between two
 jets indexes as i and j respectively:
 $$ d_{ij} = \min ( p_{Ti}^{2a}, p_{Tj}^{2a}) \frac{\Delta R_{ij}^2}{R^2}
@@ -1479,11 +1488,11 @@ d_{iB} = p_{Ti}^{2a}
 $$ {#eq:antikt_distance}
 where $\Delta R_{ij}^2$ is the $\eta-\phi$ plane distance as defined
 in Section [-@sec:exp_geom],  $p_{Ti}^{2a}$ and $p_{Tj}^{2a}$
-are the transverse momenta of each jet, $R$ is the size parameter
+are the transverse momenta of each jet, $R$ is the size parameter,
 and $a=-1$ for the $\textrm{anti-k}_T$ algorithm. The algorithm
 starts by computing all distances $d_{ij}$ and $d_{iB}$ for all
 initial candidates, which are placed in a list. If the minimum
-corresponds to given distance between two candidates $d_{ij}$
+corresponds to a given distance between two candidates $d_{ij}$
 then both candidates are removed from the candidate list
 and group together by summing their
 four momenta forming a composite object, which is in turn 
@@ -1564,7 +1573,7 @@ or $D$ hadron decays are characterised by a large decay multiplicity
 a lepton in their decays chain. Flavour tagging techniques, often referred
 to as b-tagging or c-tagging when the purpose is to identify a jets
 originating from a particular type of parton, combine quantitative information
-related with the various properties previously mention to distinguish the
+related with the various properties previously mentioned to distinguish the
 flavour of the parton that generated a given jet.
 
 ![Misidentification probability (in log scale) for jets
@@ -1605,9 +1614,9 @@ as DeepJet. The DeepJet
 tagger outperforms both CMVAv2 and DeepCSV (which also leverages
 deep learning technologies), while
 providing additional discrimination capabilities (e.g. gluon-quark
-separation). It worth mentioning that jet tagging techniques
+separation). It is worth mentioning that jet tagging techniques
 can also be applied for identifying substructure in larger radius
-jets, which are very relevant for analysis where highly boosted
+jets, which are very relevant for analyses where highly boosted
 intermediate objects are expected, but are not discussed in
 this work.
 
@@ -1628,7 +1637,7 @@ transverse energy $E_T^\textrm{miss}$, and $\vec{p}_{Ti}^\textrm{miss}$ is
 the transverse momentum each PF candidate.
 
 It is worth remarking that some hadron decay processes can produce
-neutrinos and therefore of a non-zero transverse
+neutrinos, therefore a non-zero transverse
 missing energy $E_T^\textrm{miss}$ does not necessarily mean that
 weakly-interacting particles were produced in the hard
 interaction or by its direct products. Furthermore, any mis-detections

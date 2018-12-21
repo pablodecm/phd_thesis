@@ -27,12 +27,14 @@ for mixture models where we are interested in the mixture
 coefficients, as demonstrated in [Section @sec:sig_vs_bkg].
 Unfortunately, their
 usefulness can rapidly decrease when additional uncertain parameters
-affect the generative model. As a practical example,
+affect the generative model.
+
+As a practical example,
 in the analysis presented in [Chapter @sec:higgs_pair]. The limiting
 factor for experimental sensitivity was not in the choice of summary
 statistics but rather on the lack of detailed knowledge about
 the expected contribution from background processes, which had to
-be address by the inclusion of nuisance parameters. The technique
+be addressed by the inclusion of nuisance parameters. The technique
 presented in this chapter, referred to as INFERNO
 and published in [@deCastro:2018mgh],
 is an attempt to tackle directly the problem of constructing

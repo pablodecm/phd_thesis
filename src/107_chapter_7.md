@@ -21,7 +21,7 @@ acquired observations.
 
 The statistical model for particle colliders can be described
 by a mixture model, each mixture component originating
-from a group of fundamental physical interaction.
+from a group of fundamental physical interactions.
 The latent variable structure of
 the generative model can be mapped to the different simulation
 steps in the simulation: process type, parton-level four-momenta,
@@ -62,7 +62,7 @@ deal with sets, graphs and other types of non-vector input coupled
 with powerful parallel hardware could be a promising path to substitute
 a larger part of the event reconstruction chain by latent variable
 approximations based on simulated observations, providing higher
-accuracy and higher throughput than hand-tuned algorithms.
+accuracy and throughput than hand-tuned algorithms.
 
 An analysis using $35.9\ \textrm{fb}^{-1}$ of data
 collected in 2016 by the CMS detector at the LHC was also included in this
@@ -93,7 +93,7 @@ combination of this analysis with other HH decay channels were also included.
 The estimation of QCD multijet backgrounds will likely remain an
 important issue for
 future jet-based analysis at the LHC, given that the biases of the
-data-driven estimation methods would become more relevant as more
+data-driven estimation methods would become increasingly relevant as more
 data is available.
 
 The ultimate goal of LHC analyses is statistical inference, in the form

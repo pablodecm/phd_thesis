@@ -16,8 +16,8 @@ used in the next chapters will be explored: boosted
 decision trees and neural networks. Last but not least, we will go through
 a brief review of the common past use cases of these techniques at high energy
 physics experiments, especially focussing on those cases where they can
-be used to address some of the statistical issues from
-Chapter [-@sec:statinf].
+be used to address some of the statistical inference and modelling issues from
+[Chapter @sec:statinf].
 
 ## Problem Description {#sec:problem_description}
 
@@ -82,8 +82,8 @@ vector $\boldsymbol{y}$ is a vector or a complex data structure where its
 elements are tightly interrelated. As will be reviewed in [Section @sec:ml_hep],
 most analysis problems amenable by machine learning  in high-energy
 physics experiments are framed as classification and regression tasks,
-while the use of structured output task is instead
-not quite extensive. The reconstruction of the set and
+while the use of structured output tasks is instead
+not quite extended. The reconstruction of the set and
 properties of physical objects in an event directly from
 the detector readout could be framed as a structured output task, if it
 was to be approached directly using machine learning algorithms
@@ -142,7 +142,7 @@ error cannot be estimated
 analytically because $p(\boldsymbol{x}, \boldsymbol{y})$ is not
 known, or not tractable in the case of a generative simulation model. The
 generalisation error has thus to be estimated from a subset of labelled
-samples $S'=\{(\boldsymbol{x}_0,\boldsymbol{y}_0),...,(\boldsymbol{x}_n',\boldsymbol{y}_n')\}$
+samples $S'=\{(\boldsymbol{x}_0,\boldsymbol{y}_0),...,(\boldsymbol{x}_{n'},\boldsymbol{y}_{n'})\}$
 as follows:
 $$
 R(f) \approx R_\textrm{S'} = \frac{1}{n'}
@@ -218,7 +218,7 @@ $S_\textrm{train}$ will be used by the learning algorithm to optimise
 the prediction function $f$ by means of empirical risk minimisation, as
 described in [Equation @eq:learning_erm]. The hold-out or test
 subset $S_\textrm{test}$ can then be used to obtain an unbiased estimation
-of the performance of $f$ on unseen observation.
+of the performance of $f$ on unseen observations.
 
 For many learning algorithms,
 the learning process, or *training*, is iterative: the function $f$
@@ -247,7 +247,7 @@ particularities of the data (e.g. number of input dimensions or number
 of size of the data size). This motivates the notion of *hyper-parameter
 optimisation*, where the performance of the various choices of
 hyper-parameters is evaluated on the validation set or
-by mean of cross-validation techniques, in order to select the best
+by means of cross-validation techniques, in order to select the best
 configuration.
 
 The loss function $L$ of a supervised learning algorithm,
@@ -320,7 +320,7 @@ where the second line in the equation is a direct consequence of Bayes
 theorem and from the last term it can be clearly seen that the
 prediction output is monotonous with the density ratio between
 the probability density functions for each category. Simlar results can
-be obtained for the Bayes optimal classifier for other soft
+be obtained for the Bayes optimal classifier when using other soft
 relaxations of the zero-one function. Machine
 learning binary classifiers will effectively approximate this quantity
 directly from empirical samples, where the prior probabilities of each
@@ -346,7 +346,8 @@ classification, the prediction sum is expected to be one.
 A simple way to ensure the aforementioned property
 is to apply a function that ensures that the prediction outputs are in
 the range $[0,1]$ and normalised so $\sum_i \hat{y}_i=1$. The *softmax function*
-is a common choice in machine learning. It is a generalisation
+is a common choice to achieving the mentioned
+transformation within the field of machine learning. It is a generalisation
 of the logistic function to
 $k$ dimensions, and is defined as:
 $$
@@ -400,9 +401,9 @@ provided a more extensive review [@friedman2001elements;@Goodfellow-et-al-2016;@
 ### Boosted Decision Trees {#sec:boosted_decision_trees}
 
 The term *boosted decision trees* (BDT) refers to a large family of
-algorithms that are based on additively constructing ensembles
-of [@freund1997decision ; @friedman2000additive; @friedman2001greedy]
+algorithms that are based on additively constructing ensembles of
 decision trees for supervised learning tasks
+[@freund1997decision ; @friedman2000additive; @friedman2001greedy]
 as those described in [Section @sec:supervised].
 A subset of these techniques, which is often referred as *gradient boosting*,
 are particularly useful for classification and
@@ -453,7 +454,7 @@ described in [Chapter @sec:higgs_pair].
 a leaf node, the tree is split in two depending on wether based on
 whether a boolean condition is met,
 which based on a threshold for the input variable indexed by the number
-indicated. This corresponds to the first on the ensemble of trees used
+indicated. This tree corresponds to the first on the ensemble of trees used
 for classification in [Chapter @sec:higgs_pair], which was trained
 using binary cross entropy as loss function.
 ](gfx/104_chapter_4/tree.pdf){
@@ -477,7 +478,7 @@ based on alternative methods such as bagging [@breiman1996bagging] can
 also be expressed by a similar combination of predictions. The learning
 problem can be expressed as empirical risk minimisation in the space
 of possible tree ensembles over the learning set of labelled observations
-$S=\{(\boldsymbol{x}_0,\boldsymbol{y}_0),...,(\boldsymbol{x}_n',\boldsymbol{y}_n')\}$,
+$S=\{(\boldsymbol{x}_0,\boldsymbol{y}_0),...,(\boldsymbol{x}_n,\boldsymbol{y}_n)\}$,
 as discussed in [Equation @eq:learning_erm]. The total empirical risk
 functional $R(T)$ for an ensemble of $K$ trees can usually be written as:
 $$
@@ -494,20 +495,20 @@ Because learning the structure and leaf weights $w_r$
 of all trees in the ensemble at the same time is intractable,
 boosting is based on sequentially
 learning trees. At each step, a tree $t_j$ is built to improve over
-the previously ensemble of trees $T_{(j-1)}$, the prediction for each
+the previously ensemble of trees $T_{(j-1)}(\boldsymbol{x})$, the prediction for each
 observation in the learning set a given step $j$
 of the training procedure can then be expressed as:
 $$
 T_j(\boldsymbol{x}_i) =  T_{(j-1)}(\boldsymbol{x}_i) + t_j(\boldsymbol{x}_i)
 $$ {#eq:pred_step_tree}
 which can be used to redefine the equivalent risk from [Equation @eq:total_risk]
-at each training step, where the tree $t_j$ is being created as:
+at each training step, where the tree $t_j(\boldsymbol{x})$ is being created as:
 $$
 R(T_j) = \sum_{(\boldsymbol{x}_i,\boldsymbol{y}_i) \in S}
  L(\boldsymbol{y}_i, T_{(j-1)}(\boldsymbol{x}_i) + t_j(\boldsymbol{x}_i)) + \sum_{j=1}^K \Omega(t_j)
 $$ {#eq:seq_risk}
-where the loss $L(\boldsymbol{y}_i, T^{(j-1)}(\boldsymbol{x}_i)$ can be expanded
-as a Taylor series assuming that at the step $j$ the ensemble $T^{(j-1)}$ is
+where the loss $L(\boldsymbol{y}_i, T_{(j-1)}(\boldsymbol{x}_i)$ can be expanded
+as a Taylor series assuming that at the step $j$ the ensemble $T_{(j-1)}(\boldsymbol{x})$ is
 constant. Omitting constant terms, which do not play any role in risk
 minimisation, the risk at a given training step can be expressed as:
 $$
@@ -576,20 +577,20 @@ where $G_L$ and $H_L$ are the sum of gradient statistics
 left of the threshold and $G_R$ and $H_R$ are those
 right of the threshold. If the gain is negative for the whole, no splitting
 is preferred in the considered features. Once the optimal splitting
-is determined for all the features, the features that provides the
+is determined for all the features, the featurs that provides the
 minimal risk as defined in [Equation @eq:opt_weight_risk] is chosen. The
 algorithm then proceeds to the next tree level until the maximum tree depth
 is reached or any additional splitting degrades the performance.
 
 Boosted tree ensembles are prone to overfitting to the learning set, so
-additional heuristic are often used to improve generalisation. A common
+additional heuristics are often used to improve generalisation. A common
 approach after each step that produces a tree $t_j$
 by the procedure outlined before, is to define ensemble for the next step
 by weighting the constribution from the last three
  $T_j(\boldsymbol{x}_i) =  T_{(j-1)}(\boldsymbol{x}_i) + \eta\, t_j(\boldsymbol{x}_i)$,
 where $\eta$ is referred as learning rate or shrinkage. The use of $\eta<1$ produces
 a less efficient learning procedure, so additional trees are
-required in the ensemble, yet the resulting model is less prone to overfitting.
+required in the ensemble, however the resulting model is less prone to overfitting.
 Other policies against overfitting include subsampling the set of observations
 or the feature
 vector dimensions. Early stopping, as defined in [Section @sec:supervised],
@@ -634,9 +635,10 @@ model complexity. Many other gradient-based optimisation
 methods exist [@NoceWrig06], e.g. using second-order derivative information.
 The previous flavour of gradient descent is often referred
 as batch gradient descent, because the whole learning set $S$ is
-used to compute the parameter updates at each step. The previous method
+used to compute the parameter updates at each step. Batch gradient descent
 can be very computationally demanding when the number of observations
 in $S$ is large and the computation of the gradient of the loss
+for each labelled observation
 is costly. In addition, batch gradient descent is a deterministic
 optimisation method and likely to get stuck at a local minima
 if the optimisation surface is non-convex.
@@ -704,7 +706,7 @@ $g(\boldsymbol{z})$ is applied element-wise, and it is often based on a simple
 non-linear function. The sigmoid function $\sigma(z)=1/(1+e^{z})$
 used to be a common choice for the activation function, but nowadays
 the rectified linear unit  (ReLU) function  $g(\boldsymbol{z})=\max(0,z)$ and
-its variants are most frequently used.
+its variants are most frequently used instead.
 
 ![Graphical representation of a feed-forward neural network
 with two hidden layers,
@@ -738,8 +740,8 @@ where multiple transformations layers are used for learning
 data representations in many learning tasks.
  
 A good choice for depth and overall structure for a neural network
-model depends on the problem at hand and characteristic and amount
-of the learning set available, thus it often has to be defined
+model depends on the problem at hand as well as the characteristics and size
+of the learning set available, thus it frequently has to be defined
 by trial-and-error, based on the performance on a validation
 set as discussed in [Equation @sec:supervised]. The output size and choice
 of activation function in the last transformation often
@@ -748,9 +750,9 @@ classification tasks, it is practical to use the sigmoid function
 $\sigma(z)=1/(1+e^{z})$ as the activation function of the last layer,
 in combination with a loss function for soft classification (e.g.
 binary cross entropy from [Equation @eq:binary_xe]). For
-multi-class classification problem, such as the one discussed
+multi-class classification problems, such as the one discussed
 in [Section @sec:deepjet], the size of the output vector usually matches
-the number of the categories given that a softmax function (see
+the number of the categories given that the softmax function (see
 [Equation @eq:softmax_function])
 is often used in the last layer to approximate conditional
 class probabilities in combination with a cross
@@ -767,7 +769,7 @@ respect to the model parameters. For complex models, e.g.
 those put together by stacking layers as those described in
 [Equation @eq:layer_trans], the computation of derivatives
 by numerical finite differences or symbolic differentiation
-can be rather challenging.
+may become rather challenging.
 The former requires the evaluation of the loss function after variations
 for at least twice the number of parameters and are affected
 by round-off and truncation errors, and a naive use of the later
@@ -792,7 +794,7 @@ neural network training. The computational cost of computing the full
 gradient of the loss to numerical precision
 using backpropagation is of the same order than
 a single forward evaluation of the loss, which provides a great advantage
-relative finite differences. In addition, when implemented in a computation
+relative to finite differences. In addition, when implemented in a computation
 framework, it can be generally applied to any
 numerical function as long as can be expressed as a computational graph,
 e.g. an arbitrary program containing control flow statements, without
@@ -800,14 +802,14 @@ requiring complex expression simplification as would be the case for
 symbolic differentiation. In fact, modern computational
 that include automatic differenciation such as [TensorFlow]{.smallcaps}
 [@tensorflow2015-whitepaper]
-or [PyTorch]{.smallcaps} [@paszke2017automatic] can be used to compute
+or [PyTorch]{.smallcaps} [@paszke2017automatic] may also be used to compute
 higher-order gradients (e.g. Hessian matrix elements),
 which are useful in [Chapter @sec:inferno] to build a differentiable
 approximation the covariance matrix based on a summary statistic.
 
 As mentioned before, reverse mode automatic differentiation can be
 used to computed the gradients of an arbitrary function as long
-as it can be represented as a computation graph containing
+as it can be represented as a computational graph containing
 differentiable simple operations. Thus the neural network
 model $f(\boldsymbol{x}; \boldsymbol{\phi})$ is not
 restricted to the composition of layers of the
@@ -842,7 +844,8 @@ which allow to carry out likelihood-free inference efficiently.
 
 ### Signal vs Background Classification {#sec:sig_vs_bkg}
 
-The mixture structure of the statistical model for collisions outcomes,
+The mixture structure of the statistical model for the outcome
+of collisions,
 discussed in [Chapter @sec:statinf], facilitates its
 framing as a classification problem. Intuitively, the classification
 objective could be
@@ -972,7 +975,7 @@ $$
 (1-\mu) \left ( \frac{p_\textrm{s}(\boldsymbol{x}| \boldsymbol{\theta})}{
                           p_\textrm{b}(\boldsymbol{x}| \boldsymbol{\theta})}-1 \right)
 $$ {#eq:lr_two}
-thus each factor in likelihood ratio is bijective function of
+thus each factor in the likelihood ratio is a bijective function of
 the ratio
 $p_\textrm{s}(\boldsymbol{x}| \boldsymbol{\theta})
 /p_\textrm{b}(\boldsymbol{x}| \boldsymbol{\theta})$.
@@ -1107,7 +1110,7 @@ but accounts for the effect of nuisance parameters is presented.
 
 While the categorical latent variable $z_i$, denoting the interaction
 process that happened in the collision, is very useful to define an event
-selection or directly as a summary statistic, some information about
+selection or directly as a summary statistic, information about
 other latent variables can also be recovered using supervised machine learning.
 As discussed in [Section @sec:event_reco], event reconstruction techniques
 are used to cluster the raw detector output so the various readouts are
@@ -1124,7 +1127,7 @@ The set of physics objects obtained from event reconstruction, when adequately
 calibrated using simulation, can estimate effectively a subset of the latent
 variables $\boldsymbol{z}$ associated with the resulting parton level
 particles, such as their transverse momenta and direction. Due to the
-limitations of the hand-crafted algorithms, some
+limitations of the hand-crafted algorithms used, some
 latent information is lost in the standard reconstruction process, particularly
 for composite objects such as jets. Supervised machine learning techniques
 can be used to regress some of these latent variables, using simulated
@@ -1173,14 +1176,15 @@ originating from b-quarks from those originating from lighter quarks
 or gluon, which can be framed as binary classification problem: predicting
 wether a jet is coming from a b-quark or not
 given a set of inputs associated to each jet. The truth label is available
-for simulated samples, which can be used to train the classifier. The CSVv2
+for simulated samples, which are used to train the classifier. The CSVv2
 b-tagging algorithm (and older variants) mentioned in
 [Section @sec:jet_btag] is based on the output of
-supervised classifiers trained from simulation, the combination of
+supervised classifiers trained from simulation, i.e. the combination of
 three shallow neural network combination depending on vertex information
 for CSVv2. The CMVAv2 tagger, which is used in the CMS analysis included
 in [Section @sec:higgs_pair], is instead based on a boosted decision tree
-binary classifier that uses other simpler b-tagger outputs as input. Similar
+binary classifier that uses other simpler b-tagging algorithm outputs as input.
+Similar
 algorithms based on binary classification have been also developed for
 charm quark tagging and double b-quark tagging for large radius jets.
 
@@ -1191,7 +1195,7 @@ the development of this tagger was to quantify the performance gain
 due to the use of deep neural networks for jet tagging in CMS, which
 was demonstrated effective using a simplified detector simulation
 framework [@Guest:2016iqz; @deOliveira:2015xxd]. Thus, a classifier
-based on a 5-layer neural network, each layer with 100 nodes using ReLu
+based on a 5-layer neural network, each layer with 100 nodes using ReLU
 activation functions,
 was trained based on the information considered for the CSVv2
 tagger. A vector of variables from up to six
@@ -1203,7 +1207,7 @@ a principled and simple for tacking the various flavour tagging
 problems simultaneously.
 
 Five exclusive categories were defined
-based different on the generator level hadron information [^flavour]: the
+based different on the generator level hadron information[^flavour]: the
 jet contains exactly one B hadron, at least two B hadrons,
 exactly one C hadrons and no B hadrons, at least two C hadrons and no B hadrons,
 or none of the previously
@@ -1229,7 +1233,7 @@ c-taggers [@Sirunyan:2017ezt].
 The very favourable results obtained for DeepCSV motivated the use of
 newer machine learning technologies, such as convolutional and
 recurrent layers, which were readily available in open-source
-software libraries [@chollet2015keras; @tensorflow2015-whitepaper]
+software libraries [@chollet2015keras; @tensorflow2015-whitepaper],
 as well as advances in hardware (i.e. more powerful GPUs
 for training). The large amount of jets available in
 simulated data, e.g. in 2016 about $10^9$ $\textrm{t}\bar{\textrm{t}}$
@@ -1269,7 +1273,7 @@ candidates. The output of the convolutional layers is connected with a recurrent
 layer, which transforms a variable-size input to fixed-size embedding. The
 fixed-size outputs after the recurrent layer, as well as a set of 15 global jet
 variables, are feed into a 6-layer dense network with 100 (200 for the
-first layer) cells with ReLu activation functions per layer.
+first layer) cells with ReLU activation functions per layer.
 
 A total of six mutually exclusive output categories are considered
 based on the generator-level
@@ -1336,7 +1340,7 @@ the [lwtnn]{.smallcaps} open-source library [@daniel_hay_guest_2018_1482645],
 a low-overhead C++ based interface used for the integration of DeepCSV
 did not support multi-input models with recurrent layers at the time.
 
-An alternative path to integrate DeepJet into production was required. Given
+An alternative path to integrate DeepJet into production was thus required. Given
 than [TensorFlow]{.smallcaps} backend is based on the C++ programming
 language and a basic interface to evaluating training was also provided,
 the direct evaluation of machine learning model using its

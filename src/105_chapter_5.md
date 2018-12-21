@@ -9,7 +9,7 @@ applied in the search for non-resonant production of Higgs boson pairs,
 using data from proton-proton collisions at a centre-of-mass energy of 13 TeV
 collected in 2016 by the CMS detector at the LHC, 
 corresponding to a total integrated luminosity of $35.9\ \textrm{fb}^{-1}$.
-The most probably decay channel for the Higgs boson pairs, where
+The most probable decay channel for the Higgs boson pairs, where
 each Higgs boson leads to a $\textrm{b}\bar{\textrm{b}}$, is considered.
 While the aforementioned final state is the most frequent by a considerable
 margin, a large background of similar events is expected from
@@ -21,10 +21,10 @@ a sufficiently large number of simulated observations
 to obtain the required level of modelling accuracy, thus
 we have to resort to the development of a new data-driven background estimation
 technique referred to as hemisphere mixing [@DeCastroManzano:2017yqy].
-In addition to setting upper limits on the standard model (SM) production
+In addition to setting upper limits on the Standard Model (SM) production
 of Higgs boson pairs,
 the data analysis framework is also used to set upper limits in
-the context of effective field (EFT) theories of anomalous
+the context of effective field theories (EFT) of anomalous
 couplings, that parametrise possible deviations from the SM. The
 main results presented in this section have been carried out within
 the CMS Collaboration, and have been made public and published [@Sirunyan:2018tki].
@@ -41,7 +41,7 @@ collaborations [@Aad:2015zhl; @Khachatryan:2016vau], including
 the recent observations of the associated production of the Higgs
 boson with a
 $\textrm{t}\bar{\textrm{t}}$ quark pair [@Sirunyan:2018hoz; @Aaboud:2018urx],
-are found to be compatible with the standard model (SM) theoretical
+are found to be compatible with the Standard Model (SM) theoretical
 predictions. That said, several predicted properties remain unmeasured
 because of the difficulty of their experimental determination. Among
 them, the Higgs boson
@@ -201,7 +201,7 @@ Higgs field. After neglecting the enhanced coupling of the Higgs boson
 with bottom quarks due its experimental constraints and the presence
 of new light particles,
 a total of five EFT parameters remain, which are
-highlighted by red colour in [Equation @eq:eft_lag]. The factors
+highlighted by using red colour in [Equation @eq:eft_lag]. The factors
 $\kappa_\lambda = \lambda_\textrm{HHH}/\lambda_\textrm{SM}$ and
 $\kappa_\textrm{t}= y_\textrm{t}/y_\textrm{SM}$ account for possible
 deviations from the SM of the Higgs boson trilinear coupling and the
@@ -230,7 +230,7 @@ full five-dimensional space would require simulated samples
 of observations at too many EFT points and hence it is not
 feasible. While this signal modelling issue could be tackled by means of
 event re-weighting, as described in [Section @sec:re-weighting], it is
-useful to consider a efficient methodology to represent the main
+useful to consider a different methodology to represent the main
 properties of the anomalous couplings parameter space where only a reduced
 number of EFT points are considered.
 
@@ -241,7 +241,7 @@ clustering procedure so they represent the main kinematical
 typologies in the parameter space. The details of the
 clustering methodology are detailed in [@Carvalho:2015ttv], but they
 amount to the construction of a distance between the main kinematic
-distributions at generator level of each pair of EFT. The parameters
+distributions at generator level of each pair of EFT points. The parameters
 corresponding to each of the benchmarks, as well as those corresponding to
 the SM model and the case where Higgs boson self coupling is zero,
 are included in \autoref{table:benchmarks}.
@@ -249,7 +249,7 @@ are included in \autoref{table:benchmarks}.
 \begin{table}[htbp]
 \caption{Effective field theory parameters for the anomalous couplings
 benchmarks considered in this analysis, as defined in \cite{Carvalho:2015ttv},
-as well as the modified couplings corresponding to the standard model.}
+as well as the modified couplings corresponding to the Standard Model.}
  \centering
  \begin{tabular}{l c c c c c }
 \hline
@@ -287,16 +287,14 @@ acquired by the CMS detector on 2016. The type of statistical
 inference applicable to this search is hypothesis testing, as introduced in
 [Section @sec:hypo_test]. In principle, we would like to test whether
 the null hypothesis $H_0$ corresponding to the SM without HH production
-hypothesis can be rejected. Several alternate hypothesis $H_1$ are considering,
+hypothesis can be rejected. Several alternate hypothesis $H_1$ are considered,
 which are based on the SM including HH production processes, either
-coming from SM production models of from EFT extensions.
+coming from SM production models or from EFT extensions.
 If the $H_0$ hypothesis cannot be
 rejected, which is
 expected given the previous experimental results, the objective
 instead becomes the one of setting exclusion upper limits on the signal
-cross section for a given model including Higgs pair production,
-thus considering as the null
-hypothesis $H_0$ the considered SM and BSM models of HH production.
+cross section for a given model including Higgs pair productio.
 In either case, we would like to adapt an analysis strategy
 that maximises the sensitivity to the presence of HH production, which
 amounts to minimising the Type II error rate for a given fixed Type I error
@@ -375,12 +373,13 @@ The experimental data considered in this analysis was collected by
 the CMS detector in 2016 from proton-proton collisions at
 centre-of-mass energy $\sqrt{s} = 13\ \textrm{TeV}$. The total integrated
 luminosity at the CMS interaction point corresponding to the certified set
-of datasets used in this analysis is $35.9\ \textrm{fb}^{-1}$, the subset of
+of datasets used in this analysis is $35.9\ \textrm{fb}^{-1}$, which is
+the subset of
 data corresponding to periods when the relevant detecting systems were
 running regularly and no problematic anomalies were discovered during
 data quality monitoring (DQM).
 
-Because the rates for the main background of
+Because the rates for the main background processes of
 this analysis - events originating from QCD multi-jet events -
 are expected to be much higher that those of the signal,
 an efficient online trigger selection is essential
@@ -393,12 +392,13 @@ analysis re-uses the multi-jet trigger paths that were developed for
 the search of the resonant process
 $\textrm{pp} \rightarrow \textrm{X} \rightarrow \textrm{HH} \rightarrow
 \textrm{b}\bar{\textrm{b}}\textrm{b}\bar{\textrm{b}}$ [@Sirunyan:2018zkk], where $X$
-is a heavy mediating particle. These two path both require that at least three jets
+is a heavy mediating particle. These two paths both require that at least
+three jets
 have are b-tagged by the online version of the Combined Secondary
 Vertex (CSV) algorithm [@Sirunyan:2017ezt].
 
-The full specification trigger selection used is rather complex, but
-is represented by a logical OR of the 
+The full specification trigger selection used is rather complex, however
+it may be represented by a logical OR of the 
 following two HLT trigger paths that were in place
 during the CMS 2016 data taking period:
 
@@ -408,15 +408,17 @@ during the CMS 2016 data taking period:
 which represent a particular online selection sequence at the HLT. The
 sequence is
 preceded by a given set of L1 trigger seeds, as conceptually reviewed in
-[Section @sec:trigger]. The L1 trigger paths depend on each of the paths,
-but are logical OR between several conditions requiring a certain number
+[Section @sec:trigger]. The L1 trigger paths are different for
+each of the HLT paths,
+but are based on  the logical OR between several conditions requiring
+a certain number
 of L1 jets over a given energy or the total deposited energy on the
 calorimeter $H_T$ to be over a certain threshold. At the HLT, both paths
 require some quality criteria on the reconstructed primary vertex 
 and at least 4 reconstructed jets within a pseudo-rapidity range
 defined by $|\eta| < 2.6$. The first path in addition requires that
 the momenta of two
-of the reconstructed jets, satisfy the requirement $p_T>90\ \textrm{GeV}$,
+of the reconstructed jets satisfy the requirement $p_T>90\ \textrm{GeV}$,
 while two other jets are required to have
 $p_T>30\ \textrm{GeV}$. The second path instead requires that the event
 contains at least
@@ -520,7 +522,7 @@ events.
 
 \begin{table}[htb]
  \caption{Event selection efficiency and number of events expected per
- each integrated $\textrm{fb}^{-1}$ of integrated luminosity for the standard model
+ each integrated $\textrm{fb}^{-1}$ of integrated luminosity for the Standard Model
  $\textrm{pp}\rightarrow \textrm{HH}
  \rightarrow \textrm{b}\bar{\textrm{b}}\textrm{b}\bar{\textrm{b}}$
  production process, as estimated using simulated events.}
@@ -560,13 +562,13 @@ $$ {#eq:inv_mass_pair}
 so the combination with the smallest mass difference is taken. Alternative
 decay candidates selection and pairing techniques were considered and tested.
 The fact that the chosen procedure does not explicitly use the mass of the
-Higgs boson made it very effective to avoid conditioning also the
+Higgs boson makes it very effective to avoid conditioning also the
 distributions of the background processes. The aforementioned procedure
 correctly pairs the jets to form Higgs candidates in approximately 54\%
 of the events. The distribution of ${\Delta M}_{(\textrm{H}_1,\textrm{H}_2)}$
 and $M_{\textrm{H}_1}$ versus $M_{\textrm{H}_2}$ is shown in
 [Figure @fig:pair_mass]. To distinguish between the two Higgs candidates during the
-rest of this chapter, leading Higgs $\textrm{H}_1$ will used for the
+rest of this chapter, the term leading Higgs $\textrm{H}_1$ will be used for the
 reconstructed Higgs
 candidates with the largest invariant mass while trailing Higgs $\textrm{H}_1$
 for the other candidate. 
@@ -703,6 +705,9 @@ in a single scalar value, that approximates the conditional probability
 of belonging to the signal conditional on the input $p(y = 1| \boldsymbol{x})$,
 which depends on the relative frequencies of signal and background
 events in the training dataset, as discussed in [Section @sec:supervised].
+For training, signal and background observations were weighted so
+as to represent the same prior probability and balance the classification
+problem.
 The hyper-parameters have been chosen based on a simple grid search, with
 the help of the [scikit-learn]{.smallcapts} software
 library [@pedregosa2011scikit], based
@@ -711,7 +716,8 @@ a validation hold-out dataset.
 
 ## Data-Driven Background Estimation {#sec:bkg_est}
 
-The principal background of this analysis are events with several jets coming
+The principal background of this analysis is composed of
+events with several jets coming
 from multiple quarks and gluon production from QCD processes. While simulated
 observations of multi-jet QCD processes can be generated, and were in fact
 readily available at the time this analysis was carried out,
@@ -767,7 +773,7 @@ b-tagged jets, where the mentioned weight is also obtained
 from a data side band where not significant signal is expected. While
 that approach is proven effective when using the reconstructed
 $M_\textrm{H}$ distribution for inference, it cannot be easily extended
-to a situation where the full multi-dimensional features of the data
+to a situation where all the multi-dimensional features of the data
 require to be precisely modelled, as is the case
 when the output of a probabilistic classifier is used as the summary statistic. 
 
@@ -833,13 +839,13 @@ jets contained within each hemisphere, and it is a combination of discrete and
 continuous variables. The discrete requirement for matching original hemispheres
 with those in the library is that they have the same number of jets $N_j^h$ and
 b-tagged jets $N_b^h$, which ensures a similar jet multiplicity distributions
-for the artificial data. The previous condition also avoid creating 
+for the artificial data. The previous condition also avoids creating 
 artificial events that do not pass the event selection, e.g. by combining
 an hemisphere with 2 b-tagged jets with another one including only one
 b-tagged jet, which would result in the artificial events having
 less that four b-tagged jets.
 For infrequent jet and b-jet multiplicity categories,
-the discrete condition is relaxed by considering a unique category. This
+the discrete condition is relaxed by considering a unique category. This is
 for example the case when four jets or b-jets are present in the hemisphere. In addition to
 the mentioned categorisation, the following continuous distance metric
 between the original hemisphere $\boldsymbol{h}_o$ and each hemisphere from
@@ -869,7 +875,7 @@ of the jet momenta along the beam axis. The denominators in
 [Equation @eq:hem_metric] are the variances of each of the variables
 and discrete category, as estimated directly from the library of hemispheres.
 This normalisation factor is included in order to reduce the effect of the
-scale of magnitude of each component
+scale of the magnitude of each component
 to the distance metric.
 
 The substitute for each original hemisphere is found by finding
@@ -1079,7 +1085,7 @@ dataset. Only statistical uncertainties are shown.
 
 While the marginal distributions of each variable are well-modelled,
 the goal of the technique
-is to rather obtain an adequate modelling accuracy in the higher dimensional
+is rather to obtain an adequate modelling accuracy in the higher dimensional
 space considered as input of the probabilistic classifier. A way to check
 the quality of such modelling is to compare the classifier output
 distribution for the control region data with the background model. This
@@ -1089,7 +1095,7 @@ to carry out for the b-tag control region, because the classifier was
 trained using the lowest value of the CMVA classifiers, which was lower
 bounded by the medium working point for the standard selection which
 instead is upper bounded by same working point in the b-tag CR.
-While [Figure @fig:Figure_006] shows an reasonable agreement overall,
+While [Figure @fig:Figure_006] shows a reasonable agreement overall,
 a slight background model excess seems to exist in the lower classifier
 output range.
 
@@ -1120,7 +1126,7 @@ with the same number of events of the original data are obtained by
 subsampling without replacement $N$ times from the large mixed dataset $M$.
 Each replica dataset is treated in an analogous manner to
 the original dataset, thus the
-hemisphere mixing is applied again to create a set of new
+hemisphere mixing procedure is applied again to create a set of new
 artificial datasets $R_i$. The classifier output distribution is obtained
 for all the new artificial datasets $R_i$ and compared with the reference
 distribution of the large sample $M$, considering a histogram with 80 bins
@@ -1181,7 +1187,7 @@ Both the signal model based on simulated observations and
 data-driven background model in this analysis are not perfectly known,
 hence a set of nuisance parameter have to be considered in the statistical model
 to account for such lack of certainty, as generally
-discussed in [Section @sec:nuis_pars]. Each nuisance parameters, which
+discussed in [Section @sec:nuis_pars]. Each nuisance parameter, which
 can affect the signal, the background component or both, effectively
 leads to an increase of the uncertainty
 on the parameters of interest. For analysis where upper limits
@@ -1190,7 +1196,7 @@ total interval width. The effect of these parameters in the final
 statistical estimates is also often referred as systematic uncertainty.
 A list of the sources
 of systematic uncertainty considered in this analysis, and their
-estimated relative effect in the final limit for the SM Higgs pair
+estimated relative effect in the expected upper limit for the SM Higgs pair
 production, is provided
 on the \autoref{tab:sys}.
 
@@ -1223,7 +1229,7 @@ on the \autoref{tab:sys}.
 The main sources of uncertainty in this analysis
 are those associated with the data-driven background
 model. For each classifier output bin, an independent nuisance
-parameters that accounts for the possible
+parameter is included that accounts for the possible
 variation of the background prediction due to the limited data
 statistics of the artificial events used for building the background
 model and the accuracy limitations found during the bias
@@ -1280,7 +1286,7 @@ This section includes the experimental results of the search of
 non-resonant Higgs pair production with CMS data collected during 2016
 at the LHC. The final summary statistic is the distribution of a
 probabilistic classifier output, which was trained on simulated
-events of SM HH production and event resulting from the data-driven
+events of SM HH production and events resulting from the data-driven
 background estimation technique described in [Section @sec:bkg_est].
 Specifically, a non-parametric sample likelihood composed by a product
 of Poisson count likelihoods is used, where each Poisson factor
@@ -1288,10 +1294,10 @@ represents a bin of the distribution of the classifier output, in
 an analogous manner to [Equation @eq:poisson_multichannel]. The classifier
 distribution was initially divided in 80 equal sized bins, and the
 expected number of counts from each mixture component and their
-variations due to nuisance parameters were estimated, using simulated
+variations due to nuisance parameters were estimated using simulated
 observations under the SM hypothesis and each of the BSM
 EFT points considered for the signal, and from the bias corrected
-distribution from the data-driven background dataset.
+distribution for the data-driven background dataset.
 
 Given the slight mis-modelling observed in the lower range of the
 classifier output on the control regions discussed in
@@ -1301,7 +1307,7 @@ in the likelihood binning was carried out. It was found that restricting
 the fit to classifier output
 values larger than 0.2 resulted on a negligible loss on sensitivity
 (i.e. smaller than 2\%) while greatly improving the overall data-background
-compatibility. For this reason, the rightmost 64 of the initial 80 bins
+compatibility. For this reason, onty the rightmost 64 of the initial 80 bins
 of the classifier distribution
 are used to build the Poisson likelihood used for statistical inference.
 The best-fit distributions for signal, background and data for the
@@ -1367,7 +1373,7 @@ fraction. The obtained observed limit is $847\ \textrm{fb}$, which
 is about two standard deviations above the expected limit. To facilitate
 the comparison with the analyses carried out in other channels, the
 observed limit corresponds to
-$\sigma \left ( \textrm{pp} \rightarrow \textrm{HH} \right ) 847\ \textrm{fb}
+$\sigma \left ( \textrm{pp} \rightarrow \textrm{HH} \right )
 = 2496\ \textrm{SM}$
 as an upper limit the inclusive HH production cross section of SM-like
 processes.
@@ -1398,7 +1404,7 @@ and expected limits obtained for each of the benchmark points are
 provided in Table \ref{t:limits}. The observed and expected limits
 are also graphically compared
 between the various EFT points and the SM in [Figure @fig:Figure_009].
-The observed limit is also found about two standard deviations over
+The observed limits are also found about two standard deviations over
 the median expected limits, which can be explained by taking into
 account that the same classifier and thus the same background model
 (and its associated fluctuations) is considered in the statistical
@@ -1458,7 +1464,7 @@ and the rest of the couplings are zero. The results are shown in
 [Figure @fig:Figure_010], noting that the upper limit changes considerably
 in this range because the distribution of the
 final state properties change considerably, and consequently the
-process efficiency also varies. The EFT cross section prediction
+associated efficiency for the process also varies. The EFT cross section prediction
 as a function of $\kappa_\lambda$ and keeping $\kappa_\textrm{t}=1$
 is also shown in the previous figure, noting that no values
 of $\kappa_\lambda$ can be excluded at the current level of
@@ -1486,7 +1492,7 @@ are considered in addition to the
 $\textrm{b}\bar{\textrm{b}}\textrm{b}\bar{\textrm{b}}$, where one
 the Higgs decays to a $\textrm{b}\bar{\textrm{b}}$ pair where the
 other decays into $\gamma\gamma$, $\tau\bar{\tau}$ or a pair or
-vector bosons. Combined upper limits where obtained by considering
+vector bosons, respectively. Combined upper limits where obtained by considering
 the product of the likelihoods, which depend on the HH cross section
 and several nuisance parameters. Some sources of uncertainty that
 are correlated between different channels, such as the luminosity
@@ -1514,7 +1520,7 @@ and the rest of the couplings are zero. This results are shown graphically in
 [Figure @fig:comb_Figure_002]; values for the anomalous self-coupling
 $\kappa_\lambda$ in the range $-11.8 < \kappa_\lambda < 18.8$
 are not excluded by the data ($-7.1 < \kappa_\lambda < 13.6$ was the
-expected interval). The aforementioned results make this combination study the
+expected interval). The aforementioned results make this combination analysis the
 most sensitive search to date at the LHC for non-resonant HH production.
 Substantial improvements can be expected due to the extensions of each
 analysis to the full Run II dataset.
