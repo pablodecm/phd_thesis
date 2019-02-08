@@ -25,6 +25,16 @@ thesis.tex: src/*.md before gfx/101_chapter_1/mexican_hat.pdf gfx/104_chapter_4/
 	--variable=commit:$(LAST_COMMIT) \
 	--include-before-body=before.tex --verbose
 
+thesis.html: Makefile
+	$(PANDOC) "$(INPUTDIR)"/latex_macros.md \
+	"$(INPUTDIR)"/000_title_page.md \
+  "$(INPUTDIR)"/001_abstract.md \
+	"$(INPUTDIR)"/101_chapter_1.md \
+	 --filter=pandoc-crossref \
+	 --number-sections \
+	 -M "linkReferences:true" \
+	-s --mathjax -o thesis.html
+
 before: src/00[1-3]_*.md
 	$(PANDOC) $^ \
 	--top-level-division=chapter \
