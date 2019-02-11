@@ -51,14 +51,14 @@ One of the conceptually simple, yet versatile, tasks that can be addressed with
 machine learning algorithms is *classification*. A classifier or a
 classification rule is a function
 $f(\boldsymbol{x}) : \mathcal{X} \longrightarrow \mathcal{Y}$ that
-predicts a label $y \in \{0,...,k-1\}$, denoting correspondence to a
-on category in a set of of $k$ categories,
+predicts a label $y \in \{0,...,k-1\}$, denoting correspondence to
+one category in a set of of $k$ categories,
 for each input $\boldsymbol{x} \in \mathcal{X}$. The task of
 classification, in the context of machine learning algorithms, is
 to produce classification functions $f(\boldsymbol{x})$ that perform
 well on an unobserved set of data.
 
-Classification is often framed as a belonging to a larger
+Classification is often framed as belonging to a larger
 category of tasks referred to as  *supervised learning*,
 where the goal is predicting the value of an output variable
 $\boldsymbol{y}$ (here a multi-dimensional vector for generality)

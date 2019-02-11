@@ -2095,7 +2095,7 @@ considering their values that would maximise the likelihood conditional for
 each value of the parameters of interest $\boldsymbol{\theta}_\iota$.
 Noting that a constant denominator in the likelihood would cancel out at each
 side of [Equation @eq:delta_log], and similarly when
-using the profiled likelihood from [Equation eq:profiled_ll]. Both procedures
+using the profiled likelihood from [Equation @eq:profiled_ll]. Both procedures
 can be theoretically inked with the profile-likelihood
 ratio test statistic defined in [Equation @eq:profile_lr]. Algorithms
 for likelihood maximisation and computation of intervals based
