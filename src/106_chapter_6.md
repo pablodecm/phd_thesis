@@ -30,7 +30,7 @@ usefulness can rapidly decrease when additional uncertain parameters
 affect the generative model.
 
 As a practical example,
-in the analysis presented in [Chapter @sec:higgs_pair]. The limiting
+in the analysis presented in [Chapter @sec:higgs_pair], the limiting
 factor for experimental sensitivity was not in the choice of summary
 statistics but rather on the lack of detailed knowledge about
 the expected contribution from background processes, which had to
@@ -499,7 +499,7 @@ to obtain a parametrised family of summary statistics with a single model.
 Recently, Brehmer et
 al. [@Brehmer:2018hga; @brehmer2018constraining; @brehmer2018guide] further
 extended the approach of parametrised classifiers to better exploit the
-latent-space space structure of generative models from complex scientific
+latent-space structure of generative models from complex scientific
 simulators. Additionally they propose a family of approaches that include
 a direct regression of the likelihood ratio
 and/or likelihood score in the training losses.
@@ -523,8 +523,7 @@ then can be used directly as a summary statistic.
 A different path is taken by Louppe et al. [@louppe2017learning],
 where the authors present a adversarial training procedure to enforce a
 pivotal property on a predictive model. The main concern we have on
-the use of that approach of that
-approach is that a classifier which is pivotal with respect
+the use of that approach is that a classifier which is pivotal with respect
 to nuisance parameters might not be optimal, neither for classification
 nor for statistical inference. Instead of aiming for being pivotal, the
 summary statistics learnt by our algorithm attempt to find a transformation
@@ -537,7 +536,7 @@ In this section, we first study the effectiveness of the inference-aware
 optimisation in a synthetic mixture problem where the likelihood is known. We then
 compare our results with those obtained by standard classification-based
 summary statistics. All the code needed to reproduce the results
-presented the results presented here is available in
+presented here is available in
 an online repository [@code_repository], extensively using \textsc{TensorFlow}
 [@tensorflow2015-whitepaper]
 and \textsc{TensorFlow Probability} [@tran2016edward;@dillon2017tensorflow] software libraries.
@@ -849,8 +848,11 @@ the optimal classifier and likelihood-based inference are also
 included for comparison. The confidence intervals obtained using INFERNO-based
 summary statistics are considerably narrower than those using
 classification and tend to be much closer to those expected when using
-the true model likelihood for inference. Much smaller
-fluctuations between initialisations are also observed for the INFERNO-based
+the true model likelihood for inference. The only exception being
+the results obtained for Benchmark 0, where no nuisance parameters are considered,
+and thus the classification approach is expected to approximate a sufficient
+summary statistic. Much smaller
+fluctuations between initialisations are observed for the INFERNO-based
 cases. The improvement over classification
 increases when more nuisance parameters are considered. The results also
 seem to suggest the inclusion of additional information about the inference
@@ -897,7 +899,7 @@ well when  $\boldsymbol{\theta}_{\textrm{true}} \neq \boldsymbol{\theta}_s$
 in the range of variation explored. 
 
 This synthetic example demonstrates that the direct optimisation of inference-aware
-losses as those described in the [@Sec:method] is effective.
+losses as those described in the [Section @Sec:method] is effective.
 The summary statistics
 learnt accounting for the effect of nuisance parameters compare very favourably
 to those obtained by using a classification proxy to approximate the

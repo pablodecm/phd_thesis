@@ -123,7 +123,10 @@ review of the different components of the Standard Model, starting
 by reviewing the basic formalism of quantum field theories and incrementally
 building on it do describe the characteristics of both the strong and
 electroweak interactions that give rise to the diverse interactions
-dynamics of relevance in particle physics experiments.
+dynamics of relevance in particle physics experiments. The mentioned
+review is heavily inspired by standard bibliographical
+references on the topic [@Peskin:257493; @mandl2010quantum], and which are
+recommended directly for a more detailed survey on the subject.
 
 
 ### Essentials of Quantum Field Theory {#sec:qft_basics}
@@ -300,7 +303,7 @@ $$
 \bra{i} \mathcal{S} \ket{f} = \bra{i} \boldsymbol{1} \ket{f}
 + i \mathcal{M} (2\pi)^4 \delta^4 \left ( \sum p_i - \sum p_f \right )
 $$ {#eq:matrix_element}
-where the fist term corresponds to no interaction occurring,
+where the first term corresponds to no interaction occurring,
 and the second includes the matrix element $\mathcal{M}$ 
 including all orders in the perturbative orders, and multiplied
 by a factor
@@ -473,8 +476,8 @@ to give rise to what is now known as *electroweak theory*, which was then
 proved to be renormalisable [@THOOFT1972189].
 
 The different testable properties of electroweak phenomena were verified
-by experiments including the existence of weakly-interacting neutral
-charged and neutral currents [@hasert1974observation] and the discovery
+by experiments including the existence of weakly-interacting
+neutral and charged currents [@hasert1974observation] and the discovery
 of the massive
 $W^{\pm}$ [@Arnison:1983rp; @Banner:1983jy] and $Z$
 [@Arnison:1983mk; @Bagnaia:1983zx] bosons. Experimental evidence also
@@ -764,9 +767,10 @@ of new particles
 (e.g. $Z$, $W^{\pm}$ and Higgs bosons or top quark) to
 the agreement of precise predictions with meticulous experimental
 observations. The fine structure constant $\alpha$ at zero energy scale
-is an example of the latter, with its experimentally determined value being
-compatible with its Standard Model based theoretical prediction down
-to 12 significant digits [@hanneke2008new; @parker2018measurement].
+is an example of the latter, with its experimentally determined value
+consistent among independent physical measurements when
+the Standard Model based theoretical correction are accounted,
+down to 12 significant digits [@hanneke2008new; @parker2018measurement].
 In addition to describing natural phenomena
 with unprecedented accuracy, the SM is a self-consistent theory that 
 provides non-divergent predictions at the highest energy scales probed to date.
@@ -1001,7 +1005,8 @@ dynamics of nature have been described,
 we can delve into how to model proton-proton collisions from a 
 quantitative perspective, so theoretical predictions
 can be contrasted with experimental results at the LHC. The focus
-of section then is to make sense of the various outcomes of high-energy
+of this section then is to make sense of the various outcomes of
+high-energy
 proton-proton collisions and how we can predict their relative
 rates of occurring given some initial state
 conditions of the interaction.

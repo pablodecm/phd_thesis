@@ -136,7 +136,7 @@ the interaction rates, the beams are made more compact (commonly
 referred as *squeezed*) at the interaction region
 right before switching to collision mode. Once
 the characteristics of the proton beams are suitable, the quadrupoles
-align the beam trajectories and collisions begin. A stable
+focus the beam trajectories and collisions begin. A stable
 configuration is then adopted by the LHC machine, providing about 7 keV 
 of energy per turn to the beam to account for synchrotron radiation losses using
 the RF cavities. In the absence of problems, the proton beams are kept

@@ -319,8 +319,8 @@ p(\boldsymbol{x} | y = 1) p(y = 1)} \right )^{-1}
 $$ {#eq:bayes_optimal_bce}
 where the second line in the equation is a direct consequence of Bayes
 theorem and from the last term it can be clearly seen that the
-prediction output is monotonous with the density ratio between
-the probability density functions for each category. Simlar results can
+prediction output is monotonic with the density ratio between
+the probability density functions for each category. Similar results can
 be obtained for the Bayes optimal classifier when using other soft
 relaxations of the zero-one function. Machine
 learning binary classifiers will effectively approximate this quantity
@@ -822,7 +822,7 @@ are often useful for working with 2D images while recurrent layers extend the
 application of neural networks to sequences that vary in length between
 observations. Both convolutional and recurrent layers are used in the
 neural network model for jet flavour-tagging described in
-[Equation @sec:deepjet]. Other differentiable neural network
+[Section @sec:deepjet]. Other differentiable neural network
 components have also been developed to deal with permutation
 invariant sets [@zaheer2017deep] or graphs [@henrion2017neural]
 as input data structures, which could have promising applications
@@ -868,7 +868,7 @@ latent variable $z_i$ that represents a given set of processes can
 effectively used as classification label. If the simulator model is
 misspecified, e.g. due to the effect of known unknowns as discussed
 in [Section @sec:known_unknowns], the resulting classifiers
-would be trained to to optimise the classification objective for
+would be trained to optimise the classification objective for
 different distributions.
 
 To understand the role of classification in the larger goal of statistical
@@ -891,7 +891,7 @@ $${#eq:mixture_general}
 where $\mu$ is a parameter corresponding to the signal mixture fraction,
 which will be the only parameter of interest for the time being. As
 discussed in [Section @sec:sig_and_bkg],
-most the of the parameters of interest in analyses at the LHC, such as cross
+most of the parameters of interest in analyses at the LHC, such as cross
 sections, are proportional to the mixture coefficient of the signal
 in the statistical model.
 The results presented here would also be also be valid if alternative mixture
@@ -955,7 +955,7 @@ have to be specified to generate $p(\boldsymbol{x}| \mu = \mu_0,
 \boldsymbol{\theta})$ observations in order to train the classifier. The
 same classifier output could be repurposed to model the likelihood ratio
 when $H_1$ is $p(\boldsymbol{x}| \mu = \mu_1, \boldsymbol{\theta})$ with
-a simple transformation, yet the mixture structure of the problem allows a
+a simple transformation, yet the mixture structure of the problem allows
 for a more direct density ratio estimation alternative, which is the
 one regularly used in particle physics analyses.
 

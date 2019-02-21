@@ -586,7 +586,7 @@ a probabilistic model version of [Equation @eq:qcd_factorisation],
 dealing with the QCD factorisation of the parton distribution functions and the
 hard process differential cross section.
 
-Another relevant phenomenon that can be explicitated in the joint distribution
+Another relevant phenomenon that can be made explicit in the joint distribution
 $p(\boldsymbol{x}, \boldsymbol{z} | \boldsymbol{\theta})$ is the effect of
 multiple hadron interactions in the collision, or pileup, as discussed in
 [Section @sec:pile_up]. Given that each proton-proton interaction is
@@ -1429,8 +1429,8 @@ shortcuts, such as considering the additive or multiplicative effect of
 marginal efficiencies to account for combined effects,
 are also frequently used for count vector observables
 $n^{\mathcal{C}_i}_j(\boldsymbol{\theta})$, as discussed in
-[Equation @eq:relative_var_eff] together with possible solutions
-to mentioned issues.
+[Section @sec:synthetic_likelihood] together with possible solutions
+to some the associated issues.
 
 The re-weighting approach from [Equation @eq:reweight_intractable] is
 extremely
@@ -1650,8 +1650,9 @@ produced by ABC techniques, as well as the number of
 sampling steps required to reach a given accuracy, strongly
 depend on the distance definition. When the dimensionality
 of the output is high, a summary statistic vector
-$\boldsymbol{s}(D)$ must be used has in practice to increase
-the computational efficiency of the previous procedure.
+$\boldsymbol{s}(D)$ has to be used in practice to increase
+the computational efficiency of the previous procedure, which would
+be otherwise intractable.
 
 The approach commonly used when carrying out inference at
 particle physics experiments at the LHC is somehow related with the
@@ -2079,7 +2080,8 @@ confidence intervals for a subset of interest of the statistical
 model $\boldsymbol{\theta}_\iota$, while regarding the others
 as nuisance parameters $\boldsymbol{\theta}_\nu$. The previous
 procedure can be extended for computing approximate confidence interval
-for the parameters of interest, by considering the profiled likelihood
+for the parameters of interest, by considering the profiled
+likelihood [@Rolke:2004mj]
 $\hat{L}(D; \boldsymbol{\theta}_\iota)$
 instead of the full likelihood in [Equation @eq:delta_log],
 which is defined as:
@@ -2096,7 +2098,7 @@ each value of the parameters of interest $\boldsymbol{\theta}_\iota$.
 Noting that a constant denominator in the likelihood would cancel out at each
 side of [Equation @eq:delta_log], and similarly when
 using the profiled likelihood from [Equation @eq:profiled_ll]. Both procedures
-can be theoretically inked with the profile-likelihood
+can be theoretically linked with the profile-likelihood
 ratio test statistic defined in [Equation @eq:profile_lr]. Algorithms
 for likelihood maximisation and computation of intervals based
 on the profiled likelihood are implemented

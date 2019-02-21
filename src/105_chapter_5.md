@@ -161,7 +161,7 @@ through a fermion box loop,
 as shown in diagram (a) of [Figure @fig:HH_feynman_diagrams], which
 evidently does not depend on the Higgs self-coupling. Both
 box and triangle loop contributions interfere destructively in the SM
-amplitude to give rise to the total HH productione.
+amplitude to give rise to the total HH production.
 
 
 ![Set of HH production Feynman diagrams, representing
@@ -238,7 +238,7 @@ For the analysis presented in this work, a total of twelve EFT
 points referred to as *benchmarks* are considered, which have
 been chosen via a agglomerative 
 clustering procedure so they represent the main kinematical
-typologies in the parameter space. The details of the
+topologies in the parameter space. The details of the
 clustering methodology are detailed in [@Carvalho:2015ttv], but they
 amount to the construction of a distance between the main kinematic
 distributions at generator level of each pair of EFT points. The parameters
@@ -294,8 +294,8 @@ If the $H_0$ hypothesis cannot be
 rejected, which is
 expected given the previous experimental results, the objective
 instead becomes the one of setting exclusion upper limits on the signal
-cross section for a given model including Higgs pair productio.
-In either case, we would like to adapt an analysis strategy
+cross section for a given model including Higgs pair production.
+In either case, we would like to adopt an analysis strategy
 that maximises the sensitivity to the presence of HH production, which
 amounts to minimising the Type II error rate for a given fixed Type I error
 rate in statistical terms. The Type II error rate would in turn depend on the
@@ -500,7 +500,7 @@ of [Section @sec:online_and_datasets] undergo a process of
 event reconstruction, producing a representation of the detector
 readout that attempts to recover the latent particle features
 at parton level, as discussed in [Section @sec:event_reco_stat].
-The fist step of the offline event selection
+The first step of the offline event selection
 is to consider for each event the set of reconstructed particle-flow
 jets with $p_T > 30\ \textrm{GeV}$ and $\lvert \eta \rvert < 2.4$. An event
 is only selected if four or more jet passing those requirement are found.
@@ -821,7 +821,7 @@ component.
 ![Schematic depiction of the hemisphere mixing background
 estimation procedure. The red arrows represent b-tagged
 jets and the blue arrows represent jets that were not b-tagged 
-in an event. The fist step includes finding the thrust axis in the $x-y$
+in an event. The first step includes finding the thrust axis in the $x-y$
 plane. The event
 is then divided in two hemispheres, each composed of a set of jets,
 by the plane perpendicular to the thrust axis. All these hemispheres are
