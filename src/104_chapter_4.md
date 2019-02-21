@@ -466,7 +466,7 @@ maximum depth $d$ performs rather poorly a given supervised
 learning task for complex non-linear problems. If $d$ is very large,
 the problem of learning an optimal tree based on data is
 computationally very demanding, and the resulting model would
-not generalise well to unseen data. This motivates a the use of tree
+not generalise well to unseen data. This motivates the use of tree
 ensembles, where the final prediction is composed by the combined
 predictions of several small trees. For an ensemble of $K$ CART trees,
 the final model prediction $T(\boldsymbol{x})$ can be expressed as:

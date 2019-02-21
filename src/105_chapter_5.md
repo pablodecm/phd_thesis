@@ -813,7 +813,7 @@ original events. Each half, or hemisphere, can be basically reduced
 to a set of reconstructed jets with their directions relative to
 the thrust axis. Once the hemisphere library has been created,
 each hemisphere in the original event can be substituted
-by a similar one by from the a different event, once
+by a similar one by from a different event, once
 an appropriate distance metric has been defined. The procedure results
 in an artificial dataset that can be used to model the background
 component.
@@ -1159,7 +1159,7 @@ mixing procedure is then carried out again for each of this replicas to produce
 a set of re-mixed data replicas $R_i$.
 The trained multivariate classifier is then evaluated over all the events
 of $M$ and each $R_i$ and the histograms of the classifier output are
-compared to obtain a the differences for each of the replicas.
+compared to obtain the differences for each of the replicas.
 The median difference is taken as bias correction.](gfx/105_chapter_5/Figure_011.pdf){
 #fig:Figure_011 width=100%}
 

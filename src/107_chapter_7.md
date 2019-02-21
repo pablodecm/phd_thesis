@@ -77,7 +77,7 @@ could not be modelled accurately by simulated observations. Hence,
 a data-driven estimation method, referred to as hemisphere mixing, was
 developed and validated on control regions to model the background
 contribution. The final summary statistic used in the analysis
-is based on a the output of a probabilistic classifier, an
+is based on the output of a probabilistic classifier, an
 ensemble of gradient boosted decision trees, trained using
 simulated signal observations and artificial events produced by
 the background estimation method. After assessing the different

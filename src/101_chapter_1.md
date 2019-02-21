@@ -889,7 +889,7 @@ main empirical and theoretical concerns are summarised:
   $M_{\textrm{Planck}} \approx 10^{19} \textrm{GeV}$, which is
   generally referred as the *hierarchy problem*. In the absence of
   New Physics or additional interaction mechanisms, the only
-  way to obtain the observed Higgs mass from a the bare Higgs
+  way to obtain the observed Higgs mass from the bare Higgs
   mass (at zero energies) is through a very precise cancellation
   of divergences, which is regarded as an *unnatural* or *fine-tuned*
   property of the SM theory.
@@ -963,7 +963,7 @@ if $\Lambda \approx
 E$, the effective 
 approximation in [Equation @eq:eft_lagrangian_generic] does not hold,
 and the interactions
-have to be realistically modelled using the a complete theoretical description
+have to be realistically modelled using a complete theoretical description
 of the New Physics scenario under study. While in general effective field
 theories are not renormalisable, observables and higher-order corrections
 can be computed, because of the well-defined cutoff energy scale
