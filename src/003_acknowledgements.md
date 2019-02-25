@@ -1,8 +1,8 @@
 # Acknowledgements {.unnumbered}
 
 
-First and foremost, I would like to thank for PhD supervisor Tommaso Dorigo
-for his support and guidance during all these years. In addition to the
+First and foremost, I would like to thank my PhD supervisor Tommaso Dorigo
+for his support and guidance during the last three years. In addition to the
 valuable feedback that he provided on the various projects presented
 in this document and the much needed help with the seemingly endless
 bureaucratic endeavours, his advising style was consequential for finding
@@ -42,7 +42,7 @@ collaboration activities, which were important to create an open and productive
 research environment. Most importantly, I would like to thank the
 other network
 students (aka ESRs), which were always available for stimulating chats
-about research, life or the universe over coffee and beers.
+about research, life or the universe over coffee or beers.
 I would also like to express my gratitude towards Sabine Hemmer and Pietro
 Vischia for the energy they devoted to motivate and manage scientific outreach in the
 form of blogging and Twitter, which turned out to be very positive experiences.
@@ -63,7 +63,7 @@ that works to make such institution function as it does.
 
 One achievements are nothing but the product of incremental improvements
 over the work, ideas and shared experiences of others, hence this section
-is almost guaranteed to be incomplete. Hence if a conversation we had,
+is guaranteed to be incomplete. Hence if a conversation we had,
 a paper you published, a blog post you produced, a presentation you gave,
 a question you answered, a book you wrote or some open-source software
 you developed was helpful to the work

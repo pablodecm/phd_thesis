@@ -150,7 +150,7 @@ $$ z_i \sim \textrm{Categorical}(\boldsymbol{\phi})
 \boldsymbol{x}_i \sim p_{z_i}( \boldsymbol{x} | \boldsymbol{\theta})
 $$ {#eq:mixture_gen}
 describing the sampling of random integer $z_i \in \{0, \dots, K -1 \}$ from a random
-categorical [^categorical] distribution and the subsequent sampling of
+categorical[^categorical] distribution and the subsequent sampling of
 the corresponding
 mixture component indexed by  $z_i$, where
 $\boldsymbol{\phi} = \{\phi_0, \dots, \phi_{K-1} \}$
@@ -311,7 +311,7 @@ selection can be thought of as an indicator function
 $\mathbb{1}_\mathcal{C} : \mathcal{X} \longrightarrow \{0,1\}$,  of a given
 subset of the set of possible detector readouts
 $\mathcal{C} \subseteq \mathcal{X}$. The indicator function
-$\mathbb{1}_\mathcal{C}(\boldsymbol{x})$can be defined as:
+$\mathbb{1}_\mathcal{C}(\boldsymbol{x})$ can be defined as:
 
 $$\mathbb{1}_\mathcal{C}(\boldsymbol{x}) =
   \begin{cases}
@@ -339,7 +339,7 @@ term without affecting the rest of the
 considerations presented in this chapter. A non-deterministic factor could
 be useful to model for example trigger prescales,
 which are trigger decisions based
-on a randomly selecting a fraction of all the selected events to be recorded,
+on randomly selecting a fraction of all the selected events to be recorded,
 ensuring that the total rate is manageable.
 
 In practice, a given selection
