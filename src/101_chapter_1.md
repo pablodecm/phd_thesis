@@ -289,7 +289,7 @@ T \left [ \exp \left ( -i  \int_{-\infty}^{\infty} d^4 x \mathcal{H}_\textrm{int
 $$ {#eq:s_matrix}
 where $T$ is an operator ensuring that the Hamiltonian density factors
 $\mathcal{H}_\textrm{int} (x_i)$ are
-order in time. Each time-ordered term in the series can be written as a
+ordered in time. Each time-ordered term in the series can be written as a
 sum of normal (i.e. not time ordered) products of permutations using
 Wicks theorem [@wick1950evaluation], which can become rather tedious
 for high orders. The
@@ -1254,7 +1254,7 @@ The blue lines represent the  interaction between partons and the path of the
 the initial hadron remnants followed by light blue ellipses. For completeness,
 an additional hard interaction within the same hadron-hadron process is
 shown in purple,
-which often has to be accounted for to obtain realistic simulations.
+which often has to be accounted to obtain realistic simulations.
 ](gfx/101_chapter_1/event_shower.pdf){
 #fig:event_shower width=70%}
 

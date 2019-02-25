@@ -22,7 +22,7 @@ The formal exploration of
 the properties of the statistical models at particle colliders
 is useful to highlight the main challenges posed by statistical
 inference in this context: the multi-dimensional nature
-of the models, which can be studied only in generative
+of the models, which can be studied only in a generative
 manner
 via forward simulation of observations, and the
 effect of nuisance parameters. The first issue

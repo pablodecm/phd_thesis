@@ -10,7 +10,7 @@ The scientific method provides a formal framework for carrying out these
 investigations and checking the validity of the current description of
 our environment. Recorded experiences of assumed known origin,
 also known as data, have a central role in updating these explicative
-theories, because it can provide quantitative or qualitative
+theories, because they can provide quantitative or qualitative
 support to some candidate explanations over others.
 
 Direct sensory perception and personal information processing have a

@@ -395,7 +395,7 @@ for each detector component are included
 in the following sections, yet the detector performance
 technical design report [@CMS:TDR_Detector_Performance]
 and references therein are recommended
-for a more specialised account.
+for a more comprehensive account.
 
 ![Cutaway view of the CMS detector, based on a three-dimensional representation,
 an highlighting the main detecting systems and characteristics.
@@ -452,7 +452,7 @@ $y'=y-\textrm{tanh}^{-1} \beta$. Hence differences in rapidity between
 two particles in a collision $\Delta y = | y_b - y_a |$ are invariant to
 Lorentz boost in the $z$ direction. Because the rapidity depends on
 the total energy/momentum of the particle, which might not be possible to
-measure to high precisions in hadron collider detectors,
+measure with high precision in hadron collider detectors,
 it is more suitable to approximate it. The approximation is referred to as
 the *pseudo-rapidity* $\eta$, and can be defined as: 
 $$\eta = \frac{1}{2} \ln \left ( \frac{p+p_z}{E-p_z} \right ) =
@@ -600,7 +600,7 @@ module. As depicted in Figure [-@fig:CMS_tracker], the pixel
 detector is composed by three *barrel* layers (i.e.
 placed around the collision region in an cylindrical
 arrangement), located at radii of 4.4 cm, 7.3 cm and 10.2
-cm respectively, and two forward disk at each side at
+cm respectively, and two forward disks at each side at
 distance of 34.5 cm and 46.6 cm from the nominal interaction point.
 
 The rest of the tracking system, placed outside the pixel detector,
@@ -685,7 +685,7 @@ longitudinal energy loss profile $E(E) = E_0 e^{x/\mathcal{X}_0}$ - as well
 as its small Moliere radius of 2.19 cm - defining the radius
 containing average transversal radius
 containing 90% of the shower energy - leading to narrow showers
-which contributes to improved position and
+which contribute to improved position and
 energy resolution. The lengths of the crystal blocks in the EB and EE amount
 to $25.8\mathcal{X}_0$ and $24.7\mathcal{X}_0$, which ensures that
 all the energy is effectively deposited inside the detectors.
@@ -874,7 +874,7 @@ are used, with a detecting pseudo-rapidity coverage of
 $0.9 < |\eta| < 2.4$. Both DT and CSC detectors can achieve
 very high position resolution, but their signal
 readout time and time resolution is not as good, thus a series
-of fast but resistive plate chambers (RPC) are positioned both
+of fast resistive plate chambers (RPC) are positioned both
 in the barrel and the endcap sections, up to pseudo-rapidities
 $|\eta| < 1.6$.
 
@@ -1275,7 +1275,7 @@ to identify and compute the vertices location and their
 uncertainty more accurately. Most primary vertices
 correspond to soft scattering processes (pileup), and can be used
 to characterise the position and size of the interaction region. In collisions
-where a hard interaction occur, the main primary vertex may effectively
+where a hard interaction occurs, the main primary vertex may effectively
 be identified
 with the one whose linked tracks transverse momenta squared sum $\sum p_T^2$
 is the largest. The distinction of a main primary vertex is useful to
@@ -1350,7 +1350,7 @@ observed detector readouts, because they are the only particle expected
 to reach the outer tracking systems (i.e. muon detecting system).
 Furthermore, the detecting volume far away from the interaction region
 is much larger and hence the density of
-particle trajectories are considerably lower. The sparse particle hits
+particle trajectories is considerably lower. The sparse particle hits
 in each of the muon detector systems are linked to form tracks that
 can be combined using a Kalman filter, similarly to what is done
 for the inner tracker as described earlier this section. To increase
@@ -1541,7 +1541,7 @@ So far, jets have been defined as an experimental simplification
 of hadronisation, decay and fragmentation chains
 in order to estimate  the energy and the momenta
 of initial partons produced in the collision, and we have ignored
-the other properties of the original parton. In particular, information
+other properties of the original parton. In particular, information
 regarding the flavour of the initial parton can be instrumental
 to distinguish event containing jets coming from high-energy
 processes with physical interesting intermediate
@@ -1607,7 +1607,7 @@ is due to the use of more advanced statistical learning techniques
 and additional discriminating variables [@Sirunyan:2017ezt]. The CMVAv2
 algorithm, which is used in the analysis included in [Chapter @sec:higgs_pair],
 combines the output from JP and CSVv2 algorithms with two taggers that
-combine the information from non-isolated electrons and muons inside
+summarise the information from non-isolated electrons and muons inside
 the jet.
 
 In [Section @eq:particle_id_reg], the role of recent advances in machine
