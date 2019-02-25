@@ -25,7 +25,7 @@ thesis.tex: src/*.md before gfx/101_chapter_1/mexican_hat.pdf gfx/104_chapter_4/
 	--variable=commit:$(LAST_COMMIT) \
 	--include-before-body=before.tex --verbose
 
-before: src/00[1-2]_*.md
+before: src/00[1-3]_*.md
 	$(PANDOC) $^ \
 	--top-level-division=chapter \
 	-o before.tex
