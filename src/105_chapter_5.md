@@ -290,12 +290,10 @@ the null hypothesis $H_0$ corresponding to the SM without HH production
 hypothesis can be rejected. Several alternate hypothesis $H_1$ are considered,
 which are based on the SM including HH production processes, either
 coming from SM production models or from EFT extensions.
-If the $H_0$ hypothesis cannot be
-rejected, which is
-expected given the previous experimental results, the objective
-instead becomes the one of setting exclusion upper limits on the signal
+However we do not expect to reject the $H_0$ hypothesis, so
+the objective is the one of setting exclusion upper limits on the signal
 cross section for a given model including Higgs pair production.
-In either case, we would like to adopt an analysis strategy
+This, we would like to adopt an analysis strategy
 that maximises the sensitivity to the presence of HH production, which
 amounts to minimising the Type II error rate for a given fixed Type I error
 rate in statistical terms. The Type II error rate would in turn depend on the
