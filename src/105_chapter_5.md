@@ -1543,8 +1543,9 @@ The inner
 green band and the outer yellow bands correspond
 to the range of percentiles around the median that contain
 the 68\% and 95\% times the upper limit under the background-only
-hypothesis. 
-The theoretical prediction with $\kappa_\textrm{t} = 1$ is also
+hypothesis.
+The anomalous couplings theoretical prediction with
+$\kappa_\textrm{t} = 1$ is also
 shown in red colour.](gfx/105_chapter_5/comb_Figure_002.pdf){
 #fig:comb_Figure_002 width=60%}
 
