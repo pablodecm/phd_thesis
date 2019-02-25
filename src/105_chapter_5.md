@@ -171,6 +171,7 @@ expected within the SM, while the contact interactions between
 the Higgs bosons and gluons (c) and (d), as well the contact interaction
 of two Higgs bosons with top quarks (e),
 are effective diagrams of BSM interactions.
+Figure adapted from [@Sirunyan:2018tki].
 ](gfx/105_chapter_5/HH_feynman_diagrams.pdf){
 #fig:HH_feynman_diagrams width=100%}
 
@@ -826,7 +827,7 @@ by the plane perpendicular to the thrust axis. All these hemispheres are
 used to create a dataset (or library) of hemispheres. For each original
 event, a artificial event can be created by substituting each original
 hemisphere with its closest neighbours, once a distance metric
-for hemispheres has been defined.
+for hemispheres has been defined. Figure adapted from [@Sirunyan:2018tki].
 ](gfx/105_chapter_5/hemisphere_mixing.pdf){
 #fig:hemisphere_mixing width=100%}
 
@@ -930,6 +931,7 @@ detail in [Section @sec:bkg_validation].
 of the neighbour combination $(k_1, k_2)$. The test score has been calculated
 based on the binned distribution of the probabilistic classifier. The one-sided
 confidence bands for the test score are also included for guidance.
+Figure adapted from [@Sirunyan:2018tki].
 ](gfx/105_chapter_5/chi2_combination.pdf){
 #fig:chi2_combination width=60%}
 
@@ -993,10 +995,9 @@ mixing technique and the simulated observations from QCD processes
 for a set of relevant reconstructed variables. A correction factor
 obtained from the binned classifier distribution, as described
 in [Section @sec:bkg_validation], has been applied as a weight to the mixed
-dataset. Only statistical uncertainties are shown.
+dataset. Only statistical uncertainties are shown. Figures adapted from
+[@Sirunyan:2018tki].
 :::
-
-\FloatBarrier
 
 ### Background Validation {#sec:bkg_validation}
 
@@ -1059,6 +1060,7 @@ A correction factor
 obtained from the binned classifier distribution, as described
 in [Section @sec:bkg_validation], has been applied as a weight to the mixed
 dataset. Only statistical uncertainties are shown.
+Figures adapted from [@Sirunyan:2018tki].
 :::
 
 
@@ -1080,6 +1082,7 @@ A correction factor
 obtained from the binned classifier distribution, as described
 in [Section @sec:bkg_validation], has been applied as a weight to the mixed
 dataset. Only statistical uncertainties are shown.
+Figures adapted from [@Sirunyan:2018tki].
 :::
 
 While the marginal distributions of each variable are well-modelled,
@@ -1108,6 +1111,7 @@ and after the bias correction procedure. The pull distributions and their
 parameters when fitted by a Gaussian are also shown. The uncertainty
 after the bias correction has been increased conservatively in order
 to obtain a unit standard deviation for the residual pull distribution.
+Figures adapted from [@Sirunyan:2018tki].
 ](gfx/105_chapter_5/Figure_006.pdf){
 #fig:Figure_006 width=100%}
 
@@ -1158,7 +1162,8 @@ a set of re-mixed data replicas $R_i$.
 The trained multivariate classifier is then evaluated over all the events
 of $M$ and each $R_i$ and the histograms of the classifier output are
 compared to obtain the differences for each of the replicas.
-The median difference is taken as bias correction.](gfx/105_chapter_5/Figure_011.pdf){
+The median difference is taken as bias correction.
+Figure adapted from [@Sirunyan:2018tki].](gfx/105_chapter_5/Figure_011.pdf){
 #fig:Figure_011 width=100%}
 
 
@@ -1175,7 +1180,7 @@ The light yellow shadow represents the uncertainty
 due to the limited statistics of the reference observed sample.
 The separation between the one s.d. quantiles is compatible with the
 expected variance if the estimation was Poisson or Gaussian
-distributed.](gfx/105_chapter_5/Figure_012.pdf){
+distributed. Figure adapted from [@Sirunyan:2018tki].](gfx/105_chapter_5/Figure_012.pdf){
 #fig:Figure_012 width=100%}
 
 \FloatBarrier
@@ -1320,7 +1325,8 @@ for the observed data. In the lower panel a comparison is shown between
 the best fit signal and best fit background subtracted from
 measured data. The dashed band in the lower panel,
 centred at zero, shows the total
-uncertainty.](gfx/105_chapter_5/Figure_007.pdf){
+uncertainty.
+Figure adapted from [@Sirunyan:2018tki].](gfx/105_chapter_5/Figure_007.pdf){
 #fig:Figure_007 width=75%}
 
 ::: {#fig:Figure_008 .subfigures}
@@ -1334,7 +1340,7 @@ fit. A correction factor
 obtained from the binned classifier distribution, as described
 in [Section @sec:bkg_validation], has been applied as a weight
 to the mixed
-dataset
+dataset. Figures adapted from [@Sirunyan:2018tki].
 :::
 
 Only two mixture components are considered in the final statistical
@@ -1452,7 +1458,8 @@ to the range of percentiles around the median that contain
 the 68\% and 95\% times the upper limit under the background-only
 hypothesis.
 See Table \ref{table:benchmarks} for their
-respective EFT parameter values.](gfx/105_chapter_5/Figure_009.pdf){
+respective EFT parameter values.
+Figure adapted from [@Sirunyan:2018tki].](gfx/105_chapter_5/Figure_009.pdf){
 #fig:Figure_009 width=50%}
 
 In addition to the BSM benchmarks, limits are also obtained
@@ -1476,9 +1483,10 @@ The inner
 green band and the outer yellow bands correspond
 to the range of percentiles around the median that contain
 the 68\% and 95\% times the upper limit under the background-only
-hypothesis. 
+hypothesis.
 the theoretical prediction with $\kappa_\textrm{t} = 1$ is also
-shown in red colour.](gfx/105_chapter_5/Figure_010.pdf){
+shown in red colour.
+Figure adapted from [@Sirunyan:2018tki].](gfx/105_chapter_5/Figure_010.pdf){
 #fig:Figure_010 width=50%}
 
 ## Combination with Other Decay Channels {#sec:combination}
@@ -1532,7 +1540,7 @@ The inner
 green band and the outer yellow bands correspond
 to the range of percentiles around the median that contain
 the 68\% and 95\% times the upper limit under the background-only
-hypothesis.](gfx/105_chapter_5/comb_Figure_001.pdf){
+hypothesis. Figure adapted from [@CMS-PAS-HIG-17-030].](gfx/105_chapter_5/comb_Figure_001.pdf){
 #fig:comb_Figure_001 width=60%}
 
 ![Observed and expected $\sigma(\textrm{pp} \rightarrow \textrm{HH})$
@@ -1546,7 +1554,8 @@ the 68\% and 95\% times the upper limit under the background-only
 hypothesis.
 The anomalous couplings theoretical prediction with
 $\kappa_\textrm{t} = 1$ is also
-shown in red colour.](gfx/105_chapter_5/comb_Figure_002.pdf){
+shown in red colour.
+Figure adapted from [@CMS-PAS-HIG-17-030].](gfx/105_chapter_5/comb_Figure_002.pdf){
 #fig:comb_Figure_002 width=60%}
 
 
