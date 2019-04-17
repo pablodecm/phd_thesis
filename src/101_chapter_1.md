@@ -139,7 +139,7 @@ accurately describe phenomena in systems where relativistic and
 quantum effects are relevant, such as interactions between highly
 relativistic particles. In QFT, all the known physical processes
 in the universe are explained in terms of the state and dynamics
-of set of fundamental tensor fields. A tensor field can be defined as a
+of a set of fundamental tensor fields. A tensor field can be defined as a
 continuous and differentiable set of values, such a scalar or a vector,
 that exist for any given location and time. For simplicity, the fields 
 in QFT are usually defined in a relativistic
@@ -346,7 +346,7 @@ Lagrangian density:
 
 $$
 \mathcal{L}_\mathrm{QCD} = \bar{\psi}
-\left( \gamma^\mu D - m_f \right) \psi -
+\left( \gamma^\mu D_\mu - m_f \right) \psi -
 \frac{1}{4}G^a_{\mu \nu} G^{\mu \nu}_a, \quad 
 \psi = 
 \begin{bmatrix}
@@ -363,7 +363,7 @@ of freedom. Assuming that the Gell-Mann matrices $\lambda^a$
 are used to define a basis for the gluon field
 $A_\mu = 1/2 \lambda^a \sum A_\mu^a$, the covariant
 derivative can be defined as
-$D^\mu= \partial_\mu  - i g_s \, A_\mu$, where
+$D_\mu= \partial_\mu  - i g_s \, A_\mu$, where
 $g_s$ is the strong interaction coupling.
 In turn, the gluon field strength
 tensor $G^a_{\mu \nu}$ is also
@@ -396,7 +396,7 @@ Similar
 phenomena occur for isolated gluons, which generally are referred as
 hadronization, and can be understood as a consequence of
 colour confinement. In particle colliders, successive
-hadronization and radiation processes lead to parton showers
+hadronization and radiation processes led to parton showers
 (see [Section @sec:parton_showers]).
 
 Quark are then only found in bound states, referred to as
@@ -481,7 +481,7 @@ neutral and charged currents [@hasert1974observation] and the discovery
 of the massive
 $W^{\pm}$ [@Arnison:1983rp; @Banner:1983jy] and $Z$
 [@Arnison:1983mk; @Bagnaia:1983zx] bosons. Experimental evidence also
-showed that weak interaction were parity violating [@Wu:1957my],
+showed that weak interactions were parity violating [@Wu:1957my],
 thus in the electroweak theory the fermion fields are separated in their
 left-handed $\psi_\textrm{L}$ and right-handed $\psi_\textrm{R}$ 
 chiral components as follows:
@@ -598,10 +598,10 @@ where the covariant derivate in this case is defined as:
 $$
 D_H^\mu  = \partial^\mu - \frac{1}{2} i g_B Y B_\mu  - \frac{1}{2} i g_W \sigma W_\mu.
 $$ {#eq:scalar_cov_der}
-The minimal form for scalar field potential $V(\phi)$,
+The minimal form for a scalar field potential $V(\phi)$,
 constructed ad-hoc to provide a degenerate vacuum states
-and a local maximum - a required condition for spontaneous symmetry breaking.
-The simplest potential may be expressed as:
+and a local maximum - a required condition for spontaneous symmetry breaking,
+may be expressed as:
 $$
 V(\phi) = - \mu^2 \phi^\dagger \phi + \frac{1}{2} \lambda (\phi^\dagger \phi )^2
 $$ {#eq:scalar_potential}
@@ -737,8 +737,8 @@ only $H$ may be obtained substituting
 [Equation @eq:scalar_rotation] in [Equation @eq:scalar_lagrangian],
 leading to the following expression:
 $$
-\mathcal{L}_{H} = \frac{1}{2} \partial_\mu H \partial^\mu
-- \mu^2 H^2 - \lambda v H^3 - \frac{\lambda}{4} H^3
+\mathcal{L}_{H} = \frac{1}{2} \partial_\mu H \partial^\mu H
+- \mu^2 H^2 - \lambda v H^3 - \frac{\lambda}{4} H^4
 $$ {#eq:higgs_lagrangian}
 where the second (quadratic term) can be interpreted as a scalar boson
 with a mass $\sqrt{2\mu^2}$, which is commonly referred as the Higgs
@@ -1021,8 +1021,8 @@ current interpretation of the universe
 is that everything that could be produced would be produced,
 meaning that any outcome that can happen
 in a way that is consistent with the underlying properties
-of nature is possible. Even though the true description
-the properties of nature is not known, as discussed in Section
+of nature is possible. Even though probably the true description
+of the properties of nature is not known, as discussed in Section
 [-@sec:standard_model], the Standard Model
 provides an effective model and restricts considerably the space
 of possible outcomes, in a way that can be compared with experimental
@@ -1035,12 +1035,12 @@ and hence often drive the experimental searches for evidence of New Physics.
 For those physical processes that could happen as a product of a proton-proton
 collision, under the assumption of validity of a particular theoretical model,
 their total expected rate of occurrence is one the most relevant
-quantities to predict and compare with observation.
+quantities to predict and compare with observations.
 To ease its experimental interpretation,
 the rate of occurrence of any given subnuclear process is commonly
 expressed as a cross section $\sigma$,
 which has dimensions of area and is typically expressed in submultiples
-of barn ($1 \textrm{barn} = 10^{-28} \textrm{m}^2$). The advantage of cross
+of barn ($1\ \textrm{barn} = 10^{-28} \textrm{m}^2$). The advantage of cross
 sections over rates is that their value is independent from the density
 of the incident particle fluxes. The rate, or probability per unit of time,
 of a process occurring can be computed simply by multiplying its cross

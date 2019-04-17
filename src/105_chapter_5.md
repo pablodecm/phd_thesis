@@ -46,9 +46,9 @@ predictions. That said, several predicted properties remain unmeasured
 because of the difficulty of their experimental determination. Among
 them, the Higgs boson
 self-coupling being one of the most relevant parameters
-since it can modified by physics beyond the standard 
+since it can be modified by physics beyond the standard 
 model (BSM) [@Dib:2005re; @Grober:2010yv;
-@Contino:2012xk; @Dolan:2012ac; @Dawson:2015oha] .
+@Contino:2012xk; @Dolan:2012ac; @Dawson:2015oha].
 
 A principled way to determine the Higgs self-coupling, and thus reconstruct
 the scalar potential of the Higgs field that is responsible for spontaneous
@@ -1014,7 +1014,7 @@ in this analysis, two data control regions (CRs) are defined:
   using the same selection described
   in [Section @sec:event_selection], but removing all events around the
   Higgs candidate masses $90 < M_{\textrm{H}_1} < 150\ \textrm{GeV}$ and
-  $80 < M_{\textrm{H}_1} < 140\ \textrm{GeV}$. This cut in the reconstructed
+  $80 < M_{\textrm{H}_2} < 140\ \textrm{GeV}$. This cut in the reconstructed
   Higgs masses plane considerably reduces the signal contribution, which
   is expected to peak around $M_\textrm{H} = 125\ \textrm{GeV}$.
   

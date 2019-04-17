@@ -1058,15 +1058,15 @@ it is bounded between
 zero and one which greatly simplifies its visualisation and non-parametric
 likelihood estimation. Taking [Equation @Eq:mixture_div] and manipulating
 the subexpression depending on $\mu$ by adding and
-subtracting $2\mu$  we have:
+subtracting $\mu$  we have:
 $$
-p(\boldsymbol{x}| \mu, \boldsymbol{\theta} ) = p_b(\boldsymbol{x} | \boldsymbol{\theta})   \left ( 1-3\mu
+p(\boldsymbol{x}| \mu, \boldsymbol{\theta} ) = p_b(\boldsymbol{x} | \boldsymbol{\theta})   \left ( 1-2\mu
                     + \mu \frac{p_s(\boldsymbol{x} | \boldsymbol{\theta}) + p_b(\boldsymbol{x} | \boldsymbol{\theta})}{p_b(\boldsymbol{x} | \boldsymbol{\theta})}
                     \right )  
 $${#eq:mixture_sub}
 which can in turn can be expressed as:
 $$
-p(\boldsymbol{x}| \mu, \boldsymbol{\theta} ) = p_b(\boldsymbol{x} | \boldsymbol{\theta})   \left ( 1-3\mu
+p(\boldsymbol{x}| \mu, \boldsymbol{\theta} ) = p_b(\boldsymbol{x} | \boldsymbol{\theta})   \left ( 1-2\mu
                     + \mu \left ( 1- \frac{p_s(\boldsymbol{x} | \boldsymbol{\theta})}{p_s(\boldsymbol{x} | \boldsymbol{\theta})
                   +p_b(\boldsymbol{x} | \boldsymbol{\theta})} \right )^{-1}
                     \right )  

@@ -1430,7 +1430,7 @@ marginal efficiencies to account for combined effects,
 are also frequently used for count vector observables
 $n^{\mathcal{C}_i}_j(\boldsymbol{\theta})$, as discussed in
 [Section @sec:synthetic_likelihood] together with possible solutions
-to some the associated issues.
+to some of the associated issues.
 
 The re-weighting approach from [Equation @eq:reweight_intractable] is
 extremely
@@ -2119,7 +2119,7 @@ model for the set of observations $L_D(D; \boldsymbol{\theta})$
 with the available constraints $L_C^i(\boldsymbol{\theta})$,
 as follows:
 $$
-L_(D; \boldsymbol{\theta}) = L_D(D; \boldsymbol{\theta})
+L (D; \boldsymbol{\theta}) = L_D(D; \boldsymbol{\theta})
 \prod_{i=0}^{c} L_C^i(\boldsymbol{\theta})
 $$ {#eq:augmented_likelihood}
 where simplified likelihoods (e.g. a normal approximation) are often
