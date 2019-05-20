@@ -6,4 +6,6 @@ date: 30 November 2018
 numbersections: true
 secnumdepth: 3
 bibliography: src/bibliography.bib
+panflute-filters: [svg_images]
+panflute-path: 'filters'
 ---

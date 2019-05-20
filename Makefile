@@ -6,6 +6,11 @@ BASEDIR=$(CURDIR)
 INPUTDIR=$(BASEDIR)/src
 TEMPLATE=$(BASEDIR)/templates/thesis.latex
 
+SRC_FILES := $(wildcard gfx/*/*.pdf)
+SVG_FILES := $(patsubst gfx/%.pdf, gfx/%.svg,$(SRC_FILES))
+PNG_FILES := $(patsubst gfx/%.svg, gfx/%.png,$(SVG_FILES))
+
+
 LAST_COMMIT := $(shell git rev-parse HEAD)
 
 pdf: thesis.tex
@@ -25,15 +30,29 @@ thesis.tex: src/*.md before gfx/101_chapter_1/mexican_hat.pdf gfx/104_chapter_4/
 	--variable=commit:$(LAST_COMMIT) \
 	--include-before-body=before.tex --verbose
 
+svg_images: $(SVG_FILES)
+
+png_images: $(PNG_FILES)
+
+gfx/%.svg: gfx/%.pdf
+	pdf2svg $< $@
+
+gfx/%.png: gfx/%.svg
+	convert $< $@
+
 thesis.html: Makefile
 	$(PANDOC) "$(INPUTDIR)"/latex_macros.md \
 	"$(INPUTDIR)"/000_title_page.md \
   "$(INPUTDIR)"/001_abstract.md \
-	"$(INPUTDIR)"/101_chapter_1.md \
+	"$(INPUTDIR)"/10[1-7]_chapter_*.md \
 	 --filter=pandoc-crossref \
+	 --biblatex \
 	 --number-sections \
 	 -M "linkReferences:true" \
-	-s --mathjax -o thesis.html
+	 --top-level-division=chapter \
+	-s --mathjax -o thesis.html \
+	--template templates/gitbook.html \
+	-F panflute
 
 before: src/00[1-3]_*.md
 	$(PANDOC) $^ \

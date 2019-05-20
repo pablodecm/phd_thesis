@@ -178,7 +178,7 @@ $$
 f_B(\boldsymbol{x}) = \mathop{\textrm{arg min}}_{\boldsymbol{y} \in \mathcal{Y}}  \mathop{\mathbb{E}}_{
 \boldsymbol{y} \sim p(\boldsymbol{y} | \boldsymbol{x})}
 \left [ L(\boldsymbol{y}, f(\boldsymbol{x})) \right ]
-$$ {#eq:bayes_optimal}
+$$ {#eq:bayes_optimal_model}
 where the last term indicates the optimal choice of target $\boldsymbol{y}$ for each
 value of $\boldsymbol{x}$. The previous expression
 can be obtained by explicitly considering the conditional
@@ -375,7 +375,7 @@ p(y = y_i| \boldsymbol{x}) \\
 &= \frac{p(\boldsymbol{x} | y = y_i) p(y = y_i)}{
 \sum_{\forall y_i \in \{0,..., k-1\}}p(\boldsymbol{x} | y = y_i) p(y = y_i)}
 \end{aligned}  
-$$ {#eq:bayes_optimal_bce}
+$$ {#eq:bayes_optimal_ce}
 which can also be expressed as a function of a sum of density ratios
 of the categories.
 
