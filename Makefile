@@ -42,8 +42,7 @@ gfx/%.png: gfx/%.svg
 
 thesis.html: Makefile templates/gitbook.html src/*.md src/*.bib filters/*.py
 	$(PANDOC) "$(INPUTDIR)"/latex_macros.md \
-	"$(INPUTDIR)"/000_title_page.md \
-  "$(INPUTDIR)"/001_abstract.md \
+  "$(INPUTDIR)"/00*_*.md \
 	"$(INPUTDIR)"/10[1-7]_chapter_*.md \
 	 --filter=pandoc-crossref --filter=pandoc-citeproc \
 	 --number-sections \
