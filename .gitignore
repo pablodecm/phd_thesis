@@ -1,2 +1,4 @@
 /thesis.*
 before.tex
+gfx/*/*.png
+gfx/*/*.svg

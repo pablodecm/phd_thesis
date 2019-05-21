@@ -40,13 +40,12 @@ gfx/%.svg: gfx/%.pdf
 gfx/%.png: gfx/%.svg
 	convert $< $@
 
-thesis.html: Makefile
+thesis.html: Makefile templates/gitbook.html src/*.md src/*.bib filters/*.py
 	$(PANDOC) "$(INPUTDIR)"/latex_macros.md \
 	"$(INPUTDIR)"/000_title_page.md \
   "$(INPUTDIR)"/001_abstract.md \
 	"$(INPUTDIR)"/10[1-7]_chapter_*.md \
-	 --filter=pandoc-crossref \
-	 --biblatex \
+	 --filter=pandoc-crossref --filter=pandoc-citeproc \
 	 --number-sections \
 	 -M "linkReferences:true" \
 	 --top-level-division=chapter \
