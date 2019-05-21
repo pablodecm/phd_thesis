@@ -9,7 +9,7 @@ import lxml.etree as etree
 
 def prepare(doc):
   doc.toc_dict = OrderedDict()
-  doc.toc_depth = int(doc.get_metadata('toc-depth', default=2))
+  doc.toc_depth = int(doc.get_metadata('toc-depth', default=3))
   # use indexing from 1 because looks better
   doc.counter_all = [0,]*doc.toc_depth
   doc.counter_num = [0,]*doc.toc_depth 

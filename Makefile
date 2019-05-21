@@ -51,6 +51,7 @@ thesis.html: Makefile templates/gitbook.html src/*.md src/*.bib filters/*.py
 	 --top-level-division=chapter \
 	-s --mathjax -o thesis.html \
 	--template templates/gitbook.html \
+	--section-divs --write=html4 \
 	-F panflute
 
 before: src/00[1-3]_*.md
