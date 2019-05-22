@@ -429,7 +429,7 @@ $\boldsymbol{\omega} \subseteq \boldsymbol{\theta}$ (e.g. when
 considering a weighted sum of the relevant variances). A simple version
 of the approach just described to learn a neural-network based summary statistic
 employing an inference-aware loss is summarised in Algorithm
-\autoref{alg:simple_algorithm}.
+\ref{alg:simple_algorithm}.
 
 <!-- algorithm -->
 \begin{algorithm}[H]

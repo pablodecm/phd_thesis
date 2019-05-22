@@ -57,7 +57,7 @@ def prepare(doc):
   doc.n_algo = 1
   
 
-def action(elem, doc):
+def index_and_transform(elem, doc):
   
   # count headers and tables so they can labelled numerically 
   if isinstance(elem, pf.Header) and elem.level is 1:
@@ -65,11 +65,7 @@ def action(elem, doc):
     if numbered:
       doc.n_chap += 1
       doc.n_tab = 1
-      
-  # substitute inline raw refs by standard markdown citations
-  if isinstance(elem, pf.RawInline) and elem.format =="tex":
-    pf.debug(elem.text, elem.format)
-  
+
   if isinstance(elem, pf.RawBlock) and elem.format=="tex":
     text = elem.text
     # check if tabular
@@ -136,7 +132,7 @@ def action(elem, doc):
         text_caption = "Table {}.{}: {}".format(doc.n_chap,doc.n_tab,
                                                text_caption)
       elif is_algo:
-        text_caption = "Algorithm {}: {}".format(doc.n_chap, text_caption)
+        text_caption = "Algorithm {}: {}".format(doc.n_algo, text_caption)
       pf_caption = pf.convert_text(text_caption,output_format="panflute")[0]
       # wrap in caption class div
       div_caption = [pf.Div(pf_caption, classes=["caption"])]
@@ -148,16 +144,41 @@ def action(elem, doc):
     
     return output
       
-    
+def fix_latex_refs(elem, doc):
+  # substitute inline raw refs by standard markdown citations
+  if isinstance(elem, pf.RawInline) and elem.format =="tex":
+    text = elem.text
+    autoref_pattern =r"\\autoref{(.+?)}"
+    autoref_result = re.search(autoref_pattern,text)
+    if autoref_result:
+      label = autoref_result.group(1)
+      if label in doc.table_dict:
+        ref_name = "{}.{}".format(*doc.table_dict[label])
+        return [pf.Str("Table"), pf.Space,
+                pf.Link(pf.Str(ref_name), url="#{}".format(label)) ]
+      elif label in doc.algo_dict:
+        ref_name = "{}".format(*doc.algo_dict[label])
+        return [pf.Str("Algorithm"), pf.Space,
+                    pf.Link(pf.Str(ref_name), url="#{}".format(label)) ]
+    ref_pattern =r"\\ref{(.+?)}"
+    ref_result = re.search(ref_pattern,text)
+    if ref_result:
+      label = ref_result.group(1)
+      if label in doc.table_dict:
+        ref_name = "{}.{}".format(*doc.table_dict[label])
+        return [ pf.Link(pf.Str(ref_name), url="#{}".format(label))]
+      elif label in doc.algo_dict:
+        ref_name = "{}".format(*doc.algo_dict[label])
+        return [pf.Link(pf.Str(ref_name), url="#{}".format(label))]
 
 def finalize(doc):
-  pf.debug(doc.table_dict)
   # delete attributes
   del doc.n_tab, doc.n_chap, doc.table_dict
   del doc.n_algo, doc.algo_dict
   
 def main(doc=None):
-  return pf.run_filter(action,
+  return pf.run_filters([index_and_transform,
+                         fix_latex_refs],
                        prepare=prepare,
                        finalize=finalize,
                        doc=doc) 
