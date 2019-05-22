@@ -2,3 +2,10 @@
 before.tex
 gfx/*/*.png
 gfx/*/*.svg
+gfx/*/*.aux
+gfx/*/*.log
+__pycache__
+.ipynb_checkpoints
+creationdate.lua
+pdfa.xmpi
+*.pdf
