@@ -595,7 +595,7 @@ background. The low-dimensional projections from samples from
 the mixture distribution for a small $\mu=50/1050$ is shown in
 [@Fig:subfigure_b].
 
-::: {#fig:subfigs_distributions .subfigures}
+::: {#fig:subfigs_distributions .subfigures .caption}
 ![signal (red) and background (blue)
  ](gfx/106_chapter_6/figure2a.pdf){#fig:subfigure_a width=49%}
 ![mixture distribution (black)
@@ -708,7 +708,7 @@ summary statistic distribution for background depends considerably on the value
 of the nuisance parameters both for the trained and the optimal classifier, which will
 in turn cause an important degradation on the subsequent statistical inference.
 
-::: {#fig:subfigs_clf_hists .subfigures}
+::: {#fig:subfigs_clf_hists .subfigures .caption}
 ![classifier trained on simulated samples
    ](gfx/106_chapter_6/figure3a.pdf){#fig:train_clf width=48%}
 ![optimal classifier $s(\boldsymbol{x} | r = 0.0, \lambda = 3.0)$
@@ -795,7 +795,7 @@ mini-batch stochastic gradient descent (SGD) is used for training and
 the optimal learning rate is fixed and decided by means of a
 simple scan; the best choice found is specified together with the results.
 
-::: {#fig:subfigs_training .subfigures}
+::: {#fig:subfigs_training .subfigures .caption}
 ![inference-aware training loss
 ](gfx/106_chapter_6/figure4a.pdf){#fig:training_dynamics width=48%}
 ![profile-likelihood comparison
@@ -872,7 +872,7 @@ its omission.
 \end{table}
 
 
-::: {#fig:validity_range .subfigures}
+::: {#fig:validity_range .subfigures .caption}
 ![different $r$ value
 ](gfx/106_chapter_6/figure5a.pdf){#fig:range_r_dist width=48%}
 ![different $\lambda$ value

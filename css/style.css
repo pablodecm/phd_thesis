@@ -18,7 +18,7 @@
 .rmdwarning {
   background-image: url("../images/warning.png");
 }
-p.caption {
+.caption {
   color: #777;
   margin-top: 10px;
 }

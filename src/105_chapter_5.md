@@ -522,8 +522,7 @@ events.
 \begin{table}[htb]
  \caption{Event selection efficiency and number of events expected per
  each integrated $\textrm{fb}^{-1}$ of integrated luminosity for the Standard Model
- $\textrm{pp}\rightarrow \textrm{HH}
- \rightarrow \textrm{b}\bar{\textrm{b}}\textrm{b}\bar{\textrm{b}}$
+ $\textrm{pp}\rightarrow \textrm{HH} \rightarrow \textrm{b}\bar{\textrm{b}}\textrm{b}\bar{\textrm{b}}$
  production process, as estimated using simulated events.}
 \centering
  \small
@@ -572,7 +571,7 @@ reconstructed Higgs
 candidates with the largest invariant mass while trailing Higgs $\textrm{H}_1$
 for the other candidate. 
 
-::: {#fig:pair_mass .subfigures}
+::: {#fig:pair_mass .subfigures .caption}
 ![mass difference ${\Delta M}_{(\textrm{H}_1,\textrm{H}_2)}$
 ](gfx/105_chapter_5/higgs_diff.pdf){#fig:higgs_diff width=49%}
 ![$M_{\textrm{H}_1}$ versus $M_{\textrm{H}_2}$
@@ -979,7 +978,7 @@ at beginning of this section, the statistical uncertainties
 coming from the low $H_T$ range simulated QCD dataset are large.
 
 
-::: {#fig:Figure_003 .subfigures}
+::: {#fig:Figure_003 .subfigures .caption}
 ![first jet transverse momenta $p_{T_j}^1$
 ](gfx/105_chapter_5/Figure_003-a.pdf){#fig:Figure_003_a width=49%}
 ![first jet pseudo-rapidity $\eta_{j}^1$
@@ -1042,7 +1041,7 @@ are found to be in good agreement, as shown for a reduced
 number of important variables that used as input for the classifier
 in [Figure @fig:Figure_004] and [Figure @fig:Figure_005].
 
-::: {#fig:Figure_004 .subfigures}
+::: {#fig:Figure_004 .subfigures .caption}
 ![first jet transverse momenta $p_{T_j}^1$
 ](gfx/105_chapter_5/Figure_004-a.pdf){#fig:Figure_004_a width=49%}
 ![first jet pseudo-rapidity $\eta_{j}^1$
@@ -1064,7 +1063,7 @@ Figures adapted from [@Sirunyan:2018tki].
 :::
 
 
-::: {#fig:Figure_005 .subfigures}
+::: {#fig:Figure_005 .subfigures .caption}
 ![first jet transverse momenta $p_{T_j}^1$
 ](gfx/105_chapter_5/Figure_005-a.pdf){#fig:Figure_005_a width=49%}
 ![first jet pseudo-rapidity $\eta_{j}^1$
@@ -1329,7 +1328,7 @@ uncertainty.
 Figure adapted from [@Sirunyan:2018tki].](gfx/105_chapter_5/Figure_007.pdf){
 #fig:Figure_007 width=75%}
 
-::: {#fig:Figure_008 .subfigures}
+::: {#fig:Figure_008 .subfigures .caption}
 ![leading Higgs mass $M_{\textrm{H}_1}$
 ](gfx/105_chapter_5/Figure_008-a.pdf){#fig:Figure_008_a width=49%}
 ![trailing Higgs mass $M_{\textrm{H}_2}$

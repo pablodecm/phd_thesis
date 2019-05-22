@@ -1084,7 +1084,7 @@ of most LHC analyses, even if the details
 about the parton structure cannot be calculated.
 
 
-::: {#fig:subfigs_pdfs .subfigures}
+::: {#fig:subfigs_pdfs .subfigures .caption}
 ![Low Energy Scale $\mu^2 = 10 \textrm{GeV}^2$
 ](gfx/101_chapter_1/nnpdf31nnlo-10.pdf){#fig:pdf_low width=49%}
 ![High Energy Scale $\mu^2 = 10^4 \textrm{GeV}^2$

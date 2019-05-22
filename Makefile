@@ -44,14 +44,14 @@ thesis.html: Makefile templates/gitbook.html src/*.md src/*.bib filters/*.py
 	$(PANDOC) "$(INPUTDIR)"/latex_macros.md \
   "$(INPUTDIR)"/0[0-1]*_*.md \
 	"$(INPUTDIR)"/10[1-7]_chapter_*.md \
-	 --filter=pandoc-crossref --filter=pandoc-citeproc \
 	 --number-sections \
 	 -M "linkReferences:true" \
 	 --top-level-division=chapter \
 	-s --mathjax -o thesis.html \
 	--template templates/gitbook.html \
 	--section-divs --write=html4 \
-	-F panflute
+	--filter=panflute \
+	 --filter=pandoc-crossref --filter=pandoc-citeproc
 
 before: src/00[1-3]_*.md
 	$(PANDOC) $^ \
