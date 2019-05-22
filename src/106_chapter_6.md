@@ -537,9 +537,9 @@ optimisation in a synthetic mixture problem where the likelihood is known. We th
 compare our results with those obtained by standard classification-based
 summary statistics. All the code needed to reproduce the results
 presented here is available in
-an online repository [@code_repository], extensively using \textsc{TensorFlow}
+an online repository [@code_repository], extensively using [TensorFlow]{.smallcaps}
 [@tensorflow2015-whitepaper]
-and \textsc{TensorFlow Probability} [@tran2016edward;@dillon2017tensorflow] software libraries.
+and [TensorFlow Probability]{.smallcaps} [@tran2016edward;@dillon2017tensorflow] software libraries.
 
 ### 3D Synthetic Mixture {#sec:synthetic_mixture}
 
@@ -777,7 +777,7 @@ typically are constrained by prior information or auxiliary measurements.
 For the approach
 presented here, inference-aware neural optimisation, the effect of the
 nuisance parameters and their constraints can be taken into account during training.
-Hence, 5 different training procedures for \textsc{INFERNO} will be considered,
+Hence, 5 different training procedures for [INFERNO]{.smallcaps} will be considered,
 one for each of the benchmarks, denoted by the same number. 
 
 The same basic network architecture is used both for cross-entropy and
@@ -818,7 +818,7 @@ In [@Fig:training_dynamics], the dynamics of inference-aware optimisation
 are shown by the validation loss, which corresponds
 to the approximate expected variance
 of parameter $s$, as a function of the training step for 10 random-initialised
-instances of the \textsc{INFERNO} model corresponding to Benchmark 2.
+instances of the [INFERNO]{.smallcaps} model corresponding to Benchmark 2.
 All inference-aware models were trained during 200 epochs with SGD using
 mini-batches of 2000 observations
 and a learning rate $\gamma=10^{-6}$. All the model initialisations
