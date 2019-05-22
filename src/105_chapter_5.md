@@ -1406,7 +1406,7 @@ previously listed in Table \ref{table:benchmarks}, by re-weighting
 the simulated HH production observation as discusses and evaluating
 the signal distribution under each BSM model considered. The observed
 and expected limits obtained for each of the benchmark points are
-provided in Table \ref{t:limits}. The observed and expected limits
+provided in Table \ref{tab:limits}. The observed and expected limits
 are also graphically compared
 between the various EFT points and the SM in [Figure @fig:Figure_009].
 The observed limits are also found about two standard deviations over
@@ -1445,7 +1445,7 @@ Benchmark point & Observed & Expected &
 Box &   1090  &   542  &   286  &   384  &   775  &   1080  \\
    \hline
 \end{tabular}
-\label{t:limits}
+\label{tab:limits}
 \end{table}
 
 ![Graphical comparison between the observed and expected upper
