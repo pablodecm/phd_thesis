@@ -49,7 +49,7 @@ def finalize(doc):
   ul_sum.append(li)
   a_top = etree.Element("a",attrib={"href" : "./"} )
   li.append(a_top)
-  a_top.text = "pablodem thesis"
+  a_top.text = "PhD Thesis - Pablo de Castro"
   li = etree.Element("li", attrib={"class" : "divider"})
   li.text = ""
   ul_sum.append(li)
