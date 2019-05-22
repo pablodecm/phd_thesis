@@ -1,6 +1,6 @@
 """ 
-Panflute filter that compiles latex tables and adds them in as SVGs
-with adecuate caption and links
+Panflute filter that compiles latex tables and algoritms
+and adds them in as SVGs with adecuate caption and links
 """
 
 import panflute as pf
@@ -15,6 +15,14 @@ template_standalone = r"""
 \documentclass[border=5pt]{{standalone}}
 
 \usepackage{{booktabs}}
+\usepackage{{algorithm}}
+\usepackage{{algpseudocode}}
+
+\usepackage{{amsmath}}
+\usepackage{{amsthm}}
+\usepackage{{amsfonts}}
+\usepackage{{dsfont}}
+
 \begin{{document}}
 
   \minipage{{18cm}}
@@ -22,7 +30,7 @@ template_standalone = r"""
   \centering
   \small
   
-  {tabular}
+  {paste}
 
   \endminipage
 \end{{document}}
@@ -41,20 +49,27 @@ def tex_to_svg(f_name):
   
 def prepare(doc):
   # will save all label names for the tables to reemplace them
-  doc.table_set = set()
+  doc.table_dict = {}
+  doc.algo_dict = {}
   # to have Table #.# format
   doc.n_chap = 0
   doc.n_tab = 1
+  doc.n_algo = 1
   
 
 def action(elem, doc):
   
+  # count headers and tables so they can labelled numerically 
   if isinstance(elem, pf.Header) and elem.level is 1:
     numbered = False if "unnumbered" in elem.classes else True
     if numbered:
       doc.n_chap += 1
       doc.n_tab = 1
-
+      
+  # substitute inline raw refs by standard markdown citations
+  if isinstance(elem, pf.RawInline) and elem.format =="tex":
+    pf.debug(elem.text, elem.format)
+  
   if isinstance(elem, pf.RawBlock) and elem.format=="tex":
     text = elem.text
     # check if tabular
@@ -70,10 +85,22 @@ def action(elem, doc):
     caption_result = re.search(caption_pattern,text, flags=re.DOTALL)
     label_pattern = r"\\label{(.+)}" 
     label_result = re.search(label_pattern,text)
+    # check if algorithm
+    algo_pattern = r"\\begin{algorithm}\[.\](.+?)\\end{algorithm}"
+    algo_result = re.search(algo_pattern,text, flags=re.DOTALL)
+    is_table = False
+    is_algo = False
     if tab_result:
-      text_latex = template_standalone.format(tabular=tab_result.group())
+      is_table = True
+      text_latex = template_standalone.format(paste=tab_result.group())
     elif table_result and input_result:
-      text_latex = template_standalone.format(tabular=input_result.group())
+      is_table = True
+      text_latex = template_standalone.format(paste=input_result.group())
+    elif algo_result:
+      is_algo = True
+      algo_text = algo_result.group(1)
+      algo_text = algo_text.replace(caption_result.group(), "")
+      text_latex = template_standalone.format(paste=algo_text)
     else:
       # do no no anything if not table found
       return None
@@ -82,10 +109,14 @@ def action(elem, doc):
     if label_result:
       label = label_result.group(1)
       extra_pars["identifier"] = label
-      # add key to set
-      doc.table_set.add(label)
+      # add key to table
+      if is_table:
+        doc.table_dict[label] = (doc.n_chap, doc.n_tab)
+      elif is_algo:
+        doc.algo_dict[label] = (doc.n_algo,)
       f_name = "{}.tex".format(label) \
-                       .replace("table:","").replace("tab:","")
+                       .replace("table:","").replace("tab:","") \
+                       .replace("alg:","")
     else:
       f_name = "{}.tex".format(hashlib.sha1(text.encode()).hexdigest())
     # set path for the file and write
@@ -101,24 +132,29 @@ def action(elem, doc):
       # remove cite and autocites by pandoc citation
       text_caption = re.sub(r"\\cite{(.+?)}",r"[@\1]",text_caption)
       # add prefix to caption
-      text_caption = "Table {}.{}: {}".format(doc.n_chap,doc.n_tab,
-                                              text_caption)
+      if is_table:
+        text_caption = "Table {}.{}: {}".format(doc.n_chap,doc.n_tab,
+                                               text_caption)
+      elif is_algo:
+        text_caption = "Algorithm {}: {}".format(doc.n_chap, text_caption)
       pf_caption = pf.convert_text(text_caption,output_format="panflute")[0]
       # wrap in caption class div
       div_caption = [pf.Div(pf_caption, classes=["caption"])]
       output = div_caption + output
     
     # increment table counter
-    doc.n_tab += 1
+    if is_table:
+      doc.n_tab += 1
     
     return output
       
     
 
 def finalize(doc):
-  pf.debug(doc.table_set)
+  pf.debug(doc.table_dict)
   # delete attributes
-  del doc.n_tab, doc.n_chap, doc.table_set
+  del doc.n_tab, doc.n_chap, doc.table_dict
+  del doc.n_algo, doc.algo_dict
   
 def main(doc=None):
   return pf.run_filter(action,
