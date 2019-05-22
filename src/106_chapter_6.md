@@ -754,21 +754,21 @@ the performance of inference-aware optimisation as described in
 [@Sec:method] will be compared with classification-based summary statistics for
 a series of inference benchmarks based on the synthetic problem described above
 that vary in the number of nuisance parameters considered and their constraints:
-\begin{itemize}
-  \item \textbf{Benchmark 0:} no nuisance parameters are considered, both signal and
+
+- **Benchmark 0:** no nuisance parameters are considered, both signal and
   background distributions are taken as fully specified ($r=0.0$, $\lambda=3.0$
   and $b=1000.$).
-  \item \textbf{Benchmark 1:} $r$ is considered as an unconstrained
+- **Benchmark 1:** $r$ is considered as an unconstrained
   nuisance parameter, while $\lambda=3.0$ and $b=1000$ are fixed. 
-  \item \textbf{Benchmark 2:} $r$ and $\lambda$ are considered as unconstrained
-  nuisance parameters, while $b=1000$ is fixed. 
-  \item \textbf{Benchmark 3:} $r$ and $\lambda$ are considered as
+- **Benchmark 2:** $r$ and $\lambda$ are considered as unconstrained
+  nuisance parameters, while $b=1000$ is fixed.
+- **Benchmark 3:** $r$ and $\lambda$ are considered as
   nuisance parameters but with the following constraints: $\mathcal{N} (r |0.0, 0.4)$
   and $\mathcal{N} (\lambda| 3.0, 1.0)$, while $b=1000$ is fixed. 
-  \item \textbf{Benchmark 4:} all $r$, $\lambda$ and $b$ are all considered as
+- **Benchmark 4:** all $r$, $\lambda$ and $b$ are all considered as
   nuisance parameters with the following constraints: $\mathcal{N} (r |0.0, 0.4)$,
-  $\mathcal{N} (\lambda| 3.0, 1.0)$ and $\mathcal{N} (b | 1000., 100.)$ . 
-\end{itemize}
+  $\mathcal{N} (\lambda| 3.0, 1.0)$ and $\mathcal{N} (b | 1000., 100.)$.  
+  
 When using classification-based summary statistics, the construction of
 a summary statistic does depend on the presence of nuisance parameters, so the same
 model is trained independently of the benchmark considered. In real-world
