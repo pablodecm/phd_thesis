@@ -1107,7 +1107,7 @@ construct summary statistics, that is not based on classification,
 but accounts for the effect of nuisance parameters is presented.
 
 
-### Particle Identification and Regression {#eq:particle_id_reg}
+### Particle Identification and Regression {#sec:particle_id_reg}
 
 While the categorical latent variable $z_i$, denoting the interaction
 process that occurred in a given collision, is very useful to define an event

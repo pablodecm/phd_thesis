@@ -108,15 +108,21 @@ def index_and_transform(elem, doc):
       # add key to table
       if is_table:
         doc.table_dict[label] = (doc.n_chap, doc.n_tab)
+        f_dir = "gfx/tables"
       elif is_algo:
+        f_dir = "gfx/algos"
         doc.algo_dict[label] = (doc.n_algo,)
       f_name = "{}.tex".format(label) \
                        .replace("table:","").replace("tab:","") \
                        .replace("alg:","")
     else:
       f_name = "{}.tex".format(hashlib.sha1(text.encode()).hexdigest())
+
+    if not os.path.exists(f_dir):
+      os.makedirs(f_dir)
+
     # set path for the file and write
-    f_name = "src/{}".format(f_name)
+    f_name = "{}/{}".format(f_dir, f_name)
     with open(f_name,"w") as f:
       f.write(text_latex)
     svg_f_name = tex_to_svg(f_name)

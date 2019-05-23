@@ -1610,7 +1610,7 @@ combines the output from JP and CSVv2 algorithms with two taggers that
 summarise the information from non-isolated electrons and muons inside
 the jet.
 
-In [Section @eq:particle_id_reg], the role of recent advances in machine
+In [Section @sec:particle_id_reg], the role of recent advances in machine
 learning techniques for particle identification and regression are
 discussed in more detail, focussing on the development and integration
 on a new deep learning based multi-category jet tagger referred
