@@ -42,8 +42,9 @@ gfx/%.png: gfx/%.svg
 
 thesis.html: Makefile templates/gitbook.html src/*.md src/*.bib filters/*.py
 	$(PANDOC) "$(INPUTDIR)"/latex_macros.md \
-  "$(INPUTDIR)"/0[0-1]*_*.md \
+    "$(INPUTDIR)"/0[0-1]*_*.md \
 	"$(INPUTDIR)"/10[1-7]_chapter_*.md \
+	"$(INPUTDIR)"/references.md \
 	 --number-sections \
 	 -M "linkReferences:true" \
 	 --top-level-division=chapter \
