@@ -118,21 +118,17 @@ for slug_name, slug_el in slug_content.items():
     a_next = a_next.format(a_href=a_href,a_class=" ".join(a_cls))
     next_el = lxml.html.fromstring(a_next)
     book_body_el.append(next_el)
-    if has_prev:
-      a_href = "{}.html".format(order_slugs[slug_index+1])
-      a_cls = ["navigation", "navigation-prev"]
-      if not has_next: a_cls += ["navigation-unique"]
-      a_prev = """<a href="{a_href}" class="{a_class}" aria-label="Previous page">
-                  <i class="fa fa-angle-left"></i></a>"""
-      a_prev = a_prev.format(a_href=a_href,a_class=" ".join(a_cls))
-      prev_el = lxml.html.fromstring(a_prev)
-      book_body_el.append(prev_el)
+  if has_prev:
+    a_href = "{}.html".format(order_slugs[slug_index-1])
+    a_cls = ["navigation", "navigation-prev"]
+    if not has_next: a_cls += ["navigation-unique"]
+    a_prev = """<a href="{a_href}" class="{a_class}" aria-label="Previous page">
+                <i class="fa fa-angle-left"></i></a>"""
+    a_prev = a_prev.format(a_href=a_href,a_class=" ".join(a_cls))
+    prev_el = lxml.html.fromstring(a_prev)
+    book_body_el.append(prev_el)
 
   # write to file
   file_name = path / slug_name_t.format(slug_name)
   with open(file_name,"wb") as f:
     et.write(f, encoding="utf-8", method="html")
-
-
-
-  
