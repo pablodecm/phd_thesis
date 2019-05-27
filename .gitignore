@@ -9,3 +9,4 @@ __pycache__
 creationdate.lua
 pdfa.xmpi
 *.pdf
+html_output

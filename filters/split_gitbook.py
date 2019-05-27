@@ -30,14 +30,17 @@ div_l1_els = section_el.cssselect(".section.level1")
 slug_content = {}
 slug_content["index"] = header_el
 section_el.remove(header_el)
-slug_content["footnotes"] = footnotes_el
 section_el.remove(footnotes_el)
+
+# this is list to keep the relative order of the different splits
+order_slugs = ["index"]
 
 for div_l1_el in div_l1_els:
   h1_el = div_l1_el.cssselect("h1")[0]
   # get text representation of header text
   h1_text = lxml.html.tostring(h1_el,method="text")
   h1_slug = slugify(h1_text)
+  order_slugs.append(h1_slug)
 
   # we can get all the level 2 section divs in each div
   div_l2_els = div_l1_el.cssselect(".section.level2")
@@ -46,6 +49,7 @@ for div_l1_el in div_l1_els:
     # get text representation of header text
     h2_text = lxml.html.tostring(h2_el,method="text")
     h2_slug = slugify(h2_text)
+    order_slugs.append(h2_slug)
     # add content to dict and remove
     slug_content[h2_slug] = div_l2_el
     div_l1_el.remove(div_l2_el)
@@ -99,6 +103,30 @@ for slug_name, slug_el in slug_content.items():
         new_id = slug_name_t.format(ids_slug_name[curr_id]) + "#" + curr_id
         slug_href_el.attrib["href"] =  new_id
 
+  # the next/prev element will be at the end of the book body
+  book_body_el = et.getroot().cssselect(".book-body")[0]
+  # add next and previous buttons to page
+  slug_index = order_slugs.index(slug_name)
+  has_prev = slug_index!=0
+  has_next = slug_index!=(len(order_slugs)-1)
+  if has_next:
+    a_href = "{}.html".format(order_slugs[slug_index+1])
+    a_cls = ["navigation", "navigation-next"]
+    if not has_prev: a_cls += ["navigation-unique"]
+    a_next = """<a href="{a_href}" class="{a_class}" aria-label="Next page">
+                <i class="fa fa-angle-right"></i></a>"""
+    a_next = a_next.format(a_href=a_href,a_class=" ".join(a_cls))
+    next_el = lxml.html.fromstring(a_next)
+    book_body_el.append(next_el)
+    if has_prev:
+      a_href = "{}.html".format(order_slugs[slug_index+1])
+      a_cls = ["navigation", "navigation-prev"]
+      if not has_next: a_cls += ["navigation-unique"]
+      a_prev = """<a href="{a_href}" class="{a_class}" aria-label="Previous page">
+                  <i class="fa fa-angle-left"></i></a>"""
+      a_prev = a_prev.format(a_href=a_href,a_class=" ".join(a_cls))
+      prev_el = lxml.html.fromstring(a_prev)
+      book_body_el.append(prev_el)
 
   # write to file
   file_name = path / slug_name_t.format(slug_name)
