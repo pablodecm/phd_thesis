@@ -42,6 +42,10 @@ for div_l1_el in div_l1_els:
   h1_slug = slugify(h1_text)
   order_slugs.append(h1_slug)
 
+  # add level1 slug to content (now to keep the order)
+  slug_content[h1_slug] = div_l1_el
+  section_el.remove(div_l1_el)
+
   # we can get all the level 2 section divs in each div
   div_l2_els = div_l1_el.cssselect(".section.level2")
   for div_l2_el in div_l2_els:
@@ -53,10 +57,7 @@ for div_l1_el in div_l1_els:
     # add content to dict and remove
     slug_content[h2_slug] = div_l2_el
     div_l1_el.remove(div_l2_el)
-  
-  # add remaining level1 slug to content
-  slug_content[h1_slug] = div_l1_el
-  section_el.remove(div_l1_el)
+
 
 # now for each slug get all ids and add the slug name to a dict
 ids_slug_name = {}
@@ -84,6 +85,8 @@ for slug_name, slug_el in slug_content.items():
 path = Path("./html_output")
 path.mkdir(exist_ok=True)
 slug_name_t = "{}.html"
+# this counter is to preserve document wise
+fn_counter = 0
 for slug_name, slug_el in slug_content.items():
   # make a copy of the element tree
   et = copy.deepcopy(html_et)
@@ -91,6 +94,16 @@ for slug_name, slug_el in slug_content.items():
   section_el = et.getroot().cssselect("section")[0]
   # append the slug element to the section
   section_el.append(slug_el)
+
+  # add footnotes to slug if there are (make copy)
+  if (slug_name in slug_footnotes) and (len(slug_footnotes[slug_name])>0):
+    fn_counter += len(slug_footnotes[slug_name])
+    footnotes_slug_el = copy.deepcopy(footnotes_el)
+    footnotes_ol_el = footnotes_slug_el.cssselect("ol")[0]
+    footnotes_ol_el.set("start",str(fn_counter))
+    for el in footnotes_ol_el: footnotes_ol_el.remove(el)
+    for el in slug_footnotes[slug_name]: footnotes_ol_el.append(el)
+    section_el.append(footnotes_slug_el)
 
   # fix all the internal hrefs
   slug_href_els = et.getroot().xpath('.//*[@href]')
