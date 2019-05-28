@@ -18,7 +18,7 @@ pdf: thesis.tex
 	$(BIBER) thesis.bcf
 	$(LATEX2PDF) thesis.tex
 
-html: thesis.tex
+html: thesis.html
 	python filters/split_gitbook.py
 	cp -r css html_output/.
 	cp -r libs html_output/.
@@ -44,7 +44,7 @@ gfx/%.svg: gfx/%.pdf
 gfx/%.png: gfx/%.svg
 	convert $< $@
 
-thesis.html: Makefile templates/gitbook.html src/*.md src/*.bib filters/*.py
+thesis.html: Makefile templates/gitbook.html src/*.md src/*.bib filters/*.py png_images
 	$(PANDOC) "$(INPUTDIR)"/latex_macros.md \
     "$(INPUTDIR)"/0[0-1]*_*.md \
 	"$(INPUTDIR)"/10[1-7]_chapter_*.md \
