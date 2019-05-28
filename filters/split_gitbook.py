@@ -127,7 +127,7 @@ for slug_name, slug_el in slug_content.items():
   for toc_li_el in summary_el.cssselect(".chapter"):
     if "data-path" in toc_li_el.attrib:
       href_all = toc_li_el[0].attrib["href"]
-      href_result = re.match("(.+\.html)", href_all)
+      href_result = re.match(r"(.+\.html)", href_all)
       if href_result:
         toc_li_el.attrib["data-path"] = href_result.group(1)
         data_level = toc_li_el.attrib['data-level']

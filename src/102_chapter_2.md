@@ -90,7 +90,7 @@ the relative placement of the experiments as well as the main
 elements of the LHC accelerating chain: LINAC2, PSB, PS, SPS
 and the LHC ring. Figure credit to
 [Forthommel(CC BY-SA 3.0 license)](https://commons.wikimedia.org/wiki/File:Cern-accelerator-complex.svg).
-](gfx/102_chapter_2/CERN-accelerator-complex.pdf){
+](gfx/102_chapter_2/Cern-accelerator-complex.pdf){
 #fig:CERN_Acc_complex width=70%}
 
 
