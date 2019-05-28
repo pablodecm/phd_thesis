@@ -11,4 +11,5 @@ panflute-path: 'filters'
 chapters: true
 link-citations: true
 csl: templates/ieee.csl
+github-repo: pablodecm/phd_thesis
 ---

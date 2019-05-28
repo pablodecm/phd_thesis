@@ -22,6 +22,7 @@ html: thesis.html
 	python filters/split_gitbook.py
 	cp -r css html_output/.
 	cp -r libs html_output/.
+	co -r gfx html_output/.
 	
 thesis.tex: src/*.md before gfx/101_chapter_1/mexican_hat.pdf gfx/104_chapter_4/neural_network.pdf
 	$(PANDOC) "$(INPUTDIR)"/latex_macros.md \
