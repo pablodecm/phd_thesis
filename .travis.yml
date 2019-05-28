@@ -14,7 +14,6 @@ before_install:
 
 install:
   - conda create --yes -n phd_thesis python=3.6
-  - conda install 
   - conda install --yes pandoc pandoc-crossref
 script:
   - make pdf
