@@ -76,9 +76,9 @@ def finalize(doc):
       a.append(b_el)
       b_el.text = data_level
       b_el.tail = content
-      i_el.tail = content
     else:
       li.set("data-level", "")
+      i_el.tail = content
     li.set("data-path", "thesis.html")
     uls[-1].append(li)
 
