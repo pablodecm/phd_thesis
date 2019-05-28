@@ -1,7 +1,7 @@
 sudo: required
 dist: xenial
 before_install:
-  - sudo apt-get -qq update && sudo apt-get install -y --no-install-recommends texlive-fonts-recommended texlive-latex-extra texlive-fonts-extra dvipng texlive-latex-recommended texlive-science texlive-generic-extra texlive-bibtex-extra biber 
+  - sudo apt-get -qq update && sudo apt-get install -y --no-install-recommends texlive-fonts-recommended texlive-latex-extra texlive-fonts-extra dvipng texlive-latex-recommended texlive-science texlive-generic-extra texlive-bibtex-extra biber pdf2svg imagemagick
   - wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh -O miniconda.sh
   - chmod +x miniconda.sh
   - bash miniconda.sh -b -p $HOME/miniconda
@@ -15,7 +15,8 @@ before_install:
 install:
   - conda create --yes -n phd_thesis python=3.6
   - source activate phd_thesis
-  - conda install --yes pandoc pandoc-crossref
+  - conda install --yes pandoc pandoc-crossref panflute lxml cssselect python-slugify
 script:
   - make pdf
+  - make html
 
