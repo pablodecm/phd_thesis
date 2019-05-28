@@ -2,7 +2,7 @@
 % pandoc template heavily based in latex-mimosis example
 \documentclass{templates/mimosis}
 
-
+\usepackage[T1]{fontenc} 
 
 \usepackage{metalogo}
 \usepackage{subfig}
