@@ -125,7 +125,7 @@ the particularities of the problems we are trying to solve, in
 order to understand whether the tools at hand are answering the right questions.
 Otherwise we
 risk falling for the anti-pattern
-"*if all you have is a hammer, everything looks like a nail*", which could
+"if all you have is a hammer, everything looks like a nail", which could
 significantly slow down the pace of scientific progress. This issue
 is particularly pressing for particle collider experiments, where the
 acquired familiarity with a given set of data analysis techniques might
