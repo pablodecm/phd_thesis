@@ -1,5 +1,5 @@
 PANDOC=pandoc
-LATEX2PDF=pdflatex
+LATEX2PDF=pdflatex -interaction=nonstopmode -halt-on-error
 BIBER=biber
 
 BASEDIR=$(CURDIR)
