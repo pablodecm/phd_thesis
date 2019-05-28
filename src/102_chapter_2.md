@@ -1008,7 +1008,7 @@ The figure has been adapted from [@Sirunyan:2017ulk].
 #fig:CMS_transverse width=70%}
 
 In addition to the set of particles in the hard proton-proton
-interaction, the effect of pileup interactions can be accounted for by 
+interaction, the effect of pileup interactions can be accounted for by
 adding the particle outcome of a random number of randomly sampled
 soft interactions matching their approximately expected distribution
 in the collisions given the instantaneous luminosity conditions.
@@ -1647,5 +1647,3 @@ weakly-interacting particles were produced in the hard
 interaction or by its direct products. Furthermore, any mis-detections
 or mis-measurements of the momenta of some of the produced particles
 can lead to transverse energy imbalances.
-
-
