@@ -62,7 +62,6 @@ def finalize(doc):
     elif len(key) < len(uls):
       uls = uls[:len(key)]
     li = etree.Element("li", attrib={"class" : "chapter"})
-    li.set("data-path", "thesis.html")
     content = " {}".format(elem["content"])
     a = etree.Element("a", attrib={"href" : "#{}".format(elem["identifier"])})
     li.append(a)
@@ -77,9 +76,10 @@ def finalize(doc):
       a.append(b_el)
       b_el.text = data_level
       b_el.tail = content
+      i_el.tail = content
     else:
       li.set("data-level", "")
-      i_el.tail = content
+    li.set("data-path", "thesis.html")
     uls[-1].append(li)
 
   toc_html = etree.tostring(ul_sum, encoding="unicode",pretty_print=True)

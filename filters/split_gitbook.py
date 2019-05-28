@@ -9,6 +9,7 @@ from slugify import slugify
 import re
 from pathlib import Path
 import copy
+import json
 
 input_file = "thesis.html"
 # parse HTML as a tree and remove extra text and comments
@@ -28,7 +29,9 @@ div_l1_els = section_el.cssselect(".section.level1")
 
 # to save all the slugs name and their content
 slug_content = {}
+slug_title = {}
 slug_content["index"] = header_el
+slug_title["index"] = "Statistical Learning and Inference at Particle Collider Experiments"
 section_el.remove(header_el)
 section_el.remove(footnotes_el)
 
@@ -44,6 +47,7 @@ for div_l1_el in div_l1_els:
 
   # add level1 slug to content (now to keep the order)
   slug_content[h1_slug] = div_l1_el
+  slug_title[h1_slug] = str(h1_text)
   section_el.remove(div_l1_el)
 
   # we can get all the level 2 section divs in each div
@@ -56,8 +60,8 @@ for div_l1_el in div_l1_els:
     order_slugs.append(h2_slug)
     # add content to dict and remove
     slug_content[h2_slug] = div_l2_el
+    slug_title[h2_slug] = str(h2_text)
     div_l1_el.remove(div_l2_el)
-
 
 # now for each slug get all ids and add the slug name to a dict
 ids_slug_name = {}
@@ -87,6 +91,8 @@ path.mkdir(exist_ok=True)
 slug_name_t = "{}.html"
 # this counter is to preserve document wise
 fn_counter = 0
+# this is a list that will be used to create a search index
+search_index = []
 for slug_name, slug_el in slug_content.items():
   # make a copy of the element tree
   et = copy.deepcopy(html_et)
@@ -116,6 +122,19 @@ for slug_name, slug_el in slug_content.items():
         new_id = slug_name_t.format(ids_slug_name[curr_id]) + "#" + curr_id
         slug_href_el.attrib["href"] =  new_id
 
+  # fix the data paths for the search index function
+  summary_el = et.getroot().cssselect(".summary")[0]
+  for toc_li_el in summary_el.cssselect(".chapter"):
+    if "data-path" in toc_li_el.attrib:
+      href_all = toc_li_el[0].attrib["href"]
+      href_result = re.match("(.+\.html)", href_all)
+      if href_result:
+        toc_li_el.attrib["data-path"] = href_result.group(1)
+        data_level = toc_li_el.attrib['data-level']
+        # change to file href if unnumbered or up to two level header
+        if (data_level=="") or re.match(r"\d+$",data_level) or re.match(r"\d+\.\d+$",data_level):
+          toc_li_el[0].set("href", href_result.group(1))
+
   # the next/prev element will be at the end of the book body
   book_body_el = et.getroot().cssselect(".book-body")[0]
   # add next and previous buttons to page
@@ -140,8 +159,17 @@ for slug_name, slug_el in slug_content.items():
     a_prev = a_prev.format(a_href=a_href,a_class=" ".join(a_cls))
     prev_el = lxml.html.fromstring(a_prev)
     book_body_el.append(prev_el)
+  
+
+  search_index.append([slug_name_t.format(slug_name), slug_title[slug_name],
+                      lxml.html.tostring(section_el, encoding="unicode",method="text")])
 
   # write to file
   file_name = path / slug_name_t.format(slug_name)
   with open(file_name,"wb") as f:
     et.write(f, encoding="utf-8", method="html")
+
+# write also search index to file
+index_file_name = path / "search_index.json"
+with open(index_file_name, "w") as f:
+  json.dump(search_index, f,ensure_ascii=True, indent=2)
