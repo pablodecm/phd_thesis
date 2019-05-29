@@ -24,7 +24,6 @@ Given the data-centric nature of the next chapters, particular significance
 will be given to the acquisition, processing and simulation of individual
 experimental observations, commonly referred to as events.
 
-
 ## The Large Hadron Collider
 
 The Large Hadron Collider (LHC) is the largest and most powerful particle
@@ -47,13 +46,11 @@ particle physics, extending by a factor of seven the reach at the
 highest collision energy, formerly achieved by the Tevatron collider at
 Fermilab.
 
-
 ![Depiction of the placement of LHC tunnel and the main experiments
 places at its collision points (ATLAS, ALICE, CMS and LHCb) relative
 to Geneva and the French-Swiss border.
 The image has been adapted from [@Servicegraphique:1708849].
-](gfx/102_chapter_2/LHC_overall.pdf){
-#fig:LHC_overall width=70%}
+](gfx/102_chapter_2/LHC_overall.pdf){#fig:LHC_overall .vector width=70%}
 
 The main reason for building a high-energy proton-proton collider such as the
 LHC instead of an electron-positron more powerful than LEP, given the difficulties
@@ -67,12 +64,11 @@ luminosities) are technically achievable, which makes them suitable for
 the discovery of rare but interesting physical processes.
 While the LHC and most of its detectors can also be used to study
 collisions
-of nuclei from heavier atoms, such as $\textrm{Pb}$, $\textrm{Au}$ 
+of nuclei from heavier atoms, such as $\textrm{Pb}$, $\textrm{Au}$
 or $\textrm{Xe}$ ions,
 which have important scientific use cases such as recreating
 the conditions present in the early universe, in this work we will
 be focussing on proton-proton collisions.
-
 
 ### Injection and Acceleration Chain
 
@@ -84,15 +80,12 @@ The purpose of this section
 is to outline the sequence of steps followed to obtain the high energy
 proton bunches that are used for high-energy collisions at the LHC.
 
-
 ![Schematic representation of the CERN Accerator Complex, including the
 the relative placement of the experiments as well as the main
 elements of the LHC accelerating chain: LINAC2, PSB, PS, SPS
 and the LHC ring. Figure credit to
 [Forthommel(CC BY-SA 3.0 license)](https://commons.wikimedia.org/wiki/File:Cern-accelerator-complex.svg).
-](gfx/102_chapter_2/Cern-accelerator-complex.pdf){
-#fig:CERN_Acc_complex width=70%}
-
+](gfx/102_chapter_2/Cern-accelerator-complex.pdf){#fig:CERN_Acc_complex .vector width=70%}
 
 The process begins with the extraction of a low-energy beam of protons by
 filling a duoplasmatron device
@@ -102,7 +95,7 @@ into to a linear accelerator, named LINAC2, which boosts them to an energy
 of 50 MeV. The next step of acceleration occurs at the Proton Synchrotron
 Booster (PSB), which receives beams split from the
 LINAC2 beam line and increases their energy to 1.4 GeV using four
-superimposed synchrotron rings. Promptly after, the Proton Synchrotron (PS) 
+superimposed synchrotron rings. Promptly after, the Proton Synchrotron (PS)
 further splits and boosts the energy of proton bunches to 25 GeV. The
 penultimate step of the chain is the Super Proton Synchrotron (SPS) which
 accelerates the proton bunches to 450 GeV and injects them in opposite
@@ -113,7 +106,7 @@ The main LHC machine is composed by two adjacent proton beam lines
 vacuum ($10^{-10}-10^{-11}~\textrm{mbar}$), in order to reduce
 the likelihood of spurious collisions of the highly-boosted
 hadrons with gas molecules. The proton trajectories are bent
-around the ring using a total of 1232 super-conducting dipole 
+around the ring using a total of 1232 super-conducting dipole
 electromagnets,
 each 15 m long and kept at a temperature of 1.9 K using
 superfluid helium, capable of providing very strong magnetic
@@ -137,7 +130,7 @@ referred as *squeezed*) at the interaction region
 right before switching to collision mode. Once
 the characteristics of the proton beams are suitable, the quadrupoles
 focus the beam trajectories and collisions begin. A stable
-configuration is then adopted by the LHC machine, providing about 7 keV 
+configuration is then adopted by the LHC machine, providing about 7 keV
 of energy per turn to the beam to account for synchrotron radiation losses using
 the RF cavities. In the absence of problems, the proton beams are kept
 circling the LHC ring and colliding at the IPs for several hours until
@@ -146,7 +139,7 @@ a period that typically is referred as a LHC *fill*. The *fill* is
 terminated when some problem occurs or when all the proton bunches
 inside the ring are *dumped* (made collide) against graphite absorbers
 tangent to the beam pipes.
- 
+
 ### Operation Parameters {#sec:op_pars}
 
 One of the most relevant parameters for a particle collider is the
@@ -177,11 +170,11 @@ small tilt of the beams at the crossing point, characterised by
 the crossing angle $\phi_c$, which avoids parasitic interactions
 between bunches but reduces the luminosity by approximately:
 $$ \mathcal{F} = \left (  1 +
- \left ( \frac{\phi_c \sigma_z}{2\sigma^{*}} 
+ \left ( \frac{\phi_c \sigma_z}{2\sigma^{*}}
  \right )^2 \right )^{-1/2} $$ {#eq:lumi_factor}
 where $\sigma_z$ is the root mean square (RMS) bunch length and $\sigma^{*}$
 is the RMS of the beam in the transverse direction at the interaction volume.
-The peak instantaneous luminosities per day 
+The peak instantaneous luminosities per day
 for the different years of proton-proton data acquisition periods
 (also known as *runs*)
 at the LHC are summarised in [Figure @fig:peak_lumi], those numbers can
@@ -191,8 +184,7 @@ $\mathcal{L}_\textrm{design} = 10^{34}\ \textrm{cm}^{-2} \textrm{s}^{-1} = 10\ \
 ![Peak luminosity per day as measured using the CMS detector for the
 all the proton-proton data-taking periods of the LHC to date. Figure from
 [CMS Public Luminosity Results](https://twiki.cern.ch/twiki/bin/view/CMSPublic/LumiPublicResults#Multi_year_plots).
-](gfx/102_chapter_2/peak_lumi_pp.pdf){
-#fig:peak_lumi width=100%}
+](gfx/102_chapter_2/peak_lumi_pp.pdf){#fig:peak_lumi .vector width=100%}
 
 From Equation [-@eq:lumi_beam] it can be inferred that that value of
 instantaneous luminosity varies between LHC fills depending on the beam
@@ -221,7 +213,7 @@ by a detector during a year or a longer data acquisition period.
 Given the high density of protons in each bunch at the collision
 points, every bunch crossing generates a few dozen proton-proton interactions,
 a phenomenon that is commonly referred to
-as *pileup*. 
+as *pileup*.
 The products of all these interactions go through the surrounding
 detectors at almost the same time, which complicates
 the interpretation of the detector readouts as the product of a
@@ -251,7 +243,7 @@ region, as depicted in Figure [-@fig:pileup].
 Quite rarely, given the small relative cross section of *hard*
 scattering processes in comparison with the total scattering
 cross section as discussed in Section [-@sec:pheno],
-one of the produced interactions might involve a large momentum 
+one of the produced interactions might involve a large momentum
 transfer between partons,
 which is characteristic of the fundamental
 physical processes of special interest at the LHC,
@@ -285,8 +277,6 @@ caused by the previous or subsequent crossings, in what is referred to
 as *out-of-time pileup*, that becomes an important consideration for detector
 design in high-luminosity environments.
 
-
-
 ### Experiments {#sec:lhc_experiments}
 
 Around the collision volume at each of the interaction points, large
@@ -300,7 +290,7 @@ experiments are installed at the LHC interaction points:
   the largest experiment at the LHC, designed as a
   general-purpose detector to study the various products of high-energy
   interactions, especially those of high-luminosity proton-proton collisions.
-  While one of the most important 
+  While one of the most important
   scientific goals of the ATLAS experiment was to discover Higgs boson
   and provide a detailed study of its properties, it was also built with
   the aim of extensive testing of Beyond the Standard Model (BSM) theories.
@@ -332,7 +322,6 @@ experiments are installed at the LHC interaction points:
   as well as shedding some light on the processes that occurred
   a few microseconds after the Big Bang.
   
-
 Additionally, three smaller experiments are built around the mentioned
 detectors with specific research purposes: TOTEM [@TOTEM:2008JINST],
 LHCf [@LHCf:2008JINT] and MoEDAL [@MoEDAL:2014PP]. Both TOTEM and LHCf
@@ -343,7 +332,6 @@ CMS and ATLAS interactions points respectively. MoeDAL is instead built
 at the same experimental space than LHCb and its main aim is to search
 for evidence of production of magnetic monopoles and other highly ionising
 stable massive particles.
-
 
 ## The Compact Muon Solenoid {#sec:cms}
 
@@ -372,7 +360,7 @@ intermediate particle. After collecting data from a large
 number of collisions, a subset of relevance of the data
 can be compared with the expected theoretical predictions,
 and statistical inference in the form of interval estimates
-on parameters of interest or hypothesis testing 
+on parameters of interest or hypothesis testing
 of alternative explanations can be performed.
 
 The CMS detector is built inside and around a large cylindrical coil of
@@ -400,8 +388,7 @@ for a more comprehensive account.
 ![Cutaway view of the CMS detector, based on a three-dimensional representation,
 an highlighting the main detecting systems and characteristics.
 The image has been adapted from [@sakuma2014detector].
-](gfx/102_chapter_2/CMS_detector.pdf){
-#fig:CMS_detector width=90%}
+](gfx/102_chapter_2/CMS_detector.pdf){#fig:CMS_detector .vector width=90%}
 
 ### Experimental Geometry {#sec:exp_geom}
 
@@ -421,7 +408,7 @@ convention consistent with the previous definition of the $z$ and $y$ axes.
 As mentioned before, particle momentum is the main observable of the detected
 particles. The energy is simply a function of the momentum and the mass of
 the particle, as shown by the relation $E^2 = p^2 + m^2$, expressed in
-natural units ($c=1$). 
+natural units ($c=1$).
 Because the $x$ and $y$ momentum components
 are insensitive
 to the initial state boost in the $z$ direction due to the stochastic
@@ -439,7 +426,7 @@ which varies between different
 collisions and it is hard to estimate precisely in the laboratory
 frame of reference.
 
-Since the dependence on the initial state $z$ boost 
+Since the dependence on the initial state $z$ boost
 would complicate the statistical analysis
 and the definition of derived observables, an alternative observable
 is used. The rapidity $y$ is defined as:
@@ -454,7 +441,7 @@ Lorentz boost in the $z$ direction. Because the rapidity depends on
 the total energy/momentum of the particle, which might not be possible to
 measure with high precision in hadron collider detectors,
 it is more suitable to approximate it. The approximation is referred to as
-the *pseudo-rapidity* $\eta$, and can be defined as: 
+the *pseudo-rapidity* $\eta$, and can be defined as:
 $$\eta = \frac{1}{2} \ln \left ( \frac{p+p_z}{E-p_z} \right ) =
  \ln \left ( \tan \frac{\theta}{2} \right )
  $$ {#eq:pseudo_rapidity}
@@ -496,7 +483,7 @@ to Lorentz force, a particle with a transverse momentum  $p_T$
 and a forward momentum $p_z$ would describe an helicoidal trajectory,
 where the curvature radius in the transverse plane $r_T$ and the
 transverse momentum are related:
-$$r_T = \frac{p_T}{qB}  \quad 
+$$r_T = \frac{p_T}{qB}  \quad
   \Longrightarrow \quad p_T
   [\textrm{GeV/c}] =  0.3 \cdot q[\textrm{e}] \cdot B[\textrm{T}]
   \cdot r_T[\textrm{m}]  $$ {#eq:lorentz_eq}
@@ -553,8 +540,7 @@ as well as the main detector sub-components.
 The tracker is approximately symmetric around
 $r=0$, so only the top half is shown. Figure has been adapted
 from [@Chatrchyan:2014fea].
-](gfx/102_chapter_2/tracker_colour.pdf){
-#fig:CMS_tracker width=90%}
+](gfx/102_chapter_2/tracker_colour.pdf){#fig:CMS_tracker .vector width=90%}
 
 The detector is composed of two main parts: a silicon pixel detector
 system situated very close to the interaction point and
@@ -634,8 +620,7 @@ the unknown coordinate in each case, some layers of the tracker
 (in blue colour in Figure [-@fig:CMS_tracker]) are composed of
 two modules instead on one, with a small tilt of 0.1 rad that allows
 to obtain a precise 3D coordinate for a track hit by combining the
-two local coordinates and their module positions. 
-
+two local coordinates and their module positions.
 
 ### Electromagnetic Calorimeter {#sec:cms_ecal}
 
@@ -666,10 +651,9 @@ photodetectors placed at the end of each lead tungstate crystal.
 tree-dimensional model of the detector geometry. The placement
 of the lead tungstate crystal is shown for part of
 the barrel and endcaps. The figure has been adapted from [@CERN-LHCC-97-033].
-](gfx/102_chapter_2/ecal_from_tdr.pdf){
-#fig:CMS_ecal width=90%}
+](gfx/102_chapter_2/ecal_from_tdr.pdf){#fig:CMS_ecal .vector width=90%}
 
-The ECAL is composed of two main parts, the barrel calorimeter (EB) 
+The ECAL is composed of two main parts, the barrel calorimeter (EB)
 section covering pseudo-rapidities up to $|\eta| < 1.479$, and two
 symmetrically positioned endcap calorimeters (EE) further
 extending the coverage to $|\eta|< 3.0$. The trapezoid-shaped
@@ -703,7 +687,7 @@ of the crystal trapezoids. Avalanche photodiodes (APD) are used for
 light detection and amplification at the barrel crystals while
 vacuum phototriodes (VPT) are used for the endcaps, given
 their different radiation hardness and sensitivity to
-magnetic fields. 
+magnetic fields.
 
 In addition to the EE and EB, a sampling
 detector referred as pre-shower electromagnetic calorimeter,
@@ -715,8 +699,6 @@ region. The main purpose of the pre-shower extension is to
 distinguish high-energy photons coming directly from the
 collision region and high energy neutral pions that have
 decayed into two closely-spaced photons.
-
-
 
 ### Hadronic Calorimeter {#sec:cms_hcal}
 
@@ -739,8 +721,7 @@ detector segments relative to the beam line and the solenoid magnet.
 The HCAL is symmetric around
 $r=0$, so only the top half is shown. The figure adapted from
 [@Chatrchyan:2009ag].
-](gfx/102_chapter_2/HCAL.pdf){
-#fig:CMS_hcal width=70%}
+](gfx/102_chapter_2/HCAL.pdf){#fig:CMS_hcal .vector width=70%}
 
 The different segments of the CMS HCAL
 are shown in [Figure @fig:CMS_hcal].
@@ -758,7 +739,7 @@ ranges, the hadronic calorimeter system is complemented by an outer
 detector (HO) outside of the solenoid. The HO is composed of five rings
 of scintillator tiles, effectively using the solenoid material as
 absorbing material. Because the absorbing material path length is shorter
-around $\eta=0$, the central ring is shielded by large iron plates and 
+around $\eta=0$, the central ring is shielded by large iron plates and
 an additional layer of scintillating material, yielding a total
 absorber length over $11.8\lambda_I$ and therefore improving its measuring
 capabilities.
@@ -768,7 +749,7 @@ and after absorber plates. The size of those plates depends on
 their geometrical placement and are aligned according to their angular
 coordinates between layers, so each longitudinal projection corresponds to
 an approximate area $\Delta\eta\times\Delta\phi= 0.087\times0.087$ within
-the HB coverage region and $\Delta\eta\times\Delta\phi= 0.17\times0.17$ 
+the HB coverage region and $\Delta\eta\times\Delta\phi= 0.17\times0.17$
 outside it. When secondary particles go through the scintillating tiles,
 part of the energy is absorbed and promptly released as violet-blue visible
 light, over 65% of the total amount of emitted light within 25 ns.
@@ -797,7 +778,6 @@ based on 165 cm of steel absorber plates and quartz fibres aligned of the
 z-axis, each with an effective detecting
 area of $\Delta\eta\times\Delta\phi= 0.17\times0.17$.
 
-
 The fibres running along the HF detect and guide the Cherenkov light of the
 charged secondary particles produced in the showers to photomultipliers
 tubes (PMT) placed behind a 40 cm thick steel and polyethylene shield.
@@ -811,7 +791,6 @@ the rest starting at a depth of 22 cm. By comparing the readouts
 from the long and short fibres the type of shower can be inferred,
 given that electromagnetic showers are much shorter than hadronic showers.
 
-
 ### Muon System {#sec:cms_muon}
 
 The scientific objective of the CMS muon sub-system, or outer tracker,
@@ -822,7 +801,7 @@ without a significant energy loss. While their trajectories can be
 detected in the inner tracker, the amount of energy loss due to
 bremsstrahlung is much smaller than those of electrons or positrons
 due to its much heavier mass
-(given that the emission probability scales with $1/m^2$) 
+(given that the emission probability scales with $1/m^2$)
 and hence the do not
 deposit a significant fraction of their energy in the ECAL or
 the HCAL. The simplest way then to augment the amount of information
@@ -878,7 +857,6 @@ of fast resistive plate chambers (RPC) are positioned both
 in the barrel and the endcap sections, up to pseudo-rapidities
 $|\eta| < 1.6$.
 
-
 ### Trigger and Data Acquisition {#sec:trigger}
 
 As discussed in Section [-@sec:pheno], the occurrence of
@@ -887,28 +865,28 @@ properties of fundamental interactions in
 proton-proton collisions is purely stochastic given some initial conditions,
 plus their relative frequency is
 very rare compared with known
-phenomena. In order increase the expected chances of 
-recording interesting phenomena, the LHC collides 40 million 
+phenomena. In order increase the expected chances of
+recording interesting phenomena, the LHC collides 40 million
 high-density proton bunches every second inside the CMS
-detector. Furthermore, 
+detector. Furthermore,
 as discussed in Section [-@sec:pile_up], tens of
-proton-proton interactions typically happen 
+proton-proton interactions typically happen
 within each bunch crossing.
 The CMS sub-systems are hence detecting a good fraction of 100s of particles
 produced as a result of the interactions at each bunch crossing,
 in addition of being subjected to instrumental noise or external radiation
-sources such as cosmic rays. 
+sources such as cosmic rays.
 
 The combined readout of all sub-detectors
 each 25 ns amounts to a large data size, due to the total number
-of sub-system channels, even if efficient techniques for 
+of sub-system channels, even if efficient techniques for
 representation and compression of information are used. Given that technical
 limitations on the amount of data that can be recorded exist,
 a practical choice for data acquisition is to keep only the detailed detector
 information of collisions that could be maximally useful to study the properties
 of fundamental interactions in subsequent data analyses. The decision system
 that makes the choice of whether to record or filter out the detailed detector
-readouts for a given collision, is commonly referred as *trigger*, 
+readouts for a given collision, is commonly referred as *trigger*,
 and is based on a fast and possibly asynchronous analysis of those readouts. In
 particular, such decision criteria is typically focussed on the most
 relevant properties
@@ -927,7 +905,6 @@ in two stages: the level 1 trigger (L1), which is a custom-hardware based
 solution that reduces the detector readout rate to 100 kHz, and the high-level
 trigger (HLT), a second step reducing it to the required 1 kHz and that
 is instead carried out by a commodity computer farm.
-
 
 ## Event Simulation and Reconstruction {#sec:event}
 
@@ -952,7 +929,7 @@ is to attempt to reconstruct all the primary particles that were produced
 in the main proton-proton interaction of the collision and
 estimate their main properties,
 through a process generally referred as *event reconstruction*.
-Nevertheless, 
+Nevertheless,
 for carrying out successfully the aforesaid task it is convenient to
 be able to have a detailed model of the detector readout output
 expected for a given set of particles produced in a collision.
@@ -964,12 +941,11 @@ that are happening both in the proton-proton collisions and when particles
 propagate through the CMS detector is first discussed. Such overview doubles as
 an introduction of the next section, where a description
 of how realistic simulations of the detector readouts (i.e. events)
-can be obtained using computational tools is provided. 
+can be obtained using computational tools is provided.
 Afterwards, the inverse process is tackled, which is considerably harder
 and often ill-defined, namely how can we estimate the
 set of primary particles that were produced in the collision given the
 detector readout, through event reconstruction techniques.
-
 
 ### A Generative View {#sec:gen_view}
 
@@ -982,7 +958,7 @@ partons, given that the total interaction cross section is
 heavily dominated by soft scattering processes, a small fraction
 of collisions would include physically interesting process
 such as the production of heavy particles (e.g. a
-Higgs boson). The absolute and differential rates 
+Higgs boson). The absolute and differential rates
 for such *hard* processes can be predicted as outlined
 in Section [-@sec:factorisation]. Therefore, for a specific process
 in a proton-proton interaction, realistic high-dimensional
@@ -1004,8 +980,7 @@ kinematics properties that would propagate through the detector.
 ![Transverse view of a section of the CMS detector and the interactions
 of the various particle types with the detecting sub-components.
 The figure has been adapted from [@Sirunyan:2017ulk].
-](gfx/102_chapter_2/CMS_transverse.pdf){
-#fig:CMS_transverse width=70%}
+](gfx/102_chapter_2/CMS_transverse.pdf){#fig:CMS_transverse .vector width=70%}
 
 In addition to the set of particles in the hard proton-proton
 interaction, the effect of pileup interactions can be accounted for by
@@ -1041,14 +1016,14 @@ After passing through the HCAL without interacting notably, muons
 reach the outer tracking system providing additional trajectory
 points.
 
-The trajectories of high-energy electrons 
+The trajectories of high-energy electrons
 are also recorded by the CMS inner tracker,
 but as mentioned in Section [-@sec:cms_ecal], their interactions
 differ from those caused by muons because electrons
 lose energy
 rapidly due to bremsstrahlung when they reach the ECAL, producing subsequent
 electromagnetic showers. It is worth noting that within CMS reconstruction
-and analysis, it is common to simply use the term *electron* 
+and analysis, it is common to simply use the term *electron*
 to refer both to electrons and positrons, their charge inferred from the
 curvature sign of their trajectories. Charged hadrons, the term
 here largely referring to charged pions, kaons and protons, behave
@@ -1082,12 +1057,12 @@ of high energy collisions: neutrinos. Neutrinos only interact via
 weak and gravitational forces, hence the probability of
 interaction with the detecting elements of CMS is negligible. They thus escape
 the experimental area undiscovered. The production of high-energy
-neutrinos, or other weakly-interacting unknown 
+neutrinos, or other weakly-interacting unknown
 hypothetical particles (e.g. dark matter candidates), can
 nevertheless be inferred by the total transverse energy imbalance. While
 the initial longitudinal momentum in
 the laboratory frame is unknown due to the
-proton compositeness, the initial total transverse momentum 
+proton compositeness, the initial total transverse momentum
 is very close to zero given that the collisions occur head-on. Because
 detecting structures of CMS have a near complete angular
 coverage around the interaction points, with the exception of
@@ -1124,7 +1099,7 @@ and the corresponding detector readouts presented in the previous section
 is extremely useful for obtaining a general understanding
 the operation of the CMS detector, it is not detailed enough to
 realistically model the detector readouts given a set of particles generated
-in a collision. Most of the relevant dynamics for modelling, 
+in a collision. Most of the relevant dynamics for modelling,
 such as interactions between protons, the produced particles and the
 detector material or the detector response, are of stochastic nature,
 hence they have to be specified either by sampling
@@ -1147,7 +1122,7 @@ detector volume. The propagation of each particle through magnetic and
 electric fields can often be treated independently
 though a stochastic chain of time steps, that can an any point branch
 out to produce
-new particles through decays and other secondary particle generating 
+new particles through decays and other secondary particle generating
 physical processes, so local energy deposits in the different detector
 structures can be recorded. After propagating all particles, the
 combination of all energy deposits in the detecting volumes can
@@ -1170,7 +1145,7 @@ which can affect the readouts and subsequent
 interpretation due to the overlapping of detector deposits
 and detector sensitivity dead-times.
 
-As can be conjectured by its level of detail, such 
+As can be conjectured by its level of detail, such
 simulation processes are very time consuming, taking several
 minutes of CPU time given currently available computing
 technologies, for producing a realistic detector readout for
@@ -1199,7 +1174,6 @@ the use of unsupervised machine learning techniques structurally similar
 to those describe in [Section @sec:ann] is being investigated to provide
 a fast simulation alternative without relying in a simplistic
 parameterisations [@Paganini:2017hrr; @deOliveira:2017pjk].
-
 
 ### Event Reconstruction {#sec:event_reco}
 
@@ -1248,7 +1222,7 @@ pixel and strip detector, referred to as  *hits*,
 to trajectories of charged particles, simply called *tracks*. This inverse
 measurement problem is approached in CMS by using a combinatorial
 extension of the Kalman Filter
-algorithm [@Billoir:1990we; @Mankel:334615; @Chatrchyan:2014fea]. In broad terms, 
+algorithm [@Billoir:1990we; @Mankel:334615; @Chatrchyan:2014fea]. In broad terms,
 the algorithm
 starts by selection sets of two-hit and three-hit associations from
 the inner layers, referred to
@@ -1260,9 +1234,6 @@ threshold and removes possible duplicates. Once the set of hits that define
 each track are found, their parameters are fitted again using a more detailed
 prediction step in the Kalman filter, thus obtaining more accurate estimates
 for their origin, momentum and direction.
-
-<!-- could mention iterative tracking, multiple seeding, and muon/electron
-tracking-->
 
 The reconstructed charged particle trajectories can be used to identify
 the spatial locations where proton-proton interactions occurred
@@ -1280,7 +1251,7 @@ be identified
 with the one whose linked tracks transverse momenta squared sum $\sum p_T^2$
 is the largest. The distinction of a main primary vertex is useful to
 mitigate the effect of pile-up interactions in reconstruction by
-removing the contributions from particles linked to pileup vertices. 
+removing the contributions from particles linked to pileup vertices.
 
 Regarding the calorimeter detector readouts, the initial step comprises
 the clustering of low-level deposits in each sub-detector, so as to identify
@@ -1370,7 +1341,7 @@ the rejection of signals from very energetic
 hadrons produced in the collision that are able to transverse
 the dense calorimeter and magnet section and still produce a response
 in the muon detectors, that are referred to as *punch-through* hadrons.
-In addition, muons are a common product of the decay of hadrons and it 
+In addition, muons are a common product of the decay of hadrons and it
 is thus important to differentiate between muons produced in
 the primary interaction, or *prompt muons*, and those produced
 in a secondary decay of another particle. The amount of energy
@@ -1441,7 +1412,7 @@ that produce partons or other parton-decaying intermediate particles
 (e.g. $H \rightarrow b \bar{b}$), such reconstructed objects are not
 directly practical because their individual momenta cannot be linked
 with original parton momentum. This is because the processes of
-fragmentation, hadronisation, decays 
+fragmentation, hadronisation, decays
 and associated radiation are stochastic, producing
 tree-like structures with multiple leafs as discussed
 in [Section @sec:parton_showers],
@@ -1452,7 +1423,6 @@ while this factor is lessen by charged hadron subtraction techniques (CHS)
 [@CMS:2014ata] based on removing candidates not associated with a
 primary vertex.
 
-
 A possible way to construct simpler observables that can be
 linked with the original partons is to create composite objects based
 the remaining candidates through clustering. These objects,
@@ -1461,7 +1431,7 @@ and radiated energy produced, so the original parton energy and momentum
 can be recovered from the summed of the components. They can be
 geometrically viewed as cones coming from the interaction region,
 covering an angular area $\Delta R$ of a given size in an outwards
-direction, that contains 
+direction, that contains
 a collimated set of hadrons and radiated photons flying away a
 direction similar to the original parton. Several jet clustering
 algorithms exist, each characterised by a given a size or resolution
@@ -1483,7 +1453,7 @@ based on the $\textrm{anti-k}_T$ algorithm [@Cacciari:2008gp]. This
 is a sequential algorithm, also referred to as
 hierarchical agglomerative clustering in statistical language. The
 algorithm
-starts by assigning each candidate to each own cluster and successively 
+starts by assigning each candidate to each own cluster and successively
 merging them according to the following distances between two
 jets indexes as i and j respectively:
 $$ d_{ij} = \min ( p_{Ti}^{2a}, p_{Tj}^{2a}) \frac{\Delta R_{ij}^2}{R^2}
@@ -1499,12 +1469,12 @@ initial candidates, which are placed in a list. If the minimum
 corresponds to a given distance between two candidates $d_{ij}$
 then both candidates are removed from the candidate list
 and group together by summing their
-four momenta forming a composite object, which is in turn 
+four momenta forming a composite object, which is in turn
 added to the list. Alternatively, if the minimum distance
 is $d_{iB}$, the $i$ candidate is assigned as a jet and removed
 from the list. Such procedure is recursively applied until
 the list is empty, because all single and composite candidates
-have been grouped with other candidates or defined as a jets of 
+have been grouped with other candidates or defined as a jets of
 a given size $R$. The choice of the parameter $R$ has to provide
 a balance between covering all the radiation from the initial
 parton and being increasingly affected by noise produced by soft
@@ -1516,7 +1486,7 @@ that include final states with highly boosted intermediate
 particles, that produce a collimated set of hadrons and radiation
 when they decay, commonly with internal structure
 that can be exploited to improve the sensitivity.
-Various sequential clustering 
+Various sequential clustering
 algorithms can be defined by considering a different value
 of $a$ in Equation [-@eq:antikt_distance]. If a negative choice
 for the exponent $a$, as used in the $\textrm{anti-k}_T$ algorithm,
@@ -1534,9 +1504,6 @@ that greatly reduce this discrepancies by
 sequentially shifting and rescaling the jet four-momenta based
 on extensive calibrations obtained from simulation.
 
-<!-- could expand a little bit in energy calibration and quote
-expected uncertainties -->
-
 So far, jets have been defined as an experimental simplification
 of hadronisation, decay and fragmentation chains
 in order to estimate  the energy and the momenta
@@ -1549,7 +1516,7 @@ particles like a Higgs boson $H$ or top quarks/antiquarks,
 which predominantly decay to $b$ quarks. Heavy flavour $b$ quarks,
 and to a lesser extent also for $c$ quarks, hadronise producing $B$ (and
 $D$) hadrons that have lifetimes long enough to fly away from the
-primary vertex before decaying. 
+primary vertex before decaying.
 
 ![Schematic representation of the features of a heavy-flavour jet
 that can be used for jet tagging including the presence charged tracks, with
@@ -1557,8 +1524,7 @@ a large impact parameter (IP), that is not compatible with the primary vertex
 (PV),
 and a reconstructed secondary vertex (SV), both due to the decay of $B$
 or $C$ hadrons. The figure has been adapted from [@Sirunyan:2017ezt].
-](gfx/102_chapter_2/Figure_001.pdf){
-#fig:CMS_btag_scheme width=50%}
+](gfx/102_chapter_2/Figure_001.pdf){#fig:CMS_btag_scheme .vector width=50%}
 
 Some properties of the decay of $B$ and $D$ hadrons can be used to
 distinguish heavy flavour jets from those produced by light quarks and gluon
@@ -1587,8 +1553,7 @@ in CMS during 2016. The misidentification probability and efficiencies
 are obtained from the subset of reconstructed jets with a $p_T>20\ \textrm{GeV}$
 from a large $\textrm{t}\bar{\textrm{t}}$ simulated sample.
 The figure has been adapted from [@Sirunyan:2017ezt].
-](gfx/102_chapter_2/Figure_016.pdf){
-#fig:CMS_btag_comp width=70%}
+](gfx/102_chapter_2/Figure_016.pdf){#fig:CMS_btag_comp .vector width=70%}
 
 Heavy flavour tagging, particularly b-tagging can very useful for analyses
 considering jets in  final states, such as the search for Higgs pair production
@@ -1596,7 +1561,7 @@ with CMS data described in [Chapter @sec:higgs_pair]. The misidentification
 versus efficiency curve of the main b-tagging
 algorithms that were available in 2016 for high-energy jets is shown
 in [Figure @fig:CMS_btag_comp]. They differ in the subset of information
-associated to the jet that is considered and the specifics of the 
+associated to the jet that is considered and the specifics of the
 multivariate techniques used to construct the final discriminator. The simplest
 b-tagging algorithm, referred to as jet probability (JP) is only based a
 calibrated estimation of the displaced track probabilities. The b-tagging
@@ -1636,7 +1601,7 @@ this accounts to computing the vectorial sum of the transverse
 momenta of all PF reconstructed objects:
 $$ \vec{p}_T^\textrm{miss} =  \sum \vec{p}_{Ti}^\textrm{miss}$$ {#eq:met_pf}
 where $\vec{p}_T^\textrm{miss}$ is the total missing transverse
-momentum, whose Euclidean norm modulo is the missing 
+momentum, whose Euclidean norm modulo is the missing
 transverse energy $E_T^\textrm{miss}$, and $\vec{p}_{Ti}^\textrm{miss}$ is
 the transverse momentum each PF candidate.
 

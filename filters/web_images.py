@@ -1,6 +1,6 @@
 """ 
-Panflute filter that substitutes all PDF images by their SVG transform, which
-was created using pdf2svg in the make file
+Panflute filter that substitutes all PDF images by their SVG/PNG transform, which
+was created using pdf2svg and convert in the Makefile
 """
 
 import panflute as pf
@@ -10,7 +10,10 @@ def prepare(doc):
 
 def action(elem, doc):
   if isinstance(elem, pf.Image):
-    elem.url = elem.url.replace(".pdf",".png")
+    if "vector" in elem.classes:
+      elem.url = elem.url.replace(".pdf",".svg")
+    else:
+      elem.url = elem.url.replace(".pdf",".png")
 
 def finalize(doc):
   pass

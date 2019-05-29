@@ -6,7 +6,7 @@ date: 30 November 2018
 numbersections: true
 secnumdepth: 3
 bibliography: src/bibliography.bib
-panflute-filters: [epigraphs, latex_tables, svg_images, gitbook_toc]
+panflute-filters: [epigraphs, latex_tables, web_images, gitbook_toc]
 panflute-path: 'filters'
 chapters: true
 link-citations: true
