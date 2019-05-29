@@ -23,7 +23,7 @@ html: thesis.html
 	cp -r css html_output/.
 	cp -r libs html_output/.
 	cp -r gfx html_output/.
-	
+
 thesis.tex: src/*.md before gfx/101_chapter_1/mexican_hat.pdf gfx/104_chapter_4/neural_network.pdf
 	$(PANDOC) "$(INPUTDIR)"/latex_macros.md \
 	"$(INPUTDIR)"/0[0-1]0_*.md \
@@ -69,7 +69,7 @@ gfx/%.pdf: gfx/%.tex
 
 clean:
 	rm -f *.pdf *.out *aux *bbl *blg *log *toc \
-	      *.ptb *.tod *.fls *.fdb_latexmk *.lof	
+	      *.ptb *.tod *.fls *.fdb_latexmk *.lof
 
 
 .PHONY: pdf
