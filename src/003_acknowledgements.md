@@ -61,7 +61,7 @@ for carrying out the majority of my research so I would like to thank everyone
 that works to make such institution function as it does.
 
 One achievements are nothing but the product of incremental improvements
-over the work, ideas and shared experiences of others, hence this section
+over the work, ideas and shared experiences of others, thus the present section
 is guaranteed to be incomplete. Hence if a conversation we had,
 a paper you published, a blog post you produced, a presentation you gave,
 a question you answered, a book you wrote or some open-source software

@@ -51,3 +51,34 @@ h1.title {
   margin-left: auto;
   margin-right: auto;
 }
+
+blockquote{
+  font-size: 1.2em;
+  width:70%;
+  margin:50px auto;
+  font-style:italic;
+  padding:1.2em 30px 1.2em 75px;
+  line-height:1.6;
+  position: relative;
+  margin-bottom: 10em;
+}
+
+blockquote::before{
+  font-family:Arial;
+  content: "\201C";
+  font-size:4em;
+  position: absolute;
+  left: 10px;
+  top:-10px;
+}
+
+blockquote::after{
+  content: '';
+}
+
+.book .book-body .page-wrapper .page-inner section.normal blockquote {
+  margin: 0 0 0 30%;
+  padding: 0 0.5em 0 3em;
+  opacity: 0.75;
+  border-left: 0px solid #dcdcdc
+}
