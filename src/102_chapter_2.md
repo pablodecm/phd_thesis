@@ -205,9 +205,6 @@ density) are different as long as the beam energies are matching. Such notion
 will be particularly useful when talking about the amount of data collected
 by a detector during a year or a longer data acquisition period.
 
-<!-- TODO: add something about measurement of luminosity maybe -->
-<!-- TODO: find out a way to link well to detectors -->
-
 ### Multiple Hadron Interactions {#sec:pile_up}
 
 Given the high density of protons in each bunch at the collision
@@ -817,7 +814,7 @@ The detector is symmetric around
 $r=0$ axis and the $z=0$ plane,
 so only the top quarter is shown.
 Figure adapted from [@Sirunyan:2018fpa].
-](gfx/102_chapter_2/cms_muon.pdf){#fig:CMS_muon width=70%}
+](gfx/102_chapter_2/cms_muon.pdf){#fig:CMS_muon .vector width=70%}
 
 The muon system is the most external sub-detector of CMS
 and it is based on gaseous tracking detector technologies,

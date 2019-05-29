@@ -1,6 +1,5 @@
 # Acknowledgements {.unnumbered}
 
-
 First and foremost, I would like to thank my PhD supervisor Tommaso Dorigo
 for his support and guidance during the last three years. In addition to the
 valuable feedback that he provided on the various projects presented
@@ -67,7 +66,7 @@ is guaranteed to be incomplete. Hence if a conversation we had,
 a paper you published, a blog post you produced, a presentation you gave,
 a question you answered, a book you wrote or some open-source software
 you developed was helpful to the work
-presented in this thesis, I am sincerely thankful. 
+presented in this thesis, I am sincerely thankful.
 Last from an academic perspective, I would like to acknowledge
 Francisco Matorras and Alexander Read for their willingness for their
 work as external reviewers of this thesis.

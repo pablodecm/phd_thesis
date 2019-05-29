@@ -17,13 +17,12 @@ narrative, yet I believe that is has been worth the cost
 for a different take on the data analysis problems
 at particle colliders.
 
-
 \vspace{1.0cm}
 
 Most of the work included in this report has been carried
 out while employed by the INFN - Sezione di Padova as an
 Early Stage Researcher of the AMVA4NewPhysics MSCA-ITN.
-AMVA4NewPhysics is a European research network (EU Horizon 
+AMVA4NewPhysics is a European research network (EU Horizon
 2020 Grant
 Agreement 675440) that provided the funding and
 context for the ventures described in this document.

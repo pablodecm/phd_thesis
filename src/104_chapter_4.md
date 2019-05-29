@@ -64,7 +64,7 @@ where the goal is predicting the value of an output variable
 $\boldsymbol{y}$ (here a multi-dimensional vector for generality)
 based on the observed values of the input
 variables $\boldsymbol{x}$, based on a *learning set* of $n$ input vectors
-with known output values 
+with known output values
 $S = \{(\boldsymbol{x}_0,\boldsymbol{y}_0),...,(\boldsymbol{x}_n,\boldsymbol{y}_n)\}$.
 The output values $\boldsymbol{y}$ are known in the learning set, because they
 were previously determined by an external method, typically a teacher
@@ -94,7 +94,7 @@ used for improving at the specified task, but rather to perform well
 on additional unseen observations sampled from the joint distribution
 $p(\boldsymbol{x}, \boldsymbol{y})$. Supervised
 learning algorithms exploit the conditional relations between the input
-and the output variables, in order to classify new observations 
+and the output variables, in order to classify new observations
 better than a random classification rule that does not depend on
 the value of $\boldsymbol{x}$. When using machine learning
 techniques in data analysis at the LHC, as will be reviewed in [Section @sec:ml_hep],
@@ -197,7 +197,7 @@ datasets or for theoretical studies.
 
 Because most learning algorithms optimise $f$, or its parameters,
 using the learning set $S$, the empirical risk $R_\textrm{S}(f)$ is not a good
-estimator of the expected generalisation error $R(f)$. In general, 
+estimator of the expected generalisation error $R(f)$. In general,
 $R_\textrm{S}(f)$ underestimates $R_\textrm{S}(f)$ because the statistical
 fluctuations of the finite number of observations in $S$ can be learnt to
 increase the performance on $S$, while they are not useful for prediction
@@ -268,7 +268,7 @@ and its gradients are zero elsewhere; in addition, it is not convex,
 a property which makes the
 minimisation task in [Equation @eq:learning_erm] hard to
 tackle by optimisation algorithms. In fact, it can be proven
-that finding the function $f$ in $F$ that minimises directly the 
+that finding the function $f$ in $F$ that minimises directly the
 $R_{0-1}$ empirical risk with a training sample is a NP-hard
 problem [@nguyen2013algorithms]. The
 Bayes optimal classifier for the 0-1 loss can nevertheless be easily
@@ -277,7 +277,7 @@ of the conditional expectation:
 $$
 f_B(\boldsymbol{x}) = \mathop{\textrm{arg min}}_{y \in \mathcal{Y}}  \mathop{\mathbb{E}}_{
 y \sim p(\boldsymbol{y} | \boldsymbol{x})}
-\left [ \mathbb{1}(y \neq f(\boldsymbol{x})) \right ] = 
+\left [ \mathbb{1}(y \neq f(\boldsymbol{x})) \right ] =
 \mathop{\textrm{arg max}}_{y \in \mathcal{Y}} p(y | \boldsymbol{x})
 $$ {#eq:bayes_optimal}
 thus the optimal classifier amounts to the prediction of the most likely
@@ -315,7 +315,7 @@ p(y = 1| \boldsymbol{x}) \\
 \left ( 1 +
 \frac{p(\boldsymbol{x} | y = 0) p(y = 0)}{
 p(\boldsymbol{x} | y = 1) p(y = 1)} \right )^{-1}
-\end{aligned}  
+\end{aligned}
 $$ {#eq:bayes_optimal_bce}
 where the second line in the equation is a direct consequence of Bayes
 theorem and from the last term it can be clearly seen that the
@@ -340,10 +340,10 @@ $$
 L_\textrm{CE} ( \boldsymbol{y} , f(\boldsymbol{x})) = - \sum_i y_i \log \hat{y}_i
 $$ {#eq:general_ce}
 which can be used to recover [Equation @eq:binary_xe] when $k=2$, considering
-the one-dimensional target and prediction as the i=1 elements 
+the one-dimensional target and prediction as the i=1 elements
 and that $y_0=1-y$ and $\hat{y}_0=1-f(x)$. If the prediction
 output is to generally represent exclusive class probabilities, as is the goal of soft
-classification, the prediction sum is expected to be one. 
+classification, the prediction sum is expected to be one.
 A simple way to ensure the aforementioned property
 is to apply a function that ensures that the prediction outputs are in
 the range $[0,1]$ and normalised so $\sum_i \hat{y}_i=1$. The *softmax function*
@@ -373,14 +373,12 @@ $$
 \left [ L_\textrm{CE} ( y , f(\boldsymbol{x}))  \right ] =
 p(y = y_i| \boldsymbol{x}) \\
 &= \frac{p(\boldsymbol{x} | y = y_i) p(y = y_i)}{
-\sum_{\forall y_i \in \{0,..., k-1\}}p(\boldsymbol{x} | y = y_i) p(y = y_i)}
-\end{aligned}  
+\sum_{\forall y_i \in \{0,..., k-1\}}p(\boldsymbol{x} | y = y_i)
+p(y = y_i)}
+\end{aligned}
 $$ {#eq:bayes_optimal_ce}
 which can also be expressed as a function of a sum of density ratios
 of the categories.
-
-<!-- TODO: basic loss for regression -->
-
 
 ## Machine Learning Techniques {#sec:ml_techniques}
 
@@ -428,10 +426,10 @@ with a constant prediction $w_r$ for each leaf. A generic type
 of decision trees, which is referred to as classification
 and regression trees (CART) [@breiman2017classification] can be expressed
 as a function of the input $t(\boldsymbol{x})$ as a sum over
-the indicator function $\mathbb{1}_\mathcal{X}^r(\boldsymbol{x})$ 
+the indicator function $\mathbb{1}_\mathcal{X}^r(\boldsymbol{x})$
 of each subspace (see [Equation @eq:indicator]) as follows:
 $$
-t(\boldsymbol{x}) = \sum^{\mathcal{X}_r \in R} w_r \mathbb{1}_{\mathcal{X}_r}(\boldsymbol{x}) 
+t(\boldsymbol{x}) = \sum^{\mathcal{X}_r \in R} w_r \mathbb{1}_{\mathcal{X}_r}(\boldsymbol{x})
 $$ {#eq:cart_indicator}
 where $w_r$ is the outcome for each subspace, noting the summands
 will be zero for all subsets $\mathcal{X}^r$ except for one because their
@@ -458,8 +456,7 @@ which based on a threshold for the input variable indexed by the number
 indicated. This tree corresponds to the first on the ensemble of trees used
 for classification in [Chapter @sec:higgs_pair], which was trained
 using binary cross entropy as loss function.
-](gfx/104_chapter_4/tree.pdf){
-#fig:tree width=80%}
+](gfx/104_chapter_4/tree.pdf){#fig:tree .vector width=80%}
 
 Given its structural limitations, a single CART tree of small
 maximum depth $d$ performs rather poorly a given supervised
@@ -516,10 +513,9 @@ $$
 \begin{aligned}
 R(T_j)  \sim \sum_{(\boldsymbol{x}_i,\boldsymbol{y}_i) \in S} \bigg( &
 \underbrace{\frac{ \partial L(\boldsymbol{y}_i, T_{(j-1)}(\boldsymbol{x}_i))}{
-\partial T_{(j-1)}(\boldsymbol{x}_i)}}_{g_i} t_j(\boldsymbol{x}_i)  \\ &+ 
+\partial T_{(j-1)}(\boldsymbol{x}_i)}}_{g_i} t_j(\boldsymbol{x}_i)  \\ &+
 \frac{1}{2} \underbrace{\frac{\partial^2 L(\boldsymbol{y}_i, T_{(j-1)}(\boldsymbol{x}_i))}{
-\partial T^{2}_{(j-1)}(\boldsymbol{x}_i)}}_{h_i} t_j^2(\boldsymbol{x}_i) \bigg)
- + \Omega(t_j)
+\partial T^{2}_{(j-1)}(\boldsymbol{x}_i)}}_{h_i} t_j^2(\boldsymbol{x}_i) \bigg) + \Omega(t_j)
 \end{aligned}
 $$ {#eq:risk_opt}
 where $g_i$ and $h_i$ are so-called gradient statistics, computed
@@ -545,8 +541,8 @@ it is possible to redefine the risk of a given tree structure
 and set of leaf weight at given training step as:
 $$
  R(T_j)  \sim \sum^{\mathcal{X}_r \in R} \left (
- w_r \underbrace{\sum^{\boldsymbol{x}_i \in S} g_i \mathbb{1}_{\mathcal{X}_r}(\boldsymbol{x}_i)}_{G_r}
- + \frac{1}{2} w^2_r \underbrace{\sum^{\boldsymbol{x}_i \in S} ( h_i + \lambda ) \mathbb{1}_{\mathcal{X}_r}(\boldsymbol{x}_i)}_{H_r + \lambda}
+ w_r \underbrace{\sum^{\boldsymbol{x}_i \in S} g_i \mathbb{1}_{\mathcal{X}_r}(\boldsymbol{x}_i)}_{G_r} +
+ \frac{1}{2} w^2_r \underbrace{\sum^{\boldsymbol{x}_i \in S} ( h_i + \lambda ) \mathbb{1}_{\mathcal{X}_r}(\boldsymbol{x}_i)}_{H_r + \lambda}
  \right ) + \gamma L
 $$ {#eq:tree_risk_redef}
 where $G_r$ and $H_r$ represent the sum of $g_i$ and $h_i$ over all the
@@ -571,8 +567,7 @@ the threshold that maximises the gain $\mathcal{G}$,
 that is defined as:
 $$
 \mathcal{G} = \frac{1}{2} \left( \frac{G_L}{H_L + \lambda}  +
-  \frac{G_R}{H_R + \lambda}
-  - \frac{(G_L+G_R)^2}{H_L + H_R + \lambda} \right) + \gamma
+  \frac{G_R}{H_R + \lambda} - \frac{(G_L+G_R)^2}{H_L + H_R + \lambda} \right) + \gamma
 $$ {#eq:tree_gain}
 where $G_L$ and $H_L$ are the sum of gradient statistics
 left of the threshold and $G_R$ and $H_R$ are those
@@ -716,8 +711,7 @@ $\boldsymbol{y}$ by means simple non-linear transformations. The output
 value of a node each layer (other than the input layer) is the result
 of applying an activation function $g$ to a linear
 combination of the previous layer outputs plus possibly a bias term.
-](gfx/104_chapter_4/neural_network.pdf){
-#fig:neural_network width=80%}
+](gfx/104_chapter_4/neural_network.pdf){#fig:neural_network .vector width=80%}
 
 The full feed-forward model $f(\boldsymbol{x}; \boldsymbol{\phi})$ is
 based on the composition of transformation of the type described in
@@ -739,7 +733,7 @@ experimental success of these family techniques has led to the
 concept of *deep learning*,
 where multiple transformations layers are used for learning
 data representations in many learning tasks.
- 
+
 A good choice for depth and overall structure for a neural network
 model depends on the problem at hand as well as the characteristics and size
 of the learning set available, thus it frequently has to be defined
@@ -885,7 +879,7 @@ can only be simulated, which will not affect the validity the following
 discussion. The probability
 distribution function of the mixture can be expressed as:
 $$
-p(\boldsymbol{x}| \mu, \boldsymbol{\theta} ) = (1-\mu) p_b(\boldsymbol{x} | \boldsymbol{\theta}) 
+p(\boldsymbol{x}| \mu, \boldsymbol{\theta} ) = (1-\mu) p_b(\boldsymbol{x} | \boldsymbol{\theta})
                                                 + \mu p_s(\boldsymbol{x} | \boldsymbol{\theta})
 $${#eq:mixture_general}
 where $\mu$ is a parameter corresponding to the signal mixture fraction,
@@ -904,7 +898,7 @@ long as $b$ is known and fixed and $s$ is the only parameter of interest.
 Probabilistic classification techniques will effectively approximate
 the conditional probability of each class, as discussed in
 [Equation @eq:bayes_optimal_bce] for the binary classification. A way to
-approximate the density ratio $r(\boldsymbol{x})$ 
+approximate the density ratio $r(\boldsymbol{x})$
 between two arbitrary distribution functions $\rho(\boldsymbol{x})$ and
 $q(\boldsymbol{x})$ is then to train
 a classifier - e.g. a neural network optimising cross-entropy. If samples
@@ -913,11 +907,11 @@ for observations from $q(\boldsymbol{x})$, the density ratio can be
 approximated from the soft BCE classifier output $s(\boldsymbol{x})$ as:
 $$
 \frac{s(\boldsymbol{x})}{1-s(\boldsymbol{x})} \approx
-\frac{p(y = 1| \boldsymbol{x})}{p(y = 0| \boldsymbol{x})} = 
+\frac{p(y = 1| \boldsymbol{x})}{p(y = 0| \boldsymbol{x})} =
 \frac{p(\boldsymbol{x} | y = 1) p(y = 1)}{p(\boldsymbol{x} | y = 0) p(y = 0)}
 =  r(\boldsymbol{x}) \frac{p(y = 1)}{p(y = 0)}
 $$ {#eq:lr_clf}
-thus the density ratio  $r(\boldsymbol{x})$ 
+thus the density ratio  $r(\boldsymbol{x})$
 can be approximated by a simple function of the trained classifier output
 directly from samples of observations. The factor
 $p(y = 1)/p(y = 0)$ is independent on $\boldsymbol{x}$, and can
@@ -982,7 +976,7 @@ $p_\textrm{s}(\boldsymbol{x}| \boldsymbol{\theta})
 /p_\textrm{b}(\boldsymbol{x}| \boldsymbol{\theta})$.
 The previous density ratio can be approximated by training a classifier
 to distinguish signal and background observations, which is computationally
-more efficient and easier to interpret intuitively 
+more efficient and easier to interpret intuitively
 than the direct $p(\boldsymbol{x}| H_0)/p(\boldsymbol{x} |H_1)$
 approximation mentioned before.
 
@@ -1016,7 +1010,6 @@ the main motivation for using the likelihood ratio - i.e. the
 Neyman-Pearson lemma - does not apply because the hypothesis considered
 are not simple when nuisance parameters are present.
 
-
 #### Sufficient Statistics Interpretation {#sec:sufficiency_clf}
 
 Another interpretation of the use of signal versus background
@@ -1029,7 +1022,7 @@ we obtain:
 $$
 p(\boldsymbol{x}| \mu, \boldsymbol{\theta} ) = p_b(\boldsymbol{x} | \boldsymbol{\theta})   \left ( 1-\mu
                     + \mu \frac{p_s(\boldsymbol{x} | \boldsymbol{\theta})}{p_b(\boldsymbol{x} | \boldsymbol{\theta})}
-                    \right )  
+                    \right )
 $${#eq:mixture_div}
 from which we can already prove that the density ratio
 $s_{s/ b}(\boldsymbol{x})= p_s(\boldsymbol{x} | \boldsymbol{\theta}) /
@@ -1048,7 +1041,7 @@ summary statistic
 $$
 s_{s/(s+b)}= \frac{p_s(\boldsymbol{x} | \boldsymbol{\theta})}{
 p_s(\boldsymbol{x} | \boldsymbol{\theta}) +
- p_b(\boldsymbol{x} | \boldsymbol{\theta})}$$  
+ p_b(\boldsymbol{x} | \boldsymbol{\theta})}$$
 is used instead of $s_{s/ b} (\boldsymbol{x})$.
 The advantage of $s_{s/(s+b)}(\boldsymbol{x})$ is that it represents
 the conditional probability of one observation $\boldsymbol{x}$ coming
@@ -1062,26 +1055,26 @@ subtracting $\mu$  we have:
 $$
 p(\boldsymbol{x}| \mu, \boldsymbol{\theta} ) = p_b(\boldsymbol{x} | \boldsymbol{\theta})   \left ( 1-2\mu
                     + \mu \frac{p_s(\boldsymbol{x} | \boldsymbol{\theta}) + p_b(\boldsymbol{x} | \boldsymbol{\theta})}{p_b(\boldsymbol{x} | \boldsymbol{\theta})}
-                    \right )  
+                    \right )
 $${#eq:mixture_sub}
 which can in turn can be expressed as:
 $$
 p(\boldsymbol{x}| \mu, \boldsymbol{\theta} ) = p_b(\boldsymbol{x} | \boldsymbol{\theta})   \left ( 1-2\mu
                     + \mu \left ( 1- \frac{p_s(\boldsymbol{x} | \boldsymbol{\theta})}{p_s(\boldsymbol{x} | \boldsymbol{\theta})
                   +p_b(\boldsymbol{x} | \boldsymbol{\theta})} \right )^{-1}
-                    \right )  
+                    \right )
 $${#eq:mixture_suff}
 hence proving that $s_{s/(s+b)}(\boldsymbol{x})$
 is also a sufficient statistic and theoretically
 justifying its use for inference about $\mu$. The advantage of both
-$s_{s/(s+b)}(\boldsymbol{x})$ 
+$s_{s/(s+b)}(\boldsymbol{x})$
 and $s_{s/b}(\boldsymbol{x})$ is that they
 are one-dimensional and do not depend on the
 dimensionality of $\boldsymbol{x}$ hence allowing much more efficient
 non-parametric density estimation from simulated samples. Note that
 we have been only discussing sufficiency with respect to the mixture
 coefficients and not the additional distribution parameters
-$\boldsymbol{\theta}$. In fact, if a subset of $\boldsymbol{\theta}$ 
+$\boldsymbol{\theta}$. In fact, if a subset of $\boldsymbol{\theta}$
 parameters are also relevant for inference (e.g. they are nuisance
 parameters) then $s_{s/(s+b)}(\boldsymbol{x})$ and
 $s_{s/b}(\boldsymbol{x})$ are not sufficient statistics
@@ -1105,7 +1098,6 @@ of $\boldsymbol{x}$. This theoretical observation will be observed
 in practice in [Chapter @sec:inferno], where a new technique is proposed to
 construct summary statistics, that is not based on classification,
 but accounts for the effect of nuisance parameters is presented.
-
 
 ### Particle Identification and Regression {#sec:particle_id_reg}
 
@@ -1151,7 +1143,6 @@ could substantially increase the
 discovery reach of analyses at the LHC that are based on final states
 containing jets, such as the search for Higgs boson pair production
 described in [Section @sec:higgs_pair].
-
 
 #### Deep Learning for Jet Tagging {#sec:deepjet}
 
@@ -1258,8 +1249,7 @@ categories are
 considered depending on the generator-level
 components: b, bb, leptonic b, c, light or gluon.
 Figure adapted from [@CMS-DP-2018-058].
-](gfx/104_chapter_4/DeepJet-schematic.pdf){
-#fig:DeepJet_schematic width=90%}
+](gfx/104_chapter_4/DeepJet-schematic.pdf){#fig:DeepJet_schematic .vector width=90%}
 
 Instead of a fixed input vector, optionally padded with zeroes for the elements
 that did not exist (e.g. not reconstructed secondary vertex has been
@@ -1321,8 +1311,7 @@ as a function of the b-tagging efficiency for both DeepCSV
 and DeepJet taggers. The corrected mistag/efficiency and its uncertainty
 for the loose, medium and tight working points are also included.
 Figure adapted from [@CMS-DP-2018-058].
-](gfx/104_chapter_4/DeepJet_SF_30GeV.pdf){
-#fig:DeepJet_b_performance width=90%}
+](gfx/104_chapter_4/DeepJet_SF_30GeV.pdf){#fig:DeepJet_b_performance .vector width=90%}
 
 While both advances in model architecture and the addition of input features allow
 notable jet tagging performance gains, they can complicate the integration
@@ -1359,5 +1348,3 @@ training framework [@markus_deepjet] to numerical precision. The successful
 integration, that is currently in use, facilitated the measurement of DeepJet
 b-tagging performance on data for the main discriminator working points,
 as shown in [Figure @fig:DeepJet_b_performance].
-
-

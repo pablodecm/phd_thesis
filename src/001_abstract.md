@@ -54,7 +54,7 @@ in the SM. Upper limits
 are also obtained for the cross sections corresponding
 to a representative set of points of the parameter space of EFT.
 The combination of those results with the ones obtained
-from the study of other decay channels of HH pairs is also discussed. 
+from the study of other decay channels of HH pairs is also discussed.
 
 In addition, the exercise of reformulating the goals of high
 energy physics analysis as a statistical inference problem is combined with

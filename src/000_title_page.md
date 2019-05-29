@@ -1,4 +1,3 @@
-
 ---
 title: Statistical Learning and Inference at Particle Collider Experiments
 author: Pablo de Castro Manzano

@@ -22,7 +22,6 @@ requiring the use of likelihood-free inference techniques such as constructing
 non-parametric sample likelihoods, which in turn demand for lower
 dimensional summary statistics.
 
-
 ## Statistical Modelling {#sec:stat_model}
 
 An essential element for carrying out statistical inference is the
@@ -86,10 +85,10 @@ the experiment. We would like then to model the probability density
 distribution function generating a given observation $\boldsymbol{x}_i$
 conditional on the parameters
 of interest, that is:
-$$ 
+$$
   \boldsymbol{x}_i \sim p ( \boldsymbol{x}|\boldsymbol{\theta} )
 $$ {#eq:cond_density}
-where $\boldsymbol{\theta} \in \mathcal{\Theta} \subseteq \mathbb{R}^p$ 
+where $\boldsymbol{\theta} \in \mathcal{\Theta} \subseteq \mathbb{R}^p$
 denotes all the parameters we are interested in and affects
 the detector outcome of collisions. As will be extensively
 discussed in this chapter, an analytical or even tractable
@@ -108,7 +107,7 @@ particles of the event as well as the subsequent
 physical processes that generate the readouts in the detectors
 are overly complex, and realistic modelling can only be obtained
 through simulation, as jointly reviewed
-in [Section @sec:pheno] and [Section @sec:event]. 
+in [Section @sec:pheno] and [Section @sec:event].
 
 #### Mixture Structure
 
@@ -125,8 +124,8 @@ as the probabilistic composition of samples from multiple probabilistic
 distributions corresponding to different types of interaction
 processes occurring in the collision. If we knew the probabilistic
 distribution function of each mixture component
-$p_j(\boldsymbol{x}|\boldsymbol{\theta})$ then 
-$p ( \boldsymbol{x}|\boldsymbol{\theta} )$ could be expressed as: 
+$p_j(\boldsymbol{x}|\boldsymbol{\theta})$ then
+$p ( \boldsymbol{x}|\boldsymbol{\theta} )$ could be expressed as:
 $$
 p ( \boldsymbol{x}|\boldsymbol{\theta} ) =
 \sum^{K-1}_{j=0} \phi_j \ p_j ( \boldsymbol{x}|\boldsymbol{\theta} )
@@ -145,7 +144,7 @@ same reason that $p ( \boldsymbol{x}|\boldsymbol{\theta} )$
 is intractable, thus a more sensible description of the mixture model
 is its generative definition, described by the following
 two-step sampling procedure:
-$$ z_i \sim \textrm{Categorical}(\boldsymbol{\phi}) 
+$$ z_i \sim \textrm{Categorical}(\boldsymbol{\phi})
 \quad \longrightarrow  \quad
 \boldsymbol{x}_i \sim p_{z_i}( \boldsymbol{x} | \boldsymbol{\theta})
 $$ {#eq:mixture_gen}
@@ -214,7 +213,7 @@ in general it is not possible to infer the latent category $z_i$
 $\boldsymbol{x}_i$ may be in the support of several mixture components
 $p_j(\boldsymbol{x}|\boldsymbol{\theta})$. Only
 probabilistic statements about the generative group $j$ can be made
-based on the observations. 
+based on the observations.
 
 [^group]: The term *group/type of interactions* here generally
   refers to a set of processes that could be generatively modelled
@@ -267,7 +266,7 @@ by the interactions linked to the parameter.
 As a matter of a fact, customarily statistical inference at the LHC
 is not carried out directly on the parameters of the SM or the
 extension being studied, but on the relative frequency of the set
-of processes of interest $\phi_S$ or the properties of its 
+of processes of interest $\phi_S$ or the properties of its
 distribution $p_S(\boldsymbol{x}|\boldsymbol{\theta})$. As previously
 mentioned, the former is proportional to the cross section of the
 signal processes $\sigma_S$ (see [Section @sec:pheno])
@@ -288,7 +287,7 @@ of subatomic particles.
 
 #### Event Selection
 
-Given the mixture model structure expected for 
+Given the mixture model structure expected for
 $p ( \boldsymbol{x}|\boldsymbol{\theta} )$ and the fact we are only
 interested in a small amount of the readout generating
 processes for each collision, because in general $\phi_S \ll
@@ -334,7 +333,7 @@ function of $C$ can be simply expressed as the product
 $\mathbb{1}_\mathcal{C}=\mathbb{1}_\mathcal{A} \cdot \mathbb{1}_\mathcal{B}$.
 This framework is flexible enough to represent all deterministic event
 selections, and it could also be extended
-by an independent non-deterministic 
+by an independent non-deterministic
 term without affecting the rest of the
 considerations presented in this chapter. A non-deterministic factor could
 be useful to model for example trigger prescales,
@@ -348,22 +347,21 @@ of simple criteria, would have been imposed on the
 recorded detector
 readouts before any statistical analysis is carried out. The structure
 of the statistical model $g(\boldsymbol{x} | \boldsymbol{\theta} )$
-resulting after applying an arbitrary selection 
+resulting after applying an arbitrary selection
 $\mathbb{1}_\mathcal{C}(\boldsymbol{x})$ on a mixture model as the one
 described in [Equation @eq:cond_density] can be obtained by multiplying
 the probability density by $\mathbb{1}_\mathcal{C}(\boldsymbol{x})$.
 After including the relevant normalisation term, the resulting
 probability distribution can be expressed as:
 
-$$ 
-g(\boldsymbol{x} | \boldsymbol{\theta} ) = \frac{
- \mathbb{1}_\mathcal{C}(\boldsymbol{x})
+$$ g(\boldsymbol{x} | \boldsymbol{\theta} ) = \frac{
+  \mathbb{1}_\mathcal{C}(\boldsymbol{x})
   \sum^{K-1}_{j=0} \phi_j \ p_j ( \boldsymbol{x}|\boldsymbol{\theta})}{
-  \int \left (\mathbb{1}_\mathcal{C}(\boldsymbol{x}) 
-  \sum^{K-1}_{j=0} \phi_j \ p_j ( \boldsymbol{x}|\boldsymbol{\theta}) \right ) 
+  \int \left (\mathbb{1}_\mathcal{C}(\boldsymbol{x})
+  \sum^{K-1}_{j=0} \phi_j \ p_j ( \boldsymbol{x}|\boldsymbol{\theta}) \right )
   d \boldsymbol{x}}
   =
-  \sum^{K-1}_{j=0} \left (  \frac{ \phi_j 
+  \sum^{K-1}_{j=0} \left (  \frac{ \phi_j
   \epsilon_j
   }{
   \sum^{K-1}_{j=0} \phi_j
@@ -371,7 +369,7 @@ g(\boldsymbol{x} | \boldsymbol{\theta} ) = \frac{
   } \right ) g_j (\boldsymbol{x}|\boldsymbol{\theta})
 $$ {#eq:mixture_after_cut}
 
-where 
+where
 $g_j (\boldsymbol{x}|\boldsymbol{\theta}) =
 \mathbb{1}_\mathcal{C}(\boldsymbol{x}) p_j (\boldsymbol{x}|\boldsymbol{\theta})
  / \epsilon_j$ is the probability density function of each mixture component after
@@ -419,10 +417,10 @@ any arbitrary deterministic
 event selection $\mathbb{1}_\mathcal{C}(\boldsymbol{x})$
 is also a mixture model (see [Equation @eq:mixture_after_cut])
 and samples under the corresponding probability distribution functions
-$g_j (\boldsymbol{x}|\boldsymbol{\theta})$ and mixture fractions 
+$g_j (\boldsymbol{x}|\boldsymbol{\theta})$ and mixture fractions
 $\chi_j$ can easily obtained from the non-selected simulated events,
 as it is actually done in practice.
- 
+
 ####  Observable and Latent Variables
 
 The first step to  build a generative statistical model is to define
@@ -504,7 +502,7 @@ where each factor can be defined as follows:
   which might also be a function of theory parameters $\boldsymbol{\theta}$.
 * $p( \boldsymbol{z}_\textrm{s} | \boldsymbol{z}_\textrm{p})$ is the conditional
   density of a given parton-shower outcome.
-  $\boldsymbol{z}_\textrm{s} \in \mathcal{Z}_\textrm{d}$ 
+  $\boldsymbol{z}_\textrm{s} \in \mathcal{Z}_\textrm{d}$
   as a function of the parton-level outcome.
 * $p ( \boldsymbol{z}_\textrm{d} | \boldsymbol{z}_\textrm{s})$ is the conditional
   density of a set of detector interactions and readout noise
@@ -563,18 +561,18 @@ depicted in [Section @sec:factorisation]). Each mixture
 component $j$ in [Equation @eq:factor_joint], which represents a group
 of fundamental interactions between protons $pp \longrightarrow X$, can be
 expressed as the product of the probability of a given parton configuration
-$p(\boldsymbol{z}_\textrm{PDF}|\boldsymbol{\theta}_\textrm{PDF})$ 
+$p(\boldsymbol{z}_\textrm{PDF}|\boldsymbol{\theta}_\textrm{PDF})$
 and a mixture over all parton configurations that can
 that produce $pp \longrightarrow X$, referred as $L$ in the following
 expression:
 $$
 p(z_i|\boldsymbol{\theta})
-\ p ( \boldsymbol{z}_\textrm{p}|\boldsymbol{\theta}, z_i) = 
+\ p ( \boldsymbol{z}_\textrm{p}|\boldsymbol{\theta}, z_i) =
 p(\boldsymbol{z}_\textrm{PDF}|\boldsymbol{\theta}_\textrm{PDF})
 \sum^{g \in L} p(z_f = g| \boldsymbol{\theta}, z_\textrm{PDF})
 p ( \boldsymbol{z}_\textrm{p}|\boldsymbol{\theta}, z_f = g)
 $$ {#eq:pdf_factorisation}
-where $p(z_f = g| \boldsymbol{\theta}, z_\textrm{PDF})$ is the 
+where $p(z_f = g| \boldsymbol{\theta}, z_\textrm{PDF})$ is the
 relative probability of given partonic process $g$ given
 a parton configuration $\boldsymbol{z}_\textrm{PDF}$ and
 $p(\boldsymbol{z}_\textrm{p}|\boldsymbol{\theta}, z_f = g)$ is the probability
@@ -582,7 +580,7 @@ distribution function of the parton-level particles produced
 as a result of the interaction for a given
 partonic process $g$, which is proportional to the partonic differential cross
 section $d\sigma(ij \rightarrow X)$. This factorisation is basically
-a probabilistic model version of [Equation @eq:qcd_factorisation], 
+a probabilistic model version of [Equation @eq:qcd_factorisation],
 dealing with the QCD factorisation of the parton distribution functions and the
 hard process differential cross section.
 
@@ -595,7 +593,7 @@ considered by
 augmenting
 the factor representing the conditional probability
 density of the detector interaction and noise as a function of the
-hard interaction parton shower output 
+hard interaction parton shower output
 $p ( \boldsymbol{z}_\textrm{d} | \boldsymbol{z}_\textrm{s})$ as follows:
 $$
 p ( \boldsymbol{z}_\textrm{d} | \boldsymbol{z}_\textrm{s}) =
@@ -613,12 +611,11 @@ on the process being generated, the modelling assumptions, and the
 latent space representation chosen. As an example,
 it is often useful to factorise out the latent subspace
 that depends directly
-on the subset of parameters of interest from those that do not. 
+on the subset of parameters of interest from those that do not.
 The conditional observations in that latent subspace can sometimes be analytically
-expressed, or their dimensionality may be low enough to use 
+expressed, or their dimensionality may be low enough to use
 non-parametric density estimation techniques effectively, which can greatly
 simplify the modelling of changes in the parameters of interest.
-
 
 #### Simulated Observations {#sec:re-weighting}
 
@@ -633,8 +630,8 @@ of the detector readout $f(\boldsymbol{x})$ for events coming from
 a given process $j$ can be expressed as:
 $$
 \mathop{\mathbb{E}}_{x \sim p_j ( \boldsymbol{x}|\boldsymbol{\theta} )}
-\left [ f(\boldsymbol{x}) \right ] =  \int f(\boldsymbol{x})     
-p_j ( \boldsymbol{x}|\boldsymbol{\theta} ) d\boldsymbol{x} \approx   
+\left [ f(\boldsymbol{x}) \right ] =  \int f(\boldsymbol{x})
+p_j ( \boldsymbol{x}|\boldsymbol{\theta} ) d\boldsymbol{x} \approx
 \frac{1}{m} \sum^{\boldsymbol{x}_s \in S_j } f(\boldsymbol{x}_s)
 $$ {#eq:montecarlo_obs}
 where the last terms approximates the integral as the sum over all
@@ -645,9 +642,9 @@ in [Equation @eq:mixture_after_cut], after
 any deterministic event selection $\mathbb{1}_\mathcal{C}(\boldsymbol{x})$:
 $$
 \epsilon_j = \mathop{\mathbb{E}}_{x \sim p_j ( \boldsymbol{x}|\boldsymbol{\theta} )}
-\left [ \mathbb{1}_\mathcal{C}(\boldsymbol{x}) \right ] =  \int 
+\left [ \mathbb{1}_\mathcal{C}(\boldsymbol{x}) \right ] =  \int
 \mathbb{1}_\mathcal{C}(\boldsymbol{x})
-p_j ( \boldsymbol{x}|\boldsymbol{\theta} ) d\boldsymbol{x} \approx   
+p_j ( \boldsymbol{x}|\boldsymbol{\theta} ) d\boldsymbol{x} \approx
 \frac{1}{m} \sum^{\boldsymbol{x}_s \in S_j } \mathbb{1}_\mathcal{C}(\boldsymbol{x})
 $$ {#eq:montecarlo_eff}
 which simply corresponds to the number of simulated observations
@@ -659,8 +656,8 @@ generated by a given process $j$ can be approximated by:
 $$
 \mathop{\mathbb{E}}_{x \sim g_j ( \boldsymbol{x}|\boldsymbol{\theta} )}
 \left [ f(\boldsymbol{x}) \right ] = \frac{1}{\epsilon_j }  \int f(\boldsymbol{x})
-\mathbb{1}_\mathcal{C}(\boldsymbol{x})   
-p_j ( \boldsymbol{x}|\boldsymbol{\theta} ) d\boldsymbol{x} \approx   
+\mathbb{1}_\mathcal{C}(\boldsymbol{x})
+p_j ( \boldsymbol{x}|\boldsymbol{\theta} ) d\boldsymbol{x} \approx
 \frac{1}{\epsilon_j m} \sum^{\boldsymbol{x}_s \in S_j } f(\boldsymbol{x}_s)
 \mathbb{1}_\mathcal{C}(\boldsymbol{x})
 $$ {#eq:montecarlo_obs_sel}
@@ -678,12 +675,12 @@ $$
 \mathop{\mathbb{E}}_{x \sim g ( \boldsymbol{x}|\boldsymbol{\theta} )}
 \left [ f(\boldsymbol{x}) \right ] = \int f(\boldsymbol{x})
 \sum^{K-1}_{j=0} \chi_j g_j (\boldsymbol{x}|\boldsymbol{\theta})
- d\boldsymbol{x} \approx 
+ d\boldsymbol{x} \approx
 \sum^{K-1}_{j=0} \chi_j
 \mathop{\mathbb{E}}_{x \sim g_j ( \boldsymbol{x}|\boldsymbol{\theta} )}
-\left [ f(\boldsymbol{x}) \right ] 
+\left [ f(\boldsymbol{x}) \right ]
 $$ {#eq:montecarlo_obs_mix_sel}
-where $\chi_j=\phi_j\epsilon_j/\sum^{K-1}_{j=0} \phi_j\epsilon_j$ 
+where $\chi_j=\phi_j\epsilon_j/\sum^{K-1}_{j=0} \phi_j\epsilon_j$
 is the mixture fraction after selection
 (see [Equation @eq:mixture_after_cut]). While the problem of estimation
 of expected values might seem unrelated to the inference problem at hand,
@@ -691,8 +688,7 @@ in [Chapter @sec:dim_reduction] it will become evident that the construction
 of non-parametric likelihoods of summary statistics can be reduced
 to the estimation of expected values.
 
-
- Oftentimes, the simulated observations are generated using a somewhat
+Oftentimes, the simulated observations are generated using a somewhat
 different probability distribution than that of experimental data, maybe because
 some of the generating parameters are not known precisely beforehand (e.g.
 the properties of pileup interactions). Alternatively, we might want to
@@ -701,22 +697,22 @@ observations to realistically model observables corresponding to a
 different value of the parameters $\boldsymbol{\theta}$ or even to
 compute observables under a different process $j$. Let us suppose that
 the samples were generated under $p_Q(\boldsymbol{x} | \boldsymbol{\theta}_Q)$
-while we want to model samples 
+while we want to model samples
 under  $p_R(\boldsymbol{x} | \boldsymbol{\theta}_R)$. In that case, if both
 distributions
 have the same support, we can express the expectation value under the desired
 distribution as:
 $$
 \mathop{\mathbb{E}}_{x \sim p_R ( \boldsymbol{x}|\boldsymbol{\theta}_Q )}
-\left [ f(\boldsymbol{x}) \right ] = 
-\frac {\int f(\boldsymbol{x}) 
+\left [ f(\boldsymbol{x}) \right ] =
+\frac {\int f(\boldsymbol{x})
 \frac{p_R ( \boldsymbol{x}|\boldsymbol{\theta}_R )}{
-p_Q ( \boldsymbol{x}|\boldsymbol{\theta}_Q )}  
-p_Q ( \boldsymbol{x}|\boldsymbol{\theta}_Q )  d \boldsymbol{x}}{ 
+p_Q ( \boldsymbol{x}|\boldsymbol{\theta}_Q )}
+p_Q ( \boldsymbol{x}|\boldsymbol{\theta}_Q )  d \boldsymbol{x}}{
 \int
 \frac{p_R ( \boldsymbol{x}|\boldsymbol{\theta}_R )}{
-p_Q ( \boldsymbol{x}|\boldsymbol{\theta}_Q )}  
-p_Q ( \boldsymbol{x}|\boldsymbol{\theta}_Q )  d \boldsymbol{x}}  
+p_Q ( \boldsymbol{x}|\boldsymbol{\theta}_Q )}
+p_Q ( \boldsymbol{x}|\boldsymbol{\theta}_Q )  d \boldsymbol{x}}
 \approx   \frac{\sum^{\boldsymbol{x}_s \in S_j }
 w(\boldsymbol{x}_s) f(\boldsymbol{x}_s)}{
 \sum^{\boldsymbol{x}_s \in S_j }
@@ -724,19 +720,19 @@ w(\boldsymbol{x}_s)
 }
 $$ {#eq:reweight_intractable}
 which is analogous to what was done in [Equation @eq:montecarlo_obs],
-but accounting for a weight 
+but accounting for a weight
 $w(\boldsymbol{x}_s) = p_R ( \boldsymbol{x}_s|\boldsymbol{\theta}_R )/
 p_Q ( \boldsymbol{x}_s|\boldsymbol{\theta}_Q )$ for each simulated observation.
-This technique can be also used together with an arbitrary event selection 
+This technique can be also used together with an arbitrary event selection
 $\mathbb{1}_\mathcal{C}(\boldsymbol{x})$ simply
 by considering as event weight the product
 $w_{\mathcal{C}}(\boldsymbol{x}_s) = \mathbb{1}_\mathcal{C} (\boldsymbol{x}) w(\boldsymbol{x}_s)$, which amounts to summing over the selected events.
 In particle physics experiments, the probability distribution functions
 $p_Q(\boldsymbol{x} | \boldsymbol{\theta}_R)$ and
 $p_Q(\boldsymbol{x} | \boldsymbol{\theta}_R)$ are most likely
-intractable, thus 
+intractable, thus
 estimation of $w_{\mathcal{C}}(\boldsymbol{x}_s)$ has either to be carried
-out by non-parametric density estimation in a lower dimensional-space 
+out by non-parametric density estimation in a lower dimensional-space
 of the detector readouts (discussed in [Section @sec:dim_reduction]) or by
 directly estimating the density ratio via probabilistic classification
 as will be discussed in [Chapter @sec:machine_learning].
@@ -744,8 +740,8 @@ as will be discussed in [Chapter @sec:machine_learning].
 As previously mentioned, an advantage of using simulated observations is
 that the latent variables
 $\mathcal{H}_j= \{\boldsymbol{z}_0,...,\boldsymbol{z}_m\}$ for a given simulated
-set of observations $S_j = \{\boldsymbol{x}_0,...,\boldsymbol{x}_{m-1}\}$ 
-are known. This allows to rewrite the weight 
+set of observations $S_j = \{\boldsymbol{x}_0,...,\boldsymbol{x}_{m-1}\}$
+are known. This allows to rewrite the weight
 $w(\boldsymbol{x}_s,\boldsymbol{z}_s)$ for
 a given event as the ratio of joint distributions:
 $$
@@ -765,7 +761,7 @@ $$ {#eq:latent_reweighting}
 where the last term is an expansion of each joint distribution
 as a product of the conditional distributions discussed in
 [Equation @eq:factor_joint]. If the difference between
-$p_R(\boldsymbol{x} | \boldsymbol{\theta}_R)$ and 
+$p_R(\boldsymbol{x} | \boldsymbol{\theta}_R)$ and
 $p_Q(\boldsymbol{x} | \boldsymbol{\theta}_Q)$ is contained
 in one of the factors of the joint distribution, which is
 often the case, most of the factors in [Equation @eq:latent_reweighting]
@@ -777,10 +773,10 @@ or alternative parton distribution functions, further factoring
 the joint distribution to include explicit dependencies
 with respect to $\boldsymbol{z}_\textrm{pileup}$
 or $\boldsymbol{z}_\textrm{PDF}$, as done in [Equation @eq:pileup_fact]
-and [Equation @eq:pdf_factorisation] respectively. 
+and [Equation @eq:pdf_factorisation] respectively.
 The case when the difference between distributions is contained
 in a subset of the parton-level latent variables is one of special relevance,
-because the event weight for a given event $w(\boldsymbol{z}_s)$ 
+because the event weight for a given event $w(\boldsymbol{z}_s)$
 can be expressed as the ratio:
 $$
 w(\boldsymbol{z}_s) = \frac{p_R ( \boldsymbol{z}_\textrm{p}|\boldsymbol{\theta}_R)}{p_Q ( \boldsymbol{z}_\textrm{p}|\boldsymbol{\theta}_Q)}
@@ -793,14 +789,12 @@ a single set of simulated observations as well as to understand how
 the effect of varying parameters can be modelled via differentiable
 transformations in [Chapter @sec:inferno].
 
-
-
 ### Dimensionality Reduction {#sec:dim_reduction}
 
 In the previous overview of the basic statistical modelling principles
 of experimental high-energy physics, the structure and properties of the
 probability distribution of the full detector
-readout $\boldsymbol{x} \in \mathcal{X}$ have been considered. 
+readout $\boldsymbol{x} \in \mathcal{X}$ have been considered.
 The consideration of the detector readout as single observable variable
 $\boldsymbol{x}$ in the generative
 model greatly simplifies the modelling narrative, plus
@@ -832,12 +826,12 @@ Let us denote as $\boldsymbol{y} \in \mathcal{Y}$ the resulting variable
 after the transformation $\boldsymbol{f}(\boldsymbol{x})$ is applied
 to the observed detector readout. If the function $\boldsymbol{f}$ is
 differentiable and bijective (i.e. there is a one-to-one correspondence between
-$\boldsymbol{x}$ and $\boldsymbol{y}$), the probability density 
+$\boldsymbol{x}$ and $\boldsymbol{y}$), the probability density
 distribution function of $\boldsymbol{y}$ could be obtained as:
 $$
-p(\boldsymbol{y} | \boldsymbol{\theta}) = 
+p(\boldsymbol{y} | \boldsymbol{\theta}) =
 p(\boldsymbol{x} | \boldsymbol{\theta})
-\left | \det \frac{d\boldsymbol{x} }{d\boldsymbol{y} } \right |  
+\left | \det \frac{d\boldsymbol{x} }{d\boldsymbol{y} } \right |
 $$ {#eq:change_of_vars}
 where the last term is the Jacobian determinant of the inverse
 of $\boldsymbol{f}$. The transformations commonly used in particle
@@ -858,7 +852,7 @@ discussed.
 
 #### Event Reconstruction {#sec:event_reco_stat}
 
-The methods of event reconstruction, 
+The methods of event reconstruction,
 as described in [Section @sec:event_reco],
 provide a very efficient way to transform the high-dimensional
 detector readout to a lower-dimensional space that can more easily
@@ -869,7 +863,7 @@ readout $\boldsymbol{x}$ of an event. These methods attempt
 to walk back the generative chain described in
 [Equation @eq:factor_joint] to recover the subset of the
 parton-level $\boldsymbol{z}_\textrm{p}$ (and
-$\boldsymbol{z}_\textrm{s}$ or $\boldsymbol{z}_\textrm{d}$ 
+$\boldsymbol{z}_\textrm{s}$ or $\boldsymbol{z}_\textrm{d}$
 in some cases) that strongly depends on the detector
 readouts, providing a compressed summary of the
 information in the event
@@ -882,7 +876,7 @@ is a significant reduction from
 $\dim(\mathcal{X}) \approx \mathcal{O}(10^8)$.
 
 Due to the detector noise and characteristics, the reconstruction
-function 
+function
 $\boldsymbol{f}_\textrm{reco}(\boldsymbol{x}) :
 \mathcal{X} \longrightarrow \mathcal{Y}_\textrm{reco}$ cannot
 fully recover $\boldsymbol{z}_\textrm{p} \in \mathcal{Z}_\textrm{p}$.
@@ -894,11 +888,11 @@ particle does not even exist in $\boldsymbol{z}_\textrm{p}$. Simulated events
 can then be used to make calibrated probabilistic
 statements of the resulting reconstructed physical objects and their relation
 with the actual unobserved particles going through the detector. Particle
-identification (e.g. jet b-tagging) and fine-tuned momentum regressions 
+identification (e.g. jet b-tagging) and fine-tuned momentum regressions
 on the reconstructed objects can also be thought of as
 inference of latent variables, which amounts to using the additional
 detector information around an object to measure more
-precisely its properties. These properties include 
+precisely its properties. These properties include
 the type of particle that produced the
 detector readouts clustered for particle identification,
 or a more precise determination
@@ -971,7 +965,6 @@ by *embedding* them in vector representations internally,
 providing new
 ways to deal with the mentioned representational issue.
 
-
 #### Summary Statistics {#sec:summary_statistic}
 
 The attributes of the subset of reconstructed objects selected in an event
@@ -1007,7 +1000,7 @@ realistically
 by forward simulation, and
 has the mixture model structure and latent factorisation discussed before.
 After an arbitrary event selection $\mathbb{1}_\mathcal{C} (\boldsymbol{x})$,
-only a subset of events 
+only a subset of events
 $D_\mathcal{C} = \{\boldsymbol{x}_0,...,\boldsymbol{x}_{n_\mathcal{C}}\} \subseteq D$
 remain. These events are also independent,
 so their probability density can be expressed as:
@@ -1016,7 +1009,7 @@ g(D_\mathcal{C} | \boldsymbol{\theta}) = \prod^{\boldsymbol{x}_i \in D_\mathcal{
 g ( \boldsymbol{x}_i|\boldsymbol{\theta} )
 $$ {#eq:after_sel_prod}
 where the dependence between the distribution function after the event selection
-$g ( \boldsymbol{x}_i|\boldsymbol{\theta} )$ and that before 
+$g ( \boldsymbol{x}_i|\boldsymbol{\theta} )$ and that before
 $p ( \boldsymbol{x}_i|\boldsymbol{\theta} )$ was already described in
 [Equation @eq:mixture_after_cut]. If we are only focussed on the probability
 distribution of the events in $D_\mathcal{C}$, we would be neglecting
@@ -1051,7 +1044,7 @@ the parameters of interest $\theta$ by making explicit the contributions from
 the different mixture processes:
 $$
 \mathop{\mathbb{E}}_{D \sim p ( D |\boldsymbol{\theta} )}
-\left [ n_\mathcal{C} \right ] = n \sum^{K-1}_{j=0} \phi_j 
+\left [ n_\mathcal{C} \right ] = n \sum^{K-1}_{j=0} \phi_j
 \mathop{\mathbb{E}}_{x \sim p_j ( \boldsymbol{x}|\boldsymbol{\theta} )}
 \left [\mathbb{1}_\mathcal{C} (\boldsymbol{x}) \right ] =
 n \sum^{K-1}_{j=0} \phi_j \epsilon_j
@@ -1067,7 +1060,7 @@ as described in [Equation @eq:hard_prob]. However, if the product of the
 expected probability of a given process occurring  $\phi_j$ and the
 event selection efficiency $\epsilon_j$ is low enough
 relative to the total efficiency $\epsilon=\sum^{K-1}_{j=0} \phi_j \epsilon_j$,
-the effect of those mixture components can be safely neglected. 
+the effect of those mixture components can be safely neglected.
 
 The situation discussed above is
 often the case for events where no hard collision occurred after some
@@ -1077,7 +1070,7 @@ be neglected.
 For the subset of bunch crossings where hard interactions occur,
 the probability of a given type of interaction before any event selection
 might be expressed as the product of its cross section $\sigma_j$ by the total
-integrated luminosity during the data taking period $\mathcal{L}_\textrm{int}$ 
+integrated luminosity during the data taking period $\mathcal{L}_\textrm{int}$
 divided by the total number of bunch crossings, thus
 the expected value for number of observations $n_\mathcal{C}$ after
 an event selection that reduces to a negligible fraction the contribution
@@ -1107,7 +1100,7 @@ all parameters but $\sigma_S$ are known, a *cut-and-count* sample-based
 likelihood can be built based on [Equation @eq:binomial_selection], corresponding
 to the following probability density function:
 $$
-p ( n_\mathcal{C} | \sigma_S) = \textrm{Poisson} 
+p ( n_\mathcal{C} | \sigma_S) = \textrm{Poisson}
 \left (\sigma_s\epsilon_s + \sum^{j \in B} \sigma_j\epsilon_j \right)
 $$ {#eq:poisson_simple}
 which can be used to carry out statistical inference about $\sigma_S$
@@ -1123,7 +1116,7 @@ The probability function for the variable
 $\boldsymbol{n}_T = \{n_{\mathcal{C}_0},...,n_{\mathcal{C}_b}\}$, given
 that each $n_{\mathcal{C}_i}$ is independent, can be obtained as:
 $$
-p ( \boldsymbol{n}_T | \boldsymbol{\theta}) = \prod^{\mathcal{C}_i \in T} 
+p ( \boldsymbol{n}_T | \boldsymbol{\theta}) = \prod^{\mathcal{C}_i \in T}
 \textrm{Poisson}
 \left (\sum^{j \in H} n^{\mathcal{C}_i}_j(\boldsymbol{\theta}) \right )
 $$ {#eq:poisson_multichannel}
@@ -1132,9 +1125,9 @@ observed events coming from process $j$ after the selection $\mathcal{C}_i$.
 As long as a parametrisation of $n^{\mathcal{C}_i}_j(\boldsymbol{\theta})$
 exists,
 which can be often estimated as
-$n^{\mathcal{C}_i}_j(\boldsymbol{\theta}) =\mathcal{L} \ \sigma_j \ 
+$n^{\mathcal{C}_i}_j(\boldsymbol{\theta}) =\mathcal{L} \ \sigma_j \
 \epsilon^{\mathcal{C}_i}_j(\boldsymbol{\theta})$,
-[Equation @eq:poisson_multichannel] can be used 
+[Equation @eq:poisson_multichannel] can be used
 to construct a likelihood to carry out inference on the
 parameters $\boldsymbol{\theta}$ based on the observed value
 of the sample summary statistic $\boldsymbol{n}_T^\textrm{obs}$.
@@ -1143,7 +1136,7 @@ of the sample summary statistic $\boldsymbol{n}_T^\textrm{obs}$.
 
 The selection count vector $\boldsymbol{n}_T^\textrm{obs}(D)$, which has not been
 specified yet, could be also written
-as a sum over a function 
+as a sum over a function
 $\boldsymbol{n}_T(\boldsymbol{x}) : \mathcal{X} \subseteq \mathbb{R}^{d} \longrightarrow \mathcal{Y}
 \subseteq \{0,1\}^b \subset \mathbb{R}^{b}$
 applied for each event
@@ -1172,7 +1165,7 @@ dimensions.
 
 In general, the selection of a summary statistic
 $\boldsymbol{s}(\boldsymbol{x})$ is far from trivial, and naive choices
-can lead to large losses of useful information about the parameters of 
+can lead to large losses of useful information about the parameters of
 interest $\boldsymbol{\theta}$. From classical statistics, we can define
 a *sufficient summary statistic* as the
 function of the set of observations that can be used for carrying out
@@ -1191,7 +1184,7 @@ the parameter vector $\boldsymbol{\theta}$ if and only if
 the probability
 distribution function of $\boldsymbol{x}$ can be factorised as follows:
 $$
-p(\boldsymbol{x} | \boldsymbol{\theta}) = 
+p(\boldsymbol{x} | \boldsymbol{\theta}) =
 q(\boldsymbol{x})
 r(\boldsymbol{s}(\boldsymbol{x}) | \boldsymbol{\theta})
 $$ {#eq:sufficient_single}
@@ -1214,7 +1207,7 @@ $\boldsymbol{x}_i$,
 we may rewrite [Equation @eq:before_sel_prod] as:
 $$
 p ( D |\boldsymbol{\theta}) =
-\prod^{\boldsymbol{x}_i \in D} q(\boldsymbol{x}) 
+\prod^{\boldsymbol{x}_i \in D} q(\boldsymbol{x})
 \prod^{\boldsymbol{x}_i \in D}
 r(\boldsymbol{s}(\boldsymbol{x}_i) | \boldsymbol{\theta}) =
 q(D) r(\boldsymbol{s}(D)| \boldsymbol{\theta})
@@ -1243,7 +1236,6 @@ reduction step. An automated way to obtain powerful summary statistics
 in those cases using machine learning techniques will be presented in
 [Chapter @sec:inferno].
 
-
 #### Synthetic Likelihood {#sec:synthetic_likelihood}
 
 The advantage of using lower-dimensional summary statistics
@@ -1251,7 +1243,7 @@ $\boldsymbol{s}(D) : \mathcal{X}_D \subseteq \mathbb{R}^{d\times n}
 \longrightarrow \mathcal{Y}_D \subseteq \mathbb{R}^{b\times n}$ of the
 detector readout collected by the experiment is that often the
 generative model of $p(\boldsymbol{x} | \boldsymbol{\theta})$ can
-be used to build non-parametric likelihoods of $s(D)$ that 
+be used to build non-parametric likelihoods of $s(D)$ that
 link the observations with the model parameters, so classical inference
 algorithms can be used. This likelihoods are referred here as synthetic
 because they are not based on the actual generative model of
@@ -1265,7 +1257,7 @@ count likelihoods as shown in [Equation @eq:poisson_multichannel]. Such
 likelihood can be evaluated for the observed data $D$ and specific parameters
 $\boldsymbol{\theta}_R$, even in the case that $\boldsymbol{\theta}$
 modifies the distribution of the mixture components
-$p_j(\boldsymbol{x} | \boldsymbol{\theta})$, by forward approximating 
+$p_j(\boldsymbol{x} | \boldsymbol{\theta})$, by forward approximating
 $n^{\mathcal{C}_i}_j(\boldsymbol{\theta}_R)$ (or alternatively
 $\epsilon^{\mathcal{C}_i}_j(\boldsymbol{\theta}_R)$) using simulated observations
 for each process $j$ generated for $\boldsymbol{\theta}_R$.
@@ -1296,7 +1288,7 @@ one-dimensional interpolation between the effect of a single parameter $\theta_i
 \boldsymbol{\theta}$ at three equally spaced values (the nominal parameter values
 and the up/down variations). In that case the total effect on
 $\epsilon^{\mathcal{C}_i}_j(\boldsymbol{\theta}_k)$ is accounted by adding
-absolute shifts or multiplying marginal effects. 
+absolute shifts or multiplying marginal effects.
 
 Even assuming that the marginal
 description when a single parameter of interest varies
@@ -1311,11 +1303,11 @@ $\boldsymbol{\theta}_R = (\theta^R_0,\theta^R_1)$.  Let us consider the expected
 value for the efficiency after a given selection $\mathbb{1}_{\mathcal{C}_i}(\boldsymbol{x})$:
 $$
 \begin{aligned}
-\epsilon^{\mathcal{C}_i}_j (\boldsymbol{\theta}_R) &=  \int 
+\epsilon^{\mathcal{C}_i}_j (\boldsymbol{\theta}_R) &=  \int
 \mathbb{1}_\mathcal{C}(\boldsymbol{x})
 p_j ( \boldsymbol{x}|\boldsymbol{\theta}_R ) d\boldsymbol{x} \\
 &=
-\int \mathbb{1}_\mathcal{C}(\boldsymbol{x}) 
+\int \mathbb{1}_\mathcal{C}(\boldsymbol{x})
 p_j ( \boldsymbol{x}|\boldsymbol{\theta}_Q )
 \frac{p_j ( \boldsymbol{x}| (\theta^R_0,\theta^Q_1))}{p_j ( \boldsymbol{x}|\boldsymbol{\theta}_Q )}
 \frac{p_j ( \boldsymbol{x}| (\theta^Q_0,\theta^R_1))}{p_j ( \boldsymbol{x}|\boldsymbol{\theta}_Q )}
@@ -1368,9 +1360,6 @@ its derivatives are computed in place over the simulated observations by
 specifying the full computational graph, could also be used in analyses
 where the discussed assumption fails to realistically describe the data.
 
-<!-- TODO: parametric and non-parametric likelihood -->
-
-
 ### Known Unknowns {#sec:known_unknowns}
 
 So far we have assumed that the simulated observations can model the data
@@ -1384,7 +1373,7 @@ inference procedure to obtain unbiased estimates, and are accounted
 by additional *nuisance parameters* in the statistical model when their
 effect is known and can be approximated. For cases where
 simulation does not provide the desired level of accuracy,
-the contribution from some of the mixture components can 
+the contribution from some of the mixture components can
 often be estimated from data directly, using what are referred to
 as *data-driven estimation* techniques.
 
@@ -1480,14 +1469,14 @@ In all cases where $s(\boldsymbol{x})$ is a deterministic function,
 all differences between simulated
 observations and data in any expected observables
 originate from the differences between the
-simulation-based generative 
+simulation-based generative
 definition of $p(\boldsymbol{x} | \boldsymbol{\theta})$ and the true
 unknown generative process $p_\textrm{true}(\boldsymbol{x})$. While
 the task of evaluating and parametrising these differences directly by studying
 the raw detector output is quite convoluted, the differences can
 be corrected and their uncertainty assessed for the
 lower-dimensional intermediate states of the composition chain depicted
-in [Equation @eq:composition_summary]. 
+in [Equation @eq:composition_summary].
 
 For example, if the momenta of a
 certain subset of the reconstructed objects $\boldsymbol{y}_\textrm{reco}$
@@ -1504,7 +1493,7 @@ a function of the simulated intermediate outputs, e.g.
 in the case of reconstructed objects:
 $$
 \mathop{\mathbb{E}}_{\boldsymbol{x} \sim  p( \boldsymbol{x}| \boldsymbol{\theta} )}
-\left [ \boldsymbol{s}(\boldsymbol{x}) \right ] = 
+\left [ \boldsymbol{s}(\boldsymbol{x}) \right ] =
 \mathop{\mathbb{E}}_{\boldsymbol{y}_\textrm{reco} \sim  p( \boldsymbol{y}_\textrm{reco}| \boldsymbol{\theta}_o )}
 \left [ h(r(\boldsymbol{y}_\textrm{reco}, \boldsymbol{\theta}_\rho))\right ]
 $$ {#eq:exp_rep}
@@ -1516,7 +1505,7 @@ simulated observations,
 where $\boldsymbol{\theta}_\rho$ is the vector of parameters
 representing the different uncertainty factors.
 
-In general, the effects of all relevant 
+In general, the effects of all relevant
 nuisance parameters can be modelled
 by a combination of simulated observations re-weighting by
 $w(\boldsymbol{x}_i,\boldsymbol{z}_i | \boldsymbol{\theta}_w )$
@@ -1560,13 +1549,13 @@ addressed by the method proposed in [Chapter @sec:inferno].
 
 For some fundamental processes, the generative
 modelling provided by simulated observations
-might not be accurate enough for the purposes of a given LHC analysis. 
+might not be accurate enough for the purposes of a given LHC analysis.
 In a subset of those cases, the simulated observations can be calibrated
 to better describe the observations in well-modelled data regions, as
 mentioned in the previous section. However, if the description of
 the summary statistics considered in the analysis provided
 by the simulated observations from process $j$ is substandard,
-e.g. the number of simulated observations that could be 
+e.g. the number of simulated observations that could be
 realistically simulated is not sufficient, then
 the contribution from the mentioned mixture component might have
 to be estimated from experimental observations directly.
@@ -1602,7 +1591,7 @@ model of the data. In this section, we deal with the actual problem
 of inference of the subset of parameters of interest
 $\boldsymbol{\theta}_\iota$ once a summary statistic has already been
 chosen and the final statistical model
-$p(\boldsymbol{s}(D) | \boldsymbol{\theta})$ has been fully specified. 
+$p(\boldsymbol{s}(D) | \boldsymbol{\theta})$ has been fully specified.
 
 ### Likelihood-Free Inference {#sec:likelihood-free}
 
@@ -1642,7 +1631,7 @@ $S_0 = \{\boldsymbol{x}_0,...,\boldsymbol{x}_{m-1}\}$
 using a given vector of parameters $\boldsymbol{\theta}_0$, which is then
 compared using a distance criterion to the actual observed dataset $D$. If
 the data and the simulation are close enough, then
-$\boldsymbol{\theta}_0$ is retained as sample from the 
+$\boldsymbol{\theta}_0$ is retained as sample from the
 posterior. The
 process is repeated until the posterior is estimated with the
 desired accuracy. The quality of the posterior approximation
@@ -1676,7 +1665,6 @@ from simulated data. This approach has been recently referred as Approximate
 Frequentist Computation (AFC) [@Brehmer:2018eca], and can be also combined
 with the technique presented in [Chapter @sec:inferno].
 
-
 ### Hypothesis Testing {#sec:hypo_test}
 
 Statistical inference within experimental particle physics is often
@@ -1693,7 +1681,7 @@ parameters are fully specified, i.e.
 $p(\boldsymbol{x} | H_s) =f(\boldsymbol{x})$ does
 not depend on any non-fixed parameter. A *composite* hypothesis
 instead depends on one or more parameters $\boldsymbol{\theta}$,
-i.e. the distribution under the hypothesis can be expressed as 
+i.e. the distribution under the hypothesis can be expressed as
 $p(\boldsymbol{x} | H_c) =f(\boldsymbol{x},\boldsymbol{\theta})$.
 
 In order to carry out hypothesis testing based on a set of
@@ -1718,8 +1706,7 @@ the process of making calibrated statistical statements.
 [^statistic]: Here a statistic is a function of observations, and
   *sample summary statistic* refers to statistics the summarise a
   set of observations $\boldsymbol{s}(D) : \mathcal{X}_D \subseteq \mathbb{R}^{d\times n}
-  \longrightarrow \mathcal{Y}_D \subseteq \mathbb{R}^{b\times n}$. 
-  
+  \longrightarrow \mathcal{Y}_D \subseteq \mathbb{R}^{b\times n}$.
 
 Let us refer to the test statistic for the set of
 observations as $t_\textrm{obs}$ from here onwards. The result of
@@ -1738,7 +1725,7 @@ critical region $\mathcal{T}_C$,
 the significance level can be defined as:
 $$
 \alpha = P ( t \in \mathcal{T}_C | H_0) =
-\int_{\mathcal{T}_C} g( t| H_0) dt 
+\int_{\mathcal{T}_C} g( t| H_0) dt
 \stackrel{\textrm{1D}}{\Rightarrow} \int_{t_\bold{cut}}^\infty  g( t| H_0) dt
 $$ {#eq:significance_test}
 where $g( t| H_0)$ is the distribution of the test statistic under the null
@@ -1751,8 +1738,8 @@ when the alternative is actually true, which often referred as
 be defined as the probability of not being in the critical region
 under the alternative hypothesis:
 $$
-\beta = P ( t \not\in \mathcal{T}_C | H_1) = 
-1 - \int_{\mathcal{T}_C} g( t| H_1) dt 
+\beta = P ( t \not\in \mathcal{T}_C | H_1) =
+1 - \int_{\mathcal{T}_C} g( t| H_1) dt
 \stackrel{\textrm{1D}}{\Rightarrow} 1 - \int_{-\infty}^{t_\bold{cut}}  g( t| H_1) dt
 $$ {#eq:type2_test}
 where $g( t| H_0)$ is the distribution of the test statistic under the
@@ -1782,7 +1769,7 @@ the Neyman-Pearson lemma [@NeymanPearson1933] states that the
 *likelihood ratio*, which is a one-dimensional test statistic
 defined as:
 $$
-\Lambda( \mathcal{D}; H_0, H_1) = \frac{p(D| H_0)}{p(D| H_1)} = 
+\Lambda( \mathcal{D}; H_0, H_1) = \frac{p(D| H_0)}{p(D| H_1)} =
 \prod_{\boldsymbol{x} \in \mathcal{D}}
 \frac{p(\boldsymbol{x}| H_0)}{ p(\boldsymbol{x} |H_1)}
 $$ {#eq:likelihood_ratio}
@@ -1912,7 +1899,7 @@ at the cost of over-coverage.
 Most data analyses at the LHC, and particularly searches such as
 the one discussed in [Chapter @sec:higgs_pair],
 are carried out in blinded manner to reduce the experimenter's bias,
-i.e. the subset of observations or results 
+i.e. the subset of observations or results
 relevant for statistical inference are not considered
 (or concealed) until all the analysis procedures have defined. In order to
 optimise the various analysis components (e.g. selection or summary statistic),
@@ -1940,22 +1927,21 @@ Both the expected significance and the expected upper limit can be estimated
 asymptotically for summary statistics like the one described
 in [Equation @eq:sum_count_vector]. The effect of nuisance parameters
 can be also included in both in the asymptotic approximations or
-the Monte Carlo based estimation. The asymptotic approximation are found to 
+the Monte Carlo based estimation. The asymptotic approximation are found to
 be good empirically, within 10\% to 30\% (for situations where the
 number of events is small) of the Monte Carlo based estimation,
 and thus are frequently used for obtaining limits and significances
 in New Physics searches.
 
-
 ### Parameter Estimation {#sec:param_est}
 
 Another inference problem that can be defined based on the observed
 data, is parameter estimation, whose goal can generally be defined as
-the determination of the possible or optimal values that the 
+the determination of the possible or optimal values that the
 parameters of a statistical model in relation to a set of observations.
 Two types of parameter estimation problems
 are often considered: point estimation and interval estimation. If the
-aim is to obtain the best estimate (i.e. a single value) of a 
+aim is to obtain the best estimate (i.e. a single value) of a
 vector of parameter based on a set of observations, it is referred to
 as a *point estimation* problem. When we are instead interested
 on using a set of observations to make statistical statements about
@@ -1963,7 +1949,7 @@ a range or region for the values that the statistical model
 parameters, we are dealing with an *interval estimation* problem.
 
 Parameter estimation can be addressed either
-from a classical (i.e. also known as frequentist) standpoint 
+from a classical (i.e. also known as frequentist) standpoint
 where the true values of the parameter are assumed to be fixed but unknown,
 and intervals represent the region of parameters for which the
 set of observed data could be obtained upon repeated sampling;
@@ -1992,7 +1978,7 @@ The concept of confidence interval can also be extended to
 confidence region when a multi-dimensional parameter vector or
 several disjoint intervals are considered.
 While the definition of confidence interval  based on
-its coverage properties is rather simple, its construction 
+its coverage properties is rather simple, its construction
 based on a set of observations $D = \{\boldsymbol{x}_0,...,\boldsymbol{x}_n\}$
 can be quite challenging. It is worth noting that both upper
 and lower limit are estimators, quantities calculated by applying
@@ -2057,8 +2043,7 @@ Wilks [@wilks1938large], the $100(1-\alpha)\%$ confidence region
 for the parameter vector $\boldsymbol{\theta}$ can be determined
 using the following relation:
 
-$$
-- \ln L(D; \boldsymbol{\theta}) \leq
+$$ - \ln L(D; \boldsymbol{\theta}) \leq
 - \ln L(D; \boldsymbol{\theta}_{\textrm{ML}}) + \Delta \ln L
 $$ {#eq:delta_log}
 
@@ -2141,8 +2126,7 @@ Hessian matrix $\boldsymbol{H}$. The expectation of hessian of the
 $- \ln L(D; \boldsymbol{\theta})$  is also referred as the
 Fisher information matrix ${\boldsymbol{I}(\boldsymbol{\theta})}$ [@fisher_1925]
 and it is defined as:
-$$
-{\boldsymbol{I}(\boldsymbol{\theta})}_{ij}
+$$ {\boldsymbol{I}(\boldsymbol{\theta})}_{ij}
 =
 {\boldsymbol{H}(\boldsymbol{\theta})}_{ij}
 = \mathop{\mathbb{E}}_{D \sim p ( D |\boldsymbol{\theta} )}
@@ -2177,5 +2161,3 @@ An important advantage of this approximation, that will be used in
 [Chapter @sec:inferno] to construct an inference-aware machine learning
 loss function, is that can be interpreted both in the context of
 classical and Bayesian inference.
-
-

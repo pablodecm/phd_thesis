@@ -7,7 +7,7 @@
 In this chapter, the concepts and techniques from the previous sections are
 applied in the search for non-resonant production of Higgs boson pairs,
 using data from proton-proton collisions at a centre-of-mass energy of 13 TeV
-collected in 2016 by the CMS detector at the LHC, 
+collected in 2016 by the CMS detector at the LHC,
 corresponding to a total integrated luminosity of $35.9\ \textrm{fb}^{-1}$.
 The most probable decay channel for the Higgs boson pairs, where
 each Higgs boson leads to a $\textrm{b}\bar{\textrm{b}}$, is considered.
@@ -16,7 +16,7 @@ margin, a large background of similar events is expected from
 multi-jet QCD processes, which motivates the use of machine learning techniques
 to construct a summary statistic that can exploit the fine differences
 between signal and background for statistical inference. In fact, the
-expected background is so copious that is not possible to generate 
+expected background is so copious that is not possible to generate
 a sufficiently large number of simulated observations
 to obtain the required level of modelling accuracy, thus
 we have to resort to the development of a new data-driven background estimation
@@ -46,7 +46,7 @@ predictions. That said, several predicted properties remain unmeasured
 because of the difficulty of their experimental determination. Among
 them, the Higgs boson
 self-coupling being one of the most relevant parameters
-since it can be modified by physics beyond the standard 
+since it can be modified by physics beyond the standard
 model (BSM) [@Dib:2005re; @Grober:2010yv;
 @Contino:2012xk; @Dolan:2012ac; @Dawson:2015oha].
 
@@ -79,7 +79,7 @@ cross sections, e.g. as can be modelled by effective
 theories of anomalous couplings [@Carvalho:2016rys], in a way so
 HH production could be observed with the data
 already collected at the LHC.
- 
+
 The search of possible beyond the SM enhancements of HH production motivated
 early searches using $\sqrt{s} = 8\ \textrm{TeV}$ LHC data
 [@Aad:2015uka; @Sirunyan:2017tqo], as well
@@ -114,18 +114,17 @@ prediction, was obtained by the CMS
 $\textrm{b}\bar{\textrm{b}} \gamma \gamma$
 channel search [@Sirunyan:2017djm], which yielded an observed upper
 limit of 22 times the SM. The ATLAS
-$\textrm{b}\bar{\textrm{b}}\textrm{b}\bar{\textrm{b}}$ channel 
+$\textrm{b}\bar{\textrm{b}}\textrm{b}\bar{\textrm{b}}$ channel
 search has a similar experimental reach [@Aaboud:2018knk], studying the
 same final
 state considered in this analysis, however with a different methodology
 regarding their summary statistic and background estimation.
 
-
 A detailed description of the main characteristics and results
 of an analysis searching for
 HH production using CMS experiment data, with both Higgs
 bosons decaying into $\textrm{b}\bar{\textrm{b}}$ quark pairs,
-is included in this chapter. The data considered was acquired 
+is included in this chapter. The data considered was acquired
 by the CMS detector during the year 2016, corresponding to
 an integrated luminosity of $35.9\ \textrm{fb}^{-1}$. In the final
 state considered here, each of the four $\textrm{b}$ quark results in a
@@ -163,7 +162,6 @@ evidently does not depend on the Higgs self-coupling. Both
 box and triangle loop contributions interfere destructively in the SM
 amplitude to give rise to the total HH production.
 
-
 ![Set of HH production Feynman diagrams, representing
 all gluon-induced processes at leading order. The interactions
 depicted by (a) and (b) represent processes that are
@@ -172,8 +170,7 @@ the Higgs bosons and gluons (c) and (d), as well the contact interaction
 of two Higgs bosons with top quarks (e),
 are effective diagrams of BSM interactions.
 Figure adapted from [@Sirunyan:2018tki].
-](gfx/105_chapter_5/HH_feynman_diagrams.pdf){
-#fig:HH_feynman_diagrams width=100%}
+](gfx/105_chapter_5/HH_feynman_diagrams.pdf){#fig:HH_feynman_diagrams .vector width=100%}
 
 New physics at higher energy scales can affect processes and
 observables at the electroweak scale, such as Higgs pair production.
@@ -183,16 +180,17 @@ is a way to calculate observables of possible extensions of the SM
 without being tied to a certain class of BSM model, by adding
 non-renormalisable local interactions. In the context of Higgs
 pair production, the effect of new operators can be parametrised
-by the following effective Lagrangian: 
+by the following effective Lagrangian:
 $$
 \begin{aligned}
-\mathcal{L}_\textrm{H} = 
+\mathcal{L}_\textrm{H} =
 \frac{1}{2} \partial_{\mu}\, \textrm{H} \, \partial^{\mu} \textrm{H} -
 \frac{1}{2} m_\textrm{H}^2 \textrm{H}^2 -
-{\color{red} \kappa_\lambda} \,  \lambda_\textrm{SM} v\, \textrm{H}^3 \\
-- \frac{m_\textrm{t}}{v}(v+ {\color{red}\kappa_\textrm{t}} \,  \textrm{H} +
- \frac{{\color{red}c_2}}{v} \textrm{HH} ) \,( \bar{\textrm{t}}_\textrm{L} \textrm{t}_\textrm{R} + \textrm{h.c.}) \\ 
-+ \frac{1}{4} \frac{\alpha_\textrm{S}}{3 \pi v} ( {\color{red}c_\textrm{g}} \, \textrm{H} -
+{\color{red} \kappa_\lambda} \,  \lambda_\textrm{SM} v\, \textrm{H}^3 \\ -
+\frac{m_\textrm{t}}{v}(v+ {\color{red}\kappa_\textrm{t}} \,  \textrm{H} +
+\frac{{\color{red}c_2}}{v} \textrm{HH} ) \,( \bar{\textrm{t}}_\textrm{L} \textrm{t}_\textrm{R} +
+\textrm{h.c.}) \\ +
+\frac{1}{4} \frac{\alpha_\textrm{S}}{3 \pi v} ( {\color{red}c_\textrm{g}} \, \textrm{H} -
  \frac{ {\color{red}c_\textrm{2g}}}{2 v} \,  \textrm{HH}) \,  G^{\mu \nu}G_{\mu\nu}\,
 \end{aligned}
 $$ {#eq:eft_lag}
@@ -235,9 +233,9 @@ useful to consider a different methodology to represent the main
 properties of the anomalous couplings parameter space where only a reduced
 number of EFT points are considered.
 
-For the analysis presented in this work, a total of twelve EFT 
+For the analysis presented in this work, a total of twelve EFT
 points referred to as *benchmarks* are considered, which have
-been chosen via a agglomerative 
+been chosen via a agglomerative
 clustering procedure so they represent the main kinematical
 topologies in the parameter space. The details of the
 clustering methodology are detailed in [@Carvalho:2015ttv], but they
@@ -258,17 +256,17 @@ Benchmark point & $\kappa_\lambda$ &
 $\kappa_\textrm{t}$ & $c_2$ & $c_\textrm{g}$ & $c_\textrm{2g}$ \\
 \hline
 1 & 7.5 & 1.0 & -1.0 & 0.0 & 0.0 \\
-2  & 1.0 & 1.0 & 0.5 & -0.8 & 0.6\\ 
-3 & 1.0 & 1.0 & -1.5 & 0.0 & -0.8\\ 
-4 & -3.5 & 1.5 & -3.0 & 0.0 & 0.0\\ 
-5  & 1.0 & 1.0 & 0.0 & 0.8 & -1.0\\ 
-6  & 2.4 & 1.0 & 0.0 & 0.2 & -0.2\\ 
-7 & 5.0 & 1.0 & 0.0 & 0.2 & -0.2\\ 
-8 & 15.0 & 1.0 & 0.0 & -1.0 & 1.0\\ 
-9 & 1.0 & 1.0 & 1.0 & -0.6 & 0.6  \\ 
-10 & 10.0 & 1.5 & -1.0 & 0.0 & 0.0\\ 
-11  & 2.4 & 1.0 & 0.0 & 1.0 & -1.0\\ 
-12 & 15.0 & 1.0 & 1.0 & 0.0 & 0.0 \\ 
+2  & 1.0 & 1.0 & 0.5 & -0.8 & 0.6\\
+3 & 1.0 & 1.0 & -1.5 & 0.0 & -0.8\\
+4 & -3.5 & 1.5 & -3.0 & 0.0 & 0.0\\
+5  & 1.0 & 1.0 & 0.0 & 0.8 & -1.0\\
+6  & 2.4 & 1.0 & 0.0 & 0.2 & -0.2\\
+7 & 5.0 & 1.0 & 0.0 & 0.2 & -0.2\\
+8 & 15.0 & 1.0 & 0.0 & -1.0 & 1.0\\
+9 & 1.0 & 1.0 & 1.0 & -0.6 & 0.6  \\
+10 & 10.0 & 1.5 & -1.0 & 0.0 & 0.0\\
+11  & 2.4 & 1.0 & 0.0 & 1.0 & -1.0\\
+12 & 15.0 & 1.0 & 1.0 & 0.0 & 0.0 \\
 Box & 0.0 & 1.0 & 0.0 & 0.0 & 0.0 \\
 \hline
 SM & 1.0 & 1.0 & 0.0 & 0.0 & 0.0 \\
@@ -302,7 +300,6 @@ alternate hypothesis $H_1$ considered, which for the optimisation
 of the analysis strategy would be the SM including HH production through
 SM processes at an enhanced rate.
 
-
 The event selection in this analysis will include some custom online requirements,
 which were set at trigger level to reduce the total rate of data collection
 while keeping a large fraction of events relevant for this analysis,
@@ -318,7 +315,7 @@ events with four or more b-tagged
 jets[^cr_jets], a subset including four of the reconstructed jets within each event is
 paired to construct two *di-jet candidates*, as an attempt to recover
 the kinematic properties of the Higgs bosons, including
-their reconstructed masses. 
+their reconstructed masses.
 The information from the two di-jet candidates can in turn be combined
 to compute variables that can approximate the features of the Higgs
 pair system, which are also quite useful for inference. A set of variables
@@ -397,12 +394,12 @@ have are b-tagged by the online version of the Combined Secondary
 Vertex (CSV) algorithm [@Sirunyan:2017ezt].
 
 The full specification trigger selection used is rather complex, however
-it may be represented by a logical OR of the 
+it may be represented by a logical OR of the
 following two HLT trigger paths that were in place
 during the CMS 2016 data taking period:
 
   - HLT_DoubleJet90_Double30_TripleBTagCSV_p087
-  - HLT_QuadJet45_TripleBTagCSV_p087 
+  - HLT_QuadJet45_TripleBTagCSV_p087
 
 which represent a particular online selection sequence at the HLT. The
 sequence is
@@ -413,7 +410,7 @@ but are based on the logical OR between several conditions requiring
 a certain number
 of L1 jets over a given energy or the total deposited energy on the
 calorimeter $H_T$ to be over a certain threshold. At the HLT, both paths
-require some quality criteria on the reconstructed primary vertex 
+require some quality criteria on the reconstructed primary vertex
 and at least 4 reconstructed jets within a pseudo-rapidity range
 defined by $|\eta| < 2.6$. The first path in addition requires that
 the momenta of two
@@ -435,7 +432,7 @@ of 300,000 events have been simulated for the SM model production component,
 as well as an older version of the clustering benchmarks discussed
 in [Section @sec:higgs_pair_prod]
 and the $\kappa_\lambda=0$ box model. Regading the parton
-distribution function used for generation, the NNPDF30\_LO\_AS\_0130\_NF\_4 n 
+distribution function used for generation, the NNPDF30\_LO\_AS\_0130\_NF\_4 n
 set [@Ball:2014uwa] was used for all samples.
 
 The datasets for the benchmark points listed in \autoref{table:benchmarks},
@@ -473,14 +470,13 @@ a non-parametric density estimation approach was adopted in this analysis.
 A large sample of HH production events was formed by concatenating
 all non-resonant Higgs pair events simulated from each of the 14 samples,
 creating what will be referred to as the *pangea* sample. For all the EFT
-points of interest, 50,000 events (300,000 for the SM production) 
+points of interest, 50,000 events (300,000 for the SM production)
 were generated at parton level, which is rather inexpensive. The per-event
 weight in [Equation @eq:eft_weight] is estimated by the ratio of 2D-histograms,
 which effectively approximate the mentioned density ratio. The
 *weighted pangea* sample can represent any EFT parameter point at leading order
 by this procedure, so it is used to model the signal characteristics of
 all the models considered in this work.
-
 
 ## Event Selection {#sec:event_selection}
 
@@ -534,7 +530,7 @@ events.
    Relative eff.              &          & 34\%  & 5.6\% \\
    Efficiency                 &          & 34\%  & 1.9\% \\
   \hline
- \end{tabular}    
+ \end{tabular}
  \label{tab:sigEff}
 \end{table}
 
@@ -569,13 +565,13 @@ and $M_{\textrm{H}_1}$ versus $M_{\textrm{H}_2}$ is shown in
 rest of this chapter, the term leading Higgs $\textrm{H}_1$ will be used for the
 reconstructed Higgs
 candidates with the largest invariant mass while trailing Higgs $\textrm{H}_1$
-for the other candidate. 
+for the other candidate.
 
 ::: {#fig:pair_mass .subfigures .caption}
 ![mass difference ${\Delta M}_{(\textrm{H}_1,\textrm{H}_2)}$
-](gfx/105_chapter_5/higgs_diff.pdf){#fig:higgs_diff width=49%}
+](gfx/105_chapter_5/higgs_diff.pdf){#fig:higgs_diff .vector width=49%}
 ![$M_{\textrm{H}_1}$ versus $M_{\textrm{H}_2}$
-](gfx/105_chapter_5/higgs_masses.pdf){#fig:higgs_masses width=49%}
+](gfx/105_chapter_5/higgs_masses.pdf){#fig:higgs_masses .vector width=49%}
 
 Mass difference ${\Delta M}_{(\textrm{H}_1,\textrm{H}_2)}$ (left)
 and 2D histogram of $M_{\textrm{H}_1}$ versus $M_{\textrm{H}_2}$ (right)
@@ -583,7 +579,6 @@ for simulated signal observations. Only the lower right part of the right
 plots includes observations because the Higgs candidates are ordered by
 mass.
 :::
-
 
 In this analysis, the final summary statistic considered for inference
 is based on the output of classifier that discriminates signal and background
@@ -614,9 +609,9 @@ between the HH system and the leading Higgs boson candidate. Another feature
 that is found to increase the discrimination power of the classifier
 is the $M_\textrm{X}$ variable, defined as:
 $$
-M_\textrm{X} = M_\textrm{HH}
-- \left ( M_{\textrm{H}_1} -  M_\textrm{H} \right )
-- \left ( M_{\textrm{H}_2} -  M_\textrm{H} \right )
+M_\textrm{X} = M_\textrm{HH} - \left ( M_{\textrm{H}_1} -
+M_\textrm{H} \right ) -
+\left ( M_{\textrm{H}_2} -  M_\textrm{H} \right )
 $$ {#eq:mx_classifier}
 where $M_\textrm{H}=125\ \textrm{GeV}$ is the Higgs boson mass. The second
 group of features includes variables associated individually with each
@@ -643,17 +638,16 @@ of the first four jets, ordered by their value of the CMVA b-tagging
 discriminant as well as the scalar sum of their transverse momenta $H_T$.
 Finally, the scalar $p_T$ sum of all the jets that were not used for the
 reconstruction of the Higgs pair system $H_T^{\textrm{rest}}$ and the b-tagging CMVA
-discriminant value for the third and fourth jet 
+discriminant value for the third and fourth jet
 $\textrm{CMVA}_3$, $\textrm{CMVA}_4$ are also used. The marginal comparison
 of the distributions of signal and background for jet-based based variables
-is shown in [Figure @fig:jet_features]. 
+is shown in [Figure @fig:jet_features].
 
 ![Comparison of the signal (SM HH production) and background
 (mixed data) distributions for the
 HH system features considered in the probabilistic classifier.
 See \autoref{tab:mvaVars} and associated text for more details.
-](gfx/105_chapter_5/HH_system_features.pdf){
-#fig:HH_system_features width=70%}
+](gfx/105_chapter_5/HH_system_features.pdf){#fig:HH_system_features .vector width=70%}
 
 \begin{table}[htbp]
  \caption{List of reconstruction-based features used as input of the
@@ -670,7 +664,7 @@ See \autoref{tab:mvaVars} and associated text for more details.
    $p_T^{\textrm{H}_1}$, $p_T^{\textrm{H}_2}$ &
    $H_T^{\textrm{rest}}$, $H_T$ \\
    $\cos \theta_{\textrm{H}_1 \textrm{H}_2 -\textrm{H}_1}^{\star}$ &
-   $\cos \theta_{\textrm{H}_1 -j_1}^{\star}$ & 
+   $\cos \theta_{\textrm{H}_1 -j_1}^{\star}$ &
    $\textrm{CMVA}_3$, $\textrm{CMVA}_4$, \\
    &
    $\Delta R_{jj}^{\textrm{H}_1}$, $\Delta R_{jj}^{\textrm{H}_2}$,
@@ -680,23 +674,19 @@ See \autoref{tab:mvaVars} and associated text for more details.
  \label{tab:mvaVars}
 \end{table}
 
-
 ![Comparison of the signal (SM HH production) and background
 (mixed data) distributions for the
 di-jet features considered in the probabilistic classifier. Di-jet
 candidates are ordered by their mass value.
 See \autoref{tab:mvaVars} and associated text for more details.
-](gfx/105_chapter_5/di_jet_features.pdf){
-#fig:di_jet_features width=95%}
-
+](gfx/105_chapter_5/di_jet_features.pdf){#fig:di_jet_features .vector width=95%}
 
 ![Comparison of the signal (SM HH production) and background
 (mixed data) distributions for the
 jet-based features considered in the probabilistic classifier. Jet
 are ordered by CMVA value.
 See \autoref{tab:mvaVars} and associated text for more details.
-](gfx/105_chapter_5/jet_features.pdf){
-#fig:jet_features width=95%}
+](gfx/105_chapter_5/jet_features.pdf){#fig:jet_features .vector width=95%}
 
 The trained classifier combines the 25 variables from \autoref{tab:mvaVars}
 in a single scalar value, that approximates the conditional probability
@@ -751,7 +741,7 @@ b-quarks. This could provide a radical reduction on the total
 computing time needed for simulation, especially
 if combined with the approximate simulation techniques described
 in [Section @sec:detector_simulation], because the associated cross section
-can be greatly reduced. However, such generator level filtering is 
+can be greatly reduced. However, such generator level filtering is
 difficult to implement in a way that relevant events are not omitted
 after the event selection. Because of that, the desired level of modelling
 accuracy could not be achieved with this method.
@@ -773,9 +763,9 @@ that approach is proven effective when using the reconstructed
 $M_\textrm{H}$ distribution for inference, it cannot be easily extended
 to a situation where all the multi-dimensional features of the data
 require to be precisely modelled, as is the case
-when the output of a probabilistic classifier is used as the summary statistic. 
+when the output of a probabilistic classifier is used as the summary statistic.
 
-In the analysis presented here a different path was followed, based on 
+In the analysis presented here a different path was followed, based on
 developing
 a new data-driven background estimation method based
 on the concept of hemisphere mixing and some assumptions of the phase
@@ -790,7 +780,6 @@ the method are ad-hoc and cannot be formally demonstrated, it has been
 calibrated and then validated using a signal-depleted control region,
 a procedure that is discussed in [Section @sec:syst_unc].
 
-
 ### Hemisphere Mixing {#sec:hem_mixing}
 
 The basis of the data-driven background estimation method here proposed is
@@ -801,7 +790,7 @@ hemisphere mixing technique used in this work is provided in
 [Figure @fig:hemisphere_mixing]. The transverse thrust axis, defined
 as the axis in the $x-y$ plane for which the absolute value sum of the
 projections of the transverse momenta of the selected
-subset of reconstructed jets is maximal, is used as a reference 
+subset of reconstructed jets is maximal, is used as a reference
 to divide each original event in two halves perpendicularly
 to the mentioned axis. This procedure is carried out for
 all the collected events that pass the selection described
@@ -818,7 +807,7 @@ component.
 
 ![Schematic depiction of the hemisphere mixing background
 estimation procedure. The red arrows represent b-tagged
-jets and the blue arrows represent jets that were not b-tagged 
+jets and the blue arrows represent jets that were not b-tagged
 in an event. The first step includes finding the thrust axis in the $x-y$
 plane. The event
 is then divided in two hemispheres, each composed of a set of jets,
@@ -827,8 +816,7 @@ used to create a dataset (or library) of hemispheres. For each original
 event, a artificial event can be created by substituting each original
 hemisphere with its closest neighbours, once a distance metric
 for hemispheres has been defined. Figure adapted from [@Sirunyan:2018tki].
-](gfx/105_chapter_5/hemisphere_mixing.pdf){
-#fig:hemisphere_mixing width=100%}
+](gfx/105_chapter_5/hemisphere_mixing.pdf){#fig:hemisphere_mixing .vector width=100%}
 
 The matching between the original and the replacement hemisphere is
 done by finding the pair minimising a inter-hemisphere distance. The
@@ -837,7 +825,7 @@ jets contained within each hemisphere, and it is a combination of discrete and
 continuous variables. The discrete requirement for matching original hemispheres
 with those in the library is that they have the same number of jets $N_j^h$ and
 b-tagged jets $N_b^h$, which ensures a similar jet multiplicity distributions
-for the artificial data. The previous condition also avoids creating 
+for the artificial data. The previous condition also avoids creating
 artificial events that do not pass the event selection, e.g. by combining
 an hemisphere with 2 b-tagged jets with another one including only one
 b-tagged jet, which would result in the artificial events having
@@ -931,8 +919,7 @@ of the neighbour combination $(k_1, k_2)$. The test score has been calculated
 based on the binned distribution of the probabilistic classifier. The one-sided
 confidence bands for the test score are also included for guidance.
 Figure adapted from [@Sirunyan:2018tki].
-](gfx/105_chapter_5/chi2_combination.pdf){
-#fig:chi2_combination width=60%}
+](gfx/105_chapter_5/chi2_combination.pdf){#fig:chi2_combination .vector width=60%}
 
 The hemisphere mixing technique is applied to the data events
 passing the selection described in [Section @sec:event_selection].
@@ -944,7 +931,7 @@ is included in [Figure @fig:chi2_combination], modelling breaks only
 at high values, e.g. $k=128$. All the neighbour combinations
 up to $k_\textrm{max}=10$
 are sub-divided in three sets used for training
-the probabilistic classifier (training), 
+the probabilistic classifier (training),
 validating and optimised the classifier (validation)
 and to estimate the background distribution of the final summary
 statistic (application). The last dataset is referred to as
@@ -977,17 +964,16 @@ The overall agreement is good, as expected from the discussion
 at beginning of this section, the statistical uncertainties
 coming from the low $H_T$ range simulated QCD dataset are large.
 
-
 ::: {#fig:Figure_003 .subfigures .caption}
 ![first jet transverse momenta $p_{T_j}^1$
-](gfx/105_chapter_5/Figure_003-a.pdf){#fig:Figure_003_a width=49%}
+](gfx/105_chapter_5/Figure_003-a.pdf){#fig:Figure_003_a .vector width=49%}
 ![first jet pseudo-rapidity $\eta_{j}^1$
-](gfx/105_chapter_5/Figure_003-b.pdf){#fig:Figure_003_b width=49%}
+](gfx/105_chapter_5/Figure_003-b.pdf){#fig:Figure_003_b .vector width=49%}
 \
 ![Higgs candidate transverse momenta $p_{T}^{\textrm{H}_1}$
-](gfx/105_chapter_5/Figure_003-c.pdf){#fig:Figure_003_c width=49%}
+](gfx/105_chapter_5/Figure_003-c.pdf){#fig:Figure_003_c .vector width=49%}
 ![Higgs candidate pair system mass $M_\textrm{HH}$
-](gfx/105_chapter_5/Figure_003-d.pdf){#fig:Figure_003_d width=49%}
+](gfx/105_chapter_5/Figure_003-d.pdf){#fig:Figure_003_d .vector width=49%}
 
 Comparison between the background model obtained with the hemisphere
 mixing technique and the simulated observations from QCD processes
@@ -1016,7 +1002,7 @@ in this analysis, two data control regions (CRs) are defined:
   $80 < M_{\textrm{H}_2} < 140\ \textrm{GeV}$. This cut in the reconstructed
   Higgs masses plane considerably reduces the signal contribution, which
   is expected to peak around $M_\textrm{H} = 125\ \textrm{GeV}$.
-  
+
 - *b-tag control region* (b-tag CR): this dataset is obtained
   using the same selection described in [Section @sec:event_selection] but
   b-tagged jets are defined using
@@ -1043,14 +1029,14 @@ in [Figure @fig:Figure_004] and [Figure @fig:Figure_005].
 
 ::: {#fig:Figure_004 .subfigures .caption}
 ![first jet transverse momenta $p_{T_j}^1$
-](gfx/105_chapter_5/Figure_004-a.pdf){#fig:Figure_004_a width=49%}
+](gfx/105_chapter_5/Figure_004-a.pdf){#fig:Figure_004_a .vector width=49%}
 ![first jet pseudo-rapidity $\eta_{j}^1$
-](gfx/105_chapter_5/Figure_004-b.pdf){#fig:Figure_004_b width=49%}
+](gfx/105_chapter_5/Figure_004-b.pdf){#fig:Figure_004_b .vector width=49%}
 \
 ![first Higgs candidate - first jet $\cos \theta^{*}_{\textrm{H}_1 - j_1}$
-](gfx/105_chapter_5/Figure_004-c.pdf){#fig:Figure_004_c width=49%}
+](gfx/105_chapter_5/Figure_004-c.pdf){#fig:Figure_004_c .vector width=49%}
 ![lowest CMVA discriminator $\textrm{CMVA}_4$
-](gfx/105_chapter_5/Figure_004-d.pdf){#fig:Figure_004_d width=49%}
+](gfx/105_chapter_5/Figure_004-d.pdf){#fig:Figure_004_d .vector width=49%}
 
 Comparison between the background model obtained with the hemisphere
 mixing technique and the data for the $M_\textrm{H}$ control region for
@@ -1062,17 +1048,16 @@ dataset. Only statistical uncertainties are shown.
 Figures adapted from [@Sirunyan:2018tki].
 :::
 
-
 ::: {#fig:Figure_005 .subfigures .caption}
 ![first jet transverse momenta $p_{T_j}^1$
-](gfx/105_chapter_5/Figure_005-a.pdf){#fig:Figure_005_a width=49%}
+](gfx/105_chapter_5/Figure_005-a.pdf){#fig:Figure_005_a .vector width=49%}
 ![first jet pseudo-rapidity $\eta_{j}^1$
-](gfx/105_chapter_5/Figure_005-b.pdf){#fig:Figure_005_b width=49%}
+](gfx/105_chapter_5/Figure_005-b.pdf){#fig:Figure_005_b .vector width=49%}
 \
 ![first Higgs candidate mass $M_{\textrm{H}_1}$
-](gfx/105_chapter_5/Figure_005-c.pdf){#fig:Figure_005_c width=49%}
+](gfx/105_chapter_5/Figure_005-c.pdf){#fig:Figure_005_c .vector width=49%}
 ![second Higgs candidate mass $M_{\textrm{H}_2}$
-](gfx/105_chapter_5/Figure_005-d.pdf){#fig:Figure_005_d width=49%}
+](gfx/105_chapter_5/Figure_005-d.pdf){#fig:Figure_005_d .vector width=49%}
 
 Comparison between the background model obtained with the hemisphere
 mixing technique and the data for the b-tag control region for
@@ -1100,7 +1085,6 @@ While [Figure @fig:Figure_006] shows a reasonable agreement overall,
 a slight background model excess seems to exist in the lower classifier
 output range.
 
-
 ![Left: Comparison of the BDT classifier output for data in the
 $M_\textrm{H}$ control region, with the same output computed
 using an artificial dataset by hemisphere mixing. Right: bin-by-bin
@@ -1111,9 +1095,7 @@ parameters when fitted by a Gaussian are also shown. The uncertainty
 after the bias correction has been increased conservatively in order
 to obtain a unit standard deviation for the residual pull distribution.
 Figures adapted from [@Sirunyan:2018tki].
-](gfx/105_chapter_5/Figure_006.pdf){
-#fig:Figure_006 width=100%}
-
+](gfx/105_chapter_5/Figure_006.pdf){#fig:Figure_006 .vector width=100%}
 
 The previous mentioned issue has motivated a quantitative
 study to assess and potentially
@@ -1162,9 +1144,8 @@ The trained multivariate classifier is then evaluated over all the events
 of $M$ and each $R_i$ and the histograms of the classifier output are
 compared to obtain the differences for each of the replicas.
 The median difference is taken as bias correction.
-Figure adapted from [@Sirunyan:2018tki].](gfx/105_chapter_5/Figure_011.pdf){
-#fig:Figure_011 width=100%}
-
+Figure adapted
+from [@Sirunyan:2018tki].](gfx/105_chapter_5/Figure_011.pdf){#fig:Figure_011 .vector width=100%}
 
 ![Bias estimation obtained by the resampling technique described
 in the text, in relative units of the statistical
@@ -1179,8 +1160,8 @@ The light yellow shadow represents the uncertainty
 due to the limited statistics of the reference observed sample.
 The separation between the one s.d. quantiles is compatible with the
 expected variance if the estimation was Poisson or Gaussian
-distributed. Figure adapted from [@Sirunyan:2018tki].](gfx/105_chapter_5/Figure_012.pdf){
-#fig:Figure_012 width=100%}
+distributed. Figure adapted
+from [@Sirunyan:2018tki].](gfx/105_chapter_5/Figure_012.pdf){#fig:Figure_012 .vector width=100%}
 
 \FloatBarrier
 
@@ -1211,9 +1192,9 @@ on the \autoref{tab:sys}.
  \centering
  \begin{tabular}{l c c}
    \hline
-   Source        & Affects  & Exp. limit variation \\   
+   Source        & Affects  & Exp. limit variation \\
    \hline
-   Bkg. shape     & bkg.  & 30\%  \\ 
+   Bkg. shape     & bkg.  & 30\%  \\
    Bkg. norm.     & bkg.  & 8.6\%  \\
    b-tagging eff. & sig  & 2.8\%  \\
    Pileup        & sig  &       ${<} 0.01\%$ \\
@@ -1227,7 +1208,6 @@ on the \autoref{tab:sys}.
  \end{tabular}
  \label{tab:sys}
 \end{table}
-
 
 The main sources of uncertainty in this analysis
 are those associated with the data-driven background
@@ -1325,14 +1305,13 @@ the best fit signal and best fit background subtracted from
 measured data. The dashed band in the lower panel,
 centred at zero, shows the total
 uncertainty.
-Figure adapted from [@Sirunyan:2018tki].](gfx/105_chapter_5/Figure_007.pdf){
-#fig:Figure_007 width=75%}
+Figure adapted from [@Sirunyan:2018tki].](gfx/105_chapter_5/Figure_007.pdf){#fig:Figure_007 .vector width=75%}
 
 ::: {#fig:Figure_008 .subfigures .caption}
 ![leading Higgs mass $M_{\textrm{H}_1}$
-](gfx/105_chapter_5/Figure_008-a.pdf){#fig:Figure_008_a width=49%}
+](gfx/105_chapter_5/Figure_008-a.pdf){#fig:Figure_008_a .vector width=49%}
 ![trailing Higgs mass $M_{\textrm{H}_2}$
-](gfx/105_chapter_5/Figure_008-b.pdf){#fig:Figure_008_b width=49%}
+](gfx/105_chapter_5/Figure_008-b.pdf){#fig:Figure_008_b .vector width=49%}
 
 Distributions of the reconstructed Higgs masses for the best
 fit. A correction factor
@@ -1393,8 +1372,8 @@ at 95\% CL in units of fb.}
    Category $\textrm{HH}  \rightarrow
   \textrm{b}\bar{\textrm{b}}\textrm{b}\bar{\textrm{b}}$  & Observed & Expected &
    -2 s.d. & -1 s.d. & +1 s.d. & +2 s.d. \\
-   \hline  
-SM $$ &   847 &   419  &   221  &   297  &   601  &   834  \\  
+   \hline
+SM $$ &   847 &   419  &   221  &   297  &   601  &   834  \\
    \hline
  \end{tabular}
  \label{tab:limits2}
@@ -1429,18 +1408,18 @@ as can be seen in [Figure @fig:Figure_007].
 Benchmark point & Observed & Expected &
 -2 s.d. & -1 s.d. & +1 s.d. & +2 s.d.  \\
 \hline
-1 &   602  &   295  &   155  &   209  &   424  &   592  \\ 
-2 &   554  &   269  &   141  &   190  &   389  &   548  \\ 
-3 &   705  &   346  &   182  &   245  &   497  &   691  \\ 
-4 &   939  &   461  &   244  &   327  &   662  &   920  \\ 
-5 &   508  &   248  &   131  &   176  &   357  &   501  \\ 
-6 &   937  &   457  &   240  &   323  &   657  &   916  \\ 
-7 &   3510  &   1710  &   905  &   1210  &   2440  &   3390  \\ 
-8 &   686  &   336  &   177  &   238  &   483  &   674  \\ 
-9 &   529  &   259  &   136  &   183  &   373  &   520  \\ 
-10 &   2090  &   1000  &   527  &   709  &   1440  &   2010  \\ 
-11 &   1080  &   525  &   277  &   372  &   755  &   1050  \\ 
-12 &   1744  &   859  &   455  &   611  &   1230  &   1710  \\ 
+1 &   602  &   295  &   155  &   209  &   424  &   592  \\
+2 &   554  &   269  &   141  &   190  &   389  &   548  \\
+3 &   705  &   346  &   182  &   245  &   497  &   691  \\
+4 &   939  &   461  &   244  &   327  &   662  &   920  \\
+5 &   508  &   248  &   131  &   176  &   357  &   501  \\
+6 &   937  &   457  &   240  &   323  &   657  &   916  \\
+7 &   3510  &   1710  &   905  &   1210  &   2440  &   3390  \\
+8 &   686  &   336  &   177  &   238  &   483  &   674  \\
+9 &   529  &   259  &   136  &   183  &   373  &   520  \\
+10 &   2090  &   1000  &   527  &   709  &   1440  &   2010  \\
+11 &   1080  &   525  &   277  &   372  &   755  &   1050  \\
+12 &   1744  &   859  &   455  &   611  &   1230  &   1710  \\
 Box &   1090  &   542  &   286  &   384  &   775  &   1080  \\
    \hline
 \end{tabular}
@@ -1458,8 +1437,8 @@ the 68\% and 95\% times the upper limit under the background-only
 hypothesis.
 See Table \ref{table:benchmarks} for their
 respective EFT parameter values.
-Figure adapted from [@Sirunyan:2018tki].](gfx/105_chapter_5/Figure_009.pdf){
-#fig:Figure_009 width=50%}
+Figure adapted
+from [@Sirunyan:2018tki].](gfx/105_chapter_5/Figure_009.pdf){#fig:Figure_009 .vector width=50%}
 
 In addition to the BSM benchmarks, limits are also obtained
 for the cross section times branching ratio of Higgs pair production
@@ -1485,8 +1464,8 @@ the 68\% and 95\% times the upper limit under the background-only
 hypothesis.
 the theoretical prediction with $\kappa_\textrm{t} = 1$ is also
 shown in red colour.
-Figure adapted from [@Sirunyan:2018tki].](gfx/105_chapter_5/Figure_010.pdf){
-#fig:Figure_010 width=50%}
+Figure adapted
+from [@Sirunyan:2018tki].](gfx/105_chapter_5/Figure_010.pdf){#fig:Figure_010 .vector width=50%}
 
 ## Combination with Other Decay Channels {#sec:combination}
 
@@ -1539,8 +1518,8 @@ The inner
 green band and the outer yellow bands correspond
 to the range of percentiles around the median that contain
 the 68\% and 95\% times the upper limit under the background-only
-hypothesis. Figure adapted from [@CMS-PAS-HIG-17-030].](gfx/105_chapter_5/comb_Figure_001.pdf){
-#fig:comb_Figure_001 width=60%}
+hypothesis. Figure adapted
+from [@CMS-PAS-HIG-17-030].](gfx/105_chapter_5/comb_Figure_001.pdf){#fig:comb_Figure_001 .vector width=60%}
 
 ![Observed and expected $\sigma(\textrm{pp} \rightarrow \textrm{HH})$
 cross section limits for the combination of searches
@@ -1554,8 +1533,5 @@ hypothesis.
 The anomalous couplings theoretical prediction with
 $\kappa_\textrm{t} = 1$ is also
 shown in red colour.
-Figure adapted from [@CMS-PAS-HIG-17-030].](gfx/105_chapter_5/comb_Figure_002.pdf){
-#fig:comb_Figure_002 width=60%}
-
-
-
+Figure adapted
+from [@CMS-PAS-HIG-17-030].](gfx/105_chapter_5/comb_Figure_002.pdf){#fig:comb_Figure_002 .vector width=60%}

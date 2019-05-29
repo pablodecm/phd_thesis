@@ -11,7 +11,7 @@ experimental high-energy analyses. Supervised learning
 based on simulated observations or acquired data from control
 regions, and in particular probabilistic classification,
 provides a way to extract and approximate estimate of the latent variables of
-the generative model. Those latent variable estimates are 
+the generative model. Those latent variable estimates are
 in turn very useful to construct
 powerful summary for statistical inference. While this approach is very
 often encountered in experimental high energy physics,
@@ -84,7 +84,7 @@ For the particular problem
 of high energy physics data analyses at the LHC, the properties
 of the underlying generative model discussed in [Chapter @sec:statinf]
 make the likelihood
-intractable, but its structure facilitates the construction of 
+intractable, but its structure facilitates the construction of
 simulation-based likelihoods of low-dimensional
 summary statistics that approximate latent variables.
 The ultimate aim is nevertheless to extract information
@@ -232,7 +232,7 @@ framework, where the considered loss function accounts for the details of
 the statistical model as well as the expected effect of nuisance parameters.
 
 ![Learning inference-aware summary statistics (see text for
-  details).](gfx/106_chapter_6/figure1.pdf){#fig:diagram}
+  details).](gfx/106_chapter_6/figure1.pdf){#fig:diagram .vector}
 
 The family of summary statistics $\boldsymbol{s}(D)$ considered in this
 work is based on a neural network model applied to each dataset
@@ -457,14 +457,13 @@ employing an inference-aware loss is summarised in Algorithm
   \State{Obtain loss
     $U= I_{kk}^{-1}(\boldsymbol{\theta}_s)$.}
   \State{Update network parameters $\boldsymbol{\phi} \rightarrow
-  \textrm{SGD}(\nabla_{\boldsymbol{\phi}} U)$.}  
+  \textrm{SGD}(\nabla_{\boldsymbol{\phi}} U)$.}
  \EndFor
  \end{algorithmic}
  \label{alg:simple_algorithm}
 \end{algorithm}
 
 ## Related Work
-
 
 Classification or regression models have been implicitly used
 to construct summary statistics for inference in several
@@ -586,7 +585,7 @@ treated as nuisance parameters when benchmarking different methods.
 Hence, the probability density
 function of observations has the following mixture structure:
 $$
-p(\boldsymbol{x}| \mu, r, \lambda) = (1-\mu) f_b(\boldsymbol{x} | r, \lambda) 
+p(\boldsymbol{x}| \mu, r, \lambda) = (1-\mu) f_b(\boldsymbol{x} | r, \lambda)
                                       + \mu f_s(\boldsymbol{x})
 $${#eq:mixture_eq}
 where $\mu$ is the parameter corresponding to the mixture weight
@@ -597,9 +596,9 @@ the mixture distribution for a small $\mu=50/1050$ is shown in
 
 ::: {#fig:subfigs_distributions .subfigures .caption}
 ![signal (red) and background (blue)
- ](gfx/106_chapter_6/figure2a.pdf){#fig:subfigure_a width=49%}
+ ](gfx/106_chapter_6/figure2a.pdf){#fig:subfigure_a .vector width=49%}
 ![mixture distribution (black)
- ](gfx/106_chapter_6/figure2b.pdf){#fig:subfigure_b width=49%}
+ ](gfx/106_chapter_6/figure2b.pdf){#fig:subfigure_b .vector width=49%}
 
 Projection in 1D and 2D dimensions of 50000 samples from
 the synthetic problem considered. The background distribution
@@ -686,7 +685,7 @@ The output of such a model typically consist in class probabilities
 $c_s$ and $c_b$ given an observation $\boldsymbol{x}$, which will tend
 asymptotically to the optimal classifier from [@Eq:opt_clf] given
 enough data, a flexible enough model and a powerful learning rule.
-The conditional class probabilities (or alternatively the likelihood ratio 
+The conditional class probabilities (or alternatively the likelihood ratio
 $f_s(\boldsymbol{x})/f_b(\boldsymbol{x})$) are powerful
 learned features that can be used as summary statistic; however their construction
 ignores the effect of the nuisance parameters $r$ and $\lambda$ on the
@@ -710,9 +709,9 @@ in turn cause an important degradation on the subsequent statistical inference.
 
 ::: {#fig:subfigs_clf_hists .subfigures .caption}
 ![classifier trained on simulated samples
-   ](gfx/106_chapter_6/figure3a.pdf){#fig:train_clf width=48%}
+   ](gfx/106_chapter_6/figure3a.pdf){#fig:train_clf .vector width=48%}
 ![optimal classifier $s(\boldsymbol{x} | r = 0.0, \lambda = 3.0)$
- ](gfx/106_chapter_6/figure3b.pdf){#fig:opt_clf width=48%}
+ ](gfx/106_chapter_6/figure3b.pdf){#fig:opt_clf .vector width=48%}
 
 Histograms of summary statistics for signal and background (top) and
 variation for different values of nuisance parameters compared
@@ -759,16 +758,16 @@ that vary in the number of nuisance parameters considered and their constraints:
   background distributions are taken as fully specified ($r=0.0$, $\lambda=3.0$
   and $b=1000.$).
 - **Benchmark 1:** $r$ is considered as an unconstrained
-  nuisance parameter, while $\lambda=3.0$ and $b=1000$ are fixed. 
+  nuisance parameter, while $\lambda=3.0$ and $b=1000$ are fixed.
 - **Benchmark 2:** $r$ and $\lambda$ are considered as unconstrained
   nuisance parameters, while $b=1000$ is fixed.
 - **Benchmark 3:** $r$ and $\lambda$ are considered as
   nuisance parameters but with the following constraints: $\mathcal{N} (r |0.0, 0.4)$
-  and $\mathcal{N} (\lambda| 3.0, 1.0)$, while $b=1000$ is fixed. 
+  and $\mathcal{N} (\lambda| 3.0, 1.0)$, while $b=1000$ is fixed.
 - **Benchmark 4:** all $r$, $\lambda$ and $b$ are all considered as
   nuisance parameters with the following constraints: $\mathcal{N} (r |0.0, 0.4)$,
-  $\mathcal{N} (\lambda| 3.0, 1.0)$ and $\mathcal{N} (b | 1000., 100.)$.  
-  
+  $\mathcal{N} (\lambda| 3.0, 1.0)$ and $\mathcal{N} (b | 1000., 100.)$.
+
 When using classification-based summary statistics, the construction of
 a summary statistic does depend on the presence of nuisance parameters, so the same
 model is trained independently of the benchmark considered. In real-world
@@ -778,7 +777,7 @@ For the approach
 presented here, inference-aware neural optimisation, the effect of the
 nuisance parameters and their constraints can be taken into account during training.
 Hence, 5 different training procedures for [INFERNO]{.smallcaps} will be considered,
-one for each of the benchmarks, denoted by the same number. 
+one for each of the benchmarks, denoted by the same number.
 
 The same basic network architecture is used both for cross-entropy and
 inference-aware training: two hidden layers of 100 nodes followed by
@@ -797,10 +796,10 @@ simple scan; the best choice found is specified together with the results.
 
 ::: {#fig:subfigs_training .subfigures .caption}
 ![inference-aware training loss
-](gfx/106_chapter_6/figure4a.pdf){#fig:training_dynamics width=48%}
+](gfx/106_chapter_6/figure4a.pdf){#fig:training_dynamics .vector width=48%}
 ![profile-likelihood comparison
-](gfx/106_chapter_6/figure4b.pdf){#fig:profile_likelihood width=48%}
- 
+](gfx/106_chapter_6/figure4b.pdf){#fig:profile_likelihood .vector width=48%}
+
 Dynamics and results of inference-aware optimisation: (a) square root of
 inference-loss (i.e. approximated standard deviation of the parameter
 of interest) as a function
@@ -812,7 +811,6 @@ building a uniformly binned Poisson count likelihood of the conditional
 signal probability output.  All results
 correspond to Benchmark 2.
 :::
-
 
 In [@Fig:training_dynamics], the dynamics of inference-aware optimisation
 are shown by the validation loss, which corresponds
@@ -871,12 +869,11 @@ its omission.
   \input{src/table.tex}
 \end{table}
 
-
 ::: {#fig:validity_range .subfigures .caption}
 ![different $r$ value
-](gfx/106_chapter_6/figure5a.pdf){#fig:range_r_dist width=48%}
+](gfx/106_chapter_6/figure5a.pdf){#fig:range_r_dist .vector width=48%}
 ![different $\lambda$ value
-](gfx/106_chapter_6/figure5b.pdf){#fig:range_b_rate width=48%}
+](gfx/106_chapter_6/figure5b.pdf){#fig:range_b_rate .vector width=48%}
 
 Expected uncertainty when the value of the nuisance
 parameters is different for 10 learnt summary statistics
@@ -896,7 +893,7 @@ is varied for classification and inference-aware summary statistics is
 shown in [@Fig:validity_range] for Benchmark 2. The inference-aware summary
 statistics learnt for $\boldsymbol{\theta}_s$ work
 well when  $\boldsymbol{\theta}_{\textrm{true}} \neq \boldsymbol{\theta}_s$
-in the range of variation explored. 
+in the range of variation explored.
 
 This synthetic example demonstrates that the direct optimisation of inference-aware
 losses as those described in the [Section @Sec:method] is effective.
