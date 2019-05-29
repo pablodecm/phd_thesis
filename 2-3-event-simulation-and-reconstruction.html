@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang=""><head><script async src="https://www.googletagmanager.com/gtag/js?id=UA-71094563-2"></script><script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-71094563-2');
+    </script><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><title>Statistical Learning and Inference at Particle Collider Experiments</title><meta name="description" content="Statistical Learning and Inference at Particle Collider Experiments"><meta name="generator" content="bookdown #bookdown:version# and GitBook 2.6.7"><meta property="og:title" content="Statistical Learning and Inference at Particle Collider Experiments"><meta property="og:type" content="book"><meta name="github-repo" content="pablodecm/phd_thesis"><meta name="twitter:card" content="summary"><meta name="twitter:title" content="Statistical Learning and Inference at Particle Collider Experiments"><meta name="author" content="Pablo de Castro Manzano"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black"><script src="libs/jquery/jquery.min.js"></script><link href="libs/gitbook/css/style.css" rel="stylesheet"><link href="libs/gitbook/css/plugin-table.css" rel="stylesheet"><link href="libs/gitbook/css/plugin-bookdown.css" rel="stylesheet"><link href="libs/gitbook/css/plugin-highlight.css" rel="stylesheet"><link href="libs/gitbook/css/plugin-search.css" rel="stylesheet"><link href="libs/gitbook/css/plugin-fontsettings.css" rel="stylesheet"><link href="css/style.css" rel="stylesheet"><link href="css/toc.css" rel="stylesheet"></head><body>
+
+    
+    <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+      <div class="book-summary">
+        <nav role="navigation"><ul class="summary"><li>
+              <a href="./">PhD Thesis - Pablo de Castro</a>
+            </li>
+            <li class="divider">
+            <li class="chapter" data-level="" data-path="abstract.html">
+              <a href="abstract.html"><i class="fa fa-check"></i> Abstract</a>
+            </li>
+            <li class="chapter" data-level="" data-path="preface.html">
+              <a href="preface.html"><i class="fa fa-check"></i> Preface</a>
+            </li>
+            <li class="chapter" data-level="" data-path="acknowledgements.html">
+              <a href="acknowledgements.html"><i class="fa fa-check"></i> Acknowledgements</a>
+            </li>
+            <li class="chapter" data-level="" data-path="introduction.html">
+              <a href="introduction.html"><i class="fa fa-check"></i> Introduction</a>
+            </li>
+            <li class="chapter" data-level="1" data-path="1-theory-of-fundamental-interactions.html">
+              <a href="1-theory-of-fundamental-interactions.html"><i class="fa fa-check"></i><b>1</b> Theory of Fundamental Interactions</a>
+              <ul><li class="chapter" data-level="1.1" data-path="1-1-the-standard-model.html">
+                  <a href="1-1-the-standard-model.html"><i class="fa fa-check"></i><b>1.1</b> The Standard Model</a>
+                  <ul><li class="chapter" data-level="1.1.1" data-path="1-1-the-standard-model.html">
+                      <a href="1-1-the-standard-model.html#sec:qft_basics"><i class="fa fa-check"></i><b>1.1.1</b> Essentials of Quantum Field Theory</a>
+                    </li>
+                    <li class="chapter" data-level="1.1.2" data-path="1-1-the-standard-model.html">
+                      <a href="1-1-the-standard-model.html#sec:qcd_detail"><i class="fa fa-check"></i><b>1.1.2</b> Quantum Chromodynamics</a>
+                    </li>
+                    <li class="chapter" data-level="1.1.3" data-path="1-1-the-standard-model.html">
+                      <a href="1-1-the-standard-model.html#sec:ew_detail"><i class="fa fa-check"></i><b>1.1.3</b> Electroweak Interactions</a>
+                    </li>
+                    <li class="chapter" data-level="1.1.4" data-path="1-1-the-standard-model.html">
+                      <a href="1-1-the-standard-model.html#sec:ewsb_higgs"><i class="fa fa-check"></i><b>1.1.4</b> Symmetry Breaking and the Higgs Boson</a>
+                    </li>
+                  </ul></li>
+                <li class="chapter" data-level="1.2" data-path="1-2-beyond-the-standard-model.html">
+                  <a href="1-2-beyond-the-standard-model.html"><i class="fa fa-check"></i><b>1.2</b> Beyond the Standard Model</a>
+                  <ul><li class="chapter" data-level="1.2.1" data-path="1-2-beyond-the-standard-model.html">
+                      <a href="1-2-beyond-the-standard-model.html#known-limitations"><i class="fa fa-check"></i><b>1.2.1</b> Known Limitations</a>
+                    </li>
+                    <li class="chapter" data-level="1.2.2" data-path="1-2-beyond-the-standard-model.html">
+                      <a href="1-2-beyond-the-standard-model.html#sec:possible_ext"><i class="fa fa-check"></i><b>1.2.2</b> Possible Extensions</a>
+                    </li>
+                  </ul></li>
+                <li class="chapter" data-level="1.3" data-path="1-3-phenomenology-of-proton-collisions.html">
+                  <a href="1-3-phenomenology-of-proton-collisions.html"><i class="fa fa-check"></i><b>1.3</b> Phenomenology of Proton Collisions</a>
+                  <ul><li class="chapter" data-level="1.3.1" data-path="1-3-phenomenology-of-proton-collisions.html">
+                      <a href="1-3-phenomenology-of-proton-collisions.html#sec:main_obs"><i class="fa fa-check"></i><b>1.3.1</b> Main Observables</a>
+                    </li>
+                    <li class="chapter" data-level="1.3.2" data-path="1-3-phenomenology-of-proton-collisions.html">
+                      <a href="1-3-phenomenology-of-proton-collisions.html#sec:pdfs"><i class="fa fa-check"></i><b>1.3.2</b> Parton Distribution Functions</a>
+                    </li>
+                    <li class="chapter" data-level="1.3.3" data-path="1-3-phenomenology-of-proton-collisions.html">
+                      <a href="1-3-phenomenology-of-proton-collisions.html#sec:factorisation"><i class="fa fa-check"></i><b>1.3.3</b> Factorisation and Generation of Hard Processes</a>
+                    </li>
+                    <li class="chapter" data-level="1.3.4" data-path="1-3-phenomenology-of-proton-collisions.html">
+                      <a href="1-3-phenomenology-of-proton-collisions.html#sec:parton_showers"><i class="fa fa-check"></i><b>1.3.4</b> Hadronization and Parton Showers</a>
+                    </li>
+                  </ul></li>
+              </ul></li>
+            <li class="chapter" data-level="2" data-path="2-experiments-at-particle-colliders.html">
+              <a href="2-experiments-at-particle-colliders.html"><i class="fa fa-check"></i><b>2</b> Experiments at Particle Colliders</a>
+              <ul><li class="chapter" data-level="2.1" data-path="2-1-the-large-hadron-collider.html">
+                  <a href="2-1-the-large-hadron-collider.html"><i class="fa fa-check"></i><b>2.1</b> The Large Hadron Collider</a>
+                  <ul><li class="chapter" data-level="2.1.1" data-path="2-1-the-large-hadron-collider.html">
+                      <a href="2-1-the-large-hadron-collider.html#injection-and-acceleration-chain"><i class="fa fa-check"></i><b>2.1.1</b> Injection and Acceleration Chain</a>
+                    </li>
+                    <li class="chapter" data-level="2.1.2" data-path="2-1-the-large-hadron-collider.html">
+                      <a href="2-1-the-large-hadron-collider.html#sec:op_pars"><i class="fa fa-check"></i><b>2.1.2</b> Operation Parameters</a>
+                    </li>
+                    <li class="chapter" data-level="2.1.3" data-path="2-1-the-large-hadron-collider.html">
+                      <a href="2-1-the-large-hadron-collider.html#sec:pile_up"><i class="fa fa-check"></i><b>2.1.3</b> Multiple Hadron Interactions</a>
+                    </li>
+                    <li class="chapter" data-level="2.1.4" data-path="2-1-the-large-hadron-collider.html">
+                      <a href="2-1-the-large-hadron-collider.html#sec:lhc_experiments"><i class="fa fa-check"></i><b>2.1.4</b> Experiments</a>
+                    </li>
+                  </ul></li>
+                <li class="chapter" data-level="2.2" data-path="2-2-the-compact-muon-solenoid.html">
+                  <a href="2-2-the-compact-muon-solenoid.html"><i class="fa fa-check"></i><b>2.2</b> The Compact Muon Solenoid</a>
+                  <ul><li class="chapter" data-level="2.2.1" data-path="2-2-the-compact-muon-solenoid.html">
+                      <a href="2-2-the-compact-muon-solenoid.html#sec:exp_geom"><i class="fa fa-check"></i><b>2.2.1</b> Experimental Geometry</a>
+                    </li>
+                    <li class="chapter" data-level="2.2.2" data-path="2-2-the-compact-muon-solenoid.html">
+                      <a href="2-2-the-compact-muon-solenoid.html#sec:cms_magnet"><i class="fa fa-check"></i><b>2.2.2</b> Magnet</a>
+                    </li>
+                    <li class="chapter" data-level="2.2.3" data-path="2-2-the-compact-muon-solenoid.html">
+                      <a href="2-2-the-compact-muon-solenoid.html#sec:cms_tracking"><i class="fa fa-check"></i><b>2.2.3</b> Tracking System</a>
+                    </li>
+                    <li class="chapter" data-level="2.2.4" data-path="2-2-the-compact-muon-solenoid.html">
+                      <a href="2-2-the-compact-muon-solenoid.html#sec:cms_ecal"><i class="fa fa-check"></i><b>2.2.4</b> Electromagnetic Calorimeter</a>
+                    </li>
+                    <li class="chapter" data-level="2.2.5" data-path="2-2-the-compact-muon-solenoid.html">
+                      <a href="2-2-the-compact-muon-solenoid.html#sec:cms_hcal"><i class="fa fa-check"></i><b>2.2.5</b> Hadronic Calorimeter</a>
+                    </li>
+                    <li class="chapter" data-level="2.2.6" data-path="2-2-the-compact-muon-solenoid.html">
+                      <a href="2-2-the-compact-muon-solenoid.html#sec:cms_muon"><i class="fa fa-check"></i><b>2.2.6</b> Muon System</a>
+                    </li>
+                    <li class="chapter" data-level="2.2.7" data-path="2-2-the-compact-muon-solenoid.html">
+                      <a href="2-2-the-compact-muon-solenoid.html#sec:trigger"><i class="fa fa-check"></i><b>2.2.7</b> Trigger and Data Acquisition</a>
+                    </li>
+                  </ul></li>
+                <li class="chapter" data-level="2.3" data-path="2-3-event-simulation-and-reconstruction.html">
+                  <a href="2-3-event-simulation-and-reconstruction.html"><i class="fa fa-check"></i><b>2.3</b> Event Simulation and Reconstruction</a>
+                  <ul><li class="chapter" data-level="2.3.1" data-path="2-3-event-simulation-and-reconstruction.html">
+                      <a href="2-3-event-simulation-and-reconstruction.html#sec:gen_view"><i class="fa fa-check"></i><b>2.3.1</b> A Generative View</a>
+                    </li>
+                    <li class="chapter" data-level="2.3.2" data-path="2-3-event-simulation-and-reconstruction.html">
+                      <a href="2-3-event-simulation-and-reconstruction.html#sec:detector_simulation"><i class="fa fa-check"></i><b>2.3.2</b> Detector Simulation</a>
+                    </li>
+                    <li class="chapter" data-level="2.3.3" data-path="2-3-event-simulation-and-reconstruction.html">
+                      <a href="2-3-event-simulation-and-reconstruction.html#sec:event_reco"><i class="fa fa-check"></i><b>2.3.3</b> Event Reconstruction</a>
+                    </li>
+                  </ul></li>
+              </ul></li>
+            <li class="chapter" data-level="3" data-path="3-statistical-modelling-and-inference-at-the-lhc.html">
+              <a href="3-statistical-modelling-and-inference-at-the-lhc.html"><i class="fa fa-check"></i><b>3</b> Statistical Modelling and Inference at the LHC</a>
+              <ul><li class="chapter" data-level="3.1" data-path="3-1-statistical-modelling.html">
+                  <a href="3-1-statistical-modelling.html"><i class="fa fa-check"></i><b>3.1</b> Statistical Modelling</a>
+                  <ul><li class="chapter" data-level="3.1.1" data-path="3-1-statistical-modelling.html">
+                      <a href="3-1-statistical-modelling.html#sec:model_overview"><i class="fa fa-check"></i><b>3.1.1</b> Overview</a>
+                    </li>
+                    <li class="chapter" data-level="3.1.2" data-path="3-1-statistical-modelling.html">
+                      <a href="3-1-statistical-modelling.html#simulation-as-generative-modelling"><i class="fa fa-check"></i><b>3.1.2</b> Simulation as Generative Modelling</a>
+                    </li>
+                    <li class="chapter" data-level="3.1.3" data-path="3-1-statistical-modelling.html">
+                      <a href="3-1-statistical-modelling.html#sec:dim_reduction"><i class="fa fa-check"></i><b>3.1.3</b> Dimensionality Reduction</a>
+                    </li>
+                    <li class="chapter" data-level="3.1.4" data-path="3-1-statistical-modelling.html">
+                      <a href="3-1-statistical-modelling.html#sec:known_unknowns"><i class="fa fa-check"></i><b>3.1.4</b> Known Unknowns</a>
+                    </li>
+                  </ul></li>
+                <li class="chapter" data-level="3.2" data-path="3-2-statistical-inference.html">
+                  <a href="3-2-statistical-inference.html"><i class="fa fa-check"></i><b>3.2</b> Statistical Inference</a>
+                  <ul><li class="chapter" data-level="3.2.1" data-path="3-2-statistical-inference.html">
+                      <a href="3-2-statistical-inference.html#sec:likelihood-free"><i class="fa fa-check"></i><b>3.2.1</b> Likelihood-Free Inference</a>
+                    </li>
+                    <li class="chapter" data-level="3.2.2" data-path="3-2-statistical-inference.html">
+                      <a href="3-2-statistical-inference.html#sec:hypo_test"><i class="fa fa-check"></i><b>3.2.2</b> Hypothesis Testing</a>
+                    </li>
+                    <li class="chapter" data-level="3.2.3" data-path="3-2-statistical-inference.html">
+                      <a href="3-2-statistical-inference.html#sec:param_est"><i class="fa fa-check"></i><b>3.2.3</b> Parameter Estimation</a>
+                    </li>
+                  </ul></li>
+              </ul></li>
+            <li class="chapter" data-level="4" data-path="4-machine-learning-in-high-energy-physics.html">
+              <a href="4-machine-learning-in-high-energy-physics.html"><i class="fa fa-check"></i><b>4</b> Machine Learning in High-Energy Physics</a>
+              <ul><li class="chapter" data-level="4.1" data-path="4-1-problem-description.html">
+                  <a href="4-1-problem-description.html"><i class="fa fa-check"></i><b>4.1</b> Problem Description</a>
+                  <ul><li class="chapter" data-level="4.1.1" data-path="4-1-problem-description.html">
+                      <a href="4-1-problem-description.html#sec:supervised"><i class="fa fa-check"></i><b>4.1.1</b> Probabilistic Classification and Regression</a>
+                    </li>
+                  </ul></li>
+                <li class="chapter" data-level="4.2" data-path="4-2-machine-learning-techniques.html">
+                  <a href="4-2-machine-learning-techniques.html"><i class="fa fa-check"></i><b>4.2</b> Machine Learning Techniques</a>
+                  <ul><li class="chapter" data-level="4.2.1" data-path="4-2-machine-learning-techniques.html">
+                      <a href="4-2-machine-learning-techniques.html#sec:boosted_decision_trees"><i class="fa fa-check"></i><b>4.2.1</b> Boosted Decision Trees</a>
+                    </li>
+                    <li class="chapter" data-level="4.2.2" data-path="4-2-machine-learning-techniques.html">
+                      <a href="4-2-machine-learning-techniques.html#sec:ann"><i class="fa fa-check"></i><b>4.2.2</b> Artificial Neural Networks</a>
+                    </li>
+                  </ul></li>
+                <li class="chapter" data-level="4.3" data-path="4-3-applications-in-high-energy-physics.html">
+                  <a href="4-3-applications-in-high-energy-physics.html"><i class="fa fa-check"></i><b>4.3</b> Applications in High Energy Physics</a>
+                  <ul><li class="chapter" data-level="4.3.1" data-path="4-3-applications-in-high-energy-physics.html">
+                      <a href="4-3-applications-in-high-energy-physics.html#sec:sig_vs_bkg"><i class="fa fa-check"></i><b>4.3.1</b> Signal vs Background Classification</a>
+                    </li>
+                    <li class="chapter" data-level="4.3.2" data-path="4-3-applications-in-high-energy-physics.html">
+                      <a href="4-3-applications-in-high-energy-physics.html#sec:particle_id_reg"><i class="fa fa-check"></i><b>4.3.2</b> Particle Identification and Regression</a>
+                    </li>
+                  </ul></li>
+              </ul></li>
+            <li class="chapter" data-level="5" data-path="5-search-for-anomalous-higgs-pair-production-with-cms.html">
+              <a href="5-search-for-anomalous-higgs-pair-production-with-cms.html"><i class="fa fa-check"></i><b>5</b> Search for Anomalous Higgs Pair Production with CMS</a>
+              <ul><li class="chapter" data-level="5.1" data-path="5-1-introduction.html">
+                  <a href="5-1-introduction.html"><i class="fa fa-check"></i><b>5.1</b> Introduction</a>
+                </li>
+                <li class="chapter" data-level="5.2" data-path="5-2-higgs-pair-production-and-anomalous-couplings.html">
+                  <a href="5-2-higgs-pair-production-and-anomalous-couplings.html"><i class="fa fa-check"></i><b>5.2</b> Higgs Pair Production and Anomalous Couplings</a>
+                </li>
+                <li class="chapter" data-level="5.3" data-path="5-3-analysis-strategy.html">
+                  <a href="5-3-analysis-strategy.html"><i class="fa fa-check"></i><b>5.3</b> Analysis Strategy</a>
+                </li>
+                <li class="chapter" data-level="5.4" data-path="5-4-trigger-and-datasets.html">
+                  <a href="5-4-trigger-and-datasets.html"><i class="fa fa-check"></i><b>5.4</b> Trigger and Datasets</a>
+                </li>
+                <li class="chapter" data-level="5.5" data-path="5-5-event-selection.html">
+                  <a href="5-5-event-selection.html"><i class="fa fa-check"></i><b>5.5</b> Event Selection</a>
+                </li>
+                <li class="chapter" data-level="5.6" data-path="5-6-data-driven-background-estimation.html">
+                  <a href="5-6-data-driven-background-estimation.html"><i class="fa fa-check"></i><b>5.6</b> Data-Driven Background Estimation</a>
+                  <ul><li class="chapter" data-level="5.6.1" data-path="5-6-data-driven-background-estimation.html">
+                      <a href="5-6-data-driven-background-estimation.html#sec:hem_mixing"><i class="fa fa-check"></i><b>5.6.1</b> Hemisphere Mixing</a>
+                    </li>
+                    <li class="chapter" data-level="5.6.2" data-path="5-6-data-driven-background-estimation.html">
+                      <a href="5-6-data-driven-background-estimation.html#sec:bkg_validation"><i class="fa fa-check"></i><b>5.6.2</b> Background Validation</a>
+                    </li>
+                  </ul></li>
+                <li class="chapter" data-level="5.7" data-path="5-7-systematic-uncertainties.html">
+                  <a href="5-7-systematic-uncertainties.html"><i class="fa fa-check"></i><b>5.7</b> Systematic Uncertainties</a>
+                </li>
+                <li class="chapter" data-level="5.8" data-path="5-8-analysis-results.html">
+                  <a href="5-8-analysis-results.html"><i class="fa fa-check"></i><b>5.8</b> Analysis Results</a>
+                </li>
+                <li class="chapter" data-level="5.9" data-path="5-9-combination-with-other-decay-channels.html">
+                  <a href="5-9-combination-with-other-decay-channels.html"><i class="fa fa-check"></i><b>5.9</b> Combination with Other Decay Channels</a>
+                </li>
+              </ul></li>
+            <li class="chapter" data-level="6" data-path="6-inference-aware-neural-optimisation.html">
+              <a href="6-inference-aware-neural-optimisation.html"><i class="fa fa-check"></i><b>6</b> Inference-Aware Neural Optimisation</a>
+              <ul><li class="chapter" data-level="6.1" data-path="6-1-introduction.html">
+                  <a href="6-1-introduction.html"><i class="fa fa-check"></i><b>6.1</b> Introduction</a>
+                </li>
+                <li class="chapter" data-level="6.2" data-path="6-2-problem-statement.html">
+                  <a href="6-2-problem-statement.html"><i class="fa fa-check"></i><b>6.2</b> Problem Statement</a>
+                </li>
+                <li class="chapter" data-level="6.3" data-path="6-3-method.html">
+                  <a href="6-3-method.html"><i class="fa fa-check"></i><b>6.3</b> Method</a>
+                </li>
+                <li class="chapter" data-level="6.4" data-path="6-4-related-work.html">
+                  <a href="6-4-related-work.html"><i class="fa fa-check"></i><b>6.4</b> Related Work</a>
+                </li>
+                <li class="chapter" data-level="6.5" data-path="6-5-experiments.html">
+                  <a href="6-5-experiments.html"><i class="fa fa-check"></i><b>6.5</b> Experiments</a>
+                  <ul><li class="chapter" data-level="6.5.1" data-path="6-5-experiments.html">
+                      <a href="6-5-experiments.html#sec:synthetic_mixture"><i class="fa fa-check"></i><b>6.5.1</b> 3D Synthetic Mixture</a>
+                    </li>
+                  </ul></li>
+              </ul></li>
+            <li class="chapter" data-level="7" data-path="7-conclusions-and-prospects.html">
+              <a href="7-conclusions-and-prospects.html"><i class="fa fa-check"></i><b>7</b> Conclusions and Prospects</a>
+            </li>
+            <li class="chapter" data-level="" data-path="references.html">
+              <a href="references.html"><i class="fa fa-check"></i> References</a>
+            </li>
+          </ul></nav></div>
+
+      <div class="book-body">
+        <div class="body-inner">
+          <div class="book-header" role="navigation">
+            <h1>
+              <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Statistical Learning and Inference at Particle Collider Experiments</a>
+            </h1>
+          </div>
+
+          <div class="page-wrapper" tabindex="-1" role="main">
+            <div class="page-inner">
+
+              <section class="normal" id="section-"><div id="sec:event" class="section level2">
+                <h2><span class="header-section-number">2.3</span> Event Simulation and Reconstruction</h2>
+                <p>The raw account of the readout of all detectors after a single bunch crossing, as well as any derived representation of it, is commonly referred to as <em>an event</em>, and is the most fundamental type of observation in high-energy data analyses. All approaches to extract useful conclusions from CMS data are based on this information unit or simplifications thereof. This is because for practical purposes, statistical independence between events can be assumed, barring possible caveats (e.g. out-of-time pile-up or detector malfunctioning). Therefore, data analyses are reduced to the task of comparison between the observations and the predicted frequencies of events with different characteristics.</p>
+                <p>The dimensionality of an event evidently depends on its data representation, simpler representations being lower-dimensional and easing the comparison with theoretical predictions, at the cost of possibly losing some useful information. A principled way to obtain lower dimensional representations of an event given its raw detector readouts is to attempt to reconstruct all the primary particles that were produced in the main proton-proton interaction of the collision and estimate their main properties, through a process generally referred as <em>event reconstruction</em>. Nevertheless, for carrying out successfully the aforesaid task it is convenient to be able to have a detailed model of the detector readout output expected for a given set of particles produced in a collision. Realistic modelling of high-energy physics collisions in high-dimensional representations can be achieved through simulation.</p>
+                <p>In this section, a generative view of the main physical mechanisms that are happening both in the proton-proton collisions and when particles propagate through the CMS detector is first discussed. Such overview doubles as an introduction of the next section, where a description of how realistic simulations of the detector readouts (i.e. events) can be obtained using computational tools is provided. Afterwards, the inverse process is tackled, which is considerably harder and often ill-defined, namely how can we estimate the set of primary particles that were produced in the collision given the detector readout, through event reconstruction techniques.</p>
+                <div id="sec:gen_view" class="section level3">
+                <h3><span class="header-section-number">2.3.1</span> A Generative View</h3>
+                <p>When two high-density proton bunches travelling in opposite directions pass through each other inside the collision region of CMS, several proton-proton interactions can occur as discussed in Section <a href="2-1-the-large-hadron-collider.html#sec:pile_up">2.1.3</a>. While most of the interactions will correspond to a small energy transfer between the interacting partons, given that the total interaction cross section is heavily dominated by soft scattering processes, a small fraction of collisions would include physically interesting process such as the production of heavy particles (e.g. a Higgs boson). The absolute and differential rates for such <em>hard</em> processes can be predicted as outlined in Section <a href="1-3-phenomenology-of-proton-collisions.html#sec:factorisation">1.3.3</a>. Therefore, for a specific process in a proton-proton interaction, realistic high-dimensional modelling of the intermediate particles can be obtained by repeated sampling of the parton distribution functions and phase space differential cross sections. Subsequent decay, hadronization and radiation processes as well as more subtle effects and higher order corrections, can be then accounted for using the methods mentioned in Section <a href="1-3-phenomenology-of-proton-collisions.html#sec:parton_showers">1.3.4</a>, generally referred to as <em>Monte Carlo event generation</em> techniques. The end result of the mentioned procedures is a large dataset of simulated particle outcomes for a specific process, each example including a set of stable or sufficiently long-lived particles and their kinematics properties that would propagate through the detector.</p>
+                <div class="figure">
+                <img src="gfx/102_chapter_2/CMS_transverse.svg" alt="Figure 2.10: Transverse view of a section of the CMS detector and the interactions of the various particle types with the detecting sub-components. The figure has been adapted from [70]." id="fig:CMS_transverse" class="vector" style="width:70.0%"><p class="caption">Figure 2.10: Transverse view of a section of the CMS detector and the interactions of the various particle types with the detecting sub-components. The figure has been adapted from <span class="citation">[<a href="references.html#ref-Sirunyan:2017ulk" role="doc-biblioref">70</a>]</span>.</p>
+                </div>
+                <p>In addition to the set of particles in the hard proton-proton interaction, the effect of pileup interactions can be accounted for by adding the particle outcome of a random number of randomly sampled soft interactions matching their approximately expected distribution in the collisions given the instantaneous luminosity conditions. This final set of long-lived particles produced in the interaction region represents a possible particle outcome for a collision assuming a given <em>hard</em> process occurred. While they cannot be directly observed, but only indirectly inferred through the detector readouts, it is assumed that an analogous set of particles is produced as result of each collision in the actual experiment. Based on the expected readout that they produce in the different CMS detector subcomponents, five main types of detectable particles are distinguished: muons, electrons, charged hadrons, neutral hadrons and photons.</p>
+                <p>The traces that each of the mentioned particle types leave in each detector sub-system are depicted in Figure <a href="2-3-event-simulation-and-reconstruction.html#fig:CMS_transverse">2.10</a>. Even though muons are unstable particles, their long mean lifetime <span class="math inline">\(\tau_\mu = 2.2 \mu s\)</span> allows them to travel very large distances when highly boosted, as is the case for all the high-energy muons coming out from the interaction region. Hence, for the purposes of studying LHC collisions they can be considered stable, given the unlikeliness of their decay in the detector volume at the range of energies studied. Because muons are charged particles, they leave hits in detector layers of the inner tracker following their curved trajectories However, due to their high mass, energy loss due to bremsstrahlung is not high enough to produce significant EM showering in the ECAL. After passing through the HCAL without interacting notably, muons reach the outer tracking system providing additional trajectory points.</p>
+                <p>The trajectories of high-energy electrons are also recorded by the CMS inner tracker, but as mentioned in Section <a href="2-2-the-compact-muon-solenoid.html#sec:cms_ecal">2.2.4</a>, their interactions differ from those caused by muons because electrons lose energy rapidly due to bremsstrahlung when they reach the ECAL, producing subsequent electromagnetic showers. It is worth noting that within CMS reconstruction and analysis, it is common to simply use the term <em>electron</em> to refer both to electrons and positrons, their charge inferred from the curvature sign of their trajectories. Charged hadrons, the term here largely referring to charged pions, kaons and protons, behave similarly to electrons in the tracking detector<a href="2-3-event-simulation-and-reconstruction.html#fn2" class="footnote-ref" id="fnref2"><sup>2</sup></a> but instead generate much larger hadronic showers in the hadronic calorimeter.</p>
+                <p>Long-lived neutral hadrons, including neutrons and the neutral kaon <span class="math inline">\(K_L^0\)</span>, follow instead straight lines in the inner detector volume because they are not affected by the magnetic field neither leave any traces when passing through the tracking detectors. It is not until neutral hadrons reach the calorimeter detectors, chiefly the HCAL, that nuclear interactions produce large hadronic showers producing measurable signals that can be correlated with the energy deposited. Photons are massless and neutral particles, and at the ranges of energies of interest characteristic of the outcome of particle collisions at the LHC are not expected to deposit enough energy in the thin inner tracking layers to produce significant signal, thus they also follow a straight line trajectory to the calorimetry sub-systems. In contrast, when photons reach the electromagnetic calorimeter, electron-positron pair-production processes are bound to occur, producing in turn electromagnetic showers which can be readout as a ECAL detector signal.</p>
+                <p>The previous classification of particles based on their detectable energy remnants in the different detectors, patently disregards a common outcome of high energy collisions: neutrinos. Neutrinos only interact via weak and gravitational forces, hence the probability of interaction with the detecting elements of CMS is negligible. They thus escape the experimental area undiscovered. The production of high-energy neutrinos, or other weakly-interacting unknown hypothetical particles (e.g. dark matter candidates), can nevertheless be inferred by the total transverse energy imbalance. While the initial longitudinal momentum in the laboratory frame is unknown due to the proton compositeness, the initial total transverse momentum is very close to zero given that the collisions occur head-on. Because detecting structures of CMS have a near complete angular coverage around the interaction points, with the exception of very low transverse momentum particles that are lost near the beam pipe, the total transverse collision momentum of all detectable particles can be obtained simply by summing the estimation of their transverse momenta estimation. Ergo, the quantity <span class="math inline">\(E_T^{\textrm{miss}}= || - \sum \vec{p}_T ||\)</span> is referred to as total missing transverse energy or by the acronym MET, and can be used to infer the production of non-detected particles particles such as neutrinos.</p>
+                <p>In summary, the physical characteristics of each category of particle previously stated cause different signatures in the various detector sub-systems, that often can be used to distinguish between each type. It is also worth pointing out the main attributes each individual detector element readout, which are principally the angular position in <span class="math inline">\(\eta\)</span> and <span class="math inline">\(\phi\)</span>, the distance to the interaction point which is given by the detecting element placement or the <span class="math inline">\(z\)</span> coordinate, and the amount of deposited energy. The latter is especially relevant for calorimeter detecting units. The precision of the angular location coordinates greatly varies between different detector types depending in their granularity, tracking detectors providing more accurate position measurements given that they extract information directly from the particle trajectories.</p>
+                </div>
+                <div id="sec:detector_simulation" class="section level3">
+                <h3><span class="header-section-number">2.3.2</span> Detector Simulation</h3>
+                <p>While the simplified map between the particle outcome of a given collision and the corresponding detector readouts presented in the previous section is extremely useful for obtaining a general understanding the operation of the CMS detector, it is not detailed enough to realistically model the detector readouts given a set of particles generated in a collision. Most of the relevant dynamics for modelling, such as interactions between protons, the produced particles and the detector material or the detector response, are of stochastic nature, hence they have to be specified either by sampling approximated probability distributions or by a complex probabilistic program that goes through a mechanistic simulation of the underlying physical processes actually occurring.</p>
+                <p>A detailed simulation is found to be the most accurate approach, given the many subtleties affecting the detector readout for a given set of generated particles, including various possible particle decays and material interactions that can occur when the particle is travelling through the detector, the non-uniformity of the magnetic field and its effect on the particle trajectories, and the intricacy of the detector geometry and the electrical response of its components. All these effects can be accounted for, to a high degree of validity, in a simulator program considering the non-deterministic propagation of the particles produce through the detector volume. The propagation of each particle through magnetic and electric fields can often be treated independently though a stochastic chain of time steps, that can an any point branch out to produce new particles through decays and other secondary particle generating physical processes, so local energy deposits in the different detector structures can be recorded. After propagating all particles, the combination of all energy deposits in the detecting volumes can be used to produce realistic detector responses.</p>
+                <p>Such type of detector simulation is referred to as <em>full simulation</em>, or <em>fullsim</em> for short, and it is carried out for CMS generated events using a custom implementation of the geometry, properties and response of the different detectors as well as the magnetic field details, heavily reusing components from the GEANT4 toolkit <span class="citation">[<a href="references.html#ref-Agostinelli:2002hh" role="doc-biblioref">71</a>]</span> for the simulation of the passage of particles through matter. Additional modules are used to incorporate relevant modelling details such as the distribution of the interaction vertices in the interaction region, referred to as <em>vertex smearing</em>, and the addition of particles coming from additional soft interactions in the same collision or from adjacent bunch crossings, denoted as <em>pileup mixing</em>, which can affect the readouts and subsequent interpretation due to the overlapping of detector deposits and detector sensitivity dead-times.</p>
+                <p>As can be conjectured by its level of detail, such simulation processes are very time consuming, taking several minutes of CPU time given currently available computing technologies, for producing a realistic detector readout for each initial set of particles produced at a primary <em>hard</em> interaction. Given that oftentimes billions of generated events (i.e. simulated observations) of common processes are needed in order to obtain a realistic modelling of known types of interactions, alternative simulation techniques are sometimes used. By trading off some accuracy with simulation speed, the modelling of the physical processes and detector responses can be simplified, reducing running times considerably, up to two orders of magnitude <span class="citation">[<a href="references.html#ref-Abdullin:2011zz" role="doc-biblioref">72</a>]</span>. Alternatively, as initially stated at the beginning of this section, detailed simulated observations can be used to directly parametrise low-dimensional summaries of the detector readout, such as the reconstructed main quantities that will be presented in the next section, by using approximate conditional probability density functions. While this approach, implemented in software packages such as DELPHES <span class="citation">[<a href="references.html#ref-deFavereau:2013fsa" role="doc-biblioref">73</a>]</span>, is limited by the flexibility and accuracy of the modelling of the conditional probabilities, it is very useful as a very fast substitute of the full simulation chain for simplified studies that aim to obtain an approximate estimate the expected sensitivity reach or measurement accuracy of a given analysis. Peripherally related with the focus of this work, the use of unsupervised machine learning techniques structurally similar to those describe in Section <a href="4-2-machine-learning-techniques.html#sec:ann">4.2.2</a> is being investigated to provide a fast simulation alternative without relying in a simplistic parameterisations <span class="citation">[<a href="references.html#ref-Paganini:2017hrr" role="doc-biblioref">74</a>], [<a href="references.html#ref-deOliveira:2017pjk" role="doc-biblioref">75</a>]</span>.</p>
+                </div>
+                <div id="sec:event_reco" class="section level3">
+                <h3><span class="header-section-number">2.3.3</span> Event Reconstruction</h3>
+                <p>In the previous sections, the generative mechanisms by which particles produce signals in the different detectors, as well as the techniques used to procedurally simulate them with high fidelity, were summarised. In contrast with simulated events, the set of underlying particles that were produced in the interaction region, and subsequently detected, are not known a priori in real collisions. A very helpful task to understand the nature of the fundamental interaction that likely happened in a collision is to infer the type and properties of the particles that were probably produced on a given collision given the detector output. Such procedure is generally referred to as <em>event reconstruction</em>. The underlying problem for achieving such goal is the assignment of detector readouts to the produced particle. This is not a simple problem, because the total number or the relative multiplicities of the different particle categories in a given event is unknown and variable, however expected to be large given the high-energy and luminosity conditions of proton-proton collisions.</p>
+                <div id="reconstruction-at-cms-particle-flow-algorithm" class="section level4">
+                <h4><span class="header-section-number">2.3.3.1</span> Reconstruction at CMS: Particle-Flow Algorithm</h4>
+                <p>A hierarchical strategy is followed to perform event reconstruction at the CMS experiment. First, the combined properties of small groups of low-level readouts for each sub-detector in each collision are used to construct higher-level summaries that distill the information regarding the origin, direction or energy of the particles. In a second step, such high level constructs are linked by an algorithm based on the expected properties of each particle type, to obtain a list of <em>physics objects</em> and their relevant attributes, which would probably correspond to those that actually were generated in the collision. Such approach, that is referred to as <em>particle-flow </em> (PF) event reconstruction <span class="citation">[<a href="references.html#ref-Sirunyan:2017ulk" role="doc-biblioref">70</a>]</span> within CMS, has proven very effective to obtain a lower dimensional transformation of the detector readout that greatly simplifies the interpretation and categorisation of events based on their particle content.</p>
+                <p>As mentioned before, the first reconstruction stage encompasses the combination of detector traces in each sub-detector system to create higher level constructs. In the tracking detector, this amounts to the association of location estimates for the signals detected in all layers of the pixel and strip detector, referred to as <em>hits</em>, to trajectories of charged particles, simply called <em>tracks</em>. This inverse measurement problem is approached in CMS by using a combinatorial extension of the Kalman Filter algorithm <span class="citation">[<a href="references.html#ref-Chatrchyan:2014fea" role="doc-biblioref">65</a>], [<a href="references.html#ref-Billoir:1990we" role="doc-biblioref">76</a>], [<a href="references.html#ref-Mankel:334615" role="doc-biblioref">77</a>]</span>. In broad terms, the algorithm starts by selection sets of two-hit and three-hit associations from the inner layers, referred to as <em>seeds</em>, which are then extrapolated outwards and used to gather hits in the the other layers by consecutive prediction and update steps, keeping all combinations that are deemed compatible. An additional step is then carried out, that filters out all candidate tracks under some pre-defined quality threshold and removes possible duplicates. Once the set of hits that define each track are found, their parameters are fitted again using a more detailed prediction step in the Kalman filter, thus obtaining more accurate estimates for their origin, momentum and direction.</p>
+                <p>The reconstructed charged particle trajectories can be used to identify the spatial locations where proton-proton interactions occurred in each bunch crossing, dubbed <em>primary vertices</em>, by extrapolating them back to the collision region and looking for overlapping subsets. In practice, a custom algorithm for vertex adaptive fitting <span class="citation">[<a href="references.html#ref-Fruhwirth:2007hz" role="doc-biblioref">78</a>]</span> is used in combination with deterministic annealing, to identify and compute the vertices location and their uncertainty more accurately. Most primary vertices correspond to soft scattering processes (pileup), and can be used to characterise the position and size of the interaction region. In collisions where a hard interaction occurs, the main primary vertex may effectively be identified with the one whose linked tracks transverse momenta squared sum <span class="math inline">\(\sum p_T^2\)</span> is the largest. The distinction of a main primary vertex is useful to mitigate the effect of pile-up interactions in reconstruction by removing the contributions from particles linked to pileup vertices.</p>
+                <p>Regarding the calorimeter detector readouts, the initial step comprises the clustering of low-level deposits in each sub-detector, so as to identify the energy remnants left by each individual particle. The clustering procedure starts by finding the calorimeter cells where the amount of deposited energy are local maximal, referred to as <em>seed</em> deposits. The deposits from contiguous energy cells are grouped together until their energy is smaller than twice the expected noise level, forming larger groups referred to as <em>topological clusters</em>. Because such clusters might be the result of the overlapping of the energy deposited by two or more particles, the final clusters are identified by fitting a Gaussian-mixture model via the expectation-maximisation algorithm, using the number of initial seeds present in the cluster as the number of Gaussian components in the mixture. The fitted cluster amplitudes are thus expected to be heavily correlated with the energy deposited by an individual particle, however extensive calibration based on a detailed simulation of the detector and the assumed particle type is needed for accurate energy estimates. The resulting calibrated clusters in each sub-detector (ECAL, HCAL and HF) is instrumental for improve the energy measurement of charged hadrons, identifying and measuring the energy of neutral hadrons and photons, and to facilitate the identification and reconstruction of electrons.</p>
+                <p>Once the basic elements for event reconstruction have been constructed, charged particle tracks and calorimeter clusters are linked together to form <em>blocks</em>. This step is an attempt to group the different traces that particle can leave in the various sub-detectors, by linking pairs of elements based on their distance in the <span class="math inline">\((\eta,\phi)\)</span> plane and other properties depending of the specific sub-systems considered. When considering links between the inner tracker and calorimeter clusters, the curvature of the tracks and other details regarding the detector geometry are taken into account. Calorimeter cluster-to-cluster links between the HCAL and ECAL, and between the ECAL and the pre-shower clusters are also sought. Additionally, ECAL clusters possibly created by bremsstrahlung photons can also be linked to electron-like tracks if they are consistent with an extrapolation of the track tangent. Finally, links between two tracks due subsequent photon conversion via pair production are also considered if the sum of track momenta matches the mentioned electron-like track tangent.</p>
+                <p>The outcome of the aforementioned procedure is a set of blocks of elements for a given collision readout, formed by associating elements that have been directly linked or share a common link with other elements. The following reconstruction step is referred to as <em>object identification</em>, and it is based in the association of blocks to a list of particle candidates, also known as <em>physics objects</em>. This is done sequentially, starting out by the objects that more easily identified (e.g. muons) and progressively masking out the blocks that are considered for each object until all particles candidates have been reconstructed. The reconstruction process is rather conservative, given that most CMS data analysis share the same reconstructed <em>physics objects</em>, therefore it is common to specify additional selection criteria on the resulting set of objects based on their properties within each analysis to reduce the rate of fake or wrong reconstruction. The rest of this section is devoted to discuss in more detail the identification, calibration and common selection requirements on the main reconstructed objects that are used within physical analyses.</p>
+                </div>
+                <div id="muon-reconstruction" class="section level4">
+                <h4><span class="header-section-number">2.3.3.2</span> Muon Reconstruction</h4>
+                <p>Muons can be thought of as the easiest object to identify given the observed detector readouts, because they are the only particle expected to reach the outer tracking systems (i.e. muon detecting system). Furthermore, the detecting volume far away from the interaction region is much larger and hence the density of particle trajectories is considerably lower. The sparse particle hits in each of the muon detector systems are linked to form tracks that can be combined using a Kalman filter, similarly to what is done for the inner tracker as described earlier this section. To increase the measurement accuracy and reduce the fake rate, for analyses directly studying final states including muons, oftentimes a matching between the track segments in the muon detectors and a those in the inner tracker is required. The details and performance of the reconstruction procedure depend on the momenta of the muon, and are described in more detail the following reference <span class="citation">[<a href="references.html#ref-Chatrchyan:2014fea" role="doc-biblioref">65</a>]</span>.</p>
+                <p>The main challenges of muon reconstruction include the dismissal of muons produced by cosmic rays hitting the atmosphere and going through the CMS detector, simply dubbed as <em>cosmic muons</em>, as well as the rejection of signals from very energetic hadrons produced in the collision that are able to transverse the dense calorimeter and magnet section and still produce a response in the muon detectors, that are referred to as <em>punch-through</em> hadrons. In addition, muons are a common product of the decay of hadrons and it is thus important to differentiate between muons produced in the primary interaction, or <em>prompt muons</em>, and those produced in a secondary decay of another particle. The amount of energy deposited around the muon trajectory, called <em>muon isolation</em>, as well as the distance to the primary vertex are important variables for such distinction.</p>
+                </div>
+                <div id="electron-and-photon-reconstruction" class="section level4">
+                <h4><span class="header-section-number">2.3.3.3</span> Electron and Photon Reconstruction</h4>
+                <p>Electron reconstruction is more challenging because it uses the readouts from the inner tracker and the ECAL, both detectors being sensitive to additional charged particles coming out from the interaction volume, and the latter also to high-energy photons. Furthermore, electrons lose energy in their curved trajectories through the tracker, thereby complicating an accurate track reconstruction. The latter can be accounted for during the track reconstruction by using a Gaussian-Sum filter extension fo the Kalman filter <span class="citation">[<a href="references.html#ref-Adam:2005bya" role="doc-biblioref">79</a>]</span> algorithm, which can be used to model the previously mentioned non-linearities. The procedural details of the identification and property measurement for electrons depend on their transverse momenta. Lower energy electrons are more accurately indentified using the inner tracker hits, while the electromagnetic calorimeter is more useful at higher energy ranges. These and other details regarding electron reconstruction are discussed in the following reference <span class="citation">[<a href="references.html#ref-Khachatryan:2015hwa" role="doc-biblioref">80</a>]</span>.</p>
+                <p>The electron momentum direction is measured using the track information, while the energy is estimated by combining both information from the tracking and calorimeter detectors. In order to obtain precise energy and momentum estimates, under 5% in the full pseudo-rapidity range, a calibration step is required to correct for non-clustered energy deposits and pile-up contributions. Similarly to what is done for muons, additional quality criteria can be applied to distinguish between the electrons produced in the primary interaction and those coming from hadronic decays or converted photons, including conditions on several track-based and calorimeter-based observables as well as isolation requirements, the latter ensuring that no significant energy from hadrons was deposited around the electron trajectory.</p>
+                <p>High-energy photons are identified and reconstructed using only the calorimeter <span class="citation">[<a href="references.html#ref-Khachatryan:2015iwa" role="doc-biblioref">81</a>]</span>, when the energy distribution in the ECAL calorimeter cells is consistent with that expected from a photon shower. Energy isolation requirements are also essential to distinguish photons coming from hadrons or secondary radiative decays, which will be discussed together with hadrons, from those originated as a direct product of the primary interaction. Additional quality and fine-tuned calibration is often used, for example in the <span class="math inline">\(H \rightarrow \gamma \gamma\)</span> analysis, to reduce the fake rate and obtain higher momentum resolution.</p>
+                </div>
+                <div id="sec:jet_btag" class="section level4">
+                <h4><span class="header-section-number">2.3.3.4</span> Jet Reconstruction and B-Tagging</h4>
+                <p>Once muons, electrons and isolated photons in the event have been identified, the remaining particle-flow blocks (i.e. linked tracks and/or calorimeters deposits) are interpreted either as neutral or charged <em>PF candidates</em> <span class="citation">[<a href="references.html#ref-Sirunyan:2017ulk" role="doc-biblioref">70</a>]</span>. These physics object candidates account for charged and neutral hadrons coming from the hadronisation of partons produced in the collision or their subsequent decays, as well as non-isolated photons radiated during those processes. When the aim is studying high-energy fundamental interactions that produce partons or other parton-decaying intermediate particles (e.g. <span class="math inline">\(H \rightarrow b \bar{b}\)</span>), such reconstructed objects are not directly practical because their individual momenta cannot be linked with original parton momentum. This is because the processes of fragmentation, hadronisation, decays and associated radiation are stochastic, producing tree-like structures with multiple leafs as discussed in Section <a href="1-3-phenomenology-of-proton-collisions.html#sec:parton_showers">1.3.4</a>, difficulting most attempts to uniquely identify each parton with its decay chain. In addition, contributions from additional soft pileup interactions may further complicate the mentioned assignment, while this factor is lessen by charged hadron subtraction techniques (CHS) <span class="citation">[<a href="references.html#ref-CMS:2014ata" role="doc-biblioref">82</a>]</span> based on removing candidates not associated with a primary vertex.</p>
+                <p>A possible way to construct simpler observables that can be linked with the original partons is to create composite objects based the remaining candidates through clustering. These objects, referred to as <em>jets</em>, are an attempt to represent the chain of hadrons and radiated energy produced, so the original parton energy and momentum can be recovered from the summed of the components. They can be geometrically viewed as cones coming from the interaction region, covering an angular area <span class="math inline">\(\Delta R\)</span> of a given size in an outwards direction, that contains a collimated set of hadrons and radiated photons flying away a direction similar to the original parton. Several jet clustering algorithms exist, each characterised by a given a size or resolution parameter <span class="math inline">\(R\)</span> and a recombination scheme, defining how candidates are combined to create the composite clustered object.</p>
+                <p>Due to the properties of hadronisation and QCD radiation processes, a common requirement for such clustering algorithms is that they do not change significantly when a particle is split in two collinear ones (i.e. they are <em>collinear safe</em>) or additional soft radiation is produced by one of the clustered particles (i.e. they are <em>infrared safe</em>), which greatly simplifies direct comparison with generation level observables. In particular, in the analysis described in Chapter <a href="5-search-for-anomalous-higgs-pair-production-with-cms.html#sec:higgs_pair">5</a>, the default jet CMS reconstruction is extensively used, which is based on the <span class="math inline">\(\textrm{anti-k}_T\)</span> algorithm <span class="citation">[<a href="references.html#ref-Cacciari:2008gp" role="doc-biblioref">83</a>]</span>. This is a sequential algorithm, also referred to as hierarchical agglomerative clustering in statistical language. The algorithm starts by assigning each candidate to each own cluster and successively merging them according to the following distances between two jets indexes as i and j respectively: <span id="eq:antikt_distance"><span class="math display">\[ d_{ij} = \min ( p_{Ti}^{2a}, p_{Tj}^{2a}) \frac{\Delta R_{ij}^2}{R^2}
+                \quad \textrm{and} \quad
+                d_{iB} = p_{Ti}^{2a}
+                \qquad(2.10)\]</span></span> where <span class="math inline">\(\Delta R_{ij}^2\)</span> is the <span class="math inline">\(\eta-\phi\)</span> plane distance as defined in Section <a href="2-2-the-compact-muon-solenoid.html#sec:exp_geom">2.2.1</a>, <span class="math inline">\(p_{Ti}^{2a}\)</span> and <span class="math inline">\(p_{Tj}^{2a}\)</span> are the transverse momenta of each jet, <span class="math inline">\(R\)</span> is the size parameter, and <span class="math inline">\(a=-1\)</span> for the <span class="math inline">\(\textrm{anti-k}_T\)</span> algorithm. The algorithm starts by computing all distances <span class="math inline">\(d_{ij}\)</span> and <span class="math inline">\(d_{iB}\)</span> for all initial candidates, which are placed in a list. If the minimum corresponds to a given distance between two candidates <span class="math inline">\(d_{ij}\)</span> then both candidates are removed from the candidate list and group together by summing their four momenta forming a composite object, which is in turn added to the list. Alternatively, if the minimum distance is <span class="math inline">\(d_{iB}\)</span>, the <span class="math inline">\(i\)</span> candidate is assigned as a jet and removed from the list. Such procedure is recursively applied until the list is empty, because all single and composite candidates have been grouped with other candidates or defined as a jets of a given size <span class="math inline">\(R\)</span>. The choice of the parameter <span class="math inline">\(R\)</span> has to provide a balance between covering all the radiation from the initial parton and being increasingly affected by noise produced by soft particles. During the data taking period considered in Chapter <a href="5-search-for-anomalous-higgs-pair-production-with-cms.html#sec:higgs_pair">5</a>, a cone size <span class="math inline">\(R=0.4\)</span> was used for the default jet collection, used in the analysis. Larger jet (e.g. <span class="math inline">\(R=0.8\)</span>) cones are used in analyses that include final states with highly boosted intermediate particles, that produce a collimated set of hadrons and radiation when they decay, commonly with internal structure that can be exploited to improve the sensitivity. Various sequential clustering algorithms can be defined by considering a different value of <span class="math inline">\(a\)</span> in Equation <a href="2-3-event-simulation-and-reconstruction.html#eq:antikt_distance">2.10</a>. If a negative choice for the exponent <span class="math inline">\(a\)</span>, as used in the <span class="math inline">\(\textrm{anti-k}_T\)</span> algorithm, higher transverse momenta particles are clustered first and thus the final jet outcome is less sensitive to soft pileup contributions and radiation.</p>
+                <p>The energy and momenta of the resulting jets is not expected to match accurately that of the original partons, due to the compound effect of detector readout and or non-linearities, as well as effect from pileup contribution. This motivates the application of a set of corrections, referred to as <em>jet energy corrections</em> (JECs) <span class="citation">[<a href="references.html#ref-Khachatryan:2016kdb" role="doc-biblioref">84</a>]</span>, that greatly reduce this discrepancies by sequentially shifting and rescaling the jet four-momenta based on extensive calibrations obtained from simulation.</p>
+                <p>So far, jets have been defined as an experimental simplification of hadronisation, decay and fragmentation chains in order to estimate the energy and the momenta of initial partons produced in the collision, and we have ignored other properties of the original parton. In particular, information regarding the flavour of the initial parton can be instrumental to distinguish event containing jets coming from high-energy processes with physical interesting intermediate particles like a Higgs boson <span class="math inline">\(H\)</span> or top quarks/antiquarks, which predominantly decay to <span class="math inline">\(b\)</span> quarks. Heavy flavour <span class="math inline">\(b\)</span> quarks, and to a lesser extent also for <span class="math inline">\(c\)</span> quarks, hadronise producing <span class="math inline">\(B\)</span> (and <span class="math inline">\(D\)</span>) hadrons that have lifetimes long enough to fly away from the primary vertex before decaying.</p>
+                <div class="figure">
+                <img src="gfx/102_chapter_2/Figure_001.svg" alt="Figure 2.11: Schematic representation of the features of a heavy-flavour jet that can be used for jet tagging including the presence charged tracks, with a large impact parameter (IP), that is not compatible with the primary vertex (PV), and a reconstructed secondary vertex (SV), both due to the decay of B or C hadrons. The figure has been adapted from [85]." id="fig:CMS_btag_scheme" class="vector" style="width:50.0%"><p class="caption">Figure 2.11: Schematic representation of the features of a heavy-flavour jet that can be used for jet tagging including the presence charged tracks, with a large impact parameter (IP), that is not compatible with the primary vertex (PV), and a reconstructed secondary vertex (SV), both due to the decay of <span class="math inline">\(B\)</span> or <span class="math inline">\(C\)</span> hadrons. The figure has been adapted from <span class="citation">[<a href="references.html#ref-Sirunyan:2017ezt" role="doc-biblioref">85</a>]</span>.</p>
+                </div>
+                <p>Some properties of the decay of <span class="math inline">\(B\)</span> and <span class="math inline">\(D\)</span> hadrons can be used to distinguish heavy flavour jets from those produced by light quarks and gluon hadronisation processes. The lifetimes of heavy flavour hadrons are often long, e.g. <span class="math inline">\(1.638\pm0.004\ \textrm{ps}\)</span> and <span class="math inline">\(1.519\pm0.005\ \textrm{ps}\)</span> for <span class="math inline">\(B^{+}\)</span> and <span class="math inline">\(B^{0}\)</span> <span class="citation">[<a href="references.html#ref-PhysRevD.98.030001" role="doc-biblioref">8</a>]</span>, respectively. When long-lived hadrons are highly boosted, they can move several millimetres away from the primary vertex where they were produced before decaying. Thus, heavy flavour jets are associated with the presence of displaced charged tracks and secondary vertices (SV) within the jet, as depicted by Figure <a href="2-3-event-simulation-and-reconstruction.html#fig:CMS_btag_scheme">2.11</a>. In addition, both <span class="math inline">\(B\)</span> or <span class="math inline">\(D\)</span> hadron decays are characterised by a large decay multiplicity (average 5 charged daughters) and a high probability (36%) of producing a lepton in their decays chain. Flavour tagging techniques, often referred to as b-tagging or c-tagging when the purpose is to identify a jets originating from a particular type of parton, combine quantitative information related with the various properties previously mentioned to distinguish the flavour of the parton that generated a given jet.</p>
+                <div class="figure">
+                <img src="gfx/102_chapter_2/Figure_016.svg" alt="Figure 2.12: Misidentification probability (in log scale) for jets originating from c (dashed line) and light quarks or gluons (solid line) versus b-tagging efficiency, for different b-tagging algorithms available in CMS during 2016. The misidentification probability and efficiencies are obtained from the subset of reconstructed jets with a p_T&gt;20\ \textrm{GeV} from a large \textrm{t}\bar{\textrm{t}} simulated sample. The figure has been adapted from [85]." id="fig:CMS_btag_comp" class="vector" style="width:70.0%"><p class="caption">Figure 2.12: Misidentification probability (in log scale) for jets originating from <span class="math inline">\(c\)</span> (dashed line) and light quarks or gluons (solid line) versus b-tagging efficiency, for different b-tagging algorithms available in CMS during 2016. The misidentification probability and efficiencies are obtained from the subset of reconstructed jets with a <span class="math inline">\(p_T&gt;20\ \textrm{GeV}\)</span> from a large <span class="math inline">\(\textrm{t}\bar{\textrm{t}}\)</span> simulated sample. The figure has been adapted from <span class="citation">[<a href="references.html#ref-Sirunyan:2017ezt" role="doc-biblioref">85</a>]</span>.</p>
+                </div>
+                <p>Heavy flavour tagging, particularly b-tagging can very useful for analyses considering jets in final states, such as the search for Higgs pair production with CMS data described in Chapter <a href="5-search-for-anomalous-higgs-pair-production-with-cms.html#sec:higgs_pair">5</a>. The misidentification versus efficiency curve of the main b-tagging algorithms that were available in 2016 for high-energy jets is shown in Figure <a href="2-3-event-simulation-and-reconstruction.html#fig:CMS_btag_comp">2.12</a>. They differ in the subset of information associated to the jet that is considered and the specifics of the multivariate techniques used to construct the final discriminator. The simplest b-tagging algorithm, referred to as jet probability (JP) is only based a calibrated estimation of the displaced track probabilities. The b-tagging discriminators pertaining to the combined secondary vertex (CSV) family combine displaced track information with reconstructed secondary vertex. The improvement between different CSV-based b-tagging algorithms is due to the use of more advanced statistical learning techniques and additional discriminating variables <span class="citation">[<a href="references.html#ref-Sirunyan:2017ezt" role="doc-biblioref">85</a>]</span>. The CMVAv2 algorithm, which is used in the analysis included in Chapter <a href="5-search-for-anomalous-higgs-pair-production-with-cms.html#sec:higgs_pair">5</a>, combines the output from JP and CSVv2 algorithms with two taggers that summarise the information from non-isolated electrons and muons inside the jet.</p>
+                <p>In Section <a href="4-3-applications-in-high-energy-physics.html#sec:particle_id_reg">4.3.2</a>, the role of recent advances in machine learning techniques for particle identification and regression are discussed in more detail, focussing on the development and integration on a new deep learning based multi-category jet tagger referred as DeepJet. The DeepJet tagger outperforms both CMVAv2 and DeepCSV (which also leverages deep learning technologies), while providing additional discrimination capabilities (e.g. gluon-quark separation). It is worth mentioning that jet tagging techniques can also be applied for identifying substructure in larger radius jets, which are very relevant for analyses where highly boosted intermediate objects are expected, but are not discussed in this work.</p>
+                </div>
+                <div id="sec:met_pf" class="section level4">
+                <h4><span class="header-section-number">2.3.3.5</span> Missing Transverse Energy</h4>
+                <p>As hinted in Section <a href="2-3-event-simulation-and-reconstruction.html#sec:gen_view">2.3.1</a>, neutrinos can be produced at high-energy proton-proton collisions, and they leave the detector undetected. Nevertheless, the presence of neutrinos (or other hypothetically weakly-interacting particles) can be inferred by the total momentum imbalance in the transverse plane of the event. Within the Particle-Flow reconstruction framework, this accounts to computing the vectorial sum of the transverse momenta of all PF reconstructed objects: <span id="eq:met_pf"><span class="math display">\[ \vec{p}_T^\textrm{miss} =  \sum \vec{p}_{Ti}^\textrm{miss}\qquad(2.11)\]</span></span> where <span class="math inline">\(\vec{p}_T^\textrm{miss}\)</span> is the total missing transverse momentum, whose Euclidean norm modulo is the missing transverse energy <span class="math inline">\(E_T^\textrm{miss}\)</span>, and <span class="math inline">\(\vec{p}_{Ti}^\textrm{miss}\)</span> is the transverse momentum each PF candidate.</p>
+                <p>It is worth remarking that some hadron decay processes can produce neutrinos, therefore a non-zero transverse missing energy <span class="math inline">\(E_T^\textrm{miss}\)</span> does not necessarily mean that weakly-interacting particles were produced in the hard interaction or by its direct products. Furthermore, any mis-detections or mis-measurements of the momenta of some of the produced particles can lead to transverse energy imbalances.</p>
+                </div>
+                </div>
+                </div>
+                <div class="footnotes">
+                <hr><ol start="2"><li id="fn2"><p>Tracks from electrons and positrons are different due to bremsstrahlung, the radiated photons often recovered in the ECAL.<a href="2-3-event-simulation-and-reconstruction.html#fnref2" class="footnote-back">↩</a></p></li>
+                </ol></div>
+                
+                              </section></div>
+          </div>
+        </div>
+        
+        
+      <a href="3-statistical-modelling-and-inference-at-the-lhc.html" class="navigation navigation-next" aria-label="Next page">
+                <i class="fa fa-angle-right"></i></a><a href="2-2-the-compact-muon-solenoid.html" class="navigation navigation-prev" aria-label="Previous page">
+                <i class="fa fa-angle-left"></i></a></div>
+    </div>
+    
+
+    <script src="libs/gitbook/js/app.min.js"></script><script src="libs/gitbook/js/lunr.js"></script><script src="libs/gitbook/js/plugin-search.js"></script><script src="libs/gitbook/js/plugin-sharing.js"></script><script src="libs/gitbook/js/plugin-fontsettings.js"></script><script src="libs/gitbook/js/plugin-bookdown.js"></script><script src="libs/gitbook/js/jquery.highlight.js"></script><script>
+      gitbook.require(["gitbook"], function(gitbook) {
+        gitbook.start({
+"sharing": {
+"github": true,
+"facebook": false,
+"twitter": true,
+"google": false,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"all": ["facebook","twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"history": {
+"link": null,
+"text": null
+},
+"download": ["thesis.pdf"],
+"toc": {
+"collapse": "none"
+}
+});
+});
+    </script><script>
+      (function () {
+        var script = document.createElement("script");
+        script.type = "text/javascript";
+        var src = "true";
+        if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+        if (location.protocol !== "file:" && /^https?:/.test(src))
+          src = src.replace(/^https?:/, '');
+        script.src = src;
+        document.getElementsByTagName("head")[0].appendChild(script);
+      })();
+    </script><script src="https://hypothes.is/embed.js" async></script><link href="css/annotator.css" rel="stylesheet"></body></html>

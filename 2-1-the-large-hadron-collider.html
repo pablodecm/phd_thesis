@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang=""><head><script async src="https://www.googletagmanager.com/gtag/js?id=UA-71094563-2"></script><script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-71094563-2');
+    </script><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><title>Statistical Learning and Inference at Particle Collider Experiments</title><meta name="description" content="Statistical Learning and Inference at Particle Collider Experiments"><meta name="generator" content="bookdown #bookdown:version# and GitBook 2.6.7"><meta property="og:title" content="Statistical Learning and Inference at Particle Collider Experiments"><meta property="og:type" content="book"><meta name="github-repo" content="pablodecm/phd_thesis"><meta name="twitter:card" content="summary"><meta name="twitter:title" content="Statistical Learning and Inference at Particle Collider Experiments"><meta name="author" content="Pablo de Castro Manzano"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black"><script src="libs/jquery/jquery.min.js"></script><link href="libs/gitbook/css/style.css" rel="stylesheet"><link href="libs/gitbook/css/plugin-table.css" rel="stylesheet"><link href="libs/gitbook/css/plugin-bookdown.css" rel="stylesheet"><link href="libs/gitbook/css/plugin-highlight.css" rel="stylesheet"><link href="libs/gitbook/css/plugin-search.css" rel="stylesheet"><link href="libs/gitbook/css/plugin-fontsettings.css" rel="stylesheet"><link href="css/style.css" rel="stylesheet"><link href="css/toc.css" rel="stylesheet"></head><body>
+
+    
+    <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+      <div class="book-summary">
+        <nav role="navigation"><ul class="summary"><li>
+              <a href="./">PhD Thesis - Pablo de Castro</a>
+            </li>
+            <li class="divider">
+            <li class="chapter" data-level="" data-path="abstract.html">
+              <a href="abstract.html"><i class="fa fa-check"></i> Abstract</a>
+            </li>
+            <li class="chapter" data-level="" data-path="preface.html">
+              <a href="preface.html"><i class="fa fa-check"></i> Preface</a>
+            </li>
+            <li class="chapter" data-level="" data-path="acknowledgements.html">
+              <a href="acknowledgements.html"><i class="fa fa-check"></i> Acknowledgements</a>
+            </li>
+            <li class="chapter" data-level="" data-path="introduction.html">
+              <a href="introduction.html"><i class="fa fa-check"></i> Introduction</a>
+            </li>
+            <li class="chapter" data-level="1" data-path="1-theory-of-fundamental-interactions.html">
+              <a href="1-theory-of-fundamental-interactions.html"><i class="fa fa-check"></i><b>1</b> Theory of Fundamental Interactions</a>
+              <ul><li class="chapter" data-level="1.1" data-path="1-1-the-standard-model.html">
+                  <a href="1-1-the-standard-model.html"><i class="fa fa-check"></i><b>1.1</b> The Standard Model</a>
+                  <ul><li class="chapter" data-level="1.1.1" data-path="1-1-the-standard-model.html">
+                      <a href="1-1-the-standard-model.html#sec:qft_basics"><i class="fa fa-check"></i><b>1.1.1</b> Essentials of Quantum Field Theory</a>
+                    </li>
+                    <li class="chapter" data-level="1.1.2" data-path="1-1-the-standard-model.html">
+                      <a href="1-1-the-standard-model.html#sec:qcd_detail"><i class="fa fa-check"></i><b>1.1.2</b> Quantum Chromodynamics</a>
+                    </li>
+                    <li class="chapter" data-level="1.1.3" data-path="1-1-the-standard-model.html">
+                      <a href="1-1-the-standard-model.html#sec:ew_detail"><i class="fa fa-check"></i><b>1.1.3</b> Electroweak Interactions</a>
+                    </li>
+                    <li class="chapter" data-level="1.1.4" data-path="1-1-the-standard-model.html">
+                      <a href="1-1-the-standard-model.html#sec:ewsb_higgs"><i class="fa fa-check"></i><b>1.1.4</b> Symmetry Breaking and the Higgs Boson</a>
+                    </li>
+                  </ul></li>
+                <li class="chapter" data-level="1.2" data-path="1-2-beyond-the-standard-model.html">
+                  <a href="1-2-beyond-the-standard-model.html"><i class="fa fa-check"></i><b>1.2</b> Beyond the Standard Model</a>
+                  <ul><li class="chapter" data-level="1.2.1" data-path="1-2-beyond-the-standard-model.html">
+                      <a href="1-2-beyond-the-standard-model.html#known-limitations"><i class="fa fa-check"></i><b>1.2.1</b> Known Limitations</a>
+                    </li>
+                    <li class="chapter" data-level="1.2.2" data-path="1-2-beyond-the-standard-model.html">
+                      <a href="1-2-beyond-the-standard-model.html#sec:possible_ext"><i class="fa fa-check"></i><b>1.2.2</b> Possible Extensions</a>
+                    </li>
+                  </ul></li>
+                <li class="chapter" data-level="1.3" data-path="1-3-phenomenology-of-proton-collisions.html">
+                  <a href="1-3-phenomenology-of-proton-collisions.html"><i class="fa fa-check"></i><b>1.3</b> Phenomenology of Proton Collisions</a>
+                  <ul><li class="chapter" data-level="1.3.1" data-path="1-3-phenomenology-of-proton-collisions.html">
+                      <a href="1-3-phenomenology-of-proton-collisions.html#sec:main_obs"><i class="fa fa-check"></i><b>1.3.1</b> Main Observables</a>
+                    </li>
+                    <li class="chapter" data-level="1.3.2" data-path="1-3-phenomenology-of-proton-collisions.html">
+                      <a href="1-3-phenomenology-of-proton-collisions.html#sec:pdfs"><i class="fa fa-check"></i><b>1.3.2</b> Parton Distribution Functions</a>
+                    </li>
+                    <li class="chapter" data-level="1.3.3" data-path="1-3-phenomenology-of-proton-collisions.html">
+                      <a href="1-3-phenomenology-of-proton-collisions.html#sec:factorisation"><i class="fa fa-check"></i><b>1.3.3</b> Factorisation and Generation of Hard Processes</a>
+                    </li>
+                    <li class="chapter" data-level="1.3.4" data-path="1-3-phenomenology-of-proton-collisions.html">
+                      <a href="1-3-phenomenology-of-proton-collisions.html#sec:parton_showers"><i class="fa fa-check"></i><b>1.3.4</b> Hadronization and Parton Showers</a>
+                    </li>
+                  </ul></li>
+              </ul></li>
+            <li class="chapter" data-level="2" data-path="2-experiments-at-particle-colliders.html">
+              <a href="2-experiments-at-particle-colliders.html"><i class="fa fa-check"></i><b>2</b> Experiments at Particle Colliders</a>
+              <ul><li class="chapter" data-level="2.1" data-path="2-1-the-large-hadron-collider.html">
+                  <a href="2-1-the-large-hadron-collider.html"><i class="fa fa-check"></i><b>2.1</b> The Large Hadron Collider</a>
+                  <ul><li class="chapter" data-level="2.1.1" data-path="2-1-the-large-hadron-collider.html">
+                      <a href="2-1-the-large-hadron-collider.html#injection-and-acceleration-chain"><i class="fa fa-check"></i><b>2.1.1</b> Injection and Acceleration Chain</a>
+                    </li>
+                    <li class="chapter" data-level="2.1.2" data-path="2-1-the-large-hadron-collider.html">
+                      <a href="2-1-the-large-hadron-collider.html#sec:op_pars"><i class="fa fa-check"></i><b>2.1.2</b> Operation Parameters</a>
+                    </li>
+                    <li class="chapter" data-level="2.1.3" data-path="2-1-the-large-hadron-collider.html">
+                      <a href="2-1-the-large-hadron-collider.html#sec:pile_up"><i class="fa fa-check"></i><b>2.1.3</b> Multiple Hadron Interactions</a>
+                    </li>
+                    <li class="chapter" data-level="2.1.4" data-path="2-1-the-large-hadron-collider.html">
+                      <a href="2-1-the-large-hadron-collider.html#sec:lhc_experiments"><i class="fa fa-check"></i><b>2.1.4</b> Experiments</a>
+                    </li>
+                  </ul></li>
+                <li class="chapter" data-level="2.2" data-path="2-2-the-compact-muon-solenoid.html">
+                  <a href="2-2-the-compact-muon-solenoid.html"><i class="fa fa-check"></i><b>2.2</b> The Compact Muon Solenoid</a>
+                  <ul><li class="chapter" data-level="2.2.1" data-path="2-2-the-compact-muon-solenoid.html">
+                      <a href="2-2-the-compact-muon-solenoid.html#sec:exp_geom"><i class="fa fa-check"></i><b>2.2.1</b> Experimental Geometry</a>
+                    </li>
+                    <li class="chapter" data-level="2.2.2" data-path="2-2-the-compact-muon-solenoid.html">
+                      <a href="2-2-the-compact-muon-solenoid.html#sec:cms_magnet"><i class="fa fa-check"></i><b>2.2.2</b> Magnet</a>
+                    </li>
+                    <li class="chapter" data-level="2.2.3" data-path="2-2-the-compact-muon-solenoid.html">
+                      <a href="2-2-the-compact-muon-solenoid.html#sec:cms_tracking"><i class="fa fa-check"></i><b>2.2.3</b> Tracking System</a>
+                    </li>
+                    <li class="chapter" data-level="2.2.4" data-path="2-2-the-compact-muon-solenoid.html">
+                      <a href="2-2-the-compact-muon-solenoid.html#sec:cms_ecal"><i class="fa fa-check"></i><b>2.2.4</b> Electromagnetic Calorimeter</a>
+                    </li>
+                    <li class="chapter" data-level="2.2.5" data-path="2-2-the-compact-muon-solenoid.html">
+                      <a href="2-2-the-compact-muon-solenoid.html#sec:cms_hcal"><i class="fa fa-check"></i><b>2.2.5</b> Hadronic Calorimeter</a>
+                    </li>
+                    <li class="chapter" data-level="2.2.6" data-path="2-2-the-compact-muon-solenoid.html">
+                      <a href="2-2-the-compact-muon-solenoid.html#sec:cms_muon"><i class="fa fa-check"></i><b>2.2.6</b> Muon System</a>
+                    </li>
+                    <li class="chapter" data-level="2.2.7" data-path="2-2-the-compact-muon-solenoid.html">
+                      <a href="2-2-the-compact-muon-solenoid.html#sec:trigger"><i class="fa fa-check"></i><b>2.2.7</b> Trigger and Data Acquisition</a>
+                    </li>
+                  </ul></li>
+                <li class="chapter" data-level="2.3" data-path="2-3-event-simulation-and-reconstruction.html">
+                  <a href="2-3-event-simulation-and-reconstruction.html"><i class="fa fa-check"></i><b>2.3</b> Event Simulation and Reconstruction</a>
+                  <ul><li class="chapter" data-level="2.3.1" data-path="2-3-event-simulation-and-reconstruction.html">
+                      <a href="2-3-event-simulation-and-reconstruction.html#sec:gen_view"><i class="fa fa-check"></i><b>2.3.1</b> A Generative View</a>
+                    </li>
+                    <li class="chapter" data-level="2.3.2" data-path="2-3-event-simulation-and-reconstruction.html">
+                      <a href="2-3-event-simulation-and-reconstruction.html#sec:detector_simulation"><i class="fa fa-check"></i><b>2.3.2</b> Detector Simulation</a>
+                    </li>
+                    <li class="chapter" data-level="2.3.3" data-path="2-3-event-simulation-and-reconstruction.html">
+                      <a href="2-3-event-simulation-and-reconstruction.html#sec:event_reco"><i class="fa fa-check"></i><b>2.3.3</b> Event Reconstruction</a>
+                    </li>
+                  </ul></li>
+              </ul></li>
+            <li class="chapter" data-level="3" data-path="3-statistical-modelling-and-inference-at-the-lhc.html">
+              <a href="3-statistical-modelling-and-inference-at-the-lhc.html"><i class="fa fa-check"></i><b>3</b> Statistical Modelling and Inference at the LHC</a>
+              <ul><li class="chapter" data-level="3.1" data-path="3-1-statistical-modelling.html">
+                  <a href="3-1-statistical-modelling.html"><i class="fa fa-check"></i><b>3.1</b> Statistical Modelling</a>
+                  <ul><li class="chapter" data-level="3.1.1" data-path="3-1-statistical-modelling.html">
+                      <a href="3-1-statistical-modelling.html#sec:model_overview"><i class="fa fa-check"></i><b>3.1.1</b> Overview</a>
+                    </li>
+                    <li class="chapter" data-level="3.1.2" data-path="3-1-statistical-modelling.html">
+                      <a href="3-1-statistical-modelling.html#simulation-as-generative-modelling"><i class="fa fa-check"></i><b>3.1.2</b> Simulation as Generative Modelling</a>
+                    </li>
+                    <li class="chapter" data-level="3.1.3" data-path="3-1-statistical-modelling.html">
+                      <a href="3-1-statistical-modelling.html#sec:dim_reduction"><i class="fa fa-check"></i><b>3.1.3</b> Dimensionality Reduction</a>
+                    </li>
+                    <li class="chapter" data-level="3.1.4" data-path="3-1-statistical-modelling.html">
+                      <a href="3-1-statistical-modelling.html#sec:known_unknowns"><i class="fa fa-check"></i><b>3.1.4</b> Known Unknowns</a>
+                    </li>
+                  </ul></li>
+                <li class="chapter" data-level="3.2" data-path="3-2-statistical-inference.html">
+                  <a href="3-2-statistical-inference.html"><i class="fa fa-check"></i><b>3.2</b> Statistical Inference</a>
+                  <ul><li class="chapter" data-level="3.2.1" data-path="3-2-statistical-inference.html">
+                      <a href="3-2-statistical-inference.html#sec:likelihood-free"><i class="fa fa-check"></i><b>3.2.1</b> Likelihood-Free Inference</a>
+                    </li>
+                    <li class="chapter" data-level="3.2.2" data-path="3-2-statistical-inference.html">
+                      <a href="3-2-statistical-inference.html#sec:hypo_test"><i class="fa fa-check"></i><b>3.2.2</b> Hypothesis Testing</a>
+                    </li>
+                    <li class="chapter" data-level="3.2.3" data-path="3-2-statistical-inference.html">
+                      <a href="3-2-statistical-inference.html#sec:param_est"><i class="fa fa-check"></i><b>3.2.3</b> Parameter Estimation</a>
+                    </li>
+                  </ul></li>
+              </ul></li>
+            <li class="chapter" data-level="4" data-path="4-machine-learning-in-high-energy-physics.html">
+              <a href="4-machine-learning-in-high-energy-physics.html"><i class="fa fa-check"></i><b>4</b> Machine Learning in High-Energy Physics</a>
+              <ul><li class="chapter" data-level="4.1" data-path="4-1-problem-description.html">
+                  <a href="4-1-problem-description.html"><i class="fa fa-check"></i><b>4.1</b> Problem Description</a>
+                  <ul><li class="chapter" data-level="4.1.1" data-path="4-1-problem-description.html">
+                      <a href="4-1-problem-description.html#sec:supervised"><i class="fa fa-check"></i><b>4.1.1</b> Probabilistic Classification and Regression</a>
+                    </li>
+                  </ul></li>
+                <li class="chapter" data-level="4.2" data-path="4-2-machine-learning-techniques.html">
+                  <a href="4-2-machine-learning-techniques.html"><i class="fa fa-check"></i><b>4.2</b> Machine Learning Techniques</a>
+                  <ul><li class="chapter" data-level="4.2.1" data-path="4-2-machine-learning-techniques.html">
+                      <a href="4-2-machine-learning-techniques.html#sec:boosted_decision_trees"><i class="fa fa-check"></i><b>4.2.1</b> Boosted Decision Trees</a>
+                    </li>
+                    <li class="chapter" data-level="4.2.2" data-path="4-2-machine-learning-techniques.html">
+                      <a href="4-2-machine-learning-techniques.html#sec:ann"><i class="fa fa-check"></i><b>4.2.2</b> Artificial Neural Networks</a>
+                    </li>
+                  </ul></li>
+                <li class="chapter" data-level="4.3" data-path="4-3-applications-in-high-energy-physics.html">
+                  <a href="4-3-applications-in-high-energy-physics.html"><i class="fa fa-check"></i><b>4.3</b> Applications in High Energy Physics</a>
+                  <ul><li class="chapter" data-level="4.3.1" data-path="4-3-applications-in-high-energy-physics.html">
+                      <a href="4-3-applications-in-high-energy-physics.html#sec:sig_vs_bkg"><i class="fa fa-check"></i><b>4.3.1</b> Signal vs Background Classification</a>
+                    </li>
+                    <li class="chapter" data-level="4.3.2" data-path="4-3-applications-in-high-energy-physics.html">
+                      <a href="4-3-applications-in-high-energy-physics.html#sec:particle_id_reg"><i class="fa fa-check"></i><b>4.3.2</b> Particle Identification and Regression</a>
+                    </li>
+                  </ul></li>
+              </ul></li>
+            <li class="chapter" data-level="5" data-path="5-search-for-anomalous-higgs-pair-production-with-cms.html">
+              <a href="5-search-for-anomalous-higgs-pair-production-with-cms.html"><i class="fa fa-check"></i><b>5</b> Search for Anomalous Higgs Pair Production with CMS</a>
+              <ul><li class="chapter" data-level="5.1" data-path="5-1-introduction.html">
+                  <a href="5-1-introduction.html"><i class="fa fa-check"></i><b>5.1</b> Introduction</a>
+                </li>
+                <li class="chapter" data-level="5.2" data-path="5-2-higgs-pair-production-and-anomalous-couplings.html">
+                  <a href="5-2-higgs-pair-production-and-anomalous-couplings.html"><i class="fa fa-check"></i><b>5.2</b> Higgs Pair Production and Anomalous Couplings</a>
+                </li>
+                <li class="chapter" data-level="5.3" data-path="5-3-analysis-strategy.html">
+                  <a href="5-3-analysis-strategy.html"><i class="fa fa-check"></i><b>5.3</b> Analysis Strategy</a>
+                </li>
+                <li class="chapter" data-level="5.4" data-path="5-4-trigger-and-datasets.html">
+                  <a href="5-4-trigger-and-datasets.html"><i class="fa fa-check"></i><b>5.4</b> Trigger and Datasets</a>
+                </li>
+                <li class="chapter" data-level="5.5" data-path="5-5-event-selection.html">
+                  <a href="5-5-event-selection.html"><i class="fa fa-check"></i><b>5.5</b> Event Selection</a>
+                </li>
+                <li class="chapter" data-level="5.6" data-path="5-6-data-driven-background-estimation.html">
+                  <a href="5-6-data-driven-background-estimation.html"><i class="fa fa-check"></i><b>5.6</b> Data-Driven Background Estimation</a>
+                  <ul><li class="chapter" data-level="5.6.1" data-path="5-6-data-driven-background-estimation.html">
+                      <a href="5-6-data-driven-background-estimation.html#sec:hem_mixing"><i class="fa fa-check"></i><b>5.6.1</b> Hemisphere Mixing</a>
+                    </li>
+                    <li class="chapter" data-level="5.6.2" data-path="5-6-data-driven-background-estimation.html">
+                      <a href="5-6-data-driven-background-estimation.html#sec:bkg_validation"><i class="fa fa-check"></i><b>5.6.2</b> Background Validation</a>
+                    </li>
+                  </ul></li>
+                <li class="chapter" data-level="5.7" data-path="5-7-systematic-uncertainties.html">
+                  <a href="5-7-systematic-uncertainties.html"><i class="fa fa-check"></i><b>5.7</b> Systematic Uncertainties</a>
+                </li>
+                <li class="chapter" data-level="5.8" data-path="5-8-analysis-results.html">
+                  <a href="5-8-analysis-results.html"><i class="fa fa-check"></i><b>5.8</b> Analysis Results</a>
+                </li>
+                <li class="chapter" data-level="5.9" data-path="5-9-combination-with-other-decay-channels.html">
+                  <a href="5-9-combination-with-other-decay-channels.html"><i class="fa fa-check"></i><b>5.9</b> Combination with Other Decay Channels</a>
+                </li>
+              </ul></li>
+            <li class="chapter" data-level="6" data-path="6-inference-aware-neural-optimisation.html">
+              <a href="6-inference-aware-neural-optimisation.html"><i class="fa fa-check"></i><b>6</b> Inference-Aware Neural Optimisation</a>
+              <ul><li class="chapter" data-level="6.1" data-path="6-1-introduction.html">
+                  <a href="6-1-introduction.html"><i class="fa fa-check"></i><b>6.1</b> Introduction</a>
+                </li>
+                <li class="chapter" data-level="6.2" data-path="6-2-problem-statement.html">
+                  <a href="6-2-problem-statement.html"><i class="fa fa-check"></i><b>6.2</b> Problem Statement</a>
+                </li>
+                <li class="chapter" data-level="6.3" data-path="6-3-method.html">
+                  <a href="6-3-method.html"><i class="fa fa-check"></i><b>6.3</b> Method</a>
+                </li>
+                <li class="chapter" data-level="6.4" data-path="6-4-related-work.html">
+                  <a href="6-4-related-work.html"><i class="fa fa-check"></i><b>6.4</b> Related Work</a>
+                </li>
+                <li class="chapter" data-level="6.5" data-path="6-5-experiments.html">
+                  <a href="6-5-experiments.html"><i class="fa fa-check"></i><b>6.5</b> Experiments</a>
+                  <ul><li class="chapter" data-level="6.5.1" data-path="6-5-experiments.html">
+                      <a href="6-5-experiments.html#sec:synthetic_mixture"><i class="fa fa-check"></i><b>6.5.1</b> 3D Synthetic Mixture</a>
+                    </li>
+                  </ul></li>
+              </ul></li>
+            <li class="chapter" data-level="7" data-path="7-conclusions-and-prospects.html">
+              <a href="7-conclusions-and-prospects.html"><i class="fa fa-check"></i><b>7</b> Conclusions and Prospects</a>
+            </li>
+            <li class="chapter" data-level="" data-path="references.html">
+              <a href="references.html"><i class="fa fa-check"></i> References</a>
+            </li>
+          </ul></nav></div>
+
+      <div class="book-body">
+        <div class="body-inner">
+          <div class="book-header" role="navigation">
+            <h1>
+              <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Statistical Learning and Inference at Particle Collider Experiments</a>
+            </h1>
+          </div>
+
+          <div class="page-wrapper" tabindex="-1" role="main">
+            <div class="page-inner">
+
+              <section class="normal" id="section-"><div id="the-large-hadron-collider" class="section level2">
+                <h2><span class="header-section-number">2.1</span> The Large Hadron Collider</h2>
+                <p>The Large Hadron Collider (LHC) is the largest and most powerful particle accelerator on operation at the time of writing. Its main purpose is to accelerate bunches of protons and other heavier nuclei in opposite directions to ultra-relativistic velocities, so they can be collimated and made interact at high energies in several specified collision points inside specially designed detectors. The LHC machine complex is located at the European Organisation for Nuclear Research (CERN) laboratories at the Switzerland-France border near Geneva, its most distinctive element being a circular ring of superconductive magnets and accelerating structures installed inside a 26.7 km long underground tunnel inherited from the Large Electron Positron (LEP) collider, as depicted in Figure <a href="2-1-the-large-hadron-collider.html#fig:LHC_overall">2.1</a>. The setup was designed to achieve center-of-mass energies up to 14 TeV for nominal instantaneous luminosities reaching <span class="math inline">\(1 \times 10^{34} \textrm{cm}^{-1} \textrm{s}^{-1}\)</span> for proton-proton collisions, and hence explore the high-energy frontier of particle physics, extending by a factor of seven the reach at the highest collision energy, formerly achieved by the Tevatron collider at Fermilab.</p>
+                <div class="figure">
+                <img src="gfx/102_chapter_2/LHC_overall.svg" alt="Figure 2.1: Depiction of the placement of LHC tunnel and the main experiments places at its collision points (ATLAS, ALICE, CMS and LHCb) relative to Geneva and the French-Swiss border. The image has been adapted from [53]." id="fig:LHC_overall" class="vector" style="width:70.0%"><p class="caption">Figure 2.1: Depiction of the placement of LHC tunnel and the main experiments places at its collision points (ATLAS, ALICE, CMS and LHCb) relative to Geneva and the French-Swiss border. The image has been adapted from <span class="citation">[<a href="references.html#ref-Servicegraphique:1708849" role="doc-biblioref">53</a>]</span>.</p>
+                </div>
+                <p>The main reason for building a high-energy proton-proton collider such as the LHC instead of an electron-positron more powerful than LEP, given the difficulties when computing observables due to protons being composite particles as described in Section <a href="1-3-phenomenology-of-proton-collisions.html#sec:pheno">1.3</a>, is that protons are considerably more massive and thus their synchrotron radiation loss is greatly reduced, so they can be accelerated to higher energies more efficiently. Another practical advantage of proton colliders is that very high collisions rates (i.e. instantaneous luminosities) are technically achievable, which makes them suitable for the discovery of rare but interesting physical processes. While the LHC and most of its detectors can also be used to study collisions of nuclei from heavier atoms, such as <span class="math inline">\(\textrm{Pb}\)</span>, <span class="math inline">\(\textrm{Au}\)</span> or <span class="math inline">\(\textrm{Xe}\)</span> ions, which have important scientific use cases such as recreating the conditions present in the early universe, in this work we will be focussing on proton-proton collisions.</p>
+                <div id="injection-and-acceleration-chain" class="section level3">
+                <h3><span class="header-section-number">2.1.1</span> Injection and Acceleration Chain</h3>
+                <p>In order to achieve beam energies of the TeV order, protons have to follow several stages of synchronised accelerations through a variety subcomponents of the CERN accelerator complex, whose main subcomponents as of 2018 are summarised in Figure <a href="2-1-the-large-hadron-collider.html#fig:CERN_Acc_complex">2.2</a>. The purpose of this section is to outline the sequence of steps followed to obtain the high energy proton bunches that are used for high-energy collisions at the LHC.</p>
+                <div class="figure">
+                <img src="gfx/102_chapter_2/Cern-accelerator-complex.svg" alt="Figure 2.2: Schematic representation of the CERN Accerator Complex, including the the relative placement of the experiments as well as the main elements of the LHC accelerating chain: LINAC2, PSB, PS, SPS and the LHC ring. Figure credit to Forthommel(CC BY-SA 3.0 license)." id="fig:CERN_Acc_complex" class="vector" style="width:70.0%"><p class="caption">Figure 2.2: Schematic representation of the CERN Accerator Complex, including the the relative placement of the experiments as well as the main elements of the LHC accelerating chain: LINAC2, PSB, PS, SPS and the LHC ring. Figure credit to <a href="https://commons.wikimedia.org/wiki/File:Cern-accelerator-complex.svg">Forthommel(CC BY-SA 3.0 license)</a>.</p>
+                </div>
+                <p>The process begins with the extraction of a low-energy beam of protons by filling a duoplasmatron device <span class="citation">[<a href="references.html#ref-wolf2017handbook" role="doc-biblioref">54</a>]</span> with gas from a hydrogen <span class="math inline">\(\textrm{H}_2\)</span> bottle. Those protons are then injected into to a linear accelerator, named LINAC2, which boosts them to an energy of 50 MeV. The next step of acceleration occurs at the Proton Synchrotron Booster (PSB), which receives beams split from the LINAC2 beam line and increases their energy to 1.4 GeV using four superimposed synchrotron rings. Promptly after, the Proton Synchrotron (PS) further splits and boosts the energy of proton bunches to 25 GeV. The penultimate step of the chain is the Super Proton Synchrotron (SPS) which accelerates the proton bunches to 450 GeV and injects them in opposite directions in the LHC ring.</p>
+                <p>The main LHC machine is composed by two adjacent proton beam lines (also referred as beam pipes) kept at an ultra-high vacuum (<span class="math inline">\(10^{-10}-10^{-11}~\textrm{mbar}\)</span>), in order to reduce the likelihood of spurious collisions of the highly-boosted hadrons with gas molecules. The proton trajectories are bent around the ring using a total of 1232 super-conducting dipole electromagnets, each 15 m long and kept at a temperature of 1.9 K using superfluid helium, capable of providing very strong magnetic fields (up to 8.3 T for a 11.8 kA current). For collimation of the proton bunches, 392 additional quadrupole magnets are placed around the ring. Higher-order multipoles are also interleaved to provide finer corrections of the beam direction and field geometry. Additional energy is provided to the protons in each revolution using 8 radio frequency (RF) cavities per beam line, until the protons reach the desired energy (6.5 TeV during the Run II of the LHC, which took place between 2015-2018). Given that each cavity can provide about 60 keV per revolution, it takes about 20 minutes of <em>ramp</em> time to reach collision energies.</p>
+                <p>During the whole acceleration process, specialised dipole magnets are used to keep the beams separated at the four interactions points (IPs) and hence avoid collisions during that time. With the purpose of maximising the interaction rates, the beams are made more compact (commonly referred as <em>squeezed</em>) at the interaction region right before switching to collision mode. Once the characteristics of the proton beams are suitable, the quadrupoles focus the beam trajectories and collisions begin. A stable configuration is then adopted by the LHC machine, providing about 7 keV of energy per turn to the beam to account for synchrotron radiation losses using the RF cavities. In the absence of problems, the proton beams are kept circling the LHC ring and colliding at the IPs for several hours until the bunch properties are degraded beyond correction, a period that typically is referred as a LHC <em>fill</em>. The <em>fill</em> is terminated when some problem occurs or when all the proton bunches inside the ring are <em>dumped</em> (made collide) against graphite absorbers tangent to the beam pipes.</p>
+                </div>
+                <div id="sec:op_pars" class="section level3">
+                <h3><span class="header-section-number">2.1.2</span> Operation Parameters</h3>
+                <p>One of the most relevant parameters for a particle collider is the instantaneous luminosity <span class="math inline">\(\mathcal{L}_\textrm{inst}(t)\)</span>, which already appeared in Section <a href="1-3-phenomenology-of-proton-collisions.html#sec:pheno">1.3</a> and corresponds to the number of particles per unit of area per unit of time crossing each other in the interaction volume. Given a certain physical process characterised by a cross section <span class="math inline">\(\sigma\)</span>, the number of collisions <span class="math inline">\(n_c\)</span> expected to occur by unit of time, also known as the rate of such collisions, can be expressed as: <span id="eq:lumi_rate"><span class="math display">\[ \frac{dn_c}{dt} = \mathcal{L}(t) \cdot \sigma\qquad(2.1)\]</span></span> thus the luminosity <span class="math inline">\(\mathcal{L}\)</span> is proportional to the number of expected interactions of any given process. For studing rare scattering processes, corresponding to very small cross sections <span class="math inline">\(\sigma\)</span>, the luminosity is a crucial factor, because it determines the expected total amount such collisions produced per time unit. The instantaneous luminosity at the interaction region at a given time can be estimated from the characteristics of the proton beams as: <span id="eq:lumi_beam"><span class="math display">\[ \mathcal{L}_\textrm{inst} = \frac{n_p^2 n_b f_r \gamma_r}{ 4 \pi \epsilon_n \beta^{*}}
+                    \mathcal{F}\qquad(2.2)\]</span></span> where <span class="math inline">\(n_p\)</span> is the number of particles per bunch, <span class="math inline">\(n_b\)</span> is the number of bunches per beam, <span class="math inline">\(f_r\)</span> is the beam revolution frequency, <span class="math inline">\(\gamma_r\)</span> is a relativistic suppression factor, <span class="math inline">\(\epsilon_n\)</span> is the normalised beam emittance, <span class="math inline">\(\beta^{*}\)</span> is the transverse size of the beam, and <span class="math inline">\(\mathcal{F}\)</span> is an additional luminosity reduction factor. The main contribution to the reduction factor <span class="math inline">\(\mathcal{F}\)</span> comes from a small tilt of the beams at the crossing point, characterised by the crossing angle <span class="math inline">\(\phi_c\)</span>, which avoids parasitic interactions between bunches but reduces the luminosity by approximately: <span id="eq:lumi_factor"><span class="math display">\[ \mathcal{F} = \left (  1 +
+                 \left ( \frac{\phi_c \sigma_z}{2\sigma^{*}}
+                 \right )^2 \right )^{-1/2} \qquad(2.3)\]</span></span> where <span class="math inline">\(\sigma_z\)</span> is the root mean square (RMS) bunch length and <span class="math inline">\(\sigma^{*}\)</span> is the RMS of the beam in the transverse direction at the interaction volume. The peak instantaneous luminosities per day for the different years of proton-proton data acquisition periods (also known as <em>runs</em>) at the LHC are summarised in Figure <a href="2-1-the-large-hadron-collider.html#fig:peak_lumi">2.3</a>, those numbers can be compared with the peak design luminosity of the LHC of <span class="math inline">\(\mathcal{L}_\textrm{design} = 10^{34}\ \textrm{cm}^{-2} \textrm{s}^{-1} = 10\ \textrm{Hz}/\textrm{nb}\)</span>.</p>
+                <div class="figure">
+                <img src="gfx/102_chapter_2/peak_lumi_pp.svg" alt="Figure 2.3: Peak luminosity per day as measured using the CMS detector for the all the proton-proton data-taking periods of the LHC to date. Figure from CMS Public Luminosity Results." id="fig:peak_lumi" class="vector" style="width:100.0%"><p class="caption">Figure 2.3: Peak luminosity per day as measured using the CMS detector for the all the proton-proton data-taking periods of the LHC to date. Figure from <a href="https://twiki.cern.ch/twiki/bin/view/CMSPublic/LumiPublicResults#Multi_year_plots">CMS Public Luminosity Results</a>.</p>
+                </div>
+                <p>From Equation <a href="2-1-the-large-hadron-collider.html#eq:lumi_beam">2.2</a> it can be inferred that that value of instantaneous luminosity varies between LHC fills depending on the beam parameters. In fact, it also varies within a single fill with time, mainly because the number of average protons per bunch <span class="math inline">\(n_p\)</span> decreases due to the collisions at all the interaction points. For convenience, a quantity referred as integrated luminosity <span class="math inline">\(\mathcal{L}_\textrm{int}\)</span> that is computed by integrating over the instantaneous luminosity for a given time period <span class="math inline">\(\Delta T = t_1 - t_0\)</span> within a fill, is used: <span id="eq:int_lumi"><span class="math display">\[
+                  \mathcal{L}_\textrm{int} = \int_{t_0}^{t_1} \mathcal{L}(t) dt
+                \qquad(2.4)\]</span></span> which is proportional to the number of collisions for a given process during that period and thus can be used to quantify the amount of data acquired. When studying data from different time periods jointly, integrated luminosity is additive, even if the beam conditions (e.g. proton density) are different as long as the beam energies are matching. Such notion will be particularly useful when talking about the amount of data collected by a detector during a year or a longer data acquisition period.</p>
+                </div>
+                <div id="sec:pile_up" class="section level3">
+                <h3><span class="header-section-number">2.1.3</span> Multiple Hadron Interactions</h3>
+                <p>Given the high density of protons in each bunch at the collision points, every bunch crossing generates a few dozen proton-proton interactions, a phenomenon that is commonly referred to as <em>pileup</em>. The products of all these interactions go through the surrounding detectors at almost the same time, which complicates the interpretation of the detector readouts as the product of a single interaction. The number of proton-proton interactions for each crossing is effectively a random variable, however its expected value is proportional to the instantaneous luminosity and the total cross section of processes that produce detectable remnants in the detectors, mainly originating from low-energy inelastic proton scattering processes.</p>
+                <div class="figure">
+                <img src="gfx/102_chapter_2/highpileup1_4.png" alt="Figure 2.4: Multiple interactions in a single bunch crossing as recorded by the CMS detector during a special high-pile up luminosity at the end of 2016 [55]. The reconstructed primary interaction vertices are shown using orange circles while the yellow lines represent the trajectories of charged particles." id="fig:pileup" style="width:70.0%"><p class="caption">Figure 2.4: Multiple interactions in a single bunch crossing as recorded by the CMS detector during a special high-pile up luminosity at the end of 2016 <span class="citation">[<a href="references.html#ref-McCauley:2231915" role="doc-biblioref">55</a>]</span>. The reconstructed primary interaction vertices are shown using orange circles while the yellow lines represent the trajectories of charged particles.</p>
+                </div>
+                <p>In fact, at the collision point of one of the general purpose detectors at the LHC, the most likely outcome of any given bunch crossing at the nominal design luminosity of <span class="math inline">\(1 \times 10^{34} \textrm{cm}^{-1} \textrm{s}^{-1}\)</span> is about 25 <em>soft</em> scattering interactions (i.e. ones characterised by a low momentum transfer), producing hundreds of low energy particles all around the collision region, as depicted in Figure <a href="2-1-the-large-hadron-collider.html#fig:pileup">2.4</a>. Quite rarely, given the small relative cross section of <em>hard</em> scattering processes in comparison with the total scattering cross section as discussed in Section <a href="1-3-phenomenology-of-proton-collisions.html#sec:pheno">1.3</a>, one of the produced interactions might involve a large momentum transfer between partons, which is characteristic of the fundamental physical processes of special interest at the LHC, such as the production of a Higgs boson. The probability of two or more hard interactions happening in the same bunch crossing is really low, and can be safely neglected for any practical purposes. Nevertheless, the outcome of each hard interaction of interest will be overlapping in the detector volume with the product of all other soft interaction that occurred on the same bunch crossing, greatly complicating the task of <em>event reconstruction</em> as will be discussed in Section <a href="2-3-event-simulation-and-reconstruction.html#sec:event">2.3</a>. This also motivates the use of <em>pileup mitigation</em> techniques, heavily based on accurate detectors that can extrapolate and differentiate the primary interaction vertices of the collisions from the charged particle trajectories.</p>
+                <p>In addition to multiple hadron interactions per bunch crossing, the goal of recording the outcome of a very high number of proton interactions leads to a different experimental complication. As illustrated in Equation <a href="2-1-the-large-hadron-collider.html#eq:lumi_rate">2.1</a>, a simple way to increase the luminosity is to increase the number of total proton bunches per beam <span class="math inline">\(n_b\)</span>. This fact is exploited in the nominal proton fill scheme of the LHC by having a total of 2808 proton bunches in each beam, corresponding to a separation between most of the bunches of only approximately 7.5 m. Hence the time separation between consecutive bunch crossing is about 25 ns, which is of the same order as the response time of many of the detector elements used at the LHC. The readout from a a particular bunch crossing can therefore be affected by the detector occupation caused by the previous or subsequent crossings, in what is referred to as <em>out-of-time pileup</em>, that becomes an important consideration for detector design in high-luminosity environments.</p>
+                </div>
+                <div id="sec:lhc_experiments" class="section level3">
+                <h3><span class="header-section-number">2.1.4</span> Experiments</h3>
+                <p>Around the collision volume at each of the interaction points, large detectors are positioned in order to reveal and quantitatively study the outcomes of the highly-energetic particle scattering, which can in turn be used to obtain information about the properties of fundamental interactions. Four large particle experiments are installed at the LHC interaction points:</p>
+                <ul><li><p><strong>ATLAS</strong> (A Toroidal LHC ApparatuS) <span class="citation">[<a href="references.html#ref-ATLAS:2008JINST" role="doc-biblioref">56</a>]</span>: the largest experiment at the LHC, designed as a general-purpose detector to study the various products of high-energy interactions, especially those of high-luminosity proton-proton collisions. While one of the most important scientific goals of the ATLAS experiment was to discover Higgs boson and provide a detailed study of its properties, it was also built with the aim of extensive testing of Beyond the Standard Model (BSM) theories.</p></li>
+                <li><p><strong>CMS</strong> (Compact Muon Solenoid) <span class="citation">[<a href="references.html#ref-CMS:2008JINST" role="doc-biblioref">57</a>]</span>: the other general-purpose experiment at the LHC, sharing most of the research goals with ATLAS, but opting for an alternative design and a different choice of detector technologies making it considerably more compact. It is the detector that collected the data use in the analysis in Chapter <a href="5-search-for-anomalous-higgs-pair-production-with-cms.html#sec:higgs_pair">5</a> and hence is described extensively in Section <a href="2-2-the-compact-muon-solenoid.html#sec:cms">2.2</a>.</p></li>
+                <li><p><strong>LHCb</strong> (Large Hadron Collider beauty) <span class="citation">[<a href="references.html#ref-LHCb:2008JINST" role="doc-biblioref">58</a>]</span>: operating at a lower range of luminosity than ATLAS or CMS by deliberately separating the beams, this experiment focusses on very accurate precision measurements of the properties and rate decays of b-quark and c-quark hadrons as well as the search for indirect evidence of new physics leading to CP violation in heavy flavour physics phenomena.</p></li>
+                <li><p><strong>ALICE</strong> (A Large Ion Collider Experiment) <span class="citation">[<a href="references.html#ref-ALICE:2008JINST" role="doc-biblioref">59</a>]</span>: a heavy-ion collisions detector, designed to study the dynamics quark-gluon plasma, a high energy density state of strongly interacting matter, as it expands and cools down. Such studies can lead to a better understanding of colour confinement and other relevant QCD problems, as well as shedding some light on the processes that occurred a few microseconds after the Big Bang.</p></li>
+                </ul><p>Additionally, three smaller experiments are built around the mentioned detectors with specific research purposes: TOTEM <span class="citation">[<a href="references.html#ref-TOTEM:2008JINST" role="doc-biblioref">60</a>]</span>, LHCf <span class="citation">[<a href="references.html#ref-LHCf:2008JINT" role="doc-biblioref">61</a>]</span> and MoEDAL <span class="citation">[<a href="references.html#ref-MoEDAL:2014PP" role="doc-biblioref">62</a>]</span>. Both TOTEM and LHCf have been designed to investigate features of forward physics interactions, where scattering products remain the original proton trajectories, and hence they are set up tangent to the LHC beam line at the sides of CMS and ATLAS interactions points respectively. MoeDAL is instead built at the same experimental space than LHCb and its main aim is to search for evidence of production of magnetic monopoles and other highly ionising stable massive particles.</p>
+                </div>
+                </div>
+                </section></div>
+          </div>
+        </div>
+        
+        
+      <a href="2-2-the-compact-muon-solenoid.html" class="navigation navigation-next" aria-label="Next page">
+                <i class="fa fa-angle-right"></i></a><a href="2-experiments-at-particle-colliders.html" class="navigation navigation-prev" aria-label="Previous page">
+                <i class="fa fa-angle-left"></i></a></div>
+    </div>
+    
+
+    <script src="libs/gitbook/js/app.min.js"></script><script src="libs/gitbook/js/lunr.js"></script><script src="libs/gitbook/js/plugin-search.js"></script><script src="libs/gitbook/js/plugin-sharing.js"></script><script src="libs/gitbook/js/plugin-fontsettings.js"></script><script src="libs/gitbook/js/plugin-bookdown.js"></script><script src="libs/gitbook/js/jquery.highlight.js"></script><script>
+      gitbook.require(["gitbook"], function(gitbook) {
+        gitbook.start({
+"sharing": {
+"github": true,
+"facebook": false,
+"twitter": true,
+"google": false,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"all": ["facebook","twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"history": {
+"link": null,
+"text": null
+},
+"download": ["thesis.pdf"],
+"toc": {
+"collapse": "none"
+}
+});
+});
+    </script><script>
+      (function () {
+        var script = document.createElement("script");
+        script.type = "text/javascript";
+        var src = "true";
+        if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+        if (location.protocol !== "file:" && /^https?:/.test(src))
+          src = src.replace(/^https?:/, '');
+        script.src = src;
+        document.getElementsByTagName("head")[0].appendChild(script);
+      })();
+    </script><script src="https://hypothes.is/embed.js" async></script><link href="css/annotator.css" rel="stylesheet"></body></html>

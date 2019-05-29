@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang=""><head><script async src="https://www.googletagmanager.com/gtag/js?id=UA-71094563-2"></script><script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-71094563-2');
+    </script><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><title>Statistical Learning and Inference at Particle Collider Experiments</title><meta name="description" content="Statistical Learning and Inference at Particle Collider Experiments"><meta name="generator" content="bookdown #bookdown:version# and GitBook 2.6.7"><meta property="og:title" content="Statistical Learning and Inference at Particle Collider Experiments"><meta property="og:type" content="book"><meta name="github-repo" content="pablodecm/phd_thesis"><meta name="twitter:card" content="summary"><meta name="twitter:title" content="Statistical Learning and Inference at Particle Collider Experiments"><meta name="author" content="Pablo de Castro Manzano"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black"><script src="libs/jquery/jquery.min.js"></script><link href="libs/gitbook/css/style.css" rel="stylesheet"><link href="libs/gitbook/css/plugin-table.css" rel="stylesheet"><link href="libs/gitbook/css/plugin-bookdown.css" rel="stylesheet"><link href="libs/gitbook/css/plugin-highlight.css" rel="stylesheet"><link href="libs/gitbook/css/plugin-search.css" rel="stylesheet"><link href="libs/gitbook/css/plugin-fontsettings.css" rel="stylesheet"><link href="css/style.css" rel="stylesheet"><link href="css/toc.css" rel="stylesheet"></head><body>
+
+    
+    <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+      <div class="book-summary">
+        <nav role="navigation"><ul class="summary"><li>
+              <a href="./">PhD Thesis - Pablo de Castro</a>
+            </li>
+            <li class="divider">
+            <li class="chapter" data-level="" data-path="abstract.html">
+              <a href="abstract.html"><i class="fa fa-check"></i> Abstract</a>
+            </li>
+            <li class="chapter" data-level="" data-path="preface.html">
+              <a href="preface.html"><i class="fa fa-check"></i> Preface</a>
+            </li>
+            <li class="chapter" data-level="" data-path="acknowledgements.html">
+              <a href="acknowledgements.html"><i class="fa fa-check"></i> Acknowledgements</a>
+            </li>
+            <li class="chapter" data-level="" data-path="introduction.html">
+              <a href="introduction.html"><i class="fa fa-check"></i> Introduction</a>
+            </li>
+            <li class="chapter" data-level="1" data-path="1-theory-of-fundamental-interactions.html">
+              <a href="1-theory-of-fundamental-interactions.html"><i class="fa fa-check"></i><b>1</b> Theory of Fundamental Interactions</a>
+              <ul><li class="chapter" data-level="1.1" data-path="1-1-the-standard-model.html">
+                  <a href="1-1-the-standard-model.html"><i class="fa fa-check"></i><b>1.1</b> The Standard Model</a>
+                  <ul><li class="chapter" data-level="1.1.1" data-path="1-1-the-standard-model.html">
+                      <a href="1-1-the-standard-model.html#sec:qft_basics"><i class="fa fa-check"></i><b>1.1.1</b> Essentials of Quantum Field Theory</a>
+                    </li>
+                    <li class="chapter" data-level="1.1.2" data-path="1-1-the-standard-model.html">
+                      <a href="1-1-the-standard-model.html#sec:qcd_detail"><i class="fa fa-check"></i><b>1.1.2</b> Quantum Chromodynamics</a>
+                    </li>
+                    <li class="chapter" data-level="1.1.3" data-path="1-1-the-standard-model.html">
+                      <a href="1-1-the-standard-model.html#sec:ew_detail"><i class="fa fa-check"></i><b>1.1.3</b> Electroweak Interactions</a>
+                    </li>
+                    <li class="chapter" data-level="1.1.4" data-path="1-1-the-standard-model.html">
+                      <a href="1-1-the-standard-model.html#sec:ewsb_higgs"><i class="fa fa-check"></i><b>1.1.4</b> Symmetry Breaking and the Higgs Boson</a>
+                    </li>
+                  </ul></li>
+                <li class="chapter" data-level="1.2" data-path="1-2-beyond-the-standard-model.html">
+                  <a href="1-2-beyond-the-standard-model.html"><i class="fa fa-check"></i><b>1.2</b> Beyond the Standard Model</a>
+                  <ul><li class="chapter" data-level="1.2.1" data-path="1-2-beyond-the-standard-model.html">
+                      <a href="1-2-beyond-the-standard-model.html#known-limitations"><i class="fa fa-check"></i><b>1.2.1</b> Known Limitations</a>
+                    </li>
+                    <li class="chapter" data-level="1.2.2" data-path="1-2-beyond-the-standard-model.html">
+                      <a href="1-2-beyond-the-standard-model.html#sec:possible_ext"><i class="fa fa-check"></i><b>1.2.2</b> Possible Extensions</a>
+                    </li>
+                  </ul></li>
+                <li class="chapter" data-level="1.3" data-path="1-3-phenomenology-of-proton-collisions.html">
+                  <a href="1-3-phenomenology-of-proton-collisions.html"><i class="fa fa-check"></i><b>1.3</b> Phenomenology of Proton Collisions</a>
+                  <ul><li class="chapter" data-level="1.3.1" data-path="1-3-phenomenology-of-proton-collisions.html">
+                      <a href="1-3-phenomenology-of-proton-collisions.html#sec:main_obs"><i class="fa fa-check"></i><b>1.3.1</b> Main Observables</a>
+                    </li>
+                    <li class="chapter" data-level="1.3.2" data-path="1-3-phenomenology-of-proton-collisions.html">
+                      <a href="1-3-phenomenology-of-proton-collisions.html#sec:pdfs"><i class="fa fa-check"></i><b>1.3.2</b> Parton Distribution Functions</a>
+                    </li>
+                    <li class="chapter" data-level="1.3.3" data-path="1-3-phenomenology-of-proton-collisions.html">
+                      <a href="1-3-phenomenology-of-proton-collisions.html#sec:factorisation"><i class="fa fa-check"></i><b>1.3.3</b> Factorisation and Generation of Hard Processes</a>
+                    </li>
+                    <li class="chapter" data-level="1.3.4" data-path="1-3-phenomenology-of-proton-collisions.html">
+                      <a href="1-3-phenomenology-of-proton-collisions.html#sec:parton_showers"><i class="fa fa-check"></i><b>1.3.4</b> Hadronization and Parton Showers</a>
+                    </li>
+                  </ul></li>
+              </ul></li>
+            <li class="chapter" data-level="2" data-path="2-experiments-at-particle-colliders.html">
+              <a href="2-experiments-at-particle-colliders.html"><i class="fa fa-check"></i><b>2</b> Experiments at Particle Colliders</a>
+              <ul><li class="chapter" data-level="2.1" data-path="2-1-the-large-hadron-collider.html">
+                  <a href="2-1-the-large-hadron-collider.html"><i class="fa fa-check"></i><b>2.1</b> The Large Hadron Collider</a>
+                  <ul><li class="chapter" data-level="2.1.1" data-path="2-1-the-large-hadron-collider.html">
+                      <a href="2-1-the-large-hadron-collider.html#injection-and-acceleration-chain"><i class="fa fa-check"></i><b>2.1.1</b> Injection and Acceleration Chain</a>
+                    </li>
+                    <li class="chapter" data-level="2.1.2" data-path="2-1-the-large-hadron-collider.html">
+                      <a href="2-1-the-large-hadron-collider.html#sec:op_pars"><i class="fa fa-check"></i><b>2.1.2</b> Operation Parameters</a>
+                    </li>
+                    <li class="chapter" data-level="2.1.3" data-path="2-1-the-large-hadron-collider.html">
+                      <a href="2-1-the-large-hadron-collider.html#sec:pile_up"><i class="fa fa-check"></i><b>2.1.3</b> Multiple Hadron Interactions</a>
+                    </li>
+                    <li class="chapter" data-level="2.1.4" data-path="2-1-the-large-hadron-collider.html">
+                      <a href="2-1-the-large-hadron-collider.html#sec:lhc_experiments"><i class="fa fa-check"></i><b>2.1.4</b> Experiments</a>
+                    </li>
+                  </ul></li>
+                <li class="chapter" data-level="2.2" data-path="2-2-the-compact-muon-solenoid.html">
+                  <a href="2-2-the-compact-muon-solenoid.html"><i class="fa fa-check"></i><b>2.2</b> The Compact Muon Solenoid</a>
+                  <ul><li class="chapter" data-level="2.2.1" data-path="2-2-the-compact-muon-solenoid.html">
+                      <a href="2-2-the-compact-muon-solenoid.html#sec:exp_geom"><i class="fa fa-check"></i><b>2.2.1</b> Experimental Geometry</a>
+                    </li>
+                    <li class="chapter" data-level="2.2.2" data-path="2-2-the-compact-muon-solenoid.html">
+                      <a href="2-2-the-compact-muon-solenoid.html#sec:cms_magnet"><i class="fa fa-check"></i><b>2.2.2</b> Magnet</a>
+                    </li>
+                    <li class="chapter" data-level="2.2.3" data-path="2-2-the-compact-muon-solenoid.html">
+                      <a href="2-2-the-compact-muon-solenoid.html#sec:cms_tracking"><i class="fa fa-check"></i><b>2.2.3</b> Tracking System</a>
+                    </li>
+                    <li class="chapter" data-level="2.2.4" data-path="2-2-the-compact-muon-solenoid.html">
+                      <a href="2-2-the-compact-muon-solenoid.html#sec:cms_ecal"><i class="fa fa-check"></i><b>2.2.4</b> Electromagnetic Calorimeter</a>
+                    </li>
+                    <li class="chapter" data-level="2.2.5" data-path="2-2-the-compact-muon-solenoid.html">
+                      <a href="2-2-the-compact-muon-solenoid.html#sec:cms_hcal"><i class="fa fa-check"></i><b>2.2.5</b> Hadronic Calorimeter</a>
+                    </li>
+                    <li class="chapter" data-level="2.2.6" data-path="2-2-the-compact-muon-solenoid.html">
+                      <a href="2-2-the-compact-muon-solenoid.html#sec:cms_muon"><i class="fa fa-check"></i><b>2.2.6</b> Muon System</a>
+                    </li>
+                    <li class="chapter" data-level="2.2.7" data-path="2-2-the-compact-muon-solenoid.html">
+                      <a href="2-2-the-compact-muon-solenoid.html#sec:trigger"><i class="fa fa-check"></i><b>2.2.7</b> Trigger and Data Acquisition</a>
+                    </li>
+                  </ul></li>
+                <li class="chapter" data-level="2.3" data-path="2-3-event-simulation-and-reconstruction.html">
+                  <a href="2-3-event-simulation-and-reconstruction.html"><i class="fa fa-check"></i><b>2.3</b> Event Simulation and Reconstruction</a>
+                  <ul><li class="chapter" data-level="2.3.1" data-path="2-3-event-simulation-and-reconstruction.html">
+                      <a href="2-3-event-simulation-and-reconstruction.html#sec:gen_view"><i class="fa fa-check"></i><b>2.3.1</b> A Generative View</a>
+                    </li>
+                    <li class="chapter" data-level="2.3.2" data-path="2-3-event-simulation-and-reconstruction.html">
+                      <a href="2-3-event-simulation-and-reconstruction.html#sec:detector_simulation"><i class="fa fa-check"></i><b>2.3.2</b> Detector Simulation</a>
+                    </li>
+                    <li class="chapter" data-level="2.3.3" data-path="2-3-event-simulation-and-reconstruction.html">
+                      <a href="2-3-event-simulation-and-reconstruction.html#sec:event_reco"><i class="fa fa-check"></i><b>2.3.3</b> Event Reconstruction</a>
+                    </li>
+                  </ul></li>
+              </ul></li>
+            <li class="chapter" data-level="3" data-path="3-statistical-modelling-and-inference-at-the-lhc.html">
+              <a href="3-statistical-modelling-and-inference-at-the-lhc.html"><i class="fa fa-check"></i><b>3</b> Statistical Modelling and Inference at the LHC</a>
+              <ul><li class="chapter" data-level="3.1" data-path="3-1-statistical-modelling.html">
+                  <a href="3-1-statistical-modelling.html"><i class="fa fa-check"></i><b>3.1</b> Statistical Modelling</a>
+                  <ul><li class="chapter" data-level="3.1.1" data-path="3-1-statistical-modelling.html">
+                      <a href="3-1-statistical-modelling.html#sec:model_overview"><i class="fa fa-check"></i><b>3.1.1</b> Overview</a>
+                    </li>
+                    <li class="chapter" data-level="3.1.2" data-path="3-1-statistical-modelling.html">
+                      <a href="3-1-statistical-modelling.html#simulation-as-generative-modelling"><i class="fa fa-check"></i><b>3.1.2</b> Simulation as Generative Modelling</a>
+                    </li>
+                    <li class="chapter" data-level="3.1.3" data-path="3-1-statistical-modelling.html">
+                      <a href="3-1-statistical-modelling.html#sec:dim_reduction"><i class="fa fa-check"></i><b>3.1.3</b> Dimensionality Reduction</a>
+                    </li>
+                    <li class="chapter" data-level="3.1.4" data-path="3-1-statistical-modelling.html">
+                      <a href="3-1-statistical-modelling.html#sec:known_unknowns"><i class="fa fa-check"></i><b>3.1.4</b> Known Unknowns</a>
+                    </li>
+                  </ul></li>
+                <li class="chapter" data-level="3.2" data-path="3-2-statistical-inference.html">
+                  <a href="3-2-statistical-inference.html"><i class="fa fa-check"></i><b>3.2</b> Statistical Inference</a>
+                  <ul><li class="chapter" data-level="3.2.1" data-path="3-2-statistical-inference.html">
+                      <a href="3-2-statistical-inference.html#sec:likelihood-free"><i class="fa fa-check"></i><b>3.2.1</b> Likelihood-Free Inference</a>
+                    </li>
+                    <li class="chapter" data-level="3.2.2" data-path="3-2-statistical-inference.html">
+                      <a href="3-2-statistical-inference.html#sec:hypo_test"><i class="fa fa-check"></i><b>3.2.2</b> Hypothesis Testing</a>
+                    </li>
+                    <li class="chapter" data-level="3.2.3" data-path="3-2-statistical-inference.html">
+                      <a href="3-2-statistical-inference.html#sec:param_est"><i class="fa fa-check"></i><b>3.2.3</b> Parameter Estimation</a>
+                    </li>
+                  </ul></li>
+              </ul></li>
+            <li class="chapter" data-level="4" data-path="4-machine-learning-in-high-energy-physics.html">
+              <a href="4-machine-learning-in-high-energy-physics.html"><i class="fa fa-check"></i><b>4</b> Machine Learning in High-Energy Physics</a>
+              <ul><li class="chapter" data-level="4.1" data-path="4-1-problem-description.html">
+                  <a href="4-1-problem-description.html"><i class="fa fa-check"></i><b>4.1</b> Problem Description</a>
+                  <ul><li class="chapter" data-level="4.1.1" data-path="4-1-problem-description.html">
+                      <a href="4-1-problem-description.html#sec:supervised"><i class="fa fa-check"></i><b>4.1.1</b> Probabilistic Classification and Regression</a>
+                    </li>
+                  </ul></li>
+                <li class="chapter" data-level="4.2" data-path="4-2-machine-learning-techniques.html">
+                  <a href="4-2-machine-learning-techniques.html"><i class="fa fa-check"></i><b>4.2</b> Machine Learning Techniques</a>
+                  <ul><li class="chapter" data-level="4.2.1" data-path="4-2-machine-learning-techniques.html">
+                      <a href="4-2-machine-learning-techniques.html#sec:boosted_decision_trees"><i class="fa fa-check"></i><b>4.2.1</b> Boosted Decision Trees</a>
+                    </li>
+                    <li class="chapter" data-level="4.2.2" data-path="4-2-machine-learning-techniques.html">
+                      <a href="4-2-machine-learning-techniques.html#sec:ann"><i class="fa fa-check"></i><b>4.2.2</b> Artificial Neural Networks</a>
+                    </li>
+                  </ul></li>
+                <li class="chapter" data-level="4.3" data-path="4-3-applications-in-high-energy-physics.html">
+                  <a href="4-3-applications-in-high-energy-physics.html"><i class="fa fa-check"></i><b>4.3</b> Applications in High Energy Physics</a>
+                  <ul><li class="chapter" data-level="4.3.1" data-path="4-3-applications-in-high-energy-physics.html">
+                      <a href="4-3-applications-in-high-energy-physics.html#sec:sig_vs_bkg"><i class="fa fa-check"></i><b>4.3.1</b> Signal vs Background Classification</a>
+                    </li>
+                    <li class="chapter" data-level="4.3.2" data-path="4-3-applications-in-high-energy-physics.html">
+                      <a href="4-3-applications-in-high-energy-physics.html#sec:particle_id_reg"><i class="fa fa-check"></i><b>4.3.2</b> Particle Identification and Regression</a>
+                    </li>
+                  </ul></li>
+              </ul></li>
+            <li class="chapter" data-level="5" data-path="5-search-for-anomalous-higgs-pair-production-with-cms.html">
+              <a href="5-search-for-anomalous-higgs-pair-production-with-cms.html"><i class="fa fa-check"></i><b>5</b> Search for Anomalous Higgs Pair Production with CMS</a>
+              <ul><li class="chapter" data-level="5.1" data-path="5-1-introduction.html">
+                  <a href="5-1-introduction.html"><i class="fa fa-check"></i><b>5.1</b> Introduction</a>
+                </li>
+                <li class="chapter" data-level="5.2" data-path="5-2-higgs-pair-production-and-anomalous-couplings.html">
+                  <a href="5-2-higgs-pair-production-and-anomalous-couplings.html"><i class="fa fa-check"></i><b>5.2</b> Higgs Pair Production and Anomalous Couplings</a>
+                </li>
+                <li class="chapter" data-level="5.3" data-path="5-3-analysis-strategy.html">
+                  <a href="5-3-analysis-strategy.html"><i class="fa fa-check"></i><b>5.3</b> Analysis Strategy</a>
+                </li>
+                <li class="chapter" data-level="5.4" data-path="5-4-trigger-and-datasets.html">
+                  <a href="5-4-trigger-and-datasets.html"><i class="fa fa-check"></i><b>5.4</b> Trigger and Datasets</a>
+                </li>
+                <li class="chapter" data-level="5.5" data-path="5-5-event-selection.html">
+                  <a href="5-5-event-selection.html"><i class="fa fa-check"></i><b>5.5</b> Event Selection</a>
+                </li>
+                <li class="chapter" data-level="5.6" data-path="5-6-data-driven-background-estimation.html">
+                  <a href="5-6-data-driven-background-estimation.html"><i class="fa fa-check"></i><b>5.6</b> Data-Driven Background Estimation</a>
+                  <ul><li class="chapter" data-level="5.6.1" data-path="5-6-data-driven-background-estimation.html">
+                      <a href="5-6-data-driven-background-estimation.html#sec:hem_mixing"><i class="fa fa-check"></i><b>5.6.1</b> Hemisphere Mixing</a>
+                    </li>
+                    <li class="chapter" data-level="5.6.2" data-path="5-6-data-driven-background-estimation.html">
+                      <a href="5-6-data-driven-background-estimation.html#sec:bkg_validation"><i class="fa fa-check"></i><b>5.6.2</b> Background Validation</a>
+                    </li>
+                  </ul></li>
+                <li class="chapter" data-level="5.7" data-path="5-7-systematic-uncertainties.html">
+                  <a href="5-7-systematic-uncertainties.html"><i class="fa fa-check"></i><b>5.7</b> Systematic Uncertainties</a>
+                </li>
+                <li class="chapter" data-level="5.8" data-path="5-8-analysis-results.html">
+                  <a href="5-8-analysis-results.html"><i class="fa fa-check"></i><b>5.8</b> Analysis Results</a>
+                </li>
+                <li class="chapter" data-level="5.9" data-path="5-9-combination-with-other-decay-channels.html">
+                  <a href="5-9-combination-with-other-decay-channels.html"><i class="fa fa-check"></i><b>5.9</b> Combination with Other Decay Channels</a>
+                </li>
+              </ul></li>
+            <li class="chapter" data-level="6" data-path="6-inference-aware-neural-optimisation.html">
+              <a href="6-inference-aware-neural-optimisation.html"><i class="fa fa-check"></i><b>6</b> Inference-Aware Neural Optimisation</a>
+              <ul><li class="chapter" data-level="6.1" data-path="6-1-introduction.html">
+                  <a href="6-1-introduction.html"><i class="fa fa-check"></i><b>6.1</b> Introduction</a>
+                </li>
+                <li class="chapter" data-level="6.2" data-path="6-2-problem-statement.html">
+                  <a href="6-2-problem-statement.html"><i class="fa fa-check"></i><b>6.2</b> Problem Statement</a>
+                </li>
+                <li class="chapter" data-level="6.3" data-path="6-3-method.html">
+                  <a href="6-3-method.html"><i class="fa fa-check"></i><b>6.3</b> Method</a>
+                </li>
+                <li class="chapter" data-level="6.4" data-path="6-4-related-work.html">
+                  <a href="6-4-related-work.html"><i class="fa fa-check"></i><b>6.4</b> Related Work</a>
+                </li>
+                <li class="chapter" data-level="6.5" data-path="6-5-experiments.html">
+                  <a href="6-5-experiments.html"><i class="fa fa-check"></i><b>6.5</b> Experiments</a>
+                  <ul><li class="chapter" data-level="6.5.1" data-path="6-5-experiments.html">
+                      <a href="6-5-experiments.html#sec:synthetic_mixture"><i class="fa fa-check"></i><b>6.5.1</b> 3D Synthetic Mixture</a>
+                    </li>
+                  </ul></li>
+              </ul></li>
+            <li class="chapter" data-level="7" data-path="7-conclusions-and-prospects.html">
+              <a href="7-conclusions-and-prospects.html"><i class="fa fa-check"></i><b>7</b> Conclusions and Prospects</a>
+            </li>
+            <li class="chapter" data-level="" data-path="references.html">
+              <a href="references.html"><i class="fa fa-check"></i> References</a>
+            </li>
+          </ul></nav></div>
+
+      <div class="book-body">
+        <div class="body-inner">
+          <div class="book-header" role="navigation">
+            <h1>
+              <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Statistical Learning and Inference at Particle Collider Experiments</a>
+            </h1>
+          </div>
+
+          <div class="page-wrapper" tabindex="-1" role="main">
+            <div class="page-inner">
+
+              <section class="normal" id="section-"><div id="sec:stat_inf" class="section level2">
+                <h2><span class="header-section-number">3.2</span> Statistical Inference</h2>
+                <p>In the previous section, the main characteristics of the generative statistical model <span class="math inline">\(p(D | \boldsymbol{\theta})\)</span> relating the parameters <span class="math inline">\(\boldsymbol{\theta}\)</span> with the set of observations <span class="math inline">\(D = \{\boldsymbol{x}_0,...,\boldsymbol{x}_n\}\)</span> have been reviewed. In addition, we discussed the role of lower dimensional summary statistics as functional transformations of each detector readout <span class="math inline">\(\boldsymbol{s}(\boldsymbol{x}_i)\)</span> or even the whole dataset <span class="math inline">\(\boldsymbol{s}(D)\)</span>, as well as how the effect of additional uncertain parameters can be included in the simulation-based generative model of the data. In this section, we deal with the actual problem of inference of the subset of parameters of interest <span class="math inline">\(\boldsymbol{\theta}_\iota\)</span> once a summary statistic has already been chosen and the final statistical model <span class="math inline">\(p(\boldsymbol{s}(D) | \boldsymbol{\theta})\)</span> has been fully specified.</p>
+                <div id="sec:likelihood-free" class="section level3">
+                <h3><span class="header-section-number">3.2.1</span> Likelihood-Free Inference</h3>
+                <p>One of the main properties of the statistical models at particle colliders we focussed on in the last section was their generative-only nature, whereby their probability density <span class="math inline">\(p(\boldsymbol{x} | \boldsymbol{\theta})\)</span> cannot be expressed analytically, but only by means of forward simulated observation. This fact greatly complicates the application of standard inference techniques which require the explicit definition of a likelihood <span id="eq:likelihood_definition"><span class="math display">\[L(\boldsymbol{\theta} | D) =\prod^{\boldsymbol{x}_i \in D}
+                 p(\boldsymbol{x}_i | \boldsymbol{\theta})
+                \qquad(3.36)\]</span></span> in order to make quantitative statements about the parameters of interest, because it expresses the extent to which a set of values for the model parameters are consistent with the observed data. Problems where the likelihood cannot be expressed directly are common in many scientific disciplines, because a link between observations and the underlying parameters can often only be provided by a probabilistic computer program. This is frequently the case when the system under study is complex, e.g. can only be described by a hierarchy or a sequence of stochastic processes.</p>
+                <p>The evaluation of the likelihood for complex generative models rapidly becomes impractical, especially when the dimensionality of the observations or the parameter space is very high. Various statistical techniques for dealing with these cases exist, generally referred to as <em>likelihood-free</em> or <em>simulation-based</em> inference techniques. A well established group of techniques for inference when the likelihood function is unknown is referred to as Approximate Bayesian Computation (ABC) <span class="citation">[<a href="references.html#ref-rubin1984bayesianly" role="doc-biblioref">94</a>], [<a href="references.html#ref-beaumont2002approximate" role="doc-biblioref">95</a>]</span>. The fundamental concept behind ABC is the generation of a simulated sample <span class="math inline">\(S_0 = \{\boldsymbol{x}_0,...,\boldsymbol{x}_{m-1}\}\)</span> using a given vector of parameters <span class="math inline">\(\boldsymbol{\theta}_0\)</span>, which is then compared using a distance criterion to the actual observed dataset <span class="math inline">\(D\)</span>. If the data and the simulation are close enough, then <span class="math inline">\(\boldsymbol{\theta}_0\)</span> is retained as sample from the posterior. The process is repeated until the posterior is estimated with the desired accuracy. The quality of the posterior approximation produced by ABC techniques, as well as the number of sampling steps required to reach a given accuracy, strongly depend on the distance definition. When the dimensionality of the output is high, a summary statistic vector <span class="math inline">\(\boldsymbol{s}(D)\)</span> has to be used in practice to increase the computational efficiency of the previous procedure, which would be otherwise intractable.</p>
+                <p>The approach commonly used when carrying out inference at particle physics experiments at the LHC is somehow related with the mentioned family of techniques. The observations are also reduced to a lower-dimensional summary statistic space, but then a non-parametric likelihood is constructed so that standard inference techniques can be applied. The likelihood is often based on the product of Poisson count terms, as depicted in Equation <a href="3-1-statistical-modelling.html#eq:poisson_simple">3.27</a> and Equation <a href="3-1-statistical-modelling.html#eq:poisson_multichannel">3.28</a>, where the dependence on the expectations on the parameters is based on the simulation and the mixture structure. Alternative approaches include the use of a simple one-dimensional parametrisation for a continuous background and a bump-like signal, which is common when the reconstructed mass of an intermediate object is used as summary statistic and its distribution is well-controlled, e.g. a Higgs bosons decaying to two photons. An additional alternative approach, which has not been used in LHC analyses to date, could be to use non-parametric density estimation techniques to obtain an unbinned likelihood directly from simulated data. This approach has been recently referred as Approximate Frequentist Computation (AFC) <span class="citation">[<a href="references.html#ref-Brehmer:2018eca" role="doc-biblioref">96</a>]</span>, and can be also combined with the technique presented in Chapter <a href="6-inference-aware-neural-optimisation.html#sec:inferno">6</a>.</p>
+                </div>
+                <div id="sec:hypo_test" class="section level3">
+                <h3><span class="header-section-number">3.2.2</span> Hypothesis Testing</h3>
+                <p>Statistical inference within experimental particle physics is often framed as a hypothesis testing problem. The goal of statistical testing is to make a quantitative statement about how well observed data agrees with an underlying model or prediction, which is often referred to as a <em>hypothesis</em>. The statistical model under consideration is often referred to as <em>null hypothesis</em> <span class="math inline">\(H_0\)</span>. Classical statistical testing techniques often require the definition of an <em>alternative hypothesis</em> <span class="math inline">\(H_1\)</span>, whose agreement with the data is compared with that of the null. A hypothesis is said to be <em>simple</em>, when all the distribution (or generative model) parameters are fully specified, i.e. <span class="math inline">\(p(\boldsymbol{x} | H_s) =f(\boldsymbol{x})\)</span> does not depend on any non-fixed parameter. A <em>composite</em> hypothesis instead depends on one or more parameters <span class="math inline">\(\boldsymbol{\theta}\)</span>, i.e. the distribution under the hypothesis can be expressed as <span class="math inline">\(p(\boldsymbol{x} | H_c) =f(\boldsymbol{x},\boldsymbol{\theta})\)</span>.</p>
+                <p>In order to carry out hypothesis testing based on a set of observations <span class="math inline">\(D = \{\boldsymbol{x}_0,...,\boldsymbol{x}_n\}\)</span>, a <em>test statistic</em> <span class="math inline">\(t(D)\)</span> that is a function of the observations is constructed. The choice of test statistic is especially challenging when <span class="math inline">\(\boldsymbol{x}\)</span> is high-dimensional and <span class="math inline">\(p(\boldsymbol{x}_i | \boldsymbol{\theta})\)</span> is not known. The concepts of test statistic and summary statistic, the latter discussed in Section <a href="3-1-statistical-modelling.html#sec:summary_statistic">3.1.3.2</a>, are very related. A test statistic is in fact a sample summary statistic<a href="3-2-statistical-inference.html#fn7" class="footnote-ref" id="fnref7"><sup>7</sup></a> <span class="math inline">\(s(D)\)</span>, that is used within an statistical test to accept or reject hypothesis, so all the concerns regarding sufficiency from Section <a href="3-1-statistical-modelling.html#sec:suff_stats">3.1.3.3</a> also apply. Regarding the dimensionality of <span class="math inline">\(t(D) : \mathcal{X}_D \subseteq \mathbb{R}^{d \times n } \longrightarrow \mathcal{T}\)</span>, while it can be a multi-dimensional vector (e.g. could even use <span class="math inline">\(t(D)=(\boldsymbol{x}_0,...,\boldsymbol{x}_n)\)</span>), a one dimensional variable is usually considered in order to simplify the process of making calibrated statistical statements.</p>
+                <p>Let us refer to the test statistic for the set of observations as <span class="math inline">\(t_\textrm{obs}\)</span> from here onwards. The result of the statistical test is whether the hypothesis <span class="math inline">\(H_0\)</span> can be rejected in favour of <span class="math inline">\(H_1\)</span> if the null is unlikely enough. In practice, in order to make a principled decision, a critical region <span class="math inline">\(\mathcal{T}_C \subseteq \mathcal{T}\)</span> in the space of the test statistic has to be defined before looking at the set of observations. Once the critical region has been chosen, a test can be then characterised by its <em>significance</em> level <span class="math inline">\(\alpha\)</span> and <em>power</em> <span class="math inline">\(1-\beta\)</span>. The significance, which is also referred to as the <em>Type I error rate</em>, is directly related with the probability of rejecting <span class="math inline">\(H_0\)</span> when it is actually true. For a given test based on the summary statistic <span class="math inline">\(t(D)\)</span> and its critical region <span class="math inline">\(\mathcal{T}_C\)</span>, the significance level can be defined as: <span id="eq:significance_test"><span class="math display">\[
+                \alpha = P ( t \in \mathcal{T}_C | H_0) =
+                \int_{\mathcal{T}_C} g( t| H_0) dt
+                \stackrel{\textrm{1D}}{\Rightarrow} \int_{t_\bold{cut}}^\infty  g( t| H_0) dt
+                \qquad(3.37)\]</span></span> where <span class="math inline">\(g( t| H_0)\)</span> is the distribution of the test statistic under the null hypothesis <span class="math inline">\(H_0\)</span>, and the latter simplification applies for one-dimensional summary statistics where the critical region is defined based on a given threshold <span class="math inline">\(t_\textrm{cut}\)</span>. The power of a test <span class="math inline">\(1-\beta\)</span> is instead defined by the probability of not rejecting the null hypothesis when the alternative is actually true, which often referred as <em>type II error rate</em> <span class="math inline">\(\beta\)</span>. The type II error rate <span class="math inline">\(\beta\)</span> can be defined as the probability of not being in the critical region under the alternative hypothesis: <span id="eq:type2_test"><span class="math display">\[
+                \beta = P ( t \not\in \mathcal{T}_C | H_1) =
+                1 - \int_{\mathcal{T}_C} g( t| H_1) dt
+                \stackrel{\textrm{1D}}{\Rightarrow} 1 - \int_{-\infty}^{t_\bold{cut}}  g( t| H_1) dt
+                \qquad(3.38)\]</span></span> where <span class="math inline">\(g( t| H_0)\)</span> is the distribution of the test statistic under the alternative hypothesis <span class="math inline">\(H_1\)</span>, and the last terms corresponds to the one dimensional case based on a threshold. Both the significance level and the power of a hypothesis test depend on the definition of its test statistic and the critical region. The significance level of a test <span class="math inline">\(\alpha\)</span> is often fixed at a given value in order to reject the null in favour of an alternative. It is then beneficial to design the test so its power is as high as possible, which is equivalent to having a Type II error rate as low as possible.</p>
+                <p>From the definition of Type I and Type II error rates in Equation <a href="3-2-statistical-inference.html#eq:significance_test">3.37</a> and Equation <a href="3-2-statistical-inference.html#eq:type2_test">3.38</a>, it is evident that either the probability distribution function of the test statistic under both the null and alternative hypothesis or a way to estimate the integrals from simulated observations are required. The main advantage of one-dimensional test statistics, similarly to the low-dimensional summary statistics discussed in Section <a href="3-1-statistical-modelling.html#sec:summary_statistic">3.1.3.2</a>, is that they allow for an efficient estimation of the probability distribution function using non-parametric techniques. When both the null <span class="math inline">\(H_0\)</span> and alternative hypothesis <span class="math inline">\(H_1\)</span> are simple, the Neyman-Pearson lemma <span class="citation">[<a href="references.html#ref-NeymanPearson1933" role="doc-biblioref">97</a>]</span> states that the <em>likelihood ratio</em>, which is a one-dimensional test statistic defined as: <span id="eq:likelihood_ratio"><span class="math display">\[
+                \Lambda( \mathcal{D}; H_0, H_1) = \frac{p(D| H_0)}{p(D| H_1)} =
+                \prod_{\boldsymbol{x} \in \mathcal{D}}
+                \frac{p(\boldsymbol{x}| H_0)}{ p(\boldsymbol{x} |H_1)}
+                \qquad(3.39)\]</span></span> is the most powerful test statistic at any threshold <span class="math inline">\(t_\textrm{cut}\)</span>, which is associated with a significance <span class="math inline">\(\alpha=P(\Lambda(\mathcal{D}; H_0, H_1) \leq t_\textrm{cut})\)</span>. The last expansion requires independence between the different observations. While the likelihood ratio can be proven to be the most powerful test statistic, it cannot be evaluated exactly if the likelihood is not known, which often the case for LHC inference problems as discussed in Section <a href="3-2-statistical-inference.html#sec:likelihood-free">3.2.1</a>. The alternative hypothesis is usually composite in particle colliders because the signal mixture fraction <span class="math inline">\(\mu\)</span> (or its cross section equivalently) is one of the parameters of interest. The likelihood ratio test can nevertheless be expressed in this case as a function the parameter <span class="math inline">\(\mu\)</span>, which will be the most powerful test for a given <span class="math inline">\(\mu\)</span> if it is the only unknown parameter.</p>
+                <p>It is worth noting that while the likelihood ratio defined in Equation <a href="3-2-statistical-inference.html#eq:likelihood_ratio">3.39</a> defines the most powerful test, the likelihood ratio based on a summary statistic <span class="math inline">\(\boldsymbol{s}(D)\)</span> can also be defined, but it is not the most powerful test for inference based on <span class="math inline">\(D\)</span> unless <span class="math inline">\(\boldsymbol{s}(D)\)</span> is a sufficient summary statistic with respect to the parameters <span class="math inline">\(\boldsymbol{\theta}\)</span> which fully define the null <span class="math inline">\(p(\boldsymbol{x} | H_0) = p(\boldsymbol{x} | \boldsymbol{\theta}_0)\)</span> and alternate <span class="math inline">\(p(\boldsymbol{x} | H_1) = p(\boldsymbol{x} | \boldsymbol{\theta}_1)\)</span> hypotheses. This fact motivates the use of machine learning techniques to approximate the likelihood ratio directly based on simulated observations as discussed in Section <a href="4-3-applications-in-high-energy-physics.html#sec:lr_clf">4.3.1.1</a>. The likelihood-ratio can then be calibrated by means of non-parametric probability density estimation techniques or count-based likelihoods.</p>
+                <p>Another relevant issue when defining test statistics is that hypotheses are rarely simple (or with a composite alternate in the way previously described). Let us suppose the <span class="math inline">\(\mu\)</span> is the parameter of interest, e.g. the mixture coefficient for the signal. The statistical model often depends on additional nuisance parameters <span class="math inline">\(\boldsymbol{\theta}\)</span>, as discussed in Section <a href="3-1-statistical-modelling.html#sec:known_unknowns">3.1.4</a>. The likelihood ratio from Equation <a href="3-2-statistical-inference.html#eq:likelihood_ratio">3.39</a> is not guaranteed to be the most powerful test statistic when the hypotheses are composite. In this case, often summary statistics based on the <em>profile likelihood ratio</em> are used, that can be defined for LHC searches as: <span id="eq:profile_lr"><span class="math display">\[
+                \lambda(\mu) =
+                 \frac{L(\mu, \hat{\hat{\boldsymbol{\theta}}})}{
+                 L(\hat{\mu}, \hat{\boldsymbol{\theta}})}
+                \qquad(3.40)\]</span></span> where <span class="math inline">\(\hat{\hat{\boldsymbol{\theta}}}\)</span> at the numerator refers to the value of the nuisance parameter that maximises the likelihood for a given <span class="math inline">\(\mu\)</span>, and <span class="math inline">\(\hat{\mu}\)</span> and <span class="math inline">\(\hat{\boldsymbol{\theta}}\)</span> at the denominator are the standard maximum likelihood estimators. The property that motivates the use of the profile likelihood ratio, other than its convergence to the likelihood ratio when the hypotheses are simple, is that the distribution for large numbers of observations can be effectively approximated, as demonstrated by Wilks and Wald <span class="citation">[<a href="references.html#ref-wilks1938large" role="doc-biblioref">98</a>], [<a href="references.html#ref-wald1943tests" role="doc-biblioref">99</a>]</span>.</p>
+                <p>For a discussion of the different test statistics based on the profiled likelihood ratio as well as their asymptotic approximations, the following reference is recommended <span class="citation">[<a href="references.html#ref-Cowan:2010js" role="doc-biblioref">100</a>]</span>. In particular, the use of the <em>Asimov dataset</em>, where the observed sample summary statistic of the type outlined Equation <a href="3-1-statistical-modelling.html#eq:sum_count_vector">3.29</a> is assumed to be equal to the expectation, is instrumental for the technique described in Chapter <a href="6-inference-aware-neural-optimisation.html#sec:inferno">6</a>. The statistical framework of hypothesis testing is used to decide whether to reject or not reject the null hypothesis in favour of the alternate. Alternatively it can also be useful to estimate the probability of obtaining the observed data (or test statistic) under the null hypothesis, which is simply referred to as the p-value or alternatively as Z-value when standard deviation units are used. When the null hypothesis is not rejected <span class="math inline">\(H_0\)</span>, the statistical test can be recast to obtain <em>exclusion upper limits</em> at a given confidence level (usually 95% is used), as is done in the non-resonant Higgs production search included in Chapter <a href="5-search-for-anomalous-higgs-pair-production-with-cms.html#sec:higgs_pair">5</a>.</p>
+                <p>For obtaining exclusion upper limits, it is useful to define a modified test statistic <span class="math inline">\(\widetilde{q}(\mu)\)</span>: <span class="math display">\[
+                \widetilde{q}(\mu) =
+                \begin{cases}
+                -2\ln \frac{L(\mu, \hat{\hat{\boldsymbol{\theta}}}(\mu))}{
+                 L(0, \hat{\boldsymbol{\theta}}(\mu))} \quad
+                  &amp;\textrm{if}\ \hat{\mu} &lt; 0 \\
+                -2\ln \frac{L(\mu, \hat{\hat{\boldsymbol{\theta}}}(\mu))}{
+                  L(\hat{\mu}, \hat{\boldsymbol{\theta}}(\mu))}  \quad
+                  &amp;\textrm{if}\ 0 \leq \hat{\mu} \leq \mu \\
+                  0 \quad
+                  &amp;\textrm{if}\ \hat{\mu} &gt; \mu \\
+                \end{cases}
+                \]</span> which does not regard negative background fluctuations or cases where <span class="math inline">\(\hat{\mu} &gt; \mu\)</span> as evidence against <span class="math inline">\(\mu\)</span>. When using <span class="math inline">\(\widetilde{q}(\mu)\)</span> or similar profile-likelihood-based one-dimensional test statistics, the observed exclusion upper upper limit can be defined as the largest value of <span class="math inline">\(\mu\)</span> for which the probability of obtaining a test statistic value is equal or larger than a given confidence level (e.g. <span class="math inline">\(\alpha=0.05\)</span> for 95% confidence intervals), which can be expressed as the following integral: <span id="eq:observed_limit"><span class="math display">\[
+                P(\widetilde{q}(\mu) \geq \alpha | \mu) =
+                \int^{\infty}_{\widetilde{q}_\textrm{obs}(\mu)}
+                g(\widetilde{q}(\mu) | \mu) dq
+                \qquad(3.41)\]</span></span> where <span class="math inline">\(\widetilde{q}_\textrm{obs}(\mu)\)</span> is the observed test statistic and <span class="math inline">\(g(\widetilde{q}(\mu) | \mu)\)</span> is the distribution under the alternate when the signal fraction is <span class="math inline">\(\mu\)</span>. This integral can be approximated using Monte Carlo simulations or by the asymptotic approximations described in <span class="citation">[<a href="references.html#ref-Cowan:2010js" role="doc-biblioref">100</a>]</span>. A different upper limit definition is often used to avoid excluding an alternative hypothesis with a fixed probably <span class="math inline">\(\alpha\)</span> even when the analysis has no sensitivity, referred to as CLs procedure <span class="citation">[<a href="references.html#ref-Read:2002hq" role="doc-biblioref">101</a>], [<a href="references.html#ref-Junk:1999kv" role="doc-biblioref">102</a>]</span>, in which the exclusion limit is defined as the value of <span class="math inline">\(\mu\)</span> for which <span class="math inline">\(P(\widetilde{q}(\mu) \geq \alpha | \mu)/P(\widetilde{q}(\mu) \geq \alpha | 0) \geq\alpha)\)</span>, which solves the mentioned issue at the cost of over-coverage.</p>
+                <p>Most data analyses at the LHC, and particularly searches such as the one discussed in Chapter <a href="5-search-for-anomalous-higgs-pair-production-with-cms.html#sec:higgs_pair">5</a>, are carried out in blinded manner to reduce the experimenter’s bias, i.e. the subset of observations or results relevant for statistical inference are not considered (or concealed) until all the analysis procedures have defined. In order to optimise the various analysis components (e.g. selection or summary statistic), it is useful to compute a figure of merit that is representative of the prospective sensitivity of the analysis. The <em>expected significance</em>, is the expectation value for the probability value from Equation <a href="3-2-statistical-inference.html#eq:significance_test">3.37</a> under the alternative hypothesis. Instead, the median instead of the expectation is often considered to preserve monotonicity with Z-values, and several approximations exist for simple cut-and-count likelihoods. Both the expected and median significance depend on the signal fraction <span class="math inline">\(\mu\)</span> assumed, so they are particularly useful to optimise analyses where the order of magnitude expected for <span class="math inline">\(\mu\)</span> is known, e.g. cross section measurements of SM processes.</p>
+                <p>Alternatively, the expected median upper limit can be defined as the exclusion upper limit using the median test statistic <span class="math inline">\(\widetilde{q}_\textrm{med}(\mu)\)</span> under the null hypothesis instead of the observed statistic. In addition to the median expected limit, it is common practice in LHC searches to also compute the so-called 1-sigma and 2-sigma bands, that correspond to the <span class="math inline">\(50.0\pm34.1\)</span> and <span class="math inline">\(50.0\pm47.7\)</span> percentiles instead of the median. The upper limit bands provide a quantitive estimation of the possible limit variation if no signal is present in the data. Both the expected significance and the expected upper limit can be estimated asymptotically for summary statistics like the one described in Equation <a href="3-1-statistical-modelling.html#eq:sum_count_vector">3.29</a>. The effect of nuisance parameters can be also included in both in the asymptotic approximations or the Monte Carlo based estimation. The asymptotic approximation are found to be good empirically, within 10% to 30% (for situations where the number of events is small) of the Monte Carlo based estimation, and thus are frequently used for obtaining limits and significances in New Physics searches.</p>
+                </div>
+                <div id="sec:param_est" class="section level3">
+                <h3><span class="header-section-number">3.2.3</span> Parameter Estimation</h3>
+                <p>Another inference problem that can be defined based on the observed data, is parameter estimation, whose goal can generally be defined as the determination of the possible or optimal values that the parameters of a statistical model in relation to a set of observations. Two types of parameter estimation problems are often considered: point estimation and interval estimation. If the aim is to obtain the best estimate (i.e. a single value) of a vector of parameter based on a set of observations, it is referred to as a <em>point estimation</em> problem. When we are instead interested on using a set of observations to make statistical statements about a range or region for the values that the statistical model parameters, we are dealing with an <em>interval estimation</em> problem.</p>
+                <p>Parameter estimation can be addressed either from a classical (i.e. also known as frequentist) standpoint where the true values of the parameter are assumed to be fixed but unknown, and intervals represent the region of parameters for which the set of observed data could be obtained upon repeated sampling; or from a Bayesian perspective, where probabilistic statements representing the degree of belief on the values for the parameters are updated based on the set of observations. A classical inference approach is predominantly adopted in this document, where the definition of probability is based on the relative frequency of the outcome when repeated trials are carried out. Classical interval estimation, often referred to as <em>confidence interval</em> estimation is strongly related with hypothesis testing, as reviewed in Section <a href="3-2-statistical-inference.html#sec:hypo_test">3.2.2</a>. The <span class="math inline">\(100(1-\alpha)\%\)</span> confidence interval (CI) for a one-dimensional parameter <span class="math inline">\(\theta\)</span> can be defined as the interval <span class="math inline">\([\hat{\theta}^{-},\hat{\theta}^{+}]\)</span>:, such that:</p>
+                <p><span id="eq:confidence_interval"><span class="math display">\[
+                P(\hat{\theta}^{-} \leq \theta \leq \hat{\theta}^{+}) = 1 - \alpha
+                \qquad(3.42)\]</span></span></p>
+                <p>where <span class="math inline">\(\hat{\theta}^-\)</span> and <span class="math inline">\(\hat{\theta}^+\)</span> are referred as the lower and upper limits. The definition of confidence interval in the context of classical parameter estimation is the range of values for a given parameter which, upon repeated trials, would contain the true value <span class="math inline">\(100(1-\alpha)\%\)</span> of the times. The concept of confidence interval can also be extended to confidence region when a multi-dimensional parameter vector or several disjoint intervals are considered. While the definition of confidence interval based on its coverage properties is rather simple, its construction based on a set of observations <span class="math inline">\(D = \{\boldsymbol{x}_0,...,\boldsymbol{x}_n\}\)</span> can be quite challenging. It is worth noting that both upper and lower limit are estimators, quantities calculated by applying a given produce to the set of observations, and thus <span class="math inline">\(\hat{\theta}^- (D)\)</span> and <span class="math inline">\(\hat{\theta}^+ (D)\)</span> explicitly depend on the set of data.</p>
+                <p>The Neyman construction <span class="citation">[<a href="references.html#ref-10.2307/91337" role="doc-biblioref">103</a>]</span> provides a principled procedure to define <span class="math inline">\(100(1-\alpha)\%\)</span> confidence intervals which guarantee the property defined in Equation <a href="3-2-statistical-inference.html#eq:confidence_interval">3.42</a>, by inverting an ensemble of hypothesis tests (as defined in Section <a href="3-2-statistical-inference.html#sec:hypo_test">3.2.2</a>), by using simulated datasets for the different values that parameter <span class="math inline">\(\theta\)</span> can take. Confidence intervals can be one-sided, e.g. such as the exclusion upper limits defined in Equation <a href="3-2-statistical-inference.html#eq:observed_limit">3.41</a>, or two-sided as the definition provided in Equation <a href="3-2-statistical-inference.html#eq:confidence_interval">3.42</a>. In particle collider analyses, there is often a dichotomy between one-sided intervals for null results and two-sided intervals for non-null results, which can be solved by extending the Neyman construction with a likelihood-ratio ordering criterion <span class="citation">[<a href="references.html#ref-Feldman:1997qc" role="doc-biblioref">104</a>]</span>.</p>
+                <p>Confidence interval procedures based on the Neyman construction work very well for simple statistical models with one or two parameters, however rapidly become computationally intractable for larger number of parameters. Even though the number of parameters of interest at LHC analyses is usually small, nuisance parameters play an important role in inference as reviewed in Section <a href="3-1-statistical-modelling.html#sec:nuis_pars">3.1.4.1</a>, and cannot be accounted for in a straightforward manner in the previous procedure. Thus when the total number of parameters is high, confidence intervals are usually computed based on alternative approximations, often based of some of the properties of the profiled likelihood ratio discussed in Section <a href="3-2-statistical-inference.html#sec:hypo_test">3.2.2</a>.</p>
+                <p>Before discussing the fundamentals of the confidence interval approximations, it is useful to formally define the <em>maximum likelihood estimator</em> of a parameter <span class="math inline">\(\boldsymbol{\theta}_{\textrm{ML}}\)</span> based on a set of observations <span class="math inline">\(D = \{\boldsymbol{x}_0,...,\boldsymbol{x}_n\}\)</span> as:</p>
+                <p><span id="eq:max_ll"><span class="math display">\[
+                \boldsymbol{\theta}_\textrm{ML} =
+                \mathop{\textrm{arg max}}_{\theta \in \Theta} L(D; \boldsymbol{\theta})
+                \qquad(3.43)\]</span></span></p>
+                <p>where <span class="math inline">\(L(D; \boldsymbol{\theta})\)</span> is the likelihood function given the set of observations <span class="math inline">\(D\)</span> which is a function of the model parameters <span class="math inline">\(\boldsymbol{\theta}\)</span>. The maximum likelihood estimator of model parameters was already used to define the profile likelihood ratio test statistic in Equation <a href="3-2-statistical-inference.html#eq:profile_lr">3.40</a>, an it is a very common point estimator because it is asymptotically consistent and efficient. In addition, the maximum likelihood estimator coincides with the <em>maximum a posteriori</em> (MAP) point estimator in Bayesian inference when the parameter priors are uniform, because the evidence is proportional to the likelihood.</p>
+                <p>The shape of the likelihood function around the maximum likelihood estimator <span class="math inline">\(\boldsymbol{\theta}_{\textrm{ML}}\)</span> can be used to approximate confidence intervals. Using asymptotic theory developed by Wilks <span class="citation">[<a href="references.html#ref-wilks1938large" role="doc-biblioref">98</a>]</span>, the <span class="math inline">\(100(1-\alpha)\%\)</span> confidence region for the parameter vector <span class="math inline">\(\boldsymbol{\theta}\)</span> can be determined using the following relation:</p>
+                <p><span id="eq:delta_log"><span class="math display">\[ - \ln L(D; \boldsymbol{\theta}) \leq
+                - \ln L(D; \boldsymbol{\theta}_{\textrm{ML}}) + \Delta \ln L
+                \qquad(3.44)\]</span></span></p>
+                <p>where <span class="math inline">\(\ln L(D; \boldsymbol{\theta}_{\textrm{ML}})\)</span> is the natural logarithm of the likelihood for the maximum likelihood estimator and <span class="math inline">\(\Delta \ln L\)</span> depends on the number of parameter dimensions and the desired coverage <span class="math inline">\(1-\alpha\)</span>. For example, the values of <span class="math inline">\(\boldsymbol{\theta}\)</span> inside the <span class="math inline">\(68.27\%\)</span> (i.e. 1-sigma) confidence region and for one dimensional parameter are those for which the previous relation is verified using <span class="math inline">\(\Delta \ln L = 0.5\)</span>. If <span class="math inline">\(\boldsymbol{\theta}\)</span> is one-dimensional and the function <span class="math inline">\(L(D; \boldsymbol{\theta})\)</span> is convex, the confidence interval limits <span class="math inline">\(\hat{\theta}^- (D)\)</span> and <span class="math inline">\(\hat{\theta}^+ (D)\)</span> can be obtained by finding the most extreme values of <span class="math inline">\(\theta\)</span> that verify Equation <a href="3-2-statistical-inference.html#eq:delta_log">3.44</a> at each side of the maximum likelihood estimator <span class="math inline">\(\boldsymbol{\theta}_{\textrm{ML}}\)</span>.</p>
+                <p>As discussed in Section <a href="3-1-statistical-modelling.html#sec:nuis_pars">3.1.4.1</a>, we are often interested on confidence intervals for a subset of interest of the statistical model <span class="math inline">\(\boldsymbol{\theta}_\iota\)</span>, while regarding the others as nuisance parameters <span class="math inline">\(\boldsymbol{\theta}_\nu\)</span>. The previous procedure can be extended for computing approximate confidence interval for the parameters of interest, by considering the profiled likelihood <span class="citation">[<a href="references.html#ref-Rolke:2004mj" role="doc-biblioref">105</a>]</span> <span class="math inline">\(\hat{L}(D; \boldsymbol{\theta}_\iota)\)</span> instead of the full likelihood in Equation <a href="3-2-statistical-inference.html#eq:delta_log">3.44</a>, which is defined as:</p>
+                <p><span id="eq:profiled_ll"><span class="math display">\[
+                \hat{L}(D; \boldsymbol{\theta}_\iota) =
+                \mathop{\textrm{arg max}}_{\theta_\nu \in \Theta_\nu}
+                L(D; \boldsymbol{\theta}_\iota, \boldsymbol{\theta}_\nu)
+                \qquad(3.45)\]</span></span></p>
+                <p>so the nuisance parameters <span class="math inline">\(\boldsymbol{\theta}_\nu\)</span> are profiled by considering their values that would maximise the likelihood conditional for each value of the parameters of interest <span class="math inline">\(\boldsymbol{\theta}_\iota\)</span>. Noting that a constant denominator in the likelihood would cancel out at each side of Equation <a href="3-2-statistical-inference.html#eq:delta_log">3.44</a>, and similarly when using the profiled likelihood from Equation <a href="3-2-statistical-inference.html#eq:profiled_ll">3.45</a>. Both procedures can be theoretically linked with the profile-likelihood ratio test statistic defined in Equation <a href="3-2-statistical-inference.html#eq:profile_lr">3.40</a>. Algorithms for likelihood maximisation and computation of intervals based on the profiled likelihood are implemented in the <span class="smallcaps">minos</span> routine as part of the <span class="smallcaps">minuit</span> software library <span class="citation">[<a href="references.html#ref-james1975minuit" role="doc-biblioref">106</a>]</span>, which can also account for bounded parameters. Confidence intervals based on the profiled likelihood will be used for benchmarking different ways for constructing summary statistics in Chapter <a href="6-inference-aware-neural-optimisation.html#sec:inferno">6</a>.</p>
+                <p>Another important subtlety when dealing with nuisance parameters (which also applies to a lesser degree to the combination of measurements), is that oftentimes they are constrained by theory or external measurement. This can be included in the previous likelihood-based techniques by considering the likelihood as a product of the likelihood derived from the statistical model for the set of observations <span class="math inline">\(L_D(D; \boldsymbol{\theta})\)</span> with the available constraints <span class="math inline">\(L_C^i(\boldsymbol{\theta})\)</span>, as follows: <span id="eq:augmented_likelihood"><span class="math display">\[
+                L (D; \boldsymbol{\theta}) = L_D(D; \boldsymbol{\theta})
+                \prod_{i=0}^{c} L_C^i(\boldsymbol{\theta})
+                \qquad(3.46)\]</span></span> where simplified likelihoods (e.g. a normal approximation) are often used in the constrain terms <span class="math inline">\(L_C^i(\boldsymbol{\theta})\)</span> but they could in principle also depend on an independent set of observations. The constrain terms could be also understood as prior probability distributions in a Bayesian setting, obtained from previous evidence.</p>
+                <p>In order to obtain approximate confidence intervals from the shape of the likelihood or profile likelihood function around the maximum likelihood, several likelihood evaluations (together with a constrained optimisation problem if <span class="math inline">\(\hat{L}(D; \boldsymbol{\theta}_\iota)\)</span> is used) are often required to estimate accurately a confidence interval. A cruder but often useful approximation can be obtained from the curvature of the negative log-likelihood function at <span class="math inline">\(\boldsymbol{\theta}_{\textrm{ML}}\)</span>. In more than one dimension, the local curvature can be expressed by the Hessian matrix <span class="math inline">\(\boldsymbol{H}\)</span>. The expectation of hessian of the <span class="math inline">\(- \ln L(D; \boldsymbol{\theta})\)</span> is also referred as the Fisher information matrix <span class="math inline">\({\boldsymbol{I}(\boldsymbol{\theta})}\)</span> <span class="citation">[<a href="references.html#ref-fisher_1925" role="doc-biblioref">107</a>]</span> and it is defined as: <span id="eq:hessian_log"><span class="math display">\[ {\boldsymbol{I}(\boldsymbol{\theta})}_{ij}
+                =
+                {\boldsymbol{H}(\boldsymbol{\theta})}_{ij}
+                = \mathop{\mathbb{E}}_{D \sim p ( D |\boldsymbol{\theta} )}
+                \left [  \frac{\partial^2}{\partial {\theta_i} \partial {\theta_j}}
+                 \left ( - \ln L(D; \boldsymbol{\theta}) \right ) \right ]
+                \qquad(3.47)\]</span></span> which can be evaluated at any given <span class="math inline">\(\boldsymbol{\theta}\)</span>, e.g. by using numerical differentiation. The Cramér-Rao lower bound <span class="citation">[<a href="references.html#ref-cramer2016mathematical" role="doc-biblioref">108</a>], [<a href="references.html#ref-rao1992information" role="doc-biblioref">109</a>]</span> provides a link between the inverse of the Fisher information matrix and the covariance of an unbiased estimator <span class="math inline">\(\hat{\boldsymbol{\theta}}\)</span>: <span id="eq:CRB_ch3"><span class="math display">\[
+                \textrm{cov}_{\boldsymbol{\theta}}(\hat{\boldsymbol{\theta}}) \geq
+                I(\boldsymbol{\theta})^{-1}
+                \qquad(3.48)\]</span></span> which becomes an equality in the large-sample limit for an efficient parameter estimator such as the maximum likelihood estimator <span class="math inline">\(\boldsymbol{\theta}_\textrm{ML}\)</span>. The diagonal elements of the inverse of the information matrix <span class="math inline">\(\sigma_i^2=\left( I(\boldsymbol{\theta})^{-1} \right)_{ii}\)</span> may be used to construct a <span class="math inline">\(68.3\%\)</span> confidence interval for <span class="math inline">\(\theta_i\)</span> parameter where the effect of the rest of parameters has been profiled as <span class="math inline">\([\boldsymbol{\theta}_\textrm{ML}-\sigma_i, \boldsymbol{\theta}_\textrm{ML}+\sigma_i]\)</span>. This approximation is equivalent to profiling assuming that the <span class="math inline">\(- \ln L(D; \boldsymbol{\theta})\)</span> can be described by a multi-dimensional parabola centered at <span class="math inline">\(\boldsymbol{\theta}_\textrm{ML}\)</span>, and thus leads to symmetric intervals. In Bayesian literature, an analogous approach is used to extend MAP estimation in order obtain a multi-dimensional normal approximation for the posterior, which is often referred to as Laplace approximation <span class="citation">[<a href="references.html#ref-laplace1986memoir" role="doc-biblioref">110</a>]</span>. An important advantage of this approximation, that will be used in Chapter <a href="6-inference-aware-neural-optimisation.html#sec:inferno">6</a> to construct an inference-aware machine learning loss function, is that can be interpreted both in the context of classical and Bayesian inference.</p>
+                </div>
+                </div>
+                <div class="footnotes">
+                <hr><ol start="7"><li id="fn7"><p>Here a statistic is a function of observations, and <em>sample summary statistic</em> refers to statistics the summarise a set of observations <span class="math inline">\(\boldsymbol{s}(D) : \mathcal{X}_D \subseteq \mathbb{R}^{d\times n}  \longrightarrow \mathcal{Y}_D \subseteq \mathbb{R}^{b\times n}\)</span>.<a href="3-2-statistical-inference.html#fnref7" class="footnote-back">↩</a></p></li>
+                </ol></div>
+                
+                              </section></div>
+          </div>
+        </div>
+        
+        
+      <a href="4-machine-learning-in-high-energy-physics.html" class="navigation navigation-next" aria-label="Next page">
+                <i class="fa fa-angle-right"></i></a><a href="3-1-statistical-modelling.html" class="navigation navigation-prev" aria-label="Previous page">
+                <i class="fa fa-angle-left"></i></a></div>
+    </div>
+    
+
+    <script src="libs/gitbook/js/app.min.js"></script><script src="libs/gitbook/js/lunr.js"></script><script src="libs/gitbook/js/plugin-search.js"></script><script src="libs/gitbook/js/plugin-sharing.js"></script><script src="libs/gitbook/js/plugin-fontsettings.js"></script><script src="libs/gitbook/js/plugin-bookdown.js"></script><script src="libs/gitbook/js/jquery.highlight.js"></script><script>
+      gitbook.require(["gitbook"], function(gitbook) {
+        gitbook.start({
+"sharing": {
+"github": true,
+"facebook": false,
+"twitter": true,
+"google": false,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"all": ["facebook","twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"history": {
+"link": null,
+"text": null
+},
+"download": ["thesis.pdf"],
+"toc": {
+"collapse": "none"
+}
+});
+});
+    </script><script>
+      (function () {
+        var script = document.createElement("script");
+        script.type = "text/javascript";
+        var src = "true";
+        if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+        if (location.protocol !== "file:" && /^https?:/.test(src))
+          src = src.replace(/^https?:/, '');
+        script.src = src;
+        document.getElementsByTagName("head")[0].appendChild(script);
+      })();
+    </script><script src="https://hypothes.is/embed.js" async></script><link href="css/annotator.css" rel="stylesheet"></body></html>

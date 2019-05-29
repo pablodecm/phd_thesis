@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang=""><head><script async src="https://www.googletagmanager.com/gtag/js?id=UA-71094563-2"></script><script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-71094563-2');
+    </script><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><title>Statistical Learning and Inference at Particle Collider Experiments</title><meta name="description" content="Statistical Learning and Inference at Particle Collider Experiments"><meta name="generator" content="bookdown #bookdown:version# and GitBook 2.6.7"><meta property="og:title" content="Statistical Learning and Inference at Particle Collider Experiments"><meta property="og:type" content="book"><meta name="github-repo" content="pablodecm/phd_thesis"><meta name="twitter:card" content="summary"><meta name="twitter:title" content="Statistical Learning and Inference at Particle Collider Experiments"><meta name="author" content="Pablo de Castro Manzano"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black"><script src="libs/jquery/jquery.min.js"></script><link href="libs/gitbook/css/style.css" rel="stylesheet"><link href="libs/gitbook/css/plugin-table.css" rel="stylesheet"><link href="libs/gitbook/css/plugin-bookdown.css" rel="stylesheet"><link href="libs/gitbook/css/plugin-highlight.css" rel="stylesheet"><link href="libs/gitbook/css/plugin-search.css" rel="stylesheet"><link href="libs/gitbook/css/plugin-fontsettings.css" rel="stylesheet"><link href="css/style.css" rel="stylesheet"><link href="css/toc.css" rel="stylesheet"></head><body>
+
+    
+    <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+      <div class="book-summary">
+        <nav role="navigation"><ul class="summary"><li>
+              <a href="./">PhD Thesis - Pablo de Castro</a>
+            </li>
+            <li class="divider">
+            <li class="chapter" data-level="" data-path="abstract.html">
+              <a href="abstract.html"><i class="fa fa-check"></i> Abstract</a>
+            </li>
+            <li class="chapter" data-level="" data-path="preface.html">
+              <a href="preface.html"><i class="fa fa-check"></i> Preface</a>
+            </li>
+            <li class="chapter" data-level="" data-path="acknowledgements.html">
+              <a href="acknowledgements.html"><i class="fa fa-check"></i> Acknowledgements</a>
+            </li>
+            <li class="chapter" data-level="" data-path="introduction.html">
+              <a href="introduction.html"><i class="fa fa-check"></i> Introduction</a>
+            </li>
+            <li class="chapter" data-level="1" data-path="1-theory-of-fundamental-interactions.html">
+              <a href="1-theory-of-fundamental-interactions.html"><i class="fa fa-check"></i><b>1</b> Theory of Fundamental Interactions</a>
+              <ul><li class="chapter" data-level="1.1" data-path="1-1-the-standard-model.html">
+                  <a href="1-1-the-standard-model.html"><i class="fa fa-check"></i><b>1.1</b> The Standard Model</a>
+                  <ul><li class="chapter" data-level="1.1.1" data-path="1-1-the-standard-model.html">
+                      <a href="1-1-the-standard-model.html#sec:qft_basics"><i class="fa fa-check"></i><b>1.1.1</b> Essentials of Quantum Field Theory</a>
+                    </li>
+                    <li class="chapter" data-level="1.1.2" data-path="1-1-the-standard-model.html">
+                      <a href="1-1-the-standard-model.html#sec:qcd_detail"><i class="fa fa-check"></i><b>1.1.2</b> Quantum Chromodynamics</a>
+                    </li>
+                    <li class="chapter" data-level="1.1.3" data-path="1-1-the-standard-model.html">
+                      <a href="1-1-the-standard-model.html#sec:ew_detail"><i class="fa fa-check"></i><b>1.1.3</b> Electroweak Interactions</a>
+                    </li>
+                    <li class="chapter" data-level="1.1.4" data-path="1-1-the-standard-model.html">
+                      <a href="1-1-the-standard-model.html#sec:ewsb_higgs"><i class="fa fa-check"></i><b>1.1.4</b> Symmetry Breaking and the Higgs Boson</a>
+                    </li>
+                  </ul></li>
+                <li class="chapter" data-level="1.2" data-path="1-2-beyond-the-standard-model.html">
+                  <a href="1-2-beyond-the-standard-model.html"><i class="fa fa-check"></i><b>1.2</b> Beyond the Standard Model</a>
+                  <ul><li class="chapter" data-level="1.2.1" data-path="1-2-beyond-the-standard-model.html">
+                      <a href="1-2-beyond-the-standard-model.html#known-limitations"><i class="fa fa-check"></i><b>1.2.1</b> Known Limitations</a>
+                    </li>
+                    <li class="chapter" data-level="1.2.2" data-path="1-2-beyond-the-standard-model.html">
+                      <a href="1-2-beyond-the-standard-model.html#sec:possible_ext"><i class="fa fa-check"></i><b>1.2.2</b> Possible Extensions</a>
+                    </li>
+                  </ul></li>
+                <li class="chapter" data-level="1.3" data-path="1-3-phenomenology-of-proton-collisions.html">
+                  <a href="1-3-phenomenology-of-proton-collisions.html"><i class="fa fa-check"></i><b>1.3</b> Phenomenology of Proton Collisions</a>
+                  <ul><li class="chapter" data-level="1.3.1" data-path="1-3-phenomenology-of-proton-collisions.html">
+                      <a href="1-3-phenomenology-of-proton-collisions.html#sec:main_obs"><i class="fa fa-check"></i><b>1.3.1</b> Main Observables</a>
+                    </li>
+                    <li class="chapter" data-level="1.3.2" data-path="1-3-phenomenology-of-proton-collisions.html">
+                      <a href="1-3-phenomenology-of-proton-collisions.html#sec:pdfs"><i class="fa fa-check"></i><b>1.3.2</b> Parton Distribution Functions</a>
+                    </li>
+                    <li class="chapter" data-level="1.3.3" data-path="1-3-phenomenology-of-proton-collisions.html">
+                      <a href="1-3-phenomenology-of-proton-collisions.html#sec:factorisation"><i class="fa fa-check"></i><b>1.3.3</b> Factorisation and Generation of Hard Processes</a>
+                    </li>
+                    <li class="chapter" data-level="1.3.4" data-path="1-3-phenomenology-of-proton-collisions.html">
+                      <a href="1-3-phenomenology-of-proton-collisions.html#sec:parton_showers"><i class="fa fa-check"></i><b>1.3.4</b> Hadronization and Parton Showers</a>
+                    </li>
+                  </ul></li>
+              </ul></li>
+            <li class="chapter" data-level="2" data-path="2-experiments-at-particle-colliders.html">
+              <a href="2-experiments-at-particle-colliders.html"><i class="fa fa-check"></i><b>2</b> Experiments at Particle Colliders</a>
+              <ul><li class="chapter" data-level="2.1" data-path="2-1-the-large-hadron-collider.html">
+                  <a href="2-1-the-large-hadron-collider.html"><i class="fa fa-check"></i><b>2.1</b> The Large Hadron Collider</a>
+                  <ul><li class="chapter" data-level="2.1.1" data-path="2-1-the-large-hadron-collider.html">
+                      <a href="2-1-the-large-hadron-collider.html#injection-and-acceleration-chain"><i class="fa fa-check"></i><b>2.1.1</b> Injection and Acceleration Chain</a>
+                    </li>
+                    <li class="chapter" data-level="2.1.2" data-path="2-1-the-large-hadron-collider.html">
+                      <a href="2-1-the-large-hadron-collider.html#sec:op_pars"><i class="fa fa-check"></i><b>2.1.2</b> Operation Parameters</a>
+                    </li>
+                    <li class="chapter" data-level="2.1.3" data-path="2-1-the-large-hadron-collider.html">
+                      <a href="2-1-the-large-hadron-collider.html#sec:pile_up"><i class="fa fa-check"></i><b>2.1.3</b> Multiple Hadron Interactions</a>
+                    </li>
+                    <li class="chapter" data-level="2.1.4" data-path="2-1-the-large-hadron-collider.html">
+                      <a href="2-1-the-large-hadron-collider.html#sec:lhc_experiments"><i class="fa fa-check"></i><b>2.1.4</b> Experiments</a>
+                    </li>
+                  </ul></li>
+                <li class="chapter" data-level="2.2" data-path="2-2-the-compact-muon-solenoid.html">
+                  <a href="2-2-the-compact-muon-solenoid.html"><i class="fa fa-check"></i><b>2.2</b> The Compact Muon Solenoid</a>
+                  <ul><li class="chapter" data-level="2.2.1" data-path="2-2-the-compact-muon-solenoid.html">
+                      <a href="2-2-the-compact-muon-solenoid.html#sec:exp_geom"><i class="fa fa-check"></i><b>2.2.1</b> Experimental Geometry</a>
+                    </li>
+                    <li class="chapter" data-level="2.2.2" data-path="2-2-the-compact-muon-solenoid.html">
+                      <a href="2-2-the-compact-muon-solenoid.html#sec:cms_magnet"><i class="fa fa-check"></i><b>2.2.2</b> Magnet</a>
+                    </li>
+                    <li class="chapter" data-level="2.2.3" data-path="2-2-the-compact-muon-solenoid.html">
+                      <a href="2-2-the-compact-muon-solenoid.html#sec:cms_tracking"><i class="fa fa-check"></i><b>2.2.3</b> Tracking System</a>
+                    </li>
+                    <li class="chapter" data-level="2.2.4" data-path="2-2-the-compact-muon-solenoid.html">
+                      <a href="2-2-the-compact-muon-solenoid.html#sec:cms_ecal"><i class="fa fa-check"></i><b>2.2.4</b> Electromagnetic Calorimeter</a>
+                    </li>
+                    <li class="chapter" data-level="2.2.5" data-path="2-2-the-compact-muon-solenoid.html">
+                      <a href="2-2-the-compact-muon-solenoid.html#sec:cms_hcal"><i class="fa fa-check"></i><b>2.2.5</b> Hadronic Calorimeter</a>
+                    </li>
+                    <li class="chapter" data-level="2.2.6" data-path="2-2-the-compact-muon-solenoid.html">
+                      <a href="2-2-the-compact-muon-solenoid.html#sec:cms_muon"><i class="fa fa-check"></i><b>2.2.6</b> Muon System</a>
+                    </li>
+                    <li class="chapter" data-level="2.2.7" data-path="2-2-the-compact-muon-solenoid.html">
+                      <a href="2-2-the-compact-muon-solenoid.html#sec:trigger"><i class="fa fa-check"></i><b>2.2.7</b> Trigger and Data Acquisition</a>
+                    </li>
+                  </ul></li>
+                <li class="chapter" data-level="2.3" data-path="2-3-event-simulation-and-reconstruction.html">
+                  <a href="2-3-event-simulation-and-reconstruction.html"><i class="fa fa-check"></i><b>2.3</b> Event Simulation and Reconstruction</a>
+                  <ul><li class="chapter" data-level="2.3.1" data-path="2-3-event-simulation-and-reconstruction.html">
+                      <a href="2-3-event-simulation-and-reconstruction.html#sec:gen_view"><i class="fa fa-check"></i><b>2.3.1</b> A Generative View</a>
+                    </li>
+                    <li class="chapter" data-level="2.3.2" data-path="2-3-event-simulation-and-reconstruction.html">
+                      <a href="2-3-event-simulation-and-reconstruction.html#sec:detector_simulation"><i class="fa fa-check"></i><b>2.3.2</b> Detector Simulation</a>
+                    </li>
+                    <li class="chapter" data-level="2.3.3" data-path="2-3-event-simulation-and-reconstruction.html">
+                      <a href="2-3-event-simulation-and-reconstruction.html#sec:event_reco"><i class="fa fa-check"></i><b>2.3.3</b> Event Reconstruction</a>
+                    </li>
+                  </ul></li>
+              </ul></li>
+            <li class="chapter" data-level="3" data-path="3-statistical-modelling-and-inference-at-the-lhc.html">
+              <a href="3-statistical-modelling-and-inference-at-the-lhc.html"><i class="fa fa-check"></i><b>3</b> Statistical Modelling and Inference at the LHC</a>
+              <ul><li class="chapter" data-level="3.1" data-path="3-1-statistical-modelling.html">
+                  <a href="3-1-statistical-modelling.html"><i class="fa fa-check"></i><b>3.1</b> Statistical Modelling</a>
+                  <ul><li class="chapter" data-level="3.1.1" data-path="3-1-statistical-modelling.html">
+                      <a href="3-1-statistical-modelling.html#sec:model_overview"><i class="fa fa-check"></i><b>3.1.1</b> Overview</a>
+                    </li>
+                    <li class="chapter" data-level="3.1.2" data-path="3-1-statistical-modelling.html">
+                      <a href="3-1-statistical-modelling.html#simulation-as-generative-modelling"><i class="fa fa-check"></i><b>3.1.2</b> Simulation as Generative Modelling</a>
+                    </li>
+                    <li class="chapter" data-level="3.1.3" data-path="3-1-statistical-modelling.html">
+                      <a href="3-1-statistical-modelling.html#sec:dim_reduction"><i class="fa fa-check"></i><b>3.1.3</b> Dimensionality Reduction</a>
+                    </li>
+                    <li class="chapter" data-level="3.1.4" data-path="3-1-statistical-modelling.html">
+                      <a href="3-1-statistical-modelling.html#sec:known_unknowns"><i class="fa fa-check"></i><b>3.1.4</b> Known Unknowns</a>
+                    </li>
+                  </ul></li>
+                <li class="chapter" data-level="3.2" data-path="3-2-statistical-inference.html">
+                  <a href="3-2-statistical-inference.html"><i class="fa fa-check"></i><b>3.2</b> Statistical Inference</a>
+                  <ul><li class="chapter" data-level="3.2.1" data-path="3-2-statistical-inference.html">
+                      <a href="3-2-statistical-inference.html#sec:likelihood-free"><i class="fa fa-check"></i><b>3.2.1</b> Likelihood-Free Inference</a>
+                    </li>
+                    <li class="chapter" data-level="3.2.2" data-path="3-2-statistical-inference.html">
+                      <a href="3-2-statistical-inference.html#sec:hypo_test"><i class="fa fa-check"></i><b>3.2.2</b> Hypothesis Testing</a>
+                    </li>
+                    <li class="chapter" data-level="3.2.3" data-path="3-2-statistical-inference.html">
+                      <a href="3-2-statistical-inference.html#sec:param_est"><i class="fa fa-check"></i><b>3.2.3</b> Parameter Estimation</a>
+                    </li>
+                  </ul></li>
+              </ul></li>
+            <li class="chapter" data-level="4" data-path="4-machine-learning-in-high-energy-physics.html">
+              <a href="4-machine-learning-in-high-energy-physics.html"><i class="fa fa-check"></i><b>4</b> Machine Learning in High-Energy Physics</a>
+              <ul><li class="chapter" data-level="4.1" data-path="4-1-problem-description.html">
+                  <a href="4-1-problem-description.html"><i class="fa fa-check"></i><b>4.1</b> Problem Description</a>
+                  <ul><li class="chapter" data-level="4.1.1" data-path="4-1-problem-description.html">
+                      <a href="4-1-problem-description.html#sec:supervised"><i class="fa fa-check"></i><b>4.1.1</b> Probabilistic Classification and Regression</a>
+                    </li>
+                  </ul></li>
+                <li class="chapter" data-level="4.2" data-path="4-2-machine-learning-techniques.html">
+                  <a href="4-2-machine-learning-techniques.html"><i class="fa fa-check"></i><b>4.2</b> Machine Learning Techniques</a>
+                  <ul><li class="chapter" data-level="4.2.1" data-path="4-2-machine-learning-techniques.html">
+                      <a href="4-2-machine-learning-techniques.html#sec:boosted_decision_trees"><i class="fa fa-check"></i><b>4.2.1</b> Boosted Decision Trees</a>
+                    </li>
+                    <li class="chapter" data-level="4.2.2" data-path="4-2-machine-learning-techniques.html">
+                      <a href="4-2-machine-learning-techniques.html#sec:ann"><i class="fa fa-check"></i><b>4.2.2</b> Artificial Neural Networks</a>
+                    </li>
+                  </ul></li>
+                <li class="chapter" data-level="4.3" data-path="4-3-applications-in-high-energy-physics.html">
+                  <a href="4-3-applications-in-high-energy-physics.html"><i class="fa fa-check"></i><b>4.3</b> Applications in High Energy Physics</a>
+                  <ul><li class="chapter" data-level="4.3.1" data-path="4-3-applications-in-high-energy-physics.html">
+                      <a href="4-3-applications-in-high-energy-physics.html#sec:sig_vs_bkg"><i class="fa fa-check"></i><b>4.3.1</b> Signal vs Background Classification</a>
+                    </li>
+                    <li class="chapter" data-level="4.3.2" data-path="4-3-applications-in-high-energy-physics.html">
+                      <a href="4-3-applications-in-high-energy-physics.html#sec:particle_id_reg"><i class="fa fa-check"></i><b>4.3.2</b> Particle Identification and Regression</a>
+                    </li>
+                  </ul></li>
+              </ul></li>
+            <li class="chapter" data-level="5" data-path="5-search-for-anomalous-higgs-pair-production-with-cms.html">
+              <a href="5-search-for-anomalous-higgs-pair-production-with-cms.html"><i class="fa fa-check"></i><b>5</b> Search for Anomalous Higgs Pair Production with CMS</a>
+              <ul><li class="chapter" data-level="5.1" data-path="5-1-introduction.html">
+                  <a href="5-1-introduction.html"><i class="fa fa-check"></i><b>5.1</b> Introduction</a>
+                </li>
+                <li class="chapter" data-level="5.2" data-path="5-2-higgs-pair-production-and-anomalous-couplings.html">
+                  <a href="5-2-higgs-pair-production-and-anomalous-couplings.html"><i class="fa fa-check"></i><b>5.2</b> Higgs Pair Production and Anomalous Couplings</a>
+                </li>
+                <li class="chapter" data-level="5.3" data-path="5-3-analysis-strategy.html">
+                  <a href="5-3-analysis-strategy.html"><i class="fa fa-check"></i><b>5.3</b> Analysis Strategy</a>
+                </li>
+                <li class="chapter" data-level="5.4" data-path="5-4-trigger-and-datasets.html">
+                  <a href="5-4-trigger-and-datasets.html"><i class="fa fa-check"></i><b>5.4</b> Trigger and Datasets</a>
+                </li>
+                <li class="chapter" data-level="5.5" data-path="5-5-event-selection.html">
+                  <a href="5-5-event-selection.html"><i class="fa fa-check"></i><b>5.5</b> Event Selection</a>
+                </li>
+                <li class="chapter" data-level="5.6" data-path="5-6-data-driven-background-estimation.html">
+                  <a href="5-6-data-driven-background-estimation.html"><i class="fa fa-check"></i><b>5.6</b> Data-Driven Background Estimation</a>
+                  <ul><li class="chapter" data-level="5.6.1" data-path="5-6-data-driven-background-estimation.html">
+                      <a href="5-6-data-driven-background-estimation.html#sec:hem_mixing"><i class="fa fa-check"></i><b>5.6.1</b> Hemisphere Mixing</a>
+                    </li>
+                    <li class="chapter" data-level="5.6.2" data-path="5-6-data-driven-background-estimation.html">
+                      <a href="5-6-data-driven-background-estimation.html#sec:bkg_validation"><i class="fa fa-check"></i><b>5.6.2</b> Background Validation</a>
+                    </li>
+                  </ul></li>
+                <li class="chapter" data-level="5.7" data-path="5-7-systematic-uncertainties.html">
+                  <a href="5-7-systematic-uncertainties.html"><i class="fa fa-check"></i><b>5.7</b> Systematic Uncertainties</a>
+                </li>
+                <li class="chapter" data-level="5.8" data-path="5-8-analysis-results.html">
+                  <a href="5-8-analysis-results.html"><i class="fa fa-check"></i><b>5.8</b> Analysis Results</a>
+                </li>
+                <li class="chapter" data-level="5.9" data-path="5-9-combination-with-other-decay-channels.html">
+                  <a href="5-9-combination-with-other-decay-channels.html"><i class="fa fa-check"></i><b>5.9</b> Combination with Other Decay Channels</a>
+                </li>
+              </ul></li>
+            <li class="chapter" data-level="6" data-path="6-inference-aware-neural-optimisation.html">
+              <a href="6-inference-aware-neural-optimisation.html"><i class="fa fa-check"></i><b>6</b> Inference-Aware Neural Optimisation</a>
+              <ul><li class="chapter" data-level="6.1" data-path="6-1-introduction.html">
+                  <a href="6-1-introduction.html"><i class="fa fa-check"></i><b>6.1</b> Introduction</a>
+                </li>
+                <li class="chapter" data-level="6.2" data-path="6-2-problem-statement.html">
+                  <a href="6-2-problem-statement.html"><i class="fa fa-check"></i><b>6.2</b> Problem Statement</a>
+                </li>
+                <li class="chapter" data-level="6.3" data-path="6-3-method.html">
+                  <a href="6-3-method.html"><i class="fa fa-check"></i><b>6.3</b> Method</a>
+                </li>
+                <li class="chapter" data-level="6.4" data-path="6-4-related-work.html">
+                  <a href="6-4-related-work.html"><i class="fa fa-check"></i><b>6.4</b> Related Work</a>
+                </li>
+                <li class="chapter" data-level="6.5" data-path="6-5-experiments.html">
+                  <a href="6-5-experiments.html"><i class="fa fa-check"></i><b>6.5</b> Experiments</a>
+                  <ul><li class="chapter" data-level="6.5.1" data-path="6-5-experiments.html">
+                      <a href="6-5-experiments.html#sec:synthetic_mixture"><i class="fa fa-check"></i><b>6.5.1</b> 3D Synthetic Mixture</a>
+                    </li>
+                  </ul></li>
+              </ul></li>
+            <li class="chapter" data-level="7" data-path="7-conclusions-and-prospects.html">
+              <a href="7-conclusions-and-prospects.html"><i class="fa fa-check"></i><b>7</b> Conclusions and Prospects</a>
+            </li>
+            <li class="chapter" data-level="" data-path="references.html">
+              <a href="references.html"><i class="fa fa-check"></i> References</a>
+            </li>
+          </ul></nav></div>
+
+      <div class="book-body">
+        <div class="body-inner">
+          <div class="book-header" role="navigation">
+            <h1>
+              <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Statistical Learning and Inference at Particle Collider Experiments</a>
+            </h1>
+          </div>
+
+          <div class="page-wrapper" tabindex="-1" role="main">
+            <div class="page-inner">
+
+              <section class="normal" id="section-"><div id="sec:cms" class="section level2">
+                <h2><span class="header-section-number">2.2</span> The Compact Muon Solenoid</h2>
+                <p>The Compact Muon Solenoid (CMS) is a general purpose detector placed about 100 meters underground around one of the collision points of the Large Hadron Collider (LHC) ring. It has been designed to carry out experimental research on a wide range of high-energy physics phenomena, including searching for the Higgs boson and studying its properties, testing alternative explanations of nature such as extra dimensions or supersymmetry, and looking for evidence of direct production of particle dark matter candidates.</p>
+                <p>In spite of having such ambitious research goals, the principle of operation of CMS is rather simple, as it can be reduced to the detection of the outgoing particles produced as a result of high-energy interactions between protons and the identification and measurement of their most relevant properties, such as momenta and energies. These is done by putting together the information acquired by a large number of simple detecting elements, placed in layers around the collision region. The properties and kinematics of several of those final state detected particles can often be combined to compute observables of more complex objects, such as the invariant mass of an intermediate particle. After collecting data from a large number of collisions, a subset of relevance of the data can be compared with the expected theoretical predictions, and statistical inference in the form of interval estimates on parameters of interest or hypothesis testing of alternative explanations can be performed.</p>
+                <p>The CMS detector is built inside and around a large cylindrical coil of superconductive wire, forming a 6 m diameter solenoid magnet that can provide an homogenous magnetic field of 3.8 T. Particle detection and identification are achieved using several layers of sub-detectors with specialised functions, almost covering the full solid angle around the interaction region, as depicted in Figure <a href="2-2-the-compact-muon-solenoid.html#fig:CMS_detector">2.5</a>. Inside the solenoid volume, a particle tracker made of silicon pixel and strip detectors, a lead tungstate crystal electromagnetic calorimeter (ECAL) and a brass-scintillator hadronic calorimeter (HCAL) are placed, each of them composed of a barrel and two endcap sections. A large muon detection system, composed of cathode strip chambers (CSC), resistive plate chambers (RPC) and drift tubes (DT), is embedded in the steel flux-return yoke outside the solenoid. Furthermore, extensive forward calorimetry complements the coverage provided by the barrel and endcap sections. A more detailed review of the detection principles and capabilities for each detector component are included in the following sections, yet the detector performance technical design report <span class="citation">[<a href="references.html#ref-CMS:TDR_Detector_Performance" role="doc-biblioref">63</a>]</span> and references therein are recommended for a more comprehensive account.</p>
+                <div class="figure">
+                <img src="gfx/102_chapter_2/CMS_detector.svg" alt="Figure 2.5: Cutaway view of the CMS detector, based on a three-dimensional representation, an highlighting the main detecting systems and characteristics. The image has been adapted from [64]." id="fig:CMS_detector" class="vector" style="width:90.0%"><p class="caption">Figure 2.5: Cutaway view of the CMS detector, based on a three-dimensional representation, an highlighting the main detecting systems and characteristics. The image has been adapted from <span class="citation">[<a href="references.html#ref-sakuma2014detector" role="doc-biblioref">64</a>]</span>.</p>
+                </div>
+                <div id="sec:exp_geom" class="section level3">
+                <h3><span class="header-section-number">2.2.1</span> Experimental Geometry</h3>
+                <p>Given the geometry of the detector, the coordinate system used is centred at the nominal interaction point inside the detector. The <span class="math inline">\(x\)</span> axis point inwards towards the LHC ring origin, while the <span class="math inline">\(y\)</span> axis points vertically upward toward the terrestrial surface. The <span class="math inline">\(z\)</span> axis is thus tangent to the beam line, increasing in the counter-clockwise direction when looking at the LHC ring from above. Considering the expected symmetries for particle production, spherical coordinates are a convenient representation, where <span class="math inline">\(\phi\)</span> is the angle from the <span class="math inline">\(x\)</span> axis in transverse plane (i.e. <span class="math inline">\(x\)</span>-<span class="math inline">\(y\)</span> plane), and <span class="math inline">\(\theta\)</span> is the polar angle with respect to the LHC plane using a sign convention consistent with the previous definition of the <span class="math inline">\(z\)</span> and <span class="math inline">\(y\)</span> axes.</p>
+                <p>As mentioned before, particle momentum is the main observable of the detected particles. The energy is simply a function of the momentum and the mass of the particle, as shown by the relation <span class="math inline">\(E^2 = p^2 + m^2\)</span>, expressed in natural units (<span class="math inline">\(c=1\)</span>). Because the <span class="math inline">\(x\)</span> and <span class="math inline">\(y\)</span> momentum components are insensitive to the initial state boost in the <span class="math inline">\(z\)</span> direction due to the stochastic differences in parton momenta in the initial state, and are measured more accurately as a result of the design of the detector, it is common to refer separately to the total transverse momentum quantity <span class="math inline">\(p_T = \sqrt{p_x^2 + p_y^2} = |p| \sin \theta\)</span> and its transverse plane angle <span class="math inline">\(\phi\)</span>. While the <span class="math inline">\(z\)</span> component of the momentum could be specified directly either by using <span class="math inline">\(p_z\)</span> or by the angle <span class="math inline">\(\theta\)</span>, the differences of any of those observables between two particles detected on an event depend on the initial parton state boost <span class="math inline">\(\beta\)</span> on the <span class="math inline">\(z\)</span> direction, which varies between different collisions and it is hard to estimate precisely in the laboratory frame of reference.</p>
+                <p>Since the dependence on the initial state <span class="math inline">\(z\)</span> boost would complicate the statistical analysis and the definition of derived observables, an alternative observable is used. The rapidity <span class="math inline">\(y\)</span> is defined as: <span id="eq:rapidity"><span class="math display">\[
+                y = \frac{1}{2} \ln \left ( \frac{E+p_z}{E-p_z} \right )
+                \qquad(2.5)\]</span></span> and its value under a <span class="math inline">\(z\)</span>-axis boost <span class="math inline">\(\beta\)</span> is easily obtained by adding an additive factor <span class="math inline">\(y'=y-\textrm{tanh}^{-1} \beta\)</span>. Hence differences in rapidity between two particles in a collision <span class="math inline">\(\Delta y = | y_b - y_a |\)</span> are invariant to Lorentz boost in the <span class="math inline">\(z\)</span> direction. Because the rapidity depends on the total energy/momentum of the particle, which might not be possible to measure with high precision in hadron collider detectors, it is more suitable to approximate it. The approximation is referred to as the <em>pseudo-rapidity</em> <span class="math inline">\(\eta\)</span>, and can be defined as: <span id="eq:pseudo_rapidity"><span class="math display">\[\eta = \frac{1}{2} \ln \left ( \frac{p+p_z}{E-p_z} \right ) =
+                 \ln \left ( \tan \frac{\theta}{2} \right )
+                 \qquad(2.6)\]</span></span> that only depends on the polar angle <span class="math inline">\(\theta\)</span> with respect to the LHC plane. The <em>pseudo-rapidity</em> <span class="math inline">\(\eta\)</span> is equal to the rapidity <span class="math inline">\(y\)</span> for massless particles, and is a very effective approximation in the highly-relativistic limit, when <span class="math inline">\(E\gg m\)</span>. It is useful observing that for particles produced in the transverse plane (i.e. <span class="math inline">\(\theta=\pi/2\)</span>), their <em>pseudo-rapidity</em> is <span class="math inline">\(\eta=0\)</span>. Instead, in the limit of fully forward particles, when <span class="math inline">\(\theta \rightarrow 0\)</span> or <span class="math inline">\(\theta \rightarrow \pi\)</span>, their <em>pseudo-rapidity</em> becomes <span class="math inline">\(\eta \rightarrow +\infty\)</span> and <span class="math inline">\(\eta \rightarrow -\infty\)</span>, respectively.</p>
+                <p>Oftentimes, angular distances between two particles are very useful observables in an collision to cluster observed particles or isolate interesting collisions. The distances between two particles, indentified with <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span> subindexes, in the transverse <span class="math inline">\(\Delta \phi\)</span> and forward direction <span class="math inline">\(\Delta \eta\)</span> can be computed as: <span id="eq:delta_phi_eta"><span class="math display">\[\Delta \phi = \min \left( | \phi_b-\phi_a|,
+                  2 \pi - | \phi_b - \phi_a| \right) \quad \textrm{and} \quad
+                  \Delta \eta = | \eta_b - \eta_a| \qquad(2.7)\]</span></span> while the total angular distance <span class="math inline">\(\Delta R\)</span> between the two particles is instead defined as: <span id="eq:delta_r"><span class="math display">\[ \Delta R = \sqrt{ (\Delta \eta)^2 + (\Delta \phi)^2 }\qquad(2.8)\]</span></span> which is invariant to boosts in the <span class="math inline">\(z\)</span> direction in the highly-relativistic limit, and is particularly practical to cluster the products of the hadronization of quarks and gluons as detailed in Section <a href="2-3-event-simulation-and-reconstruction.html#sec:event">2.3</a>.</p>
+                </div>
+                <div id="sec:cms_magnet" class="section level3">
+                <h3><span class="header-section-number">2.2.2</span> Magnet</h3>
+                <p>The purpose of the CMS magnet is to curve the trajectories of charged particles coming out the interaction region, so their transverse momenta <span class="math inline">\(p_T\)</span> can be accurately estimated, and the sign of their charge determined. In order to understand how such momentum measurement can be carried out, let us assume a solenoidal magnetic field that is fully homogenous and pointing in the <span class="math inline">\(z\)</span> direction <span class="math inline">\(\vec{B}=B \hat{z}\)</span>. Due to Lorentz force, a particle with a transverse momentum <span class="math inline">\(p_T\)</span> and a forward momentum <span class="math inline">\(p_z\)</span> would describe an helicoidal trajectory, where the curvature radius in the transverse plane <span class="math inline">\(r_T\)</span> and the transverse momentum are related: <span id="eq:lorentz_eq"><span class="math display">\[r_T = \frac{p_T}{qB}  \quad
+                  \Longrightarrow \quad p_T
+                  [\textrm{GeV/c}] =  0.3 \cdot q[\textrm{e}] \cdot B[\textrm{T}]
+                  \cdot r_T[\textrm{m}]  \qquad(2.9)\]</span></span> where <span class="math inline">\(q\)</span> is the particle charge, and the second equation corresponds to a simplification using units denoted inside the brackets adjacent to each quantity (<span class="math inline">\(\textrm{e}\)</span> are electron charge units). This simple proportionality relation indicates that the higher the momentum of a particle, the larger its radius of curvature. Furthermore, the direction of the curvature is determined by the sign of the particle charge. For more realistic scenarios, like the magnetic field not being completely homogenous or the particle momentum decreasing along its trajectory due to interaction with the detecting elements, Equation <a href="2-2-the-compact-muon-solenoid.html#eq:lorentz_eq">2.9</a> is only an approximation and the trajectory path can be obtained by solving the relevant differential equation.</p>
+                <p>In the case of CMS, the magnetic field is generated by a large superconducting solenoid, contained inside a hollow cylinder about 13 m long and with an outer radius of 3 m. Very high currents, up to 19 kA, circulate along <span class="math inline">\(\textrm{NbTi}\)</span> wires kept at 4.5 K using a liquid helium cooling system, providing an almost homogenous field at the centre of the solenoid up to 3.8 T in the <span class="math inline">\(z\)</span> direction. In addition to the solenoid, the magnetic flux lines are closed by a 10000 ton return yoke, composed by a series of magnetised iron blocks interleaved with the muon detectors in the outer part of CMS, providing a magnetic field about 2T in the opposite direction. The remaining elements of the CMS magnetic spectrometer, referring to the detector systems used to estimate the curved particle trajectories are reviewed in Sections <a href="2-2-the-compact-muon-solenoid.html#sec:cms_tracking">2.2.3</a> and <a href="2-2-the-compact-muon-solenoid.html#sec:cms_muon">2.2.6</a>.</p>
+                </div>
+                <div id="sec:cms_tracking" class="section level3">
+                <h3><span class="header-section-number">2.2.3</span> Tracking System</h3>
+                <p>The inner tracking system is the detector that is the closest to the interaction point, and its functions include the estimation of the charged particles trajectories, used to provide a measurement of their momenta as described in Section <a href="2-2-the-compact-muon-solenoid.html#sec:cms_magnet">2.2.2</a>, as well as allowing the positional determination of interaction or decay vertices by extrapolating the trajectories inside the interaction region. The detection of charged particle trajectories, or <em>tracks</em> for short, is carried out by several silicon detector layers placed non-uniformly around the collision volume, as shown in Figure <a href="2-2-the-compact-muon-solenoid.html#fig:CMS_tracker">2.6</a>. The placement of layers is symmetric in <span class="math inline">\(\phi\)</span>, the outermost layers contained within a supporting cylindrical structure of 2.5 m of diameter and 5.8 m of length.</p>
+                <div class="figure">
+                <img src="gfx/102_chapter_2/tracker_colour.svg" alt="Figure 2.6: Cross sectional view of the CMS detector inner tracker detector in the r-z plane, detailing the position of detecting layers as well as the main detector sub-components. The tracker is approximately symmetric around r=0, so only the top half is shown. Figure has been adapted from [65]." id="fig:CMS_tracker" class="vector" style="width:90.0%"><p class="caption">Figure 2.6: Cross sectional view of the CMS detector inner tracker detector in the <span class="math inline">\(r-z\)</span> plane, detailing the position of detecting layers as well as the main detector sub-components. The tracker is approximately symmetric around <span class="math inline">\(r=0\)</span>, so only the top half is shown. Figure has been adapted from <span class="citation">[<a href="references.html#ref-Chatrchyan:2014fea" role="doc-biblioref">65</a>]</span>.</p>
+                </div>
+                <p>The detector is composed of two main parts: a silicon pixel detector system situated very close to the interaction point and a much larger strip detector arrangement placed outside the former. The disposition on the detecting layers allows to detect tracks within a pseudo-rapidity range defined by <span class="math inline">\(|\eta| &lt; 2.5\)</span>. Both systems have to deal with the efficient tracking of hundred of charged particles, at a rate of 40 MHz, produced from each bunch crossing. A successful apparatus in such a environment requires a short response time, as well as to be composed of many small detecting elements. The latter property is commonly referred as <em>high granularity</em>, and allows to keep the number of detected track points (i.e. <em>hits</em>) per detector unit at acceptable levels.</p>
+                <p>Being so close to the collision region, the set-up has also to sustain very high particle fluxes during long periods of time, up to <span class="math inline">\(1 \textrm{MHz}/\textrm{mm}^{2}\)</span> at the first pixel layer. Therefore, resistance to radiation damage of the detecting elements and the accompanying electronics, dubbed as <em>radiation-hardness</em>, is an essential specification. Additionally, the amount of material present in the particle trajectories has to be kept to a minimum, to avoid stochastic secondary interactions that would degrade the precision and efficiency of track determination. The use of silicon semiconductor detector technologies <span class="citation">[<a href="references.html#ref-spieler2005semiconductor" role="doc-biblioref">66</a>]</span> in the CMS tracking system is thus motivated by a combination of all previously mentioned reasons. In total, the CMS tracking system is composed of 1440 pixel detector modules and 15148 strip detector modules, accounting for an active area over <span class="math inline">\(200 \textrm{m}^2\)</span>.</p>
+                <p>The pixel detector, the innermost detecting system of the CMS experiment, is comprised by a total of 66 million silicon cells placed in 1440 modules around the collision region. Each pixel cell has an area of <span class="math inline">\(100\times150\:\mu\textrm{m}^2\)</span> and a thickness of <span class="math inline">\(285\:\mu\textrm{m}\)</span>, providing two-dimensional local track hit coordinates with a resolution around in the cell surface plane about <span class="math inline">\(20\:\mu\textrm{m}\)</span>, that can in turn be used to compute the global three-dimensional hit location with high accuracy after accounting for the precise location of the detecting module. As depicted in Figure <a href="2-2-the-compact-muon-solenoid.html#fig:CMS_tracker">2.6</a>, the pixel detector is composed by three <em>barrel</em> layers (i.e. placed around the collision region in an cylindrical arrangement), located at radii of 4.4 cm, 7.3 cm and 10.2 cm respectively, and two forward disks at each side at distance of 34.5 cm and 46.6 cm from the nominal interaction point.</p>
+                <p>The rest of the tracking system, placed outside the pixel detector, is constituted of several silicon strip detector modules organised in four different sub-detectors, referred as TIB, TID, TOB and TEC in Figure <a href="2-2-the-compact-muon-solenoid.html#fig:CMS_tracker">2.6</a>. The inner part of the strip tracker, adjacent to the pixel detector, is composed of four barrel layers of strip modules constituting the tracker inner barrel (TIB) section, and three module layers arranged in disks at at each side forming the tracker inner disk (TID). Further away from the interaction region, the outer strip tracker, comprising of six barrel layers in the tracker outer barrel (TOB) and nine disks at each side forming the tracker endcaps (TEC). The strip specifications varies depending on the sub-detector, with thicknesses ranging from <span class="math inline">\(320\:\mu\textrm{m}\)</span> to <span class="math inline">\(500\:\mu\textrm{m}\)</span>, and pitches (i.e. distances between strips) from <span class="math inline">\(80\:\mu\textrm{m}\)</span> to <span class="math inline">\(184\:\mu\textrm{m}\)</span>.</p>
+                <p>The strips are placed longitudinally parallel to the beam line in the barrel modules and radially in the perpendicular plane in the endcap disks, with silicon strip lengths ranging from 10 cm to 20 cm, and in an overlapping tiled setting (see Figure <a href="2-2-the-compact-muon-solenoid.html#fig:CMS_tracker">2.6</a>) Each strip layer provides a single local coordinate for a particle track hit, aligned with <span class="math inline">\(\phi\)</span> both the barrel and the endcap disk. A second coordinate can be easily obtained taking into account the placement on the module, thus obtaining the <span class="math inline">\(r\)</span> coordinate in the barrel and <span class="math inline">\(z\)</span> in the endcap disks. In order to provide information on the unknown coordinate in each case, some layers of the tracker (in blue colour in Figure <a href="2-2-the-compact-muon-solenoid.html#fig:CMS_tracker">2.6</a>) are composed of two modules instead on one, with a small tilt of 0.1 rad that allows to obtain a precise 3D coordinate for a track hit by combining the two local coordinates and their module positions.</p>
+                </div>
+                <div id="sec:cms_ecal" class="section level3">
+                <h3><span class="header-section-number">2.2.4</span> Electromagnetic Calorimeter</h3>
+                <p>The function of the CMS Electronic Calorimeter (ECAL) is to measure the total energy of the electrons, positrons and photons that reach that part of the detector, by means of their <em>electromagnetic showers</em>. In order attain such task, scintillating lead tungstate <span class="math inline">\(\textrm{PbWO}_4\)</span> transparent crystals are placed inside the solenoid magnet, right outside the tracking system, covering the solid angle around the interaction point as depicted in Figure <a href="2-2-the-compact-muon-solenoid.html#fig:CMS_ecal">2.7</a>. When a high energy electron or a positron enters the dense crystal material, it rapidly decelerates and emits photons through bremsstrahlung radiation. High energy photons from electron/positron deceleration or directly coming from the collision region produce positron-electron pairs through matter interaction, that in turn radiate more photon through bremsstrahlung processes. These chain of processes, referred as <em>electromagnetic shower</em> keeps occurring until the energy of the photons goes below the pair production threshold or the energy loss of the electrons/positrons happens through alternative mechanisms. The resulting low energy photons from the electromagnetic shower produce visible range light in the scintillating but transparent crystal, which is detected, amplified and collected by photodetectors placed at the end of each lead tungstate crystal.</p>
+                <div class="figure">
+                <img src="gfx/102_chapter_2/ecal_from_tdr.svg" alt="Figure 2.7: Cutaway view of the CMS electromagnetic calorimeter, based on a tree-dimensional model of the detector geometry. The placement of the lead tungstate crystal is shown for part of the barrel and endcaps. The figure has been adapted from [67]." id="fig:CMS_ecal" class="vector" style="width:90.0%"><p class="caption">Figure 2.7: Cutaway view of the CMS electromagnetic calorimeter, based on a tree-dimensional model of the detector geometry. The placement of the lead tungstate crystal is shown for part of the barrel and endcaps. The figure has been adapted from <span class="citation">[<a href="references.html#ref-CERN-LHCC-97-033" role="doc-biblioref">67</a>]</span>.</p>
+                </div>
+                <p>The ECAL is composed of two main parts, the barrel calorimeter (EB) section covering pseudo-rapidities up to <span class="math inline">\(|\eta| &lt; 1.479\)</span>, and two symmetrically positioned endcap calorimeters (EE) further extending the coverage to <span class="math inline">\(|\eta|&lt; 3.0\)</span>. The trapezoid-shaped crystals are placed radially around the collision region, a total of 61200 blocks in the EB and another 7324 blocks for each EE part. The sides facing the IP in the barrel section have dimensions of <span class="math inline">\(22\times22\ \textrm{mm}^2\)</span> and a length of 23 cm, while the front-facing sides of those in the endcaps are slightly larger at <span class="math inline">\(28.6\times28.6\ \textrm{mm}^2\)</span> with a length of 22 cm. The advantages of using lead tungstate crystal include its very short radiation length <span class="math inline">\(\mathcal{X}_0=0.89\textrm{cm}\)</span> - which characterises the longitudinal energy loss profile <span class="math inline">\(E(E) = E_0 e^{x/\mathcal{X}_0}\)</span> - as well as its small Moliere radius of 2.19 cm - defining the radius containing average transversal radius containing 90% of the shower energy - leading to narrow showers which contribute to improved position and energy resolution. The lengths of the crystal blocks in the EB and EE amount to <span class="math inline">\(25.8\mathcal{X}_0\)</span> and <span class="math inline">\(24.7\mathcal{X}_0\)</span>, which ensures that all the energy is effectively deposited inside the detectors.</p>
+                <p>Another advantage of lead tungstate crystals is that <span class="math inline">\(\textrm{PbWO}_4\)</span> is also a scintillating material, thus the resulting shower energy is absorbed and partially emitted back as visible light, with a yield spectrum maximum in the blue-violet range around 430 nm. The reemission process is also very fast, since about 80% of the scintillating light is emitted within 25 ns of absorption, which is the time until the next LHC bunch crossing occurs. The scintillator light propagates effectively through the crystal due to its high transparency, and reaches the photodetectors attached to the end of the crystal trapezoids. Avalanche photodiodes (APD) are used for light detection and amplification at the barrel crystals while vacuum phototriodes (VPT) are used for the endcaps, given their different radiation hardness and sensitivity to magnetic fields.</p>
+                <p>In addition to the EE and EB, a sampling detector referred as pre-shower electromagnetic calorimeter, based on two layers of lead absorber followed by two layers of silicon strip detectors, is placed right before the lead tungstate crystals in the endcap to provide higher granularity in the forward region. The main purpose of the pre-shower extension is to distinguish high-energy photons coming directly from the collision region and high energy neutral pions that have decayed into two closely-spaced photons.</p>
+                </div>
+                <div id="sec:cms_hcal" class="section level3">
+                <h3><span class="header-section-number">2.2.5</span> Hadronic Calorimeter</h3>
+                <p>The purpose of the hadron calorimeter (HCAL) is to measure the energy and position of all long-lived neutral or charged mesons and baryons produced as a result of the collision, typically including pions, kaons, protons and neutrons. The main detecting elements of this sub-detector are an assortment of sampling calorimeters, interleaving brass plates as absorber material and plastic scintillator tiles as active medium; the former causing the deposition of energy in the form of secondary particles by means of interactions with the material nuclei and the latter converting a part of that energy to visible light. The light from each tile is captured by a thin optical fibre and carried to a photodetector, producing an electric signal that can be used to measure the total amount of deposited energy once it has been carefully calibrated.</p>
+                <div class="figure">
+                <img src="gfx/102_chapter_2/HCAL.svg" alt="Figure 2.8: Cross sectional view of the CMS hadronic calorimeter (HCAL) detector in the r-z plane, depicting the positioning of the various detector segments relative to the beam line and the solenoid magnet. The HCAL is symmetric around r=0, so only the top half is shown. The figure adapted from [68]." id="fig:CMS_hcal" class="vector" style="width:70.0%"><p class="caption">Figure 2.8: Cross sectional view of the CMS hadronic calorimeter (HCAL) detector in the <span class="math inline">\(r-z\)</span> plane, depicting the positioning of the various detector segments relative to the beam line and the solenoid magnet. The HCAL is symmetric around <span class="math inline">\(r=0\)</span>, so only the top half is shown. The figure adapted from <span class="citation">[<a href="references.html#ref-Chatrchyan:2009ag" role="doc-biblioref">68</a>]</span>.</p>
+                </div>
+                <p>The different segments of the CMS HCAL are shown in Figure <a href="2-2-the-compact-muon-solenoid.html#fig:CMS_hcal">2.8</a>. The barrel section of the hadronic calorimeter (HB) as well as two endcap sections (HE) at each side are placed after the ECAL but still inside the solenoid volume, providing pseudo-rapidity coverages of <span class="math inline">\(|\eta| &lt; 1.3\)</span> and <span class="math inline">\(1.3 &lt; |\eta| &lt; 3.0\)</span>, respectively. Both the HB and HE sections are composed of a stack of brass plates with plastic scintillator tiles in between, providing a total of <span class="math inline">\(5.6\lambda_I\)</span> at <span class="math inline">\(\eta=0\)</span> and <span class="math inline">\(11.8\lambda_I\)</span> at <span class="math inline">\(\eta=3\)</span>, where <span class="math inline">\(\lambda_I\)</span> is the hadronic interaction length. Given the limited space inside the solenoid and the fact that about 11<span class="math inline">\(\lambda_I\)</span> are required to absorb about 99% of the total energy of the hadrons at the expected energy ranges, the hadronic calorimeter system is complemented by an outer detector (HO) outside of the solenoid. The HO is composed of five rings of scintillator tiles, effectively using the solenoid material as absorbing material. Because the absorbing material path length is shorter around <span class="math inline">\(\eta=0\)</span>, the central ring is shielded by large iron plates and an additional layer of scintillating material, yielding a total absorber length over <span class="math inline">\(11.8\lambda_I\)</span> and therefore improving its measuring capabilities.</p>
+                <p>Over 70000 thin plastic scintillator tiles are placed between and after absorber plates. The size of those plates depends on their geometrical placement and are aligned according to their angular coordinates between layers, so each longitudinal projection corresponds to an approximate area <span class="math inline">\(\Delta\eta\times\Delta\phi= 0.087\times0.087\)</span> within the HB coverage region and <span class="math inline">\(\Delta\eta\times\Delta\phi= 0.17\times0.17\)</span> outside it. When secondary particles go through the scintillating tiles, part of the energy is absorbed and promptly released as violet-blue visible light, over 65% of the total amount of emitted light within 25 ns. The light is collected and guided through thin optical wavelength-shifting fibres that change the light to the green spectrum region, then through standard optical fibres until reaching readout boxes that contain hybrid photodiodes (HPD). The optical signal for each alignment of tiles are added optically to a single readout for most of the radial projections, with the exception of those in the intersections between the barrel and endcaps, that are kept in two or three separate channels in order to ease calibration procedures.</p>
+                <p>The last element in the HCAL system is the forward hadronic calorimeter (HF), situated 11.15 m at each side of the interaction point, adjacent to the beam pipe, and providing detection capabilities for particles with pseudo-rapidities in the range <span class="math inline">\(3.0 &lt; |\eta| &lt; 5.2\)</span>. The HF greatly increases the pseudo-rapidity energy measurement for charged and neutral particles, allowing a near hermetic (full solid angle) coverage, and hence allowing the estimation of missing energy in the event such that corresponding to neutrinos leaving CMS undetected, as will be discussed in Section <a href="2-3-event-simulation-and-reconstruction.html#sec:event">2.3</a>. Because the radiation fluxes are extremely high in the forward region and there are no depth constraints, a different detector design is used, based on 165 cm of steel absorber plates and quartz fibres aligned of the z-axis, each with an effective detecting area of <span class="math inline">\(\Delta\eta\times\Delta\phi= 0.17\times0.17\)</span>.</p>
+                <p>The fibres running along the HF detect and guide the Cherenkov light of the charged secondary particles produced in the showers to photomultipliers tubes (PMT) placed behind a 40 cm thick steel and polyethylene shield. In this pseudo-rapidity range, the HF serves also as an electromagnetic calorimeter. The HF detector has been designed in a specific way to disentangle the energy contributions from electromagnetic and hadronic showers, which is useful for many physics data analyses use cases. Only half of the fibres start close to the face of the absorber plates closest to the IP, the rest starting at a depth of 22 cm. By comparing the readouts from the long and short fibres the type of shower can be inferred, given that electromagnetic showers are much shorter than hadronic showers.</p>
+                </div>
+                <div id="sec:cms_muon" class="section level3">
+                <h3><span class="header-section-number">2.2.6</span> Muon System</h3>
+                <p>The scientific objective of the CMS muon sub-system, or outer tracker, is to identify, determine the charge and measure the momenta of high energy muons, which are the only type of charged particles capable of passing through all the other detector systems without a significant energy loss. While their trajectories can be detected in the inner tracker, the amount of energy loss due to bremsstrahlung is much smaller than those of electrons or positrons due to its much heavier mass (given that the emission probability scales with <span class="math inline">\(1/m^2\)</span>) and hence the do not deposit a significant fraction of their energy in the ECAL or the HCAL. The simplest way then to augment the amount of information about muons obtained from the tracker is to place additional tracking detectors outside the solenoid, while sustaining a high magnetic field that can curve the muon trajectories by using large blocks of ferromagnetic material as <em>flux-return yokes</em>.</p>
+                <div class="figure">
+                <img src="gfx/102_chapter_2/cms_muon.svg" alt="Figure 2.9: Cross sectional view of the layout of CMS detector in the r-z plane, focussing on the components of muon system. The detector is symmetric around r=0 axis and the z=0 plane, so only the top quarter is shown. Figure adapted from [69]." id="fig:CMS_muon" class="vector" style="width:70.0%"><p class="caption">Figure 2.9: Cross sectional view of the layout of CMS detector in the <span class="math inline">\(r-z\)</span> plane, focussing on the components of muon system. The detector is symmetric around <span class="math inline">\(r=0\)</span> axis and the <span class="math inline">\(z=0\)</span> plane, so only the top quarter is shown. Figure adapted from <span class="citation">[<a href="references.html#ref-Sirunyan:2018fpa" role="doc-biblioref">69</a>]</span>.</p>
+                </div>
+                <p>The muon system is the most external sub-detector of CMS and it is based on gaseous tracking detector technologies, given the enormous volumes covered. The principle of action of gaseous detectors is rather simple: charged particles passing through the gas ionise gas molecules in their path, which start moving due to a high electric field between conducing wires, producing an electrical signal that can be read out. The time dependence of the signal on the different readout wires is used to infer the particle trajectory with high precision, and in some cases built-in signal amplification can be achieved due to secondary ionisation by the choice of a gas mixture combined with high electric field gradients.</p>
+                <p>An overview of the various detectors of the muons system and their geometrical placement around the solenoid magnet cylinder is depicted in Figure <a href="2-2-the-compact-muon-solenoid.html#fig:CMS_muon">2.9</a>. Due to a combination of criteria regarding uniformity and strength of the magnetic field, expected radiation fluxes and signal readout times, three different types of gaseous detectors are used: drift tubes (DT), cathode strip chambers (CSC) and resistive place chambers (RPC). In the barrel section where the particle flux is not expected to be very high, four layers of drift tubes (DT) are arranged cylindrically around the solenoid magnet, covering a pseudo-rapidity range <span class="math inline">\(|\eta| &lt; 1.2\)</span>. On the endcap section instead, due to higher radiation fluxes and magnetic field non-uniformity, multi-wire cathode strip chambers (CSC) are used, with a detecting pseudo-rapidity coverage of <span class="math inline">\(0.9 &lt; |\eta| &lt; 2.4\)</span>. Both DT and CSC detectors can achieve very high position resolution, but their signal readout time and time resolution is not as good, thus a series of fast resistive plate chambers (RPC) are positioned both in the barrel and the endcap sections, up to pseudo-rapidities <span class="math inline">\(|\eta| &lt; 1.6\)</span>.</p>
+                </div>
+                <div id="sec:trigger" class="section level3">
+                <h3><span class="header-section-number">2.2.7</span> Trigger and Data Acquisition</h3>
+                <p>As discussed in Section <a href="1-3-phenomenology-of-proton-collisions.html#sec:pheno">1.3</a>, the occurrence of relevant processes that may provide information about the physical properties of fundamental interactions in proton-proton collisions is purely stochastic given some initial conditions, plus their relative frequency is very rare compared with known phenomena. In order increase the expected chances of recording interesting phenomena, the LHC collides 40 million high-density proton bunches every second inside the CMS detector. Furthermore, as discussed in Section <a href="2-1-the-large-hadron-collider.html#sec:pile_up">2.1.3</a>, tens of proton-proton interactions typically happen within each bunch crossing. The CMS sub-systems are hence detecting a good fraction of 100s of particles produced as a result of the interactions at each bunch crossing, in addition of being subjected to instrumental noise or external radiation sources such as cosmic rays.</p>
+                <p>The combined readout of all sub-detectors each 25 ns amounts to a large data size, due to the total number of sub-system channels, even if efficient techniques for representation and compression of information are used. Given that technical limitations on the amount of data that can be recorded exist, a practical choice for data acquisition is to keep only the detailed detector information of collisions that could be maximally useful to study the properties of fundamental interactions in subsequent data analyses. The decision system that makes the choice of whether to record or filter out the detailed detector readouts for a given collision, is commonly referred as <em>trigger</em>, and is based on a fast and possibly asynchronous analysis of those readouts. In particular, such decision criteria is typically focussed on the most relevant properties of one or a subset of detected particles, such as their type, charge or the magnitude and direction of their momenta.</p>
+                <p>A flexible and sparse representation of all CMS detector readouts for a given collision that keeps sufficient information for detailed analyses is of the order of a few megabytes (i.e. <span class="math inline">\(\mathcal{O}(1)\ \textrm{MB}\)</span>). Because of the technical capabilities of the storage system, the total data acquisition rate is limited to less that 10 Gb/s, hence the trigger system has to reduce the rate of collision readouts from 40 MHz to about 1 kHz. As a compromise between processing speed and requirement adaptability, the trigger system of CMS is divided in two stages: the level 1 trigger (L1), which is a custom-hardware based solution that reduces the detector readout rate to 100 kHz, and the high-level trigger (HLT), a second step reducing it to the required 1 kHz and that is instead carried out by a commodity computer farm.</p>
+                </div>
+                </div>
+                </section></div>
+          </div>
+        </div>
+        
+        
+      <a href="2-3-event-simulation-and-reconstruction.html" class="navigation navigation-next" aria-label="Next page">
+                <i class="fa fa-angle-right"></i></a><a href="2-1-the-large-hadron-collider.html" class="navigation navigation-prev" aria-label="Previous page">
+                <i class="fa fa-angle-left"></i></a></div>
+    </div>
+    
+
+    <script src="libs/gitbook/js/app.min.js"></script><script src="libs/gitbook/js/lunr.js"></script><script src="libs/gitbook/js/plugin-search.js"></script><script src="libs/gitbook/js/plugin-sharing.js"></script><script src="libs/gitbook/js/plugin-fontsettings.js"></script><script src="libs/gitbook/js/plugin-bookdown.js"></script><script src="libs/gitbook/js/jquery.highlight.js"></script><script>
+      gitbook.require(["gitbook"], function(gitbook) {
+        gitbook.start({
+"sharing": {
+"github": true,
+"facebook": false,
+"twitter": true,
+"google": false,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"all": ["facebook","twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"history": {
+"link": null,
+"text": null
+},
+"download": ["thesis.pdf"],
+"toc": {
+"collapse": "none"
+}
+});
+});
+    </script><script>
+      (function () {
+        var script = document.createElement("script");
+        script.type = "text/javascript";
+        var src = "true";
+        if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+        if (location.protocol !== "file:" && /^https?:/.test(src))
+          src = src.replace(/^https?:/, '');
+        script.src = src;
+        document.getElementsByTagName("head")[0].appendChild(script);
+      })();
+    </script><script src="https://hypothes.is/embed.js" async></script><link href="css/annotator.css" rel="stylesheet"></body></html>

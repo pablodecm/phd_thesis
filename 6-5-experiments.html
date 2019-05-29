@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang=""><head><script async src="https://www.googletagmanager.com/gtag/js?id=UA-71094563-2"></script><script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-71094563-2');
+    </script><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><title>Statistical Learning and Inference at Particle Collider Experiments</title><meta name="description" content="Statistical Learning and Inference at Particle Collider Experiments"><meta name="generator" content="bookdown #bookdown:version# and GitBook 2.6.7"><meta property="og:title" content="Statistical Learning and Inference at Particle Collider Experiments"><meta property="og:type" content="book"><meta name="github-repo" content="pablodecm/phd_thesis"><meta name="twitter:card" content="summary"><meta name="twitter:title" content="Statistical Learning and Inference at Particle Collider Experiments"><meta name="author" content="Pablo de Castro Manzano"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black"><script src="libs/jquery/jquery.min.js"></script><link href="libs/gitbook/css/style.css" rel="stylesheet"><link href="libs/gitbook/css/plugin-table.css" rel="stylesheet"><link href="libs/gitbook/css/plugin-bookdown.css" rel="stylesheet"><link href="libs/gitbook/css/plugin-highlight.css" rel="stylesheet"><link href="libs/gitbook/css/plugin-search.css" rel="stylesheet"><link href="libs/gitbook/css/plugin-fontsettings.css" rel="stylesheet"><link href="css/style.css" rel="stylesheet"><link href="css/toc.css" rel="stylesheet"></head><body>
+
+    
+    <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+      <div class="book-summary">
+        <nav role="navigation"><ul class="summary"><li>
+              <a href="./">PhD Thesis - Pablo de Castro</a>
+            </li>
+            <li class="divider">
+            <li class="chapter" data-level="" data-path="abstract.html">
+              <a href="abstract.html"><i class="fa fa-check"></i> Abstract</a>
+            </li>
+            <li class="chapter" data-level="" data-path="preface.html">
+              <a href="preface.html"><i class="fa fa-check"></i> Preface</a>
+            </li>
+            <li class="chapter" data-level="" data-path="acknowledgements.html">
+              <a href="acknowledgements.html"><i class="fa fa-check"></i> Acknowledgements</a>
+            </li>
+            <li class="chapter" data-level="" data-path="introduction.html">
+              <a href="introduction.html"><i class="fa fa-check"></i> Introduction</a>
+            </li>
+            <li class="chapter" data-level="1" data-path="1-theory-of-fundamental-interactions.html">
+              <a href="1-theory-of-fundamental-interactions.html"><i class="fa fa-check"></i><b>1</b> Theory of Fundamental Interactions</a>
+              <ul><li class="chapter" data-level="1.1" data-path="1-1-the-standard-model.html">
+                  <a href="1-1-the-standard-model.html"><i class="fa fa-check"></i><b>1.1</b> The Standard Model</a>
+                  <ul><li class="chapter" data-level="1.1.1" data-path="1-1-the-standard-model.html">
+                      <a href="1-1-the-standard-model.html#sec:qft_basics"><i class="fa fa-check"></i><b>1.1.1</b> Essentials of Quantum Field Theory</a>
+                    </li>
+                    <li class="chapter" data-level="1.1.2" data-path="1-1-the-standard-model.html">
+                      <a href="1-1-the-standard-model.html#sec:qcd_detail"><i class="fa fa-check"></i><b>1.1.2</b> Quantum Chromodynamics</a>
+                    </li>
+                    <li class="chapter" data-level="1.1.3" data-path="1-1-the-standard-model.html">
+                      <a href="1-1-the-standard-model.html#sec:ew_detail"><i class="fa fa-check"></i><b>1.1.3</b> Electroweak Interactions</a>
+                    </li>
+                    <li class="chapter" data-level="1.1.4" data-path="1-1-the-standard-model.html">
+                      <a href="1-1-the-standard-model.html#sec:ewsb_higgs"><i class="fa fa-check"></i><b>1.1.4</b> Symmetry Breaking and the Higgs Boson</a>
+                    </li>
+                  </ul></li>
+                <li class="chapter" data-level="1.2" data-path="1-2-beyond-the-standard-model.html">
+                  <a href="1-2-beyond-the-standard-model.html"><i class="fa fa-check"></i><b>1.2</b> Beyond the Standard Model</a>
+                  <ul><li class="chapter" data-level="1.2.1" data-path="1-2-beyond-the-standard-model.html">
+                      <a href="1-2-beyond-the-standard-model.html#known-limitations"><i class="fa fa-check"></i><b>1.2.1</b> Known Limitations</a>
+                    </li>
+                    <li class="chapter" data-level="1.2.2" data-path="1-2-beyond-the-standard-model.html">
+                      <a href="1-2-beyond-the-standard-model.html#sec:possible_ext"><i class="fa fa-check"></i><b>1.2.2</b> Possible Extensions</a>
+                    </li>
+                  </ul></li>
+                <li class="chapter" data-level="1.3" data-path="1-3-phenomenology-of-proton-collisions.html">
+                  <a href="1-3-phenomenology-of-proton-collisions.html"><i class="fa fa-check"></i><b>1.3</b> Phenomenology of Proton Collisions</a>
+                  <ul><li class="chapter" data-level="1.3.1" data-path="1-3-phenomenology-of-proton-collisions.html">
+                      <a href="1-3-phenomenology-of-proton-collisions.html#sec:main_obs"><i class="fa fa-check"></i><b>1.3.1</b> Main Observables</a>
+                    </li>
+                    <li class="chapter" data-level="1.3.2" data-path="1-3-phenomenology-of-proton-collisions.html">
+                      <a href="1-3-phenomenology-of-proton-collisions.html#sec:pdfs"><i class="fa fa-check"></i><b>1.3.2</b> Parton Distribution Functions</a>
+                    </li>
+                    <li class="chapter" data-level="1.3.3" data-path="1-3-phenomenology-of-proton-collisions.html">
+                      <a href="1-3-phenomenology-of-proton-collisions.html#sec:factorisation"><i class="fa fa-check"></i><b>1.3.3</b> Factorisation and Generation of Hard Processes</a>
+                    </li>
+                    <li class="chapter" data-level="1.3.4" data-path="1-3-phenomenology-of-proton-collisions.html">
+                      <a href="1-3-phenomenology-of-proton-collisions.html#sec:parton_showers"><i class="fa fa-check"></i><b>1.3.4</b> Hadronization and Parton Showers</a>
+                    </li>
+                  </ul></li>
+              </ul></li>
+            <li class="chapter" data-level="2" data-path="2-experiments-at-particle-colliders.html">
+              <a href="2-experiments-at-particle-colliders.html"><i class="fa fa-check"></i><b>2</b> Experiments at Particle Colliders</a>
+              <ul><li class="chapter" data-level="2.1" data-path="2-1-the-large-hadron-collider.html">
+                  <a href="2-1-the-large-hadron-collider.html"><i class="fa fa-check"></i><b>2.1</b> The Large Hadron Collider</a>
+                  <ul><li class="chapter" data-level="2.1.1" data-path="2-1-the-large-hadron-collider.html">
+                      <a href="2-1-the-large-hadron-collider.html#injection-and-acceleration-chain"><i class="fa fa-check"></i><b>2.1.1</b> Injection and Acceleration Chain</a>
+                    </li>
+                    <li class="chapter" data-level="2.1.2" data-path="2-1-the-large-hadron-collider.html">
+                      <a href="2-1-the-large-hadron-collider.html#sec:op_pars"><i class="fa fa-check"></i><b>2.1.2</b> Operation Parameters</a>
+                    </li>
+                    <li class="chapter" data-level="2.1.3" data-path="2-1-the-large-hadron-collider.html">
+                      <a href="2-1-the-large-hadron-collider.html#sec:pile_up"><i class="fa fa-check"></i><b>2.1.3</b> Multiple Hadron Interactions</a>
+                    </li>
+                    <li class="chapter" data-level="2.1.4" data-path="2-1-the-large-hadron-collider.html">
+                      <a href="2-1-the-large-hadron-collider.html#sec:lhc_experiments"><i class="fa fa-check"></i><b>2.1.4</b> Experiments</a>
+                    </li>
+                  </ul></li>
+                <li class="chapter" data-level="2.2" data-path="2-2-the-compact-muon-solenoid.html">
+                  <a href="2-2-the-compact-muon-solenoid.html"><i class="fa fa-check"></i><b>2.2</b> The Compact Muon Solenoid</a>
+                  <ul><li class="chapter" data-level="2.2.1" data-path="2-2-the-compact-muon-solenoid.html">
+                      <a href="2-2-the-compact-muon-solenoid.html#sec:exp_geom"><i class="fa fa-check"></i><b>2.2.1</b> Experimental Geometry</a>
+                    </li>
+                    <li class="chapter" data-level="2.2.2" data-path="2-2-the-compact-muon-solenoid.html">
+                      <a href="2-2-the-compact-muon-solenoid.html#sec:cms_magnet"><i class="fa fa-check"></i><b>2.2.2</b> Magnet</a>
+                    </li>
+                    <li class="chapter" data-level="2.2.3" data-path="2-2-the-compact-muon-solenoid.html">
+                      <a href="2-2-the-compact-muon-solenoid.html#sec:cms_tracking"><i class="fa fa-check"></i><b>2.2.3</b> Tracking System</a>
+                    </li>
+                    <li class="chapter" data-level="2.2.4" data-path="2-2-the-compact-muon-solenoid.html">
+                      <a href="2-2-the-compact-muon-solenoid.html#sec:cms_ecal"><i class="fa fa-check"></i><b>2.2.4</b> Electromagnetic Calorimeter</a>
+                    </li>
+                    <li class="chapter" data-level="2.2.5" data-path="2-2-the-compact-muon-solenoid.html">
+                      <a href="2-2-the-compact-muon-solenoid.html#sec:cms_hcal"><i class="fa fa-check"></i><b>2.2.5</b> Hadronic Calorimeter</a>
+                    </li>
+                    <li class="chapter" data-level="2.2.6" data-path="2-2-the-compact-muon-solenoid.html">
+                      <a href="2-2-the-compact-muon-solenoid.html#sec:cms_muon"><i class="fa fa-check"></i><b>2.2.6</b> Muon System</a>
+                    </li>
+                    <li class="chapter" data-level="2.2.7" data-path="2-2-the-compact-muon-solenoid.html">
+                      <a href="2-2-the-compact-muon-solenoid.html#sec:trigger"><i class="fa fa-check"></i><b>2.2.7</b> Trigger and Data Acquisition</a>
+                    </li>
+                  </ul></li>
+                <li class="chapter" data-level="2.3" data-path="2-3-event-simulation-and-reconstruction.html">
+                  <a href="2-3-event-simulation-and-reconstruction.html"><i class="fa fa-check"></i><b>2.3</b> Event Simulation and Reconstruction</a>
+                  <ul><li class="chapter" data-level="2.3.1" data-path="2-3-event-simulation-and-reconstruction.html">
+                      <a href="2-3-event-simulation-and-reconstruction.html#sec:gen_view"><i class="fa fa-check"></i><b>2.3.1</b> A Generative View</a>
+                    </li>
+                    <li class="chapter" data-level="2.3.2" data-path="2-3-event-simulation-and-reconstruction.html">
+                      <a href="2-3-event-simulation-and-reconstruction.html#sec:detector_simulation"><i class="fa fa-check"></i><b>2.3.2</b> Detector Simulation</a>
+                    </li>
+                    <li class="chapter" data-level="2.3.3" data-path="2-3-event-simulation-and-reconstruction.html">
+                      <a href="2-3-event-simulation-and-reconstruction.html#sec:event_reco"><i class="fa fa-check"></i><b>2.3.3</b> Event Reconstruction</a>
+                    </li>
+                  </ul></li>
+              </ul></li>
+            <li class="chapter" data-level="3" data-path="3-statistical-modelling-and-inference-at-the-lhc.html">
+              <a href="3-statistical-modelling-and-inference-at-the-lhc.html"><i class="fa fa-check"></i><b>3</b> Statistical Modelling and Inference at the LHC</a>
+              <ul><li class="chapter" data-level="3.1" data-path="3-1-statistical-modelling.html">
+                  <a href="3-1-statistical-modelling.html"><i class="fa fa-check"></i><b>3.1</b> Statistical Modelling</a>
+                  <ul><li class="chapter" data-level="3.1.1" data-path="3-1-statistical-modelling.html">
+                      <a href="3-1-statistical-modelling.html#sec:model_overview"><i class="fa fa-check"></i><b>3.1.1</b> Overview</a>
+                    </li>
+                    <li class="chapter" data-level="3.1.2" data-path="3-1-statistical-modelling.html">
+                      <a href="3-1-statistical-modelling.html#simulation-as-generative-modelling"><i class="fa fa-check"></i><b>3.1.2</b> Simulation as Generative Modelling</a>
+                    </li>
+                    <li class="chapter" data-level="3.1.3" data-path="3-1-statistical-modelling.html">
+                      <a href="3-1-statistical-modelling.html#sec:dim_reduction"><i class="fa fa-check"></i><b>3.1.3</b> Dimensionality Reduction</a>
+                    </li>
+                    <li class="chapter" data-level="3.1.4" data-path="3-1-statistical-modelling.html">
+                      <a href="3-1-statistical-modelling.html#sec:known_unknowns"><i class="fa fa-check"></i><b>3.1.4</b> Known Unknowns</a>
+                    </li>
+                  </ul></li>
+                <li class="chapter" data-level="3.2" data-path="3-2-statistical-inference.html">
+                  <a href="3-2-statistical-inference.html"><i class="fa fa-check"></i><b>3.2</b> Statistical Inference</a>
+                  <ul><li class="chapter" data-level="3.2.1" data-path="3-2-statistical-inference.html">
+                      <a href="3-2-statistical-inference.html#sec:likelihood-free"><i class="fa fa-check"></i><b>3.2.1</b> Likelihood-Free Inference</a>
+                    </li>
+                    <li class="chapter" data-level="3.2.2" data-path="3-2-statistical-inference.html">
+                      <a href="3-2-statistical-inference.html#sec:hypo_test"><i class="fa fa-check"></i><b>3.2.2</b> Hypothesis Testing</a>
+                    </li>
+                    <li class="chapter" data-level="3.2.3" data-path="3-2-statistical-inference.html">
+                      <a href="3-2-statistical-inference.html#sec:param_est"><i class="fa fa-check"></i><b>3.2.3</b> Parameter Estimation</a>
+                    </li>
+                  </ul></li>
+              </ul></li>
+            <li class="chapter" data-level="4" data-path="4-machine-learning-in-high-energy-physics.html">
+              <a href="4-machine-learning-in-high-energy-physics.html"><i class="fa fa-check"></i><b>4</b> Machine Learning in High-Energy Physics</a>
+              <ul><li class="chapter" data-level="4.1" data-path="4-1-problem-description.html">
+                  <a href="4-1-problem-description.html"><i class="fa fa-check"></i><b>4.1</b> Problem Description</a>
+                  <ul><li class="chapter" data-level="4.1.1" data-path="4-1-problem-description.html">
+                      <a href="4-1-problem-description.html#sec:supervised"><i class="fa fa-check"></i><b>4.1.1</b> Probabilistic Classification and Regression</a>
+                    </li>
+                  </ul></li>
+                <li class="chapter" data-level="4.2" data-path="4-2-machine-learning-techniques.html">
+                  <a href="4-2-machine-learning-techniques.html"><i class="fa fa-check"></i><b>4.2</b> Machine Learning Techniques</a>
+                  <ul><li class="chapter" data-level="4.2.1" data-path="4-2-machine-learning-techniques.html">
+                      <a href="4-2-machine-learning-techniques.html#sec:boosted_decision_trees"><i class="fa fa-check"></i><b>4.2.1</b> Boosted Decision Trees</a>
+                    </li>
+                    <li class="chapter" data-level="4.2.2" data-path="4-2-machine-learning-techniques.html">
+                      <a href="4-2-machine-learning-techniques.html#sec:ann"><i class="fa fa-check"></i><b>4.2.2</b> Artificial Neural Networks</a>
+                    </li>
+                  </ul></li>
+                <li class="chapter" data-level="4.3" data-path="4-3-applications-in-high-energy-physics.html">
+                  <a href="4-3-applications-in-high-energy-physics.html"><i class="fa fa-check"></i><b>4.3</b> Applications in High Energy Physics</a>
+                  <ul><li class="chapter" data-level="4.3.1" data-path="4-3-applications-in-high-energy-physics.html">
+                      <a href="4-3-applications-in-high-energy-physics.html#sec:sig_vs_bkg"><i class="fa fa-check"></i><b>4.3.1</b> Signal vs Background Classification</a>
+                    </li>
+                    <li class="chapter" data-level="4.3.2" data-path="4-3-applications-in-high-energy-physics.html">
+                      <a href="4-3-applications-in-high-energy-physics.html#sec:particle_id_reg"><i class="fa fa-check"></i><b>4.3.2</b> Particle Identification and Regression</a>
+                    </li>
+                  </ul></li>
+              </ul></li>
+            <li class="chapter" data-level="5" data-path="5-search-for-anomalous-higgs-pair-production-with-cms.html">
+              <a href="5-search-for-anomalous-higgs-pair-production-with-cms.html"><i class="fa fa-check"></i><b>5</b> Search for Anomalous Higgs Pair Production with CMS</a>
+              <ul><li class="chapter" data-level="5.1" data-path="5-1-introduction.html">
+                  <a href="5-1-introduction.html"><i class="fa fa-check"></i><b>5.1</b> Introduction</a>
+                </li>
+                <li class="chapter" data-level="5.2" data-path="5-2-higgs-pair-production-and-anomalous-couplings.html">
+                  <a href="5-2-higgs-pair-production-and-anomalous-couplings.html"><i class="fa fa-check"></i><b>5.2</b> Higgs Pair Production and Anomalous Couplings</a>
+                </li>
+                <li class="chapter" data-level="5.3" data-path="5-3-analysis-strategy.html">
+                  <a href="5-3-analysis-strategy.html"><i class="fa fa-check"></i><b>5.3</b> Analysis Strategy</a>
+                </li>
+                <li class="chapter" data-level="5.4" data-path="5-4-trigger-and-datasets.html">
+                  <a href="5-4-trigger-and-datasets.html"><i class="fa fa-check"></i><b>5.4</b> Trigger and Datasets</a>
+                </li>
+                <li class="chapter" data-level="5.5" data-path="5-5-event-selection.html">
+                  <a href="5-5-event-selection.html"><i class="fa fa-check"></i><b>5.5</b> Event Selection</a>
+                </li>
+                <li class="chapter" data-level="5.6" data-path="5-6-data-driven-background-estimation.html">
+                  <a href="5-6-data-driven-background-estimation.html"><i class="fa fa-check"></i><b>5.6</b> Data-Driven Background Estimation</a>
+                  <ul><li class="chapter" data-level="5.6.1" data-path="5-6-data-driven-background-estimation.html">
+                      <a href="5-6-data-driven-background-estimation.html#sec:hem_mixing"><i class="fa fa-check"></i><b>5.6.1</b> Hemisphere Mixing</a>
+                    </li>
+                    <li class="chapter" data-level="5.6.2" data-path="5-6-data-driven-background-estimation.html">
+                      <a href="5-6-data-driven-background-estimation.html#sec:bkg_validation"><i class="fa fa-check"></i><b>5.6.2</b> Background Validation</a>
+                    </li>
+                  </ul></li>
+                <li class="chapter" data-level="5.7" data-path="5-7-systematic-uncertainties.html">
+                  <a href="5-7-systematic-uncertainties.html"><i class="fa fa-check"></i><b>5.7</b> Systematic Uncertainties</a>
+                </li>
+                <li class="chapter" data-level="5.8" data-path="5-8-analysis-results.html">
+                  <a href="5-8-analysis-results.html"><i class="fa fa-check"></i><b>5.8</b> Analysis Results</a>
+                </li>
+                <li class="chapter" data-level="5.9" data-path="5-9-combination-with-other-decay-channels.html">
+                  <a href="5-9-combination-with-other-decay-channels.html"><i class="fa fa-check"></i><b>5.9</b> Combination with Other Decay Channels</a>
+                </li>
+              </ul></li>
+            <li class="chapter" data-level="6" data-path="6-inference-aware-neural-optimisation.html">
+              <a href="6-inference-aware-neural-optimisation.html"><i class="fa fa-check"></i><b>6</b> Inference-Aware Neural Optimisation</a>
+              <ul><li class="chapter" data-level="6.1" data-path="6-1-introduction.html">
+                  <a href="6-1-introduction.html"><i class="fa fa-check"></i><b>6.1</b> Introduction</a>
+                </li>
+                <li class="chapter" data-level="6.2" data-path="6-2-problem-statement.html">
+                  <a href="6-2-problem-statement.html"><i class="fa fa-check"></i><b>6.2</b> Problem Statement</a>
+                </li>
+                <li class="chapter" data-level="6.3" data-path="6-3-method.html">
+                  <a href="6-3-method.html"><i class="fa fa-check"></i><b>6.3</b> Method</a>
+                </li>
+                <li class="chapter" data-level="6.4" data-path="6-4-related-work.html">
+                  <a href="6-4-related-work.html"><i class="fa fa-check"></i><b>6.4</b> Related Work</a>
+                </li>
+                <li class="chapter" data-level="6.5" data-path="6-5-experiments.html">
+                  <a href="6-5-experiments.html"><i class="fa fa-check"></i><b>6.5</b> Experiments</a>
+                  <ul><li class="chapter" data-level="6.5.1" data-path="6-5-experiments.html">
+                      <a href="6-5-experiments.html#sec:synthetic_mixture"><i class="fa fa-check"></i><b>6.5.1</b> 3D Synthetic Mixture</a>
+                    </li>
+                  </ul></li>
+              </ul></li>
+            <li class="chapter" data-level="7" data-path="7-conclusions-and-prospects.html">
+              <a href="7-conclusions-and-prospects.html"><i class="fa fa-check"></i><b>7</b> Conclusions and Prospects</a>
+            </li>
+            <li class="chapter" data-level="" data-path="references.html">
+              <a href="references.html"><i class="fa fa-check"></i> References</a>
+            </li>
+          </ul></nav></div>
+
+      <div class="book-body">
+        <div class="body-inner">
+          <div class="book-header" role="navigation">
+            <h1>
+              <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Statistical Learning and Inference at Particle Collider Experiments</a>
+            </h1>
+          </div>
+
+          <div class="page-wrapper" tabindex="-1" role="main">
+            <div class="page-inner">
+
+              <section class="normal" id="section-"><div id="experiments" class="section level2">
+                <h2><span class="header-section-number">6.5</span> Experiments</h2>
+                <p>In this section, we first study the effectiveness of the inference-aware optimisation in a synthetic mixture problem where the likelihood is known. We then compare our results with those obtained by standard classification-based summary statistics. All the code needed to reproduce the results presented here is available in an online repository <span class="citation">[<a href="references.html#ref-code_repository" role="doc-biblioref">201</a>]</span>, extensively using <span class="smallcaps">TensorFlow</span> <span class="citation">[<a href="references.html#ref-tensorflow2015-whitepaper" role="doc-biblioref">129</a>]</span> and <span class="smallcaps">TensorFlow Probability</span> <span class="citation">[<a href="references.html#ref-tran2016edward" role="doc-biblioref">192</a>], [<a href="references.html#ref-dillon2017tensorflow" role="doc-biblioref">202</a>]</span> software libraries.</p>
+                <div id="sec:synthetic_mixture" class="section level3">
+                <h3><span class="header-section-number">6.5.1</span> 3D Synthetic Mixture</h3>
+                <p>In order to exemplify the usage of the proposed approach, evaluate its viability and test its performance by comparing to the use of a classification model proxy, a three-dimensional mixture example with two components is considered. One component will be referred as background <span class="math inline">\(f_b(\boldsymbol{x} | \lambda)\)</span> and the other as signal <span class="math inline">\(f_s(\boldsymbol{x})\)</span>; their probability density functions are taken to correspond respectively to: <span id="eq:bkg_toy_pdf"><span class="math display">\[
+                f_b(\boldsymbol{x} | r, \lambda) =
+                \mathcal{N} \left (
+                  (x_0, x_1) \, \middle | \,
+                  (2+r, 0),
+                  \begin{bmatrix}
+                    5 &amp; 0 \\
+                    0 &amp; 9 \\
+                   \end{bmatrix}
+                \right)
+                Exp (x_2 | \lambda)
+                \qquad(6.13)\]</span></span> <span id="eq:sig_toy_pdf"><span class="math display">\[
+                f_s(\boldsymbol{x}) =
+                \mathcal{N} \left (
+                  (x_0, x_1) \, \middle | \,
+                  (1,1),
+                  \begin{bmatrix}
+                    1 &amp; 0 \\
+                    0 &amp; 1 \\
+                   \end{bmatrix}
+                \right)
+                Exp (x_2 | 2)
+                \qquad(6.14)\]</span></span> so that <span class="math inline">\((x_0,x_1)\)</span> are distributed according to a multivariate normal distribution while <span class="math inline">\(x_2\)</span> follows an independent exponential distribution both for background and signal, as shown in Fig. <a href="6-5-experiments.html#fig:subfigure_a">6.2 (a)</a>. The signal distribution is fully specified while the background distribution depends on <span class="math inline">\(r\)</span>, a parameter which shifts the mean of the background density, and a parameter <span class="math inline">\(\lambda\)</span> which specifies the exponential rate in the third dimension. These parameters will be the treated as nuisance parameters when benchmarking different methods. Hence, the probability density function of observations has the following mixture structure: <span id="eq:mixture_eq"><span class="math display">\[
+                p(\boldsymbol{x}| \mu, r, \lambda) = (1-\mu) f_b(\boldsymbol{x} | r, \lambda)
+                                                      + \mu f_s(\boldsymbol{x})
+                \qquad(6.15)\]</span></span> where <span class="math inline">\(\mu\)</span> is the parameter corresponding to the mixture weight for the signal and consequently <span class="math inline">\((1-\mu)\)</span> is the mixture weight for the background. The low-dimensional projections from samples from the mixture distribution for a small <span class="math inline">\(\mu=50/1050\)</span> is shown in Fig. <a href="6-5-experiments.html#fig:subfigure_b">6.2 (b)</a>.</p>
+                <div id="fig:subfigs_distributions" class="subfigures subfigures caption">
+                <p><img src="gfx/106_chapter_6/figure2a.svg" title="fig:" alt="a" id="fig:subfigure_a" class="vector" style="width:49.0%"><img src="gfx/106_chapter_6/figure2b.svg" title="fig:" alt="b" id="fig:subfigure_b" class="vector" style="width:49.0%"></p>
+                <p>Figure 6.2: Projection in 1D and 2D dimensions of 50000 samples from the synthetic problem considered. The background distribution nuisance parameters used for generating data correspond to <span class="math inline">\(r=0\)</span> and <span class="math inline">\(\lambda=3\)</span>. For samples the mixture distribution, <span class="math inline">\(s=50\)</span> and <span class="math inline">\(b=1000\)</span> were used, hence the mixture coefficient is <span class="math inline">\(\mu=50/1050\)</span>.. a — signal (red) and background (blue), b — mixture distribution (black)</p>
+                </div>
+                <p>Let us assume that we want to carry out inference based on <span class="math inline">\(n\)</span> i.i.d. observations, such that <span class="math inline">\(\mathbb{E}[n_s]=\mu n\)</span> observations of signal and <span class="math inline">\(\mathbb{E}[n_b] = (1-\mu)n\)</span> observations of background are expected, respectively. While the mixture model parametrisation shown in Eq. <a href="6-5-experiments.html#eq:mixture_eq">6.15</a> is correct as is, the underlying model could also give information on the expected number of observations as a function of the model parameters. In this toy problem, we consider a case where the underlying model predicts that the total number of observations are Poisson distributed with a mean <span class="math inline">\(s+b\)</span>, where <span class="math inline">\(s\)</span> and <span class="math inline">\(b\)</span> are the expected number of signal and background observations. Thus the following parametrisation will be more convenient for building sample-based likelihoods: <span id="eq:mixture_alt"><span class="math display">\[
+                p(\boldsymbol{x}| s, r, \lambda, b) = \frac{b}{ s+b}
+                 f_b(\boldsymbol{x} | r, \lambda) +
+                 \frac{s}{s+b} f_s(\boldsymbol{x}).
+                \qquad(6.16)\]</span></span> The parametrisation of Equation <a href="6-5-experiments.html#eq:mixture_alt">6.16</a> is common for physics analyses at the LHC, because theoretical calculations provide information about the expected number of observations. If the probability density is known, but the expectation for the number of observed events depends on the model parameters, the likelihood can be extended <span class="citation">[<a href="references.html#ref-barlow1990extended" role="doc-biblioref">203</a>]</span> with a Poisson count term as: <span id="eq:ext_ll"><span class="math display">\[
+                \mathcal{L}(s, r, \lambda, b) = \textrm{Pois}(n | s+b) \prod^{n}
+                p(\boldsymbol{x}| s,r, \lambda, b)
+                \qquad(6.17)\]</span></span> which will be used to provide an optimal inference baseline when benchmarking the different approaches. Another quantity of relevance is the conditional density ratio, which would correspond to the optimal classifier (in the Bayes risk sense) separating signal and background events in a balanced dataset (equal priors): <span id="eq:opt_clf"><span class="math display">\[
+                s^{*}(\boldsymbol{x} | r, \lambda) = \frac{f_s(\boldsymbol{x})}{f_s(\boldsymbol{x}) + f_b(\boldsymbol{x} | r, \lambda) }
+                \qquad(6.18)\]</span></span> noting that this quantity depends on the parameters that define the background distribution <span class="math inline">\(r\)</span> and <span class="math inline">\(\lambda\)</span>, but not on <span class="math inline">\(s\)</span> or <span class="math inline">\(b\)</span> that are a function of the mixture coefficients. It can be proven (see Section <a href="4-3-applications-in-high-energy-physics.html#sec:sufficiency_clf">4.3.1.2</a> ) that <span class="math inline">\(s^{*}(\boldsymbol{x})\)</span> is a sufficient summary statistic with respect to an arbitrary two-component mixture model if the only unknown parameter is the signal mixture fraction <span class="math inline">\(\mu\)</span> (or alternatively <span class="math inline">\(s\)</span> in the chosen parametrisation). In practice, the probability density functions of signal and background are not known analytically, and only forward samples are available through simulation, so alternative approaches are required.</p>
+                <p>The synthetic nature of this example allows to rapidly generate training data on demand, yet a training dataset of only 200,000 simulated observations has been considered, in order to study how the proposed method performs when training data is limited. Half of the simulated observations correspond to the signal component and half to the background component. The latter has been generated using <span class="math inline">\(r=0.0\)</span> and <span class="math inline">\(\lambda=3.0\)</span>. A validation holdout from the training dataset of 200,000 observations is used exclusively for computing relevant metrics during training and to control over-fitting. The final figures of merit that allow to compare different approaches are computed using a larger dataset of 1,000,000 observations. For simplicity, mini-batches for each training step are balanced so the same number of events from each component is taken both when using standard classification or inference-aware losses.</p>
+                <p>A common treatment of this problem in high-energy physics consist of posing the problem as one of classification based on a simulated dataset, as discussed in Section <a href="4-3-applications-in-high-energy-physics.html#sec:sig_vs_bkg">4.3.1</a>. A supervised machine learning model such a neural network can be trained to discriminate signal and background observations, considering a fixed parameters <span class="math inline">\(r\)</span> and <span class="math inline">\(\lambda\)</span>. The output of such a model typically consist in class probabilities <span class="math inline">\(c_s\)</span> and <span class="math inline">\(c_b\)</span> given an observation <span class="math inline">\(\boldsymbol{x}\)</span>, which will tend asymptotically to the optimal classifier from Eq. <a href="6-5-experiments.html#eq:opt_clf">6.18</a> given enough data, a flexible enough model and a powerful learning rule. The conditional class probabilities (or alternatively the likelihood ratio <span class="math inline">\(f_s(\boldsymbol{x})/f_b(\boldsymbol{x})\)</span>) are powerful learned features that can be used as summary statistic; however their construction ignores the effect of the nuisance parameters <span class="math inline">\(r\)</span> and <span class="math inline">\(\lambda\)</span> on the background distribution. Furthermore, some kind of non-parametric density estimation (e.g. a histogram) has to be considered in order to build a calibrated statistical model using the classification-based learned features, which will in turn smooth and reduce the information available for inference.</p>
+                <p>To exemplify the use of this family of classification-based summary statistics, a histogram of a deep neural network classifier output trained on simulated data and its variation computed for different values of <span class="math inline">\(r\)</span> and <span class="math inline">\(\lambda\)</span> are shown in Fig. <a href="6-5-experiments.html#fig:train_clf">6.3 (a)</a>. The details of the training procedure will be provided later in this document. The classifier output can be directly compared with <span class="math inline">\(s(\boldsymbol{x} | r = 0.0, \lambda = 3.0)\)</span> evaluated using the analytical distribution function of signal and background according to Eq. <a href="6-5-experiments.html#eq:opt_clf">6.18</a>, which is shown in Fig. <a href="6-5-experiments.html#fig:opt_clf">6.3 (b)</a> and corresponds to the optimal classifier. The trained classifier approximates very well the optimal classifier. The summary statistic distribution for background depends considerably on the value of the nuisance parameters both for the trained and the optimal classifier, which will in turn cause an important degradation on the subsequent statistical inference.</p>
+                <div id="fig:subfigs_clf_hists" class="subfigures subfigures caption">
+                <p><img src="gfx/106_chapter_6/figure3a.svg" title="fig:" alt="a" id="fig:train_clf" class="vector" style="width:48.0%"><img src="gfx/106_chapter_6/figure3b.svg" title="fig:" alt="b" id="fig:opt_clf" class="vector" style="width:48.0%"></p>
+                <p>Figure 6.3: Histograms of summary statistics for signal and background (top) and variation for different values of nuisance parameters compared with the expected signal relative to the nominal background magniture (bottom). The classifier was trained using signal and background samples generated for <span class="math inline">\(r = 0.0\)</span> and <span class="math inline">\(\lambda = 3.0\)</span>.. a — classifier trained on simulated samples, b — optimal classifier <span class="math inline">\(s(\boldsymbol{x} | r = 0.0, \lambda = 3.0)\)</span></p>
+                </div>
+                <p>The statistical model described above has up to four unknown parameters: the expected number of signal observations <span class="math inline">\(s\)</span>, the background mean shift <span class="math inline">\(r\)</span>, the background exponential rate in the third dimension <span class="math inline">\(\lambda\)</span>, and the expected number of background observations. The effect of the expected number of signal and background observations <span class="math inline">\(s\)</span> and <span class="math inline">\(b\)</span> can be easily included in the computation graph by weighting the signal and background observations. This is equivalent to scaling the resulting vector of Poisson counts (or its differentiable approximation) if a non-parametric counting model as the one described in Sec. <a href="6-3-method.html#sec:method">6.3</a> is used. Instead the effect of <span class="math inline">\(r\)</span> and <span class="math inline">\(\lambda\)</span>, both nuisance parameters that will define the background distribution, is more easily modelled as a transformation of the input data <span class="math inline">\(\boldsymbol{x}\)</span>. In particular, <span class="math inline">\(r\)</span> is a nuisance parameter that causes a shift on the background along the first dimension and its effect may be accounted for in the computation graph by simply adding <span class="math inline">\((r,0.0,0.0)\)</span> to each observation in the mini-batch generated from the background distribution. Similarly, the effect of <span class="math inline">\(\lambda\)</span> can be modelled by multiplying <span class="math inline">\(x_2\)</span> by the ratio between the <span class="math inline">\(\lambda_0\)</span> used for generation and the one being modelled. These transformations are specific for this example, but alternative transformations depending on parameters could also be accounted for as long as they are differentiable or substituted by a differentiable approximation.</p>
+                <p>For this problem, we are interested in carrying out statistical inference on the parameter of interest <span class="math inline">\(s\)</span>. In fact, the performance of inference-aware optimisation as described in Sec. <a href="6-3-method.html#sec:method">6.3</a> will be compared with classification-based summary statistics for a series of inference benchmarks based on the synthetic problem described above that vary in the number of nuisance parameters considered and their constraints:</p>
+                <ul><li><strong>Benchmark 0:</strong> no nuisance parameters are considered, both signal and background distributions are taken as fully specified (<span class="math inline">\(r=0.0\)</span>, <span class="math inline">\(\lambda=3.0\)</span> and <span class="math inline">\(b=1000.\)</span>).</li>
+                <li><strong>Benchmark 1:</strong> <span class="math inline">\(r\)</span> is considered as an unconstrained nuisance parameter, while <span class="math inline">\(\lambda=3.0\)</span> and <span class="math inline">\(b=1000\)</span> are fixed.</li>
+                <li><strong>Benchmark 2:</strong> <span class="math inline">\(r\)</span> and <span class="math inline">\(\lambda\)</span> are considered as unconstrained nuisance parameters, while <span class="math inline">\(b=1000\)</span> is fixed.</li>
+                <li><strong>Benchmark 3:</strong> <span class="math inline">\(r\)</span> and <span class="math inline">\(\lambda\)</span> are considered as nuisance parameters but with the following constraints: <span class="math inline">\(\mathcal{N} (r |0.0, 0.4)\)</span> and <span class="math inline">\(\mathcal{N} (\lambda| 3.0, 1.0)\)</span>, while <span class="math inline">\(b=1000\)</span> is fixed.</li>
+                <li><strong>Benchmark 4:</strong> all <span class="math inline">\(r\)</span>, <span class="math inline">\(\lambda\)</span> and <span class="math inline">\(b\)</span> are all considered as nuisance parameters with the following constraints: <span class="math inline">\(\mathcal{N} (r |0.0, 0.4)\)</span>, <span class="math inline">\(\mathcal{N} (\lambda| 3.0, 1.0)\)</span> and <span class="math inline">\(\mathcal{N} (b | 1000., 100.)\)</span>.</li>
+                </ul><p>When using classification-based summary statistics, the construction of a summary statistic does depend on the presence of nuisance parameters, so the same model is trained independently of the benchmark considered. In real-world inference scenarios, nuisance parameters have often to be accounted for and typically are constrained by prior information or auxiliary measurements. For the approach presented here, inference-aware neural optimisation, the effect of the nuisance parameters and their constraints can be taken into account during training. Hence, 5 different training procedures for <span class="smallcaps">INFERNO</span> will be considered, one for each of the benchmarks, denoted by the same number.</p>
+                <p>The same basic network architecture is used both for cross-entropy and inference-aware training: two hidden layers of 100 nodes followed by ReLU activations. The number of nodes on the output layer is two when classification proxies are used, matching the number of mixture classes in the problem considered. Instead, for inference-aware classification the number of output nodes can be arbitrary and will be denoted with <span class="math inline">\(b\)</span>, corresponding to the dimensionality of the sample summary statistics. The final layer is followed by a softmax activation function and a temperature <span class="math inline">\(\tau = 0.1\)</span> for inference-aware learning in order to ensure that the differentiable approximations are closer to the true expectations. Standard mini-batch stochastic gradient descent (SGD) is used for training and the optimal learning rate is fixed and decided by means of a simple scan; the best choice found is specified together with the results.</p>
+                <div id="fig:subfigs_training" class="subfigures subfigures caption">
+                <p><img src="gfx/106_chapter_6/figure4a.svg" title="fig:" alt="a" id="fig:training_dynamics" class="vector" style="width:48.0%"><img src="gfx/106_chapter_6/figure4b.svg" title="fig:" alt="b" id="fig:profile_likelihood" class="vector" style="width:48.0%"></p>
+                <p>Figure 6.4: Dynamics and results of inference-aware optimisation: (a) square root of inference-loss (i.e. approximated standard deviation of the parameter of interest) as a function of the training step for 10 different random initialisations of the neural network parameters; (b) profiled likelihood around the expectation value for the parameter of interest of 10 trained inference-aware models and 10 trained cross-entropy loss based models. The latter are constructed by building a uniformly binned Poisson count likelihood of the conditional signal probability output. All results correspond to Benchmark 2.. a — inference-aware training loss, b — profile-likelihood comparison</p>
+                </div>
+                <p>In Fig. <a href="6-5-experiments.html#fig:training_dynamics">6.4 (a)</a>, the dynamics of inference-aware optimisation are shown by the validation loss, which corresponds to the approximate expected variance of parameter <span class="math inline">\(s\)</span>, as a function of the training step for 10 random-initialised instances of the <span class="smallcaps">INFERNO</span> model corresponding to Benchmark 2. All inference-aware models were trained during 200 epochs with SGD using mini-batches of 2000 observations and a learning rate <span class="math inline">\(\gamma=10^{-6}\)</span>. All the model initialisations converge to summary statistics that provide low variance for the estimator of <span class="math inline">\(s\)</span> when the nuisance parameters are accounted for.</p>
+                <p>To compare with alternative approaches and verify the validity of the results, the profiled likelihoods obtained for each model are shown in Fig. <a href="6-5-experiments.html#fig:profile_likelihood">6.4 (b)</a>. The expected uncertainty if the trained models are used for subsequent inference on the value of <span class="math inline">\(s\)</span> can be estimated from the profile width when <span class="math inline">\(\Delta \mathcal{L} = 0.5\)</span>. Hence, the average width for the profile likelihood using inference-aware training, <span class="math inline">\(16.97\pm0.11\)</span>, can be compared with the corresponding one obtained by uniformly binning the output of classification-based models in 10 bins, <span class="math inline">\(24.01\pm0.36\)</span>. The models based on cross-entropy loss were trained during 200 epochs using a mini-batch size of 64 and a fixed learning rate of <span class="math inline">\(\gamma=0.001\)</span>.</p>
+                <p>A more complete study of the improvement provided by the different INFERNO training procedures is provided in Table <a href="6-5-experiments.html#tab:results_table">6.1</a>, where the median and 1-sigma percentiles on the expected uncertainty on <span class="math inline">\(s\)</span> are provided for 100 random-initialised instances of each model. In addition, results for 100 random-initialised cross-entropy trained models and the optimal classifier and likelihood-based inference are also included for comparison. The confidence intervals obtained using INFERNO-based summary statistics are considerably narrower than those using classification and tend to be much closer to those expected when using the true model likelihood for inference. The only exception being the results obtained for Benchmark 0, where no nuisance parameters are considered, and thus the classification approach is expected to approximate a sufficient summary statistic. Much smaller fluctuations between initialisations are observed for the INFERNO-based cases. The improvement over classification increases when more nuisance parameters are considered. The results also seem to suggest the inclusion of additional information about the inference problem in the INFERNO technique leads to comparable or better results than its omission.</p>
+                <div class="caption">
+                <p>Table 6.1: Expected uncertainty on the parameter of interest <span class="math inline">\(s\)</span> for each of the inference benchmarks considered using a cross-entropy trained neural network model, INFERNO customised for each problem and the optimal classifier and likelihood based results. The results for INFERNO matching each problem are shown with bold characters.</p>
+                </div>
+                <p><img src="gfx/tables/results_table.svg" id="tab:results_table"></p>
+                <div id="fig:validity_range" class="subfigures subfigures caption">
+                <p><img src="gfx/106_chapter_6/figure5a.svg" title="fig:" alt="a" id="fig:range_r_dist" class="vector" style="width:48.0%"><img src="gfx/106_chapter_6/figure5b.svg" title="fig:" alt="b" id="fig:range_b_rate" class="vector" style="width:48.0%"></p>
+                <p>Figure 6.5: Expected uncertainty when the value of the nuisance parameters is different for 10 learnt summary statistics (different random initialisation) based on cross-entropy classification and inference-aware technique. Results correspond to Benchmark 2.. a — different <span class="math inline">\(r\)</span> value, b — different <span class="math inline">\(\lambda\)</span> value</p>
+                </div>
+                <p>Given that a certain value of the parameters <span class="math inline">\(\boldsymbol{\theta}_s\)</span> has been used to learn the summary statistics as described in Algorithm Algorithm <a href="6-3-method.html#alg:simple_algorithm">1</a> while their true value is unknown, the expected uncertainty on <span class="math inline">\(s\)</span> has also been computed for cases when the true value of the parameters <span class="math inline">\(\boldsymbol{\theta}_{\textrm{true}}\)</span> differs. The variation of the expected uncertainty on <span class="math inline">\(s\)</span> when either <span class="math inline">\(r\)</span> or <span class="math inline">\(\lambda\)</span> is varied for classification and inference-aware summary statistics is shown in Fig. <a href="6-5-experiments.html#fig:validity_range">6.5</a> for Benchmark 2. The inference-aware summary statistics learnt for <span class="math inline">\(\boldsymbol{\theta}_s\)</span> work well when <span class="math inline">\(\boldsymbol{\theta}_{\textrm{true}} \neq \boldsymbol{\theta}_s\)</span> in the range of variation explored.</p>
+                <p>This synthetic example demonstrates that the direct optimisation of inference-aware losses as those described in the Section <a href="6-3-method.html#sec:method">6.3</a> is effective. The summary statistics learnt accounting for the effect of nuisance parameters compare very favourably to those obtained by using a classification proxy to approximate the likelihood ratio. Of course, more experiments are needed to benchmark the usefulness of this technique for real-world inference problems as those found in High Energy Physics analyses at the LHC.</p>
+                </div>
+                </div>
+                </section></div>
+          </div>
+        </div>
+        
+        
+      <a href="7-conclusions-and-prospects.html" class="navigation navigation-next" aria-label="Next page">
+                <i class="fa fa-angle-right"></i></a><a href="6-4-related-work.html" class="navigation navigation-prev" aria-label="Previous page">
+                <i class="fa fa-angle-left"></i></a></div>
+    </div>
+    
+
+    <script src="libs/gitbook/js/app.min.js"></script><script src="libs/gitbook/js/lunr.js"></script><script src="libs/gitbook/js/plugin-search.js"></script><script src="libs/gitbook/js/plugin-sharing.js"></script><script src="libs/gitbook/js/plugin-fontsettings.js"></script><script src="libs/gitbook/js/plugin-bookdown.js"></script><script src="libs/gitbook/js/jquery.highlight.js"></script><script>
+      gitbook.require(["gitbook"], function(gitbook) {
+        gitbook.start({
+"sharing": {
+"github": true,
+"facebook": false,
+"twitter": true,
+"google": false,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"all": ["facebook","twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"history": {
+"link": null,
+"text": null
+},
+"download": ["thesis.pdf"],
+"toc": {
+"collapse": "none"
+}
+});
+});
+    </script><script>
+      (function () {
+        var script = document.createElement("script");
+        script.type = "text/javascript";
+        var src = "true";
+        if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+        if (location.protocol !== "file:" && /^https?:/.test(src))
+          src = src.replace(/^https?:/, '');
+        script.src = src;
+        document.getElementsByTagName("head")[0].appendChild(script);
+      })();
+    </script><script src="https://hypothes.is/embed.js" async></script><link href="css/annotator.css" rel="stylesheet"></body></html>

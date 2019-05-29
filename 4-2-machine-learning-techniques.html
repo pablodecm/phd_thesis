@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang=""><head><script async src="https://www.googletagmanager.com/gtag/js?id=UA-71094563-2"></script><script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-71094563-2');
+    </script><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><title>Statistical Learning and Inference at Particle Collider Experiments</title><meta name="description" content="Statistical Learning and Inference at Particle Collider Experiments"><meta name="generator" content="bookdown #bookdown:version# and GitBook 2.6.7"><meta property="og:title" content="Statistical Learning and Inference at Particle Collider Experiments"><meta property="og:type" content="book"><meta name="github-repo" content="pablodecm/phd_thesis"><meta name="twitter:card" content="summary"><meta name="twitter:title" content="Statistical Learning and Inference at Particle Collider Experiments"><meta name="author" content="Pablo de Castro Manzano"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black"><script src="libs/jquery/jquery.min.js"></script><link href="libs/gitbook/css/style.css" rel="stylesheet"><link href="libs/gitbook/css/plugin-table.css" rel="stylesheet"><link href="libs/gitbook/css/plugin-bookdown.css" rel="stylesheet"><link href="libs/gitbook/css/plugin-highlight.css" rel="stylesheet"><link href="libs/gitbook/css/plugin-search.css" rel="stylesheet"><link href="libs/gitbook/css/plugin-fontsettings.css" rel="stylesheet"><link href="css/style.css" rel="stylesheet"><link href="css/toc.css" rel="stylesheet"></head><body>
+
+    
+    <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+      <div class="book-summary">
+        <nav role="navigation"><ul class="summary"><li>
+              <a href="./">PhD Thesis - Pablo de Castro</a>
+            </li>
+            <li class="divider">
+            <li class="chapter" data-level="" data-path="abstract.html">
+              <a href="abstract.html"><i class="fa fa-check"></i> Abstract</a>
+            </li>
+            <li class="chapter" data-level="" data-path="preface.html">
+              <a href="preface.html"><i class="fa fa-check"></i> Preface</a>
+            </li>
+            <li class="chapter" data-level="" data-path="acknowledgements.html">
+              <a href="acknowledgements.html"><i class="fa fa-check"></i> Acknowledgements</a>
+            </li>
+            <li class="chapter" data-level="" data-path="introduction.html">
+              <a href="introduction.html"><i class="fa fa-check"></i> Introduction</a>
+            </li>
+            <li class="chapter" data-level="1" data-path="1-theory-of-fundamental-interactions.html">
+              <a href="1-theory-of-fundamental-interactions.html"><i class="fa fa-check"></i><b>1</b> Theory of Fundamental Interactions</a>
+              <ul><li class="chapter" data-level="1.1" data-path="1-1-the-standard-model.html">
+                  <a href="1-1-the-standard-model.html"><i class="fa fa-check"></i><b>1.1</b> The Standard Model</a>
+                  <ul><li class="chapter" data-level="1.1.1" data-path="1-1-the-standard-model.html">
+                      <a href="1-1-the-standard-model.html#sec:qft_basics"><i class="fa fa-check"></i><b>1.1.1</b> Essentials of Quantum Field Theory</a>
+                    </li>
+                    <li class="chapter" data-level="1.1.2" data-path="1-1-the-standard-model.html">
+                      <a href="1-1-the-standard-model.html#sec:qcd_detail"><i class="fa fa-check"></i><b>1.1.2</b> Quantum Chromodynamics</a>
+                    </li>
+                    <li class="chapter" data-level="1.1.3" data-path="1-1-the-standard-model.html">
+                      <a href="1-1-the-standard-model.html#sec:ew_detail"><i class="fa fa-check"></i><b>1.1.3</b> Electroweak Interactions</a>
+                    </li>
+                    <li class="chapter" data-level="1.1.4" data-path="1-1-the-standard-model.html">
+                      <a href="1-1-the-standard-model.html#sec:ewsb_higgs"><i class="fa fa-check"></i><b>1.1.4</b> Symmetry Breaking and the Higgs Boson</a>
+                    </li>
+                  </ul></li>
+                <li class="chapter" data-level="1.2" data-path="1-2-beyond-the-standard-model.html">
+                  <a href="1-2-beyond-the-standard-model.html"><i class="fa fa-check"></i><b>1.2</b> Beyond the Standard Model</a>
+                  <ul><li class="chapter" data-level="1.2.1" data-path="1-2-beyond-the-standard-model.html">
+                      <a href="1-2-beyond-the-standard-model.html#known-limitations"><i class="fa fa-check"></i><b>1.2.1</b> Known Limitations</a>
+                    </li>
+                    <li class="chapter" data-level="1.2.2" data-path="1-2-beyond-the-standard-model.html">
+                      <a href="1-2-beyond-the-standard-model.html#sec:possible_ext"><i class="fa fa-check"></i><b>1.2.2</b> Possible Extensions</a>
+                    </li>
+                  </ul></li>
+                <li class="chapter" data-level="1.3" data-path="1-3-phenomenology-of-proton-collisions.html">
+                  <a href="1-3-phenomenology-of-proton-collisions.html"><i class="fa fa-check"></i><b>1.3</b> Phenomenology of Proton Collisions</a>
+                  <ul><li class="chapter" data-level="1.3.1" data-path="1-3-phenomenology-of-proton-collisions.html">
+                      <a href="1-3-phenomenology-of-proton-collisions.html#sec:main_obs"><i class="fa fa-check"></i><b>1.3.1</b> Main Observables</a>
+                    </li>
+                    <li class="chapter" data-level="1.3.2" data-path="1-3-phenomenology-of-proton-collisions.html">
+                      <a href="1-3-phenomenology-of-proton-collisions.html#sec:pdfs"><i class="fa fa-check"></i><b>1.3.2</b> Parton Distribution Functions</a>
+                    </li>
+                    <li class="chapter" data-level="1.3.3" data-path="1-3-phenomenology-of-proton-collisions.html">
+                      <a href="1-3-phenomenology-of-proton-collisions.html#sec:factorisation"><i class="fa fa-check"></i><b>1.3.3</b> Factorisation and Generation of Hard Processes</a>
+                    </li>
+                    <li class="chapter" data-level="1.3.4" data-path="1-3-phenomenology-of-proton-collisions.html">
+                      <a href="1-3-phenomenology-of-proton-collisions.html#sec:parton_showers"><i class="fa fa-check"></i><b>1.3.4</b> Hadronization and Parton Showers</a>
+                    </li>
+                  </ul></li>
+              </ul></li>
+            <li class="chapter" data-level="2" data-path="2-experiments-at-particle-colliders.html">
+              <a href="2-experiments-at-particle-colliders.html"><i class="fa fa-check"></i><b>2</b> Experiments at Particle Colliders</a>
+              <ul><li class="chapter" data-level="2.1" data-path="2-1-the-large-hadron-collider.html">
+                  <a href="2-1-the-large-hadron-collider.html"><i class="fa fa-check"></i><b>2.1</b> The Large Hadron Collider</a>
+                  <ul><li class="chapter" data-level="2.1.1" data-path="2-1-the-large-hadron-collider.html">
+                      <a href="2-1-the-large-hadron-collider.html#injection-and-acceleration-chain"><i class="fa fa-check"></i><b>2.1.1</b> Injection and Acceleration Chain</a>
+                    </li>
+                    <li class="chapter" data-level="2.1.2" data-path="2-1-the-large-hadron-collider.html">
+                      <a href="2-1-the-large-hadron-collider.html#sec:op_pars"><i class="fa fa-check"></i><b>2.1.2</b> Operation Parameters</a>
+                    </li>
+                    <li class="chapter" data-level="2.1.3" data-path="2-1-the-large-hadron-collider.html">
+                      <a href="2-1-the-large-hadron-collider.html#sec:pile_up"><i class="fa fa-check"></i><b>2.1.3</b> Multiple Hadron Interactions</a>
+                    </li>
+                    <li class="chapter" data-level="2.1.4" data-path="2-1-the-large-hadron-collider.html">
+                      <a href="2-1-the-large-hadron-collider.html#sec:lhc_experiments"><i class="fa fa-check"></i><b>2.1.4</b> Experiments</a>
+                    </li>
+                  </ul></li>
+                <li class="chapter" data-level="2.2" data-path="2-2-the-compact-muon-solenoid.html">
+                  <a href="2-2-the-compact-muon-solenoid.html"><i class="fa fa-check"></i><b>2.2</b> The Compact Muon Solenoid</a>
+                  <ul><li class="chapter" data-level="2.2.1" data-path="2-2-the-compact-muon-solenoid.html">
+                      <a href="2-2-the-compact-muon-solenoid.html#sec:exp_geom"><i class="fa fa-check"></i><b>2.2.1</b> Experimental Geometry</a>
+                    </li>
+                    <li class="chapter" data-level="2.2.2" data-path="2-2-the-compact-muon-solenoid.html">
+                      <a href="2-2-the-compact-muon-solenoid.html#sec:cms_magnet"><i class="fa fa-check"></i><b>2.2.2</b> Magnet</a>
+                    </li>
+                    <li class="chapter" data-level="2.2.3" data-path="2-2-the-compact-muon-solenoid.html">
+                      <a href="2-2-the-compact-muon-solenoid.html#sec:cms_tracking"><i class="fa fa-check"></i><b>2.2.3</b> Tracking System</a>
+                    </li>
+                    <li class="chapter" data-level="2.2.4" data-path="2-2-the-compact-muon-solenoid.html">
+                      <a href="2-2-the-compact-muon-solenoid.html#sec:cms_ecal"><i class="fa fa-check"></i><b>2.2.4</b> Electromagnetic Calorimeter</a>
+                    </li>
+                    <li class="chapter" data-level="2.2.5" data-path="2-2-the-compact-muon-solenoid.html">
+                      <a href="2-2-the-compact-muon-solenoid.html#sec:cms_hcal"><i class="fa fa-check"></i><b>2.2.5</b> Hadronic Calorimeter</a>
+                    </li>
+                    <li class="chapter" data-level="2.2.6" data-path="2-2-the-compact-muon-solenoid.html">
+                      <a href="2-2-the-compact-muon-solenoid.html#sec:cms_muon"><i class="fa fa-check"></i><b>2.2.6</b> Muon System</a>
+                    </li>
+                    <li class="chapter" data-level="2.2.7" data-path="2-2-the-compact-muon-solenoid.html">
+                      <a href="2-2-the-compact-muon-solenoid.html#sec:trigger"><i class="fa fa-check"></i><b>2.2.7</b> Trigger and Data Acquisition</a>
+                    </li>
+                  </ul></li>
+                <li class="chapter" data-level="2.3" data-path="2-3-event-simulation-and-reconstruction.html">
+                  <a href="2-3-event-simulation-and-reconstruction.html"><i class="fa fa-check"></i><b>2.3</b> Event Simulation and Reconstruction</a>
+                  <ul><li class="chapter" data-level="2.3.1" data-path="2-3-event-simulation-and-reconstruction.html">
+                      <a href="2-3-event-simulation-and-reconstruction.html#sec:gen_view"><i class="fa fa-check"></i><b>2.3.1</b> A Generative View</a>
+                    </li>
+                    <li class="chapter" data-level="2.3.2" data-path="2-3-event-simulation-and-reconstruction.html">
+                      <a href="2-3-event-simulation-and-reconstruction.html#sec:detector_simulation"><i class="fa fa-check"></i><b>2.3.2</b> Detector Simulation</a>
+                    </li>
+                    <li class="chapter" data-level="2.3.3" data-path="2-3-event-simulation-and-reconstruction.html">
+                      <a href="2-3-event-simulation-and-reconstruction.html#sec:event_reco"><i class="fa fa-check"></i><b>2.3.3</b> Event Reconstruction</a>
+                    </li>
+                  </ul></li>
+              </ul></li>
+            <li class="chapter" data-level="3" data-path="3-statistical-modelling-and-inference-at-the-lhc.html">
+              <a href="3-statistical-modelling-and-inference-at-the-lhc.html"><i class="fa fa-check"></i><b>3</b> Statistical Modelling and Inference at the LHC</a>
+              <ul><li class="chapter" data-level="3.1" data-path="3-1-statistical-modelling.html">
+                  <a href="3-1-statistical-modelling.html"><i class="fa fa-check"></i><b>3.1</b> Statistical Modelling</a>
+                  <ul><li class="chapter" data-level="3.1.1" data-path="3-1-statistical-modelling.html">
+                      <a href="3-1-statistical-modelling.html#sec:model_overview"><i class="fa fa-check"></i><b>3.1.1</b> Overview</a>
+                    </li>
+                    <li class="chapter" data-level="3.1.2" data-path="3-1-statistical-modelling.html">
+                      <a href="3-1-statistical-modelling.html#simulation-as-generative-modelling"><i class="fa fa-check"></i><b>3.1.2</b> Simulation as Generative Modelling</a>
+                    </li>
+                    <li class="chapter" data-level="3.1.3" data-path="3-1-statistical-modelling.html">
+                      <a href="3-1-statistical-modelling.html#sec:dim_reduction"><i class="fa fa-check"></i><b>3.1.3</b> Dimensionality Reduction</a>
+                    </li>
+                    <li class="chapter" data-level="3.1.4" data-path="3-1-statistical-modelling.html">
+                      <a href="3-1-statistical-modelling.html#sec:known_unknowns"><i class="fa fa-check"></i><b>3.1.4</b> Known Unknowns</a>
+                    </li>
+                  </ul></li>
+                <li class="chapter" data-level="3.2" data-path="3-2-statistical-inference.html">
+                  <a href="3-2-statistical-inference.html"><i class="fa fa-check"></i><b>3.2</b> Statistical Inference</a>
+                  <ul><li class="chapter" data-level="3.2.1" data-path="3-2-statistical-inference.html">
+                      <a href="3-2-statistical-inference.html#sec:likelihood-free"><i class="fa fa-check"></i><b>3.2.1</b> Likelihood-Free Inference</a>
+                    </li>
+                    <li class="chapter" data-level="3.2.2" data-path="3-2-statistical-inference.html">
+                      <a href="3-2-statistical-inference.html#sec:hypo_test"><i class="fa fa-check"></i><b>3.2.2</b> Hypothesis Testing</a>
+                    </li>
+                    <li class="chapter" data-level="3.2.3" data-path="3-2-statistical-inference.html">
+                      <a href="3-2-statistical-inference.html#sec:param_est"><i class="fa fa-check"></i><b>3.2.3</b> Parameter Estimation</a>
+                    </li>
+                  </ul></li>
+              </ul></li>
+            <li class="chapter" data-level="4" data-path="4-machine-learning-in-high-energy-physics.html">
+              <a href="4-machine-learning-in-high-energy-physics.html"><i class="fa fa-check"></i><b>4</b> Machine Learning in High-Energy Physics</a>
+              <ul><li class="chapter" data-level="4.1" data-path="4-1-problem-description.html">
+                  <a href="4-1-problem-description.html"><i class="fa fa-check"></i><b>4.1</b> Problem Description</a>
+                  <ul><li class="chapter" data-level="4.1.1" data-path="4-1-problem-description.html">
+                      <a href="4-1-problem-description.html#sec:supervised"><i class="fa fa-check"></i><b>4.1.1</b> Probabilistic Classification and Regression</a>
+                    </li>
+                  </ul></li>
+                <li class="chapter" data-level="4.2" data-path="4-2-machine-learning-techniques.html">
+                  <a href="4-2-machine-learning-techniques.html"><i class="fa fa-check"></i><b>4.2</b> Machine Learning Techniques</a>
+                  <ul><li class="chapter" data-level="4.2.1" data-path="4-2-machine-learning-techniques.html">
+                      <a href="4-2-machine-learning-techniques.html#sec:boosted_decision_trees"><i class="fa fa-check"></i><b>4.2.1</b> Boosted Decision Trees</a>
+                    </li>
+                    <li class="chapter" data-level="4.2.2" data-path="4-2-machine-learning-techniques.html">
+                      <a href="4-2-machine-learning-techniques.html#sec:ann"><i class="fa fa-check"></i><b>4.2.2</b> Artificial Neural Networks</a>
+                    </li>
+                  </ul></li>
+                <li class="chapter" data-level="4.3" data-path="4-3-applications-in-high-energy-physics.html">
+                  <a href="4-3-applications-in-high-energy-physics.html"><i class="fa fa-check"></i><b>4.3</b> Applications in High Energy Physics</a>
+                  <ul><li class="chapter" data-level="4.3.1" data-path="4-3-applications-in-high-energy-physics.html">
+                      <a href="4-3-applications-in-high-energy-physics.html#sec:sig_vs_bkg"><i class="fa fa-check"></i><b>4.3.1</b> Signal vs Background Classification</a>
+                    </li>
+                    <li class="chapter" data-level="4.3.2" data-path="4-3-applications-in-high-energy-physics.html">
+                      <a href="4-3-applications-in-high-energy-physics.html#sec:particle_id_reg"><i class="fa fa-check"></i><b>4.3.2</b> Particle Identification and Regression</a>
+                    </li>
+                  </ul></li>
+              </ul></li>
+            <li class="chapter" data-level="5" data-path="5-search-for-anomalous-higgs-pair-production-with-cms.html">
+              <a href="5-search-for-anomalous-higgs-pair-production-with-cms.html"><i class="fa fa-check"></i><b>5</b> Search for Anomalous Higgs Pair Production with CMS</a>
+              <ul><li class="chapter" data-level="5.1" data-path="5-1-introduction.html">
+                  <a href="5-1-introduction.html"><i class="fa fa-check"></i><b>5.1</b> Introduction</a>
+                </li>
+                <li class="chapter" data-level="5.2" data-path="5-2-higgs-pair-production-and-anomalous-couplings.html">
+                  <a href="5-2-higgs-pair-production-and-anomalous-couplings.html"><i class="fa fa-check"></i><b>5.2</b> Higgs Pair Production and Anomalous Couplings</a>
+                </li>
+                <li class="chapter" data-level="5.3" data-path="5-3-analysis-strategy.html">
+                  <a href="5-3-analysis-strategy.html"><i class="fa fa-check"></i><b>5.3</b> Analysis Strategy</a>
+                </li>
+                <li class="chapter" data-level="5.4" data-path="5-4-trigger-and-datasets.html">
+                  <a href="5-4-trigger-and-datasets.html"><i class="fa fa-check"></i><b>5.4</b> Trigger and Datasets</a>
+                </li>
+                <li class="chapter" data-level="5.5" data-path="5-5-event-selection.html">
+                  <a href="5-5-event-selection.html"><i class="fa fa-check"></i><b>5.5</b> Event Selection</a>
+                </li>
+                <li class="chapter" data-level="5.6" data-path="5-6-data-driven-background-estimation.html">
+                  <a href="5-6-data-driven-background-estimation.html"><i class="fa fa-check"></i><b>5.6</b> Data-Driven Background Estimation</a>
+                  <ul><li class="chapter" data-level="5.6.1" data-path="5-6-data-driven-background-estimation.html">
+                      <a href="5-6-data-driven-background-estimation.html#sec:hem_mixing"><i class="fa fa-check"></i><b>5.6.1</b> Hemisphere Mixing</a>
+                    </li>
+                    <li class="chapter" data-level="5.6.2" data-path="5-6-data-driven-background-estimation.html">
+                      <a href="5-6-data-driven-background-estimation.html#sec:bkg_validation"><i class="fa fa-check"></i><b>5.6.2</b> Background Validation</a>
+                    </li>
+                  </ul></li>
+                <li class="chapter" data-level="5.7" data-path="5-7-systematic-uncertainties.html">
+                  <a href="5-7-systematic-uncertainties.html"><i class="fa fa-check"></i><b>5.7</b> Systematic Uncertainties</a>
+                </li>
+                <li class="chapter" data-level="5.8" data-path="5-8-analysis-results.html">
+                  <a href="5-8-analysis-results.html"><i class="fa fa-check"></i><b>5.8</b> Analysis Results</a>
+                </li>
+                <li class="chapter" data-level="5.9" data-path="5-9-combination-with-other-decay-channels.html">
+                  <a href="5-9-combination-with-other-decay-channels.html"><i class="fa fa-check"></i><b>5.9</b> Combination with Other Decay Channels</a>
+                </li>
+              </ul></li>
+            <li class="chapter" data-level="6" data-path="6-inference-aware-neural-optimisation.html">
+              <a href="6-inference-aware-neural-optimisation.html"><i class="fa fa-check"></i><b>6</b> Inference-Aware Neural Optimisation</a>
+              <ul><li class="chapter" data-level="6.1" data-path="6-1-introduction.html">
+                  <a href="6-1-introduction.html"><i class="fa fa-check"></i><b>6.1</b> Introduction</a>
+                </li>
+                <li class="chapter" data-level="6.2" data-path="6-2-problem-statement.html">
+                  <a href="6-2-problem-statement.html"><i class="fa fa-check"></i><b>6.2</b> Problem Statement</a>
+                </li>
+                <li class="chapter" data-level="6.3" data-path="6-3-method.html">
+                  <a href="6-3-method.html"><i class="fa fa-check"></i><b>6.3</b> Method</a>
+                </li>
+                <li class="chapter" data-level="6.4" data-path="6-4-related-work.html">
+                  <a href="6-4-related-work.html"><i class="fa fa-check"></i><b>6.4</b> Related Work</a>
+                </li>
+                <li class="chapter" data-level="6.5" data-path="6-5-experiments.html">
+                  <a href="6-5-experiments.html"><i class="fa fa-check"></i><b>6.5</b> Experiments</a>
+                  <ul><li class="chapter" data-level="6.5.1" data-path="6-5-experiments.html">
+                      <a href="6-5-experiments.html#sec:synthetic_mixture"><i class="fa fa-check"></i><b>6.5.1</b> 3D Synthetic Mixture</a>
+                    </li>
+                  </ul></li>
+              </ul></li>
+            <li class="chapter" data-level="7" data-path="7-conclusions-and-prospects.html">
+              <a href="7-conclusions-and-prospects.html"><i class="fa fa-check"></i><b>7</b> Conclusions and Prospects</a>
+            </li>
+            <li class="chapter" data-level="" data-path="references.html">
+              <a href="references.html"><i class="fa fa-check"></i> References</a>
+            </li>
+          </ul></nav></div>
+
+      <div class="book-body">
+        <div class="body-inner">
+          <div class="book-header" role="navigation">
+            <h1>
+              <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Statistical Learning and Inference at Particle Collider Experiments</a>
+            </h1>
+          </div>
+
+          <div class="page-wrapper" tabindex="-1" role="main">
+            <div class="page-inner">
+
+              <section class="normal" id="section-"><div id="sec:ml_techniques" class="section level2">
+                <h2><span class="header-section-number">4.2</span> Machine Learning Techniques</h2>
+                <p>While the focus of the previous section was defining the main problems and properties that can be addressed with machine learning techniques, details about the actual computational and statistical procedures used for learning were not provided. In this chapter, the basis of the two classes of algorithms that are used elsewhere in this work will be described in detail: boosted decision trees and artificial neural networks. These families of learning methods are also those that are most commonly used in machine learning within experimental particle physics, mostly to solve supervised learning problems, as will be described in Section <a href="4-3-applications-in-high-energy-physics.html#sec:ml_hep">4.3</a>. The overview included here is by no means comprehensive about the mentioned approaches or alternative popular statistical learning techniques such as random forests or support vector machines, for which the following references provided a more extensive review <span class="citation">[<a href="references.html#ref-friedman2001elements" role="doc-biblioref">113</a>], [<a href="references.html#ref-Goodfellow-et-al-2016" role="doc-biblioref">115</a>], [<a href="references.html#ref-louppe2014understanding" role="doc-biblioref">116</a>]</span>.</p>
+                <div id="sec:boosted_decision_trees" class="section level3">
+                <h3><span class="header-section-number">4.2.1</span> Boosted Decision Trees</h3>
+                <p>The term <em>boosted decision trees</em> (BDT) refers to a large family of algorithms that are based on additively constructing ensembles of decision trees for supervised learning tasks <span class="citation">[<a href="references.html#ref-freund1997decision" role="doc-biblioref">117</a>]–[<a href="references.html#ref-friedman2001greedy" role="doc-biblioref">119</a>]</span> as those described in Section <a href="4-1-problem-description.html#sec:supervised">4.1.1</a>. A subset of these techniques, which is often referred as <em>gradient boosting</em>, are particularly useful for classification and regression problems. The basis for these methods is that a strong model can be obtained by combining the outcome of a set of weak models, e.g. shallow binary decision trees, if they are built to minimise the residual error at each stage. Gradient boosting algorithms can be applied to any supervised task as long as it can be specified by a differentiable loss function, and they can be understood as <em>gradient descent</em> (which will be discussed in Section <a href="4-2-machine-learning-techniques.html#sec:ann">4.2.2</a>) in function space <span class="citation">[<a href="references.html#ref-mason2000boosting" role="doc-biblioref">120</a>]</span>.</p>
+                <p>While it can be applied to other weak learners, gradient boosting is often used to learn ensembles of decision trees. A decision tree is hierarchical branched structure that associates an outcome for each input <span class="math inline">\(\boldsymbol{x}\in\mathcal{X}\)</span> by means of partitioning the input space in different disjoint subsets <span class="math inline">\(R = (\mathcal{X}_0, ..., \mathcal{X}_L)\)</span>, each associated with a constant prediction <span class="math inline">\(w_r\)</span> for each leaf. A generic type of decision trees, which is referred to as classification and regression trees (CART) <span class="citation">[<a href="references.html#ref-breiman2017classification" role="doc-biblioref">121</a>]</span> can be expressed as a function of the input <span class="math inline">\(t(\boldsymbol{x})\)</span> as a sum over the indicator function <span class="math inline">\(\mathbb{1}_\mathcal{X}^r(\boldsymbol{x})\)</span> of each subspace (see Equation <a href="3-1-statistical-modelling.html#eq:indicator">3.6</a>) as follows: <span id="eq:cart_indicator"><span class="math display">\[
+                t(\boldsymbol{x}) = \sum^{\mathcal{X}_r \in R} w_r \mathbb{1}_{\mathcal{X}_r}(\boldsymbol{x})
+                \qquad(4.13)\]</span></span> where <span class="math inline">\(w_r\)</span> is the outcome for each subspace, noting the summands will be zero for all subsets <span class="math inline">\(\mathcal{X}^r\)</span> except for one because their are disjoint. The indicator function <span class="math inline">\(\mathbb{1}_{\mathcal{X}_r}(\boldsymbol{x})\)</span> of a given subspace is specified by a series of binary decisions on a single feature. If the leaf predictions <span class="math inline">\(w_r\)</span> are categorical, the resulting model <span class="math inline">\(t(\boldsymbol{x})\)</span> is referred as a classification tree. If <span class="math inline">\(w_r\)</span> are numerical, <span class="math inline">\(t(\boldsymbol{x})\)</span> is a regression tree. In the context of gradient boosting, regression trees are often more useful, even for classification tasks, i.e. regression trees can be used in conjunction with soft classification loss functions (e.g. cross entropy). For the rest of this section, we will then focus on gradient boosting with regression trees. A schematic representation of a regression tree is provided in Figure <a href="4-2-machine-learning-techniques.html#fig:tree">4.1</a>, which corresponds to the first tree in the ensemble used for signal versus background classification in the analysis described in Chapter <a href="5-search-for-anomalous-higgs-pair-production-with-cms.html#sec:higgs_pair">5</a>.</p>
+                <div class="figure">
+                <img src="gfx/104_chapter_4/tree.svg" alt="Figure 4.1: Graphical representation of a regression tree. At each node that is not a leaf node, the tree is split in two depending on wether based on whether a boolean condition is met, which based on a threshold for the input variable indexed by the number indicated. This tree corresponds to the first on the ensemble of trees used for classification in Chapter 5, which was trained using binary cross entropy as loss function." id="fig:tree" class="vector" style="width:80.0%"><p class="caption">Figure 4.1: Graphical representation of a regression tree. At each node that is not a leaf node, the tree is split in two depending on wether based on whether a boolean condition is met, which based on a threshold for the input variable indexed by the number indicated. This tree corresponds to the first on the ensemble of trees used for classification in Chapter <a href="5-search-for-anomalous-higgs-pair-production-with-cms.html#sec:higgs_pair">5</a>, which was trained using binary cross entropy as loss function.</p>
+                </div>
+                <p>Given its structural limitations, a single CART tree of small maximum depth <span class="math inline">\(d\)</span> performs rather poorly a given supervised learning task for complex non-linear problems. If <span class="math inline">\(d\)</span> is very large, the problem of learning an optimal tree based on data is computationally very demanding, and the resulting model would not generalise well to unseen data. This motivates the use of tree ensembles, where the final prediction is composed by the combined predictions of several small trees. For an ensemble of <span class="math inline">\(K\)</span> CART trees, the final model prediction <span class="math inline">\(T(\boldsymbol{x})\)</span> can be expressed as: <span id="eq:reg_boosting"><span class="math display">\[
+                T(\boldsymbol{x}) = \sum^K_{j=1} t_j(\boldsymbol{x})
+                \qquad(4.14)\]</span></span> where each <span class="math inline">\(t_j(\boldsymbol{x})\)</span> is a CART model, as described in Equation <a href="4-2-machine-learning-techniques.html#eq:cart_indicator">4.13</a>. Other regression tree ensembles based on alternative methods such as bagging <span class="citation">[<a href="references.html#ref-breiman1996bagging" role="doc-biblioref">122</a>]</span> can also be expressed by a similar combination of predictions. The learning problem can be expressed as empirical risk minimisation in the space of possible tree ensembles over the learning set of labelled observations <span class="math inline">\(S=\{(\boldsymbol{x}_0,\boldsymbol{y}_0),...,(\boldsymbol{x}_n,\boldsymbol{y}_n)\}\)</span>, as discussed in Equation <a href="4-1-problem-description.html#eq:learning_erm">4.3</a>. The total empirical risk functional <span class="math inline">\(R(T)\)</span> for an ensemble of <span class="math inline">\(K\)</span> trees can usually be written as: <span id="eq:total_risk"><span class="math display">\[
+                R(T) = \sum_{(\boldsymbol{x}_i,\boldsymbol{y}_i) \in S}
+                 L(\boldsymbol{y}_i, T(\boldsymbol{x}_i)) + \sum_{j=1}^K \Omega(t_j)
+                \qquad(4.15)\]</span></span> where <span class="math inline">\(L(\boldsymbol{y}_i, T(\boldsymbol{x}_i))\)</span> is the preferred loss function for the task (e.g. binary cross entropy as defined in Equation <a href="4-1-problem-description.html#eq:binary_xe">4.8</a>) and <span class="math inline">\(\Omega(t_j)\)</span> is a regularisation term that depends on the properties of each tree and controls the complexity of the model in order to avoid overfitting.</p>
+                <p>Because learning the structure and leaf weights <span class="math inline">\(w_r\)</span> of all trees in the ensemble at the same time is intractable, boosting is based on sequentially learning trees. At each step, a tree <span class="math inline">\(t_j\)</span> is built to improve over the previously ensemble of trees <span class="math inline">\(T_{(j-1)}(\boldsymbol{x})\)</span>, the prediction for each observation in the learning set a given step <span class="math inline">\(j\)</span> of the training procedure can then be expressed as: <span id="eq:pred_step_tree"><span class="math display">\[
+                T_j(\boldsymbol{x}_i) =  T_{(j-1)}(\boldsymbol{x}_i) + t_j(\boldsymbol{x}_i)
+                \qquad(4.16)\]</span></span> which can be used to redefine the equivalent risk from Equation <a href="4-2-machine-learning-techniques.html#eq:total_risk">4.15</a> at each training step, where the tree <span class="math inline">\(t_j(\boldsymbol{x})\)</span> is being created as: <span id="eq:seq_risk"><span class="math display">\[
+                R(T_j) = \sum_{(\boldsymbol{x}_i,\boldsymbol{y}_i) \in S}
+                 L(\boldsymbol{y}_i, T_{(j-1)}(\boldsymbol{x}_i) + t_j(\boldsymbol{x}_i)) + \sum_{j=1}^K \Omega(t_j)
+                \qquad(4.17)\]</span></span> where the loss <span class="math inline">\(L(\boldsymbol{y}_i, T_{(j-1)}(\boldsymbol{x}_i)\)</span> can be expanded as a Taylor series assuming that at the step <span class="math inline">\(j\)</span> the ensemble <span class="math inline">\(T_{(j-1)}(\boldsymbol{x})\)</span> is constant. Omitting constant terms, which do not play any role in risk minimisation, the risk at a given training step can be expressed as: <span id="eq:risk_opt"><span class="math display">\[
+                \begin{aligned}
+                R(T_j)  \sim \sum_{(\boldsymbol{x}_i,\boldsymbol{y}_i) \in S} \bigg( &amp;
+                \underbrace{\frac{ \partial L(\boldsymbol{y}_i, T_{(j-1)}(\boldsymbol{x}_i))}{
+                \partial T_{(j-1)}(\boldsymbol{x}_i)}}_{g_i} t_j(\boldsymbol{x}_i)  \\ &amp;+
+                \frac{1}{2} \underbrace{\frac{\partial^2 L(\boldsymbol{y}_i, T_{(j-1)}(\boldsymbol{x}_i))}{
+                \partial T^{2}_{(j-1)}(\boldsymbol{x}_i)}}_{h_i} t_j^2(\boldsymbol{x}_i) \bigg) + \Omega(t_j)
+                \end{aligned}
+                \qquad(4.18)\]</span></span> where <span class="math inline">\(g_i\)</span> and <span class="math inline">\(h_i\)</span> are so-called gradient statistics, computed using the first and second partial derivatives of the loss function with respect to the ensemble prediction at the previous step <span class="math inline">\(T_{(j-1)}(\boldsymbol{x}_i)\)</span>. At each step the learning problem can then be reduced to choosing a tree structure and weights, characterised by the function <span class="math inline">\(t_j\)</span>, that minimises <span class="math inline">\(R(T_j)\)</span>. This technique can therefore be applied to any supervised learning tasks as long the associated loss function is differentiable.</p>
+                <p>A common regularisation term, that is used by the <span class="smallcaps">xgboost</span> library <span class="citation">[<a href="references.html#ref-chen2016xgboost" role="doc-biblioref">123</a>]</span> used for training the classifier in Chapter <a href="5-search-for-anomalous-higgs-pair-production-with-cms.html#sec:higgs_pair">5</a>, is a combination of the number of leaves <span class="math inline">\(L\)</span> and the squared sum of the leaf weights <span class="math inline">\(w_r\)</span> for all the leaves: <span id="eq:regulatisation"><span class="math display">\[
+                \Omega(t_j) = \gamma L + \frac{1}{2} \lambda\sum^{\mathcal{X}_r\in R} w_r^2
+                \qquad(4.19)\]</span></span> where <span class="math inline">\(\gamma\)</span> and <span class="math inline">\(\lambda\)</span> are constants that regulate the relative importance of each regularisation component. Using the previous regularisation term, it is possible to redefine the risk of a given tree structure and set of leaf weight at given training step as: <span id="eq:tree_risk_redef"><span class="math display">\[
+                 R(T_j)  \sim \sum^{\mathcal{X}_r \in R} \left (
+                 w_r \underbrace{\sum^{\boldsymbol{x}_i \in S} g_i \mathbb{1}_{\mathcal{X}_r}(\boldsymbol{x}_i)}_{G_r} +
+                 \frac{1}{2} w^2_r \underbrace{\sum^{\boldsymbol{x}_i \in S} ( h_i + \lambda ) \mathbb{1}_{\mathcal{X}_r}(\boldsymbol{x}_i)}_{H_r + \lambda}
+                 \right ) + \gamma L
+                \qquad(4.20)\]</span></span> where <span class="math inline">\(G_r\)</span> and <span class="math inline">\(H_r\)</span> represent the sum of <span class="math inline">\(g_i\)</span> and <span class="math inline">\(h_i\)</span> over all the samples in the learning set that correspond to the leaf indexed by <span class="math inline">\(r\)</span>. The previous expression can in turn be used to obtain the optimal leaf weight <span class="math inline">\(w_r^{\star}\)</span> and simplify the risk at a given step as follows: <span id="eq:opt_weight_risk"><span class="math display">\[
+                w_r^{\star} = - \frac{G_r}{H_r + \lambda} \Rightarrow  R(T_j) = - \frac{1}{2}
+                \sum^{\mathcal{X}_r \in R} \frac{G^2_r}{H_j + \lambda} + \gamma T
+                \qquad(4.21)\]</span></span> where <span class="math inline">\(\mathcal{X}_r\)</span> are the subsets of the input space corresponding to each leaf of the last tree <span class="math inline">\(j\)</span>. The last expression for <span class="math inline">\(R(T_j)\)</span> can be used to compare tree structures to be added to the ensemble in a principled manner.</p>
+                <p>In practice, the number of possible tree structures is infinite so the problem of finding the optimal tree at each step is still intractable. A greedy heuristic is instead used, which proceeds one level of the tree at time. For each input feature, the optimal splitting at a given level can be found by maximising the splitting gain, which can be done very efficiently by sorting the observations in that feature and finding the threshold that maximises the gain <span class="math inline">\(\mathcal{G}\)</span>, that is defined as: <span id="eq:tree_gain"><span class="math display">\[
+                \mathcal{G} = \frac{1}{2} \left( \frac{G_L}{H_L + \lambda}  +
+                  \frac{G_R}{H_R + \lambda} - \frac{(G_L+G_R)^2}{H_L + H_R + \lambda} \right) + \gamma
+                \qquad(4.22)\]</span></span> where <span class="math inline">\(G_L\)</span> and <span class="math inline">\(H_L\)</span> are the sum of gradient statistics left of the threshold and <span class="math inline">\(G_R\)</span> and <span class="math inline">\(H_R\)</span> are those right of the threshold. If the gain is negative for the whole, no splitting is preferred in the considered features. Once the optimal splitting is determined for all the features, the featurs that provides the minimal risk as defined in Equation <a href="4-2-machine-learning-techniques.html#eq:opt_weight_risk">4.21</a> is chosen. The algorithm then proceeds to the next tree level until the maximum tree depth is reached or any additional splitting degrades the performance.</p>
+                <p>Boosted tree ensembles are prone to overfitting to the learning set, so additional heuristics are often used to improve generalisation. A common approach after each step that produces a tree <span class="math inline">\(t_j\)</span> by the procedure outlined before, is to define ensemble for the next step by weighting the constribution from the last three <span class="math inline">\(T_j(\boldsymbol{x}_i) = T_{(j-1)}(\boldsymbol{x}_i) + \eta\, t_j(\boldsymbol{x}_i)\)</span>, where <span class="math inline">\(\eta\)</span> is referred as learning rate or shrinkage. The use of <span class="math inline">\(\eta&lt;1\)</span> produces a less efficient learning procedure, so additional trees are required in the ensemble, however the resulting model is less prone to overfitting. Other policies against overfitting include subsampling the set of observations or the feature vector dimensions. Early stopping, as defined in Section <a href="4-1-problem-description.html#sec:supervised">4.1.1</a>, can also be trivially applied to boosted tree ensembles simply by leaving out the last <span class="math inline">\(n\)</span> trees in the summation so the risk over validation set is maximised.</p>
+                
+                </div>
+                <div id="sec:ann" class="section level3">
+                <h3><span class="header-section-number">4.2.2</span> Artificial Neural Networks</h3>
+                <p>An alternative way to carry out empirical risk minimisation is based on consider function <span class="math inline">\(f(\boldsymbol{x}; \boldsymbol{\phi})\)</span>, which depends on a vector of parameters <span class="math inline">\(\boldsymbol{\phi}\)</span>, and attempt to find the values of <span class="math inline">\(\boldsymbol{\phi}\)</span> that minimise the risk <span class="math inline">\(R_S(f)\)</span> over the learning set <span class="math inline">\(S=\{(\boldsymbol{x}_0,\boldsymbol{y}_0),...,  (\boldsymbol{x}_n,\boldsymbol{y}_n)\}\)</span>. If <span class="math inline">\(f(\boldsymbol{x}; \boldsymbol{\phi})\)</span> is differentiable with respect to the parameter vector <span class="math inline">\(\boldsymbol{\phi}\)</span>, the minimisation from Equation <a href="4-1-problem-description.html#eq:learning_rm">4.4</a>, can be attempted with gradient-based methods. The simplest gradient-based optimisation technique is referred to as <em>gradient descent</em> (GD), and can be applied to the previous problem by initialising the parameter vector at random <span class="math inline">\(\boldsymbol{\phi}^0\)</span> and then iteratively updating the model parameters <span class="math inline">\(\boldsymbol{\phi}\)</span> at each step <span class="math inline">\(t\)</span> according to: <span id="eq:gradient_descent"><span class="math display">\[
+                \boldsymbol{\phi}^{t+1} =
+                \eta(t) \nabla_{\boldsymbol{\phi}} R_S(\boldsymbol{\phi}^t) =
+                \eta(t) \nabla_{\boldsymbol{\phi}}
+                \frac{1}{n}
+                \sum_{(\boldsymbol{x}_i,\boldsymbol{y}_i) \in S}
+                \left ( L(\boldsymbol{y}_i,f(\boldsymbol{x}_i; \boldsymbol{\phi}^t)) +
+                \Omega(\boldsymbol{\phi}^t) \right )
+                \qquad(4.23)\]</span></span> where <span class="math inline">\(\nabla_{\boldsymbol{\phi}}\)</span> is the gradient operator with respect the model parameters, <span class="math inline">\(\eta(t)\)</span> is the learning rate or step size and <span class="math inline">\(\Omega(\boldsymbol{\phi})\)</span> is a generic generalisation term added to the loss to constrain model complexity. Many other gradient-based optimisation methods exist <span class="citation">[<a href="references.html#ref-NoceWrig06" role="doc-biblioref">124</a>]</span>, e.g. using second-order derivative information. The previous flavour of gradient descent is often referred as batch gradient descent, because the whole learning set <span class="math inline">\(S\)</span> is used to compute the parameter updates at each step. Batch gradient descent can be very computationally demanding when the number of observations in <span class="math inline">\(S\)</span> is large and the computation of the gradient of the loss for each labelled observation is costly. In addition, batch gradient descent is a deterministic optimisation method and likely to get stuck at a local minima if the optimisation surface is non-convex.</p>
+                <p>A variation of the previous technique, that is referred to as stochastic gradient descent (SGD) <span class="citation">[<a href="references.html#ref-robbins1951stochastic" role="doc-biblioref">125</a>]</span>, overcomes the mentioned issues by using a random subset <span class="math inline">\(B=\{(\boldsymbol{x}_0,\boldsymbol{y}_0),..., (\boldsymbol{x}_m,\boldsymbol{y}_m)\}\)</span> of <span class="math inline">\(m\)</span> observations from the training set <span class="math inline">\(S\)</span> at each step. If <span class="math inline">\(m\)</span> is small the updates can be computed much faster, the trade-off being more noisy estimates of <span class="math inline">\(\mathbb{E}_{(\boldsymbol{x}_i,\boldsymbol{y}_i) \in S} \nabla_{\boldsymbol{\phi}} \left [ L(\boldsymbol{y}_i,f(\boldsymbol{x}_i; \boldsymbol{\phi}^t) \right ]\)</span>. The parameter update rule from Equation <a href="4-2-machine-learning-techniques.html#eq:gradient_descent">4.23</a> in SGD can be instead be expressed as: <span id="eq:sgd"><span class="math display">\[
+                \boldsymbol{\phi}^{t+1} =
+                \eta(t) \nabla_{\boldsymbol{\phi}} R_S(\boldsymbol{\phi}^t) =
+                \eta(t) \nabla_{\boldsymbol{\phi}}
+                \frac{1}{m}
+                \sum_{(\boldsymbol{x}_i,\boldsymbol{y}_i) \in B }
+                \left ( L(\boldsymbol{y}_i,f(\boldsymbol{x}_i; \boldsymbol{\phi}^t)) +
+                \Omega(\boldsymbol{\phi}^t) \right )
+                \qquad(4.24)\]</span></span> where <span class="math inline">\(B\)</span> is a random subset of size <span class="math inline">\(m\)</span> of the learning set <span class="math inline">\(S\)</span>. In the original formulation <span class="math inline">\(m=1\)</span>, yet nowadays a larger value for <span class="math inline">\(m\)</span> is often used in what is referred to as mini-batch SGD to obtain balance the estimate noise and take advantage of vectorised computations. Several variations of SGD exist, which in some cases can provide convergence advantages over the previous update rule by using adaptive learning rates or momentum in the update dynamics <span class="citation">[<a href="references.html#ref-ruder2016overview" role="doc-biblioref">126</a>]</span>. Stochastic gradient descent methods are a key element for training complex differentiate machine models <span class="math inline">\(f(\boldsymbol{x}; \boldsymbol{\phi})\)</span> as artificial neural networks, which will be discussed in the rest of this section. SGD in combination with a non-decomposable loss function is also used in Chapter <a href="6-inference-aware-neural-optimisation.html#sec:inferno">6</a> to learn inference-aware summary statistics.</p>
+                <p>A particularly promising family of parametric functions <span class="math inline">\(f(\boldsymbol{x}; \boldsymbol{\phi})\)</span> is referred to as <em>artificial neural networks</em>. Artificial neural networks are differentiable functions based on the composition of simple (and possibly non-linear) operations. The simplest type of artificial neural network is depicted in Figure <a href="4-2-machine-learning-techniques.html#fig:neural_network">4.2</a>, which is referred as <em>feed-forward neural network</em>, that maps a input <span class="math inline">\(\boldsymbol{x}\)</span> to an output <span class="math inline">\(\boldsymbol{y}\)</span> by means of a series of forward transformations, referred as neural network layers. In the simplest configuration, the values at a given layer <span class="math inline">\(k\)</span> other than the input layer can be computed as non-linear transformation of the result of a linear combination of the output of the previous layer after the addition of a bias term. The previous transformation can be expressed very compactly in matrix form as: <span id="eq:layer_trans"><span class="math display">\[
+                \boldsymbol{a}^k =
+                g( (\boldsymbol{W}^k)^T \boldsymbol{a}^{k-1} + \boldsymbol{b}^k)
+                \qquad(4.25)\]</span></span> where <span class="math inline">\(\boldsymbol{a}^k\)</span> is the outcome in vector notation after the layer transformation, <span class="math inline">\(\boldsymbol{a}^{k-1}\)</span> is the vector of values from the previous transformation (or <span class="math inline">\(\boldsymbol{a}^0=\boldsymbol{x}\)</span> if it is the first layer after the input), <span class="math inline">\(\boldsymbol{W}^k\)</span> a matrix with all the linear combination coefficients and <span class="math inline">\(\boldsymbol{b}^k\)</span> is the bias vector that is added after linear combination. The activation function <span class="math inline">\(g(\boldsymbol{z})\)</span> is applied element-wise, and it is often based on a simple non-linear function. The sigmoid function <span class="math inline">\(\sigma(z)=1/(1+e^{z})\)</span> used to be a common choice for the activation function, but nowadays the rectified linear unit (ReLU) function <span class="math inline">\(g(\boldsymbol{z})=\max(0,z)\)</span> and its variants are most frequently used instead.</p>
+                <div class="figure">
+                <img src="gfx/104_chapter_4/neural_network.svg" alt="Figure 4.2: Graphical representation of a feed-forward neural network with two hidden layers, which is a function mapping and input \boldsymbol{x} to an output \boldsymbol{y} by means simple non-linear transformations. The output value of a node each layer (other than the input layer) is the result of applying an activation function g to a linear combination of the previous layer outputs plus possibly a bias term." id="fig:neural_network" class="vector" style="width:80.0%"><p class="caption">Figure 4.2: Graphical representation of a feed-forward neural network with two hidden layers, which is a function mapping and input <span class="math inline">\(\boldsymbol{x}\)</span> to an output <span class="math inline">\(\boldsymbol{y}\)</span> by means simple non-linear transformations. The output value of a node each layer (other than the input layer) is the result of applying an activation function <span class="math inline">\(g\)</span> to a linear combination of the previous layer outputs plus possibly a bias term.</p>
+                </div>
+                <p>The full feed-forward model <span class="math inline">\(f(\boldsymbol{x}; \boldsymbol{\phi})\)</span> is based on the composition of transformation of the type described in Equation <a href="4-2-machine-learning-techniques.html#eq:layer_trans">4.25</a>. When a single transformation is applied, i.e. <span class="math inline">\(\boldsymbol{y} = g( (\boldsymbol{W})^T \boldsymbol{x} + \boldsymbol{b})\)</span>, the model can be referred to as perceptron. If the model is instead based on the composition of several transformations, it can also be called multi-layer perceptron (MLP), and each of the intermediate transformations (which can be composed by an arbitrary number of computational units) is referred as hidden layers. The model in Figure <a href="4-2-machine-learning-techniques.html#fig:neural_network">4.2</a> is a MLP. The advantage of using models based on feed-forward neural networks with hidden layers is that they can be used to model any arbitrary function due to the universal approximation theorem <span class="citation">[<a href="references.html#ref-cybenko1989approximation" role="doc-biblioref">127</a>]</span>. In fact, while it is still the focus of theoretical research, the use of a large number of hidden layers is found to increase the expressivity and facilitate the training of powerful neural network models. The experimental success of these family techniques has led to the concept of <em>deep learning</em>, where multiple transformations layers are used for learning data representations in many learning tasks.</p>
+                <p>A good choice for depth and overall structure for a neural network model depends on the problem at hand as well as the characteristics and size of the learning set available, thus it frequently has to be defined by trial-and-error, based on the performance on a validation set as discussed in Equation <a href="4-1-problem-description.html#sec:supervised">4.1.1</a>. The output size and choice of activation function in the last transformation often depends on the task at hand. For binary classification classification tasks, it is practical to use the sigmoid function <span class="math inline">\(\sigma(z)=1/(1+e^{z})\)</span> as the activation function of the last layer, in combination with a loss function for soft classification (e.g. binary cross entropy from Equation <a href="4-1-problem-description.html#eq:binary_xe">4.8</a>). For multi-class classification problems, such as the one discussed in Section <a href="4-3-applications-in-high-energy-physics.html#sec:deepjet">4.3.2.1</a>, the size of the output vector usually matches the number of the categories given that the softmax function (see Equation <a href="4-1-problem-description.html#eq:softmax_function">4.11</a>) is often used in the last layer to approximate conditional class probabilities in combination with a cross entropy loss (see Equation <a href="4-1-problem-description.html#eq:general_ce">4.10</a>). For learning tasks different from classification, different output structures and constraints might be used, e.g. the output vector size in the use case in Chapter <a href="6-inference-aware-neural-optimisation.html#sec:inferno">6</a> corresponds to the number of dimensions of the resulting summary statistic, that is based on a transformation of the input using a multi-layer neural network.</p>
+                <p>The SDG update rule from Equation <a href="4-2-machine-learning-techniques.html#eq:sgd">4.24</a> requires the computation of the gradients of the loss function with respect to the model parameters. For complex models, e.g. those put together by stacking layers as those described in Equation <a href="4-2-machine-learning-techniques.html#eq:layer_trans">4.25</a>, the computation of derivatives by numerical finite differences or symbolic differentiation may become rather challenging. The former requires the evaluation of the loss function after variations for at least twice the number of parameters and are affected by round-off and truncation errors, and a naive use of the later could instead lead to very large expressions for the exact derivative that cannot be easily simplified. Given that a numerical function as implemented in a computer program is a sequence of simple operations (e.g. addition, subtraction, exponentiation, etc.), it is possible to efficiently obtain gradients and other derivatives by applying the chain rule repeatedly based on the structure of the program, the derivatives of the simple operations and a record of the intermediate values.</p>
+                <p>The previous family of techniques, which will not be discussed in depth in this work, are referred as <em>automatic differentiation</em> (AD) <span class="citation">[<a href="references.html#ref-baydin2018automatic" role="doc-biblioref">128</a>]</span>. The most efficient way of computing the gradients of a one-dimensional function that depends on many parameters, as the gradient of the empirical risk for a batch of observations from Equation <a href="4-2-machine-learning-techniques.html#eq:sgd">4.24</a> is by means of reverse-mode automatic differentiation, which is also referred to as the <em>backpropagation</em> in the context of neural network training. The computational cost of computing the full gradient of the loss to numerical precision using backpropagation is of the same order than a single forward evaluation of the loss, which provides a great advantage relative to finite differences. In addition, when implemented in a computation framework, it can be generally applied to any numerical function as long as can be expressed as a computational graph, e.g. an arbitrary program containing control flow statements, without requiring complex expression simplification as would be the case for symbolic differentiation. In fact, modern computational that include automatic differenciation such as <span class="smallcaps">TensorFlow</span> <span class="citation">[<a href="references.html#ref-tensorflow2015-whitepaper" role="doc-biblioref">129</a>]</span> or <span class="smallcaps">PyTorch</span> <span class="citation">[<a href="references.html#ref-paszke2017automatic" role="doc-biblioref">130</a>]</span> may also be used to compute higher-order gradients (e.g. Hessian matrix elements), which are useful in Chapter <a href="6-inference-aware-neural-optimisation.html#sec:inferno">6</a> to build a differentiable approximation the covariance matrix based on a summary statistic.</p>
+                <p>As mentioned before, reverse mode automatic differentiation can be used to computed the gradients of an arbitrary function as long as it can be represented as a computational graph containing differentiable simple operations. Thus the neural network model <span class="math inline">\(f(\boldsymbol{x}; \boldsymbol{\phi})\)</span> is not restricted to the composition of layers of the type described in Equation <a href="4-2-machine-learning-techniques.html#eq:layer_trans">4.25</a>, which are often referred as fully connected or dense layers. Alternative function components are useful for dealing with data cannot be represented by a fixed-length vector <span class="citation">[<a href="references.html#ref-Goodfellow-et-al-2016" role="doc-biblioref">115</a>]</span>, e.g. convolutional layers are often useful for working with 2D images while recurrent layers extend the application of neural networks to sequences that vary in length between observations. Both convolutional and recurrent layers are used in the neural network model for jet flavour-tagging described in Section <a href="4-3-applications-in-high-energy-physics.html#sec:deepjet">4.3.2.1</a>. Other differentiable neural network components have also been developed to deal with permutation invariant sets <span class="citation">[<a href="references.html#ref-zaheer2017deep" role="doc-biblioref">131</a>]</span> or graphs <span class="citation">[<a href="references.html#ref-henrion2017neural" role="doc-biblioref">132</a>]</span> as input data structures, which could have promising applications in particle collider experiments analyses.</p>
+                </div>
+                </div>
+                </section></div>
+          </div>
+        </div>
+        
+        
+      <a href="4-3-applications-in-high-energy-physics.html" class="navigation navigation-next" aria-label="Next page">
+                <i class="fa fa-angle-right"></i></a><a href="4-1-problem-description.html" class="navigation navigation-prev" aria-label="Previous page">
+                <i class="fa fa-angle-left"></i></a></div>
+    </div>
+    
+
+    <script src="libs/gitbook/js/app.min.js"></script><script src="libs/gitbook/js/lunr.js"></script><script src="libs/gitbook/js/plugin-search.js"></script><script src="libs/gitbook/js/plugin-sharing.js"></script><script src="libs/gitbook/js/plugin-fontsettings.js"></script><script src="libs/gitbook/js/plugin-bookdown.js"></script><script src="libs/gitbook/js/jquery.highlight.js"></script><script>
+      gitbook.require(["gitbook"], function(gitbook) {
+        gitbook.start({
+"sharing": {
+"github": true,
+"facebook": false,
+"twitter": true,
+"google": false,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"all": ["facebook","twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"history": {
+"link": null,
+"text": null
+},
+"download": ["thesis.pdf"],
+"toc": {
+"collapse": "none"
+}
+});
+});
+    </script><script>
+      (function () {
+        var script = document.createElement("script");
+        script.type = "text/javascript";
+        var src = "true";
+        if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+        if (location.protocol !== "file:" && /^https?:/.test(src))
+          src = src.replace(/^https?:/, '');
+        script.src = src;
+        document.getElementsByTagName("head")[0].appendChild(script);
+      })();
+    </script><script src="https://hypothes.is/embed.js" async></script><link href="css/annotator.css" rel="stylesheet"></body></html>

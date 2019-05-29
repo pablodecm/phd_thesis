@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang=""><head><script async src="https://www.googletagmanager.com/gtag/js?id=UA-71094563-2"></script><script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-71094563-2');
+    </script><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><title>Statistical Learning and Inference at Particle Collider Experiments</title><meta name="description" content="Statistical Learning and Inference at Particle Collider Experiments"><meta name="generator" content="bookdown #bookdown:version# and GitBook 2.6.7"><meta property="og:title" content="Statistical Learning and Inference at Particle Collider Experiments"><meta property="og:type" content="book"><meta name="github-repo" content="pablodecm/phd_thesis"><meta name="twitter:card" content="summary"><meta name="twitter:title" content="Statistical Learning and Inference at Particle Collider Experiments"><meta name="author" content="Pablo de Castro Manzano"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black"><script src="libs/jquery/jquery.min.js"></script><link href="libs/gitbook/css/style.css" rel="stylesheet"><link href="libs/gitbook/css/plugin-table.css" rel="stylesheet"><link href="libs/gitbook/css/plugin-bookdown.css" rel="stylesheet"><link href="libs/gitbook/css/plugin-highlight.css" rel="stylesheet"><link href="libs/gitbook/css/plugin-search.css" rel="stylesheet"><link href="libs/gitbook/css/plugin-fontsettings.css" rel="stylesheet"><link href="css/style.css" rel="stylesheet"><link href="css/toc.css" rel="stylesheet"></head><body>
+
+    
+    <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+      <div class="book-summary">
+        <nav role="navigation"><ul class="summary"><li>
+              <a href="./">PhD Thesis - Pablo de Castro</a>
+            </li>
+            <li class="divider">
+            <li class="chapter" data-level="" data-path="abstract.html">
+              <a href="abstract.html"><i class="fa fa-check"></i> Abstract</a>
+            </li>
+            <li class="chapter" data-level="" data-path="preface.html">
+              <a href="preface.html"><i class="fa fa-check"></i> Preface</a>
+            </li>
+            <li class="chapter" data-level="" data-path="acknowledgements.html">
+              <a href="acknowledgements.html"><i class="fa fa-check"></i> Acknowledgements</a>
+            </li>
+            <li class="chapter" data-level="" data-path="introduction.html">
+              <a href="introduction.html"><i class="fa fa-check"></i> Introduction</a>
+            </li>
+            <li class="chapter" data-level="1" data-path="1-theory-of-fundamental-interactions.html">
+              <a href="1-theory-of-fundamental-interactions.html"><i class="fa fa-check"></i><b>1</b> Theory of Fundamental Interactions</a>
+              <ul><li class="chapter" data-level="1.1" data-path="1-1-the-standard-model.html">
+                  <a href="1-1-the-standard-model.html"><i class="fa fa-check"></i><b>1.1</b> The Standard Model</a>
+                  <ul><li class="chapter" data-level="1.1.1" data-path="1-1-the-standard-model.html">
+                      <a href="1-1-the-standard-model.html#sec:qft_basics"><i class="fa fa-check"></i><b>1.1.1</b> Essentials of Quantum Field Theory</a>
+                    </li>
+                    <li class="chapter" data-level="1.1.2" data-path="1-1-the-standard-model.html">
+                      <a href="1-1-the-standard-model.html#sec:qcd_detail"><i class="fa fa-check"></i><b>1.1.2</b> Quantum Chromodynamics</a>
+                    </li>
+                    <li class="chapter" data-level="1.1.3" data-path="1-1-the-standard-model.html">
+                      <a href="1-1-the-standard-model.html#sec:ew_detail"><i class="fa fa-check"></i><b>1.1.3</b> Electroweak Interactions</a>
+                    </li>
+                    <li class="chapter" data-level="1.1.4" data-path="1-1-the-standard-model.html">
+                      <a href="1-1-the-standard-model.html#sec:ewsb_higgs"><i class="fa fa-check"></i><b>1.1.4</b> Symmetry Breaking and the Higgs Boson</a>
+                    </li>
+                  </ul></li>
+                <li class="chapter" data-level="1.2" data-path="1-2-beyond-the-standard-model.html">
+                  <a href="1-2-beyond-the-standard-model.html"><i class="fa fa-check"></i><b>1.2</b> Beyond the Standard Model</a>
+                  <ul><li class="chapter" data-level="1.2.1" data-path="1-2-beyond-the-standard-model.html">
+                      <a href="1-2-beyond-the-standard-model.html#known-limitations"><i class="fa fa-check"></i><b>1.2.1</b> Known Limitations</a>
+                    </li>
+                    <li class="chapter" data-level="1.2.2" data-path="1-2-beyond-the-standard-model.html">
+                      <a href="1-2-beyond-the-standard-model.html#sec:possible_ext"><i class="fa fa-check"></i><b>1.2.2</b> Possible Extensions</a>
+                    </li>
+                  </ul></li>
+                <li class="chapter" data-level="1.3" data-path="1-3-phenomenology-of-proton-collisions.html">
+                  <a href="1-3-phenomenology-of-proton-collisions.html"><i class="fa fa-check"></i><b>1.3</b> Phenomenology of Proton Collisions</a>
+                  <ul><li class="chapter" data-level="1.3.1" data-path="1-3-phenomenology-of-proton-collisions.html">
+                      <a href="1-3-phenomenology-of-proton-collisions.html#sec:main_obs"><i class="fa fa-check"></i><b>1.3.1</b> Main Observables</a>
+                    </li>
+                    <li class="chapter" data-level="1.3.2" data-path="1-3-phenomenology-of-proton-collisions.html">
+                      <a href="1-3-phenomenology-of-proton-collisions.html#sec:pdfs"><i class="fa fa-check"></i><b>1.3.2</b> Parton Distribution Functions</a>
+                    </li>
+                    <li class="chapter" data-level="1.3.3" data-path="1-3-phenomenology-of-proton-collisions.html">
+                      <a href="1-3-phenomenology-of-proton-collisions.html#sec:factorisation"><i class="fa fa-check"></i><b>1.3.3</b> Factorisation and Generation of Hard Processes</a>
+                    </li>
+                    <li class="chapter" data-level="1.3.4" data-path="1-3-phenomenology-of-proton-collisions.html">
+                      <a href="1-3-phenomenology-of-proton-collisions.html#sec:parton_showers"><i class="fa fa-check"></i><b>1.3.4</b> Hadronization and Parton Showers</a>
+                    </li>
+                  </ul></li>
+              </ul></li>
+            <li class="chapter" data-level="2" data-path="2-experiments-at-particle-colliders.html">
+              <a href="2-experiments-at-particle-colliders.html"><i class="fa fa-check"></i><b>2</b> Experiments at Particle Colliders</a>
+              <ul><li class="chapter" data-level="2.1" data-path="2-1-the-large-hadron-collider.html">
+                  <a href="2-1-the-large-hadron-collider.html"><i class="fa fa-check"></i><b>2.1</b> The Large Hadron Collider</a>
+                  <ul><li class="chapter" data-level="2.1.1" data-path="2-1-the-large-hadron-collider.html">
+                      <a href="2-1-the-large-hadron-collider.html#injection-and-acceleration-chain"><i class="fa fa-check"></i><b>2.1.1</b> Injection and Acceleration Chain</a>
+                    </li>
+                    <li class="chapter" data-level="2.1.2" data-path="2-1-the-large-hadron-collider.html">
+                      <a href="2-1-the-large-hadron-collider.html#sec:op_pars"><i class="fa fa-check"></i><b>2.1.2</b> Operation Parameters</a>
+                    </li>
+                    <li class="chapter" data-level="2.1.3" data-path="2-1-the-large-hadron-collider.html">
+                      <a href="2-1-the-large-hadron-collider.html#sec:pile_up"><i class="fa fa-check"></i><b>2.1.3</b> Multiple Hadron Interactions</a>
+                    </li>
+                    <li class="chapter" data-level="2.1.4" data-path="2-1-the-large-hadron-collider.html">
+                      <a href="2-1-the-large-hadron-collider.html#sec:lhc_experiments"><i class="fa fa-check"></i><b>2.1.4</b> Experiments</a>
+                    </li>
+                  </ul></li>
+                <li class="chapter" data-level="2.2" data-path="2-2-the-compact-muon-solenoid.html">
+                  <a href="2-2-the-compact-muon-solenoid.html"><i class="fa fa-check"></i><b>2.2</b> The Compact Muon Solenoid</a>
+                  <ul><li class="chapter" data-level="2.2.1" data-path="2-2-the-compact-muon-solenoid.html">
+                      <a href="2-2-the-compact-muon-solenoid.html#sec:exp_geom"><i class="fa fa-check"></i><b>2.2.1</b> Experimental Geometry</a>
+                    </li>
+                    <li class="chapter" data-level="2.2.2" data-path="2-2-the-compact-muon-solenoid.html">
+                      <a href="2-2-the-compact-muon-solenoid.html#sec:cms_magnet"><i class="fa fa-check"></i><b>2.2.2</b> Magnet</a>
+                    </li>
+                    <li class="chapter" data-level="2.2.3" data-path="2-2-the-compact-muon-solenoid.html">
+                      <a href="2-2-the-compact-muon-solenoid.html#sec:cms_tracking"><i class="fa fa-check"></i><b>2.2.3</b> Tracking System</a>
+                    </li>
+                    <li class="chapter" data-level="2.2.4" data-path="2-2-the-compact-muon-solenoid.html">
+                      <a href="2-2-the-compact-muon-solenoid.html#sec:cms_ecal"><i class="fa fa-check"></i><b>2.2.4</b> Electromagnetic Calorimeter</a>
+                    </li>
+                    <li class="chapter" data-level="2.2.5" data-path="2-2-the-compact-muon-solenoid.html">
+                      <a href="2-2-the-compact-muon-solenoid.html#sec:cms_hcal"><i class="fa fa-check"></i><b>2.2.5</b> Hadronic Calorimeter</a>
+                    </li>
+                    <li class="chapter" data-level="2.2.6" data-path="2-2-the-compact-muon-solenoid.html">
+                      <a href="2-2-the-compact-muon-solenoid.html#sec:cms_muon"><i class="fa fa-check"></i><b>2.2.6</b> Muon System</a>
+                    </li>
+                    <li class="chapter" data-level="2.2.7" data-path="2-2-the-compact-muon-solenoid.html">
+                      <a href="2-2-the-compact-muon-solenoid.html#sec:trigger"><i class="fa fa-check"></i><b>2.2.7</b> Trigger and Data Acquisition</a>
+                    </li>
+                  </ul></li>
+                <li class="chapter" data-level="2.3" data-path="2-3-event-simulation-and-reconstruction.html">
+                  <a href="2-3-event-simulation-and-reconstruction.html"><i class="fa fa-check"></i><b>2.3</b> Event Simulation and Reconstruction</a>
+                  <ul><li class="chapter" data-level="2.3.1" data-path="2-3-event-simulation-and-reconstruction.html">
+                      <a href="2-3-event-simulation-and-reconstruction.html#sec:gen_view"><i class="fa fa-check"></i><b>2.3.1</b> A Generative View</a>
+                    </li>
+                    <li class="chapter" data-level="2.3.2" data-path="2-3-event-simulation-and-reconstruction.html">
+                      <a href="2-3-event-simulation-and-reconstruction.html#sec:detector_simulation"><i class="fa fa-check"></i><b>2.3.2</b> Detector Simulation</a>
+                    </li>
+                    <li class="chapter" data-level="2.3.3" data-path="2-3-event-simulation-and-reconstruction.html">
+                      <a href="2-3-event-simulation-and-reconstruction.html#sec:event_reco"><i class="fa fa-check"></i><b>2.3.3</b> Event Reconstruction</a>
+                    </li>
+                  </ul></li>
+              </ul></li>
+            <li class="chapter" data-level="3" data-path="3-statistical-modelling-and-inference-at-the-lhc.html">
+              <a href="3-statistical-modelling-and-inference-at-the-lhc.html"><i class="fa fa-check"></i><b>3</b> Statistical Modelling and Inference at the LHC</a>
+              <ul><li class="chapter" data-level="3.1" data-path="3-1-statistical-modelling.html">
+                  <a href="3-1-statistical-modelling.html"><i class="fa fa-check"></i><b>3.1</b> Statistical Modelling</a>
+                  <ul><li class="chapter" data-level="3.1.1" data-path="3-1-statistical-modelling.html">
+                      <a href="3-1-statistical-modelling.html#sec:model_overview"><i class="fa fa-check"></i><b>3.1.1</b> Overview</a>
+                    </li>
+                    <li class="chapter" data-level="3.1.2" data-path="3-1-statistical-modelling.html">
+                      <a href="3-1-statistical-modelling.html#simulation-as-generative-modelling"><i class="fa fa-check"></i><b>3.1.2</b> Simulation as Generative Modelling</a>
+                    </li>
+                    <li class="chapter" data-level="3.1.3" data-path="3-1-statistical-modelling.html">
+                      <a href="3-1-statistical-modelling.html#sec:dim_reduction"><i class="fa fa-check"></i><b>3.1.3</b> Dimensionality Reduction</a>
+                    </li>
+                    <li class="chapter" data-level="3.1.4" data-path="3-1-statistical-modelling.html">
+                      <a href="3-1-statistical-modelling.html#sec:known_unknowns"><i class="fa fa-check"></i><b>3.1.4</b> Known Unknowns</a>
+                    </li>
+                  </ul></li>
+                <li class="chapter" data-level="3.2" data-path="3-2-statistical-inference.html">
+                  <a href="3-2-statistical-inference.html"><i class="fa fa-check"></i><b>3.2</b> Statistical Inference</a>
+                  <ul><li class="chapter" data-level="3.2.1" data-path="3-2-statistical-inference.html">
+                      <a href="3-2-statistical-inference.html#sec:likelihood-free"><i class="fa fa-check"></i><b>3.2.1</b> Likelihood-Free Inference</a>
+                    </li>
+                    <li class="chapter" data-level="3.2.2" data-path="3-2-statistical-inference.html">
+                      <a href="3-2-statistical-inference.html#sec:hypo_test"><i class="fa fa-check"></i><b>3.2.2</b> Hypothesis Testing</a>
+                    </li>
+                    <li class="chapter" data-level="3.2.3" data-path="3-2-statistical-inference.html">
+                      <a href="3-2-statistical-inference.html#sec:param_est"><i class="fa fa-check"></i><b>3.2.3</b> Parameter Estimation</a>
+                    </li>
+                  </ul></li>
+              </ul></li>
+            <li class="chapter" data-level="4" data-path="4-machine-learning-in-high-energy-physics.html">
+              <a href="4-machine-learning-in-high-energy-physics.html"><i class="fa fa-check"></i><b>4</b> Machine Learning in High-Energy Physics</a>
+              <ul><li class="chapter" data-level="4.1" data-path="4-1-problem-description.html">
+                  <a href="4-1-problem-description.html"><i class="fa fa-check"></i><b>4.1</b> Problem Description</a>
+                  <ul><li class="chapter" data-level="4.1.1" data-path="4-1-problem-description.html">
+                      <a href="4-1-problem-description.html#sec:supervised"><i class="fa fa-check"></i><b>4.1.1</b> Probabilistic Classification and Regression</a>
+                    </li>
+                  </ul></li>
+                <li class="chapter" data-level="4.2" data-path="4-2-machine-learning-techniques.html">
+                  <a href="4-2-machine-learning-techniques.html"><i class="fa fa-check"></i><b>4.2</b> Machine Learning Techniques</a>
+                  <ul><li class="chapter" data-level="4.2.1" data-path="4-2-machine-learning-techniques.html">
+                      <a href="4-2-machine-learning-techniques.html#sec:boosted_decision_trees"><i class="fa fa-check"></i><b>4.2.1</b> Boosted Decision Trees</a>
+                    </li>
+                    <li class="chapter" data-level="4.2.2" data-path="4-2-machine-learning-techniques.html">
+                      <a href="4-2-machine-learning-techniques.html#sec:ann"><i class="fa fa-check"></i><b>4.2.2</b> Artificial Neural Networks</a>
+                    </li>
+                  </ul></li>
+                <li class="chapter" data-level="4.3" data-path="4-3-applications-in-high-energy-physics.html">
+                  <a href="4-3-applications-in-high-energy-physics.html"><i class="fa fa-check"></i><b>4.3</b> Applications in High Energy Physics</a>
+                  <ul><li class="chapter" data-level="4.3.1" data-path="4-3-applications-in-high-energy-physics.html">
+                      <a href="4-3-applications-in-high-energy-physics.html#sec:sig_vs_bkg"><i class="fa fa-check"></i><b>4.3.1</b> Signal vs Background Classification</a>
+                    </li>
+                    <li class="chapter" data-level="4.3.2" data-path="4-3-applications-in-high-energy-physics.html">
+                      <a href="4-3-applications-in-high-energy-physics.html#sec:particle_id_reg"><i class="fa fa-check"></i><b>4.3.2</b> Particle Identification and Regression</a>
+                    </li>
+                  </ul></li>
+              </ul></li>
+            <li class="chapter" data-level="5" data-path="5-search-for-anomalous-higgs-pair-production-with-cms.html">
+              <a href="5-search-for-anomalous-higgs-pair-production-with-cms.html"><i class="fa fa-check"></i><b>5</b> Search for Anomalous Higgs Pair Production with CMS</a>
+              <ul><li class="chapter" data-level="5.1" data-path="5-1-introduction.html">
+                  <a href="5-1-introduction.html"><i class="fa fa-check"></i><b>5.1</b> Introduction</a>
+                </li>
+                <li class="chapter" data-level="5.2" data-path="5-2-higgs-pair-production-and-anomalous-couplings.html">
+                  <a href="5-2-higgs-pair-production-and-anomalous-couplings.html"><i class="fa fa-check"></i><b>5.2</b> Higgs Pair Production and Anomalous Couplings</a>
+                </li>
+                <li class="chapter" data-level="5.3" data-path="5-3-analysis-strategy.html">
+                  <a href="5-3-analysis-strategy.html"><i class="fa fa-check"></i><b>5.3</b> Analysis Strategy</a>
+                </li>
+                <li class="chapter" data-level="5.4" data-path="5-4-trigger-and-datasets.html">
+                  <a href="5-4-trigger-and-datasets.html"><i class="fa fa-check"></i><b>5.4</b> Trigger and Datasets</a>
+                </li>
+                <li class="chapter" data-level="5.5" data-path="5-5-event-selection.html">
+                  <a href="5-5-event-selection.html"><i class="fa fa-check"></i><b>5.5</b> Event Selection</a>
+                </li>
+                <li class="chapter" data-level="5.6" data-path="5-6-data-driven-background-estimation.html">
+                  <a href="5-6-data-driven-background-estimation.html"><i class="fa fa-check"></i><b>5.6</b> Data-Driven Background Estimation</a>
+                  <ul><li class="chapter" data-level="5.6.1" data-path="5-6-data-driven-background-estimation.html">
+                      <a href="5-6-data-driven-background-estimation.html#sec:hem_mixing"><i class="fa fa-check"></i><b>5.6.1</b> Hemisphere Mixing</a>
+                    </li>
+                    <li class="chapter" data-level="5.6.2" data-path="5-6-data-driven-background-estimation.html">
+                      <a href="5-6-data-driven-background-estimation.html#sec:bkg_validation"><i class="fa fa-check"></i><b>5.6.2</b> Background Validation</a>
+                    </li>
+                  </ul></li>
+                <li class="chapter" data-level="5.7" data-path="5-7-systematic-uncertainties.html">
+                  <a href="5-7-systematic-uncertainties.html"><i class="fa fa-check"></i><b>5.7</b> Systematic Uncertainties</a>
+                </li>
+                <li class="chapter" data-level="5.8" data-path="5-8-analysis-results.html">
+                  <a href="5-8-analysis-results.html"><i class="fa fa-check"></i><b>5.8</b> Analysis Results</a>
+                </li>
+                <li class="chapter" data-level="5.9" data-path="5-9-combination-with-other-decay-channels.html">
+                  <a href="5-9-combination-with-other-decay-channels.html"><i class="fa fa-check"></i><b>5.9</b> Combination with Other Decay Channels</a>
+                </li>
+              </ul></li>
+            <li class="chapter" data-level="6" data-path="6-inference-aware-neural-optimisation.html">
+              <a href="6-inference-aware-neural-optimisation.html"><i class="fa fa-check"></i><b>6</b> Inference-Aware Neural Optimisation</a>
+              <ul><li class="chapter" data-level="6.1" data-path="6-1-introduction.html">
+                  <a href="6-1-introduction.html"><i class="fa fa-check"></i><b>6.1</b> Introduction</a>
+                </li>
+                <li class="chapter" data-level="6.2" data-path="6-2-problem-statement.html">
+                  <a href="6-2-problem-statement.html"><i class="fa fa-check"></i><b>6.2</b> Problem Statement</a>
+                </li>
+                <li class="chapter" data-level="6.3" data-path="6-3-method.html">
+                  <a href="6-3-method.html"><i class="fa fa-check"></i><b>6.3</b> Method</a>
+                </li>
+                <li class="chapter" data-level="6.4" data-path="6-4-related-work.html">
+                  <a href="6-4-related-work.html"><i class="fa fa-check"></i><b>6.4</b> Related Work</a>
+                </li>
+                <li class="chapter" data-level="6.5" data-path="6-5-experiments.html">
+                  <a href="6-5-experiments.html"><i class="fa fa-check"></i><b>6.5</b> Experiments</a>
+                  <ul><li class="chapter" data-level="6.5.1" data-path="6-5-experiments.html">
+                      <a href="6-5-experiments.html#sec:synthetic_mixture"><i class="fa fa-check"></i><b>6.5.1</b> 3D Synthetic Mixture</a>
+                    </li>
+                  </ul></li>
+              </ul></li>
+            <li class="chapter" data-level="7" data-path="7-conclusions-and-prospects.html">
+              <a href="7-conclusions-and-prospects.html"><i class="fa fa-check"></i><b>7</b> Conclusions and Prospects</a>
+            </li>
+            <li class="chapter" data-level="" data-path="references.html">
+              <a href="references.html"><i class="fa fa-check"></i> References</a>
+            </li>
+          </ul></nav></div>
+
+      <div class="book-body">
+        <div class="body-inner">
+          <div class="book-header" role="navigation">
+            <h1>
+              <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Statistical Learning and Inference at Particle Collider Experiments</a>
+            </h1>
+          </div>
+
+          <div class="page-wrapper" tabindex="-1" role="main">
+            <div class="page-inner">
+
+              <section class="normal" id="section-"><div id="sec:pheno" class="section level2">
+                <h2><span class="header-section-number">1.3</span> Phenomenology of Proton Collisions</h2>
+                <p>Once the properties and limitations of the theoretical model that best describes the current understanding of the fundamental structure and dynamics of nature have been described, we can delve into how to model proton-proton collisions from a quantitative perspective, so theoretical predictions can be contrasted with experimental results at the LHC. The focus of this section then is to make sense of the various outcomes of high-energy proton-proton collisions and how we can predict their relative rates of occurring given some initial state conditions of the interaction.</p>
+                <div id="sec:main_obs" class="section level3">
+                <h3><span class="header-section-number">1.3.1</span> Main Observables</h3>
+                <p>A related consideration that is useful as an introduction to the aforementioned topic is the question of what outcomes can originate as a result of proton-proton collisions. An answer somehow circular but compatible with our current interpretation of the universe is that everything that could be produced would be produced, meaning that any outcome that can happen in a way that is consistent with the underlying properties of nature is possible. Even though probably the true description of the properties of nature is not known, as discussed in Section <a href="1-1-the-standard-model.html#sec:standard_model">1.1</a>, the Standard Model provides an effective model and restricts considerably the space of possible outcomes, in a way that can be compared with experimental observations. It is worth noting that alternative descriptions of nature, such as those motivated by the known limitations of the SM and reviewed in Section <a href="1-2-beyond-the-standard-model.html#sec:sm_alternatives">1.2</a>, may provide alternative mechanisms for the production of outcomes that are not allowed by the SM, and hence often drive the experimental searches for evidence of New Physics.</p>
+                <p>For those physical processes that could happen as a product of a proton-proton collision, under the assumption of validity of a particular theoretical model, their total expected rate of occurrence is one the most relevant quantities to predict and compare with observations. To ease its experimental interpretation, the rate of occurrence of any given subnuclear process is commonly expressed as a cross section <span class="math inline">\(\sigma\)</span>, which has dimensions of area and is typically expressed in submultiples of barn (<span class="math inline">\(1\ \textrm{barn} = 10^{-28} \textrm{m}^2\)</span>). The advantage of cross sections over rates is that their value is independent from the density of the incident particle fluxes. The rate, or probability per unit of time, of a process occurring can be computed simply by multiplying its cross section by the instantaneous luminosity <span class="math inline">\(\mathcal{L}_\textrm{inst}\)</span>, which corresponds to the number of particles per unit of area per unit of time crossing in opposite directions in the collision volume.</p>
+                <p>Another related concept, which is especially important for simulating interactions, is the differential cross section <span class="math inline">\(d\sigma\)</span>. While the initial state conditions are fixed, the rate of occurrence of a physical process can be expressed as a function of some final-state variables, such as the angle and energy of outgoing particles. While these variables can be integrated over to compute total cross sections <span class="math inline">\(\sigma\)</span>, the integrand is proportional to the probability density of each outcome happening as a function of final-state variables, hence its evaluation is crucial for a correct modelling of their multi-dimensional distributions via random sampling. In fact, we will be dealing with differential cross sections instead of total process cross section in this section for generality.</p>
+                </div>
+                <div id="sec:pdfs" class="section level3">
+                <h3><span class="header-section-number">1.3.2</span> Parton Distribution Functions</h3>
+                <p>A complication that has not been addressed yet is that protons are composite particles, which within a static interpretation can be thought of as the combination of two up-type quarks and one down-type quark bound together via the strong force. The dynamics of proton-proton scattering are then dictated by quantum chromodynamics (see sec. <a href="1-1-the-standard-model.html#sec:qcd_detail">1.1.2</a>), which cannot be addressed using perturbation theory for low energies, limiting the first principles computation of relevant observables for the most common interactions. That said, predictions regarding the interaction outcomes from the hard scattering of proton constituents (referred to as partons) can be perturbatively approximated under the assumption of asymptotic freedom at high energies. This allows the modelling of very high energy collisions at particle colliders, which are the focus of most LHC analyses, even if the details about the parton structure cannot be calculated.</p>
+                <div id="fig:subfigs_pdfs" class="subfigures subfigures caption">
+                <p><img src="gfx/101_chapter_1/nnpdf31nnlo-10.svg" title="fig:" alt="a" id="fig:pdf_low" class="vector" style="width:49.0%"><img src="gfx/101_chapter_1/nnpdf31nnlo-1e4.svg" title="fig:" alt="b" id="fig:pdf_high" class="vector" style="width:49.0%"></p>
+                <p>Figure 1.3: Distribution functions for the different partons at low and high energies. The contribution from gluons shown is 1/10 of the actual contribution. Image adapted from the NNPDF collaboration <span class="citation">[<a href="references.html#ref-Ball:2017nwa" role="doc-biblioref">46</a>]</span>.. a — Low Energy Scale <span class="math inline">\(\mu^2 = 10 \textrm{GeV}^2\)</span>, b — High Energy Scale <span class="math inline">\(\mu^2 = 10^4 \textrm{GeV}^2\)</span></p>
+                </div>
+                <p>When modelling hard (i.e. high energy) scattering processes, a non-perturbative input is required, mainly the probability of finding a particular proton constituent with a certain momentum fraction inside each of the colliding protons, referred to as the parton distribution function (PDF). The model of the proton as three quarks coupled by strong force is too simplistic for modelling proton-proton scattering realistically, especially at high energies. The continuous exchange of gluons between the three constituent quarks effectively generates a sea of virtual quark-antiquark pairs from which other partons can scatter off. Consequently, in the interaction of two protons, not only the constituent quarks, referred as to valence quarks, can take part in the hard scattering process but also gluons and sea quarks.</p>
+                <p>At the time of writing, PDFs are not computable from first principles so they have to be parametrised and extrapolated from various experimental sources including fixed-target proton deep inelastic scattering (DIS) and previous collider studies. It is worth noting that the distribution functions depend strongly on the energy scale of the process, yet the evolution for parton densities can be modelled theoretically <span class="citation">[<a href="references.html#ref-Altarelli:1977zs" role="doc-biblioref">47</a>]–[<a href="references.html#ref-Gribov:1972ri" role="doc-biblioref">49</a>]</span>. Given their relevance for computing observables in high-energy colliders, several research collaborations such as NNPDF <span class="citation">[<a href="references.html#ref-Ball:2017nwa" role="doc-biblioref">46</a>]</span> provide accurate estimations that can be readily used for simulation and prediction. In Figure <a href="1-3-phenomenology-of-proton-collisions.html#fig:subfigs_pdfs">1.3</a> are shown the parton distribution functions at two different energy scales estimated by one of those collaborations, at lower energy scales the valence quarks (up and down) dominate while when we extrapolate at higher energies, gluon scattering become the most likely outcome for the interaction.</p>
+                </div>
+                <div id="sec:factorisation" class="section level3">
+                <h3><span class="header-section-number">1.3.3</span> Factorisation and Generation of Hard Processes</h3>
+                <p>Let us consider the computation of the differential cross section for a hard scattering process <span class="math inline">\(pp \rightarrow X\)</span>, which will be denoted as <span class="math inline">\(d\sigma(pp \rightarrow X)\)</span>, for two protons colliding head on at centre of mass energy <span class="math inline">\(s\)</span>. Here <span class="math inline">\(X\)</span> denotes a possible outcome for the interaction, not necessarily a single particle and the proton remnants (e.g. a Higgs boson <span class="math inline">\(X=H + \textrm{other}\)</span>), but a set of particles (e.g. a bottom quark-antiquark pair <span class="math inline">\(X=\textrm{b}\bar{\textrm{b}} + \textrm{other}\)</span>). According to the QCD factorisation theorem <span class="citation">[<a href="references.html#ref-Collins:1989gx" role="doc-biblioref">50</a>]</span>, the differential cross section for <span class="math inline">\(d\sigma(pp \rightarrow X)\)</span> can be expressed as a sum of functions of the partonic cross section <span class="math inline">\(d\hat{\sigma}_{ij \rightarrow X}\)</span>:</p>
+                <p><span id="eq:qcd_factorisation"><span class="math display">\[d\sigma(pp \rightarrow X) = \sum_{i,j} \int
+                f_i(x_1, \mu_F^2) f_j(x_2, \mu_F^2)
+                d\hat{\sigma}_{ij\rightarrow X} (s x_1 x_2,\mu_R^2,\mu_F^2)
+                  d x_1 d x_2\qquad(1.32)\]</span></span></p>
+                <p>where <span class="math inline">\(i\)</span> and <span class="math inline">\(j\)</span> indicate the partons involved (e.g. a certain type of quark or a gluon), <span class="math inline">\(f_i(x_1, \mu_F^2)\)</span> and <span class="math inline">\(f_j(x_2, \mu_F^2)\)</span> are their parton distribution functions for given momentum fractions <span class="math inline">\(x_1\)</span> and <span class="math inline">\(x_2\)</span> respectively, <span class="math inline">\(\mu_F\)</span> is the factorisation scale and <span class="math inline">\(\mu_R\)</span> is the renormalisation scale. The differential partonic cross section <span class="math inline">\(d\hat{\sigma}_{ij\rightarrow X}\)</span> for a centre of mass energy of the interacting partons <span class="math inline">\(\hat{s}=s x_1 x_2\)</span>, can be calculated perturbatively at different expansion orders from the Lagrangian density as hinted in Section <a href="1-1-the-standard-model.html#sec:standard_model">1.1</a>. The total cross section <span class="math inline">\(\sigma(pp \rightarrow X)\)</span> can then be attained by integrating out all final state quantities, commonly referred as phase space variables, in the differential total cross section element <span class="math inline">\(d\sigma(pp \rightarrow X)\)</span>. It is worth pointing out that for simple cases (small number of particles in the final state) is often possible to integrate out the final state phase space variables directly in the partonic differential cross section <span class="math inline">\(d\sigma(ij \rightarrow X)\)</span>, and thus directly compute the total cross section by a similar parton distribution function integration as the one used in Equation <a href="1-3-phenomenology-of-proton-collisions.html#eq:qcd_factorisation">1.32</a>.</p>
+                <p>As more more complex final states or higher perturbative orders are considered, the final state phase space integration over many particles can rapidly become intractable. This motivates the use of <em>Monte Carlo integration</em> techniques, especially those based on importance sampling such as <span class="smallcaps">vegas</span> <span class="citation">[<a href="references.html#ref-Lepage:1977sw" role="doc-biblioref">51</a>]</span>, which provide convergence rates that scale well with the integral dimensionality by randomly sampling the multi-dimensional space. In fact, the initial state integration over parton types and momenta fractions can also be carried out jointly with these methods, greatly simplifying the computation procedure. The resulting weighted random samples can be used to estimate not only the total cross section, but also any other observable or distribution that is a function of the differential cross section <span class="math inline">\(d\sigma(pp \rightarrow X)\)</span>. A common observable that is often used in experimental high energy physics is the efficiency <span class="math inline">\(\epsilon\)</span>, or fraction of observations from a specific process <span class="math inline">\(pp \rightarrow X\)</span> that are expected to satisfy a given condition that is a function of the final state details.</p>
+                <p>In collider experiments typically we cannot measure directly the properties of final states produced in the hard scattering, either because of the characteristics of the detector, the decay/hadronisation of particles producing other secondary particles, or due to additional physical effects occurring in a bunch crossing not accounted in Equation <a href="1-3-phenomenology-of-proton-collisions.html#eq:qcd_factorisation">1.32</a>, such as additional collision products due to multiple interactions or processes comprising the proton remnants. Thus it is very useful in the construction of the complete model to consider the problem of generation of realistic collision products.</p>
+                <p>Taking into consideration that some of the computational techniques for including subsequent physical processes and the detailed simulation of the detectors are considerably resource intensive, as will be detailed in Section <a href="1-3-phenomenology-of-proton-collisions.html#sec:parton_showers">1.3.4</a> and Section <a href="2-3-event-simulation-and-reconstruction.html#sec:detector_simulation">2.3.2</a> respectively, the use of weighted samples is not a very efficient approach. Hence, for the generation of simulated products of high-energy collisions, also referred to as <em>event generation</em>, an acceptance-rejection sampling step is carried out to obtain an unweighted sample, where the relative frequency of each simulated outcome is expected to match its theoretical prediction. After such procedure, the calculation of all observables is also simplified, because the weight of all samples can be taken as a constant, e.g. a unitary weight <span class="math inline">\(w=1\)</span>, so the computation of quantities of interest such as efficiencies becomes trivial.</p>
+                </div>
+                <div id="sec:parton_showers" class="section level3">
+                <h3><span class="header-section-number">1.3.4</span> Hadronization and Parton Showers</h3>
+                <p>In order to link the hard scattering process outcome with the actual observable quantities that can be detected in an experiment, it is necessary to account for the radiation of soft gluons or quarks form the initial or final state partons in the collision, as well as the formation of hadrons from any free parton due to colour confinement (see Section <a href="1-1-the-standard-model.html#sec:qcd_detail">1.1.2</a>). Additional processes that affect the collision outcome include secondary interactions between the protons, as well as the decays of all generated unstable particles. An example of the typical complexity of the physical processes occurring as a result of a single high-energy proton-proton scattering is provided in Figure <a href="1-3-phenomenology-of-proton-collisions.html#fig:event_shower">1.4</a>. These and additional minor effects (e.g. colour reconnection) are accounted by <em>parton showering</em> (PS) programs, that take as the input the generated particle outcome of the hard scattering and return a set of the resulting stable particles that would propagate through the detector.</p>
+                <div class="figure">
+                <img src="gfx/101_chapter_1/event_shower.png" alt="Figure 1.4: Diagram of a proton-proton collision and the underlying physical processes occurring therein, adapted from [52]. The dark green ellipses following the three parallel arrows represent the incoming hadrons. The main interaction between partons is shown in red colour, producing a tree-like structure of decays, in turn producing partons that rapidly transition to hadrons (light green ellipses) and decay (dark green circles) as well as soft photon radiation (yellow lines). The blue lines represent the interaction between partons and the path of the the initial hadron remnants followed by light blue ellipses. For completeness, an additional hard interaction within the same hadron-hadron process is shown in purple, which often has to be accounted to obtain realistic simulations." id="fig:event_shower" style="width:70.0%"><p class="caption">Figure 1.4: Diagram of a proton-proton collision and the underlying physical processes occurring therein, adapted from <span class="citation">[<a href="references.html#ref-Hoche:2014rga" role="doc-biblioref">52</a>]</span>. The dark green ellipses following the three parallel arrows represent the incoming hadrons. The main interaction between partons is shown in red colour, producing a tree-like structure of decays, in turn producing partons that rapidly transition to hadrons (light green ellipses) and decay (dark green circles) as well as soft photon radiation (yellow lines). The blue lines represent the interaction between partons and the path of the the initial hadron remnants followed by light blue ellipses. For completeness, an additional hard interaction within the same hadron-hadron process is shown in purple, which often has to be accounted to obtain realistic simulations.</p>
+                </div>
+                </div>
+                </div>
+                </section></div>
+          </div>
+        </div>
+        
+        
+      <a href="2-experiments-at-particle-colliders.html" class="navigation navigation-next" aria-label="Next page">
+                <i class="fa fa-angle-right"></i></a><a href="1-2-beyond-the-standard-model.html" class="navigation navigation-prev" aria-label="Previous page">
+                <i class="fa fa-angle-left"></i></a></div>
+    </div>
+    
+
+    <script src="libs/gitbook/js/app.min.js"></script><script src="libs/gitbook/js/lunr.js"></script><script src="libs/gitbook/js/plugin-search.js"></script><script src="libs/gitbook/js/plugin-sharing.js"></script><script src="libs/gitbook/js/plugin-fontsettings.js"></script><script src="libs/gitbook/js/plugin-bookdown.js"></script><script src="libs/gitbook/js/jquery.highlight.js"></script><script>
+      gitbook.require(["gitbook"], function(gitbook) {
+        gitbook.start({
+"sharing": {
+"github": true,
+"facebook": false,
+"twitter": true,
+"google": false,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"all": ["facebook","twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"history": {
+"link": null,
+"text": null
+},
+"download": ["thesis.pdf"],
+"toc": {
+"collapse": "none"
+}
+});
+});
+    </script><script>
+      (function () {
+        var script = document.createElement("script");
+        script.type = "text/javascript";
+        var src = "true";
+        if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+        if (location.protocol !== "file:" && /^https?:/.test(src))
+          src = src.replace(/^https?:/, '');
+        script.src = src;
+        document.getElementsByTagName("head")[0].appendChild(script);
+      })();
+    </script><script src="https://hypothes.is/embed.js" async></script><link href="css/annotator.css" rel="stylesheet"></body></html>

@@ -1,0 +1,84 @@
+
+.caption {
+  color: #777;
+  margin-top: 10px;
+}
+p code {
+  white-space: inherit;
+}
+pre {
+  word-break: normal;
+  word-wrap: normal;
+}
+pre code {
+  white-space: inherit;
+}
+p.flushright {
+  text-align: right;
+}
+blockquote > p:last-child {
+  text-align: right;
+}
+blockquote > p:first-child {
+  text-align: inherit;
+}
+.header-section-number {
+  padding-right: .2em;
+  font-weight: 500;
+}
+.level1 .header-section-number {
+  display: inline-block;
+  border-bottom: 3px solid;
+}
+.level1 h1 {
+  border-bottom: 1px solid;
+}
+h1, h2, h3, h4, h5, h6 {
+  font-weight: normal;
+}
+h1.title {
+  font-weight: 700;
+}
+.smallcaps {
+  font-variant: small-caps;
+}
+.book .book-body .page-wrapper .page-inner section.normal strong {
+  font-weight: 600;
+}
+
+.figure img{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+blockquote{
+  font-size: 1.2em;
+  width:70%;
+  margin:50px auto;
+  font-style:italic;
+  padding:1.2em 30px 1.2em 75px;
+  line-height:1.6;
+  position: relative;
+  margin-bottom: 10em;
+}
+
+blockquote::before{
+  font-family:Arial;
+  content: "\201C";
+  font-size:4em;
+  position: absolute;
+  left: 10px;
+  top:-10px;
+}
+
+blockquote::after{
+  content: '';
+}
+
+.book .book-body .page-wrapper .page-inner section.normal blockquote {
+  margin: 0 0 0 30%;
+  padding: 0 0.5em 0 3em;
+  opacity: 0.75;
+  border-left: 0px solid #dcdcdc
+}

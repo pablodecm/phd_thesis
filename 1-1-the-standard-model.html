@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang=""><head><script async src="https://www.googletagmanager.com/gtag/js?id=UA-71094563-2"></script><script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-71094563-2');
+    </script><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><title>Statistical Learning and Inference at Particle Collider Experiments</title><meta name="description" content="Statistical Learning and Inference at Particle Collider Experiments"><meta name="generator" content="bookdown #bookdown:version# and GitBook 2.6.7"><meta property="og:title" content="Statistical Learning and Inference at Particle Collider Experiments"><meta property="og:type" content="book"><meta name="github-repo" content="pablodecm/phd_thesis"><meta name="twitter:card" content="summary"><meta name="twitter:title" content="Statistical Learning and Inference at Particle Collider Experiments"><meta name="author" content="Pablo de Castro Manzano"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black"><script src="libs/jquery/jquery.min.js"></script><link href="libs/gitbook/css/style.css" rel="stylesheet"><link href="libs/gitbook/css/plugin-table.css" rel="stylesheet"><link href="libs/gitbook/css/plugin-bookdown.css" rel="stylesheet"><link href="libs/gitbook/css/plugin-highlight.css" rel="stylesheet"><link href="libs/gitbook/css/plugin-search.css" rel="stylesheet"><link href="libs/gitbook/css/plugin-fontsettings.css" rel="stylesheet"><link href="css/style.css" rel="stylesheet"><link href="css/toc.css" rel="stylesheet"></head><body>
+
+    
+    <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+      <div class="book-summary">
+        <nav role="navigation"><ul class="summary"><li>
+              <a href="./">PhD Thesis - Pablo de Castro</a>
+            </li>
+            <li class="divider">
+            <li class="chapter" data-level="" data-path="abstract.html">
+              <a href="abstract.html"><i class="fa fa-check"></i> Abstract</a>
+            </li>
+            <li class="chapter" data-level="" data-path="preface.html">
+              <a href="preface.html"><i class="fa fa-check"></i> Preface</a>
+            </li>
+            <li class="chapter" data-level="" data-path="acknowledgements.html">
+              <a href="acknowledgements.html"><i class="fa fa-check"></i> Acknowledgements</a>
+            </li>
+            <li class="chapter" data-level="" data-path="introduction.html">
+              <a href="introduction.html"><i class="fa fa-check"></i> Introduction</a>
+            </li>
+            <li class="chapter" data-level="1" data-path="1-theory-of-fundamental-interactions.html">
+              <a href="1-theory-of-fundamental-interactions.html"><i class="fa fa-check"></i><b>1</b> Theory of Fundamental Interactions</a>
+              <ul><li class="chapter" data-level="1.1" data-path="1-1-the-standard-model.html">
+                  <a href="1-1-the-standard-model.html"><i class="fa fa-check"></i><b>1.1</b> The Standard Model</a>
+                  <ul><li class="chapter" data-level="1.1.1" data-path="1-1-the-standard-model.html">
+                      <a href="1-1-the-standard-model.html#sec:qft_basics"><i class="fa fa-check"></i><b>1.1.1</b> Essentials of Quantum Field Theory</a>
+                    </li>
+                    <li class="chapter" data-level="1.1.2" data-path="1-1-the-standard-model.html">
+                      <a href="1-1-the-standard-model.html#sec:qcd_detail"><i class="fa fa-check"></i><b>1.1.2</b> Quantum Chromodynamics</a>
+                    </li>
+                    <li class="chapter" data-level="1.1.3" data-path="1-1-the-standard-model.html">
+                      <a href="1-1-the-standard-model.html#sec:ew_detail"><i class="fa fa-check"></i><b>1.1.3</b> Electroweak Interactions</a>
+                    </li>
+                    <li class="chapter" data-level="1.1.4" data-path="1-1-the-standard-model.html">
+                      <a href="1-1-the-standard-model.html#sec:ewsb_higgs"><i class="fa fa-check"></i><b>1.1.4</b> Symmetry Breaking and the Higgs Boson</a>
+                    </li>
+                  </ul></li>
+                <li class="chapter" data-level="1.2" data-path="1-2-beyond-the-standard-model.html">
+                  <a href="1-2-beyond-the-standard-model.html"><i class="fa fa-check"></i><b>1.2</b> Beyond the Standard Model</a>
+                  <ul><li class="chapter" data-level="1.2.1" data-path="1-2-beyond-the-standard-model.html">
+                      <a href="1-2-beyond-the-standard-model.html#known-limitations"><i class="fa fa-check"></i><b>1.2.1</b> Known Limitations</a>
+                    </li>
+                    <li class="chapter" data-level="1.2.2" data-path="1-2-beyond-the-standard-model.html">
+                      <a href="1-2-beyond-the-standard-model.html#sec:possible_ext"><i class="fa fa-check"></i><b>1.2.2</b> Possible Extensions</a>
+                    </li>
+                  </ul></li>
+                <li class="chapter" data-level="1.3" data-path="1-3-phenomenology-of-proton-collisions.html">
+                  <a href="1-3-phenomenology-of-proton-collisions.html"><i class="fa fa-check"></i><b>1.3</b> Phenomenology of Proton Collisions</a>
+                  <ul><li class="chapter" data-level="1.3.1" data-path="1-3-phenomenology-of-proton-collisions.html">
+                      <a href="1-3-phenomenology-of-proton-collisions.html#sec:main_obs"><i class="fa fa-check"></i><b>1.3.1</b> Main Observables</a>
+                    </li>
+                    <li class="chapter" data-level="1.3.2" data-path="1-3-phenomenology-of-proton-collisions.html">
+                      <a href="1-3-phenomenology-of-proton-collisions.html#sec:pdfs"><i class="fa fa-check"></i><b>1.3.2</b> Parton Distribution Functions</a>
+                    </li>
+                    <li class="chapter" data-level="1.3.3" data-path="1-3-phenomenology-of-proton-collisions.html">
+                      <a href="1-3-phenomenology-of-proton-collisions.html#sec:factorisation"><i class="fa fa-check"></i><b>1.3.3</b> Factorisation and Generation of Hard Processes</a>
+                    </li>
+                    <li class="chapter" data-level="1.3.4" data-path="1-3-phenomenology-of-proton-collisions.html">
+                      <a href="1-3-phenomenology-of-proton-collisions.html#sec:parton_showers"><i class="fa fa-check"></i><b>1.3.4</b> Hadronization and Parton Showers</a>
+                    </li>
+                  </ul></li>
+              </ul></li>
+            <li class="chapter" data-level="2" data-path="2-experiments-at-particle-colliders.html">
+              <a href="2-experiments-at-particle-colliders.html"><i class="fa fa-check"></i><b>2</b> Experiments at Particle Colliders</a>
+              <ul><li class="chapter" data-level="2.1" data-path="2-1-the-large-hadron-collider.html">
+                  <a href="2-1-the-large-hadron-collider.html"><i class="fa fa-check"></i><b>2.1</b> The Large Hadron Collider</a>
+                  <ul><li class="chapter" data-level="2.1.1" data-path="2-1-the-large-hadron-collider.html">
+                      <a href="2-1-the-large-hadron-collider.html#injection-and-acceleration-chain"><i class="fa fa-check"></i><b>2.1.1</b> Injection and Acceleration Chain</a>
+                    </li>
+                    <li class="chapter" data-level="2.1.2" data-path="2-1-the-large-hadron-collider.html">
+                      <a href="2-1-the-large-hadron-collider.html#sec:op_pars"><i class="fa fa-check"></i><b>2.1.2</b> Operation Parameters</a>
+                    </li>
+                    <li class="chapter" data-level="2.1.3" data-path="2-1-the-large-hadron-collider.html">
+                      <a href="2-1-the-large-hadron-collider.html#sec:pile_up"><i class="fa fa-check"></i><b>2.1.3</b> Multiple Hadron Interactions</a>
+                    </li>
+                    <li class="chapter" data-level="2.1.4" data-path="2-1-the-large-hadron-collider.html">
+                      <a href="2-1-the-large-hadron-collider.html#sec:lhc_experiments"><i class="fa fa-check"></i><b>2.1.4</b> Experiments</a>
+                    </li>
+                  </ul></li>
+                <li class="chapter" data-level="2.2" data-path="2-2-the-compact-muon-solenoid.html">
+                  <a href="2-2-the-compact-muon-solenoid.html"><i class="fa fa-check"></i><b>2.2</b> The Compact Muon Solenoid</a>
+                  <ul><li class="chapter" data-level="2.2.1" data-path="2-2-the-compact-muon-solenoid.html">
+                      <a href="2-2-the-compact-muon-solenoid.html#sec:exp_geom"><i class="fa fa-check"></i><b>2.2.1</b> Experimental Geometry</a>
+                    </li>
+                    <li class="chapter" data-level="2.2.2" data-path="2-2-the-compact-muon-solenoid.html">
+                      <a href="2-2-the-compact-muon-solenoid.html#sec:cms_magnet"><i class="fa fa-check"></i><b>2.2.2</b> Magnet</a>
+                    </li>
+                    <li class="chapter" data-level="2.2.3" data-path="2-2-the-compact-muon-solenoid.html">
+                      <a href="2-2-the-compact-muon-solenoid.html#sec:cms_tracking"><i class="fa fa-check"></i><b>2.2.3</b> Tracking System</a>
+                    </li>
+                    <li class="chapter" data-level="2.2.4" data-path="2-2-the-compact-muon-solenoid.html">
+                      <a href="2-2-the-compact-muon-solenoid.html#sec:cms_ecal"><i class="fa fa-check"></i><b>2.2.4</b> Electromagnetic Calorimeter</a>
+                    </li>
+                    <li class="chapter" data-level="2.2.5" data-path="2-2-the-compact-muon-solenoid.html">
+                      <a href="2-2-the-compact-muon-solenoid.html#sec:cms_hcal"><i class="fa fa-check"></i><b>2.2.5</b> Hadronic Calorimeter</a>
+                    </li>
+                    <li class="chapter" data-level="2.2.6" data-path="2-2-the-compact-muon-solenoid.html">
+                      <a href="2-2-the-compact-muon-solenoid.html#sec:cms_muon"><i class="fa fa-check"></i><b>2.2.6</b> Muon System</a>
+                    </li>
+                    <li class="chapter" data-level="2.2.7" data-path="2-2-the-compact-muon-solenoid.html">
+                      <a href="2-2-the-compact-muon-solenoid.html#sec:trigger"><i class="fa fa-check"></i><b>2.2.7</b> Trigger and Data Acquisition</a>
+                    </li>
+                  </ul></li>
+                <li class="chapter" data-level="2.3" data-path="2-3-event-simulation-and-reconstruction.html">
+                  <a href="2-3-event-simulation-and-reconstruction.html"><i class="fa fa-check"></i><b>2.3</b> Event Simulation and Reconstruction</a>
+                  <ul><li class="chapter" data-level="2.3.1" data-path="2-3-event-simulation-and-reconstruction.html">
+                      <a href="2-3-event-simulation-and-reconstruction.html#sec:gen_view"><i class="fa fa-check"></i><b>2.3.1</b> A Generative View</a>
+                    </li>
+                    <li class="chapter" data-level="2.3.2" data-path="2-3-event-simulation-and-reconstruction.html">
+                      <a href="2-3-event-simulation-and-reconstruction.html#sec:detector_simulation"><i class="fa fa-check"></i><b>2.3.2</b> Detector Simulation</a>
+                    </li>
+                    <li class="chapter" data-level="2.3.3" data-path="2-3-event-simulation-and-reconstruction.html">
+                      <a href="2-3-event-simulation-and-reconstruction.html#sec:event_reco"><i class="fa fa-check"></i><b>2.3.3</b> Event Reconstruction</a>
+                    </li>
+                  </ul></li>
+              </ul></li>
+            <li class="chapter" data-level="3" data-path="3-statistical-modelling-and-inference-at-the-lhc.html">
+              <a href="3-statistical-modelling-and-inference-at-the-lhc.html"><i class="fa fa-check"></i><b>3</b> Statistical Modelling and Inference at the LHC</a>
+              <ul><li class="chapter" data-level="3.1" data-path="3-1-statistical-modelling.html">
+                  <a href="3-1-statistical-modelling.html"><i class="fa fa-check"></i><b>3.1</b> Statistical Modelling</a>
+                  <ul><li class="chapter" data-level="3.1.1" data-path="3-1-statistical-modelling.html">
+                      <a href="3-1-statistical-modelling.html#sec:model_overview"><i class="fa fa-check"></i><b>3.1.1</b> Overview</a>
+                    </li>
+                    <li class="chapter" data-level="3.1.2" data-path="3-1-statistical-modelling.html">
+                      <a href="3-1-statistical-modelling.html#simulation-as-generative-modelling"><i class="fa fa-check"></i><b>3.1.2</b> Simulation as Generative Modelling</a>
+                    </li>
+                    <li class="chapter" data-level="3.1.3" data-path="3-1-statistical-modelling.html">
+                      <a href="3-1-statistical-modelling.html#sec:dim_reduction"><i class="fa fa-check"></i><b>3.1.3</b> Dimensionality Reduction</a>
+                    </li>
+                    <li class="chapter" data-level="3.1.4" data-path="3-1-statistical-modelling.html">
+                      <a href="3-1-statistical-modelling.html#sec:known_unknowns"><i class="fa fa-check"></i><b>3.1.4</b> Known Unknowns</a>
+                    </li>
+                  </ul></li>
+                <li class="chapter" data-level="3.2" data-path="3-2-statistical-inference.html">
+                  <a href="3-2-statistical-inference.html"><i class="fa fa-check"></i><b>3.2</b> Statistical Inference</a>
+                  <ul><li class="chapter" data-level="3.2.1" data-path="3-2-statistical-inference.html">
+                      <a href="3-2-statistical-inference.html#sec:likelihood-free"><i class="fa fa-check"></i><b>3.2.1</b> Likelihood-Free Inference</a>
+                    </li>
+                    <li class="chapter" data-level="3.2.2" data-path="3-2-statistical-inference.html">
+                      <a href="3-2-statistical-inference.html#sec:hypo_test"><i class="fa fa-check"></i><b>3.2.2</b> Hypothesis Testing</a>
+                    </li>
+                    <li class="chapter" data-level="3.2.3" data-path="3-2-statistical-inference.html">
+                      <a href="3-2-statistical-inference.html#sec:param_est"><i class="fa fa-check"></i><b>3.2.3</b> Parameter Estimation</a>
+                    </li>
+                  </ul></li>
+              </ul></li>
+            <li class="chapter" data-level="4" data-path="4-machine-learning-in-high-energy-physics.html">
+              <a href="4-machine-learning-in-high-energy-physics.html"><i class="fa fa-check"></i><b>4</b> Machine Learning in High-Energy Physics</a>
+              <ul><li class="chapter" data-level="4.1" data-path="4-1-problem-description.html">
+                  <a href="4-1-problem-description.html"><i class="fa fa-check"></i><b>4.1</b> Problem Description</a>
+                  <ul><li class="chapter" data-level="4.1.1" data-path="4-1-problem-description.html">
+                      <a href="4-1-problem-description.html#sec:supervised"><i class="fa fa-check"></i><b>4.1.1</b> Probabilistic Classification and Regression</a>
+                    </li>
+                  </ul></li>
+                <li class="chapter" data-level="4.2" data-path="4-2-machine-learning-techniques.html">
+                  <a href="4-2-machine-learning-techniques.html"><i class="fa fa-check"></i><b>4.2</b> Machine Learning Techniques</a>
+                  <ul><li class="chapter" data-level="4.2.1" data-path="4-2-machine-learning-techniques.html">
+                      <a href="4-2-machine-learning-techniques.html#sec:boosted_decision_trees"><i class="fa fa-check"></i><b>4.2.1</b> Boosted Decision Trees</a>
+                    </li>
+                    <li class="chapter" data-level="4.2.2" data-path="4-2-machine-learning-techniques.html">
+                      <a href="4-2-machine-learning-techniques.html#sec:ann"><i class="fa fa-check"></i><b>4.2.2</b> Artificial Neural Networks</a>
+                    </li>
+                  </ul></li>
+                <li class="chapter" data-level="4.3" data-path="4-3-applications-in-high-energy-physics.html">
+                  <a href="4-3-applications-in-high-energy-physics.html"><i class="fa fa-check"></i><b>4.3</b> Applications in High Energy Physics</a>
+                  <ul><li class="chapter" data-level="4.3.1" data-path="4-3-applications-in-high-energy-physics.html">
+                      <a href="4-3-applications-in-high-energy-physics.html#sec:sig_vs_bkg"><i class="fa fa-check"></i><b>4.3.1</b> Signal vs Background Classification</a>
+                    </li>
+                    <li class="chapter" data-level="4.3.2" data-path="4-3-applications-in-high-energy-physics.html">
+                      <a href="4-3-applications-in-high-energy-physics.html#sec:particle_id_reg"><i class="fa fa-check"></i><b>4.3.2</b> Particle Identification and Regression</a>
+                    </li>
+                  </ul></li>
+              </ul></li>
+            <li class="chapter" data-level="5" data-path="5-search-for-anomalous-higgs-pair-production-with-cms.html">
+              <a href="5-search-for-anomalous-higgs-pair-production-with-cms.html"><i class="fa fa-check"></i><b>5</b> Search for Anomalous Higgs Pair Production with CMS</a>
+              <ul><li class="chapter" data-level="5.1" data-path="5-1-introduction.html">
+                  <a href="5-1-introduction.html"><i class="fa fa-check"></i><b>5.1</b> Introduction</a>
+                </li>
+                <li class="chapter" data-level="5.2" data-path="5-2-higgs-pair-production-and-anomalous-couplings.html">
+                  <a href="5-2-higgs-pair-production-and-anomalous-couplings.html"><i class="fa fa-check"></i><b>5.2</b> Higgs Pair Production and Anomalous Couplings</a>
+                </li>
+                <li class="chapter" data-level="5.3" data-path="5-3-analysis-strategy.html">
+                  <a href="5-3-analysis-strategy.html"><i class="fa fa-check"></i><b>5.3</b> Analysis Strategy</a>
+                </li>
+                <li class="chapter" data-level="5.4" data-path="5-4-trigger-and-datasets.html">
+                  <a href="5-4-trigger-and-datasets.html"><i class="fa fa-check"></i><b>5.4</b> Trigger and Datasets</a>
+                </li>
+                <li class="chapter" data-level="5.5" data-path="5-5-event-selection.html">
+                  <a href="5-5-event-selection.html"><i class="fa fa-check"></i><b>5.5</b> Event Selection</a>
+                </li>
+                <li class="chapter" data-level="5.6" data-path="5-6-data-driven-background-estimation.html">
+                  <a href="5-6-data-driven-background-estimation.html"><i class="fa fa-check"></i><b>5.6</b> Data-Driven Background Estimation</a>
+                  <ul><li class="chapter" data-level="5.6.1" data-path="5-6-data-driven-background-estimation.html">
+                      <a href="5-6-data-driven-background-estimation.html#sec:hem_mixing"><i class="fa fa-check"></i><b>5.6.1</b> Hemisphere Mixing</a>
+                    </li>
+                    <li class="chapter" data-level="5.6.2" data-path="5-6-data-driven-background-estimation.html">
+                      <a href="5-6-data-driven-background-estimation.html#sec:bkg_validation"><i class="fa fa-check"></i><b>5.6.2</b> Background Validation</a>
+                    </li>
+                  </ul></li>
+                <li class="chapter" data-level="5.7" data-path="5-7-systematic-uncertainties.html">
+                  <a href="5-7-systematic-uncertainties.html"><i class="fa fa-check"></i><b>5.7</b> Systematic Uncertainties</a>
+                </li>
+                <li class="chapter" data-level="5.8" data-path="5-8-analysis-results.html">
+                  <a href="5-8-analysis-results.html"><i class="fa fa-check"></i><b>5.8</b> Analysis Results</a>
+                </li>
+                <li class="chapter" data-level="5.9" data-path="5-9-combination-with-other-decay-channels.html">
+                  <a href="5-9-combination-with-other-decay-channels.html"><i class="fa fa-check"></i><b>5.9</b> Combination with Other Decay Channels</a>
+                </li>
+              </ul></li>
+            <li class="chapter" data-level="6" data-path="6-inference-aware-neural-optimisation.html">
+              <a href="6-inference-aware-neural-optimisation.html"><i class="fa fa-check"></i><b>6</b> Inference-Aware Neural Optimisation</a>
+              <ul><li class="chapter" data-level="6.1" data-path="6-1-introduction.html">
+                  <a href="6-1-introduction.html"><i class="fa fa-check"></i><b>6.1</b> Introduction</a>
+                </li>
+                <li class="chapter" data-level="6.2" data-path="6-2-problem-statement.html">
+                  <a href="6-2-problem-statement.html"><i class="fa fa-check"></i><b>6.2</b> Problem Statement</a>
+                </li>
+                <li class="chapter" data-level="6.3" data-path="6-3-method.html">
+                  <a href="6-3-method.html"><i class="fa fa-check"></i><b>6.3</b> Method</a>
+                </li>
+                <li class="chapter" data-level="6.4" data-path="6-4-related-work.html">
+                  <a href="6-4-related-work.html"><i class="fa fa-check"></i><b>6.4</b> Related Work</a>
+                </li>
+                <li class="chapter" data-level="6.5" data-path="6-5-experiments.html">
+                  <a href="6-5-experiments.html"><i class="fa fa-check"></i><b>6.5</b> Experiments</a>
+                  <ul><li class="chapter" data-level="6.5.1" data-path="6-5-experiments.html">
+                      <a href="6-5-experiments.html#sec:synthetic_mixture"><i class="fa fa-check"></i><b>6.5.1</b> 3D Synthetic Mixture</a>
+                    </li>
+                  </ul></li>
+              </ul></li>
+            <li class="chapter" data-level="7" data-path="7-conclusions-and-prospects.html">
+              <a href="7-conclusions-and-prospects.html"><i class="fa fa-check"></i><b>7</b> Conclusions and Prospects</a>
+            </li>
+            <li class="chapter" data-level="" data-path="references.html">
+              <a href="references.html"><i class="fa fa-check"></i> References</a>
+            </li>
+          </ul></nav></div>
+
+      <div class="book-body">
+        <div class="body-inner">
+          <div class="book-header" role="navigation">
+            <h1>
+              <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Statistical Learning and Inference at Particle Collider Experiments</a>
+            </h1>
+          </div>
+
+          <div class="page-wrapper" tabindex="-1" role="main">
+            <div class="page-inner">
+
+              <section class="normal" id="section-"><div id="sec:standard_model" class="section level2">
+                <h2><span class="header-section-number">1.1</span> The Standard Model</h2>
+                <p>The Standard Model (SM) of particle physics is a mathematically self-consistent gauge field theory that classifies all known types of elementary particles and describes their electromagnetic, weak and strong interactions. Within this fundamental theory, all known matter and energy phenomena can be explained in terms of the kinematics and interactions of elementary particles, which can in turn be understood as local excitations of different fields that permeate our universe.</p>
+                <div class="figure">
+                <img src="gfx/101_chapter_1/Standard_Model_of_Elementary_Particles.svg" alt="Figure 1.1: Schematic overview of the particle content within the SM. Fundamental particles include fermions, further subdivided in quarks and leptons, and fundamental bosons, including the force mediators and the Higgs boson. Diagram adapted from MissMJ (CC BY 3.0 license)." id="fig:standard_model_particles" class="vector" style="width:70.0%"><p class="caption">Figure 1.1: Schematic overview of the particle content within the SM. Fundamental particles include fermions, further subdivided in quarks and leptons, and fundamental bosons, including the force mediators and the Higgs boson. Diagram adapted from <a href="https://commons.wikimedia.org/wiki/File:Standard_Model_of_Elementary_Particles.svg">MissMJ (CC BY 3.0 license)</a>.</p>
+                </div>
+                <p>From a historical perspective, this theory is the product of a succession of important theoretical developments and experimental discoveries over the last century <span class="citation">[<a href="references.html#ref-weinberg2004making" role="doc-biblioref">1</a>]</span>, culminating with the discovery of the Higgs boson in 2012 <span class="citation">[<a href="references.html#ref-higgs2012cms" role="doc-biblioref">2</a>], [<a href="references.html#ref-higgs2012atlas" role="doc-biblioref">3</a>]</span>. If a more principled viewpoint is taken, the SM can be thought of as the most general but mathematically consistent theory that respects a set of symmetries, namely a global Poincaré group symmetry (translational, rotational and relativistic boost invariance) and a local <span id="eq:sm_gauge_symmetry"><span class="math display">\[G_\textrm{SM} = SU(3)_{C}\otimes SU(2)_{L} \otimes U(1)_{Y}\qquad(1.1)\]</span></span> gauge group symmetry. The <span class="math inline">\(G_\textrm{SM}\)</span> symmetry group is essential to describe three of the four fundamental interactions observed in nature: strong interaction, weak interaction and electromagnetic interaction. In fact, the <span class="math inline">\(SU(3)_{C}\)</span> is associated the strong force and the conservation of its charge, called colour, while the <span class="math inline">\(SU(2)_{L} \otimes U(1)_{Y}\)</span> symmetry instead is related with electroweak interactions (i.e. unification of weak and electromagnetic) and the conservation of isospin and weak hypercharge. The SM is typically specified using the Lagrangian formalism and depends on a total of 19 parameters (not accounting for neutrino masses and mixing angles), which are not predicted by the theory from first principles, and thus can only be determined through experimental measurements.</p>
+                <p>In the context of the SM, excitations of the fundamental fields give rise to two types of elementary particles: fermions (characterised by having half-integer spin) and bosons (characterised by having integer spin). Fermions are the fundamental constituents of matter, and they are further subdivided into leptons and quarks depending on their interactions. A schematic overview of the fundamental particles of the SM and their properties is provided in Figure <a href="1-1-the-standard-model.html#fig:standard_model_particles">1.1</a>. Three particle generations are known for both quarks and leptons, each containing a pair of particles with different masses. For quarks, the heavier is referred to as up-type and the lighter as down-type. Instead, for leptons we distinguish the heavier charged particles (electron, muon and tau) from their corresponding light and uncharged neutrinos.</p>
+                <p>Regular matter is largely made of the first generation of quarks and electrons, given that higher generations rapidly decay quickly to lower generations characterised by smaller masses. All fermions interact via the weak force but only quarks carry colour charge and are subjected to the strong force. For each fermion in the SM, there is a another particle with identical properties but opposite quantum numbers, globally referred to as antimatter, and denoted for each particle with the anti prefix and a bar over the symbol (e.g. up antiquark <span class="math inline">\(\bar{u}\)</span>) or by explicitly denoting the charge sign (e.g. positron <span class="math inline">\(e^+\)</span>). Neutrinos are the only fermions that do not carry electrical charge and might be their own antiparticle.</p>
+                <p>The mediators of the strong, weak and electromagnetic fundamental interactions are referred to as gauge bosons, and are characterised by having spin 1. To model the strong interaction colour charge exchanges, a total of eight independent strong massless force mediators, or <em>gluons</em>, are needed. Gluons carry colour charge themselves and thus participate in colour interactions with other gluons, which leads to a phenomenon known as <em>colour confinement</em>, which will be discussed in Section <a href="1-1-the-standard-model.html#sec:qcd_detail">1.1.2</a> in more detail. The massless and neutral <em>photon</em> is the mediator of the electromagnetic force, while instead the massive <span class="math inline">\(Z\)</span>, <span class="math inline">\(W^+\)</span> and <span class="math inline">\(W^-\)</span> bosons mediate weak interactions. The last piece in the SM is the <em>Higgs boson</em>, the only fundamental known particle with spin 0. The Higgs boson is the quantum excitation of the <em>Higgs field</em>, which also couples with other fundamental particles such as the gauge bosons of the weak force, effectively generating their mass through their interaction. The Higgs boson and Higgs field play an essential role in the electroweak symmetry breaking (EWSB) mechanism, which will be discussed in more detail in Section <a href="1-1-the-standard-model.html#sec:ewsb_higgs">1.1.4</a>.</p>
+                <p>The rest of this section will be devoted a more mathematically exhaustive review of the different components of the Standard Model, starting by reviewing the basic formalism of quantum field theories and incrementally building on it do describe the characteristics of both the strong and electroweak interactions that give rise to the diverse interactions dynamics of relevance in particle physics experiments. The mentioned review is heavily inspired by standard bibliographical references on the topic <span class="citation">[<a href="references.html#ref-Peskin:257493" role="doc-biblioref">4</a>], [<a href="references.html#ref-mandl2010quantum" role="doc-biblioref">5</a>]</span>, and which are recommended directly for a more detailed survey on the subject.</p>
+                <div id="sec:qft_basics" class="section level3">
+                <h3><span class="header-section-number">1.1.1</span> Essentials of Quantum Field Theory</h3>
+                <p>As hinted in the previous section, in quantum field theory (QFT), observed particles are understood as excitations of fields that extend through the whole universe. Quantum field theory unifies the physical foundations of quantum mechanics and special relativity, and can be used to accurately describe phenomena in systems where relativistic and quantum effects are relevant, such as interactions between highly relativistic particles. In QFT, all the known physical processes in the universe are explained in terms of the state and dynamics of a set of fundamental tensor fields. A tensor field can be defined as a continuous and differentiable set of values, such a scalar or a vector, that exist for any given location and time. For simplicity, the fields in QFT are usually defined in a relativistic coordinate system <span class="math inline">\(x = (t, \boldsymbol{x})\)</span> in order treat space <span class="math inline">\(\boldsymbol{x}\)</span> and time <span class="math inline">\(t\)</span> jointly.</p>
+                <p>To exemplify the fundamentals of the QFT framework, let us consider the simplest case, e.g. a single field that does not interact with any other field, which will be denoted as <span class="math inline">\(\phi(x)\)</span>. The dynamics of a field (or several fields) in QFT are specified by using the <em>Lagrangian formalism</em>, similarly to what can be done for systems in classical mechanics. However, instead of considering the Lagrangian <span class="math inline">\(L\)</span> which depends the generalised coordinate vector <span class="math inline">\(\boldsymbol{q}(t)\)</span> and its time derivatives <span class="math inline">\(\dot{\boldsymbol{q}}(t)\)</span>, in QFT the Lagrangian density <span class="math inline">\(\mathcal{L}\)</span> is commonly used, which depends only on the field <span class="math inline">\(\phi (x)\)</span> and its first derivative <span class="math inline">\(\partial_{\mu} \phi (x)\)</span>. In an analogous manner to what is done in classical mechanics to define the action functional <span class="math inline">\(S_{\textrm{classical}}\)</span>, we can define the action of the quantum field <span class="math inline">\(S_{\textrm{QFT}}\)</span> as a function of the Lagrangian density <span class="math inline">\(\mathcal{L}\)</span> as follows: <span id="eq:langrangian_density"><span class="math display">\[ S_{\textrm{classical}} = \int L (\boldsymbol{q}(t) ,\dot{\boldsymbol{q}} (t)) dt
+                   \quad \Rightarrow \quad
+                   S_{\textrm{QFT}}  =  \int \mathcal{L}(\phi, \partial_{\mu} \phi)\ d^4 x
+                \qquad(1.2)\]</span></span> noting that the previous definition would also be valid when the Lagrangian depends on multiple fields and their derivatives instead of a single free field. Identically to what is done in classical systems, we can attempt to solve for the field that minimises the action, i.e. <span class="math inline">\(\delta S=0\)</span>. With the help of some functional calculus <span class="citation">[<a href="references.html#ref-Goldberg:2244785" role="doc-biblioref">6</a>]</span>, it is possible to obtain the relativistic field theory version of the Euler-Langrange equation: <span id="eq:euler_lagrange"><span class="math display">\[\partial_\mu \left ( \frac{\partial \mathcal{L}}
+                                             {\partial (\partial_\mu\phi)}
+                               \right )
+                  - \frac{\partial\mathcal{L}}{\partial\phi} = 0
+                \qquad(1.3)\]</span></span> where <span class="math inline">\(\partial_\mu=\partial/\partial x_\mu\)</span> and the repetition of the coordinate index <span class="math inline">\(\mu \in \{0,1,2,3\}\)</span> means summation over the product. The previous relation would still apply to each field in the case a Lagrangian including several fields was considered; therefore, given a Lagrangian, we can use Equation <a href="1-1-the-standard-model.html#eq:euler_lagrange">1.3</a> to obtain their equations of motion. As an example, let us consider the following Lagrangian <span class="math inline">\(\mathcal{L}_\textrm{Dirac}\)</span>, which is a function of a bispinor field <span class="math inline">\(\psi\)</span>, a 4-dimensional complex vector field that can represent a field whose excitations behave like fermions of mass <span class="math inline">\(m\)</span>: <span id="eq:dirac_lagrangian"><span class="math display">\[\mathcal{L}_\textrm{Dirac}
+                  =\bar{\psi} (i\gamma^\mu \partial_{\mu} - m)\psi
+                \qquad(1.4)\]</span></span> where <span class="math inline">\(\gamma^\mu\)</span> are the gamma matrices and <span class="math inline">\(\bar{\psi}=\psi^\dag \gamma^0\)</span> is the spinor adjoint. As the chosen naming for the previous Lagrangian <span class="math inline">\(\mathcal{L}_\textrm{Dirac}\)</span> gave away, the Euler-Lagrange relation obtained by minimising the action <span class="math inline">\(\delta S=0\)</span> can be used to obtain field equations of motion that correspond to the Dirac equation <span class="citation">[<a href="references.html#ref-Peskin:257493" role="doc-biblioref">4</a>]</span> for the spinor field and its adjoint: <span id="eq:dirac_equation"><span class="math display">\[ i\gamma^\mu \partial_{\mu} \psi - m \psi=0 \quad \textrm{and} \quad
+                   i\gamma^\mu \bar{\psi} \partial_{\mu} + m\bar{\psi}=0
+                \qquad(1.5)\]</span></span> as well as the well-known Klein-Gordon equation component-wise <span class="math inline">\((\partial^\mu \partial_\mu + m^2)\psi=0\)</span>, where <span class="math inline">\(\partial^\mu=\partial/\partial x^\mu\)</span>. Both Dirac and Klein-Gordon equations were proposed in the context of a relativistic formulation of quantum mechanics.</p>
+                <p>To shed some light on how a field like <span class="math inline">\(\psi\)</span> can represent actual fermions in the universe, such as electrons or positrons, the field can be quantised by considering a plane wave expansion and defining annihilation operators <span class="math inline">\(a_{\boldsymbol{p}}^s\)</span> and <span class="math inline">\(b_{\boldsymbol{p}}^s\)</span>, as well as creation <span class="math inline">\(a_{\boldsymbol{p}}^{s\dagger}\)</span> and <span class="math inline">\(b_{\boldsymbol{p}}^{s\dagger}\)</span> operators. The field and its adjoint, which can be thought of directly as operators instead of fields in this context, may then be expressed as:</p>
+                <p><span id="eq:field_quant"><span class="math display">\[
+                \psi(x) = \int \frac{d^3p}{(2\pi)^3} \frac{1}{\sqrt{2 E_{\boldsymbol{p}}}}
+                \sum_s \left ( a_{\boldsymbol{p}}^s u^s(p) e^{-ipx} +
+                b_{\boldsymbol{p}}^{s\dagger} u^s(p) e^{ipx} \right )
+                \qquad(1.6)\]</span></span></p>
+                <p><span id="eq:field_adjoint_quant"><span class="math display">\[
+                \bar{\psi}(x) = \int \frac{d^3p}{(2\pi)^3} \frac{1}{\sqrt{2 E_{\boldsymbol{p}}}}
+                \sum_s \left ( b_{\boldsymbol{p}}^s \bar{v}^s(p) e^{-ipx} +
+                a_{\boldsymbol{p}}^{s\dagger} \bar{u}^s(p) e^{ipx} \right )
+                \qquad(1.7)\]</span></span></p>
+                <p>where <span class="math inline">\(u^s (p)\)</span> and <span class="math inline">\(v^s(p)\)</span> and its adjoints are the free particle solutions of the Dirac equation, <span class="math inline">\(s\)</span> is their spin and <span class="math inline">\(E_{\boldsymbol{p}}\)</span> their energy. The operators in the previous quantisations can be used to define arbitrary many-particle states. The vacuum state <span class="math inline">\(\left|{0}\right\rangle\)</span> can be defined as the state for which <span class="math inline">\(a_{\boldsymbol{p}}^s\left|{0}\right\rangle=b_{\boldsymbol{p}}^s\left|{0}\right\rangle=0\)</span>. A single free fermion state of momenta <span class="math inline">\(\boldsymbol{p}\)</span> and spin <span class="math inline">\(s\)</span> can be obtained by applying the creation operators on the vacuum state <span class="math inline">\(\left|{\boldsymbol{p}, s}\right\rangle = \sqrt{2E_{\boldsymbol{p}}}a_{\boldsymbol{p}}^{s\dagger}\left|{0}\right\rangle\)</span> - or alternatively an anti-fermion if the <span class="math inline">\(b_{\boldsymbol{p}}^{s\dagger}\)</span> is used instead. Multi-particle free states in momenta representation can analogously be defined by the successive application of creation operators over momenta space.</p>
+                <p>In particle colliders, we are instead interested in interacting theories rather than free theories, given the we aim to compute total and differential cross sections. Interacting theories can also be characterised by their Hamiltonian density <span class="math inline">\(\mathcal{H} = \mathcal{H}_\textrm{free}+ \mathcal{H}_\textrm{int}\)</span>, which can be expressed as a function the Lagrangian density <span class="math inline">\(\mathcal{H}= \pi^a \dot{\psi}_a - \mathcal{L}\)</span>, where <span class="math inline">\(\dot{\psi}_a\)</span> is the time derivative of the field and <span class="math inline">\(\pi^a\)</span> is the conjugate momentum. The Hamiltonian density can divided in <span class="math inline">\(\mathcal{H}_\textrm{free}\)</span>, that is the part corresponding to the free theory, and <span class="math inline">\(\mathcal{H}_\textrm{int}\)</span> that are the additional terms due to interactions. In interacting theories, time-dependence becomes more important and depends only on the <span class="math inline">\(\mathcal{H}_\textrm{int}\)</span> component. Additionally, the ground state <span class="math inline">\(\left|{\Omega}\right\rangle\)</span> can be different in interacting theories from the free theory vacuum state <span class="math inline">\(\left|{0}\right\rangle\)</span>.</p>
+                <p>Let us denote by <span class="math inline">\(\left|{i}\right\rangle=\left|{\psi(t \rightarrow - \infty)}\right\rangle\)</span> and <span class="math inline">\(\left|{f}\right\rangle=\left|{\psi(t \rightarrow + \infty)}\right\rangle\)</span> some arbitrary initial and final multi-particle states, temporarily far before and after the actual interaction being studied happened (i.e. around <span class="math inline">\(t=0\)</span>), respectively. The observables of interest, which are discussed in Section <a href="1-3-phenomenology-of-proton-collisions.html#sec:pheno">1.3</a>, are a function of the transition amplitude <span class="math inline">\(\left\langle{i}\right| \mathcal{S} \left|{f}\right\rangle\)</span> over all possible initial and final states, where <span class="math inline">\(\mathcal{S}\)</span> is an operator describing the transition. The transition probability, which is expressed as the modulus square of the amplitude <span class="math inline">\(|\left\langle{i}\right| \mathcal{S} \left|{f}\right\rangle|^2\)</span>, is therefore also a function of <span class="math inline">\(\mathcal{S}\)</span>, fully describing the time-evolution from the initial the final state. The <span class="math inline">\(\mathcal{S}\)</span> operator may be expressed as a perturbative series using the Dyson expansion: <span id="eq:s_matrix"><span class="math display">\[
+                \begin{aligned}
+                \mathcal{S} &amp;=
+                T \left [ \exp \left ( -i  \int_{-\infty}^{\infty} d^4 x \mathcal{H}_\textrm{int} (x) \right ) \right ] \\
+                &amp;= \sum_{n=0}^{\infty} \frac{(-i)^n}{n!} \int_{-\infty}^{\infty} d^4 x_1 ...
+                \int_{-\infty}^{\infty} d^4 x_n T \left [ \mathcal{H}_\textrm{int} (x_1) ...
+                \mathcal{H}_\textrm{int} (x_n) \right ]
+                \end{aligned}
+                \qquad(1.8)\]</span></span> where <span class="math inline">\(T\)</span> is an operator ensuring that the Hamiltonian density factors <span class="math inline">\(\mathcal{H}_\textrm{int} (x_i)\)</span> are ordered in time. Each time-ordered term in the series can be written as a sum of normal (i.e. not time ordered) products of permutations using Wicks theorem <span class="citation">[<a href="references.html#ref-wick1950evaluation" role="doc-biblioref">7</a>]</span>, which can become rather tedious for high orders. The formalism of Feynman diagrams can be used to simplify the computation of observables at a given order in the perturbative expansion.</p>
+                <p>Based on the previous perturbative series expansion, the transition amplitude <span class="math inline">\(\left\langle{i}\right| \mathcal{S} \left|{f}\right\rangle\)</span> can be easily linked with scattering observables when denoted as: <span id="eq:matrix_element"><span class="math display">\[
+                \left\langle{i}\right| \mathcal{S} \left|{f}\right\rangle = \left\langle{i}\right| \boldsymbol{1} \left|{f}\right\rangle +
+                i \mathcal{M} (2\pi)^4 \delta^4 \left ( \sum p_i - \sum p_f \right )
+                \qquad(1.9)\]</span></span> where the first term corresponds to no interaction occurring, and the second includes the matrix element <span class="math inline">\(\mathcal{M}\)</span> including all orders in the perturbative orders, and multiplied by a factor making explicit the conservation of momentum between the initial and final state particles. The matrix element <span class="math inline">\(\mathcal{M}\)</span>, which can be computed perturbatively as a function of the momenta of the particles given final state considered, can be used to define the differential cross section: <span id="eq:diff_cross_section"><span class="math display">\[
+                \frac{d \sigma}{d \Phi} \sim | \mathcal{M} |^2 \ \textrm{where} \
+                d\Phi = (2\pi)^4 \delta^4 \left ( \sum p_i - \sum p_f \right )
+                \prod_f \frac{1}{2 E_f} \frac{d^3 \boldsymbol{p}_f}{(2\pi)^3}
+                \qquad(1.10)\]</span></span> where the proportionality factor is a function of the initial state particles momenta and <span class="math inline">\(d\Phi\)</span> is the full phase space differential element for which can be generally expressed as a product of the final state particle momenta differential elements. Total scattering rates can be obtained by summing over possible initial and final states and integrating over final states. Both differential and total cross sections can be truncated at a given perturbative order. The lowest expansion order is referred as leading order (LO), yet considering additional expansion can greatly increase the prediction accuracy so one (NLO) or two (NNLO) orders are often considered, higher orders often being too computationally challenging. A truncation at an additional order <span class="math inline">\(n\)</span>, relative to the lowest interaction order, will provide corrections proportional to <span class="math inline">\(\alpha=g^2/(4\pi)\)</span>, where <span class="math inline">\(g\)</span> is the coupling constant characteristic of the interaction.</p>
+                </div>
+                <div id="sec:qcd_detail" class="section level3">
+                <h3><span class="header-section-number">1.1.2</span> Quantum Chromodynamics</h3>
+                <p>In a hadron collider such as the LHC, strong interactions between quark and gluons are dominant, and they can be modelled using quantum chromodynamics (QCD). The theory of QCD can be linked to a <span class="math inline">\(SU(3)\)</span> symmetry group and is described by the following gauge invariant Lagrangian density:</p>
+                <p><span id="eq:qcd_lagrangian"><span class="math display">\[
+                \mathcal{L}_\mathrm{QCD} = \bar{\psi}
+                \left( \gamma^\mu D_\mu - m_f \right) \psi -
+                \frac{1}{4}G^a_{\mu \nu} G^{\mu \nu}_a, \quad
+                \psi =
+                \begin{bmatrix}
+                \psi_r \\ \psi_g \\ \psi_b
+                \end{bmatrix}
+                \qquad(1.11)\]</span></span></p>
+                <p>where <span class="math inline">\(\psi\)</span> is a spinor quark field for a given flavour <span class="math inline">\(f \in \{ \textrm{u}, \textrm{d}, \textrm{s}, \textrm{c}, \textrm{b}, \textrm{t}\}\)</span> and quark mass <span class="math inline">\(m_f\)</span>, and each vector component represents a colour degree of freedom. Assuming that the Gell-Mann matrices <span class="math inline">\(\lambda^a\)</span> are used to define a basis for the gluon field <span class="math inline">\(A_\mu = 1/2 \lambda^a \sum A_\mu^a\)</span>, the covariant derivative can be defined as <span class="math inline">\(D_\mu= \partial_\mu - i g_s \, A_\mu\)</span>, where <span class="math inline">\(g_s\)</span> is the strong interaction coupling. In turn, the gluon field strength tensor <span class="math inline">\(G^a_{\mu \nu}\)</span> is also related with the gluon field components:</p>
+                <p><span id="eq:qcd_gluon_tensor"><span class="math display">\[
+                G^a_{\mu \nu} = \partial_\mu A_\nu^a - \partial_\nu A_\mu^a +
+                g_s f^{abc}  A_\mu^b A_\nu^c
+                \qquad(1.12)\]</span></span> where <span class="math inline">\(f^{abc}\)</span> are the structure constants of the <span class="math inline">\(SU(3)\)</span> gauge group. The last term accounts for the self-interaction of the gluon, which are the massless and electrically neutral mediators of the strong force. There are two properties of QCD that play an important role from a phenomenological standpoint: <em>confinement</em> and <em>asymptotic freedom</em>.</p>
+                <p>The property of confinement has been postulated to explain why isolated quarks and gluons are not found in nature. Quarks have only been found as part of hadrons, that are colour-neutral composite particles. Even though confinement has not been understood from first principles, because the observables of bound states in QCD at low-energies cannot be computed in a perturbative manner, there exist extensive evidence both from lattice QCD calculations and experiments. In a bound state between quarks, the effective potential includes a term that increases proportional to their distance, so when the quarks are separated by an external energetic interaction, the additional potential energy generates an additional quark-antiquark pair, leading to the formation of bound states. Similar phenomena occur for isolated gluons, which generally are referred as hadronization, and can be understood as a consequence of colour confinement. In particle colliders, successive hadronization and radiation processes led to parton showers (see Section <a href="1-3-phenomenology-of-proton-collisions.html#sec:parton_showers">1.3.4</a>).</p>
+                <p>Quark are then only found in bound states, referred to as hadrons, which can either be mesons or baryons. Mesons are formed by quark-antiquark pairs <span class="math inline">\(\textrm{q}\bar{\textrm{q}}\)</span>, while baryons are composed of three quarks <span class="math inline">\(\textrm{q}\textrm{q}\textrm{q}\)</span>. Charged and neutral pions <span class="math inline">\(\pi^{+}\)</span> (<span class="math inline">\(\textrm{u}\bar{\textrm{d}}\)</span>) and <span class="math inline">\(\pi^{0}\)</span> (<span class="math inline">\((\textrm{u}\bar{\textrm{u}}-\textrm{d}\bar{\textrm{d}})/\sqrt{2}\)</span>), kaons <span class="math inline">\(\textrm{K}^{+}\)</span> (<span class="math inline">\(\textrm{u}\bar{\textrm{s}}\)</span>) and <span class="math inline">\(\textrm{K}^{0}\)</span> (<span class="math inline">\(\textrm{d}\bar{\textrm{s}}\)</span>) and the <span class="math inline">\(\textrm{J}/\Psi\)</span> (<span class="math inline">\(\textrm{c}\bar{\textrm{c}}\)</span>) are among the most common mesons produced at particle colliders. Baryons instead include the well-known proton (<span class="math inline">\(\textrm{u}\textrm{u}\textrm{d}\)</span>) and neutron (<span class="math inline">\(\textrm{u}\textrm{d}\textrm{d}\)</span>) that together with electrons are the constituents of most of the known matter in the universe. Many more short-lived baryons exist <span class="citation">[<a href="references.html#ref-PhysRevD.98.030001" role="doc-biblioref">8</a>]</span>, in addition to the recently discovered exotic bound states referred as tetraquarks <span class="citation">[<a href="references.html#ref-PhysRevLett.112.222002" role="doc-biblioref">9</a>]</span> and pentaquarks <span class="citation">[<a href="references.html#ref-Aaij:2015tga" role="doc-biblioref">10</a>]</span>. A detailed description of the compositeness of proton is an essential element for computing LHC observables, as reviewed in Section <a href="1-3-phenomenology-of-proton-collisions.html#sec:pdfs">1.3.2</a>.</p>
+                <p>Asymptotic freedom is instead linked with the strength reduction of the strong coupling constant when higher energy scales are considered. Let us consider a renormalisation energy scale <span class="math inline">\(\mu_R^2\)</span>, which has to be often defined in order to compute physical observables which otherwise would be divergent due higher order perturbative corrections which cannot be easily calculated. This effect can be also understood as a coupling that varies with the energy scale, which is referred to as a “running” coupling constant. The strong force coupling <span class="math inline">\(\alpha_s=g_s^2/(4\pi)\)</span> can thus be approximated as a function of the renormalisation energy scale <span class="math inline">\(\mu_R^2\)</span> as follows: <span id="eq:running_coupling"><span class="math display">\[
+                \alpha_s(\mu_R^2) = \frac{\alpha_s(\mu_0^2)}{1+\alpha_s(\mu_0^2)
+                \frac{33-2n_f}{12\pi} \ln \left ( \frac{\mu_R^2}{\mu_0^2} \right)}
+                \qquad(1.13)\]</span></span> where <span class="math inline">\(\alpha_s(\mu_0^2)\)</span> is the measured coupling at a given energy and <span class="math inline">\(n_f\)</span> is total number of quark flavours which are assumed to be massless in this approximation. The strong interaction thus becomes weaker at higher energies (or short distances) allowing the perturbative computation of observables related with high-energy interactions, as discussed in Section <a href="1-3-phenomenology-of-proton-collisions.html#sec:pheno">1.3</a>. The approximation from Equation <a href="1-1-the-standard-model.html#eq:running_coupling">1.13</a> also provides a lower bound for the energy scale at which QCD can be treated perturbatively, i.e. the denominator becomes zero for an energy scale around <span class="math inline">\(200\ \textrm{MeV}\)</span>, leading to a diverging coupling constant.</p>
+                </div>
+                <div id="sec:ew_detail" class="section level3">
+                <h3><span class="header-section-number">1.1.3</span> Electroweak Interactions</h3>
+                <p>The remaining two fundamental interactions between elementary particles are the electromagnetic and the weak force. The description of the electromagnetic interaction in terms of quantum fields and gauge symmetries, leading to the development of quantum electrodynamics (QED) in the late 1940s, prompted a quest for an analogous theory for the weak force. The weak force, known to be responsible for the beta decay at the time, could effectively be modelled using Fermi theory using four-fermion interactions <span class="citation">[<a href="references.html#ref-fermi1934attempt" role="doc-biblioref">11</a>]</span> but was not renormalisable and lacked the predictive capabilities and elegance of QED. A large theoretical effort lead to an alternative description based on a <span class="math inline">\(SU(2) \otimes U(1)\)</span> symmetry, which unified electromagnetic and weak interactions <span class="citation">[<a href="references.html#ref-glashow1961partial" role="doc-biblioref">12</a>], [<a href="references.html#ref-SALAM1964168" role="doc-biblioref">13</a>]</span>, and where the weak interaction was mediated by means of charged <span class="math inline">\(W^{\pm}\)</span> and neutral <span class="math inline">\(Z\)</span> massive vector bosons. Nevertheless, the theory did not provide an explanation for the mass of the weak mediators, until the so-called Brout-Englert-Higgs <span class="citation">[<a href="references.html#ref-englert1964broken" role="doc-biblioref">14</a>]–[<a href="references.html#ref-guralnik1964global" role="doc-biblioref">16</a>]</span> mechanism for spontaneous symmetry breaking (SSB) was conceived. Higgs also noted explicitly that the mechanism would effectively create an additional scalar field, associated with a new scalar boson, whose existence could experimentally testable. The SSB mechanism was then combined with <span class="math inline">\(SU(2) \otimes U(1)\)</span> unified theory <span class="citation">[<a href="references.html#ref-weinberg1967model" role="doc-biblioref">17</a>]</span> to give rise to what is now known as <em>electroweak theory</em>, which was then proved to be renormalisable <span class="citation">[<a href="references.html#ref-THOOFT1972189" role="doc-biblioref">18</a>]</span>.</p>
+                <p>The different testable properties of electroweak phenomena were verified by experiments including the existence of weakly-interacting neutral and charged currents <span class="citation">[<a href="references.html#ref-hasert1974observation" role="doc-biblioref">19</a>]</span> and the discovery of the massive <span class="math inline">\(W^{\pm}\)</span> <span class="citation">[<a href="references.html#ref-Arnison:1983rp" role="doc-biblioref">20</a>], [<a href="references.html#ref-Banner:1983jy" role="doc-biblioref">21</a>]</span> and <span class="math inline">\(Z\)</span> <span class="citation">[<a href="references.html#ref-Arnison:1983mk" role="doc-biblioref">22</a>], [<a href="references.html#ref-Bagnaia:1983zx" role="doc-biblioref">23</a>]</span> bosons. Experimental evidence also showed that weak interactions were parity violating <span class="citation">[<a href="references.html#ref-Wu:1957my" role="doc-biblioref">24</a>]</span>, thus in the electroweak theory the fermion fields are separated in their left-handed <span class="math inline">\(\psi_\textrm{L}\)</span> and right-handed <span class="math inline">\(\psi_\textrm{R}\)</span> chiral components as follows: <span id="eq:chiral_proj"><span class="math display">\[
+                \psi_\textrm{L} = \textrm{P}_\textrm{L} \psi= \frac{1}{2} (1 - \gamma_5) \psi \quad
+                \psi_\textrm{R} = \textrm{P}_\textrm{R} \psi = \frac{1}{2} (1 + \gamma_5) \psi
+                \qquad(1.14)\]</span></span> where <span class="math inline">\(\textrm{P}_\textrm{L}\)</span> and <span class="math inline">\(\textrm{P}_\textrm{R}\)</span> are the chiral projection operators and <span class="math inline">\(\gamma_5=i \gamma_0\gamma_1\gamma_2\gamma_3\)</span> is the product of the gamma or Dirac matrices. For massless particles, chirality is equal to the helicity <span class="math inline">\(H=(\boldsymbol{p} \cdot \boldsymbol{s}) / | \boldsymbol{p} |\)</span> which is the sign of the scalar product of momenta and spin. For massive particles, chirality is still defined but is not identical to helicity which cannot be invariantly defined.</p>
+                <p>Within the electroweak theory, fermion fields are broken in into their left-handed components, which can be expressed as doublets that would transform under <span class="math inline">\(SU(2)\)</span>, and can be denoted as: <span id="eq:ew_left"><span class="math display">\[
+                L_q = \left \{
+                \begin{pmatrix} u  \\ d \end{pmatrix}_L ,
+                \begin{pmatrix} c \\  s \end{pmatrix}_L ,
+                \begin{pmatrix} t  \\ b \end{pmatrix}_L
+                 \right\} \quad
+                 L_l = \left \{
+                 \begin{pmatrix} \nu_e \\ e\end{pmatrix}_L ,
+                 \begin{pmatrix} \nu_\mu \\ \mu \end{pmatrix}_L ,
+                 \begin{pmatrix} \mu_\tau \\ \tau \end{pmatrix}_L
+                 \right\}  
+                \qquad(1.15)\]</span></span> and their right handed components, that instead can be expressed as singlets only transforming under <span class="math inline">\(U(1)\)</span>: <span id="eq:ew_right"><span class="math display">\[
+                R_u = \left \{ u_R, c_R, t_R \right \} \quad
+                R_d = \left \{ d_R, s_R, b_R \right \} \quad
+                R_l = \left \{ e_R, \mu_R, \tau_R \right \}
+                \qquad(1.16)\]</span></span> where the right-handed neutrino components are omitted in the electroweak theory (and the SM), given they are electrically neutral and would not interact weakly when right-handed.</p>
+                <p>The electroweak interactions then can be made explicit by introducing additional boson fields <span class="math inline">\(W= \{ W^1, W^2, W^3 \}\)</span> and <span class="math inline">\(B\)</span> which will interact with the fermions. Similarly in structure to QED (and also QCD as described in Section <a href="1-1-the-standard-model.html#sec:qcd_detail">1.1.2</a>), the electroweak Lagrangian before spontaneous symmetry breaking is composed by interaction terms for the previous doublet and singlet fields, characterised by a covariant derivative, and kinematic terms for both boson fields: <span id="eq:lagrangian_ew_before"><span class="math display">\[
+                \begin{aligned}
+                \mathcal{L_\textrm{EW}} =  &amp;
+                \sum^{\psi \in \{ L_q, L_l \}} \bar{\psi} (i \gamma_\mu D_L^\mu)\psi +
+                \sum^{\psi \in \{ L_q, L_l \}} \bar{\psi} (i \gamma_\mu D_R^\mu)\psi \\
+                &amp; - \frac{1}{4}  W_{\mu\nu}W^{\mu\nu} - \frac{1}{4} B_{\mu\nu}B^{\mu\nu}
+                \end{aligned}
+                \qquad(1.17)\]</span></span> where the covariant derivatives for left-handed <span class="math inline">\(D_L^\mu\)</span> and right-handed <span class="math inline">\(D_R^\mu\)</span> fermion fields are respectively defined as: <span id="eq:ew_cov_der"><span class="math display">\[
+                \begin{aligned}
+                &amp; D_L^\mu  = \partial^\mu - \frac{1}{2} g_B Y B_\mu  - \frac{1}{2} g_W \sigma W_\mu \\
+                &amp;  D_R^\mu  = \partial^\mu - \frac{1}{2} g_B Y B_\mu
+                \end{aligned}
+                \qquad(1.18)\]</span></span> where <span class="math inline">\(\sigma = \{ \sigma_1 , \sigma_2, \sigma_3\}\)</span> are the Pauli matrices and <span class="math inline">\(g_B\)</span> and <span class="math inline">\(g_W\)</span> are the coupling constants. The <span class="math inline">\(W_{\mu\nu}\)</span> and <span class="math inline">\(B_{\mu\nu}\)</span> field strength tensors from kinematic terms can in turn be obtained as: <span id="eq:ew_field_tensors"><span class="math display">\[
+                \begin{aligned}
+                &amp; W^i_{\mu\nu} = \partial_\mu  W^i_\nu - \partial_\mu  W^i_\mu -
+                g_W  \epsilon^{ijk} W^i_\mu W^k_\nu \\
+                &amp; B_{\mu\nu} =  \partial_\mu  B_\nu - \partial_\mu  B_\mu
+                \end{aligned}
+                \qquad(1.19)\]</span></span> where <span class="math inline">\(\epsilon^{ijk}\)</span> is the Levi-Civita symbol for each permutation, which is the structure constant for <span class="math inline">\(SU(2)\)</span>.</p>
+                </div>
+                <div id="sec:ewsb_higgs" class="section level3">
+                <h3><span class="header-section-number">1.1.4</span> Symmetry Breaking and the Higgs Boson</h3>
+                <p>The problem with the electroweak theory as described by the Lagrangian from Equation <a href="1-1-the-standard-model.html#eq:lagrangian_ew_before">1.17</a>, which is based on Yang-Mills gauge theory formulation, is that it is not possible to directly add mass term for the fermions nor the weak bosons to the Lagrangian density without breaking the <span class="math inline">\(SU(2)\)</span> invariance. At the time the mentioned theory was developed, there was extensive evidence not only for lepton masses but also for the weak bosons being massive; the mass required to explain why the weak interaction was short-ranged. The issue of lacking a theoretical mechanism that could explain the mass of fermions and weak boson was solved by the spontaneous symmetry breaking mechanism <span class="citation">[<a href="references.html#ref-englert1964broken" role="doc-biblioref">14</a>]–[<a href="references.html#ref-guralnik1964global" role="doc-biblioref">16</a>]</span>, which is based on postulating the existence of an additional complex scalar field <span class="math inline">\(\phi\)</span>, which is a <span class="math inline">\(SU(2)\)</span> doublet with the following structure: <span id="eq:higgs_su_field"><span class="math display">\[
+                \phi =
+                \begin{pmatrix} \phi^+ \\ \phi^0 \end{pmatrix} =
+                \begin{pmatrix} \phi_3 + i\phi_4  \\ \phi_1 + i\phi_2
+                \end{pmatrix}
+                \qquad(1.20)\]</span></span> where we made the component notation explicit because it will be relevant later. This scalar field is expected to interact with the electroweak fields <span class="math inline">\(W\)</span> and <span class="math inline">\(B\)</span> by means of the following Lagrangian: <span id="eq:scalar_lagrangian"><span class="math display">\[
+                \mathcal{L}_\textrm{scalar} = (D^H_\mu \phi)^\dagger (D^\mu \phi) - V(\phi)
+                \qquad(1.21)\]</span></span> where the covariant derivate in this case is defined as: <span id="eq:scalar_cov_der"><span class="math display">\[
+                D_H^\mu  = \partial^\mu - \frac{1}{2} i g_B Y B_\mu  - \frac{1}{2} i g_W \sigma W_\mu.
+                \qquad(1.22)\]</span></span> The minimal form for a scalar field potential <span class="math inline">\(V(\phi)\)</span>, constructed ad-hoc to provide a degenerate vacuum states and a local maximum - a required condition for spontaneous symmetry breaking, may be expressed as: <span id="eq:scalar_potential"><span class="math display">\[
+                V(\phi) = - \mu^2 \phi^\dagger \phi + \frac{1}{2} \lambda (\phi^\dagger \phi )^2
+                \qquad(1.23)\]</span></span> where both the quadratic <span class="math inline">\(\mu^2\)</span> and the quartic <span class="math inline">\(\lambda\)</span> self-interaction parameters are defined positive with this sign convention. The resulting shape for the potential is often referred as <em>mexican hat</em>, and is depicted in Figure <a href="1-1-the-standard-model.html#fig:mexican_hat">1.2</a>. The presence of a potential minimum different from the origin gives rises to a non-zero vacuum expectation value for the scalar field: <span id="eq:scale_vev"><span class="math display">\[
+                \langle \phi \rangle_0 = \frac{\mu^2}{\lambda} = v^2
+                \qquad(1.24)\]</span></span> whose values depend on the <span class="math inline">\(V(\phi)\)</span> potential parameters <span class="math inline">\(\mu^2\)</span> and <span class="math inline">\(\lambda\)</span>, and it is denoted as <span class="math inline">\(v^2\)</span> for convenience. The non-zero vacuum expectation value is thus said to spontaneously break the the <span class="math inline">\(SU(2) \otimes U(1)\)</span> symmetry, the consequences made more clear when the field is expanded around the minimum: <span id="eq:scalar_expansion"><span class="math display">\[
+                \phi = \frac{1}{\sqrt{2}} \exp(i \frac{\sigma \cdot G}{v})
+                \begin{pmatrix} 0\\ v + H \end{pmatrix}
+                \qquad(1.25)\]</span></span> as a product of a scalar field <span class="math inline">\(H\)</span> and a complex exponential of the scalar product of a three-component field <span class="math inline">\(G=\{G_1, G_2, G_3\}\)</span> with the Pauli matrices <span class="math inline">\(\sigma=\{\sigma_1, \sigma_2, \sigma_3\}\)</span>. The complex exponential phase can be then removed by a <span class="math inline">\(SU(2)\)</span> group rotation, a transformation that is often referred as <em>unitary gauge</em>. The resulting scalar field can simply be expressed as: <span id="eq:scalar_rotation"><span class="math display">\[
+                \phi = \frac{1}{\sqrt{2}}
+                \begin{pmatrix} 0\\ v + H \end{pmatrix}
+                \qquad(1.26)\]</span></span> where three of the four degrees of freedom in Equation <a href="1-1-the-standard-model.html#eq:higgs_su_field">1.20</a>, which correspond the field <span class="math inline">\(G\)</span> which would otherwise give rise to the so-called Goldstone bosons, have been removed after the gauge transformation.</p>
+                <p>Substituting the rotated scalar field from Equation <a href="1-1-the-standard-model.html#eq:scalar_rotation">1.26</a> in the Lagrangian described by Equation <a href="1-1-the-standard-model.html#eq:scalar_lagrangian">1.21</a> leads to mass-like terms for linear combinations of the <span class="math inline">\(W\)</span> and <span class="math inline">\(B\)</span> fields. In order to obtain the physical bosons observed in nature, the mass terms have to be made independent by the following transformations: <span id="eq:ew_field_change"><span class="math display">\[
+                W^\pm_\mu = \frac{1}{\sqrt{2}} \left ( W_\mu^1 \mp i W_\mu^2 \right)
+                \quad
+                \begin{pmatrix} Z_\mu \\ A_\mu \end{pmatrix} =
+                \begin{pmatrix} \cos \theta_W  &amp; -\sin \theta_W \\
+                \sin \theta_W  &amp; \cos \theta_W \end{pmatrix}
+                \begin{pmatrix} W^3_\mu \\ B_\mu \end{pmatrix}
+                \qquad(1.27)\]</span></span> where the fields <span class="math inline">\(W^+\)</span> and <span class="math inline">\(W^-\)</span> are associated with the charged weak bosons, the field <span class="math inline">\(Z\)</span> with the neutral weak boson, the electromagnetic field <span class="math inline">\(A\)</span> with the photon, and <span class="math inline">\(g_W\)</span> is the Weinberg angle which is related with the electroweak couplings according the relation <span class="math inline">\(\tan \theta_W = g_B/g_W\)</span>. Omitting for now the terms related with the <span class="math inline">\(H\)</span> field, the Lagrangian in Equation <a href="1-1-the-standard-model.html#eq:scalar_lagrangian">1.21</a> leads to the following mass terms for the electroweak force mediators after the unitary gauge and the transformation described in Equation <a href="1-1-the-standard-model.html#eq:ew_field_change">1.27</a> have been applied: <span id="eq:ew_bosons_masses"><span class="math display">\[
+                \begin{aligned}
+                \mathcal{L}_\textrm{EW bosons} =&amp;
+                \frac{1}{2} \underbrace{\left ( \frac{g_W^2 v^2}{4} \right )}_{m_{W^{+}}^2}
+                W^{+}_{\mu} W^{+\mu} +
+                \frac{1}{2} \underbrace{\left ( \frac{g_W^2 v^2}{4} \right )}_{m_{W^{-}}^2}
+                W^{-}_{\mu} W^{-\mu} + \\
+                &amp; \frac{1}{2}
+                \underbrace{\left ( \frac{g_W^2 v^2}{4\cos \theta_W} \right )}_{m_Z^2}
+                 Z_{\mu} Z^{\mu} +
+                \frac{1}{2} \underbrace{(\ 0\ )}_{m_{\gamma}^2} A_{\mu} A^{\mu}
+                \end{aligned}
+                \qquad(1.28)\]</span></span> resulting in mass terms for the massive weak bosons which depend to the weak coupling, the Weinberg angle and the vacuum expectation value of the Higgs field. The last term for the electromagnetic field has only been included to make explicit that no mass term is associated with the electromagnetic force carrier <span class="math inline">\(\gamma\)</span>. The terms related with the scalar <span class="math inline">\(H\)</span> field (and Higgs boson) are discussed later independently.</p>
+                <p>In addition to providing a mechanism that leads to mass terms for the weak force bosons, additional interactions of the various fermion fields with the scalar field <span class="math inline">\(\phi\)</span> can explain their masses. These gauge invariant terms are generally referred to as Yukawa interactions, and correspond to the following Lagrangian terms: <span id="eq:Yukawa_Lagrangian"><span class="math display">\[
+                \begin{aligned}
+                \mathcal{L}_\textrm{Yukawa} =
+                 &amp;- \lambda_l (\bar{L}_l \phi R_l +
+                 \bar{R}_l \phi^\dagger L_l ) \\
+                 &amp;- \lambda_d (\bar{L}_q \phi R_d +
+                 \bar{R}_d \phi^\dagger L_q )\\
+                 &amp;- \lambda_u (\bar{L}_q i \sigma_2 \phi^\dagger R_u +
+                 \bar{R}_u i \sigma_2 \phi L_q )
+                \end{aligned}
+                \qquad(1.29)\]</span></span> where <span class="math inline">\(\lambda_l\)</span> , <span class="math inline">\(\lambda_d\)</span> and <span class="math inline">\(\lambda_u\)</span> are the Yukawa coupling parameters. A charge-conjugate transformation <span class="math inline">\(\phi \rightarrow i \sigma_2 \phi^\dagger\)</span> is used to give mass to up-type quarks. For the quark sector, the <span class="math inline">\(\lambda_u\)</span> and <span class="math inline">\(\lambda_d\)</span> couplings can be expressed by a single non diagonal matrix in the flavour basis, referred to as Cabibbo-Kobayashi-Maskawa (CKM matrix) <span class="citation">[<a href="references.html#ref-Cabibbo:1963yz" role="doc-biblioref">25</a>], [<a href="references.html#ref-Kobayashi:1973fv" role="doc-biblioref">26</a>]</span>, which can in turn be parametrised by three angles and a complex phase. The fact that the matrix is not diagonal leads to flavour mixing, due to the mass eigenstates being different from flavour eigenstates. Another relevant property of fermion masses is that after spontaneous symmetry breaking, the fermion mass is effectively proportional to its coupling with the Higgs scalar field, which is useful to intuitively understand the dominant interactions and decays of the Higgs boson.</p>
+                <div class="figure">
+                <img src="gfx/101_chapter_1/mexican_hat.svg" alt="Figure 1.2: Graphical depiction of the mexican hat potential for the scalar field \phi. A local maximum is present at the origin, but lower energy degenerate minima exist arount it." id="fig:mexican_hat" class="vector" style="width:60.0%"><p class="caption">Figure 1.2: Graphical depiction<a href="1-1-the-standard-model.html#fn1" class="footnote-ref" id="fnref1"><sup>1</sup></a> of the mexican hat potential for the scalar field <span class="math inline">\(\phi\)</span>. A local maximum is present at the origin, but lower energy degenerate minima exist arount it.</p>
+                </div>
+                <p>In addition of giving masses to both weak bosons and fermions, the remaining degree of freedom after electroweak symmetry breaking gives rise to a scalar field <span class="math inline">\(H\)</span>. The terms of the Lagrangian concerning only <span class="math inline">\(H\)</span> may be obtained substituting Equation <a href="1-1-the-standard-model.html#eq:scalar_rotation">1.26</a> in Equation <a href="1-1-the-standard-model.html#eq:scalar_lagrangian">1.21</a>, leading to the following expression: <span id="eq:higgs_lagrangian"><span class="math display">\[
+                \mathcal{L}_{H} = \frac{1}{2} \partial_\mu H \partial^\mu H -
+                \mu^2 H^2 - \lambda v H^3 - \frac{\lambda}{4} H^4
+                \qquad(1.30)\]</span></span> where the second (quadratic term) can be interpreted as a scalar boson with a mass <span class="math inline">\(\sqrt{2\mu^2}\)</span>, which is commonly referred as the Higgs boson. A particle with a mass of <span class="math inline">\(125.09(24)\ \textrm{GeV}\)</span> <span class="citation">[<a href="references.html#ref-Aad:2015zhl" role="doc-biblioref">27</a>]</span> and consistent with the expected properties for the Higgs boson was discovered in 2012 by the CMS and ATLAS collaborations <span class="citation">[<a href="references.html#ref-higgs2012cms" role="doc-biblioref">2</a>], [<a href="references.html#ref-higgs2012atlas" role="doc-biblioref">3</a>]</span>. The cubic <span class="math inline">\(\lambda v\)</span> and quartic <span class="math inline">\(\lambda\)</span> terms will give rise to self-interaction interaction vertices. The so-called cubic or trilinear Higgs coupling is discussed in a Higgs pair search using data from the CMS experiment in Chapter <a href="5-search-for-anomalous-higgs-pair-production-with-cms.html#sec:higgs_pair">5</a>. The direct determination of the Higgs self-coupling is an relevant missing piece, and an important proof of consistency of the spontaneous symmetry breaking mechanism.</p>
+                </div>
+                </div>
+                <div class="footnotes">
+                <hr><ol start="1"><li id="fn1"><p>The figure was created by adapting the code from <a href="https://tex.stackexchange.com/a/229226">this TeX StackExchange answer</a>.<a href="1-1-the-standard-model.html#fnref1" class="footnote-back">↩</a></p></li>
+                </ol></div>
+                
+                              </section></div>
+          </div>
+        </div>
+        
+        
+      <a href="1-2-beyond-the-standard-model.html" class="navigation navigation-next" aria-label="Next page">
+                <i class="fa fa-angle-right"></i></a><a href="1-theory-of-fundamental-interactions.html" class="navigation navigation-prev" aria-label="Previous page">
+                <i class="fa fa-angle-left"></i></a></div>
+    </div>
+    
+
+    <script src="libs/gitbook/js/app.min.js"></script><script src="libs/gitbook/js/lunr.js"></script><script src="libs/gitbook/js/plugin-search.js"></script><script src="libs/gitbook/js/plugin-sharing.js"></script><script src="libs/gitbook/js/plugin-fontsettings.js"></script><script src="libs/gitbook/js/plugin-bookdown.js"></script><script src="libs/gitbook/js/jquery.highlight.js"></script><script>
+      gitbook.require(["gitbook"], function(gitbook) {
+        gitbook.start({
+"sharing": {
+"github": true,
+"facebook": false,
+"twitter": true,
+"google": false,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"all": ["facebook","twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"history": {
+"link": null,
+"text": null
+},
+"download": ["thesis.pdf"],
+"toc": {
+"collapse": "none"
+}
+});
+});
+    </script><script>
+      (function () {
+        var script = document.createElement("script");
+        script.type = "text/javascript";
+        var src = "true";
+        if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+        if (location.protocol !== "file:" && /^https?:/.test(src))
+          src = src.replace(/^https?:/, '');
+        script.src = src;
+        document.getElementsByTagName("head")[0].appendChild(script);
+      })();
+    </script><script src="https://hypothes.is/embed.js" async></script><link href="css/annotator.css" rel="stylesheet"></body></html>

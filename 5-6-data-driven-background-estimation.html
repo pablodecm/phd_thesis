@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang=""><head><script async src="https://www.googletagmanager.com/gtag/js?id=UA-71094563-2"></script><script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-71094563-2');
+    </script><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><title>Statistical Learning and Inference at Particle Collider Experiments</title><meta name="description" content="Statistical Learning and Inference at Particle Collider Experiments"><meta name="generator" content="bookdown #bookdown:version# and GitBook 2.6.7"><meta property="og:title" content="Statistical Learning and Inference at Particle Collider Experiments"><meta property="og:type" content="book"><meta name="github-repo" content="pablodecm/phd_thesis"><meta name="twitter:card" content="summary"><meta name="twitter:title" content="Statistical Learning and Inference at Particle Collider Experiments"><meta name="author" content="Pablo de Castro Manzano"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black"><script src="libs/jquery/jquery.min.js"></script><link href="libs/gitbook/css/style.css" rel="stylesheet"><link href="libs/gitbook/css/plugin-table.css" rel="stylesheet"><link href="libs/gitbook/css/plugin-bookdown.css" rel="stylesheet"><link href="libs/gitbook/css/plugin-highlight.css" rel="stylesheet"><link href="libs/gitbook/css/plugin-search.css" rel="stylesheet"><link href="libs/gitbook/css/plugin-fontsettings.css" rel="stylesheet"><link href="css/style.css" rel="stylesheet"><link href="css/toc.css" rel="stylesheet"></head><body>
+
+    
+    <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+      <div class="book-summary">
+        <nav role="navigation"><ul class="summary"><li>
+              <a href="./">PhD Thesis - Pablo de Castro</a>
+            </li>
+            <li class="divider">
+            <li class="chapter" data-level="" data-path="abstract.html">
+              <a href="abstract.html"><i class="fa fa-check"></i> Abstract</a>
+            </li>
+            <li class="chapter" data-level="" data-path="preface.html">
+              <a href="preface.html"><i class="fa fa-check"></i> Preface</a>
+            </li>
+            <li class="chapter" data-level="" data-path="acknowledgements.html">
+              <a href="acknowledgements.html"><i class="fa fa-check"></i> Acknowledgements</a>
+            </li>
+            <li class="chapter" data-level="" data-path="introduction.html">
+              <a href="introduction.html"><i class="fa fa-check"></i> Introduction</a>
+            </li>
+            <li class="chapter" data-level="1" data-path="1-theory-of-fundamental-interactions.html">
+              <a href="1-theory-of-fundamental-interactions.html"><i class="fa fa-check"></i><b>1</b> Theory of Fundamental Interactions</a>
+              <ul><li class="chapter" data-level="1.1" data-path="1-1-the-standard-model.html">
+                  <a href="1-1-the-standard-model.html"><i class="fa fa-check"></i><b>1.1</b> The Standard Model</a>
+                  <ul><li class="chapter" data-level="1.1.1" data-path="1-1-the-standard-model.html">
+                      <a href="1-1-the-standard-model.html#sec:qft_basics"><i class="fa fa-check"></i><b>1.1.1</b> Essentials of Quantum Field Theory</a>
+                    </li>
+                    <li class="chapter" data-level="1.1.2" data-path="1-1-the-standard-model.html">
+                      <a href="1-1-the-standard-model.html#sec:qcd_detail"><i class="fa fa-check"></i><b>1.1.2</b> Quantum Chromodynamics</a>
+                    </li>
+                    <li class="chapter" data-level="1.1.3" data-path="1-1-the-standard-model.html">
+                      <a href="1-1-the-standard-model.html#sec:ew_detail"><i class="fa fa-check"></i><b>1.1.3</b> Electroweak Interactions</a>
+                    </li>
+                    <li class="chapter" data-level="1.1.4" data-path="1-1-the-standard-model.html">
+                      <a href="1-1-the-standard-model.html#sec:ewsb_higgs"><i class="fa fa-check"></i><b>1.1.4</b> Symmetry Breaking and the Higgs Boson</a>
+                    </li>
+                  </ul></li>
+                <li class="chapter" data-level="1.2" data-path="1-2-beyond-the-standard-model.html">
+                  <a href="1-2-beyond-the-standard-model.html"><i class="fa fa-check"></i><b>1.2</b> Beyond the Standard Model</a>
+                  <ul><li class="chapter" data-level="1.2.1" data-path="1-2-beyond-the-standard-model.html">
+                      <a href="1-2-beyond-the-standard-model.html#known-limitations"><i class="fa fa-check"></i><b>1.2.1</b> Known Limitations</a>
+                    </li>
+                    <li class="chapter" data-level="1.2.2" data-path="1-2-beyond-the-standard-model.html">
+                      <a href="1-2-beyond-the-standard-model.html#sec:possible_ext"><i class="fa fa-check"></i><b>1.2.2</b> Possible Extensions</a>
+                    </li>
+                  </ul></li>
+                <li class="chapter" data-level="1.3" data-path="1-3-phenomenology-of-proton-collisions.html">
+                  <a href="1-3-phenomenology-of-proton-collisions.html"><i class="fa fa-check"></i><b>1.3</b> Phenomenology of Proton Collisions</a>
+                  <ul><li class="chapter" data-level="1.3.1" data-path="1-3-phenomenology-of-proton-collisions.html">
+                      <a href="1-3-phenomenology-of-proton-collisions.html#sec:main_obs"><i class="fa fa-check"></i><b>1.3.1</b> Main Observables</a>
+                    </li>
+                    <li class="chapter" data-level="1.3.2" data-path="1-3-phenomenology-of-proton-collisions.html">
+                      <a href="1-3-phenomenology-of-proton-collisions.html#sec:pdfs"><i class="fa fa-check"></i><b>1.3.2</b> Parton Distribution Functions</a>
+                    </li>
+                    <li class="chapter" data-level="1.3.3" data-path="1-3-phenomenology-of-proton-collisions.html">
+                      <a href="1-3-phenomenology-of-proton-collisions.html#sec:factorisation"><i class="fa fa-check"></i><b>1.3.3</b> Factorisation and Generation of Hard Processes</a>
+                    </li>
+                    <li class="chapter" data-level="1.3.4" data-path="1-3-phenomenology-of-proton-collisions.html">
+                      <a href="1-3-phenomenology-of-proton-collisions.html#sec:parton_showers"><i class="fa fa-check"></i><b>1.3.4</b> Hadronization and Parton Showers</a>
+                    </li>
+                  </ul></li>
+              </ul></li>
+            <li class="chapter" data-level="2" data-path="2-experiments-at-particle-colliders.html">
+              <a href="2-experiments-at-particle-colliders.html"><i class="fa fa-check"></i><b>2</b> Experiments at Particle Colliders</a>
+              <ul><li class="chapter" data-level="2.1" data-path="2-1-the-large-hadron-collider.html">
+                  <a href="2-1-the-large-hadron-collider.html"><i class="fa fa-check"></i><b>2.1</b> The Large Hadron Collider</a>
+                  <ul><li class="chapter" data-level="2.1.1" data-path="2-1-the-large-hadron-collider.html">
+                      <a href="2-1-the-large-hadron-collider.html#injection-and-acceleration-chain"><i class="fa fa-check"></i><b>2.1.1</b> Injection and Acceleration Chain</a>
+                    </li>
+                    <li class="chapter" data-level="2.1.2" data-path="2-1-the-large-hadron-collider.html">
+                      <a href="2-1-the-large-hadron-collider.html#sec:op_pars"><i class="fa fa-check"></i><b>2.1.2</b> Operation Parameters</a>
+                    </li>
+                    <li class="chapter" data-level="2.1.3" data-path="2-1-the-large-hadron-collider.html">
+                      <a href="2-1-the-large-hadron-collider.html#sec:pile_up"><i class="fa fa-check"></i><b>2.1.3</b> Multiple Hadron Interactions</a>
+                    </li>
+                    <li class="chapter" data-level="2.1.4" data-path="2-1-the-large-hadron-collider.html">
+                      <a href="2-1-the-large-hadron-collider.html#sec:lhc_experiments"><i class="fa fa-check"></i><b>2.1.4</b> Experiments</a>
+                    </li>
+                  </ul></li>
+                <li class="chapter" data-level="2.2" data-path="2-2-the-compact-muon-solenoid.html">
+                  <a href="2-2-the-compact-muon-solenoid.html"><i class="fa fa-check"></i><b>2.2</b> The Compact Muon Solenoid</a>
+                  <ul><li class="chapter" data-level="2.2.1" data-path="2-2-the-compact-muon-solenoid.html">
+                      <a href="2-2-the-compact-muon-solenoid.html#sec:exp_geom"><i class="fa fa-check"></i><b>2.2.1</b> Experimental Geometry</a>
+                    </li>
+                    <li class="chapter" data-level="2.2.2" data-path="2-2-the-compact-muon-solenoid.html">
+                      <a href="2-2-the-compact-muon-solenoid.html#sec:cms_magnet"><i class="fa fa-check"></i><b>2.2.2</b> Magnet</a>
+                    </li>
+                    <li class="chapter" data-level="2.2.3" data-path="2-2-the-compact-muon-solenoid.html">
+                      <a href="2-2-the-compact-muon-solenoid.html#sec:cms_tracking"><i class="fa fa-check"></i><b>2.2.3</b> Tracking System</a>
+                    </li>
+                    <li class="chapter" data-level="2.2.4" data-path="2-2-the-compact-muon-solenoid.html">
+                      <a href="2-2-the-compact-muon-solenoid.html#sec:cms_ecal"><i class="fa fa-check"></i><b>2.2.4</b> Electromagnetic Calorimeter</a>
+                    </li>
+                    <li class="chapter" data-level="2.2.5" data-path="2-2-the-compact-muon-solenoid.html">
+                      <a href="2-2-the-compact-muon-solenoid.html#sec:cms_hcal"><i class="fa fa-check"></i><b>2.2.5</b> Hadronic Calorimeter</a>
+                    </li>
+                    <li class="chapter" data-level="2.2.6" data-path="2-2-the-compact-muon-solenoid.html">
+                      <a href="2-2-the-compact-muon-solenoid.html#sec:cms_muon"><i class="fa fa-check"></i><b>2.2.6</b> Muon System</a>
+                    </li>
+                    <li class="chapter" data-level="2.2.7" data-path="2-2-the-compact-muon-solenoid.html">
+                      <a href="2-2-the-compact-muon-solenoid.html#sec:trigger"><i class="fa fa-check"></i><b>2.2.7</b> Trigger and Data Acquisition</a>
+                    </li>
+                  </ul></li>
+                <li class="chapter" data-level="2.3" data-path="2-3-event-simulation-and-reconstruction.html">
+                  <a href="2-3-event-simulation-and-reconstruction.html"><i class="fa fa-check"></i><b>2.3</b> Event Simulation and Reconstruction</a>
+                  <ul><li class="chapter" data-level="2.3.1" data-path="2-3-event-simulation-and-reconstruction.html">
+                      <a href="2-3-event-simulation-and-reconstruction.html#sec:gen_view"><i class="fa fa-check"></i><b>2.3.1</b> A Generative View</a>
+                    </li>
+                    <li class="chapter" data-level="2.3.2" data-path="2-3-event-simulation-and-reconstruction.html">
+                      <a href="2-3-event-simulation-and-reconstruction.html#sec:detector_simulation"><i class="fa fa-check"></i><b>2.3.2</b> Detector Simulation</a>
+                    </li>
+                    <li class="chapter" data-level="2.3.3" data-path="2-3-event-simulation-and-reconstruction.html">
+                      <a href="2-3-event-simulation-and-reconstruction.html#sec:event_reco"><i class="fa fa-check"></i><b>2.3.3</b> Event Reconstruction</a>
+                    </li>
+                  </ul></li>
+              </ul></li>
+            <li class="chapter" data-level="3" data-path="3-statistical-modelling-and-inference-at-the-lhc.html">
+              <a href="3-statistical-modelling-and-inference-at-the-lhc.html"><i class="fa fa-check"></i><b>3</b> Statistical Modelling and Inference at the LHC</a>
+              <ul><li class="chapter" data-level="3.1" data-path="3-1-statistical-modelling.html">
+                  <a href="3-1-statistical-modelling.html"><i class="fa fa-check"></i><b>3.1</b> Statistical Modelling</a>
+                  <ul><li class="chapter" data-level="3.1.1" data-path="3-1-statistical-modelling.html">
+                      <a href="3-1-statistical-modelling.html#sec:model_overview"><i class="fa fa-check"></i><b>3.1.1</b> Overview</a>
+                    </li>
+                    <li class="chapter" data-level="3.1.2" data-path="3-1-statistical-modelling.html">
+                      <a href="3-1-statistical-modelling.html#simulation-as-generative-modelling"><i class="fa fa-check"></i><b>3.1.2</b> Simulation as Generative Modelling</a>
+                    </li>
+                    <li class="chapter" data-level="3.1.3" data-path="3-1-statistical-modelling.html">
+                      <a href="3-1-statistical-modelling.html#sec:dim_reduction"><i class="fa fa-check"></i><b>3.1.3</b> Dimensionality Reduction</a>
+                    </li>
+                    <li class="chapter" data-level="3.1.4" data-path="3-1-statistical-modelling.html">
+                      <a href="3-1-statistical-modelling.html#sec:known_unknowns"><i class="fa fa-check"></i><b>3.1.4</b> Known Unknowns</a>
+                    </li>
+                  </ul></li>
+                <li class="chapter" data-level="3.2" data-path="3-2-statistical-inference.html">
+                  <a href="3-2-statistical-inference.html"><i class="fa fa-check"></i><b>3.2</b> Statistical Inference</a>
+                  <ul><li class="chapter" data-level="3.2.1" data-path="3-2-statistical-inference.html">
+                      <a href="3-2-statistical-inference.html#sec:likelihood-free"><i class="fa fa-check"></i><b>3.2.1</b> Likelihood-Free Inference</a>
+                    </li>
+                    <li class="chapter" data-level="3.2.2" data-path="3-2-statistical-inference.html">
+                      <a href="3-2-statistical-inference.html#sec:hypo_test"><i class="fa fa-check"></i><b>3.2.2</b> Hypothesis Testing</a>
+                    </li>
+                    <li class="chapter" data-level="3.2.3" data-path="3-2-statistical-inference.html">
+                      <a href="3-2-statistical-inference.html#sec:param_est"><i class="fa fa-check"></i><b>3.2.3</b> Parameter Estimation</a>
+                    </li>
+                  </ul></li>
+              </ul></li>
+            <li class="chapter" data-level="4" data-path="4-machine-learning-in-high-energy-physics.html">
+              <a href="4-machine-learning-in-high-energy-physics.html"><i class="fa fa-check"></i><b>4</b> Machine Learning in High-Energy Physics</a>
+              <ul><li class="chapter" data-level="4.1" data-path="4-1-problem-description.html">
+                  <a href="4-1-problem-description.html"><i class="fa fa-check"></i><b>4.1</b> Problem Description</a>
+                  <ul><li class="chapter" data-level="4.1.1" data-path="4-1-problem-description.html">
+                      <a href="4-1-problem-description.html#sec:supervised"><i class="fa fa-check"></i><b>4.1.1</b> Probabilistic Classification and Regression</a>
+                    </li>
+                  </ul></li>
+                <li class="chapter" data-level="4.2" data-path="4-2-machine-learning-techniques.html">
+                  <a href="4-2-machine-learning-techniques.html"><i class="fa fa-check"></i><b>4.2</b> Machine Learning Techniques</a>
+                  <ul><li class="chapter" data-level="4.2.1" data-path="4-2-machine-learning-techniques.html">
+                      <a href="4-2-machine-learning-techniques.html#sec:boosted_decision_trees"><i class="fa fa-check"></i><b>4.2.1</b> Boosted Decision Trees</a>
+                    </li>
+                    <li class="chapter" data-level="4.2.2" data-path="4-2-machine-learning-techniques.html">
+                      <a href="4-2-machine-learning-techniques.html#sec:ann"><i class="fa fa-check"></i><b>4.2.2</b> Artificial Neural Networks</a>
+                    </li>
+                  </ul></li>
+                <li class="chapter" data-level="4.3" data-path="4-3-applications-in-high-energy-physics.html">
+                  <a href="4-3-applications-in-high-energy-physics.html"><i class="fa fa-check"></i><b>4.3</b> Applications in High Energy Physics</a>
+                  <ul><li class="chapter" data-level="4.3.1" data-path="4-3-applications-in-high-energy-physics.html">
+                      <a href="4-3-applications-in-high-energy-physics.html#sec:sig_vs_bkg"><i class="fa fa-check"></i><b>4.3.1</b> Signal vs Background Classification</a>
+                    </li>
+                    <li class="chapter" data-level="4.3.2" data-path="4-3-applications-in-high-energy-physics.html">
+                      <a href="4-3-applications-in-high-energy-physics.html#sec:particle_id_reg"><i class="fa fa-check"></i><b>4.3.2</b> Particle Identification and Regression</a>
+                    </li>
+                  </ul></li>
+              </ul></li>
+            <li class="chapter" data-level="5" data-path="5-search-for-anomalous-higgs-pair-production-with-cms.html">
+              <a href="5-search-for-anomalous-higgs-pair-production-with-cms.html"><i class="fa fa-check"></i><b>5</b> Search for Anomalous Higgs Pair Production with CMS</a>
+              <ul><li class="chapter" data-level="5.1" data-path="5-1-introduction.html">
+                  <a href="5-1-introduction.html"><i class="fa fa-check"></i><b>5.1</b> Introduction</a>
+                </li>
+                <li class="chapter" data-level="5.2" data-path="5-2-higgs-pair-production-and-anomalous-couplings.html">
+                  <a href="5-2-higgs-pair-production-and-anomalous-couplings.html"><i class="fa fa-check"></i><b>5.2</b> Higgs Pair Production and Anomalous Couplings</a>
+                </li>
+                <li class="chapter" data-level="5.3" data-path="5-3-analysis-strategy.html">
+                  <a href="5-3-analysis-strategy.html"><i class="fa fa-check"></i><b>5.3</b> Analysis Strategy</a>
+                </li>
+                <li class="chapter" data-level="5.4" data-path="5-4-trigger-and-datasets.html">
+                  <a href="5-4-trigger-and-datasets.html"><i class="fa fa-check"></i><b>5.4</b> Trigger and Datasets</a>
+                </li>
+                <li class="chapter" data-level="5.5" data-path="5-5-event-selection.html">
+                  <a href="5-5-event-selection.html"><i class="fa fa-check"></i><b>5.5</b> Event Selection</a>
+                </li>
+                <li class="chapter" data-level="5.6" data-path="5-6-data-driven-background-estimation.html">
+                  <a href="5-6-data-driven-background-estimation.html"><i class="fa fa-check"></i><b>5.6</b> Data-Driven Background Estimation</a>
+                  <ul><li class="chapter" data-level="5.6.1" data-path="5-6-data-driven-background-estimation.html">
+                      <a href="5-6-data-driven-background-estimation.html#sec:hem_mixing"><i class="fa fa-check"></i><b>5.6.1</b> Hemisphere Mixing</a>
+                    </li>
+                    <li class="chapter" data-level="5.6.2" data-path="5-6-data-driven-background-estimation.html">
+                      <a href="5-6-data-driven-background-estimation.html#sec:bkg_validation"><i class="fa fa-check"></i><b>5.6.2</b> Background Validation</a>
+                    </li>
+                  </ul></li>
+                <li class="chapter" data-level="5.7" data-path="5-7-systematic-uncertainties.html">
+                  <a href="5-7-systematic-uncertainties.html"><i class="fa fa-check"></i><b>5.7</b> Systematic Uncertainties</a>
+                </li>
+                <li class="chapter" data-level="5.8" data-path="5-8-analysis-results.html">
+                  <a href="5-8-analysis-results.html"><i class="fa fa-check"></i><b>5.8</b> Analysis Results</a>
+                </li>
+                <li class="chapter" data-level="5.9" data-path="5-9-combination-with-other-decay-channels.html">
+                  <a href="5-9-combination-with-other-decay-channels.html"><i class="fa fa-check"></i><b>5.9</b> Combination with Other Decay Channels</a>
+                </li>
+              </ul></li>
+            <li class="chapter" data-level="6" data-path="6-inference-aware-neural-optimisation.html">
+              <a href="6-inference-aware-neural-optimisation.html"><i class="fa fa-check"></i><b>6</b> Inference-Aware Neural Optimisation</a>
+              <ul><li class="chapter" data-level="6.1" data-path="6-1-introduction.html">
+                  <a href="6-1-introduction.html"><i class="fa fa-check"></i><b>6.1</b> Introduction</a>
+                </li>
+                <li class="chapter" data-level="6.2" data-path="6-2-problem-statement.html">
+                  <a href="6-2-problem-statement.html"><i class="fa fa-check"></i><b>6.2</b> Problem Statement</a>
+                </li>
+                <li class="chapter" data-level="6.3" data-path="6-3-method.html">
+                  <a href="6-3-method.html"><i class="fa fa-check"></i><b>6.3</b> Method</a>
+                </li>
+                <li class="chapter" data-level="6.4" data-path="6-4-related-work.html">
+                  <a href="6-4-related-work.html"><i class="fa fa-check"></i><b>6.4</b> Related Work</a>
+                </li>
+                <li class="chapter" data-level="6.5" data-path="6-5-experiments.html">
+                  <a href="6-5-experiments.html"><i class="fa fa-check"></i><b>6.5</b> Experiments</a>
+                  <ul><li class="chapter" data-level="6.5.1" data-path="6-5-experiments.html">
+                      <a href="6-5-experiments.html#sec:synthetic_mixture"><i class="fa fa-check"></i><b>6.5.1</b> 3D Synthetic Mixture</a>
+                    </li>
+                  </ul></li>
+              </ul></li>
+            <li class="chapter" data-level="7" data-path="7-conclusions-and-prospects.html">
+              <a href="7-conclusions-and-prospects.html"><i class="fa fa-check"></i><b>7</b> Conclusions and Prospects</a>
+            </li>
+            <li class="chapter" data-level="" data-path="references.html">
+              <a href="references.html"><i class="fa fa-check"></i> References</a>
+            </li>
+          </ul></nav></div>
+
+      <div class="book-body">
+        <div class="body-inner">
+          <div class="book-header" role="navigation">
+            <h1>
+              <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Statistical Learning and Inference at Particle Collider Experiments</a>
+            </h1>
+          </div>
+
+          <div class="page-wrapper" tabindex="-1" role="main">
+            <div class="page-inner">
+
+              <section class="normal" id="section-"><div id="sec:bkg_est" class="section level2">
+                <h2><span class="header-section-number">5.6</span> Data-Driven Background Estimation</h2>
+                <p>The principal background of this analysis is composed of events with several jets coming from multiple quarks and gluon production from QCD processes. While simulated observations of multi-jet QCD processes can be generated, and were in fact readily available at the time this analysis was carried out, they are in practice not useful to realistically model the background contribution for the purposes of this work. Large datasets modelling inclusive QCD multi-jet production were produced in the CMS simulation campaign, divided in various consecutive range of total generator level scalar transverse momenta sum <span class="math inline">\(H_T^{\textrm{gen}}\)</span>. Leaving aside issues regarding the accuracy of the modelling of high jet multiplicity event provided by current leading order plus parton shower generators, the main obstacle for using the simulated samples is that their equivalent luminosity in the <span class="math inline">\(H_T^{\textrm{gen}}\)</span> relevant for this analysis is several orders of magnitude smaller than the actual luminosity.</p>
+                <p>As a rule of thumb, to accurately model a mixture component using simulated samples, the number of simulated events has to be at least 10 times more than the number of expected events, or the modelling uncertainty due to the limited simulation statistics will greatly degrade subsequent inference. This problem is made worse when a significant fraction of the simulated dataset has to be used for training a probabilistic classifier and thus cannot be used for computing any expected value, because they might lead to biased estimations. A naive solution could be to simulate more events, but given the large cross section of low energy QCD processes, the total number of QCD inclusive simulated events required would be well over 1 billion which is too a large number given the total simulation budget available for the CMS experiment.</p>
+                <p>Another option, which was initially explored for modelling the QCD background in this analysis, was to only simulate events that pass a selection at parton level, e.g. with two or more high energy b-quarks. This could provide a radical reduction on the total computing time needed for simulation, especially if combined with the approximate simulation techniques described in Section <a href="2-3-event-simulation-and-reconstruction.html#sec:detector_simulation">2.3.2</a>, because the associated cross section can be greatly reduced. However, such generator level filtering is difficult to implement in a way that relevant events are not omitted after the event selection. Because of that, the desired level of modelling accuracy could not be achieved with this method.</p>
+                <p>The previously mentioned reasons motivate the direct used of real data to estimate the background contribution, as discussed in Section <a href="3-1-statistical-modelling.html#sec:data_driven">3.1.4.2</a>. Data-driven background estimation can be notoriously difficult and often several assumptions about the properties of the background have to be made. For example, the corresponding search by the ATLAS collaboration <span class="citation">[<a href="references.html#ref-Aaboud:2018knk" role="doc-biblioref">168</a>]</span>, models the background contribution with an independent data sample characterised by the same trigger and selection but for the looser requirement of only two b-tagged reconstructed jets. These events are then re-weighted using a factor that accounts for the probability that QCD processes produce two additional b-tagged jets, where the mentioned weight is also obtained from a data side band where not significant signal is expected. While that approach is proven effective when using the reconstructed <span class="math inline">\(M_\textrm{H}\)</span> distribution for inference, it cannot be easily extended to a situation where all the multi-dimensional features of the data require to be precisely modelled, as is the case when the output of a probabilistic classifier is used as the summary statistic.</p>
+                <p>In the analysis presented here a different path was followed, based on developing a new data-driven background estimation method based on the concept of hemisphere mixing and some assumptions of the phase space characteristics of QCD multi-jet processes <span class="citation">[<a href="references.html#ref-DeCastroManzano:2017yqy" role="doc-biblioref">147</a>]</span>. The technique, which is described in Section <a href="5-6-data-driven-background-estimation.html#sec:hem_mixing">5.6.1</a>, directly attempts to create an artificial dataset using the the whole original dataset as input, hence can be used both for training the probabilistic classifier and to model the distribution of the final summary statistic used for inference. Because some aspects of the method are ad-hoc and cannot be formally demonstrated, it has been calibrated and then validated using a signal-depleted control region, a procedure that is discussed in Section <a href="5-7-systematic-uncertainties.html#sec:syst_unc">5.7</a>.</p>
+                <div id="sec:hem_mixing" class="section level3">
+                <h3><span class="header-section-number">5.6.1</span> Hemisphere Mixing</h3>
+                <p>The basis of the data-driven background estimation method here proposed is to divide each event in two parts, referred to as hemispheres, so each can be substituted by an hemisphere from a different event in order to produce an artificial dataset. A graphical illustration of the hemisphere mixing technique used in this work is provided in Figure <a href="5-6-data-driven-background-estimation.html#fig:hemisphere_mixing">5.6</a>. The transverse thrust axis, defined as the axis in the <span class="math inline">\(x-y\)</span> plane for which the absolute value sum of the projections of the transverse momenta of the selected subset of reconstructed jets is maximal, is used as a reference to divide each original event in two halves perpendicularly to the mentioned axis. This procedure is carried out for all the collected events that pass the selection described in Section <a href="5-5-event-selection.html#sec:event_selection">5.5</a>, creating a dataset (or library) of hemispheres with as many rows as twice as many rows as the number of original events. Each half, or hemisphere, can be basically reduced to a set of reconstructed jets with their directions relative to the thrust axis. Once the hemisphere library has been created, each hemisphere in the original event can be substituted by a similar one by from a different event, once an appropriate distance metric has been defined. The procedure results in an artificial dataset that can be used to model the background component.</p>
+                <div class="figure">
+                <img src="gfx/105_chapter_5/hemisphere_mixing.svg" alt="Figure 5.6: Schematic depiction of the hemisphere mixing background estimation procedure. The red arrows represent b-tagged jets and the blue arrows represent jets that were not b-tagged in an event. The first step includes finding the thrust axis in the x-y plane. The event is then divided in two hemispheres, each composed of a set of jets, by the plane perpendicular to the thrust axis. All these hemispheres are used to create a dataset (or library) of hemispheres. For each original event, a artificial event can be created by substituting each original hemisphere with its closest neighbours, once a distance metric for hemispheres has been defined. Figure adapted from [148]." id="fig:hemisphere_mixing" class="vector" style="width:100.0%"><p class="caption">Figure 5.6: Schematic depiction of the hemisphere mixing background estimation procedure. The red arrows represent b-tagged jets and the blue arrows represent jets that were not b-tagged in an event. The first step includes finding the thrust axis in the <span class="math inline">\(x-y\)</span> plane. The event is then divided in two hemispheres, each composed of a set of jets, by the plane perpendicular to the thrust axis. All these hemispheres are used to create a dataset (or library) of hemispheres. For each original event, a artificial event can be created by substituting each original hemisphere with its closest neighbours, once a distance metric for hemispheres has been defined. Figure adapted from <span class="citation">[<a href="references.html#ref-Sirunyan:2018tki" role="doc-biblioref">148</a>]</span>.</p>
+                </div>
+                <p>The matching between the original and the replacement hemisphere is done by finding the pair minimising a inter-hemisphere distance. The mentioned distance is a function of the set of reconstructed jets contained within each hemisphere, and it is a combination of discrete and continuous variables. The discrete requirement for matching original hemispheres with those in the library is that they have the same number of jets <span class="math inline">\(N_j^h\)</span> and b-tagged jets <span class="math inline">\(N_b^h\)</span>, which ensures a similar jet multiplicity distributions for the artificial data. The previous condition also avoids creating artificial events that do not pass the event selection, e.g. by combining an hemisphere with 2 b-tagged jets with another one including only one b-tagged jet, which would result in the artificial events having less that four b-tagged jets. For infrequent jet and b-jet multiplicity categories, the discrete condition is relaxed by considering a unique category. This is for example the case when four jets or b-jets are present in the hemisphere. In addition to the mentioned categorisation, the following continuous distance metric between the original hemisphere <span class="math inline">\(\boldsymbol{h}_o\)</span> and each hemisphere from the library <span class="math inline">\(\boldsymbol{h}_q\)</span> is defined as a measure of similarity: <span id="eq:hem_metric"><span class="math display">\[
+                \begin{aligned}
+                d(\boldsymbol{h}_o,\boldsymbol{h}_q)^2 =
+                \frac{ \left ( M_\textrm{t}(\boldsymbol{h}_o) - M_\textrm{t}(\boldsymbol{h}_q) \right )^2}{
+                \textrm{Var}(M_\textrm{t})} +
+                \frac{ \left ( T(\boldsymbol{h}_o) - T(\boldsymbol{h}_q) \right )^2}{
+                \textrm{Var}(T)} \\ +
+                \frac{ \left ( T_a(\boldsymbol{h}_o) - T_a(\boldsymbol{h}_q) \right )^2}{
+                \textrm{Var}(T_a)} +
+                \frac{ \left ( P_z(\boldsymbol{h}_o) - P_z(\boldsymbol{h}_q) \right )^2}{
+                \textrm{Var}(P_z)}
+                \end{aligned}
+                \qquad(5.6)\]</span></span> where <span class="math inline">\(M_\textrm{t}(\boldsymbol{h})\)</span> is the invariant mass of the system composed of all the jets contained in the hemisphere, <span class="math inline">\(T(\boldsymbol{h})\)</span> is the scalar sum of all the transverse momenta projection of all jets of an hemisphere to the thrust axis, <span class="math inline">\(T_a(\boldsymbol{h})\)</span> is the scalar sum of the transverse momenta projections over a axis orthogonal to the thrust axis, and <span class="math inline">\(P_z(\boldsymbol{h})\)</span> is the absolute value of the projection of the vectorial sum of the jet momenta along the beam axis. The denominators in Equation <a href="5-6-data-driven-background-estimation.html#eq:hem_metric">5.6</a> are the variances of each of the variables and discrete category, as estimated directly from the library of hemispheres. This normalisation factor is included in order to reduce the effect of the scale of the magnitude of each component to the distance metric.</p>
+                <p>The substitute for each original hemisphere is found by finding the <span class="math inline">\(k^\textrm{th}\)</span> nearest-neighbour hemisphere in the library. The closest hemisphere (<span class="math inline">\(k=0\)</span>), corresponding to zero distance, would be the very same original hemisphere which is present in the library. Rather, the hemisphere is substituted with its <span class="math inline">\(k^{\textrm{th}}\)</span> nearest neighbour, only considering <span class="math inline">\(k\geq 1\)</span>. Assuming forward-backward symmetry in the <span class="math inline">\(z\)</span> direction and <span class="math inline">\(\phi\)</span> rotational symmetry, and given that the distance metric <span class="math inline">\(d(\boldsymbol{h}_o,\boldsymbol{h}_q)^2\)</span> does not depend on the sign and absolute magnitude of those quantities, all the jets in the hemisphere can be rotated in <span class="math inline">\(\phi\)</span> or their <span class="math inline">\(p_z\)</span> sign to match the original hemisphere properties. It is possible to considering different <span class="math inline">\(k\)</span> neighbours for each hemisphere, obtaining a different artificial dataset in each case. Each of this artificial datasets can be labelled by a tuple <span class="math inline">\((k_1, k_2)\)</span>, where <span class="math inline">\(k_1\)</span> indicate the ordinal of the neighbour used as the substitute for the original hemisphere corresponding to a <span class="math inline">\(\Delta \phi &gt;0\)</span> with respect to the thrust vector rotated <span class="math inline">\(\pi/2\)</span> clock-wise, and <span class="math inline">\(k_2\)</span> corresponds to the ordinal of the neighbour substituting the other original hemisphere. Consequently, if up to <span class="math inline">\(k_\textrm{max}\)</span> neighbours are considered for each hemispheres, a total of <span class="math inline">\(k_\textrm{max}^2\)</span> artificial datasets, each of the same size of the original dataset, could be composed by considering all the permutations.</p>
+                <p>The rationale of the above technique rests on the fact that QCD multi-jet production at leading-order corresponds to a <span class="math inline">\(2 \rightarrow 2\)</span> parton scattering process, which is then affected by higher order corrections such such as QCD radiation, pileup or multiple interactions. By breaking the event in two hemispheres using the transverse thrust, the aim is to separate the outcome of the processes associated with each of the two final state partons in the mentioned <span class="math inline">\(2 \rightarrow 2\)</span> approximation. The hemisphere distance metric attempts to preserve the main properties of the event, while avoiding strong correlations between jets in the two hemispheres. The goal of the hemisphere mixing procedure is then to obtain an artificial dataset where the effect of the signal present in the original dataset are effectively removed. This has been tested by injecting up to 100 times the expected SM contribution of simulated HH production events to a dataset of simulated QCD multi-jet events <span class="citation">[<a href="references.html#ref-DeCastroManzano:2017yqy" role="doc-biblioref">147</a>]</span>. The distributions of the various variables after hemisphere mixing are not affected by the presence of signal, and are compatible with the QCD multi-jet component, which is the majority component. The level of agreement for the variables used as input of the probabilistic classifier in a control region will be discussed in more detail in Section <a href="5-6-data-driven-background-estimation.html#sec:bkg_validation">5.6.2</a>.</p>
+                <div class="figure">
+                <img src="gfx/105_chapter_5/chi2_combination.svg" alt="Figure 5.7: Comparison (\chi^2 score) of the mixed and re-mixed data (see Section 5.6.2) as a function of the neighbour combination (k_1, k_2). The test score has been calculated based on the binned distribution of the probabilistic classifier. The one-sided confidence bands for the test score are also included for guidance. Figure adapted from [148]." id="fig:chi2_combination" class="vector" style="width:60.0%"><p class="caption">Figure 5.7: Comparison (<span class="math inline">\(\chi^2\)</span> score) of the mixed and re-mixed data (see Section <a href="5-6-data-driven-background-estimation.html#sec:bkg_validation">5.6.2</a>) as a function of the neighbour combination <span class="math inline">\((k_1, k_2)\)</span>. The test score has been calculated based on the binned distribution of the probabilistic classifier. The one-sided confidence bands for the test score are also included for guidance. Figure adapted from <span class="citation">[<a href="references.html#ref-Sirunyan:2018tki" role="doc-biblioref">148</a>]</span>.</p>
+                </div>
+                <p>The hemisphere mixing technique is applied to the data events passing the selection described in Section <a href="5-5-event-selection.html#sec:event_selection">5.5</a>. Artificial datasets up to <span class="math inline">\(k_\textrm{max}=10\)</span> have been considered, given that good modelling was observed until very large values of <span class="math inline">\(k_\textrm{max}\)</span>. The test score of the compatibility between the mixed artificial data as a function of the combination label is included in Figure <a href="5-6-data-driven-background-estimation.html#fig:chi2_combination">5.7</a>, modelling breaks only at high values, e.g. <span class="math inline">\(k=128\)</span>. All the neighbour combinations up to <span class="math inline">\(k_\textrm{max}=10\)</span> are sub-divided in three sets used for training the probabilistic classifier (training), validating and optimised the classifier (validation) and to estimate the background distribution of the final summary statistic (application). The last dataset is referred to as application instead of test set because its purpose is not to obtain unbiased estimates of the classifier performance, but rather to extract unbiased estimates of the classifier output distribution of background events. All the artificial datasets are not independent, e.g. the <span class="math inline">\((1,1)\)</span> and <span class="math inline">\((1,2)\)</span> dataset use the same first hemisphere, thus some careful choices are required when splitting the mixed datasets. The dataset splitting considered in this analysis, using the <span class="math inline">\((k_1, k_2)\)</span> notation described before, correspond to:</p>
+                <ul><li><em>training set</em>: concatenation of <span class="math inline">\((1,1)\)</span>, <span class="math inline">\((1,2)\)</span>, <span class="math inline">\((2,1)\)</span> and <span class="math inline">\((2,2)\)</span> mixed datasets</li>
+                <li><em>validation set</em>: concatenation of <span class="math inline">\((3,4)\)</span>, <span class="math inline">\((5,6)\)</span>, <span class="math inline">\((7,8)\)</span> and <span class="math inline">\((9,10)\)</span> mixed datasets</li>
+                <li><em>application set</em>: concatenation of <span class="math inline">\((4,3)\)</span>, <span class="math inline">\((6,5)\)</span>, <span class="math inline">\((8,7)\)</span> and <span class="math inline">\((10,9)\)</span> mixed datasets</li>
+                </ul><p>noting that the observation in the training set are not fully independent, but it is expected that reusing hemispheres in the training sample at most might degrade slightly the classifier performance, but does not bias in any way the inference results if an independent set is used. The next section is devoted to the validation of the background model in data control regions and the development of a methodology to correct for possible biases in the final summary statistic expectations. For completeness, a comparison of the distribution of relevant variables, that are used as input to the probabilistic classifier, between the QCD multi-jet simulations available and those estimated using hemisphere mixing, are shown in Figure <a href="5-6-data-driven-background-estimation.html#fig:Figure_003">5.8</a>. The overall agreement is good, as expected from the discussion at beginning of this section, the statistical uncertainties coming from the low <span class="math inline">\(H_T\)</span> range simulated QCD dataset are large.</p>
+                <div id="fig:Figure_003" class="subfigures subfigures caption">
+                <p><img src="gfx/105_chapter_5/Figure_003-a.svg" title="fig:" alt="a" id="fig:Figure_003_a" class="vector" style="width:49.0%"><img src="gfx/105_chapter_5/Figure_003-b.svg" title="fig:" alt="b" id="fig:Figure_003_b" class="vector" style="width:49.0%"><br><img src="gfx/105_chapter_5/Figure_003-c.svg" title="fig:" alt="c" id="fig:Figure_003_c" class="vector" style="width:49.0%"><img src="gfx/105_chapter_5/Figure_003-d.svg" title="fig:" alt="d" id="fig:Figure_003_d" class="vector" style="width:49.0%"></p>
+                <p>Figure 5.8: Comparison between the background model obtained with the hemisphere mixing technique and the simulated observations from QCD processes for a set of relevant reconstructed variables. A correction factor obtained from the binned classifier distribution, as described in Section <a href="5-6-data-driven-background-estimation.html#sec:bkg_validation">5.6.2</a>, has been applied as a weight to the mixed dataset. Only statistical uncertainties are shown. Figures adapted from <span class="citation">[<a href="references.html#ref-Sirunyan:2018tki" role="doc-biblioref">148</a>]</span>.. a — first jet transverse momenta <span class="math inline">\(p_{T_j}^1\)</span>, b — first jet pseudo-rapidity <span class="math inline">\(\eta_{j}^1\)</span>, c — Higgs candidate transverse momenta <span class="math inline">\(p_{T}^{\textrm{H}_1}\)</span>, d — Higgs candidate pair system mass <span class="math inline">\(M_\textrm{HH}\)</span></p>
+                </div>
+                </div>
+                <div id="sec:bkg_validation" class="section level3">
+                <h3><span class="header-section-number">5.6.2</span> Background Validation</h3>
+                <p>One of the drawbacks of using data-driven methods, is that they are often based on a series of implicit assumptions regarding the underlying statistical model of the data, which are difficult to demonstrate directly. Therefore, a more practical approach to verify the validity of a given background model is usually taken, studying its validity in a set of data control region where the component under study dominates and the contribution from the signal is negligible. For the purpose of studying the hemisphere mixing method in this analysis, two data control regions (CRs) are defined:</p>
+                <ul><li><p><em>mass control region</em> (<span class="math inline">\(M_\textrm{H}\)</span> CR): this dataset is obtained using the same selection described in Section <a href="5-5-event-selection.html#sec:event_selection">5.5</a>, but removing all events around the Higgs candidate masses <span class="math inline">\(90 &lt; M_{\textrm{H}_1} &lt; 150\ \textrm{GeV}\)</span> and <span class="math inline">\(80 &lt; M_{\textrm{H}_2} &lt; 140\ \textrm{GeV}\)</span>. This cut in the reconstructed Higgs masses plane considerably reduces the signal contribution, which is expected to peak around <span class="math inline">\(M_\textrm{H} = 125\ \textrm{GeV}\)</span>.</p></li>
+                <li><p><em>b-tag control region</em> (b-tag CR): this dataset is obtained using the same selection described in Section <a href="5-5-event-selection.html#sec:event_selection">5.5</a> but b-tagged jets are defined using the loose working point of CMVA, which has a misidentification rate of 10% and a b-tagging efficiency around 85% for jets originating from the Higgs pair decay, while filtering out events with any jet above the medium working point of the CMVA discriminator.</p></li>
+                </ul><p>The relative signal contribution in each of these control regions is greatly reduced, e.g the expected <span class="math inline">\(n_\textrm{S}/n_\textrm{B}\)</span> ratio in the mass (b-tag) control region is only a 16%(17%) of that of those events inside the <span class="math inline">\(90 &lt; M_{\textrm{H}_1} &lt; 150\ \textrm{GeV}\)</span> and <span class="math inline">\(80 &lt; M_{\textrm{H}_1} &lt; 140\ \textrm{GeV}\)</span> region. The multi-jet QCD component is still the dominant background in both control regions. While for carrying out the mass control region comparison is enough to apply an additional cut over the selection, the b-tag control region study requires redoing the hemisphere mixing procedure on the new set of event with different b-tag jet selection. For both control regions, all the relevant one-dimensional marginal distributions are found to be in good agreement, as shown for a reduced number of important variables that used as input for the classifier in Figure <a href="5-6-data-driven-background-estimation.html#fig:Figure_004">5.9</a> and Figure <a href="5-6-data-driven-background-estimation.html#fig:Figure_005">5.10</a>.</p>
+                <div id="fig:Figure_004" class="subfigures subfigures caption">
+                <p><img src="gfx/105_chapter_5/Figure_004-a.svg" title="fig:" alt="a" id="fig:Figure_004_a" class="vector" style="width:49.0%"><img src="gfx/105_chapter_5/Figure_004-b.svg" title="fig:" alt="b" id="fig:Figure_004_b" class="vector" style="width:49.0%"><br><img src="gfx/105_chapter_5/Figure_004-c.svg" title="fig:" alt="c" id="fig:Figure_004_c" class="vector" style="width:49.0%"><img src="gfx/105_chapter_5/Figure_004-d.svg" title="fig:" alt="d" id="fig:Figure_004_d" class="vector" style="width:49.0%"></p>
+                <p>Figure 5.9: Comparison between the background model obtained with the hemisphere mixing technique and the data for the <span class="math inline">\(M_\textrm{H}\)</span> control region for a set of reconstructed variables used as input of the classifier. A correction factor obtained from the binned classifier distribution, as described in Section <a href="5-6-data-driven-background-estimation.html#sec:bkg_validation">5.6.2</a>, has been applied as a weight to the mixed dataset. Only statistical uncertainties are shown. Figures adapted from <span class="citation">[<a href="references.html#ref-Sirunyan:2018tki" role="doc-biblioref">148</a>]</span>.. a — first jet transverse momenta <span class="math inline">\(p_{T_j}^1\)</span>, b — first jet pseudo-rapidity <span class="math inline">\(\eta_{j}^1\)</span>, c — first Higgs candidate - first jet <span class="math inline">\(\cos \theta^{*}_{\textrm{H}_1 - j_1}\)</span>, d — lowest CMVA discriminator <span class="math inline">\(\textrm{CMVA}_4\)</span></p>
+                </div>
+                <div id="fig:Figure_005" class="subfigures subfigures caption">
+                <p><img src="gfx/105_chapter_5/Figure_005-a.svg" title="fig:" alt="a" id="fig:Figure_005_a" class="vector" style="width:49.0%"><img src="gfx/105_chapter_5/Figure_005-b.svg" title="fig:" alt="b" id="fig:Figure_005_b" class="vector" style="width:49.0%"><br><img src="gfx/105_chapter_5/Figure_005-c.svg" title="fig:" alt="c" id="fig:Figure_005_c" class="vector" style="width:49.0%"><img src="gfx/105_chapter_5/Figure_005-d.svg" title="fig:" alt="d" id="fig:Figure_005_d" class="vector" style="width:49.0%"></p>
+                <p>Figure 5.10: Comparison between the background model obtained with the hemisphere mixing technique and the data for the b-tag control region for a set of reconstructed variables used as input of the classifier. A correction factor obtained from the binned classifier distribution, as described in Section <a href="5-6-data-driven-background-estimation.html#sec:bkg_validation">5.6.2</a>, has been applied as a weight to the mixed dataset. Only statistical uncertainties are shown. Figures adapted from <span class="citation">[<a href="references.html#ref-Sirunyan:2018tki" role="doc-biblioref">148</a>]</span>.. a — first jet transverse momenta <span class="math inline">\(p_{T_j}^1\)</span>, b — first jet pseudo-rapidity <span class="math inline">\(\eta_{j}^1\)</span>, c — first Higgs candidate mass <span class="math inline">\(M_{\textrm{H}_1}\)</span>, d — second Higgs candidate mass <span class="math inline">\(M_{\textrm{H}_2}\)</span></p>
+                </div>
+                <p>While the marginal distributions of each variable are well-modelled, the goal of the technique is rather to obtain an adequate modelling accuracy in the higher dimensional space considered as input of the probabilistic classifier. A way to check the quality of such modelling is to compare the classifier output distribution for the control region data with the background model. This comparison is shown for the <span class="math inline">\(M_\textrm{H}\)</span> control region in Figure <a href="5-6-data-driven-background-estimation.html#fig:Figure_006">5.11</a>. The same comparison is not straightforward to carry out for the b-tag control region, because the classifier was trained using the lowest value of the CMVA classifiers, which was lower bounded by the medium working point for the standard selection which instead is upper bounded by same working point in the b-tag CR. While Figure <a href="5-6-data-driven-background-estimation.html#fig:Figure_006">5.11</a> shows a reasonable agreement overall, a slight background model excess seems to exist in the lower classifier output range.</p>
+                <div class="figure">
+                <img src="gfx/105_chapter_5/Figure_006.svg" alt="Figure 5.11: Left: Comparison of the BDT classifier output for data in the M_\textrm{H} control region, with the same output computed using an artificial dataset by hemisphere mixing. Right: bin-by-bin differences between the control region data and the hemisphere mixing estimation, divided by their uncertainty, both before (top right) and after the bias correction procedure. The pull distributions and their parameters when fitted by a Gaussian are also shown. The uncertainty after the bias correction has been increased conservatively in order to obtain a unit standard deviation for the residual pull distribution. Figures adapted from [148]." id="fig:Figure_006" class="vector" style="width:100.0%"><p class="caption">Figure 5.11: Left: Comparison of the BDT classifier output for data in the <span class="math inline">\(M_\textrm{H}\)</span> control region, with the same output computed using an artificial dataset by hemisphere mixing. Right: bin-by-bin differences between the control region data and the hemisphere mixing estimation, divided by their uncertainty, both before (top right) and after the bias correction procedure. The pull distributions and their parameters when fitted by a Gaussian are also shown. The uncertainty after the bias correction has been increased conservatively in order to obtain a unit standard deviation for the residual pull distribution. Figures adapted from <span class="citation">[<a href="references.html#ref-Sirunyan:2018tki" role="doc-biblioref">148</a>]</span>.</p>
+                </div>
+                <p>The previous mentioned issue has motivated a quantitative study to assess and potentially correct the hemisphere mixing based background model for the classifier output. The bias assessment procedure, schematically depicted in Figure <a href="5-6-data-driven-background-estimation.html#fig:Figure_011">5.12</a>, starts by constructing a very large artificial sample <span class="math inline">\(M\)</span> by concatenating all the permutations of the <span class="math inline">\((k_1,k_2)\)</span> datasets up to a <span class="math inline">\(k_\textrm{max}=10\)</span>, except those used for training the classifier. A total of 200 smaller datasets, referred as replicas <span class="math inline">\(M_i\)</span>, with the same number of events of the original data are obtained by subsampling without replacement <span class="math inline">\(N\)</span> times from the large mixed dataset <span class="math inline">\(M\)</span>. Each replica dataset is treated in an analogous manner to the original dataset, thus the hemisphere mixing procedure is applied again to create a set of new artificial datasets <span class="math inline">\(R_i\)</span>. The classifier output distribution is obtained for all the new artificial datasets <span class="math inline">\(R_i\)</span> and compared with the reference distribution of the large sample <span class="math inline">\(M\)</span>, considering a histogram with 80 bins of equal width in the full range of the classifier output <span class="math inline">\([0.0,1.0]\)</span>.</p>
+                <p>The median difference between the distribution of the classifier output between the large dataset <span class="math inline">\(M\)</span> and each of the mixed replicas <span class="math inline">\(R_i\)</span> is shown in Figure <a href="5-6-data-driven-background-estimation.html#fig:Figure_012">5.13</a> for the final event selection. A small bias is found in the recovered distribution, which is directly used as a correction to hemisphere mixing technique prediction. Similar results are obtained in the previously mentioned control region. The effect of the correction in the classifier output distribution and pulls in the <span class="math inline">\(M_\textrm{H}\)</span> control region is also shown in Figure <a href="5-6-data-driven-background-estimation.html#fig:Figure_006">5.11</a>. The mean of the predicted values minus the observed values are compatible with zero in both control regions, while the root-mean-squared of the pull distribution is not compatible with one in the <span class="math inline">\(M_\textrm{H}\)</span>. In order to conservatively account for the mentioned discrepancy, the variation due to the nuisance parameters added per bin to account for the limited statistics of the artificial background sample is multiplied by a factor <span class="math inline">\(\alpha=1.9\)</span> so the previous pull distribution root-mean-square becomes one.</p>
+                <div class="figure">
+                <img src="gfx/105_chapter_5/Figure_011.svg" alt="Figure 5.12: Diagram describing the procedure used to estimate the background bias correction. All possible combinations of mixed hemispheres except those used for training are added together to create a large sample N of 96N events from which we repeatedly subsample without replacement 200 replicas M_i of N events. The hemisphere mixing procedure is then carried out again for each of this replicas to produce a set of re-mixed data replicas R_i. The trained multivariate classifier is then evaluated over all the events of M and each R_i and the histograms of the classifier output are compared to obtain the differences for each of the replicas. The median difference is taken as bias correction. Figure adapted from [148]." id="fig:Figure_011" class="vector" style="width:100.0%"><p class="caption">Figure 5.12: Diagram describing the procedure used to estimate the background bias correction. All possible combinations of mixed hemispheres except those used for training are added together to create a large sample <span class="math inline">\(N\)</span> of <span class="math inline">\(96N\)</span> events from which we repeatedly subsample without replacement 200 replicas <span class="math inline">\(M_i\)</span> of <span class="math inline">\(N\)</span> events. The hemisphere mixing procedure is then carried out again for each of this replicas to produce a set of re-mixed data replicas <span class="math inline">\(R_i\)</span>. The trained multivariate classifier is then evaluated over all the events of <span class="math inline">\(M\)</span> and each <span class="math inline">\(R_i\)</span> and the histograms of the classifier output are compared to obtain the differences for each of the replicas. The median difference is taken as bias correction. Figure adapted from <span class="citation">[<a href="references.html#ref-Sirunyan:2018tki" role="doc-biblioref">148</a>]</span>.</p>
+                </div>
+                <div class="figure">
+                <img src="gfx/105_chapter_5/Figure_012.svg" alt="Figure 5.13: Bias estimation obtained by the resampling technique described in the text, in relative units of the statistical uncertainty of the predicted background, used to correct the background estimation. The median (red line) and the upper and lower one s.d. quantiles (green lines) have been computed from 200 subsamples of the re-mixed data comparing the predicted background n^p_b with the observed n^o_b. The variability due to the limited number of subsamples is estimated by bootstrap and it is shown for each estimation using a coloured shadow around the quantile estimation. The light yellow shadow represents the uncertainty due to the limited statistics of the reference observed sample. The separation between the one s.d. quantiles is compatible with the expected variance if the estimation was Poisson or Gaussian distributed. Figure adapted from [148]." id="fig:Figure_012" class="vector" style="width:100.0%"><p class="caption">Figure 5.13: Bias estimation obtained by the resampling technique described in the text, in relative units of the statistical uncertainty of the predicted background, used to correct the background estimation. The median (red line) and the upper and lower one s.d. quantiles (green lines) have been computed from 200 subsamples of the re-mixed data comparing the predicted background <span class="math inline">\(n^p_b\)</span> with the observed <span class="math inline">\(n^o_b\)</span>. The variability due to the limited number of subsamples is estimated by bootstrap and it is shown for each estimation using a coloured shadow around the quantile estimation. The light yellow shadow represents the uncertainty due to the limited statistics of the reference observed sample. The separation between the one s.d. quantiles is compatible with the expected variance if the estimation was Poisson or Gaussian distributed. Figure adapted from <span class="citation">[<a href="references.html#ref-Sirunyan:2018tki" role="doc-biblioref">148</a>]</span>.</p>
+                </div>
+                
+                </div>
+                </div>
+                </section></div>
+          </div>
+        </div>
+        
+        
+      <a href="5-7-systematic-uncertainties.html" class="navigation navigation-next" aria-label="Next page">
+                <i class="fa fa-angle-right"></i></a><a href="5-5-event-selection.html" class="navigation navigation-prev" aria-label="Previous page">
+                <i class="fa fa-angle-left"></i></a></div>
+    </div>
+    
+
+    <script src="libs/gitbook/js/app.min.js"></script><script src="libs/gitbook/js/lunr.js"></script><script src="libs/gitbook/js/plugin-search.js"></script><script src="libs/gitbook/js/plugin-sharing.js"></script><script src="libs/gitbook/js/plugin-fontsettings.js"></script><script src="libs/gitbook/js/plugin-bookdown.js"></script><script src="libs/gitbook/js/jquery.highlight.js"></script><script>
+      gitbook.require(["gitbook"], function(gitbook) {
+        gitbook.start({
+"sharing": {
+"github": true,
+"facebook": false,
+"twitter": true,
+"google": false,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"all": ["facebook","twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"history": {
+"link": null,
+"text": null
+},
+"download": ["thesis.pdf"],
+"toc": {
+"collapse": "none"
+}
+});
+});
+    </script><script>
+      (function () {
+        var script = document.createElement("script");
+        script.type = "text/javascript";
+        var src = "true";
+        if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+        if (location.protocol !== "file:" && /^https?:/.test(src))
+          src = src.replace(/^https?:/, '');
+        script.src = src;
+        document.getElementsByTagName("head")[0].appendChild(script);
+      })();
+    </script><script src="https://hypothes.is/embed.js" async></script><link href="css/annotator.css" rel="stylesheet"></body></html>

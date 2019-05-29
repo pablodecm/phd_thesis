@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang=""><head><script async src="https://www.googletagmanager.com/gtag/js?id=UA-71094563-2"></script><script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-71094563-2');
+    </script><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><title>Statistical Learning and Inference at Particle Collider Experiments</title><meta name="description" content="Statistical Learning and Inference at Particle Collider Experiments"><meta name="generator" content="bookdown #bookdown:version# and GitBook 2.6.7"><meta property="og:title" content="Statistical Learning and Inference at Particle Collider Experiments"><meta property="og:type" content="book"><meta name="github-repo" content="pablodecm/phd_thesis"><meta name="twitter:card" content="summary"><meta name="twitter:title" content="Statistical Learning and Inference at Particle Collider Experiments"><meta name="author" content="Pablo de Castro Manzano"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black"><script src="libs/jquery/jquery.min.js"></script><link href="libs/gitbook/css/style.css" rel="stylesheet"><link href="libs/gitbook/css/plugin-table.css" rel="stylesheet"><link href="libs/gitbook/css/plugin-bookdown.css" rel="stylesheet"><link href="libs/gitbook/css/plugin-highlight.css" rel="stylesheet"><link href="libs/gitbook/css/plugin-search.css" rel="stylesheet"><link href="libs/gitbook/css/plugin-fontsettings.css" rel="stylesheet"><link href="css/style.css" rel="stylesheet"><link href="css/toc.css" rel="stylesheet"></head><body>
+
+    
+    <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+      <div class="book-summary">
+        <nav role="navigation"><ul class="summary"><li>
+              <a href="./">PhD Thesis - Pablo de Castro</a>
+            </li>
+            <li class="divider">
+            <li class="chapter" data-level="" data-path="abstract.html">
+              <a href="abstract.html"><i class="fa fa-check"></i> Abstract</a>
+            </li>
+            <li class="chapter" data-level="" data-path="preface.html">
+              <a href="preface.html"><i class="fa fa-check"></i> Preface</a>
+            </li>
+            <li class="chapter" data-level="" data-path="acknowledgements.html">
+              <a href="acknowledgements.html"><i class="fa fa-check"></i> Acknowledgements</a>
+            </li>
+            <li class="chapter" data-level="" data-path="introduction.html">
+              <a href="introduction.html"><i class="fa fa-check"></i> Introduction</a>
+            </li>
+            <li class="chapter" data-level="1" data-path="1-theory-of-fundamental-interactions.html">
+              <a href="1-theory-of-fundamental-interactions.html"><i class="fa fa-check"></i><b>1</b> Theory of Fundamental Interactions</a>
+              <ul><li class="chapter" data-level="1.1" data-path="1-1-the-standard-model.html">
+                  <a href="1-1-the-standard-model.html"><i class="fa fa-check"></i><b>1.1</b> The Standard Model</a>
+                  <ul><li class="chapter" data-level="1.1.1" data-path="1-1-the-standard-model.html">
+                      <a href="1-1-the-standard-model.html#sec:qft_basics"><i class="fa fa-check"></i><b>1.1.1</b> Essentials of Quantum Field Theory</a>
+                    </li>
+                    <li class="chapter" data-level="1.1.2" data-path="1-1-the-standard-model.html">
+                      <a href="1-1-the-standard-model.html#sec:qcd_detail"><i class="fa fa-check"></i><b>1.1.2</b> Quantum Chromodynamics</a>
+                    </li>
+                    <li class="chapter" data-level="1.1.3" data-path="1-1-the-standard-model.html">
+                      <a href="1-1-the-standard-model.html#sec:ew_detail"><i class="fa fa-check"></i><b>1.1.3</b> Electroweak Interactions</a>
+                    </li>
+                    <li class="chapter" data-level="1.1.4" data-path="1-1-the-standard-model.html">
+                      <a href="1-1-the-standard-model.html#sec:ewsb_higgs"><i class="fa fa-check"></i><b>1.1.4</b> Symmetry Breaking and the Higgs Boson</a>
+                    </li>
+                  </ul></li>
+                <li class="chapter" data-level="1.2" data-path="1-2-beyond-the-standard-model.html">
+                  <a href="1-2-beyond-the-standard-model.html"><i class="fa fa-check"></i><b>1.2</b> Beyond the Standard Model</a>
+                  <ul><li class="chapter" data-level="1.2.1" data-path="1-2-beyond-the-standard-model.html">
+                      <a href="1-2-beyond-the-standard-model.html#known-limitations"><i class="fa fa-check"></i><b>1.2.1</b> Known Limitations</a>
+                    </li>
+                    <li class="chapter" data-level="1.2.2" data-path="1-2-beyond-the-standard-model.html">
+                      <a href="1-2-beyond-the-standard-model.html#sec:possible_ext"><i class="fa fa-check"></i><b>1.2.2</b> Possible Extensions</a>
+                    </li>
+                  </ul></li>
+                <li class="chapter" data-level="1.3" data-path="1-3-phenomenology-of-proton-collisions.html">
+                  <a href="1-3-phenomenology-of-proton-collisions.html"><i class="fa fa-check"></i><b>1.3</b> Phenomenology of Proton Collisions</a>
+                  <ul><li class="chapter" data-level="1.3.1" data-path="1-3-phenomenology-of-proton-collisions.html">
+                      <a href="1-3-phenomenology-of-proton-collisions.html#sec:main_obs"><i class="fa fa-check"></i><b>1.3.1</b> Main Observables</a>
+                    </li>
+                    <li class="chapter" data-level="1.3.2" data-path="1-3-phenomenology-of-proton-collisions.html">
+                      <a href="1-3-phenomenology-of-proton-collisions.html#sec:pdfs"><i class="fa fa-check"></i><b>1.3.2</b> Parton Distribution Functions</a>
+                    </li>
+                    <li class="chapter" data-level="1.3.3" data-path="1-3-phenomenology-of-proton-collisions.html">
+                      <a href="1-3-phenomenology-of-proton-collisions.html#sec:factorisation"><i class="fa fa-check"></i><b>1.3.3</b> Factorisation and Generation of Hard Processes</a>
+                    </li>
+                    <li class="chapter" data-level="1.3.4" data-path="1-3-phenomenology-of-proton-collisions.html">
+                      <a href="1-3-phenomenology-of-proton-collisions.html#sec:parton_showers"><i class="fa fa-check"></i><b>1.3.4</b> Hadronization and Parton Showers</a>
+                    </li>
+                  </ul></li>
+              </ul></li>
+            <li class="chapter" data-level="2" data-path="2-experiments-at-particle-colliders.html">
+              <a href="2-experiments-at-particle-colliders.html"><i class="fa fa-check"></i><b>2</b> Experiments at Particle Colliders</a>
+              <ul><li class="chapter" data-level="2.1" data-path="2-1-the-large-hadron-collider.html">
+                  <a href="2-1-the-large-hadron-collider.html"><i class="fa fa-check"></i><b>2.1</b> The Large Hadron Collider</a>
+                  <ul><li class="chapter" data-level="2.1.1" data-path="2-1-the-large-hadron-collider.html">
+                      <a href="2-1-the-large-hadron-collider.html#injection-and-acceleration-chain"><i class="fa fa-check"></i><b>2.1.1</b> Injection and Acceleration Chain</a>
+                    </li>
+                    <li class="chapter" data-level="2.1.2" data-path="2-1-the-large-hadron-collider.html">
+                      <a href="2-1-the-large-hadron-collider.html#sec:op_pars"><i class="fa fa-check"></i><b>2.1.2</b> Operation Parameters</a>
+                    </li>
+                    <li class="chapter" data-level="2.1.3" data-path="2-1-the-large-hadron-collider.html">
+                      <a href="2-1-the-large-hadron-collider.html#sec:pile_up"><i class="fa fa-check"></i><b>2.1.3</b> Multiple Hadron Interactions</a>
+                    </li>
+                    <li class="chapter" data-level="2.1.4" data-path="2-1-the-large-hadron-collider.html">
+                      <a href="2-1-the-large-hadron-collider.html#sec:lhc_experiments"><i class="fa fa-check"></i><b>2.1.4</b> Experiments</a>
+                    </li>
+                  </ul></li>
+                <li class="chapter" data-level="2.2" data-path="2-2-the-compact-muon-solenoid.html">
+                  <a href="2-2-the-compact-muon-solenoid.html"><i class="fa fa-check"></i><b>2.2</b> The Compact Muon Solenoid</a>
+                  <ul><li class="chapter" data-level="2.2.1" data-path="2-2-the-compact-muon-solenoid.html">
+                      <a href="2-2-the-compact-muon-solenoid.html#sec:exp_geom"><i class="fa fa-check"></i><b>2.2.1</b> Experimental Geometry</a>
+                    </li>
+                    <li class="chapter" data-level="2.2.2" data-path="2-2-the-compact-muon-solenoid.html">
+                      <a href="2-2-the-compact-muon-solenoid.html#sec:cms_magnet"><i class="fa fa-check"></i><b>2.2.2</b> Magnet</a>
+                    </li>
+                    <li class="chapter" data-level="2.2.3" data-path="2-2-the-compact-muon-solenoid.html">
+                      <a href="2-2-the-compact-muon-solenoid.html#sec:cms_tracking"><i class="fa fa-check"></i><b>2.2.3</b> Tracking System</a>
+                    </li>
+                    <li class="chapter" data-level="2.2.4" data-path="2-2-the-compact-muon-solenoid.html">
+                      <a href="2-2-the-compact-muon-solenoid.html#sec:cms_ecal"><i class="fa fa-check"></i><b>2.2.4</b> Electromagnetic Calorimeter</a>
+                    </li>
+                    <li class="chapter" data-level="2.2.5" data-path="2-2-the-compact-muon-solenoid.html">
+                      <a href="2-2-the-compact-muon-solenoid.html#sec:cms_hcal"><i class="fa fa-check"></i><b>2.2.5</b> Hadronic Calorimeter</a>
+                    </li>
+                    <li class="chapter" data-level="2.2.6" data-path="2-2-the-compact-muon-solenoid.html">
+                      <a href="2-2-the-compact-muon-solenoid.html#sec:cms_muon"><i class="fa fa-check"></i><b>2.2.6</b> Muon System</a>
+                    </li>
+                    <li class="chapter" data-level="2.2.7" data-path="2-2-the-compact-muon-solenoid.html">
+                      <a href="2-2-the-compact-muon-solenoid.html#sec:trigger"><i class="fa fa-check"></i><b>2.2.7</b> Trigger and Data Acquisition</a>
+                    </li>
+                  </ul></li>
+                <li class="chapter" data-level="2.3" data-path="2-3-event-simulation-and-reconstruction.html">
+                  <a href="2-3-event-simulation-and-reconstruction.html"><i class="fa fa-check"></i><b>2.3</b> Event Simulation and Reconstruction</a>
+                  <ul><li class="chapter" data-level="2.3.1" data-path="2-3-event-simulation-and-reconstruction.html">
+                      <a href="2-3-event-simulation-and-reconstruction.html#sec:gen_view"><i class="fa fa-check"></i><b>2.3.1</b> A Generative View</a>
+                    </li>
+                    <li class="chapter" data-level="2.3.2" data-path="2-3-event-simulation-and-reconstruction.html">
+                      <a href="2-3-event-simulation-and-reconstruction.html#sec:detector_simulation"><i class="fa fa-check"></i><b>2.3.2</b> Detector Simulation</a>
+                    </li>
+                    <li class="chapter" data-level="2.3.3" data-path="2-3-event-simulation-and-reconstruction.html">
+                      <a href="2-3-event-simulation-and-reconstruction.html#sec:event_reco"><i class="fa fa-check"></i><b>2.3.3</b> Event Reconstruction</a>
+                    </li>
+                  </ul></li>
+              </ul></li>
+            <li class="chapter" data-level="3" data-path="3-statistical-modelling-and-inference-at-the-lhc.html">
+              <a href="3-statistical-modelling-and-inference-at-the-lhc.html"><i class="fa fa-check"></i><b>3</b> Statistical Modelling and Inference at the LHC</a>
+              <ul><li class="chapter" data-level="3.1" data-path="3-1-statistical-modelling.html">
+                  <a href="3-1-statistical-modelling.html"><i class="fa fa-check"></i><b>3.1</b> Statistical Modelling</a>
+                  <ul><li class="chapter" data-level="3.1.1" data-path="3-1-statistical-modelling.html">
+                      <a href="3-1-statistical-modelling.html#sec:model_overview"><i class="fa fa-check"></i><b>3.1.1</b> Overview</a>
+                    </li>
+                    <li class="chapter" data-level="3.1.2" data-path="3-1-statistical-modelling.html">
+                      <a href="3-1-statistical-modelling.html#simulation-as-generative-modelling"><i class="fa fa-check"></i><b>3.1.2</b> Simulation as Generative Modelling</a>
+                    </li>
+                    <li class="chapter" data-level="3.1.3" data-path="3-1-statistical-modelling.html">
+                      <a href="3-1-statistical-modelling.html#sec:dim_reduction"><i class="fa fa-check"></i><b>3.1.3</b> Dimensionality Reduction</a>
+                    </li>
+                    <li class="chapter" data-level="3.1.4" data-path="3-1-statistical-modelling.html">
+                      <a href="3-1-statistical-modelling.html#sec:known_unknowns"><i class="fa fa-check"></i><b>3.1.4</b> Known Unknowns</a>
+                    </li>
+                  </ul></li>
+                <li class="chapter" data-level="3.2" data-path="3-2-statistical-inference.html">
+                  <a href="3-2-statistical-inference.html"><i class="fa fa-check"></i><b>3.2</b> Statistical Inference</a>
+                  <ul><li class="chapter" data-level="3.2.1" data-path="3-2-statistical-inference.html">
+                      <a href="3-2-statistical-inference.html#sec:likelihood-free"><i class="fa fa-check"></i><b>3.2.1</b> Likelihood-Free Inference</a>
+                    </li>
+                    <li class="chapter" data-level="3.2.2" data-path="3-2-statistical-inference.html">
+                      <a href="3-2-statistical-inference.html#sec:hypo_test"><i class="fa fa-check"></i><b>3.2.2</b> Hypothesis Testing</a>
+                    </li>
+                    <li class="chapter" data-level="3.2.3" data-path="3-2-statistical-inference.html">
+                      <a href="3-2-statistical-inference.html#sec:param_est"><i class="fa fa-check"></i><b>3.2.3</b> Parameter Estimation</a>
+                    </li>
+                  </ul></li>
+              </ul></li>
+            <li class="chapter" data-level="4" data-path="4-machine-learning-in-high-energy-physics.html">
+              <a href="4-machine-learning-in-high-energy-physics.html"><i class="fa fa-check"></i><b>4</b> Machine Learning in High-Energy Physics</a>
+              <ul><li class="chapter" data-level="4.1" data-path="4-1-problem-description.html">
+                  <a href="4-1-problem-description.html"><i class="fa fa-check"></i><b>4.1</b> Problem Description</a>
+                  <ul><li class="chapter" data-level="4.1.1" data-path="4-1-problem-description.html">
+                      <a href="4-1-problem-description.html#sec:supervised"><i class="fa fa-check"></i><b>4.1.1</b> Probabilistic Classification and Regression</a>
+                    </li>
+                  </ul></li>
+                <li class="chapter" data-level="4.2" data-path="4-2-machine-learning-techniques.html">
+                  <a href="4-2-machine-learning-techniques.html"><i class="fa fa-check"></i><b>4.2</b> Machine Learning Techniques</a>
+                  <ul><li class="chapter" data-level="4.2.1" data-path="4-2-machine-learning-techniques.html">
+                      <a href="4-2-machine-learning-techniques.html#sec:boosted_decision_trees"><i class="fa fa-check"></i><b>4.2.1</b> Boosted Decision Trees</a>
+                    </li>
+                    <li class="chapter" data-level="4.2.2" data-path="4-2-machine-learning-techniques.html">
+                      <a href="4-2-machine-learning-techniques.html#sec:ann"><i class="fa fa-check"></i><b>4.2.2</b> Artificial Neural Networks</a>
+                    </li>
+                  </ul></li>
+                <li class="chapter" data-level="4.3" data-path="4-3-applications-in-high-energy-physics.html">
+                  <a href="4-3-applications-in-high-energy-physics.html"><i class="fa fa-check"></i><b>4.3</b> Applications in High Energy Physics</a>
+                  <ul><li class="chapter" data-level="4.3.1" data-path="4-3-applications-in-high-energy-physics.html">
+                      <a href="4-3-applications-in-high-energy-physics.html#sec:sig_vs_bkg"><i class="fa fa-check"></i><b>4.3.1</b> Signal vs Background Classification</a>
+                    </li>
+                    <li class="chapter" data-level="4.3.2" data-path="4-3-applications-in-high-energy-physics.html">
+                      <a href="4-3-applications-in-high-energy-physics.html#sec:particle_id_reg"><i class="fa fa-check"></i><b>4.3.2</b> Particle Identification and Regression</a>
+                    </li>
+                  </ul></li>
+              </ul></li>
+            <li class="chapter" data-level="5" data-path="5-search-for-anomalous-higgs-pair-production-with-cms.html">
+              <a href="5-search-for-anomalous-higgs-pair-production-with-cms.html"><i class="fa fa-check"></i><b>5</b> Search for Anomalous Higgs Pair Production with CMS</a>
+              <ul><li class="chapter" data-level="5.1" data-path="5-1-introduction.html">
+                  <a href="5-1-introduction.html"><i class="fa fa-check"></i><b>5.1</b> Introduction</a>
+                </li>
+                <li class="chapter" data-level="5.2" data-path="5-2-higgs-pair-production-and-anomalous-couplings.html">
+                  <a href="5-2-higgs-pair-production-and-anomalous-couplings.html"><i class="fa fa-check"></i><b>5.2</b> Higgs Pair Production and Anomalous Couplings</a>
+                </li>
+                <li class="chapter" data-level="5.3" data-path="5-3-analysis-strategy.html">
+                  <a href="5-3-analysis-strategy.html"><i class="fa fa-check"></i><b>5.3</b> Analysis Strategy</a>
+                </li>
+                <li class="chapter" data-level="5.4" data-path="5-4-trigger-and-datasets.html">
+                  <a href="5-4-trigger-and-datasets.html"><i class="fa fa-check"></i><b>5.4</b> Trigger and Datasets</a>
+                </li>
+                <li class="chapter" data-level="5.5" data-path="5-5-event-selection.html">
+                  <a href="5-5-event-selection.html"><i class="fa fa-check"></i><b>5.5</b> Event Selection</a>
+                </li>
+                <li class="chapter" data-level="5.6" data-path="5-6-data-driven-background-estimation.html">
+                  <a href="5-6-data-driven-background-estimation.html"><i class="fa fa-check"></i><b>5.6</b> Data-Driven Background Estimation</a>
+                  <ul><li class="chapter" data-level="5.6.1" data-path="5-6-data-driven-background-estimation.html">
+                      <a href="5-6-data-driven-background-estimation.html#sec:hem_mixing"><i class="fa fa-check"></i><b>5.6.1</b> Hemisphere Mixing</a>
+                    </li>
+                    <li class="chapter" data-level="5.6.2" data-path="5-6-data-driven-background-estimation.html">
+                      <a href="5-6-data-driven-background-estimation.html#sec:bkg_validation"><i class="fa fa-check"></i><b>5.6.2</b> Background Validation</a>
+                    </li>
+                  </ul></li>
+                <li class="chapter" data-level="5.7" data-path="5-7-systematic-uncertainties.html">
+                  <a href="5-7-systematic-uncertainties.html"><i class="fa fa-check"></i><b>5.7</b> Systematic Uncertainties</a>
+                </li>
+                <li class="chapter" data-level="5.8" data-path="5-8-analysis-results.html">
+                  <a href="5-8-analysis-results.html"><i class="fa fa-check"></i><b>5.8</b> Analysis Results</a>
+                </li>
+                <li class="chapter" data-level="5.9" data-path="5-9-combination-with-other-decay-channels.html">
+                  <a href="5-9-combination-with-other-decay-channels.html"><i class="fa fa-check"></i><b>5.9</b> Combination with Other Decay Channels</a>
+                </li>
+              </ul></li>
+            <li class="chapter" data-level="6" data-path="6-inference-aware-neural-optimisation.html">
+              <a href="6-inference-aware-neural-optimisation.html"><i class="fa fa-check"></i><b>6</b> Inference-Aware Neural Optimisation</a>
+              <ul><li class="chapter" data-level="6.1" data-path="6-1-introduction.html">
+                  <a href="6-1-introduction.html"><i class="fa fa-check"></i><b>6.1</b> Introduction</a>
+                </li>
+                <li class="chapter" data-level="6.2" data-path="6-2-problem-statement.html">
+                  <a href="6-2-problem-statement.html"><i class="fa fa-check"></i><b>6.2</b> Problem Statement</a>
+                </li>
+                <li class="chapter" data-level="6.3" data-path="6-3-method.html">
+                  <a href="6-3-method.html"><i class="fa fa-check"></i><b>6.3</b> Method</a>
+                </li>
+                <li class="chapter" data-level="6.4" data-path="6-4-related-work.html">
+                  <a href="6-4-related-work.html"><i class="fa fa-check"></i><b>6.4</b> Related Work</a>
+                </li>
+                <li class="chapter" data-level="6.5" data-path="6-5-experiments.html">
+                  <a href="6-5-experiments.html"><i class="fa fa-check"></i><b>6.5</b> Experiments</a>
+                  <ul><li class="chapter" data-level="6.5.1" data-path="6-5-experiments.html">
+                      <a href="6-5-experiments.html#sec:synthetic_mixture"><i class="fa fa-check"></i><b>6.5.1</b> 3D Synthetic Mixture</a>
+                    </li>
+                  </ul></li>
+              </ul></li>
+            <li class="chapter" data-level="7" data-path="7-conclusions-and-prospects.html">
+              <a href="7-conclusions-and-prospects.html"><i class="fa fa-check"></i><b>7</b> Conclusions and Prospects</a>
+            </li>
+            <li class="chapter" data-level="" data-path="references.html">
+              <a href="references.html"><i class="fa fa-check"></i> References</a>
+            </li>
+          </ul></nav></div>
+
+      <div class="book-body">
+        <div class="body-inner">
+          <div class="book-header" role="navigation">
+            <h1>
+              <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Statistical Learning and Inference at Particle Collider Experiments</a>
+            </h1>
+          </div>
+
+          <div class="page-wrapper" tabindex="-1" role="main">
+            <div class="page-inner">
+
+              <section class="normal" id="section-"><div id="sec:ml_hep" class="section level2">
+                <h2><span class="header-section-number">4.3</span> Applications in High Energy Physics</h2>
+                <p>Machine learning techniques, in particular supervised learning, are increasingly being used in experimental particle physics analysis at the LHC <span class="citation">[<a href="references.html#ref-Guest:2018yhq" role="doc-biblioref">133</a>]</span>. In this section, the main use cases are described, linking the learning task with the statistical problems and properties which were described in Chapter <a href="3-statistical-modelling-and-inference-at-the-lhc.html#sec:statinf">3</a>. In broad terms, most supervised learning at collider experiments can be viewed as a way to approximate the latent variables of the generative model based on simulated observations. Those latent variable approximations are often very informative about the parameters of interest and then can be used to construct summary statistics of the observations, which allow to carry out likelihood-free inference efficiently.</p>
+                <div id="sec:sig_vs_bkg" class="section level3">
+                <h3><span class="header-section-number">4.3.1</span> Signal vs Background Classification</h3>
+                <p>The mixture structure of the statistical model for the outcome of collisions, discussed in Chapter <a href="3-statistical-modelling-and-inference-at-the-lhc.html#sec:statinf">3</a>, facilitates its framing as a classification problem. Intuitively, the classification objective could be stated as the separation of detector outcomes coming from processes that contain information about the parameters of interest from those that do not, which will be referred as signal and background respectively, following the same nomenclature from Section <a href="3-1-statistical-modelling.html#sec:sig_and_bkg">3.1.1.4</a>. The two classes are often non-separable - i.e. a given detector outcome <span class="math inline">\(\boldsymbol{x}\)</span> (or any function of it) could have been produced either by signal or background processes, and only probabilistic statements of class assignment can be made.</p>
+                <p>In order to use supervised machine learning techniques to classify detector outcomes, labelled samples are required, yet only the detector readout <span class="math inline">\(\boldsymbol{x}\)</span> is known for collected data. Realistic simulated observations, generated specifically to model events from a given set processes (e.g. signal and background) can instead be used as training data, where the categorical latent variable <span class="math inline">\(z_i\)</span> that represents a given set of processes can effectively used as classification label. If the simulator model is misspecified, e.g. due to the effect of known unknowns as discussed in Section <a href="3-1-statistical-modelling.html#sec:known_unknowns">3.1.4</a>, the resulting classifiers would be trained to optimise the classification objective for different distributions.</p>
+                <p>To understand the role of classification in the larger goal of statistical inference of a subset of parameters of interest in a mixture model, let us consider the general problem of inference for a two-component mixture problem. One of the components will be denoted as signal <span class="math inline">\(p_s(\boldsymbol{x}| \boldsymbol{\theta})\)</span> and the other as background <span class="math inline">\(p_b(\boldsymbol{x} | \boldsymbol{\theta})\)</span>, where <span class="math inline">\(\boldsymbol{\theta}\)</span> are of all parameters the distributions might depend on. As discussed in Section <a href="3-1-statistical-modelling.html#sec:mixture_components">3.1.1.3</a>, it is often the case that <span class="math inline">\(f_s(\boldsymbol{x}| \boldsymbol{\theta})\)</span> and <span class="math inline">\(f_b(\boldsymbol{x} | \boldsymbol{\theta})\)</span> are not known, observations can only be simulated, which will not affect the validity the following discussion. The probability distribution function of the mixture can be expressed as: <span id="eq:mixture_general"><span class="math display">\[
+                p(\boldsymbol{x}| \mu, \boldsymbol{\theta} ) = (1-\mu) p_b(\boldsymbol{x} | \boldsymbol{\theta})
+                                                                + \mu p_s(\boldsymbol{x} | \boldsymbol{\theta})
+                \qquad(4.26)\]</span></span> where <span class="math inline">\(\mu\)</span> is a parameter corresponding to the signal mixture fraction, which will be the only parameter of interest for the time being. As discussed in Section <a href="3-1-statistical-modelling.html#sec:sig_and_bkg">3.1.1.4</a>, most of the parameters of interest in analyses at the LHC, such as cross sections, are proportional to the mixture coefficient of the signal in the statistical model. The results presented here would also be also be valid if alternative mixture coefficient parametrisations such as the one considered in Section <a href="6-5-experiments.html#sec:synthetic_mixture">6.5.1</a> are used, e.g. <span class="math inline">\(\mu=s/(s+b)\)</span> where <span class="math inline">\(s\)</span> and <span class="math inline">\(b\)</span> is the expected number of events for signal and background respectively, as long as <span class="math inline">\(b\)</span> is known and fixed and <span class="math inline">\(s\)</span> is the only parameter of interest.</p>
+                <div id="sec:lr_clf" class="section level4">
+                <h4><span class="header-section-number">4.3.1.1</span> Likelihood Ratio Approximation</h4>
+                <p>Probabilistic classification techniques will effectively approximate the conditional probability of each class, as discussed in Equation <a href="4-1-problem-description.html#eq:bayes_optimal_bce">4.9</a> for the binary classification. A way to approximate the density ratio <span class="math inline">\(r(\boldsymbol{x})\)</span> between two arbitrary distribution functions <span class="math inline">\(\rho(\boldsymbol{x})\)</span> and <span class="math inline">\(q(\boldsymbol{x})\)</span> is then to train a classifier - e.g. a neural network optimising cross-entropy. If samples from <span class="math inline">\(\rho(\boldsymbol{x})\)</span> are labelled as <span class="math inline">\(y=1\)</span>, while <span class="math inline">\(y=0\)</span> is used for observations from <span class="math inline">\(q(\boldsymbol{x})\)</span>, the density ratio can be approximated from the soft BCE classifier output <span class="math inline">\(s(\boldsymbol{x})\)</span> as: <span id="eq:lr_clf"><span class="math display">\[
+                \frac{s(\boldsymbol{x})}{1-s(\boldsymbol{x})} \approx
+                \frac{p(y = 1| \boldsymbol{x})}{p(y = 0| \boldsymbol{x})} =
+                \frac{p(\boldsymbol{x} | y = 1) p(y = 1)}{p(\boldsymbol{x} | y = 0) p(y = 0)}
+                =  r(\boldsymbol{x}) \frac{p(y = 1)}{p(y = 0)}
+                \qquad(4.27)\]</span></span> thus the density ratio <span class="math inline">\(r(\boldsymbol{x})\)</span> can be approximated by a simple function of the trained classifier output directly from samples of observations. The factor <span class="math inline">\(p(y = 1)/p(y = 0)\)</span> is independent on <span class="math inline">\(\boldsymbol{x}\)</span>, and can be simply estimated as the ratio between the total number of observations from each category in the training dataset - i.e. equal to 1 if the latter is balanced.</p>
+                <p>Density ratios are very useful for inference, particularly for hypothesis testing, given that the likelihood ratio <span class="math inline">\(\Lambda\)</span> from Equation <a href="3-2-statistical-inference.html#eq:likelihood_ratio">3.39</a> is the most powerful test statistic to distinguish between two simple hypothesis and can be expressed as a function of density ratios. Returning to the two component mixture from Equation <a href="4-3-applications-in-high-energy-physics.html#eq:mixture_general">4.26</a>, for discovery the null hypothesis <span class="math inline">\(H_0\)</span> corresponds to background-only <span class="math inline">\(p(\boldsymbol{x}| \mu = 0, \boldsymbol{\theta})\)</span> while the alternate is often a given mixture of signal and background <span class="math inline">\(p(\boldsymbol{x}| \mu = \mu_0, \boldsymbol{\theta})\)</span>, where <span class="math inline">\(\mu_0\)</span> is fixed. For the time being, the other distribution parameters <span class="math inline">\(\boldsymbol{\theta}\)</span> will be assumed to be known and fixed to the same values for both hypothesis. The likelihood ratio in this case can be expressed as: <span id="eq:lr_mixture"><span class="math display">\[
+                \Lambda( \mathcal{D}; H_0, H_1) =
+                \prod_{\boldsymbol{x} \in \mathcal{D}}
+                \frac{p(\boldsymbol{x}| H_0)}{ p(\boldsymbol{x} |H_1)} =
+                \prod_{\boldsymbol{x} \in \mathcal{D}}
+                \frac{p(\boldsymbol{x}| \mu = 0, \boldsymbol{\theta})}{
+                p(\boldsymbol{x}| \mu = \mu_0, \boldsymbol{\theta})}
+                \qquad(4.28)\]</span></span> where the <span class="math inline">\(p(\boldsymbol{x}| \mu = 0, \boldsymbol{\theta})/p(\boldsymbol{x}| \mu_0, \boldsymbol{\theta})\)</span> factor could be approximated from the output of a probabilistic classifier trained to distinguish observations from <span class="math inline">\(p(\boldsymbol{x}| \mu = 0, \boldsymbol{\theta})\)</span> and those from <span class="math inline">\(p(\boldsymbol{x}| \mu = \mu_0, \boldsymbol{\theta})\)</span>. A certain <span class="math inline">\(\mu_0\)</span> would have to be specified to generate <span class="math inline">\(p(\boldsymbol{x}| \mu = \mu_0, \boldsymbol{\theta})\)</span> observations in order to train the classifier. The same classifier output could be repurposed to model the likelihood ratio when <span class="math inline">\(H_1\)</span> is <span class="math inline">\(p(\boldsymbol{x}| \mu = \mu_1, \boldsymbol{\theta})\)</span> with a simple transformation, yet the mixture structure of the problem allows for a more direct density ratio estimation alternative, which is the one regularly used in particle physics analyses.</p>
+                <p>Let us consider instead the inverse of the likelihood ratio <span class="math inline">\(\Lambda\)</span> from Equation <a href="4-3-applications-in-high-energy-physics.html#eq:lr_mixture">4.28</a>, each factor term is thus proportional to the following ratio: <span id="eq:lr_one"><span class="math display">\[
+                \Lambda^{-1} \sim
+                \frac{p(\boldsymbol{x} | H_1)}{ p(\boldsymbol{x} | H_0 )}  =
+                \frac{ (1-\mu_0) p_\textrm{b}(\boldsymbol{x}| \boldsymbol{\theta}) +
+                  \mu_0 p_\textrm{s}(\boldsymbol{x}|
+                   \boldsymbol{\theta})}{p_\textrm{b}(\boldsymbol{x}|
+                   \boldsymbol{\theta})}
+                \qquad(4.29)\]</span></span> which can in turn be be expressed as: <span id="eq:lr_two"><span class="math display">\[
+                \Lambda^{-1} \sim
+                (1-\mu) \left ( \frac{p_\textrm{s}(\boldsymbol{x}| \boldsymbol{\theta})}{
+                                          p_\textrm{b}(\boldsymbol{x}| \boldsymbol{\theta})}-1 \right)
+                \qquad(4.30)\]</span></span> thus each factor in the likelihood ratio is a bijective function of the ratio <span class="math inline">\(p_\textrm{s}(\boldsymbol{x}| \boldsymbol{\theta}) /p_\textrm{b}(\boldsymbol{x}| \boldsymbol{\theta})\)</span>. The previous density ratio can be approximated by training a classifier to distinguish signal and background observations, which is computationally more efficient and easier to interpret intuitively than the direct <span class="math inline">\(p(\boldsymbol{x}| H_0)/p(\boldsymbol{x} |H_1)\)</span> approximation mentioned before.</p>
+                <p>From a statistical inference point of view, supervised machine learning framed as the classification of signal versus background can be viewed as a way to approximate the likelihood ratio directly from simulated samples, bypassing the need of a tractable density function (see Section <a href="3-2-statistical-inference.html#sec:likelihood-free">3.2.1</a>). It is worth noting that because it is only an approximation, in order to be useful for inference it requires careful calibration. Such calibration is usually carried out using a histogram and an holdout dataset of simulated observations, effectively building a synthetic likelihood of the whole classifier output range or the number of observed events after cut in the classifier is imposed (see Section <a href="3-1-statistical-modelling.html#sec:synthetic_likelihood">3.1.3.4</a>). Alternative density estimation techniques could also be used for the calibration step, which could reduce the loss of information due to the histogram binning.</p>
+                <p>The effect of nuisance parameters, due to known unknowns, have also to be accounted for during the calibration step. The true density ratio between signal and background depends on any parameter <span class="math inline">\(\boldsymbol{\theta}\)</span> that modifies the signal <span class="math inline">\(p_s(\boldsymbol{x} | \boldsymbol{\theta})\)</span> or background <span class="math inline">\(p_b(\boldsymbol{x} | \boldsymbol{\theta})\)</span> probability densities, thus its approximation using machine learning classification can become complicated. In practice, the classifier can be trained for the most probable likely value of the nuisance parameters and their effect can be adequately accounted during calibration, yet the resulting inference will be degraded. While this issue can be somehow ameliorated using parametrised classifiers <span class="citation">[<a href="references.html#ref-baldi2016parameterized" role="doc-biblioref">134</a>]</span>, the main motivation for using the likelihood ratio - i.e. the Neyman-Pearson lemma - does not apply because the hypothesis considered are not simple when nuisance parameters are present.</p>
+                </div>
+                <div id="sec:sufficiency_clf" class="section level4">
+                <h4><span class="header-section-number">4.3.1.2</span> Sufficient Statistics Interpretation</h4>
+                <p>Another interpretation of the use of signal versus background classifiers, which more generally applies to any type of statistical inference, is based on applying the concept of statistical sufficiency (see Section <a href="3-1-statistical-modelling.html#sec:suff_stats">3.1.3.3</a>). Starting from the mixture distribution function in Equation <a href="4-3-applications-in-high-energy-physics.html#eq:mixture_general">4.26</a>, and both dividing and multiplying by <span class="math inline">\(p_b(\boldsymbol{x} | \boldsymbol{\theta})\)</span> we obtain: <span id="eq:mixture_div"><span class="math display">\[
+                p(\boldsymbol{x}| \mu, \boldsymbol{\theta} ) = p_b(\boldsymbol{x} | \boldsymbol{\theta})   \left ( 1-\mu
+                                    + \mu \frac{p_s(\boldsymbol{x} | \boldsymbol{\theta})}{p_b(\boldsymbol{x} | \boldsymbol{\theta})}
+                                    \right )
+                \qquad(4.31)\]</span></span> from which we can already prove that the density ratio <span class="math inline">\(s_{s/ b}(\boldsymbol{x})= p_s(\boldsymbol{x} | \boldsymbol{\theta}) /  p_b(\boldsymbol{x} | \boldsymbol{\theta})\)</span> (or alternatively its inverse) is a sufficient summary statistic for the mixture coefficient parameter <span class="math inline">\(\mu\)</span>, according the Fisher-Neyman factorisation criterion defined in Equation <a href="3-1-statistical-modelling.html#eq:sufficient_single">3.30</a>. The density ratio can be approximated directly from signal versus background classification as indicated in Equation <a href="4-3-applications-in-high-energy-physics.html#eq:lr_clf">4.27</a>.</p>
+                <p>In the analysis presented in Chapter <a href="5-search-for-anomalous-higgs-pair-production-with-cms.html#sec:higgs_pair">5</a> and in the synthetic problem considered in Section <a href="6-5-experiments.html#sec:synthetic_mixture">6.5.1</a>, as well as for most LHC analysis using classifiers to construct summary statistics, the summary statistic <span class="math display">\[
+                s_{s/(s+b)}= \frac{p_s(\boldsymbol{x} | \boldsymbol{\theta})}{
+                p_s(\boldsymbol{x} | \boldsymbol{\theta}) +
+                 p_b(\boldsymbol{x} | \boldsymbol{\theta})}\]</span> is used instead of <span class="math inline">\(s_{s/ b} (\boldsymbol{x})\)</span>. The advantage of <span class="math inline">\(s_{s/(s+b)}(\boldsymbol{x})\)</span> is that it represents the conditional probability of one observation <span class="math inline">\(\boldsymbol{x}\)</span> coming from the signal assuming a balanced mixture, so it can be approximated by simply taking the classifier output. In addition, being a probability it is bounded between zero and one which greatly simplifies its visualisation and non-parametric likelihood estimation. Taking Equation <a href="4-3-applications-in-high-energy-physics.html#eq:mixture_div">4.31</a> and manipulating the subexpression depending on <span class="math inline">\(\mu\)</span> by adding and subtracting <span class="math inline">\(\mu\)</span> we have: <span id="eq:mixture_sub"><span class="math display">\[
+                p(\boldsymbol{x}| \mu, \boldsymbol{\theta} ) = p_b(\boldsymbol{x} | \boldsymbol{\theta})   \left ( 1-2\mu
+                                    + \mu \frac{p_s(\boldsymbol{x} | \boldsymbol{\theta}) + p_b(\boldsymbol{x} | \boldsymbol{\theta})}{p_b(\boldsymbol{x} | \boldsymbol{\theta})}
+                                    \right )
+                \qquad(4.32)\]</span></span> which can in turn can be expressed as: <span id="eq:mixture_suff"><span class="math display">\[
+                p(\boldsymbol{x}| \mu, \boldsymbol{\theta} ) = p_b(\boldsymbol{x} | \boldsymbol{\theta})   \left ( 1-2\mu
+                                    + \mu \left ( 1- \frac{p_s(\boldsymbol{x} | \boldsymbol{\theta})}{p_s(\boldsymbol{x} | \boldsymbol{\theta})
+                                  +p_b(\boldsymbol{x} | \boldsymbol{\theta})} \right )^{-1}
+                                    \right )
+                \qquad(4.33)\]</span></span> hence proving that <span class="math inline">\(s_{s/(s+b)}(\boldsymbol{x})\)</span> is also a sufficient statistic and theoretically justifying its use for inference about <span class="math inline">\(\mu\)</span>. The advantage of both <span class="math inline">\(s_{s/(s+b)}(\boldsymbol{x})\)</span> and <span class="math inline">\(s_{s/b}(\boldsymbol{x})\)</span> is that they are one-dimensional and do not depend on the dimensionality of <span class="math inline">\(\boldsymbol{x}\)</span> hence allowing much more efficient non-parametric density estimation from simulated samples. Note that we have been only discussing sufficiency with respect to the mixture coefficients and not the additional distribution parameters <span class="math inline">\(\boldsymbol{\theta}\)</span>. In fact, if a subset of <span class="math inline">\(\boldsymbol{\theta}\)</span> parameters are also relevant for inference (e.g. they are nuisance parameters) then <span class="math inline">\(s_{s/(s+b)}(\boldsymbol{x})\)</span> and <span class="math inline">\(s_{s/b}(\boldsymbol{x})\)</span> are not sufficient statistics unless the <span class="math inline">\(p_s(\boldsymbol{x}| \boldsymbol{\theta})\)</span> and <span class="math inline">\(p_b(\boldsymbol{x}| \boldsymbol{\theta})\)</span> have very specific functional form that allows a similar factorisation.</p>
+                <p>In summary, probabilistic signal versus background classification is an effective proxy to construct summary statistic that asymptotically approximate sufficient statistics directly from simulated samples, when the distributions of signal and background are fully defined and <span class="math inline">\(\mu\)</span> (or <span class="math inline">\(s\)</span> in the alternative parametrisation mentioned before) is the only unknown parameter. If the statistical model depends on additional nuisance parameters, probabilistic classification does not provide any sufficiency guarantees, so useful information about that can used to constrain the parameters of interest might be lost if a low-dimensional classification-based summary statistic is used in place of <span class="math inline">\(\boldsymbol{x}\)</span>. This theoretical observation will be observed in practice in Chapter <a href="6-inference-aware-neural-optimisation.html#sec:inferno">6</a>, where a new technique is proposed to construct summary statistics, that is not based on classification, but accounts for the effect of nuisance parameters is presented.</p>
+                </div>
+                </div>
+                <div id="sec:particle_id_reg" class="section level3">
+                <h3><span class="header-section-number">4.3.2</span> Particle Identification and Regression</h3>
+                <p>While the categorical latent variable <span class="math inline">\(z_i\)</span>, denoting the interaction process that occurred in a given collision, is very useful to define an event selection or directly as a summary statistic, information about other latent variables can also be recovered using supervised machine learning. As discussed in Section <a href="2-3-event-simulation-and-reconstruction.html#sec:event_reco">2.3.3</a>, event reconstruction techniques are used to cluster the raw detector output so the various readouts are associated with a list of particles produced in the collision. It is possible that in the near future the algorithmic reconstruction procedure might be substituted by supervised learning techniques, training directly on simulated data to predict the set of latent variables at parton level, especially given the recent progress with sequences and other non-tabular data structures. For the time being, machine learning techniques are instead often used to augment the event reconstruction output, mainly for particle identification and fine-tuned regression.</p>
+                <p>The set of physics objects obtained from event reconstruction, when adequately calibrated using simulation, can estimate effectively a subset of the latent variables <span class="math inline">\(\boldsymbol{z}\)</span> associated with the resulting parton level particles, such as their transverse momenta and direction. Due to the limitations of the hand-crafted algorithms used, some latent information is lost in the standard reconstruction process, particularly for composite objects such as jets. Supervised machine learning techniques can be used to regress some of these latent variables, using simulated data and considering both low-level and high-level features associated with the relevant reconstructed objects. This information could be used to complement the reconstruction output for each object and design better summary statistics, e.g. adding it as an input to the classifiers discussed in Section <a href="4-3-applications-in-high-energy-physics.html#sec:sig_vs_bkg">4.3.1</a>.</p>
+                <p>The details of the application of machine learning techniques in particle identification and regression depend on the particle type and the relevant physics case. In the remainder of this section, the application of new deep learning techniques to jet tagging within CMS is discussed in more detail. The integration of deep learning jet taggers with the CMS experiment software infrastructure was one of the secondary research goals of the project embodied in this document. Leveraging better machine learning techniques for jet tagging and regression could substantially increase the discovery reach of analyses at the LHC that are based on final states containing jets, such as the search for Higgs boson pair production described in Section <a href="5-search-for-anomalous-higgs-pair-production-with-cms.html#sec:higgs_pair">5</a>.</p>
+                <div id="sec:deepjet" class="section level4">
+                <h4><span class="header-section-number">4.3.2.1</span> Deep Learning for Jet Tagging</h4>
+                <p>The concept of jet tagging, introduced in Section <a href="2-3-event-simulation-and-reconstruction.html#sec:jet_btag">2.3.3.4</a>, is based on augmenting the information of reconstructed jets based on their properties to provide additional details about latent variables associated to the physics object which were not provided by the standard reconstruction procedure. Heavy flavour tagging, and in particular b-tagging, is extremely useful to distinguish and select events containing final states from relevant physical interactions. The efficiency of b-tagging algorithms in CMS has been gradually improving for each successive data taking period since the first collisions in 2010. The advance in b-tagging performance, which was already exemplified by Figure <a href="2-3-event-simulation-and-reconstruction.html#fig:CMS_btag_comp">2.12</a>, is mainly due the combined effect of using additional or more accurate jet associated information (e.g. secondary vertex reconstruction or lepton information) and better statistical techniques.</p>
+                <p>Jet tagging can generally be posed as a supervised machine learning classification problem. Let us take for example the case of b-tagging, i.e. distinguishing jets originating from b-quarks from those originating from lighter quarks or gluon, which can be framed as binary classification problem: predicting wether a jet is coming from a b-quark or not given a set of inputs associated to each jet. The truth label is available for simulated samples, which are used to train the classifier. The CSVv2 b-tagging algorithm (and older variants) mentioned in Section <a href="2-3-event-simulation-and-reconstruction.html#sec:jet_btag">2.3.3.4</a> is based on the output of supervised classifiers trained from simulation, i.e. the combination of three shallow neural network combination depending on vertex information for CSVv2. The CMVAv2 tagger, which is used in the CMS analysis included in Section <a href="5-search-for-anomalous-higgs-pair-production-with-cms.html#sec:higgs_pair">5</a>, is instead based on a boosted decision tree binary classifier that uses other simpler b-tagging algorithm outputs as input. Similar algorithms based on binary classification have been also developed for charm quark tagging and double b-quark tagging for large radius jets.</p>
+                <p>The first attempt to use some of the recent advances in neural networks (see Section <a href="4-2-machine-learning-techniques.html#sec:ann">4.2.2</a>) for jet tagging within CMS was commissioned using 2016 data, and it is referred to as DeepCSV tagger. The purpose for the development of this tagger was to quantify the performance gain due to the use of deep neural networks for jet tagging in CMS, which was demonstrated effective using a simplified detector simulation framework <span class="citation">[<a href="references.html#ref-Guest:2016iqz" role="doc-biblioref">135</a>], [<a href="references.html#ref-deOliveira:2015xxd" role="doc-biblioref">136</a>]</span>. Thus, a classifier based on a 5-layer neural network, each layer with 100 nodes using ReLU activation functions, was trained based on the information considered for the CSVv2 tagger. A vector of variables from up to six charged tracks, one secondary vertex and 12 global variables was considered as an input, amounting to 66 variables in total. Another change with respect to previous taggers is that flavour tagging is posed as a multi-class classification problem, which is a principled and simple for tacking the various flavour tagging problems simultaneously.</p>
+                <p>Five exclusive categories were defined based different on the generator level hadron information<a href="4-3-applications-in-high-energy-physics.html#fn8" class="footnote-ref" id="fnref8"><sup>8</sup></a>: the jet contains exactly one B hadron, at least two B hadrons, exactly one C hadrons and no B hadrons, at least two C hadrons and no B hadrons, or none of the previously defined categories. The softmax operator (see Equation <a href="4-1-problem-description.html#eq:softmax_function">4.11</a>) was used to normalise the category output as probabilities and construct a loss function based on cross entropy (see Equation <a href="4-1-problem-description.html#eq:general_ce">4.10</a>). As was shown in Figure <a href="2-3-event-simulation-and-reconstruction.html#fig:CMS_btag_comp">2.12</a> for b-tagging performance, the DeepCSV tagger is considerably better than CSVv2 for the b-jet efficiency/misidentification range - e.g. about 25% more efficient at light jet and gluon mistag rate of <span class="math inline">\(10^{-3}\)</span>. In fact, DeepCSV outperforms the CMVAv2 super-combined tagger, which uses additional leptonic information. While not shown in this document, the performance for c-tagging was found also comparable with dedicated c-taggers <span class="citation">[<a href="references.html#ref-Sirunyan:2017ezt" role="doc-biblioref">85</a>]</span>.</p>
+                <p>The very favourable results obtained for DeepCSV motivated the use of newer machine learning technologies, such as convolutional and recurrent layers, which were readily available in open-source software libraries <span class="citation">[<a href="references.html#ref-tensorflow2015-whitepaper" role="doc-biblioref">129</a>], [<a href="references.html#ref-chollet2015keras" role="doc-biblioref">137</a>]</span>, as well as advances in hardware (i.e. more powerful GPUs for training). The large amount of jets available in simulated data, e.g. in 2016 about <span class="math inline">\(10^9\)</span> <span class="math inline">\(\textrm{t}\bar{\textrm{t}}\)</span> events were simulated for CMS (each with two b-quarks and probably several light quarks), conceptually justifies the use of more complex machine learning models because over-fitting is unlikely. Thus, a new multi-class jet tagger referred to as DeepJet (formerly know as DeepFlavour) was developed, whose architecture is depicted in Figure <a href="4-3-applications-in-high-energy-physics.html#fig:DeepJet_schematic">4.3</a>, that can be characterised by a more involved input structure and both convolutional and recurrent layers.</p>
+                <div class="figure">
+                <img src="gfx/104_chapter_4/DeepJet-schematic.svg" alt="Figure 4.3: Scheme of DeepJet tagger architecture. Four different sets of inputs are considered: a sequence of charged candidates, a sequence of neutral candidates, a sequence of secondary vertices and a 15 global variables. Sequences go first through a series of 1x1 convolution filter that learn a more compact feature representation and then through a recurrent layer that summarises the information of the sequence to in a fixed size vector. All the inputs are then feed to a 7-layer dense network. A total of six exclusive output categories are considered depending on the generator-level components: b, bb, leptonic b, c, light or gluon. Figure adapted from [138]." id="fig:DeepJet_schematic" class="vector" style="width:90.0%"><p class="caption">Figure 4.3: Scheme of DeepJet tagger architecture. Four different sets of inputs are considered: a sequence of charged candidates, a sequence of neutral candidates, a sequence of secondary vertices and a 15 global variables. Sequences go first through a series of 1x1 convolution filter that learn a more compact feature representation and then through a recurrent layer that summarises the information of the sequence to in a fixed size vector. All the inputs are then feed to a 7-layer dense network. A total of six exclusive output categories are considered depending on the generator-level components: b, bb, leptonic b, c, light or gluon. Figure adapted from <span class="citation">[<a href="references.html#ref-CMS-DP-2018-058" role="doc-biblioref">138</a>]</span>.</p>
+                </div>
+                <p>Instead of a fixed input vector, optionally padded with zeroes for the elements that did not exist (e.g. not reconstructed secondary vertex has been reconstructed), a complex input object is considered for DeepJet. Variable-size sequences are directly taken as input for charged candidates, neutral candidates and secondary vertices; each element in the sequence characterised by 16, 8 and 12 features respectively. Each of the three input sequences go through a 3-layers of 1x1 convolutions in order to obtain a more compact element representation, 8-dimensional for charged candidates and secondary vertices and 4-dimensional for neutral candidates. The output of the convolutional layers is connected with a recurrent layer, which transforms a variable-size input to fixed-size embedding. The fixed-size outputs after the recurrent layer, as well as a set of 15 global jet variables, are feed into a 6-layer dense network with 100 (200 for the first layer) cells with ReLU activation functions per layer.</p>
+                <p>A total of six mutually exclusive output categories are considered based on the generator-level particle content associated to the jet:</p>
+                <ul><li><em>b</em> - exactly one B hadron that does not decay to a lepton.</li>
+                <li><em>bb</em> - at least two B hadrons.</li>
+                <li><em>lepb</em> - one hadron B decaying to a soft lepton</li>
+                <li><em>c</em> - at least one C hadron and no B hadrons</li>
+                <li><em>l</em> - no heavy hadrons but originated from a light quark</li>
+                <li><em>g</em> - no heavy hadrons but was originated from a gluon.</li>
+                </ul><p>The DeepJet tagger aims to provide gluon-quark discrimination in addition to b-tagging, c-tagging and double b-tagging. The output probabilities are normalised by using the softmax operator (see Equation <a href="4-1-problem-description.html#eq:softmax_function">4.11</a>). The training loss function was constructed based on cross entropy (see Equation <a href="4-1-problem-description.html#eq:general_ce">4.10</a>). Additional details regarding the architecture and training procedure are available at <span class="citation">[<a href="references.html#ref-stoye2017deepjet" role="doc-biblioref">139</a>]</span>.</p>
+                <p>The b-tagging performance of DeepJet, by means of the misidentification versus efficiency curve compared with the DeepCSV tagger, is shown in Figure <a href="4-3-applications-in-high-energy-physics.html#fig:DeepJet_b_performance">4.4</a>. The additional model complexity and input variables lead to a clear performance improvement, about a 20% additional efficiency at a mistag rate of <span class="math inline">\(10^{-3}\)</span> for light quark and gluon originated jets. Larger relative enhancements with respect to DeepCSV are seen for b-jet versus c-jet identification. The performance for c-tagging and quark-gluon discrimination is slightly improved in comparison with dedicated approaches, with the advantage of using a single model for all the flavour tagging variations. The expected relative performance boost, especially when compared non deep learning based taggers (CSVv2 or CMVA) can increase significantly the discovery potential for analyses targeting final states containing several b-tagged jets, such as the one presented in Chapter <a href="5-search-for-anomalous-higgs-pair-production-with-cms.html#sec:higgs_pair">5</a>. In addition similar model architectures have since been successfully applied to large radius jet tagging <span class="citation">[<a href="references.html#ref-CMS-DP-2018-046" role="doc-biblioref">140</a>]</span> and could be also extended to other jet related tasks, as providing a better jet momenta estimation by means of a regression output.</p>
+                <div class="figure">
+                <img src="gfx/104_chapter_4/DeepJet_SF_30GeV.svg" alt="Figure 4.4: Misidentification probability (in log scale) for jets originating from c quarks (dashed lines) or light quarks and gluons (solid lines) as a function of the b-tagging efficiency for both DeepCSV and DeepJet taggers. The corrected mistag/efficiency and its uncertainty for the loose, medium and tight working points are also included. Figure adapted from [138]." id="fig:DeepJet_b_performance" class="vector" style="width:90.0%"><p class="caption">Figure 4.4: Misidentification probability (in log scale) for jets originating from c quarks (dashed lines) or light quarks and gluons (solid lines) as a function of the b-tagging efficiency for both DeepCSV and DeepJet taggers. The corrected mistag/efficiency and its uncertainty for the loose, medium and tight working points are also included. Figure adapted from <span class="citation">[<a href="references.html#ref-CMS-DP-2018-058" role="doc-biblioref">138</a>]</span>.</p>
+                </div>
+                <p>While both advances in model architecture and the addition of input features allow notable jet tagging performance gains, they can complicate the integration of these tools within the CMS experiment software framework <span class="citation">[<a href="references.html#ref-innocente2001cms" role="doc-biblioref">141</a>]</span>, which is often referred as <span class="smallcaps">CMSSW</span>. Training and performance evaluation of both DeepCSV and DeepJet was carried out using the <span class="smallcaps">Keras</span> <span class="citation">[<a href="references.html#ref-chollet2015keras" role="doc-biblioref">137</a>]</span> and <span class="smallcaps">TensorFlow</span> <span class="citation">[<a href="references.html#ref-tensorflow2015-whitepaper" role="doc-biblioref">129</a>]</span> open-source libraries. In order to integrate jet tagging models in the standard CMS reconstruction sequence, which has rather stringent CPU and memory requirements per event because it is run for both acquired and simulated data in commodity hardware in a distributed manner around the world in the LHC computing grid <span class="citation">[<a href="references.html#ref-bird2005lhc" role="doc-biblioref">142</a>]</span>. In addition, the <span class="smallcaps">lwtnn</span> open-source library <span class="citation">[<a href="references.html#ref-daniel_hay_guest_2018_1482645" role="doc-biblioref">143</a>]</span>, a low-overhead C++ based interface used for the integration of DeepCSV did not support multi-input models with recurrent layers at the time.</p>
+                <p>An alternative path to integrate DeepJet into production was thus required. Given than <span class="smallcaps">TensorFlow</span> backend is based on the C++ programming language and a basic interface to evaluating training was also provided, the direct evaluation of machine learning model using its native <span class="smallcaps">TensorFlow</span> backend was chosen as the best alternative. In addition, this way the integration effort and basic interface developed could be re-used in future deep learning use cases in the CMS experiment (e.g. large radius jet tagging), leading to the development of the CMSSSW-DNN module <span class="citation">[<a href="references.html#ref-marcel_cmssw" role="doc-biblioref">144</a>]</span>. The integration process was made more challenging due to the difficulty recovering the same features at reconstruction level, the strict memory requirements and multi-threading conflicts. After resolving all the mentioned issues <span class="citation">[<a href="references.html#ref-pablodecm_deepjet" role="doc-biblioref">145</a>]</span>, the output of the DeepJet model at production was verified to match that of the training framework <span class="citation">[<a href="references.html#ref-markus_deepjet" role="doc-biblioref">146</a>]</span> to numerical precision. The successful integration, that is currently in use, facilitated the measurement of DeepJet b-tagging performance on data for the main discriminator working points, as shown in Figure <a href="4-3-applications-in-high-energy-physics.html#fig:DeepJet_b_performance">4.4</a>.</p>
+                </div>
+                </div>
+                </div>
+                <div class="footnotes">
+                <hr><ol start="8"><li id="fn8"><p>Here by B and C hadrons we refer to hadrons containing b-quarks c-quarks as valence quarks respectively, which often have a lifetime large enough to fly away from the primary vertex as discussed in Section <a href="2-3-event-simulation-and-reconstruction.html#sec:jet_btag">2.3.3.4</a>.<a href="4-3-applications-in-high-energy-physics.html#fnref8" class="footnote-back">↩</a></p></li>
+                </ol></div>
+                
+                              </section></div>
+          </div>
+        </div>
+        
+        
+      <a href="5-search-for-anomalous-higgs-pair-production-with-cms.html" class="navigation navigation-next" aria-label="Next page">
+                <i class="fa fa-angle-right"></i></a><a href="4-2-machine-learning-techniques.html" class="navigation navigation-prev" aria-label="Previous page">
+                <i class="fa fa-angle-left"></i></a></div>
+    </div>
+    
+
+    <script src="libs/gitbook/js/app.min.js"></script><script src="libs/gitbook/js/lunr.js"></script><script src="libs/gitbook/js/plugin-search.js"></script><script src="libs/gitbook/js/plugin-sharing.js"></script><script src="libs/gitbook/js/plugin-fontsettings.js"></script><script src="libs/gitbook/js/plugin-bookdown.js"></script><script src="libs/gitbook/js/jquery.highlight.js"></script><script>
+      gitbook.require(["gitbook"], function(gitbook) {
+        gitbook.start({
+"sharing": {
+"github": true,
+"facebook": false,
+"twitter": true,
+"google": false,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"all": ["facebook","twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"history": {
+"link": null,
+"text": null
+},
+"download": ["thesis.pdf"],
+"toc": {
+"collapse": "none"
+}
+});
+});
+    </script><script>
+      (function () {
+        var script = document.createElement("script");
+        script.type = "text/javascript";
+        var src = "true";
+        if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+        if (location.protocol !== "file:" && /^https?:/.test(src))
+          src = src.replace(/^https?:/, '');
+        script.src = src;
+        document.getElementsByTagName("head")[0].appendChild(script);
+      })();
+    </script><script src="https://hypothes.is/embed.js" async></script><link href="css/annotator.css" rel="stylesheet"></body></html>

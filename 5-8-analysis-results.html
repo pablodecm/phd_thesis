@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang=""><head><script async src="https://www.googletagmanager.com/gtag/js?id=UA-71094563-2"></script><script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-71094563-2');
+    </script><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><title>Statistical Learning and Inference at Particle Collider Experiments</title><meta name="description" content="Statistical Learning and Inference at Particle Collider Experiments"><meta name="generator" content="bookdown #bookdown:version# and GitBook 2.6.7"><meta property="og:title" content="Statistical Learning and Inference at Particle Collider Experiments"><meta property="og:type" content="book"><meta name="github-repo" content="pablodecm/phd_thesis"><meta name="twitter:card" content="summary"><meta name="twitter:title" content="Statistical Learning and Inference at Particle Collider Experiments"><meta name="author" content="Pablo de Castro Manzano"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black"><script src="libs/jquery/jquery.min.js"></script><link href="libs/gitbook/css/style.css" rel="stylesheet"><link href="libs/gitbook/css/plugin-table.css" rel="stylesheet"><link href="libs/gitbook/css/plugin-bookdown.css" rel="stylesheet"><link href="libs/gitbook/css/plugin-highlight.css" rel="stylesheet"><link href="libs/gitbook/css/plugin-search.css" rel="stylesheet"><link href="libs/gitbook/css/plugin-fontsettings.css" rel="stylesheet"><link href="css/style.css" rel="stylesheet"><link href="css/toc.css" rel="stylesheet"></head><body>
+
+    
+    <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+      <div class="book-summary">
+        <nav role="navigation"><ul class="summary"><li>
+              <a href="./">PhD Thesis - Pablo de Castro</a>
+            </li>
+            <li class="divider">
+            <li class="chapter" data-level="" data-path="abstract.html">
+              <a href="abstract.html"><i class="fa fa-check"></i> Abstract</a>
+            </li>
+            <li class="chapter" data-level="" data-path="preface.html">
+              <a href="preface.html"><i class="fa fa-check"></i> Preface</a>
+            </li>
+            <li class="chapter" data-level="" data-path="acknowledgements.html">
+              <a href="acknowledgements.html"><i class="fa fa-check"></i> Acknowledgements</a>
+            </li>
+            <li class="chapter" data-level="" data-path="introduction.html">
+              <a href="introduction.html"><i class="fa fa-check"></i> Introduction</a>
+            </li>
+            <li class="chapter" data-level="1" data-path="1-theory-of-fundamental-interactions.html">
+              <a href="1-theory-of-fundamental-interactions.html"><i class="fa fa-check"></i><b>1</b> Theory of Fundamental Interactions</a>
+              <ul><li class="chapter" data-level="1.1" data-path="1-1-the-standard-model.html">
+                  <a href="1-1-the-standard-model.html"><i class="fa fa-check"></i><b>1.1</b> The Standard Model</a>
+                  <ul><li class="chapter" data-level="1.1.1" data-path="1-1-the-standard-model.html">
+                      <a href="1-1-the-standard-model.html#sec:qft_basics"><i class="fa fa-check"></i><b>1.1.1</b> Essentials of Quantum Field Theory</a>
+                    </li>
+                    <li class="chapter" data-level="1.1.2" data-path="1-1-the-standard-model.html">
+                      <a href="1-1-the-standard-model.html#sec:qcd_detail"><i class="fa fa-check"></i><b>1.1.2</b> Quantum Chromodynamics</a>
+                    </li>
+                    <li class="chapter" data-level="1.1.3" data-path="1-1-the-standard-model.html">
+                      <a href="1-1-the-standard-model.html#sec:ew_detail"><i class="fa fa-check"></i><b>1.1.3</b> Electroweak Interactions</a>
+                    </li>
+                    <li class="chapter" data-level="1.1.4" data-path="1-1-the-standard-model.html">
+                      <a href="1-1-the-standard-model.html#sec:ewsb_higgs"><i class="fa fa-check"></i><b>1.1.4</b> Symmetry Breaking and the Higgs Boson</a>
+                    </li>
+                  </ul></li>
+                <li class="chapter" data-level="1.2" data-path="1-2-beyond-the-standard-model.html">
+                  <a href="1-2-beyond-the-standard-model.html"><i class="fa fa-check"></i><b>1.2</b> Beyond the Standard Model</a>
+                  <ul><li class="chapter" data-level="1.2.1" data-path="1-2-beyond-the-standard-model.html">
+                      <a href="1-2-beyond-the-standard-model.html#known-limitations"><i class="fa fa-check"></i><b>1.2.1</b> Known Limitations</a>
+                    </li>
+                    <li class="chapter" data-level="1.2.2" data-path="1-2-beyond-the-standard-model.html">
+                      <a href="1-2-beyond-the-standard-model.html#sec:possible_ext"><i class="fa fa-check"></i><b>1.2.2</b> Possible Extensions</a>
+                    </li>
+                  </ul></li>
+                <li class="chapter" data-level="1.3" data-path="1-3-phenomenology-of-proton-collisions.html">
+                  <a href="1-3-phenomenology-of-proton-collisions.html"><i class="fa fa-check"></i><b>1.3</b> Phenomenology of Proton Collisions</a>
+                  <ul><li class="chapter" data-level="1.3.1" data-path="1-3-phenomenology-of-proton-collisions.html">
+                      <a href="1-3-phenomenology-of-proton-collisions.html#sec:main_obs"><i class="fa fa-check"></i><b>1.3.1</b> Main Observables</a>
+                    </li>
+                    <li class="chapter" data-level="1.3.2" data-path="1-3-phenomenology-of-proton-collisions.html">
+                      <a href="1-3-phenomenology-of-proton-collisions.html#sec:pdfs"><i class="fa fa-check"></i><b>1.3.2</b> Parton Distribution Functions</a>
+                    </li>
+                    <li class="chapter" data-level="1.3.3" data-path="1-3-phenomenology-of-proton-collisions.html">
+                      <a href="1-3-phenomenology-of-proton-collisions.html#sec:factorisation"><i class="fa fa-check"></i><b>1.3.3</b> Factorisation and Generation of Hard Processes</a>
+                    </li>
+                    <li class="chapter" data-level="1.3.4" data-path="1-3-phenomenology-of-proton-collisions.html">
+                      <a href="1-3-phenomenology-of-proton-collisions.html#sec:parton_showers"><i class="fa fa-check"></i><b>1.3.4</b> Hadronization and Parton Showers</a>
+                    </li>
+                  </ul></li>
+              </ul></li>
+            <li class="chapter" data-level="2" data-path="2-experiments-at-particle-colliders.html">
+              <a href="2-experiments-at-particle-colliders.html"><i class="fa fa-check"></i><b>2</b> Experiments at Particle Colliders</a>
+              <ul><li class="chapter" data-level="2.1" data-path="2-1-the-large-hadron-collider.html">
+                  <a href="2-1-the-large-hadron-collider.html"><i class="fa fa-check"></i><b>2.1</b> The Large Hadron Collider</a>
+                  <ul><li class="chapter" data-level="2.1.1" data-path="2-1-the-large-hadron-collider.html">
+                      <a href="2-1-the-large-hadron-collider.html#injection-and-acceleration-chain"><i class="fa fa-check"></i><b>2.1.1</b> Injection and Acceleration Chain</a>
+                    </li>
+                    <li class="chapter" data-level="2.1.2" data-path="2-1-the-large-hadron-collider.html">
+                      <a href="2-1-the-large-hadron-collider.html#sec:op_pars"><i class="fa fa-check"></i><b>2.1.2</b> Operation Parameters</a>
+                    </li>
+                    <li class="chapter" data-level="2.1.3" data-path="2-1-the-large-hadron-collider.html">
+                      <a href="2-1-the-large-hadron-collider.html#sec:pile_up"><i class="fa fa-check"></i><b>2.1.3</b> Multiple Hadron Interactions</a>
+                    </li>
+                    <li class="chapter" data-level="2.1.4" data-path="2-1-the-large-hadron-collider.html">
+                      <a href="2-1-the-large-hadron-collider.html#sec:lhc_experiments"><i class="fa fa-check"></i><b>2.1.4</b> Experiments</a>
+                    </li>
+                  </ul></li>
+                <li class="chapter" data-level="2.2" data-path="2-2-the-compact-muon-solenoid.html">
+                  <a href="2-2-the-compact-muon-solenoid.html"><i class="fa fa-check"></i><b>2.2</b> The Compact Muon Solenoid</a>
+                  <ul><li class="chapter" data-level="2.2.1" data-path="2-2-the-compact-muon-solenoid.html">
+                      <a href="2-2-the-compact-muon-solenoid.html#sec:exp_geom"><i class="fa fa-check"></i><b>2.2.1</b> Experimental Geometry</a>
+                    </li>
+                    <li class="chapter" data-level="2.2.2" data-path="2-2-the-compact-muon-solenoid.html">
+                      <a href="2-2-the-compact-muon-solenoid.html#sec:cms_magnet"><i class="fa fa-check"></i><b>2.2.2</b> Magnet</a>
+                    </li>
+                    <li class="chapter" data-level="2.2.3" data-path="2-2-the-compact-muon-solenoid.html">
+                      <a href="2-2-the-compact-muon-solenoid.html#sec:cms_tracking"><i class="fa fa-check"></i><b>2.2.3</b> Tracking System</a>
+                    </li>
+                    <li class="chapter" data-level="2.2.4" data-path="2-2-the-compact-muon-solenoid.html">
+                      <a href="2-2-the-compact-muon-solenoid.html#sec:cms_ecal"><i class="fa fa-check"></i><b>2.2.4</b> Electromagnetic Calorimeter</a>
+                    </li>
+                    <li class="chapter" data-level="2.2.5" data-path="2-2-the-compact-muon-solenoid.html">
+                      <a href="2-2-the-compact-muon-solenoid.html#sec:cms_hcal"><i class="fa fa-check"></i><b>2.2.5</b> Hadronic Calorimeter</a>
+                    </li>
+                    <li class="chapter" data-level="2.2.6" data-path="2-2-the-compact-muon-solenoid.html">
+                      <a href="2-2-the-compact-muon-solenoid.html#sec:cms_muon"><i class="fa fa-check"></i><b>2.2.6</b> Muon System</a>
+                    </li>
+                    <li class="chapter" data-level="2.2.7" data-path="2-2-the-compact-muon-solenoid.html">
+                      <a href="2-2-the-compact-muon-solenoid.html#sec:trigger"><i class="fa fa-check"></i><b>2.2.7</b> Trigger and Data Acquisition</a>
+                    </li>
+                  </ul></li>
+                <li class="chapter" data-level="2.3" data-path="2-3-event-simulation-and-reconstruction.html">
+                  <a href="2-3-event-simulation-and-reconstruction.html"><i class="fa fa-check"></i><b>2.3</b> Event Simulation and Reconstruction</a>
+                  <ul><li class="chapter" data-level="2.3.1" data-path="2-3-event-simulation-and-reconstruction.html">
+                      <a href="2-3-event-simulation-and-reconstruction.html#sec:gen_view"><i class="fa fa-check"></i><b>2.3.1</b> A Generative View</a>
+                    </li>
+                    <li class="chapter" data-level="2.3.2" data-path="2-3-event-simulation-and-reconstruction.html">
+                      <a href="2-3-event-simulation-and-reconstruction.html#sec:detector_simulation"><i class="fa fa-check"></i><b>2.3.2</b> Detector Simulation</a>
+                    </li>
+                    <li class="chapter" data-level="2.3.3" data-path="2-3-event-simulation-and-reconstruction.html">
+                      <a href="2-3-event-simulation-and-reconstruction.html#sec:event_reco"><i class="fa fa-check"></i><b>2.3.3</b> Event Reconstruction</a>
+                    </li>
+                  </ul></li>
+              </ul></li>
+            <li class="chapter" data-level="3" data-path="3-statistical-modelling-and-inference-at-the-lhc.html">
+              <a href="3-statistical-modelling-and-inference-at-the-lhc.html"><i class="fa fa-check"></i><b>3</b> Statistical Modelling and Inference at the LHC</a>
+              <ul><li class="chapter" data-level="3.1" data-path="3-1-statistical-modelling.html">
+                  <a href="3-1-statistical-modelling.html"><i class="fa fa-check"></i><b>3.1</b> Statistical Modelling</a>
+                  <ul><li class="chapter" data-level="3.1.1" data-path="3-1-statistical-modelling.html">
+                      <a href="3-1-statistical-modelling.html#sec:model_overview"><i class="fa fa-check"></i><b>3.1.1</b> Overview</a>
+                    </li>
+                    <li class="chapter" data-level="3.1.2" data-path="3-1-statistical-modelling.html">
+                      <a href="3-1-statistical-modelling.html#simulation-as-generative-modelling"><i class="fa fa-check"></i><b>3.1.2</b> Simulation as Generative Modelling</a>
+                    </li>
+                    <li class="chapter" data-level="3.1.3" data-path="3-1-statistical-modelling.html">
+                      <a href="3-1-statistical-modelling.html#sec:dim_reduction"><i class="fa fa-check"></i><b>3.1.3</b> Dimensionality Reduction</a>
+                    </li>
+                    <li class="chapter" data-level="3.1.4" data-path="3-1-statistical-modelling.html">
+                      <a href="3-1-statistical-modelling.html#sec:known_unknowns"><i class="fa fa-check"></i><b>3.1.4</b> Known Unknowns</a>
+                    </li>
+                  </ul></li>
+                <li class="chapter" data-level="3.2" data-path="3-2-statistical-inference.html">
+                  <a href="3-2-statistical-inference.html"><i class="fa fa-check"></i><b>3.2</b> Statistical Inference</a>
+                  <ul><li class="chapter" data-level="3.2.1" data-path="3-2-statistical-inference.html">
+                      <a href="3-2-statistical-inference.html#sec:likelihood-free"><i class="fa fa-check"></i><b>3.2.1</b> Likelihood-Free Inference</a>
+                    </li>
+                    <li class="chapter" data-level="3.2.2" data-path="3-2-statistical-inference.html">
+                      <a href="3-2-statistical-inference.html#sec:hypo_test"><i class="fa fa-check"></i><b>3.2.2</b> Hypothesis Testing</a>
+                    </li>
+                    <li class="chapter" data-level="3.2.3" data-path="3-2-statistical-inference.html">
+                      <a href="3-2-statistical-inference.html#sec:param_est"><i class="fa fa-check"></i><b>3.2.3</b> Parameter Estimation</a>
+                    </li>
+                  </ul></li>
+              </ul></li>
+            <li class="chapter" data-level="4" data-path="4-machine-learning-in-high-energy-physics.html">
+              <a href="4-machine-learning-in-high-energy-physics.html"><i class="fa fa-check"></i><b>4</b> Machine Learning in High-Energy Physics</a>
+              <ul><li class="chapter" data-level="4.1" data-path="4-1-problem-description.html">
+                  <a href="4-1-problem-description.html"><i class="fa fa-check"></i><b>4.1</b> Problem Description</a>
+                  <ul><li class="chapter" data-level="4.1.1" data-path="4-1-problem-description.html">
+                      <a href="4-1-problem-description.html#sec:supervised"><i class="fa fa-check"></i><b>4.1.1</b> Probabilistic Classification and Regression</a>
+                    </li>
+                  </ul></li>
+                <li class="chapter" data-level="4.2" data-path="4-2-machine-learning-techniques.html">
+                  <a href="4-2-machine-learning-techniques.html"><i class="fa fa-check"></i><b>4.2</b> Machine Learning Techniques</a>
+                  <ul><li class="chapter" data-level="4.2.1" data-path="4-2-machine-learning-techniques.html">
+                      <a href="4-2-machine-learning-techniques.html#sec:boosted_decision_trees"><i class="fa fa-check"></i><b>4.2.1</b> Boosted Decision Trees</a>
+                    </li>
+                    <li class="chapter" data-level="4.2.2" data-path="4-2-machine-learning-techniques.html">
+                      <a href="4-2-machine-learning-techniques.html#sec:ann"><i class="fa fa-check"></i><b>4.2.2</b> Artificial Neural Networks</a>
+                    </li>
+                  </ul></li>
+                <li class="chapter" data-level="4.3" data-path="4-3-applications-in-high-energy-physics.html">
+                  <a href="4-3-applications-in-high-energy-physics.html"><i class="fa fa-check"></i><b>4.3</b> Applications in High Energy Physics</a>
+                  <ul><li class="chapter" data-level="4.3.1" data-path="4-3-applications-in-high-energy-physics.html">
+                      <a href="4-3-applications-in-high-energy-physics.html#sec:sig_vs_bkg"><i class="fa fa-check"></i><b>4.3.1</b> Signal vs Background Classification</a>
+                    </li>
+                    <li class="chapter" data-level="4.3.2" data-path="4-3-applications-in-high-energy-physics.html">
+                      <a href="4-3-applications-in-high-energy-physics.html#sec:particle_id_reg"><i class="fa fa-check"></i><b>4.3.2</b> Particle Identification and Regression</a>
+                    </li>
+                  </ul></li>
+              </ul></li>
+            <li class="chapter" data-level="5" data-path="5-search-for-anomalous-higgs-pair-production-with-cms.html">
+              <a href="5-search-for-anomalous-higgs-pair-production-with-cms.html"><i class="fa fa-check"></i><b>5</b> Search for Anomalous Higgs Pair Production with CMS</a>
+              <ul><li class="chapter" data-level="5.1" data-path="5-1-introduction.html">
+                  <a href="5-1-introduction.html"><i class="fa fa-check"></i><b>5.1</b> Introduction</a>
+                </li>
+                <li class="chapter" data-level="5.2" data-path="5-2-higgs-pair-production-and-anomalous-couplings.html">
+                  <a href="5-2-higgs-pair-production-and-anomalous-couplings.html"><i class="fa fa-check"></i><b>5.2</b> Higgs Pair Production and Anomalous Couplings</a>
+                </li>
+                <li class="chapter" data-level="5.3" data-path="5-3-analysis-strategy.html">
+                  <a href="5-3-analysis-strategy.html"><i class="fa fa-check"></i><b>5.3</b> Analysis Strategy</a>
+                </li>
+                <li class="chapter" data-level="5.4" data-path="5-4-trigger-and-datasets.html">
+                  <a href="5-4-trigger-and-datasets.html"><i class="fa fa-check"></i><b>5.4</b> Trigger and Datasets</a>
+                </li>
+                <li class="chapter" data-level="5.5" data-path="5-5-event-selection.html">
+                  <a href="5-5-event-selection.html"><i class="fa fa-check"></i><b>5.5</b> Event Selection</a>
+                </li>
+                <li class="chapter" data-level="5.6" data-path="5-6-data-driven-background-estimation.html">
+                  <a href="5-6-data-driven-background-estimation.html"><i class="fa fa-check"></i><b>5.6</b> Data-Driven Background Estimation</a>
+                  <ul><li class="chapter" data-level="5.6.1" data-path="5-6-data-driven-background-estimation.html">
+                      <a href="5-6-data-driven-background-estimation.html#sec:hem_mixing"><i class="fa fa-check"></i><b>5.6.1</b> Hemisphere Mixing</a>
+                    </li>
+                    <li class="chapter" data-level="5.6.2" data-path="5-6-data-driven-background-estimation.html">
+                      <a href="5-6-data-driven-background-estimation.html#sec:bkg_validation"><i class="fa fa-check"></i><b>5.6.2</b> Background Validation</a>
+                    </li>
+                  </ul></li>
+                <li class="chapter" data-level="5.7" data-path="5-7-systematic-uncertainties.html">
+                  <a href="5-7-systematic-uncertainties.html"><i class="fa fa-check"></i><b>5.7</b> Systematic Uncertainties</a>
+                </li>
+                <li class="chapter" data-level="5.8" data-path="5-8-analysis-results.html">
+                  <a href="5-8-analysis-results.html"><i class="fa fa-check"></i><b>5.8</b> Analysis Results</a>
+                </li>
+                <li class="chapter" data-level="5.9" data-path="5-9-combination-with-other-decay-channels.html">
+                  <a href="5-9-combination-with-other-decay-channels.html"><i class="fa fa-check"></i><b>5.9</b> Combination with Other Decay Channels</a>
+                </li>
+              </ul></li>
+            <li class="chapter" data-level="6" data-path="6-inference-aware-neural-optimisation.html">
+              <a href="6-inference-aware-neural-optimisation.html"><i class="fa fa-check"></i><b>6</b> Inference-Aware Neural Optimisation</a>
+              <ul><li class="chapter" data-level="6.1" data-path="6-1-introduction.html">
+                  <a href="6-1-introduction.html"><i class="fa fa-check"></i><b>6.1</b> Introduction</a>
+                </li>
+                <li class="chapter" data-level="6.2" data-path="6-2-problem-statement.html">
+                  <a href="6-2-problem-statement.html"><i class="fa fa-check"></i><b>6.2</b> Problem Statement</a>
+                </li>
+                <li class="chapter" data-level="6.3" data-path="6-3-method.html">
+                  <a href="6-3-method.html"><i class="fa fa-check"></i><b>6.3</b> Method</a>
+                </li>
+                <li class="chapter" data-level="6.4" data-path="6-4-related-work.html">
+                  <a href="6-4-related-work.html"><i class="fa fa-check"></i><b>6.4</b> Related Work</a>
+                </li>
+                <li class="chapter" data-level="6.5" data-path="6-5-experiments.html">
+                  <a href="6-5-experiments.html"><i class="fa fa-check"></i><b>6.5</b> Experiments</a>
+                  <ul><li class="chapter" data-level="6.5.1" data-path="6-5-experiments.html">
+                      <a href="6-5-experiments.html#sec:synthetic_mixture"><i class="fa fa-check"></i><b>6.5.1</b> 3D Synthetic Mixture</a>
+                    </li>
+                  </ul></li>
+              </ul></li>
+            <li class="chapter" data-level="7" data-path="7-conclusions-and-prospects.html">
+              <a href="7-conclusions-and-prospects.html"><i class="fa fa-check"></i><b>7</b> Conclusions and Prospects</a>
+            </li>
+            <li class="chapter" data-level="" data-path="references.html">
+              <a href="references.html"><i class="fa fa-check"></i> References</a>
+            </li>
+          </ul></nav></div>
+
+      <div class="book-body">
+        <div class="body-inner">
+          <div class="book-header" role="navigation">
+            <h1>
+              <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Statistical Learning and Inference at Particle Collider Experiments</a>
+            </h1>
+          </div>
+
+          <div class="page-wrapper" tabindex="-1" role="main">
+            <div class="page-inner">
+
+              <section class="normal" id="section-"><div id="sec:results" class="section level2">
+                <h2><span class="header-section-number">5.8</span> Analysis Results</h2>
+                <p>This section includes the experimental results of the search of non-resonant Higgs pair production with CMS data collected during 2016 at the LHC. The final summary statistic is the distribution of a probabilistic classifier output, which was trained on simulated events of SM HH production and events resulting from the data-driven background estimation technique described in Section <a href="5-6-data-driven-background-estimation.html#sec:bkg_est">5.6</a>. Specifically, a non-parametric sample likelihood composed by a product of Poisson count likelihoods is used, where each Poisson factor represents a bin of the distribution of the classifier output, in an analogous manner to Equation <a href="3-1-statistical-modelling.html#eq:poisson_multichannel">3.28</a>. The classifier distribution was initially divided in 80 equal sized bins, and the expected number of counts from each mixture component and their variations due to nuisance parameters were estimated using simulated observations under the SM hypothesis and each of the BSM EFT points considered for the signal, and from the bias corrected distribution for the data-driven background dataset.</p>
+                <p>Given the slight mis-modelling observed in the lower range of the classifier output on the control regions discussed in Section <a href="5-6-data-driven-background-estimation.html#sec:bkg_validation">5.6.2</a>, a study studying the variation of the expected limit when a non-zero minimum value is considered in the likelihood binning was carried out. It was found that restricting the fit to classifier output values larger than 0.2 resulted on a negligible loss on sensitivity (i.e. smaller than 2%) while greatly improving the overall data-background compatibility. For this reason, onty the rightmost 64 of the initial 80 bins of the classifier distribution are used to build the Poisson likelihood used for statistical inference. The best-fit distributions for signal, background and data for the classifier output are shown in Figure <a href="5-8-analysis-results.html#fig:Figure_007">5.14</a>, while the those corresponding to the reconstructed Higgs boson masses are shown in Figure <a href="5-8-analysis-results.html#fig:Figure_008">5.15</a>.</p>
+                <div class="figure">
+                <img src="gfx/105_chapter_5/Figure_007.svg" alt="Figure 5.14: Results of the for best fit of the statistical model of BDT classifier output distribution for the SM HH production signal for the observed data. In the lower panel a comparison is shown between the best fit signal and best fit background subtracted from measured data. The dashed band in the lower panel, centred at zero, shows the total uncertainty. Figure adapted from [148]." id="fig:Figure_007" class="vector" style="width:75.0%"><p class="caption">Figure 5.14: Results of the for best fit of the statistical model of BDT classifier output distribution for the SM HH production signal for the observed data. In the lower panel a comparison is shown between the best fit signal and best fit background subtracted from measured data. The dashed band in the lower panel, centred at zero, shows the total uncertainty. Figure adapted from <span class="citation">[<a href="references.html#ref-Sirunyan:2018tki" role="doc-biblioref">148</a>]</span>.</p>
+                </div>
+                <div id="fig:Figure_008" class="subfigures subfigures caption">
+                <p><img src="gfx/105_chapter_5/Figure_008-a.svg" title="fig:" alt="a" id="fig:Figure_008_a" class="vector" style="width:49.0%"><img src="gfx/105_chapter_5/Figure_008-b.svg" title="fig:" alt="b" id="fig:Figure_008_b" class="vector" style="width:49.0%"></p>
+                <p>Figure 5.15: Distributions of the reconstructed Higgs masses for the best fit. A correction factor obtained from the binned classifier distribution, as described in Section <a href="5-6-data-driven-background-estimation.html#sec:bkg_validation">5.6.2</a>, has been applied as a weight to the mixed dataset. Figures adapted from <span class="citation">[<a href="references.html#ref-Sirunyan:2018tki" role="doc-biblioref">148</a>]</span>.. a — leading Higgs mass <span class="math inline">\(M_{\textrm{H}_1}\)</span>, b — trailing Higgs mass <span class="math inline">\(M_{\textrm{H}_2}\)</span></p>
+                </div>
+                <p>Only two mixture components are considered in the final statistical model, signal representing <span class="math inline">\(\textrm{pp} \rightarrow \textrm{HH} \rightarrow \textrm{b}\bar{\textrm{b}}\textrm{b}\bar{\textrm{b}}\)</span>, and background estimated from data and dominated by QCD multi-jet processes and secondarily by top quark production with additional jets. The contribution from other hard processes that can produce four b-quarks, such as <span class="math inline">\(\textrm{t}\bar{\textrm{t}}\textrm{H}\)</span>, <span class="math inline">\(\textrm{Z}\textrm{H}\)</span>, <span class="math inline">\(\textrm{b}\bar{\textrm{b}}\textrm{H}\)</span>, and single Higgs boson production was estimated from simulated samples and found to be negligible in comparison with the considered background uncertainties at the current level of experiment sensitivity.</p>
+                <p>The same statistical model is used to obtain he observed and expected 95% confidence level (CL) upper limits for non-resonant <span class="math inline">\(\textrm{pp} \rightarrow \textrm{HH} \rightarrow \textrm{b}\bar{\textrm{b}}\textrm{b}\bar{\textrm{b}}\)</span> production, using the asymptotic approximation <span class="citation">[<a href="references.html#ref-Cowan:2010js" role="doc-biblioref">100</a>]</span> of the <span class="math inline">\(\textrm{CL}_\textrm{s}\)</span> criterion <span class="citation">[<a href="references.html#ref-Read:2002hq" role="doc-biblioref">101</a>], [<a href="references.html#ref-Junk:1999kv" role="doc-biblioref">102</a>], [<a href="references.html#ref-ATLAS:2011tau" role="doc-biblioref">184</a>]</span>, and the so-called LHC test statistic, that is based on the profile likelihood ratio. All the nuisance parameters are treated by profiling the likelihood. The median expected and observed upper limits for the SM Higgs pair production, as well as the expected limit 1 and 2 standard deviation intervals around the median are included in Table <a href="5-8-analysis-results.html#tab:limits2">5.5</a>. The median expected limit obtained for SM HH production is <span class="math inline">\(419\ \textrm{fb}\)</span>, which corresponds to approximately 37 times the SM expectation, which can be obtained by taking the cross section from Equation <a href="5-1-introduction.html#eq:higgs_pair_xs">5.1</a> and multiplying it by the <span class="math inline">\(\textrm{b}\bar{\textrm{b}}\textrm{b}\bar{\textrm{b}}\)</span> decay branching fraction. The obtained observed limit is <span class="math inline">\(847\ \textrm{fb}\)</span>, which is about two standard deviations above the expected limit. To facilitate the comparison with the analyses carried out in other channels, the observed limit corresponds to <span class="math inline">\(\sigma \left ( \textrm{pp} \rightarrow \textrm{HH} \right ) = 2496\ \textrm{SM}\)</span> as an upper limit the inclusive HH production cross section of SM-like processes.</p>
+                <div class="caption">
+                <p>Table 5.5: Observed and expected upper limits on <span class="math inline">\(\sigma(\textrm{pp} \rightarrow \textrm{HH} \rightarrow \textrm{b}\bar{\textrm{b}}\textrm{b}\bar{\textrm{b}})\)</span> in the SM at 95% CL in units of fb.</p>
+                </div>
+                <p><img src="gfx/tables/limits2.svg" id="tab:limits2"></p>
+                <p>The same procedure was carried out for each of the EFT benchmarks previously listed in Table <a href="5-2-higgs-pair-production-and-anomalous-couplings.html#table:benchmarks">5.1</a>, by re-weighting the simulated HH production observation as discusses and evaluating the signal distribution under each BSM model considered. The observed and expected limits obtained for each of the benchmark points are provided in Table <a href="5-8-analysis-results.html#tab:limits">5.6</a>. The observed and expected limits are also graphically compared between the various EFT points and the SM in Figure <a href="5-8-analysis-results.html#fig:Figure_009">5.16</a>. The observed limits are also found about two standard deviations over the median expected limits, which can be explained by taking into account that the same classifier and thus the same background model (and its associated fluctuations) is considered in the statistical model for all the inference procedures. In particular, the last bins of the classifier distribution for the data-driven background prediction has a small deficit compared to the observed data, as can be seen in Figure <a href="5-8-analysis-results.html#fig:Figure_007">5.14</a>.</p>
+                <div class="caption">
+                <p>Table 5.6: Observed and expected upper limits on the <span class="math inline">\(\sigma(\textrm{pp} \rightarrow \textrm{HH} \rightarrow  \textrm{b}\bar{\textrm{b}}\textrm{b}\bar{\textrm{b}})\)</span> cross section for the 13 BSM benchmark models listed in Table <a href="5-2-higgs-pair-production-and-anomalous-couplings.html#table:benchmarks">5.1</a> at 95% CL in units of fb.</p>
+                </div>
+                <p><img src="gfx/tables/limits.svg" id="tab:limits"></p>
+                <div class="figure">
+                <img src="gfx/105_chapter_5/Figure_009.svg" alt="Figure 5.16: Graphical comparison between the observed and expected upper limits at 95% CL on the \sigma(\textrm{pp} \rightarrow \textrm{HH} \rightarrow \textrm{b}\bar{\textrm{b}}\textrm{b}\bar{\textrm{b}}) cross section for the SM and the 13 BSM models investigated. The inner green bands and the outer yellow bands and correspond to the range of percentiles around the median that contain the 68% and 95% times the upper limit under the background-only hypothesis. See Table 5.1 for their respective EFT parameter values. Figure adapted from [148]." id="fig:Figure_009" class="vector" style="width:50.0%"><p class="caption">Figure 5.16: Graphical comparison between the observed and expected upper limits at 95% CL on the <span class="math inline">\(\sigma(\textrm{pp} \rightarrow \textrm{HH} \rightarrow \textrm{b}\bar{\textrm{b}}\textrm{b}\bar{\textrm{b}})\)</span> cross section for the SM and the 13 BSM models investigated. The inner green bands and the outer yellow bands and correspond to the range of percentiles around the median that contain the 68% and 95% times the upper limit under the background-only hypothesis. See Table <a href="5-2-higgs-pair-production-and-anomalous-couplings.html#table:benchmarks">5.1</a> for their respective EFT parameter values. Figure adapted from <span class="citation">[<a href="references.html#ref-Sirunyan:2018tki" role="doc-biblioref">148</a>]</span>.</p>
+                </div>
+                <p>In addition to the BSM benchmarks, limits are also obtained for the cross section times branching ratio of Higgs pair production processes in the EFT framework, varying <span class="math inline">\(\kappa_\lambda\)</span> in the range <span class="math inline">\([-20,20]\)</span>, while assuming that <span class="math inline">\(\kappa_\textrm{t}=1\)</span> and the rest of the couplings are zero. The results are shown in Figure <a href="5-8-analysis-results.html#fig:Figure_010">5.17</a>, noting that the upper limit changes considerably in this range because the distribution of the final state properties change considerably, and consequently the associated efficiency for the process also varies. The EFT cross section prediction as a function of <span class="math inline">\(\kappa_\lambda\)</span> and keeping <span class="math inline">\(\kappa_\textrm{t}=1\)</span> is also shown in the previous figure, noting that no values of <span class="math inline">\(\kappa_\lambda\)</span> can be excluded at the current level of experimental sensitivity.</p>
+                <div class="figure">
+                <img src="gfx/105_chapter_5/Figure_010.svg" alt="Figure 5.17: Observed and expected \sigma(\textrm{pp} \rightarrow \textrm{HH} \rightarrow \textrm{b}\bar{\textrm{b}}\textrm{b}\bar{\textrm{b}}) cross section limits at 95% CL for values of \kappa_\lambda in the [-20,20] range, assuming \kappa_\textrm{t} = 1. The inner green band and the outer yellow bands correspond to the range of percentiles around the median that contain the 68% and 95% times the upper limit under the background-only hypothesis. the theoretical prediction with \kappa_\textrm{t} = 1 is also shown in red colour. Figure adapted from [148]." id="fig:Figure_010" class="vector" style="width:50.0%"><p class="caption">Figure 5.17: Observed and expected <span class="math inline">\(\sigma(\textrm{pp} \rightarrow \textrm{HH} \rightarrow \textrm{b}\bar{\textrm{b}}\textrm{b}\bar{\textrm{b}})\)</span> cross section limits at 95% CL for values of <span class="math inline">\(\kappa_\lambda\)</span> in the [-20,20] range, assuming <span class="math inline">\(\kappa_\textrm{t} = 1\)</span>. The inner green band and the outer yellow bands correspond to the range of percentiles around the median that contain the 68% and 95% times the upper limit under the background-only hypothesis. the theoretical prediction with <span class="math inline">\(\kappa_\textrm{t} = 1\)</span> is also shown in red colour. Figure adapted from <span class="citation">[<a href="references.html#ref-Sirunyan:2018tki" role="doc-biblioref">148</a>]</span>.</p>
+                </div>
+                </div>
+                </section></div>
+          </div>
+        </div>
+        
+        
+      <a href="5-9-combination-with-other-decay-channels.html" class="navigation navigation-next" aria-label="Next page">
+                <i class="fa fa-angle-right"></i></a><a href="5-7-systematic-uncertainties.html" class="navigation navigation-prev" aria-label="Previous page">
+                <i class="fa fa-angle-left"></i></a></div>
+    </div>
+    
+
+    <script src="libs/gitbook/js/app.min.js"></script><script src="libs/gitbook/js/lunr.js"></script><script src="libs/gitbook/js/plugin-search.js"></script><script src="libs/gitbook/js/plugin-sharing.js"></script><script src="libs/gitbook/js/plugin-fontsettings.js"></script><script src="libs/gitbook/js/plugin-bookdown.js"></script><script src="libs/gitbook/js/jquery.highlight.js"></script><script>
+      gitbook.require(["gitbook"], function(gitbook) {
+        gitbook.start({
+"sharing": {
+"github": true,
+"facebook": false,
+"twitter": true,
+"google": false,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"all": ["facebook","twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"history": {
+"link": null,
+"text": null
+},
+"download": ["thesis.pdf"],
+"toc": {
+"collapse": "none"
+}
+});
+});
+    </script><script>
+      (function () {
+        var script = document.createElement("script");
+        script.type = "text/javascript";
+        var src = "true";
+        if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+        if (location.protocol !== "file:" && /^https?:/.test(src))
+          src = src.replace(/^https?:/, '');
+        script.src = src;
+        document.getElementsByTagName("head")[0].appendChild(script);
+      })();
+    </script><script src="https://hypothes.is/embed.js" async></script><link href="css/annotator.css" rel="stylesheet"></body></html>

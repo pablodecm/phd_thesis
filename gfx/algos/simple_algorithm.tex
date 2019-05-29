@@ -1,0 +1,51 @@
+
+\documentclass[border=5pt]{standalone}
+
+\usepackage{booktabs}
+\usepackage{algorithm}
+\usepackage{algpseudocode}
+
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{amsfonts}
+\usepackage{dsfont}
+
+\begin{document}
+
+  \minipage{18cm}
+
+  \centering
+  \small
+  
+  
+    \begin{flushleft}
+    \textit{Input 1:} differentiable simulator or variational
+    approximation $g(\boldsymbol{\theta})$. \\
+    \textit{Input 2:} initial parameter values $\boldsymbol{\theta}_s.$ \\
+    \textit{Input 3:} parameter of interest $\omega_0=\theta_k$.
+     \\
+    \textit{Output:} learned summary statistic
+      $\boldsymbol{s}(D; \boldsymbol{\phi})$.\\
+ \end{flushleft}
+ \begin{algorithmic}[1]
+ \For{$i=1$ to $N$}
+  \State{Sample a representative mini-batch $G_s$ from
+  $g(\boldsymbol{\theta}_s)$.}
+  \State{Compute differentiable summary statistic
+    $\hat{\boldsymbol{s}}(G_s;\boldsymbol{\phi})$.}
+  \State{Construct Asimov likelihood
+    $\mathcal{L}_A(\boldsymbol{\theta}, \boldsymbol{\phi})$.}
+  \State{Get information matrix inverse $I(\boldsymbol{\theta})^{-1}
+  = \boldsymbol{H}_{\boldsymbol{\theta}}^{-1}(\log
+  \mathcal{L}_A(\boldsymbol{\theta}, \boldsymbol{\phi}))$.}
+  \State{Obtain loss
+    $U= I_{kk}^{-1}(\boldsymbol{\theta}_s)$.}
+  \State{Update network parameters $\boldsymbol{\phi} \rightarrow
+  \textrm{SGD}(\nabla_{\boldsymbol{\phi}} U)$.}
+ \EndFor
+ \end{algorithmic}
+ \label{alg:simple_algorithm}
+
+
+  \endminipage
+\end{document}

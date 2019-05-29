@@ -1,0 +1,924 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang=""><head><script async src="https://www.googletagmanager.com/gtag/js?id=UA-71094563-2"></script><script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-71094563-2');
+    </script><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><title>Statistical Learning and Inference at Particle Collider Experiments</title><meta name="description" content="Statistical Learning and Inference at Particle Collider Experiments"><meta name="generator" content="bookdown #bookdown:version# and GitBook 2.6.7"><meta property="og:title" content="Statistical Learning and Inference at Particle Collider Experiments"><meta property="og:type" content="book"><meta name="github-repo" content="pablodecm/phd_thesis"><meta name="twitter:card" content="summary"><meta name="twitter:title" content="Statistical Learning and Inference at Particle Collider Experiments"><meta name="author" content="Pablo de Castro Manzano"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black"><script src="libs/jquery/jquery.min.js"></script><link href="libs/gitbook/css/style.css" rel="stylesheet"><link href="libs/gitbook/css/plugin-table.css" rel="stylesheet"><link href="libs/gitbook/css/plugin-bookdown.css" rel="stylesheet"><link href="libs/gitbook/css/plugin-highlight.css" rel="stylesheet"><link href="libs/gitbook/css/plugin-search.css" rel="stylesheet"><link href="libs/gitbook/css/plugin-fontsettings.css" rel="stylesheet"><link href="css/style.css" rel="stylesheet"><link href="css/toc.css" rel="stylesheet"></head><body>
+
+    
+    <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+      <div class="book-summary">
+        <nav role="navigation"><ul class="summary"><li>
+              <a href="./">PhD Thesis - Pablo de Castro</a>
+            </li>
+            <li class="divider">
+            <li class="chapter" data-level="" data-path="abstract.html">
+              <a href="abstract.html"><i class="fa fa-check"></i> Abstract</a>
+            </li>
+            <li class="chapter" data-level="" data-path="preface.html">
+              <a href="preface.html"><i class="fa fa-check"></i> Preface</a>
+            </li>
+            <li class="chapter" data-level="" data-path="acknowledgements.html">
+              <a href="acknowledgements.html"><i class="fa fa-check"></i> Acknowledgements</a>
+            </li>
+            <li class="chapter" data-level="" data-path="introduction.html">
+              <a href="introduction.html"><i class="fa fa-check"></i> Introduction</a>
+            </li>
+            <li class="chapter" data-level="1" data-path="1-theory-of-fundamental-interactions.html">
+              <a href="1-theory-of-fundamental-interactions.html"><i class="fa fa-check"></i><b>1</b> Theory of Fundamental Interactions</a>
+              <ul><li class="chapter" data-level="1.1" data-path="1-1-the-standard-model.html">
+                  <a href="1-1-the-standard-model.html"><i class="fa fa-check"></i><b>1.1</b> The Standard Model</a>
+                  <ul><li class="chapter" data-level="1.1.1" data-path="1-1-the-standard-model.html">
+                      <a href="1-1-the-standard-model.html#sec:qft_basics"><i class="fa fa-check"></i><b>1.1.1</b> Essentials of Quantum Field Theory</a>
+                    </li>
+                    <li class="chapter" data-level="1.1.2" data-path="1-1-the-standard-model.html">
+                      <a href="1-1-the-standard-model.html#sec:qcd_detail"><i class="fa fa-check"></i><b>1.1.2</b> Quantum Chromodynamics</a>
+                    </li>
+                    <li class="chapter" data-level="1.1.3" data-path="1-1-the-standard-model.html">
+                      <a href="1-1-the-standard-model.html#sec:ew_detail"><i class="fa fa-check"></i><b>1.1.3</b> Electroweak Interactions</a>
+                    </li>
+                    <li class="chapter" data-level="1.1.4" data-path="1-1-the-standard-model.html">
+                      <a href="1-1-the-standard-model.html#sec:ewsb_higgs"><i class="fa fa-check"></i><b>1.1.4</b> Symmetry Breaking and the Higgs Boson</a>
+                    </li>
+                  </ul></li>
+                <li class="chapter" data-level="1.2" data-path="1-2-beyond-the-standard-model.html">
+                  <a href="1-2-beyond-the-standard-model.html"><i class="fa fa-check"></i><b>1.2</b> Beyond the Standard Model</a>
+                  <ul><li class="chapter" data-level="1.2.1" data-path="1-2-beyond-the-standard-model.html">
+                      <a href="1-2-beyond-the-standard-model.html#known-limitations"><i class="fa fa-check"></i><b>1.2.1</b> Known Limitations</a>
+                    </li>
+                    <li class="chapter" data-level="1.2.2" data-path="1-2-beyond-the-standard-model.html">
+                      <a href="1-2-beyond-the-standard-model.html#sec:possible_ext"><i class="fa fa-check"></i><b>1.2.2</b> Possible Extensions</a>
+                    </li>
+                  </ul></li>
+                <li class="chapter" data-level="1.3" data-path="1-3-phenomenology-of-proton-collisions.html">
+                  <a href="1-3-phenomenology-of-proton-collisions.html"><i class="fa fa-check"></i><b>1.3</b> Phenomenology of Proton Collisions</a>
+                  <ul><li class="chapter" data-level="1.3.1" data-path="1-3-phenomenology-of-proton-collisions.html">
+                      <a href="1-3-phenomenology-of-proton-collisions.html#sec:main_obs"><i class="fa fa-check"></i><b>1.3.1</b> Main Observables</a>
+                    </li>
+                    <li class="chapter" data-level="1.3.2" data-path="1-3-phenomenology-of-proton-collisions.html">
+                      <a href="1-3-phenomenology-of-proton-collisions.html#sec:pdfs"><i class="fa fa-check"></i><b>1.3.2</b> Parton Distribution Functions</a>
+                    </li>
+                    <li class="chapter" data-level="1.3.3" data-path="1-3-phenomenology-of-proton-collisions.html">
+                      <a href="1-3-phenomenology-of-proton-collisions.html#sec:factorisation"><i class="fa fa-check"></i><b>1.3.3</b> Factorisation and Generation of Hard Processes</a>
+                    </li>
+                    <li class="chapter" data-level="1.3.4" data-path="1-3-phenomenology-of-proton-collisions.html">
+                      <a href="1-3-phenomenology-of-proton-collisions.html#sec:parton_showers"><i class="fa fa-check"></i><b>1.3.4</b> Hadronization and Parton Showers</a>
+                    </li>
+                  </ul></li>
+              </ul></li>
+            <li class="chapter" data-level="2" data-path="2-experiments-at-particle-colliders.html">
+              <a href="2-experiments-at-particle-colliders.html"><i class="fa fa-check"></i><b>2</b> Experiments at Particle Colliders</a>
+              <ul><li class="chapter" data-level="2.1" data-path="2-1-the-large-hadron-collider.html">
+                  <a href="2-1-the-large-hadron-collider.html"><i class="fa fa-check"></i><b>2.1</b> The Large Hadron Collider</a>
+                  <ul><li class="chapter" data-level="2.1.1" data-path="2-1-the-large-hadron-collider.html">
+                      <a href="2-1-the-large-hadron-collider.html#injection-and-acceleration-chain"><i class="fa fa-check"></i><b>2.1.1</b> Injection and Acceleration Chain</a>
+                    </li>
+                    <li class="chapter" data-level="2.1.2" data-path="2-1-the-large-hadron-collider.html">
+                      <a href="2-1-the-large-hadron-collider.html#sec:op_pars"><i class="fa fa-check"></i><b>2.1.2</b> Operation Parameters</a>
+                    </li>
+                    <li class="chapter" data-level="2.1.3" data-path="2-1-the-large-hadron-collider.html">
+                      <a href="2-1-the-large-hadron-collider.html#sec:pile_up"><i class="fa fa-check"></i><b>2.1.3</b> Multiple Hadron Interactions</a>
+                    </li>
+                    <li class="chapter" data-level="2.1.4" data-path="2-1-the-large-hadron-collider.html">
+                      <a href="2-1-the-large-hadron-collider.html#sec:lhc_experiments"><i class="fa fa-check"></i><b>2.1.4</b> Experiments</a>
+                    </li>
+                  </ul></li>
+                <li class="chapter" data-level="2.2" data-path="2-2-the-compact-muon-solenoid.html">
+                  <a href="2-2-the-compact-muon-solenoid.html"><i class="fa fa-check"></i><b>2.2</b> The Compact Muon Solenoid</a>
+                  <ul><li class="chapter" data-level="2.2.1" data-path="2-2-the-compact-muon-solenoid.html">
+                      <a href="2-2-the-compact-muon-solenoid.html#sec:exp_geom"><i class="fa fa-check"></i><b>2.2.1</b> Experimental Geometry</a>
+                    </li>
+                    <li class="chapter" data-level="2.2.2" data-path="2-2-the-compact-muon-solenoid.html">
+                      <a href="2-2-the-compact-muon-solenoid.html#sec:cms_magnet"><i class="fa fa-check"></i><b>2.2.2</b> Magnet</a>
+                    </li>
+                    <li class="chapter" data-level="2.2.3" data-path="2-2-the-compact-muon-solenoid.html">
+                      <a href="2-2-the-compact-muon-solenoid.html#sec:cms_tracking"><i class="fa fa-check"></i><b>2.2.3</b> Tracking System</a>
+                    </li>
+                    <li class="chapter" data-level="2.2.4" data-path="2-2-the-compact-muon-solenoid.html">
+                      <a href="2-2-the-compact-muon-solenoid.html#sec:cms_ecal"><i class="fa fa-check"></i><b>2.2.4</b> Electromagnetic Calorimeter</a>
+                    </li>
+                    <li class="chapter" data-level="2.2.5" data-path="2-2-the-compact-muon-solenoid.html">
+                      <a href="2-2-the-compact-muon-solenoid.html#sec:cms_hcal"><i class="fa fa-check"></i><b>2.2.5</b> Hadronic Calorimeter</a>
+                    </li>
+                    <li class="chapter" data-level="2.2.6" data-path="2-2-the-compact-muon-solenoid.html">
+                      <a href="2-2-the-compact-muon-solenoid.html#sec:cms_muon"><i class="fa fa-check"></i><b>2.2.6</b> Muon System</a>
+                    </li>
+                    <li class="chapter" data-level="2.2.7" data-path="2-2-the-compact-muon-solenoid.html">
+                      <a href="2-2-the-compact-muon-solenoid.html#sec:trigger"><i class="fa fa-check"></i><b>2.2.7</b> Trigger and Data Acquisition</a>
+                    </li>
+                  </ul></li>
+                <li class="chapter" data-level="2.3" data-path="2-3-event-simulation-and-reconstruction.html">
+                  <a href="2-3-event-simulation-and-reconstruction.html"><i class="fa fa-check"></i><b>2.3</b> Event Simulation and Reconstruction</a>
+                  <ul><li class="chapter" data-level="2.3.1" data-path="2-3-event-simulation-and-reconstruction.html">
+                      <a href="2-3-event-simulation-and-reconstruction.html#sec:gen_view"><i class="fa fa-check"></i><b>2.3.1</b> A Generative View</a>
+                    </li>
+                    <li class="chapter" data-level="2.3.2" data-path="2-3-event-simulation-and-reconstruction.html">
+                      <a href="2-3-event-simulation-and-reconstruction.html#sec:detector_simulation"><i class="fa fa-check"></i><b>2.3.2</b> Detector Simulation</a>
+                    </li>
+                    <li class="chapter" data-level="2.3.3" data-path="2-3-event-simulation-and-reconstruction.html">
+                      <a href="2-3-event-simulation-and-reconstruction.html#sec:event_reco"><i class="fa fa-check"></i><b>2.3.3</b> Event Reconstruction</a>
+                    </li>
+                  </ul></li>
+              </ul></li>
+            <li class="chapter" data-level="3" data-path="3-statistical-modelling-and-inference-at-the-lhc.html">
+              <a href="3-statistical-modelling-and-inference-at-the-lhc.html"><i class="fa fa-check"></i><b>3</b> Statistical Modelling and Inference at the LHC</a>
+              <ul><li class="chapter" data-level="3.1" data-path="3-1-statistical-modelling.html">
+                  <a href="3-1-statistical-modelling.html"><i class="fa fa-check"></i><b>3.1</b> Statistical Modelling</a>
+                  <ul><li class="chapter" data-level="3.1.1" data-path="3-1-statistical-modelling.html">
+                      <a href="3-1-statistical-modelling.html#sec:model_overview"><i class="fa fa-check"></i><b>3.1.1</b> Overview</a>
+                    </li>
+                    <li class="chapter" data-level="3.1.2" data-path="3-1-statistical-modelling.html">
+                      <a href="3-1-statistical-modelling.html#simulation-as-generative-modelling"><i class="fa fa-check"></i><b>3.1.2</b> Simulation as Generative Modelling</a>
+                    </li>
+                    <li class="chapter" data-level="3.1.3" data-path="3-1-statistical-modelling.html">
+                      <a href="3-1-statistical-modelling.html#sec:dim_reduction"><i class="fa fa-check"></i><b>3.1.3</b> Dimensionality Reduction</a>
+                    </li>
+                    <li class="chapter" data-level="3.1.4" data-path="3-1-statistical-modelling.html">
+                      <a href="3-1-statistical-modelling.html#sec:known_unknowns"><i class="fa fa-check"></i><b>3.1.4</b> Known Unknowns</a>
+                    </li>
+                  </ul></li>
+                <li class="chapter" data-level="3.2" data-path="3-2-statistical-inference.html">
+                  <a href="3-2-statistical-inference.html"><i class="fa fa-check"></i><b>3.2</b> Statistical Inference</a>
+                  <ul><li class="chapter" data-level="3.2.1" data-path="3-2-statistical-inference.html">
+                      <a href="3-2-statistical-inference.html#sec:likelihood-free"><i class="fa fa-check"></i><b>3.2.1</b> Likelihood-Free Inference</a>
+                    </li>
+                    <li class="chapter" data-level="3.2.2" data-path="3-2-statistical-inference.html">
+                      <a href="3-2-statistical-inference.html#sec:hypo_test"><i class="fa fa-check"></i><b>3.2.2</b> Hypothesis Testing</a>
+                    </li>
+                    <li class="chapter" data-level="3.2.3" data-path="3-2-statistical-inference.html">
+                      <a href="3-2-statistical-inference.html#sec:param_est"><i class="fa fa-check"></i><b>3.2.3</b> Parameter Estimation</a>
+                    </li>
+                  </ul></li>
+              </ul></li>
+            <li class="chapter" data-level="4" data-path="4-machine-learning-in-high-energy-physics.html">
+              <a href="4-machine-learning-in-high-energy-physics.html"><i class="fa fa-check"></i><b>4</b> Machine Learning in High-Energy Physics</a>
+              <ul><li class="chapter" data-level="4.1" data-path="4-1-problem-description.html">
+                  <a href="4-1-problem-description.html"><i class="fa fa-check"></i><b>4.1</b> Problem Description</a>
+                  <ul><li class="chapter" data-level="4.1.1" data-path="4-1-problem-description.html">
+                      <a href="4-1-problem-description.html#sec:supervised"><i class="fa fa-check"></i><b>4.1.1</b> Probabilistic Classification and Regression</a>
+                    </li>
+                  </ul></li>
+                <li class="chapter" data-level="4.2" data-path="4-2-machine-learning-techniques.html">
+                  <a href="4-2-machine-learning-techniques.html"><i class="fa fa-check"></i><b>4.2</b> Machine Learning Techniques</a>
+                  <ul><li class="chapter" data-level="4.2.1" data-path="4-2-machine-learning-techniques.html">
+                      <a href="4-2-machine-learning-techniques.html#sec:boosted_decision_trees"><i class="fa fa-check"></i><b>4.2.1</b> Boosted Decision Trees</a>
+                    </li>
+                    <li class="chapter" data-level="4.2.2" data-path="4-2-machine-learning-techniques.html">
+                      <a href="4-2-machine-learning-techniques.html#sec:ann"><i class="fa fa-check"></i><b>4.2.2</b> Artificial Neural Networks</a>
+                    </li>
+                  </ul></li>
+                <li class="chapter" data-level="4.3" data-path="4-3-applications-in-high-energy-physics.html">
+                  <a href="4-3-applications-in-high-energy-physics.html"><i class="fa fa-check"></i><b>4.3</b> Applications in High Energy Physics</a>
+                  <ul><li class="chapter" data-level="4.3.1" data-path="4-3-applications-in-high-energy-physics.html">
+                      <a href="4-3-applications-in-high-energy-physics.html#sec:sig_vs_bkg"><i class="fa fa-check"></i><b>4.3.1</b> Signal vs Background Classification</a>
+                    </li>
+                    <li class="chapter" data-level="4.3.2" data-path="4-3-applications-in-high-energy-physics.html">
+                      <a href="4-3-applications-in-high-energy-physics.html#sec:particle_id_reg"><i class="fa fa-check"></i><b>4.3.2</b> Particle Identification and Regression</a>
+                    </li>
+                  </ul></li>
+              </ul></li>
+            <li class="chapter" data-level="5" data-path="5-search-for-anomalous-higgs-pair-production-with-cms.html">
+              <a href="5-search-for-anomalous-higgs-pair-production-with-cms.html"><i class="fa fa-check"></i><b>5</b> Search for Anomalous Higgs Pair Production with CMS</a>
+              <ul><li class="chapter" data-level="5.1" data-path="5-1-introduction.html">
+                  <a href="5-1-introduction.html"><i class="fa fa-check"></i><b>5.1</b> Introduction</a>
+                </li>
+                <li class="chapter" data-level="5.2" data-path="5-2-higgs-pair-production-and-anomalous-couplings.html">
+                  <a href="5-2-higgs-pair-production-and-anomalous-couplings.html"><i class="fa fa-check"></i><b>5.2</b> Higgs Pair Production and Anomalous Couplings</a>
+                </li>
+                <li class="chapter" data-level="5.3" data-path="5-3-analysis-strategy.html">
+                  <a href="5-3-analysis-strategy.html"><i class="fa fa-check"></i><b>5.3</b> Analysis Strategy</a>
+                </li>
+                <li class="chapter" data-level="5.4" data-path="5-4-trigger-and-datasets.html">
+                  <a href="5-4-trigger-and-datasets.html"><i class="fa fa-check"></i><b>5.4</b> Trigger and Datasets</a>
+                </li>
+                <li class="chapter" data-level="5.5" data-path="5-5-event-selection.html">
+                  <a href="5-5-event-selection.html"><i class="fa fa-check"></i><b>5.5</b> Event Selection</a>
+                </li>
+                <li class="chapter" data-level="5.6" data-path="5-6-data-driven-background-estimation.html">
+                  <a href="5-6-data-driven-background-estimation.html"><i class="fa fa-check"></i><b>5.6</b> Data-Driven Background Estimation</a>
+                  <ul><li class="chapter" data-level="5.6.1" data-path="5-6-data-driven-background-estimation.html">
+                      <a href="5-6-data-driven-background-estimation.html#sec:hem_mixing"><i class="fa fa-check"></i><b>5.6.1</b> Hemisphere Mixing</a>
+                    </li>
+                    <li class="chapter" data-level="5.6.2" data-path="5-6-data-driven-background-estimation.html">
+                      <a href="5-6-data-driven-background-estimation.html#sec:bkg_validation"><i class="fa fa-check"></i><b>5.6.2</b> Background Validation</a>
+                    </li>
+                  </ul></li>
+                <li class="chapter" data-level="5.7" data-path="5-7-systematic-uncertainties.html">
+                  <a href="5-7-systematic-uncertainties.html"><i class="fa fa-check"></i><b>5.7</b> Systematic Uncertainties</a>
+                </li>
+                <li class="chapter" data-level="5.8" data-path="5-8-analysis-results.html">
+                  <a href="5-8-analysis-results.html"><i class="fa fa-check"></i><b>5.8</b> Analysis Results</a>
+                </li>
+                <li class="chapter" data-level="5.9" data-path="5-9-combination-with-other-decay-channels.html">
+                  <a href="5-9-combination-with-other-decay-channels.html"><i class="fa fa-check"></i><b>5.9</b> Combination with Other Decay Channels</a>
+                </li>
+              </ul></li>
+            <li class="chapter" data-level="6" data-path="6-inference-aware-neural-optimisation.html">
+              <a href="6-inference-aware-neural-optimisation.html"><i class="fa fa-check"></i><b>6</b> Inference-Aware Neural Optimisation</a>
+              <ul><li class="chapter" data-level="6.1" data-path="6-1-introduction.html">
+                  <a href="6-1-introduction.html"><i class="fa fa-check"></i><b>6.1</b> Introduction</a>
+                </li>
+                <li class="chapter" data-level="6.2" data-path="6-2-problem-statement.html">
+                  <a href="6-2-problem-statement.html"><i class="fa fa-check"></i><b>6.2</b> Problem Statement</a>
+                </li>
+                <li class="chapter" data-level="6.3" data-path="6-3-method.html">
+                  <a href="6-3-method.html"><i class="fa fa-check"></i><b>6.3</b> Method</a>
+                </li>
+                <li class="chapter" data-level="6.4" data-path="6-4-related-work.html">
+                  <a href="6-4-related-work.html"><i class="fa fa-check"></i><b>6.4</b> Related Work</a>
+                </li>
+                <li class="chapter" data-level="6.5" data-path="6-5-experiments.html">
+                  <a href="6-5-experiments.html"><i class="fa fa-check"></i><b>6.5</b> Experiments</a>
+                  <ul><li class="chapter" data-level="6.5.1" data-path="6-5-experiments.html">
+                      <a href="6-5-experiments.html#sec:synthetic_mixture"><i class="fa fa-check"></i><b>6.5.1</b> 3D Synthetic Mixture</a>
+                    </li>
+                  </ul></li>
+              </ul></li>
+            <li class="chapter" data-level="7" data-path="7-conclusions-and-prospects.html">
+              <a href="7-conclusions-and-prospects.html"><i class="fa fa-check"></i><b>7</b> Conclusions and Prospects</a>
+            </li>
+            <li class="chapter" data-level="" data-path="references.html">
+              <a href="references.html"><i class="fa fa-check"></i> References</a>
+            </li>
+          </ul></nav></div>
+
+      <div class="book-body">
+        <div class="body-inner">
+          <div class="book-header" role="navigation">
+            <h1>
+              <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Statistical Learning and Inference at Particle Collider Experiments</a>
+            </h1>
+          </div>
+
+          <div class="page-wrapper" tabindex="-1" role="main">
+            <div class="page-inner">
+
+              <section class="normal" id="section-"><div id="references" class="section level1 unnumbered">
+                <h1>References</h1>
+                <div id="refs" class="references">
+                <div id="ref-weinberg2004making">
+                <p>[1] S. Weinberg, “The making of the standard model,” <em>The European Physical Journal C-Particles and Fields</em>, vol. 34, no. 1, pp. 5–13, 2004.</p>
+                </div>
+                <div id="ref-higgs2012cms">
+                <p>[2] S. Chatrchyan <em>et al.</em>, “Observation of a new boson at a mass of 125 gev with the cms experiment at the lhc,” <em>Physics Letters B</em>, vol. 716, no. 1, pp. 30–61, 2012.</p>
+                </div>
+                <div id="ref-higgs2012atlas">
+                <p>[3] G. Aad <em>et al.</em>, “Observation of a new particle in the search for the standard model higgs boson with the atlas detector at the lhc,” <em>Physics Letters B</em>, vol. 716, no. 1, pp. 1–29, 2012.</p>
+                </div>
+                <div id="ref-Peskin:257493">
+                <p>[4] M. E. Peskin and D. V. Schroeder, <em>An introduction to quantum field theory</em>. Boulder, CO: Westview, 1995.</p>
+                </div>
+                <div id="ref-mandl2010quantum">
+                <p>[5] F. Mandl and G. Shaw, <em>Quantum field theory</em>. John Wiley &amp; Sons, 2010.</p>
+                </div>
+                <div id="ref-Goldberg:2244785">
+                <p>[6] D. Goldberg, <em>The standard model in a nutshell</em>. Princeton, NJ: Princeton University Press, 2017.</p>
+                </div>
+                <div id="ref-wick1950evaluation">
+                <p>[7] G.-C. Wick, “The evaluation of the collision matrix,” <em>Physical review</em>, vol. 80, no. 2, p. 268, 1950.</p>
+                </div>
+                <div id="ref-PhysRevD.98.030001">
+                <p>[8] M. Tanabashi <em>et al.</em>, “Review of particle physics,” <em>Phys. Rev. D</em>, vol. 98, no. 3, p. 030001, Aug. 2018.</p>
+                </div>
+                <div id="ref-PhysRevLett.112.222002">
+                <p>[9] R. Aaij <em>et al.</em>, “Observation of the resonant character of the <span class="math inline">\(Z(4430{)}^{\ensuremath{-}}\)</span> state,” <em>Phys. Rev. Lett.</em>, vol. 112, no. 22, p. 222002, Jun. 2014.</p>
+                </div>
+                <div id="ref-Aaij:2015tga">
+                <p>[10] R. Aaij and others, “Observation of <span class="math inline">\(J/\psi p\)</span> Resonances Consistent with Pentaquark States in <span class="math inline">\(\Lambda_b^0 \to J/\psi K^- p\)</span> Decays,” <em>Phys. Rev. Lett.</em>, vol. 115, p. 072001, 2015.</p>
+                </div>
+                <div id="ref-fermi1934attempt">
+                <p>[11] E. Fermi, “An attempt of a theory of beta radiation.” <em>Z. Phys.</em>, vol. 88, nos. UCRL-TRANS-726, pp. 161–177, 1934.</p>
+                </div>
+                <div id="ref-glashow1961partial">
+                <p>[12] S. L. Glashow, “Partial-symmetries of weak interactions,” <em>Nuclear Physics</em>, vol. 22, no. 4, pp. 579–588, 1961.</p>
+                </div>
+                <div id="ref-SALAM1964168">
+                <p>[13] A. Salam and J. C. Ward, “Electromagnetic and weak interactions,” <em>Physics Letters</em>, vol. 13, no. 2, pp. 168–171, 1964.</p>
+                </div>
+                <div id="ref-englert1964broken">
+                <p>[14] F. Englert and R. Brout, “Broken symmetry and the mass of gauge vector mesons,” <em>Physical Review Letters</em>, vol. 13, no. 9, p. 321, 1964.</p>
+                </div>
+                <div id="ref-higgs1964broken">
+                <p>[15] P. W. Higgs, “Broken symmetries and the masses of gauge bosons,” <em>Physical Review Letters</em>, vol. 13, no. 16, p. 508, 1964.</p>
+                </div>
+                <div id="ref-guralnik1964global">
+                <p>[16] G. S. Guralnik, C. R. Hagen, and T. W. Kibble, “Global conservation laws and massless particles,” <em>Physical Review Letters</em>, vol. 13, no. 20, p. 585, 1964.</p>
+                </div>
+                <div id="ref-weinberg1967model">
+                <p>[17] S. Weinberg, “A model of leptons,” <em>Physical review letters</em>, vol. 19, no. 21, p. 1264, 1967.</p>
+                </div>
+                <div id="ref-THOOFT1972189">
+                <p>[18] G. ’t Hooft and M. Veltman, “Regularization and renormalization of gauge fields,” <em>Nuclear Physics B</em>, vol. 44, no. 1, pp. 189–213, 1972.</p>
+                </div>
+                <div id="ref-hasert1974observation">
+                <p>[19] F. Hasert <em>et al.</em>, “Observation of neutrino-like interactions without muon or electron in the gargamelle neutrino experiment,” <em>Nuclear Physics B</em>, vol. 73, no. 1, pp. 1–22, 1974.</p>
+                </div>
+                <div id="ref-Arnison:1983rp">
+                <p>[20] G. Arnison and others, “Experimental Observation of Isolated Large Transverse Energy Electrons with Associated Missing Energy at s**(1/2) = 540-GeV,” <em>Phys. Lett.</em>, vol. B122, pp. 103–116, 1983.</p>
+                </div>
+                <div id="ref-Banner:1983jy">
+                <p>[21] M. Banner and others, “Observation of Single Isolated Electrons of High Transverse Momentum in Events with Missing Transverse Energy at the CERN anti-p p Collider,” <em>Phys. Lett.</em>, vol. B122, pp. 476–485, 1983.</p>
+                </div>
+                <div id="ref-Arnison:1983mk">
+                <p>[22] G. Arnison and others, “Experimental Observation of Lepton Pairs of Invariant Mass Around 95-GeV/c**2 at the CERN SPS Collider,” <em>Phys. Lett.</em>, vol. B126, pp. 398–410, 1983.</p>
+                </div>
+                <div id="ref-Bagnaia:1983zx">
+                <p>[23] P. Bagnaia and others, “Evidence for Z0 —&gt; e+ e- at the CERN anti-p p Collider,” <em>Phys. Lett.</em>, vol. B129, pp. 130–140, 1983.</p>
+                </div>
+                <div id="ref-Wu:1957my">
+                <p>[24] C. S. Wu, E. Ambler, R. W. Hayward, D. D. Hoppes, and R. P. Hudson, “Experimental Test of Parity Conservation in Beta Decay,” <em>Phys. Rev.</em>, vol. 105, pp. 1413–1414, 1957.</p>
+                </div>
+                <div id="ref-Cabibbo:1963yz">
+                <p>[25] N. Cabibbo, “Unitary Symmetry and Leptonic Decays,” <em>Phys. Rev. Lett.</em>, vol. 10, pp. 531–533, 1963.</p>
+                </div>
+                <div id="ref-Kobayashi:1973fv">
+                <p>[26] M. Kobayashi and T. Maskawa, “CP Violation in the Renormalizable Theory of Weak Interaction,” <em>Prog. Theor. Phys.</em>, vol. 49, pp. 652–657, 1973.</p>
+                </div>
+                <div id="ref-Aad:2015zhl">
+                <p>[27] G. Aad and others, “Combined Measurement of the Higgs Boson Mass in <span class="math inline">\(pp\)</span> Collisions at <span class="math inline">\(\sqrt{s}=7\)</span> and 8 TeV with the ATLAS and CMS Experiments,” <em>Phys. Rev. Lett.</em>, vol. 114, p. 191803, 2015.</p>
+                </div>
+                <div id="ref-hanneke2008new">
+                <p>[28] D. Hanneke, S. Fogwell, and G. Gabrielse, “New measurement of the electron magnetic moment and the fine structure constant,” <em>Physical Review Letters</em>, vol. 100, no. 12, p. 120801, 2008.</p>
+                </div>
+                <div id="ref-parker2018measurement">
+                <p>[29] R. H. Parker, C. Yu, W. Zhong, B. Estey, and H. Müller, “Measurement of the fine-structure constant as a test of the standard model,” <em>Science</em>, vol. 360, no. 6385, pp. 191–195, 2018.</p>
+                </div>
+                <div id="ref-misner2017gravitation">
+                <p>[30] C. W. Misner, K. S. Thorne, J. A. Wheeler, and D. I. Kaiser, <em>Gravitation</em>. Princeton University Press, 2017.</p>
+                </div>
+                <div id="ref-rovelli2008loop">
+                <p>[31] C. Rovelli, “Loop quantum gravity,” <em>Living reviews in relativity</em>, vol. 11, no. 1, p. 5, 2008.</p>
+                </div>
+                <div id="ref-Polchinski:363850">
+                <p>[32] J. Polchinski, <em>String Theory</em>. Cambridge: Cambridge Univ. Press, 1998.</p>
+                </div>
+                <div id="ref-corbelli2000extended">
+                <p>[33] E. Corbelli and P. Salucci, “The extended rotation curve and the dark matter halo of m33,” <em>Monthly Notices of the Royal Astronomical Society</em>, vol. 311, no. 2, pp. 441–447, 2000.</p>
+                </div>
+                <div id="ref-trimble1987existence">
+                <p>[34] V. Trimble, “Existence and nature of dark matter in the universe,” <em>Annual review of astronomy and astrophysics</em>, vol. 25, no. 1, pp. 425–472, 1987.</p>
+                </div>
+                <div id="ref-Ade:2015xua">
+                <p>[35] P. A. R. Ade and others, “Planck 2015 results. XIII. Cosmological parameters,” <em>Astron. Astrophys.</em>, vol. 594, p. A13, 2016.</p>
+                </div>
+                <div id="ref-fukuda1998evidence">
+                <p>[36] Y. Fukuda <em>et al.</em>, “Evidence for oscillation of atmospheric neutrinos,” <em>Physical Review Letters</em>, vol. 81, no. 8, p. 1562, 1998.</p>
+                </div>
+                <div id="ref-sno2001measurement">
+                <p>[37] S. collaboration and others, “Measurement of the rate of nu_e+ d–&gt; p+ p+ e^-interactions produced by 8B solar neutrinos at the sudbury neutrino observatory,” <em>arXiv preprint nucl-ex/0106015</em>, 2001.</p>
+                </div>
+                <div id="ref-Akhmedov:1999tm">
+                <p>[38] E. K. Akhmedov, G. C. Branco, and M. N. Rebelo, “Seesaw mechanism and structure of neutrino mass matrix,” <em>Phys. Lett.</em>, vol. B478, pp. 215–223, 2000.</p>
+                </div>
+                <div id="ref-riess2004type">
+                <p>[39] A. G. Riess <em>et al.</em>, “Type ia supernova discoveries at z&gt; 1 from the hubble space telescope: Evidence for past deceleration and constraints on dark energy evolution,” <em>The Astrophysical Journal</em>, vol. 607, no. 2, p. 665, 2004.</p>
+                </div>
+                <div id="ref-adler1995vacuum">
+                <p>[40] R. J. Adler, B. Casey, and O. C. Jacob, “Vacuum catastrophe: An elementary exposition of the cosmological constant problem,” <em>American Journal of Physics</em>, vol. 63, no. 7, pp. 620–626, 1995.</p>
+                </div>
+                <div id="ref-degrassi2012higgs">
+                <p>[41] G. Degrassi <em>et al.</em>, “Higgs mass and vacuum stability in the standard model at nnlo,” <em>Journal of High Energy Physics</em>, vol. 2012, no. 8, p. 98, 2012.</p>
+                </div>
+                <div id="ref-cheng1988strong">
+                <p>[42] H.-Y. Cheng, “The strong cp problem revisited,” <em>Physics Reports</em>, vol. 158, no. 1, pp. 1–89, 1988.</p>
+                </div>
+                <div id="ref-PhysRevD.11.2856">
+                <p>[43] T. Appelquist and J. Carazzone, “Infrared singularities and massive fields,” <em>Phys. Rev. D</em>, vol. 11, no. 10, pp. 2856–2861, May 1975.</p>
+                </div>
+                <div id="ref-Buchmuller:1985jz">
+                <p>[44] W. Buchmuller and D. Wyler, “Effective Lagrangian Analysis of New Interactions and Flavor Conservation,” <em>Nucl. Phys.</em>, vol. B268, pp. 621–653, 1986.</p>
+                </div>
+                <div id="ref-weinberg1979baryon">
+                <p>[45] S. Weinberg, “Baryon-and lepton-nonconserving processes,” <em>Physical Review Letters</em>, vol. 43, no. 21, p. 1566, 1979.</p>
+                </div>
+                <div id="ref-Ball:2017nwa">
+                <p>[46] R. D. Ball and others, “Parton distributions from high-precision collider data,” <em>Eur. Phys. J.</em>, vol. C77, no. 10, p. 663, 2017.</p>
+                </div>
+                <div id="ref-Altarelli:1977zs">
+                <p>[47] G. Altarelli and G. Parisi, “Asymptotic Freedom in Parton Language,” <em>Nucl. Phys.</em>, vol. B126, pp. 298–318, 1977.</p>
+                </div>
+                <div id="ref-Dokshitzer:1977sg">
+                <p>[48] Y. L. Dokshitzer, “Calculation of the Structure Functions for Deep Inelastic Scattering and e+ e- Annihilation by Perturbation Theory in Quantum Chromodynamics.” <em>Sov. Phys. JETP</em>, vol. 46, pp. 641–653, 1977.</p>
+                </div>
+                <div id="ref-Gribov:1972ri">
+                <p>[49] V. N. Gribov and L. N. Lipatov, “Deep inelastic e p scattering in perturbation theory,” <em>Sov. J. Nucl. Phys.</em>, vol. 15, pp. 438–450, 1972.</p>
+                </div>
+                <div id="ref-Collins:1989gx">
+                <p>[50] J. C. Collins, D. E. Soper, and G. F. Sterman, “Factorization of Hard Processes in QCD,” <em>Adv. Ser. Direct. High Energy Phys.</em>, vol. 5, pp. 1–91, 1989.</p>
+                </div>
+                <div id="ref-Lepage:1977sw">
+                <p>[51] G. P. Lepage, “A New Algorithm for Adaptive Multidimensional Integration,” <em>J. Comput. Phys.</em>, vol. 27, p. 192, 1978.</p>
+                </div>
+                <div id="ref-Hoche:2014rga">
+                <p>[52] S. Höche, “Introduction to parton-shower event generators,” in <em>Proceedings, Theoretical Advanced Study Institute in Elementary Particle Physics: Journeys Through the Precision Frontier: Amplitudes for Colliders (TASI 2014): Boulder, Colorado, June 2-27, 2014</em>, 2015, pp. 235–295.</p>
+                </div>
+                <div id="ref-Servicegraphique:1708849">
+                <p>[53] C. Service graphique, “Overall view of the LHC. Vue d’ensemble du LHC,” Jun. 2014.</p>
+                </div>
+                <div id="ref-wolf2017handbook">
+                <p>[54] B. Wolf, <em>Handbook of ion sources</em>. CRC press, 2017.</p>
+                </div>
+                <div id="ref-McCauley:2231915">
+                <p>[55] T. Mc Cauley, “Collisions recorded by the CMS detector on 14 Oct 2016 during the high pile-up fill,” Nov-2016.</p>
+                </div>
+                <div id="ref-ATLAS:2008JINST">
+                <p>[56] G. Aad and others, “The ATLAS Experiment at the CERN Large Hadron Collider,” <em>JINST</em>, vol. 3, p. S08003, 2008.</p>
+                </div>
+                <div id="ref-CMS:2008JINST">
+                <p>[57] S. Chatrchyan and others, “The CMS Experiment at the CERN LHC,” <em>JINST</em>, vol. 3, p. S08004, 2008.</p>
+                </div>
+                <div id="ref-LHCb:2008JINST">
+                <p>[58] A. A. Alves Jr. and others, “The LHCb Detector at the LHC,” <em>JINST</em>, vol. 3, p. S08005, 2008.</p>
+                </div>
+                <div id="ref-ALICE:2008JINST">
+                <p>[59] K. Aamodt and others, “The ALICE experiment at the CERN LHC,” <em>JINST</em>, vol. 3, p. S08002, 2008.</p>
+                </div>
+                <div id="ref-TOTEM:2008JINST">
+                <p>[60] G. Anelli and others, “The TOTEM experiment at the CERN Large Hadron Collider,” <em>JINST</em>, vol. 3, p. S08007, 2008.</p>
+                </div>
+                <div id="ref-LHCf:2008JINT">
+                <p>[61] O. Adriani and others, “The LHCf detector at the CERN Large Hadron Collider,” <em>JINST</em>, vol. 3, p. S08006, 2008.</p>
+                </div>
+                <div id="ref-MoEDAL:2014PP">
+                <p>[62] B. Acharya and others, “The Physics Programme Of The MoEDAL Experiment At The LHC,” <em>Int. J. Mod. Phys.</em>, vol. A29, p. 1430050, 2014.</p>
+                </div>
+                <div id="ref-CMS:TDR_Detector_Performance">
+                <p>[63] G. L. Bayatian and others, <em>CMS Physics: Technical Design Report Volume 1: Detector Performance and Software</em>. Geneva: CERN, 2006.</p>
+                </div>
+                <div id="ref-sakuma2014detector">
+                <p>[64] T. Sakuma and T. McCauley, “Detector and event visualization with sketchup at the cms experiment,” in <em>Journal of physics: Conference series</em>, 2014, vol. 513, p. 022032.</p>
+                </div>
+                <div id="ref-Chatrchyan:2014fea">
+                <p>[65] S. Chatrchyan and others, “Description and performance of track and primary-vertex reconstruction with the CMS tracker,” <em>JINST</em>, vol. 9, no. 10, p. P10009, 2014.</p>
+                </div>
+                <div id="ref-spieler2005semiconductor">
+                <p>[66] H. Spieler, <em>Semiconductor detector systems</em>, vol. 12. Oxford university press, 2005.</p>
+                </div>
+                <div id="ref-CERN-LHCC-97-033">
+                <p>[67] <em>The CMS electromagnetic calorimeter project: Technical Design Report</em>. Geneva: CERN, 1997.</p>
+                </div>
+                <div id="ref-Chatrchyan:2009ag">
+                <p>[68] S. Chatrchyan and others, “Performance of the CMS Hadron Calorimeter with Cosmic Ray Muons and LHC Beam Data,” <em>JINST</em>, vol. 5, p. T03012, 2010.</p>
+                </div>
+                <div id="ref-Sirunyan:2018fpa">
+                <p>[69] A. M. Sirunyan and others, “Performance of the CMS muon detector and muon reconstruction with proton-proton collisions at <span class="math inline">\(\sqrt{s}=\)</span> 13 TeV,” <em>JINST</em>, vol. 13, no. 6, p. P06015, 2018.</p>
+                </div>
+                <div id="ref-Sirunyan:2017ulk">
+                <p>[70] A. M. Sirunyan and others, “Particle-flow reconstruction and global event description with the CMS detector,” <em>JINST</em>, vol. 12, no. 10, p. P10003, 2017.</p>
+                </div>
+                <div id="ref-Agostinelli:2002hh">
+                <p>[71] S. Agostinelli and others, “GEANT4: A Simulation toolkit,” <em>Nucl. Instrum. Meth.</em>, vol. A506, pp. 250–303, 2003.</p>
+                </div>
+                <div id="ref-Abdullin:2011zz">
+                <p>[72] S. Abdullin, P. Azzi, F. Beaudette, P. Janot, and A. Perrotta, “The fast simulation of the CMS detector at LHC,” <em>J. Phys. Conf. Ser.</em>, vol. 331, p. 032049, 2011.</p>
+                </div>
+                <div id="ref-deFavereau:2013fsa">
+                <p>[73] J. de Favereau <em>et al.</em>, “DELPHES 3, A modular framework for fast simulation of a generic collider experiment,” <em>JHEP</em>, vol. 2, p. 057, 2014.</p>
+                </div>
+                <div id="ref-Paganini:2017hrr">
+                <p>[74] M. Paganini, L. de Oliveira, and B. Nachman, “Accelerating Science with Generative Adversarial Networks: An Application to 3D Particle Showers in Multilayer Calorimeters,” <em>Phys. Rev. Lett.</em>, vol. 120, no. 4, p. 042003, 2018.</p>
+                </div>
+                <div id="ref-deOliveira:2017pjk">
+                <p>[75] L. de Oliveira, M. Paganini, and B. Nachman, “Learning Particle Physics by Example: Location-Aware Generative Adversarial Networks for Physics Synthesis,” <em>Comput. Softw. Big Sci.</em>, vol. 1, no. 1, p. 4, 2017.</p>
+                </div>
+                <div id="ref-Billoir:1990we">
+                <p>[76] P. Billoir and S. Qian, “Simultaneous pattern recognition and track fitting by the Kalman filtering method,” <em>Nucl. Instrum. Meth.</em>, vol. A294, pp. 219–228, 1990.</p>
+                </div>
+                <div id="ref-Mankel:334615">
+                <p>[77] R. Mankel, “A concurrent track evolution algorithm for pattern recognition in the HERA-B main tracking system,” DESY, Hamburg, DESY-97-054, Mar. 1997.</p>
+                </div>
+                <div id="ref-Fruhwirth:2007hz">
+                <p>[78] R. Fruhwirth, W. Waltenberger, and P. Vanlaer, “Adaptive vertex fitting,” <em>J. Phys.</em>, vol. G34, p. N343, 2007.</p>
+                </div>
+                <div id="ref-Adam:2005bya">
+                <p>[79] W. Adam, R. Frühwirth, A. Strandlie, and T. Todor, “Reconstruction of Electrons with the Gaussian-Sum Filter in the CMS Tracker at the LHC,” 2005.</p>
+                </div>
+                <div id="ref-Khachatryan:2015hwa">
+                <p>[80] V. Khachatryan and others, “Performance of Electron Reconstruction and Selection with the CMS Detector in Proton-Proton Collisions at sqrt(s) = 8 TeV,” <em>JINST</em>, vol. 10, no. 6, p. P06005, 2015.</p>
+                </div>
+                <div id="ref-Khachatryan:2015iwa">
+                <p>[81] V. Khachatryan and others, “Performance of Photon Reconstruction and Identification with the CMS Detector in Proton-Proton Collisions at sqrt(s) = 8 TeV,” <em>JINST</em>, vol. 10, no. 8, p. P08010, 2015.</p>
+                </div>
+                <div id="ref-CMS:2014ata">
+                <p>[82] C. Collaboration, “Pileup Removal Algorithms,” 2014.</p>
+                </div>
+                <div id="ref-Cacciari:2008gp">
+                <p>[83] M. Cacciari, G. P. Salam, and G. Soyez, “The anti-<span class="math inline">\(k_t\)</span> jet clustering algorithm,” <em>JHEP</em>, vol. 4, p. 063, 2008.</p>
+                </div>
+                <div id="ref-Khachatryan:2016kdb">
+                <p>[84] V. Khachatryan and others, “Jet energy scale and resolution in the CMS experiment in pp collisions at 8 TeV,” <em>JINST</em>, vol. 12, no. 2, p. P02014, 2017.</p>
+                </div>
+                <div id="ref-Sirunyan:2017ezt">
+                <p>[85] A. M. Sirunyan and others, “Identification of heavy-flavour jets with the CMS detector in pp collisions at 13 TeV,” <em>JINST</em>, vol. 13, no. 5, p. P05011, 2018.</p>
+                </div>
+                <div id="ref-Casado:2017cif">
+                <p>[86] M. L. Casado and others, “Improvements to Inference Compilation for Probabilistic Programming in Large-Scale Scientific Simulators,” 2017.</p>
+                </div>
+                <div id="ref-Baydin:2018npr">
+                <p>[87] A. G. Baydin <em>et al.</em>, “Efficient Probabilistic Inference in the Quest for Physics Beyond the Standard Model,” 2018.</p>
+                </div>
+                <div id="ref-Gardiner:732221">
+                <p>[88] C. W. Gardiner, <em>Handbook of stochastic methods: for physics, chemistry and the natural sciences; 3rd ed.</em> Berlin: Springer, 2004.</p>
+                </div>
+                <div id="ref-hogg1995introduction">
+                <p>[89] R. V. Hogg and A. T. Craig, <em>Introduction to mathematical statistics.(5th edition)</em>. Upper Saddle River, New Jersey: Prentice Hall, 1995.</p>
+                </div>
+                <div id="ref-Cranmer:2015nia">
+                <p>[90] K. Cranmer, “Practical Statistics for the LHC,” in <em>Proceedings, 2011 European School of High-Energy Physics (ESHEP 2011): Cheile Gradistei, Romania, September 7-20, 2011</em>, 2015, pp. 267–308.</p>
+                </div>
+                <div id="ref-Conway:2011in">
+                <p>[91] J. S. Conway, “Incorporating Nuisance Parameters in Likelihoods for Multisource Spectra,” in <em>Proceedings, PHYSTAT 2011 Workshop on Statistical Issues Related to Discovery Claims in Search Experiments and Unfolding, CERN,Geneva, Switzerland 17-20 January 2011</em>, 2011, pp. 115–120.</p>
+                </div>
+                <div id="ref-Cranmer:2012sba">
+                <p>[92] K. Cranmer, G. Lewis, L. Moneta, A. Shibata, and W. Verkerke, “HistFactory: A tool for creating statistical models for use with RooFit and RooStats,” 2012.</p>
+                </div>
+                <div id="ref-mcbook">
+                <p>[93] A. B. Owen, <em>Monte carlo theory, methods and examples</em>. 2013.</p>
+                </div>
+                <div id="ref-rubin1984bayesianly">
+                <p>[94] D. B. Rubin, “Bayesianly justifiable and relevant frequency calculations for the applies statistician,” <em>The Annals of Statistics</em>, pp. 1151–1172, 1984.</p>
+                </div>
+                <div id="ref-beaumont2002approximate">
+                <p>[95] M. A. Beaumont, W. Zhang, and D. J. Balding, “Approximate bayesian computation in population genetics,” <em>Genetics</em>, vol. 162, no. 4, pp. 2025–2035, 2002.</p>
+                </div>
+                <div id="ref-Brehmer:2018eca">
+                <p>[96] J. Brehmer, K. Cranmer, G. Louppe, and J. Pavez, “A Guide to Constraining Effective Field Theories with Machine Learning,” <em>Phys. Rev.</em>, vol. D98, no. 5, p. 052004, 2018.</p>
+                </div>
+                <div id="ref-NeymanPearson1933">
+                <p>[97] J. Neyman and E. S. Pearson, “On the problem of the most efficient tests of statistical hypotheses,” <em>Philosophical Transactions of the Royal Society of London. Series A, Containing Papers of a Mathematical or Physical Character</em>, vol. 231, pp. 289–337, 1933.</p>
+                </div>
+                <div id="ref-wilks1938large">
+                <p>[98] S. S. Wilks, “The large-sample distribution of the likelihood ratio for testing composite hypotheses,” <em>The Annals of Mathematical Statistics</em>, vol. 9, no. 1, pp. 60–62, 1938.</p>
+                </div>
+                <div id="ref-wald1943tests">
+                <p>[99] A. Wald, “Tests of statistical hypotheses concerning several parameters when the number of observations is large,” <em>Transactions of the American Mathematical society</em>, vol. 54, no. 3, pp. 426–482, 1943.</p>
+                </div>
+                <div id="ref-Cowan:2010js">
+                <p>[100] G. Cowan, K. Cranmer, E. Gross, and O. Vitells, “Asymptotic formulae for likelihood-based tests of new physics,” <em>Eur. Phys. J.</em>, vol. C71, p. 1554, 2011.</p>
+                </div>
+                <div id="ref-Read:2002hq">
+                <p>[101] A. L. Read, “Presentation of search results: The CL(s) technique,” <em>J. Phys.</em>, vol. G28, pp. 2693–2704, 2002.</p>
+                </div>
+                <div id="ref-Junk:1999kv">
+                <p>[102] T. Junk, “Confidence level computation for combining searches with small statistics,” <em>Nucl. Instrum. Meth.</em>, vol. A434, pp. 435–443, 1999.</p>
+                </div>
+                <div id="ref-10.2307/91337">
+                <p>[103] J. Neyman, “Outline of a theory of statistical estimation based on the classical theory of probability,” <em>Philosophical Transactions of the Royal Society of London. Series A, Mathematical and Physical Sciences</em>, vol. 236, no. 767, pp. 333–380, 1937.</p>
+                </div>
+                <div id="ref-Feldman:1997qc">
+                <p>[104] G. J. Feldman and R. D. Cousins, “A Unified approach to the classical statistical analysis of small signals,” <em>Phys. Rev.</em>, vol. D57, pp. 3873–3889, 1998.</p>
+                </div>
+                <div id="ref-Rolke:2004mj">
+                <p>[105] W. A. Rolke, A. M. Lopez, and J. Conrad, “Limits and confidence intervals in the presence of nuisance parameters,” <em>Nucl. Instrum. Meth.</em>, vol. A551, pp. 493–503, 2005.</p>
+                </div>
+                <div id="ref-james1975minuit">
+                <p>[106] F. James and M. Roos, “MINUIT: A system for function minimization and analysis of the parameter errors and corrections,” <em>Comput. Phys. Commun.</em>, vol. 10, nos. CERN-DD-75-20, pp. 343–367, 1975.</p>
+                </div>
+                <div id="ref-fisher_1925">
+                <p>[107] R. A. Fisher, “Theory of statistical estimation,” <em>Mathematical Proceedings of the Cambridge Philosophical Society</em>, vol. 22, no. 5, pp. 700–725, 1925.</p>
+                </div>
+                <div id="ref-cramer2016mathematical">
+                <p>[108] H. Cramér, <em>Mathematical methods of statistics (pms-9)</em>, vol. 9. Princeton university press, 2016.</p>
+                </div>
+                <div id="ref-rao1992information">
+                <p>[109] C. R. Rao, “Information and the accuracy attainable in the estimation of statistical parameters,” in <em>Breakthroughs in statistics</em>, Springer, 1992, pp. 235–247.</p>
+                </div>
+                <div id="ref-laplace1986memoir">
+                <p>[110] P. S. Laplace, “Memoir on the probability of the causes of events,” <em>Statistical Science</em>, vol. 1, no. 3, pp. 364–378, 1986.</p>
+                </div>
+                <div id="ref-Mitchell:1997:ML:541177">
+                <p>[111] T. M. Mitchell, <em>Machine learning</em>, 1st ed. New York, NY, USA: McGraw-Hill, Inc., 1997.</p>
+                </div>
+                <div id="ref-vapnik1999overview">
+                <p>[112] V. N. Vapnik, “An overview of statistical learning theory,” <em>IEEE transactions on neural networks</em>, vol. 10, no. 5, pp. 988–999, 1999.</p>
+                </div>
+                <div id="ref-friedman2001elements">
+                <p>[113] J. Friedman, T. Hastie, and R. Tibshirani, <em>The elements of statistical learning</em>, vol. 1. Springer series in statistics New York, NY, USA: 2001.</p>
+                </div>
+                <div id="ref-nguyen2013algorithms">
+                <p>[114] T. Nguyen and S. Sanner, “Algorithms for direct 0–1 loss optimization in binary classification,” in <em>International conference on machine learning</em>, 2013, pp. 1085–1093.</p>
+                </div>
+                <div id="ref-Goodfellow-et-al-2016">
+                <p>[115] I. Goodfellow, Y. Bengio, and A. Courville, <em>Deep learning</em>. MIT Press, 2016.</p>
+                </div>
+                <div id="ref-louppe2014understanding">
+                <p>[116] G. Louppe, “Understanding random forests: From theory to practice,” <em>arXiv preprint arXiv:1407.7502</em>, 2014.</p>
+                </div>
+                <div id="ref-freund1997decision">
+                <p>[117] Y. Freund and R. E. Schapire, “A decision-theoretic generalization of on-line learning and an application to boosting,” <em>Journal of computer and system sciences</em>, vol. 55, no. 1, pp. 119–139, 1997.</p>
+                </div>
+                <div id="ref-friedman2000additive">
+                <p>[118] J. Friedman, T. Hastie, R. Tibshirani, and others, “Additive logistic regression: A statistical view of boosting (with discussion and a rejoinder by the authors),” <em>The annals of statistics</em>, vol. 28, no. 2, pp. 337–407, 2000.</p>
+                </div>
+                <div id="ref-friedman2001greedy">
+                <p>[119] J. H. Friedman, “Greedy function approximation: A gradient boosting machine,” <em>Annals of statistics</em>, pp. 1189–1232, 2001.</p>
+                </div>
+                <div id="ref-mason2000boosting">
+                <p>[120] L. Mason, J. Baxter, P. L. Bartlett, and M. R. Frean, “Boosting algorithms as gradient descent,” in <em>Advances in neural information processing systems</em>, 2000, pp. 512–518.</p>
+                </div>
+                <div id="ref-breiman2017classification">
+                <p>[121] L. Breiman, <em>Classification and regression trees</em>. Routledge, 2017.</p>
+                </div>
+                <div id="ref-breiman1996bagging">
+                <p>[122] L. Breiman, “Bagging predictors,” <em>Machine learning</em>, vol. 24, no. 2, pp. 123–140, 1996.</p>
+                </div>
+                <div id="ref-chen2016xgboost">
+                <p>[123] T. Chen and C. Guestrin, “Xgboost: A scalable tree boosting system,” in <em>Proceedings of the 22nd acm sigkdd international conference on knowledge discovery and data mining</em>, 2016, pp. 785–794.</p>
+                </div>
+                <div id="ref-NoceWrig06">
+                <p>[124] J. Nocedal and S. J. Wright, <em>Numerical optimization</em>, Second. New York, NY, USA: Springer, 2006.</p>
+                </div>
+                <div id="ref-robbins1951stochastic">
+                <p>[125] H. Robbins and S. Monro, “A stochastic approximation method,” <em>The Annals of Mathematical Statistics</em>, vol. 22, no. 3, pp. 400–407, 1951.</p>
+                </div>
+                <div id="ref-ruder2016overview">
+                <p>[126] S. Ruder, “An overview of gradient descent optimization algorithms,” <em>arXiv preprint arXiv:1609.04747</em>, 2016.</p>
+                </div>
+                <div id="ref-cybenko1989approximation">
+                <p>[127] G. Cybenko, “Approximation by superpositions of a sigmoidal function,” <em>Mathematics of control, signals and systems</em>, vol. 2, no. 4, pp. 303–314, 1989.</p>
+                </div>
+                <div id="ref-baydin2018automatic">
+                <p>[128] A. G. Baydin, B. A. Pearlmutter, A. A. Radul, and J. M. Siskind, “Automatic differentiation in machine learning: A survey,” <em>Journal of Marchine Learning Research</em>, vol. 18, pp. 1–43, 2018.</p>
+                </div>
+                <div id="ref-tensorflow2015-whitepaper">
+                <p>[129] M. Abadi <em>et al.</em>, “TensorFlow: Large-scale machine learning on heterogeneous systems.” 2015.</p>
+                </div>
+                <div id="ref-paszke2017automatic">
+                <p>[130] A. Paszke <em>et al.</em>, “Automatic differentiation in pytorch,” in <em>NIPS-w</em>, 2017.</p>
+                </div>
+                <div id="ref-zaheer2017deep">
+                <p>[131] M. Zaheer, S. Kottur, S. Ravanbakhsh, B. Poczos, R. R. Salakhutdinov, and A. J. Smola, “Deep sets,” in <em>Advances in neural information processing systems</em>, 2017, pp. 3391–3401.</p>
+                </div>
+                <div id="ref-henrion2017neural">
+                <p>[132] I. Henrion <em>et al.</em>, “Neural message passing for jet physics,” 2017.</p>
+                </div>
+                <div id="ref-Guest:2018yhq">
+                <p>[133] D. Guest, K. Cranmer, and D. Whiteson, “Deep Learning and its Application to LHC Physics,” <em>Ann. Rev. Nucl. Part. Sci.</em>, vol. 68, pp. 161–181, 2018.</p>
+                </div>
+                <div id="ref-baldi2016parameterized">
+                <p>[134] P. Baldi, K. Cranmer, T. Faucett, P. Sadowski, and D. Whiteson, “Parameterized neural networks for high-energy physics,” <em>The European Physical Journal C</em>, vol. 76, no. 5, p. 235, 2016.</p>
+                </div>
+                <div id="ref-Guest:2016iqz">
+                <p>[135] D. Guest, J. Collado, P. Baldi, S.-C. Hsu, G. Urban, and D. Whiteson, “Jet Flavor Classification in High-Energy Physics with Deep Neural Networks,” <em>Phys. Rev.</em>, vol. D94, no. 11, p. 112002, 2016.</p>
+                </div>
+                <div id="ref-deOliveira:2015xxd">
+                <p>[136] L. de Oliveira, M. Kagan, L. Mackey, B. Nachman, and A. Schwartzman, “Jet-images — deep learning edition,” <em>JHEP</em>, vol. 7, p. 069, 2016.</p>
+                </div>
+                <div id="ref-chollet2015keras">
+                <p>[137] F. Chollet and others, “Keras.” <a href="https://keras.io">https://keras.io</a>, 2015.</p>
+                </div>
+                <div id="ref-CMS-DP-2018-058">
+                <p>[138] “Performance of the DeepJet b tagging algorithm using 41.9/fb of data from proton-proton collisions at 13TeV with Phase 1 CMS detector,” Nov. 2018.</p>
+                </div>
+                <div id="ref-stoye2017deepjet">
+                <p>[139] M. Stoye, J. Kieseler, H. Qu, L. Gouskos, and M. Verzetti, “DeepJet: Generic physics object based jet multiclass classification for lhc experiments.”</p>
+                </div>
+                <div id="ref-CMS-DP-2018-046">
+                <p>[140] “Performance of Deep Tagging Algorithms for Boosted Double Quark Jet Topology in Proton-Proton Collisions at 13 TeV with the Phase-0 CMS Detector,” Jul. 2018.</p>
+                </div>
+                <div id="ref-innocente2001cms">
+                <p>[141] V. Innocente, L. Silvestris, D. Stickland, and others, “CMS software architecture: Software framework, services and persistency in high level trigger, reconstruction and analysis,” <em>Computer Physics Communications</em>, vol. 140, nos. 1-2, pp. 31–44, 2001.</p>
+                </div>
+                <div id="ref-bird2005lhc">
+                <p>[142] I. Bird and R. W. Jones, “LHC computing grid: Technical design report,” 2005.</p>
+                </div>
+                <div id="ref-daniel_hay_guest_2018_1482645">
+                <p>[143] D. H. Guest <em>et al.</em>, “Lwtnn/lwtnn: Version 2.8.” Nov-2018.</p>
+                </div>
+                <div id="ref-marcel_cmssw">
+                <p>[144] M. Rieger, “CMSSW-dnn.” <a href="https://gitlab.cern.ch/mrieger/CMSSW-DNN">https://gitlab.cern.ch/mrieger/CMSSW-DNN</a>, 2017.</p>
+                </div>
+                <div id="ref-pablodecm_deepjet">
+                <p>[145] P. de Castro, M. Rieger, and others, “DeepJet integration.” <a href="https://github.com/cms-sw/cmssw/pull/19893">https://github.com/cms-sw/cmssw/pull/19893</a>, 2017.</p>
+                </div>
+                <div id="ref-markus_deepjet">
+                <p>[146] M. Stoye and others, “DeepJet software framework.” <a href="https://github.com/mstoye/DeepJet">https://github.com/mstoye/DeepJet</a>, 2017.</p>
+                </div>
+                <div id="ref-DeCastroManzano:2017yqy">
+                <p>[147] P. De Castro Manzano <em>et al.</em>, “Hemisphere Mixing: a Fully Data-Driven Model of QCD Multijet Backgrounds for LHC Searches,” <em>PoS</em>, vols. EPS-HEP2017, p. 370, 2017.</p>
+                </div>
+                <div id="ref-Sirunyan:2018tki">
+                <p>[148] A. M. Sirunyan and others, “Search for nonresonant Higgs boson pair production in the <span class="math inline">\(\mathrm{b\overline{b}b\overline{b}}\)</span> final state at <span class="math inline">\(\sqrt{s} =\)</span> 13 TeV,” <em>Submitted to: JHEP</em>, 2018.</p>
+                </div>
+                <div id="ref-Chatrchyan:2013lba">
+                <p>[149] S. Chatrchyan and others, “Observation of a new boson with mass near 125 GeV in pp collisions at <span class="math inline">\(\sqrt{s}\)</span> = 7 and 8 TeV,” <em>JHEP</em>, vol. 6, p. 081, 2013.</p>
+                </div>
+                <div id="ref-Khachatryan:2016vau">
+                <p>[150] G. Aad and others, “Measurements of the Higgs boson production and decay rates and constraints on its couplings from a combined ATLAS and CMS analysis of the LHC pp collision data at <span class="math inline">\(\sqrt{s}=7\)</span> and 8 TeV,” <em>JHEP</em>, vol. 8, p. 045, 2016.</p>
+                </div>
+                <div id="ref-Sirunyan:2018hoz">
+                <p>[151] A. M. Sirunyan and others, “Observation of <span class="math inline">\(\mathrm{t\overline{t}}\)</span>H production,” <em>Phys. Rev. Lett.</em>, vol. 120, no. 23, p. 231801, 2018.</p>
+                </div>
+                <div id="ref-Aaboud:2018urx">
+                <p>[152] M. Aaboud and others, “Observation of Higgs boson production in association with a top quark pair at the LHC with the ATLAS detector,” <em>Phys. Lett.</em>, vol. B784, pp. 173–191, 2018.</p>
+                </div>
+                <div id="ref-Dib:2005re">
+                <p>[153] C. O. Dib, R. Rosenfeld, and A. Zerwekh, “Double Higgs production and quadratic divergence cancellation in little Higgs models with T parity,” <em>JHEP</em>, vol. 5, p. 074, 2006.</p>
+                </div>
+                <div id="ref-Grober:2010yv">
+                <p>[154] R. Grober and M. Muhlleitner, “Composite Higgs Boson Pair Production at the LHC,” <em>JHEP</em>, vol. 6, p. 020, 2011.</p>
+                </div>
+                <div id="ref-Contino:2012xk">
+                <p>[155] R. Contino, M. Ghezzi, M. Moretti, G. Panico, F. Piccinini, and A. Wulzer, “Anomalous Couplings in Double Higgs Production,” <em>JHEP</em>, vol. 8, p. 154, 2012.</p>
+                </div>
+                <div id="ref-Dolan:2012ac">
+                <p>[156] M. J. Dolan, C. Englert, and M. Spannowsky, “New Physics in LHC Higgs boson pair production,” <em>Phys. Rev.</em>, vol. D87, no. 5, p. 055002, 2013.</p>
+                </div>
+                <div id="ref-Dawson:2015oha">
+                <p>[157] S. Dawson, A. Ismail, and I. Low, “What’s in the loop? The anatomy of double Higgs production,” <em>Phys. Rev.</em>, vol. D91, no. 11, p. 115008, 2015.</p>
+                </div>
+                <div id="ref-Baglio:2012np">
+                <p>[158] J. Baglio, A. Djouadi, R. Gröber, M. M. Mühlleitner, J. Quevillon, and M. Spira, “The measurement of the Higgs self-coupling at the LHC: theoretical status,” <em>JHEP</em>, vol. 4, p. 151, 2013.</p>
+                </div>
+                <div id="ref-Sirunyan:2017exp">
+                <p>[159] A. M. Sirunyan and others, “Measurements of properties of the Higgs boson decaying into the four-lepton final state in pp collisions at <span class="math inline">\(\sqrt{s}=13\)</span> TeV,” <em>JHEP</em>, vol. 11, p. 047, 2017.</p>
+                </div>
+                <div id="ref-deFlorian:2016spz">
+                <p>[160] D. de Florian and others, “Handbook of LHC Higgs Cross Sections: 4. Deciphering the Nature of the Higgs Sector,” 2016.</p>
+                </div>
+                <div id="ref-deFlorian:2013jea">
+                <p>[161] D. de Florian and J. Mazzitelli, “Higgs Boson Pair Production at Next-to-Next-to-Leading Order in QCD,” <em>Phys. Rev. Lett.</em>, vol. 111, p. 201801, 2013.</p>
+                </div>
+                <div id="ref-Dawson:1998py">
+                <p>[162] S. Dawson, S. Dittmaier, and M. Spira, “Neutral Higgs boson pair production at hadron colliders: QCD corrections,” <em>Phys. Rev.</em>, vol. D58, p. 115012, 1998.</p>
+                </div>
+                <div id="ref-Borowka:2016ehy">
+                <p>[163] S. Borowka <em>et al.</em>, “Higgs Boson Pair Production in Gluon Fusion at Next-to-Leading Order with Full Top-Quark Mass Dependence,” <em>Phys. Rev. Lett.</em>, vol. 117, no. 1, p. 012001, 2016.</p>
+                </div>
+                <div id="ref-deFlorian:2015moa">
+                <p>[164] D. de Florian and J. Mazzitelli, “Higgs pair production at next-to-next-to-leading logarithmic accuracy at the LHC,” <em>JHEP</em>, vol. 9, p. 053, 2015.</p>
+                </div>
+                <div id="ref-Carvalho:2016rys">
+                <p>[165] A. Carvalho <em>et al.</em>, “Analytical parametrization and shape classification of anomalous HH production in the EFT approach,” 2016.</p>
+                </div>
+                <div id="ref-Aad:2015uka">
+                <p>[166] G. Aad and others, “Search for Higgs boson pair production in the <span class="math inline">\(b\bar{b}b\bar{b}\)</span> final state from pp collisions at <span class="math inline">\(\sqrt{s} = 8\)</span> TeVwith the ATLAS detector,” <em>Eur. Phys. J.</em>, vol. C75, no. 9, p. 412, 2015.</p>
+                </div>
+                <div id="ref-Sirunyan:2017tqo">
+                <p>[167] A. M. Sirunyan and others, “Search for Higgs boson pair production in the <span class="math inline">\(bb\tau\tau\)</span> final state in proton-proton collisions at <span class="math inline">\(\sqrt{(}s)=8\text{ }\text{ }\mathrm{TeV}\)</span>,” <em>Phys. Rev.</em>, vol. D96, no. 7, p. 072004, 2017.</p>
+                </div>
+                <div id="ref-Aaboud:2018knk">
+                <p>[168] M. Aaboud and others, “Search for pair production of Higgs bosons in the <span class="math inline">\(b\bar{b}b\bar{b}\)</span> final state using proton-proton collisions at <span class="math inline">\(\sqrt{s} = 13\)</span> TeV with the ATLAS detector,” 2018.</p>
+                </div>
+                <div id="ref-Sirunyan:2017guj">
+                <p>[169] A. M. Sirunyan and others, “Search for resonant and nonresonant Higgs boson pair production in the <span class="math inline">\(\mathrm{b}\overline{\mathrm{b}}\mathit{\ell \nu \ell \nu }\)</span> final state in proton-proton collisions at <span class="math inline">\(\sqrt{s}=13\)</span> TeV,” <em>JHEP</em>, vol. 1, p. 054, 2018.</p>
+                </div>
+                <div id="ref-Sirunyan:2017djm">
+                <p>[170] A. M. Sirunyan and others, “Search for Higgs boson pair production in events with two bottom quarks and two tau leptons in proton-proton collisions at <span class="math inline">\(\sqrt s\)</span> =13TeV,” <em>Phys. Lett.</em>, vol. B778, pp. 101–127, 2018.</p>
+                </div>
+                <div id="ref-Sirunyan:2018iwt">
+                <p>[171] A. M. Sirunyan and others, “Search for Higgs boson pair production in the <span class="math inline">\(\gamma\gamma\mathrm{b\overline{b}}\)</span> final state in pp collisions at <span class="math inline">\(\sqrt{s}=\)</span> 13 TeV,” 2018.</p>
+                </div>
+                <div id="ref-Sirunyan:2018qca">
+                <p>[172] A. M. Sirunyan and others, “Search for production of Higgs boson pairs in the four b quark final state using large-area jets in proton-proton collisions at <span class="math inline">\(\sqrt{s}=\)</span> 13 TeV,” 2018.</p>
+                </div>
+                <div id="ref-Falkowski:2001958">
+                <p>[173] A. Falkowski, “Higgs Basis: Proposal for an EFT basis choice for LHC HXSWG,” Mar. 2015.</p>
+                </div>
+                <div id="ref-Carvalho:2015ttv">
+                <p>[174] A. Carvalho, M. Dall’Osso, T. Dorigo, F. Goertz, C. A. Gottardo, and M. Tosi, “Higgs Pair Production: Choosing Benchmarks With Cluster Analysis,” <em>JHEP</em>, vol. 4, p. 126, 2016.</p>
+                </div>
+                <div id="ref-Sirunyan:2018zkk">
+                <p>[175] A. M. Sirunyan and others, “Search for resonant pair production of Higgs bosons decaying to bottom quark-antiquark pairs in proton-proton collisions at 13 TeV,” <em>JHEP</em>, vol. 8, p. 152, 2018.</p>
+                </div>
+                <div id="ref-Alwall:2014hca">
+                <p>[176] J. Alwall <em>et al.</em>, “The automated computation of tree-level and next-to-leading order differential cross sections, and their matching to parton shower simulations,” <em>JHEP</em>, vol. 7, p. 079, 2014.</p>
+                </div>
+                <div id="ref-Hespel:2014sla">
+                <p>[177] B. Hespel, D. Lopez-Val, and E. Vryonidou, “Higgs pair production via gluon fusion in the Two-Higgs-Doublet Model,” <em>JHEP</em>, vol. 9, p. 124, 2014.</p>
+                </div>
+                <div id="ref-Ball:2014uwa">
+                <p>[178] R. D. Ball and others, “Parton distributions for the LHC Run II,” <em>JHEP</em>, vol. 4, p. 040, 2015.</p>
+                </div>
+                <div id="ref-Wertz:2632195">
+                <p>[179] S. Wertz and V. Lemaitre, “Search for Higgs boson pair production in the <span class="math inline">\(\mathrm{b\bar{b}} \ell \nu \ell \nu\)</span> final state with the CMS detector,” 2018.</p>
+                </div>
+                <div id="ref-pedregosa2011scikit">
+                <p>[180] F. Pedregosa <em>et al.</em>, “Scikit-learn: Machine learning in python,” <em>Journal of machine learning research</em>, vol. 12, no. Oct, pp. 2825–2830, 2011.</p>
+                </div>
+                <div id="ref-Sirunyan:2018nqx">
+                <p>[181] A. M. Sirunyan and others, “Measurement of the inelastic proton-proton cross section at <span class="math inline">\(\sqrt{s}=13\)</span> TeV,” <em>JHEP</em>, vol. 7, p. 161, 2018.</p>
+                </div>
+                <div id="ref-CMS:2017sdi">
+                <p>[182] “CMS Luminosity Measurements for the 2016 Data Taking Period,” CERN, Geneva, CMS-PAS-LUM-17-001, 2017.</p>
+                </div>
+                <div id="ref-Butterworth:2015oua">
+                <p>[183] J. Butterworth and others, “PDF4LHC recommendations for LHC Run II,” <em>J. Phys.</em>, vol. G43, p. 023001, 2016.</p>
+                </div>
+                <div id="ref-ATLAS:2011tau">
+                <p>[184] “Procedure for the LHC Higgs boson search combination in Summer 2011,” CERN, Geneva, CMS-NOTE-2011-005. ATL-PHYS-PUB-2011-11, Aug. 2011.</p>
+                </div>
+                <div id="ref-CMS-PAS-HIG-17-030">
+                <p>[185] “Combination of searches for Higgs boson pair production in proton-proton collisions at <span class="math inline">\(\sqrt{s} =
+                                       13~\mathrm{TeV}\)</span>,” CERN, Geneva, CMS-PAS-HIG-17-030, 2018.</p>
+                </div>
+                <div id="ref-deCastro:2018mgh">
+                <p>[186] P. De Castro and T. Dorigo, “INFERNO: Inference-Aware Neural Optimisation,” 2018.</p>
+                </div>
+                <div id="ref-wood2010statistical">
+                <p>[187] S. N. Wood, “Statistical inference for noisy nonlinear ecological dynamic systems,” <em>Nature</em>, vol. 466, no. 7310, p. 1102, 2010.</p>
+                </div>
+                <div id="ref-cranmer2015approximating">
+                <p>[188] K. Cranmer, J. Pavez, and G. Louppe, “Approximating likelihood ratios with calibrated discriminative classifiers,” <em>arXiv preprint arXiv:1506.02169</em>, 2015.</p>
+                </div>
+                <div id="ref-adam2015higgs">
+                <p>[189] C. Adam-Bourdarios, G. Cowan, C. Germain, I. Guyon, B. Kégl, and D. Rousseau, “The Higgs boson machine learning challenge,” in <em>Proceedings of the nips 2014 workshop on high-energy physics and machine learning</em>, 2015, vol. 42, pp. 19–55.</p>
+                </div>
+                <div id="ref-basu2011partial">
+                <p>[190] D. Basu, “On partial sufficiency: A review,” in <em>Selected works of debabrata basu</em>, Springer, 2011, pp. 291–303.</p>
+                </div>
+                <div id="ref-sprott1975marginal">
+                <p>[191] D. A. Sprott, “Marginal and conditional sufficiency,” <em>Biometrika</em>, vol. 62, no. 3, pp. 599–605, 1975.</p>
+                </div>
+                <div id="ref-tran2016edward">
+                <p>[192] D. Tran, A. Kucukelbir, A. B. Dieng, M. Rudolph, D. Liang, and D. M. Blei, “Edward: A library for probabilistic modeling, inference, and criticism,” <em>arXiv preprint arXiv:1610.09787</em>, 2016.</p>
+                </div>
+                <div id="ref-hocker2007tmva">
+                <p>[193] A. Hocker and others, “TMVA—toolkit for multivariate data analysis, in proceedings of 11th international workshop on advanced computing and analysis techniques in physics research,” <em>Amsterdam, The Netherlands</em>, 2007.</p>
+                </div>
+                <div id="ref-baldi2014searching">
+                <p>[194] P. Baldi, P. Sadowski, and D. Whiteson, “Searching for exotic particles in high-energy physics with deep learning,” <em>Nature communications</em>, vol. 5, p. 4308, 2014.</p>
+                </div>
+                <div id="ref-neal2008computing">
+                <p>[195] R. M. Neal, “Computing likelihood functions for high-energy physics experiments when distributions are defined by simulators with nuisance parameters,” in <em>PHYSTAT-lhc workshop on statistical issues for lhc physics</em>, 2007, pp. 111–118.</p>
+                </div>
+                <div id="ref-Brehmer:2018hga">
+                <p>[196] J. Brehmer, G. Louppe, J. Pavez, and K. Cranmer, “Mining gold from implicit models to improve likelihood-free inference,” 2018.</p>
+                </div>
+                <div id="ref-brehmer2018constraining">
+                <p>[197] J. Brehmer, K. Cranmer, G. Louppe, and J. Pavez, “Constraining effective field theories with machine learning,” <em>arXiv preprint arXiv:1805.00013</em>, 2018.</p>
+                </div>
+                <div id="ref-brehmer2018guide">
+                <p>[198] J. Brehmer, K. Cranmer, G. Louppe, and J. Pavez, “A guide to constraining effective field theories with machine learning,” <em>arXiv preprint arXiv:1805.00020</em>, 2018.</p>
+                </div>
+                <div id="ref-jiang2015learning">
+                <p>[199] B. Jiang, T.-y. Wu, C. Zheng, and W. H. Wong, “Learning summary statistic for approximate bayesian computation via deep neural network,” <em>arXiv preprint arXiv:1510.02175</em>, 2015.</p>
+                </div>
+                <div id="ref-louppe2017learning">
+                <p>[200] G. Louppe, M. Kagan, and K. Cranmer, “Learning to pivot with adversarial networks,” in <em>Advances in neural information processing systems</em>, 2017, pp. 982–991.</p>
+                </div>
+                <div id="ref-code_repository">
+                <p>[201] P. de Castro, “Code and manuscript for the paper "inferno: Inference-aware neural optimisation",” <em>GitHub repository</em>. <a href="https://github.com/pablodecm/paper-inferno">https://github.com/pablodecm/paper-inferno</a>; GitHub, 2018.</p>
+                </div>
+                <div id="ref-dillon2017tensorflow">
+                <p>[202] J. V. Dillon <em>et al.</em>, “TensorFlow distributions,” 2017.</p>
+                </div>
+                <div id="ref-barlow1990extended">
+                <p>[203] R. Barlow, “Extended maximum likelihood,” <em>Nuclear Instruments and Methods in Physics Research Section A: Accelerators, Spectrometers, Detectors and Associated Equipment</em>, vol. 297, no. 3, pp. 496–506, 1990.</p>
+                </div>
+                </div>
+                </div>
+                </section></div>
+          </div>
+        </div>
+        
+        
+      <a href="7-conclusions-and-prospects.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page">
+                <i class="fa fa-angle-left"></i></a></div>
+    </div>
+    
+
+    <script src="libs/gitbook/js/app.min.js"></script><script src="libs/gitbook/js/lunr.js"></script><script src="libs/gitbook/js/plugin-search.js"></script><script src="libs/gitbook/js/plugin-sharing.js"></script><script src="libs/gitbook/js/plugin-fontsettings.js"></script><script src="libs/gitbook/js/plugin-bookdown.js"></script><script src="libs/gitbook/js/jquery.highlight.js"></script><script>
+      gitbook.require(["gitbook"], function(gitbook) {
+        gitbook.start({
+"sharing": {
+"github": true,
+"facebook": false,
+"twitter": true,
+"google": false,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"all": ["facebook","twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"history": {
+"link": null,
+"text": null
+},
+"download": ["thesis.pdf"],
+"toc": {
+"collapse": "none"
+}
+});
+});
+    </script><script>
+      (function () {
+        var script = document.createElement("script");
+        script.type = "text/javascript";
+        var src = "true";
+        if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+        if (location.protocol !== "file:" && /^https?:/.test(src))
+          src = src.replace(/^https?:/, '');
+        script.src = src;
+        document.getElementsByTagName("head")[0].appendChild(script);
+      })();
+    </script><script src="https://hypothes.is/embed.js" async></script><link href="css/annotator.css" rel="stylesheet"></body></html>

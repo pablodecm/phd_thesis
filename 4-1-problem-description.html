@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang=""><head><script async src="https://www.googletagmanager.com/gtag/js?id=UA-71094563-2"></script><script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-71094563-2');
+    </script><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><title>Statistical Learning and Inference at Particle Collider Experiments</title><meta name="description" content="Statistical Learning and Inference at Particle Collider Experiments"><meta name="generator" content="bookdown #bookdown:version# and GitBook 2.6.7"><meta property="og:title" content="Statistical Learning and Inference at Particle Collider Experiments"><meta property="og:type" content="book"><meta name="github-repo" content="pablodecm/phd_thesis"><meta name="twitter:card" content="summary"><meta name="twitter:title" content="Statistical Learning and Inference at Particle Collider Experiments"><meta name="author" content="Pablo de Castro Manzano"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black"><script src="libs/jquery/jquery.min.js"></script><link href="libs/gitbook/css/style.css" rel="stylesheet"><link href="libs/gitbook/css/plugin-table.css" rel="stylesheet"><link href="libs/gitbook/css/plugin-bookdown.css" rel="stylesheet"><link href="libs/gitbook/css/plugin-highlight.css" rel="stylesheet"><link href="libs/gitbook/css/plugin-search.css" rel="stylesheet"><link href="libs/gitbook/css/plugin-fontsettings.css" rel="stylesheet"><link href="css/style.css" rel="stylesheet"><link href="css/toc.css" rel="stylesheet"></head><body>
+
+    
+    <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+      <div class="book-summary">
+        <nav role="navigation"><ul class="summary"><li>
+              <a href="./">PhD Thesis - Pablo de Castro</a>
+            </li>
+            <li class="divider">
+            <li class="chapter" data-level="" data-path="abstract.html">
+              <a href="abstract.html"><i class="fa fa-check"></i> Abstract</a>
+            </li>
+            <li class="chapter" data-level="" data-path="preface.html">
+              <a href="preface.html"><i class="fa fa-check"></i> Preface</a>
+            </li>
+            <li class="chapter" data-level="" data-path="acknowledgements.html">
+              <a href="acknowledgements.html"><i class="fa fa-check"></i> Acknowledgements</a>
+            </li>
+            <li class="chapter" data-level="" data-path="introduction.html">
+              <a href="introduction.html"><i class="fa fa-check"></i> Introduction</a>
+            </li>
+            <li class="chapter" data-level="1" data-path="1-theory-of-fundamental-interactions.html">
+              <a href="1-theory-of-fundamental-interactions.html"><i class="fa fa-check"></i><b>1</b> Theory of Fundamental Interactions</a>
+              <ul><li class="chapter" data-level="1.1" data-path="1-1-the-standard-model.html">
+                  <a href="1-1-the-standard-model.html"><i class="fa fa-check"></i><b>1.1</b> The Standard Model</a>
+                  <ul><li class="chapter" data-level="1.1.1" data-path="1-1-the-standard-model.html">
+                      <a href="1-1-the-standard-model.html#sec:qft_basics"><i class="fa fa-check"></i><b>1.1.1</b> Essentials of Quantum Field Theory</a>
+                    </li>
+                    <li class="chapter" data-level="1.1.2" data-path="1-1-the-standard-model.html">
+                      <a href="1-1-the-standard-model.html#sec:qcd_detail"><i class="fa fa-check"></i><b>1.1.2</b> Quantum Chromodynamics</a>
+                    </li>
+                    <li class="chapter" data-level="1.1.3" data-path="1-1-the-standard-model.html">
+                      <a href="1-1-the-standard-model.html#sec:ew_detail"><i class="fa fa-check"></i><b>1.1.3</b> Electroweak Interactions</a>
+                    </li>
+                    <li class="chapter" data-level="1.1.4" data-path="1-1-the-standard-model.html">
+                      <a href="1-1-the-standard-model.html#sec:ewsb_higgs"><i class="fa fa-check"></i><b>1.1.4</b> Symmetry Breaking and the Higgs Boson</a>
+                    </li>
+                  </ul></li>
+                <li class="chapter" data-level="1.2" data-path="1-2-beyond-the-standard-model.html">
+                  <a href="1-2-beyond-the-standard-model.html"><i class="fa fa-check"></i><b>1.2</b> Beyond the Standard Model</a>
+                  <ul><li class="chapter" data-level="1.2.1" data-path="1-2-beyond-the-standard-model.html">
+                      <a href="1-2-beyond-the-standard-model.html#known-limitations"><i class="fa fa-check"></i><b>1.2.1</b> Known Limitations</a>
+                    </li>
+                    <li class="chapter" data-level="1.2.2" data-path="1-2-beyond-the-standard-model.html">
+                      <a href="1-2-beyond-the-standard-model.html#sec:possible_ext"><i class="fa fa-check"></i><b>1.2.2</b> Possible Extensions</a>
+                    </li>
+                  </ul></li>
+                <li class="chapter" data-level="1.3" data-path="1-3-phenomenology-of-proton-collisions.html">
+                  <a href="1-3-phenomenology-of-proton-collisions.html"><i class="fa fa-check"></i><b>1.3</b> Phenomenology of Proton Collisions</a>
+                  <ul><li class="chapter" data-level="1.3.1" data-path="1-3-phenomenology-of-proton-collisions.html">
+                      <a href="1-3-phenomenology-of-proton-collisions.html#sec:main_obs"><i class="fa fa-check"></i><b>1.3.1</b> Main Observables</a>
+                    </li>
+                    <li class="chapter" data-level="1.3.2" data-path="1-3-phenomenology-of-proton-collisions.html">
+                      <a href="1-3-phenomenology-of-proton-collisions.html#sec:pdfs"><i class="fa fa-check"></i><b>1.3.2</b> Parton Distribution Functions</a>
+                    </li>
+                    <li class="chapter" data-level="1.3.3" data-path="1-3-phenomenology-of-proton-collisions.html">
+                      <a href="1-3-phenomenology-of-proton-collisions.html#sec:factorisation"><i class="fa fa-check"></i><b>1.3.3</b> Factorisation and Generation of Hard Processes</a>
+                    </li>
+                    <li class="chapter" data-level="1.3.4" data-path="1-3-phenomenology-of-proton-collisions.html">
+                      <a href="1-3-phenomenology-of-proton-collisions.html#sec:parton_showers"><i class="fa fa-check"></i><b>1.3.4</b> Hadronization and Parton Showers</a>
+                    </li>
+                  </ul></li>
+              </ul></li>
+            <li class="chapter" data-level="2" data-path="2-experiments-at-particle-colliders.html">
+              <a href="2-experiments-at-particle-colliders.html"><i class="fa fa-check"></i><b>2</b> Experiments at Particle Colliders</a>
+              <ul><li class="chapter" data-level="2.1" data-path="2-1-the-large-hadron-collider.html">
+                  <a href="2-1-the-large-hadron-collider.html"><i class="fa fa-check"></i><b>2.1</b> The Large Hadron Collider</a>
+                  <ul><li class="chapter" data-level="2.1.1" data-path="2-1-the-large-hadron-collider.html">
+                      <a href="2-1-the-large-hadron-collider.html#injection-and-acceleration-chain"><i class="fa fa-check"></i><b>2.1.1</b> Injection and Acceleration Chain</a>
+                    </li>
+                    <li class="chapter" data-level="2.1.2" data-path="2-1-the-large-hadron-collider.html">
+                      <a href="2-1-the-large-hadron-collider.html#sec:op_pars"><i class="fa fa-check"></i><b>2.1.2</b> Operation Parameters</a>
+                    </li>
+                    <li class="chapter" data-level="2.1.3" data-path="2-1-the-large-hadron-collider.html">
+                      <a href="2-1-the-large-hadron-collider.html#sec:pile_up"><i class="fa fa-check"></i><b>2.1.3</b> Multiple Hadron Interactions</a>
+                    </li>
+                    <li class="chapter" data-level="2.1.4" data-path="2-1-the-large-hadron-collider.html">
+                      <a href="2-1-the-large-hadron-collider.html#sec:lhc_experiments"><i class="fa fa-check"></i><b>2.1.4</b> Experiments</a>
+                    </li>
+                  </ul></li>
+                <li class="chapter" data-level="2.2" data-path="2-2-the-compact-muon-solenoid.html">
+                  <a href="2-2-the-compact-muon-solenoid.html"><i class="fa fa-check"></i><b>2.2</b> The Compact Muon Solenoid</a>
+                  <ul><li class="chapter" data-level="2.2.1" data-path="2-2-the-compact-muon-solenoid.html">
+                      <a href="2-2-the-compact-muon-solenoid.html#sec:exp_geom"><i class="fa fa-check"></i><b>2.2.1</b> Experimental Geometry</a>
+                    </li>
+                    <li class="chapter" data-level="2.2.2" data-path="2-2-the-compact-muon-solenoid.html">
+                      <a href="2-2-the-compact-muon-solenoid.html#sec:cms_magnet"><i class="fa fa-check"></i><b>2.2.2</b> Magnet</a>
+                    </li>
+                    <li class="chapter" data-level="2.2.3" data-path="2-2-the-compact-muon-solenoid.html">
+                      <a href="2-2-the-compact-muon-solenoid.html#sec:cms_tracking"><i class="fa fa-check"></i><b>2.2.3</b> Tracking System</a>
+                    </li>
+                    <li class="chapter" data-level="2.2.4" data-path="2-2-the-compact-muon-solenoid.html">
+                      <a href="2-2-the-compact-muon-solenoid.html#sec:cms_ecal"><i class="fa fa-check"></i><b>2.2.4</b> Electromagnetic Calorimeter</a>
+                    </li>
+                    <li class="chapter" data-level="2.2.5" data-path="2-2-the-compact-muon-solenoid.html">
+                      <a href="2-2-the-compact-muon-solenoid.html#sec:cms_hcal"><i class="fa fa-check"></i><b>2.2.5</b> Hadronic Calorimeter</a>
+                    </li>
+                    <li class="chapter" data-level="2.2.6" data-path="2-2-the-compact-muon-solenoid.html">
+                      <a href="2-2-the-compact-muon-solenoid.html#sec:cms_muon"><i class="fa fa-check"></i><b>2.2.6</b> Muon System</a>
+                    </li>
+                    <li class="chapter" data-level="2.2.7" data-path="2-2-the-compact-muon-solenoid.html">
+                      <a href="2-2-the-compact-muon-solenoid.html#sec:trigger"><i class="fa fa-check"></i><b>2.2.7</b> Trigger and Data Acquisition</a>
+                    </li>
+                  </ul></li>
+                <li class="chapter" data-level="2.3" data-path="2-3-event-simulation-and-reconstruction.html">
+                  <a href="2-3-event-simulation-and-reconstruction.html"><i class="fa fa-check"></i><b>2.3</b> Event Simulation and Reconstruction</a>
+                  <ul><li class="chapter" data-level="2.3.1" data-path="2-3-event-simulation-and-reconstruction.html">
+                      <a href="2-3-event-simulation-and-reconstruction.html#sec:gen_view"><i class="fa fa-check"></i><b>2.3.1</b> A Generative View</a>
+                    </li>
+                    <li class="chapter" data-level="2.3.2" data-path="2-3-event-simulation-and-reconstruction.html">
+                      <a href="2-3-event-simulation-and-reconstruction.html#sec:detector_simulation"><i class="fa fa-check"></i><b>2.3.2</b> Detector Simulation</a>
+                    </li>
+                    <li class="chapter" data-level="2.3.3" data-path="2-3-event-simulation-and-reconstruction.html">
+                      <a href="2-3-event-simulation-and-reconstruction.html#sec:event_reco"><i class="fa fa-check"></i><b>2.3.3</b> Event Reconstruction</a>
+                    </li>
+                  </ul></li>
+              </ul></li>
+            <li class="chapter" data-level="3" data-path="3-statistical-modelling-and-inference-at-the-lhc.html">
+              <a href="3-statistical-modelling-and-inference-at-the-lhc.html"><i class="fa fa-check"></i><b>3</b> Statistical Modelling and Inference at the LHC</a>
+              <ul><li class="chapter" data-level="3.1" data-path="3-1-statistical-modelling.html">
+                  <a href="3-1-statistical-modelling.html"><i class="fa fa-check"></i><b>3.1</b> Statistical Modelling</a>
+                  <ul><li class="chapter" data-level="3.1.1" data-path="3-1-statistical-modelling.html">
+                      <a href="3-1-statistical-modelling.html#sec:model_overview"><i class="fa fa-check"></i><b>3.1.1</b> Overview</a>
+                    </li>
+                    <li class="chapter" data-level="3.1.2" data-path="3-1-statistical-modelling.html">
+                      <a href="3-1-statistical-modelling.html#simulation-as-generative-modelling"><i class="fa fa-check"></i><b>3.1.2</b> Simulation as Generative Modelling</a>
+                    </li>
+                    <li class="chapter" data-level="3.1.3" data-path="3-1-statistical-modelling.html">
+                      <a href="3-1-statistical-modelling.html#sec:dim_reduction"><i class="fa fa-check"></i><b>3.1.3</b> Dimensionality Reduction</a>
+                    </li>
+                    <li class="chapter" data-level="3.1.4" data-path="3-1-statistical-modelling.html">
+                      <a href="3-1-statistical-modelling.html#sec:known_unknowns"><i class="fa fa-check"></i><b>3.1.4</b> Known Unknowns</a>
+                    </li>
+                  </ul></li>
+                <li class="chapter" data-level="3.2" data-path="3-2-statistical-inference.html">
+                  <a href="3-2-statistical-inference.html"><i class="fa fa-check"></i><b>3.2</b> Statistical Inference</a>
+                  <ul><li class="chapter" data-level="3.2.1" data-path="3-2-statistical-inference.html">
+                      <a href="3-2-statistical-inference.html#sec:likelihood-free"><i class="fa fa-check"></i><b>3.2.1</b> Likelihood-Free Inference</a>
+                    </li>
+                    <li class="chapter" data-level="3.2.2" data-path="3-2-statistical-inference.html">
+                      <a href="3-2-statistical-inference.html#sec:hypo_test"><i class="fa fa-check"></i><b>3.2.2</b> Hypothesis Testing</a>
+                    </li>
+                    <li class="chapter" data-level="3.2.3" data-path="3-2-statistical-inference.html">
+                      <a href="3-2-statistical-inference.html#sec:param_est"><i class="fa fa-check"></i><b>3.2.3</b> Parameter Estimation</a>
+                    </li>
+                  </ul></li>
+              </ul></li>
+            <li class="chapter" data-level="4" data-path="4-machine-learning-in-high-energy-physics.html">
+              <a href="4-machine-learning-in-high-energy-physics.html"><i class="fa fa-check"></i><b>4</b> Machine Learning in High-Energy Physics</a>
+              <ul><li class="chapter" data-level="4.1" data-path="4-1-problem-description.html">
+                  <a href="4-1-problem-description.html"><i class="fa fa-check"></i><b>4.1</b> Problem Description</a>
+                  <ul><li class="chapter" data-level="4.1.1" data-path="4-1-problem-description.html">
+                      <a href="4-1-problem-description.html#sec:supervised"><i class="fa fa-check"></i><b>4.1.1</b> Probabilistic Classification and Regression</a>
+                    </li>
+                  </ul></li>
+                <li class="chapter" data-level="4.2" data-path="4-2-machine-learning-techniques.html">
+                  <a href="4-2-machine-learning-techniques.html"><i class="fa fa-check"></i><b>4.2</b> Machine Learning Techniques</a>
+                  <ul><li class="chapter" data-level="4.2.1" data-path="4-2-machine-learning-techniques.html">
+                      <a href="4-2-machine-learning-techniques.html#sec:boosted_decision_trees"><i class="fa fa-check"></i><b>4.2.1</b> Boosted Decision Trees</a>
+                    </li>
+                    <li class="chapter" data-level="4.2.2" data-path="4-2-machine-learning-techniques.html">
+                      <a href="4-2-machine-learning-techniques.html#sec:ann"><i class="fa fa-check"></i><b>4.2.2</b> Artificial Neural Networks</a>
+                    </li>
+                  </ul></li>
+                <li class="chapter" data-level="4.3" data-path="4-3-applications-in-high-energy-physics.html">
+                  <a href="4-3-applications-in-high-energy-physics.html"><i class="fa fa-check"></i><b>4.3</b> Applications in High Energy Physics</a>
+                  <ul><li class="chapter" data-level="4.3.1" data-path="4-3-applications-in-high-energy-physics.html">
+                      <a href="4-3-applications-in-high-energy-physics.html#sec:sig_vs_bkg"><i class="fa fa-check"></i><b>4.3.1</b> Signal vs Background Classification</a>
+                    </li>
+                    <li class="chapter" data-level="4.3.2" data-path="4-3-applications-in-high-energy-physics.html">
+                      <a href="4-3-applications-in-high-energy-physics.html#sec:particle_id_reg"><i class="fa fa-check"></i><b>4.3.2</b> Particle Identification and Regression</a>
+                    </li>
+                  </ul></li>
+              </ul></li>
+            <li class="chapter" data-level="5" data-path="5-search-for-anomalous-higgs-pair-production-with-cms.html">
+              <a href="5-search-for-anomalous-higgs-pair-production-with-cms.html"><i class="fa fa-check"></i><b>5</b> Search for Anomalous Higgs Pair Production with CMS</a>
+              <ul><li class="chapter" data-level="5.1" data-path="5-1-introduction.html">
+                  <a href="5-1-introduction.html"><i class="fa fa-check"></i><b>5.1</b> Introduction</a>
+                </li>
+                <li class="chapter" data-level="5.2" data-path="5-2-higgs-pair-production-and-anomalous-couplings.html">
+                  <a href="5-2-higgs-pair-production-and-anomalous-couplings.html"><i class="fa fa-check"></i><b>5.2</b> Higgs Pair Production and Anomalous Couplings</a>
+                </li>
+                <li class="chapter" data-level="5.3" data-path="5-3-analysis-strategy.html">
+                  <a href="5-3-analysis-strategy.html"><i class="fa fa-check"></i><b>5.3</b> Analysis Strategy</a>
+                </li>
+                <li class="chapter" data-level="5.4" data-path="5-4-trigger-and-datasets.html">
+                  <a href="5-4-trigger-and-datasets.html"><i class="fa fa-check"></i><b>5.4</b> Trigger and Datasets</a>
+                </li>
+                <li class="chapter" data-level="5.5" data-path="5-5-event-selection.html">
+                  <a href="5-5-event-selection.html"><i class="fa fa-check"></i><b>5.5</b> Event Selection</a>
+                </li>
+                <li class="chapter" data-level="5.6" data-path="5-6-data-driven-background-estimation.html">
+                  <a href="5-6-data-driven-background-estimation.html"><i class="fa fa-check"></i><b>5.6</b> Data-Driven Background Estimation</a>
+                  <ul><li class="chapter" data-level="5.6.1" data-path="5-6-data-driven-background-estimation.html">
+                      <a href="5-6-data-driven-background-estimation.html#sec:hem_mixing"><i class="fa fa-check"></i><b>5.6.1</b> Hemisphere Mixing</a>
+                    </li>
+                    <li class="chapter" data-level="5.6.2" data-path="5-6-data-driven-background-estimation.html">
+                      <a href="5-6-data-driven-background-estimation.html#sec:bkg_validation"><i class="fa fa-check"></i><b>5.6.2</b> Background Validation</a>
+                    </li>
+                  </ul></li>
+                <li class="chapter" data-level="5.7" data-path="5-7-systematic-uncertainties.html">
+                  <a href="5-7-systematic-uncertainties.html"><i class="fa fa-check"></i><b>5.7</b> Systematic Uncertainties</a>
+                </li>
+                <li class="chapter" data-level="5.8" data-path="5-8-analysis-results.html">
+                  <a href="5-8-analysis-results.html"><i class="fa fa-check"></i><b>5.8</b> Analysis Results</a>
+                </li>
+                <li class="chapter" data-level="5.9" data-path="5-9-combination-with-other-decay-channels.html">
+                  <a href="5-9-combination-with-other-decay-channels.html"><i class="fa fa-check"></i><b>5.9</b> Combination with Other Decay Channels</a>
+                </li>
+              </ul></li>
+            <li class="chapter" data-level="6" data-path="6-inference-aware-neural-optimisation.html">
+              <a href="6-inference-aware-neural-optimisation.html"><i class="fa fa-check"></i><b>6</b> Inference-Aware Neural Optimisation</a>
+              <ul><li class="chapter" data-level="6.1" data-path="6-1-introduction.html">
+                  <a href="6-1-introduction.html"><i class="fa fa-check"></i><b>6.1</b> Introduction</a>
+                </li>
+                <li class="chapter" data-level="6.2" data-path="6-2-problem-statement.html">
+                  <a href="6-2-problem-statement.html"><i class="fa fa-check"></i><b>6.2</b> Problem Statement</a>
+                </li>
+                <li class="chapter" data-level="6.3" data-path="6-3-method.html">
+                  <a href="6-3-method.html"><i class="fa fa-check"></i><b>6.3</b> Method</a>
+                </li>
+                <li class="chapter" data-level="6.4" data-path="6-4-related-work.html">
+                  <a href="6-4-related-work.html"><i class="fa fa-check"></i><b>6.4</b> Related Work</a>
+                </li>
+                <li class="chapter" data-level="6.5" data-path="6-5-experiments.html">
+                  <a href="6-5-experiments.html"><i class="fa fa-check"></i><b>6.5</b> Experiments</a>
+                  <ul><li class="chapter" data-level="6.5.1" data-path="6-5-experiments.html">
+                      <a href="6-5-experiments.html#sec:synthetic_mixture"><i class="fa fa-check"></i><b>6.5.1</b> 3D Synthetic Mixture</a>
+                    </li>
+                  </ul></li>
+              </ul></li>
+            <li class="chapter" data-level="7" data-path="7-conclusions-and-prospects.html">
+              <a href="7-conclusions-and-prospects.html"><i class="fa fa-check"></i><b>7</b> Conclusions and Prospects</a>
+            </li>
+            <li class="chapter" data-level="" data-path="references.html">
+              <a href="references.html"><i class="fa fa-check"></i> References</a>
+            </li>
+          </ul></nav></div>
+
+      <div class="book-body">
+        <div class="body-inner">
+          <div class="book-header" role="navigation">
+            <h1>
+              <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Statistical Learning and Inference at Particle Collider Experiments</a>
+            </h1>
+          </div>
+
+          <div class="page-wrapper" tabindex="-1" role="main">
+            <div class="page-inner">
+
+              <section class="normal" id="section-"><div id="sec:problem_description" class="section level2">
+                <h2><span class="header-section-number">4.1</span> Problem Description</h2>
+                <p>Machine learning is the field that deals with algorithms, as described by computer programs, that are able to <em>learn</em> from data. A more formal definition of learning, yet general and useful in the context of this work, can be found in the literature <span class="citation">[<a href="references.html#ref-Mitchell:1997:ML:541177" role="doc-biblioref">111</a>]</span>: “A computer program is said to learn from experience <span class="math inline">\(E\)</span> with respect to some class of tasks <span class="math inline">\(T\)</span> and performance measure <span class="math inline">\(P\)</span>, if its performance at task in <span class="math inline">\(T\)</span>, as measured by <span class="math inline">\(P\)</span>, improves with experience <span class="math inline">\(E\)</span>”. The previous sentence clearly denotes the three key elements for learning in the context of computer algorithms: the task (or class of task) that to be accomplished <span class="math inline">\(T\)</span>, a quantitative and robust way to measure the performance on those tasks <span class="math inline">\(P\)</span> and a set of data that the algorithm can experience in order to improve <span class="math inline">\(E\)</span>.</p>
+                <p>The first step in order to tackle a problem with machine learning techniques is the formal definition of the task <span class="math inline">\(T\)</span>, together with a quantifiable metric that scores the accuracy on such task <span class="math inline">\(P\)</span>. In this section, the most common machine learning tasks that are of relevance for their possible use in particle collider experiments and similar scientific contexts are introduced. Simultaneously with the description of the tasks, performance measures and data, the main general machine learning concepts are reviewed.</p>
+                <div id="sec:supervised" class="section level3">
+                <h3><span class="header-section-number">4.1.1</span> Probabilistic Classification and Regression</h3>
+                <p>One of the conceptually simple, yet versatile, tasks that can be addressed with machine learning algorithms is <em>classification</em>. A classifier or a classification rule is a function <span class="math inline">\(f(\boldsymbol{x}) : \mathcal{X} \longrightarrow \mathcal{Y}\)</span> that predicts a label <span class="math inline">\(y \in \{0,...,k-1\}\)</span>, denoting correspondence to one category in a set of of <span class="math inline">\(k\)</span> categories, for each input <span class="math inline">\(\boldsymbol{x} \in \mathcal{X}\)</span>. The task of classification, in the context of machine learning algorithms, is to produce classification functions <span class="math inline">\(f(\boldsymbol{x})\)</span> that perform well on an unobserved set of data.</p>
+                <p>Classification is often framed as belonging to a larger category of tasks referred to as <em>supervised learning</em>, where the goal is predicting the value of an output variable <span class="math inline">\(\boldsymbol{y}\)</span> (here a multi-dimensional vector for generality) based on the observed values of the input variables <span class="math inline">\(\boldsymbol{x}\)</span>, based on a <em>learning set</em> of <span class="math inline">\(n\)</span> input vectors with known output values <span class="math inline">\(S = \{(\boldsymbol{x}_0,\boldsymbol{y}_0),...,(\boldsymbol{x}_n,\boldsymbol{y}_n)\}\)</span>. The output values <span class="math inline">\(\boldsymbol{y}\)</span> are known in the learning set, because they were previously determined by an external method, typically a teacher or supervisor looking at past observations, thus explaining the name of these family of techniques.</p>
+                <p>From a statistical standpoint, the input observations and target values from the learning set can be viewed as random variables sampled from a joint probability distribution <span class="math inline">\(p(\boldsymbol{x}, \boldsymbol{y})\)</span>, which is typically unknown. The family of supervised learning tasks also includes <em>regression</em>, which amounts to construct a <span class="math inline">\(f(\boldsymbol{x})\)</span> that can to predict a numerical target output <span class="math inline">\(\boldsymbol{y}\)</span>, and <em>structured output</em> tasks where the output vector <span class="math inline">\(\boldsymbol{y}\)</span> is a vector or a complex data structure where its elements are tightly interrelated. As will be reviewed in Section <a href="4-3-applications-in-high-energy-physics.html#sec:ml_hep">4.3</a>, most analysis problems amenable by machine learning in high-energy physics experiments are framed as classification and regression tasks, while the use of structured output tasks is instead not quite extended. The reconstruction of the set and properties of physical objects in an event directly from the detector readout could be framed as a structured output task, if it was to be approached directly using machine learning algorithms instead of the procedures described in Section <a href="2-3-event-simulation-and-reconstruction.html#sec:event_reco">2.3.3</a>.</p>
+                <p>The goal of supervised learning is not to perform well on the learning set <span class="math inline">\(S\)</span> used for improving at the specified task, but rather to perform well on additional unseen observations sampled from the joint distribution <span class="math inline">\(p(\boldsymbol{x}, \boldsymbol{y})\)</span>. Supervised learning algorithms exploit the conditional relations between the input and the output variables, in order to classify new observations better than a random classification rule that does not depend on the value of <span class="math inline">\(\boldsymbol{x}\)</span>. When using machine learning techniques in data analysis at the LHC, as will be reviewed in Section <a href="4-3-applications-in-high-energy-physics.html#sec:ml_hep">4.3</a>, simulated observations are used instead of expert-labelled past observations. Simulated observations correspond to random samples of the joint distribution over the latent variables for the generative model <span class="math inline">\(p(\boldsymbol{x}, \boldsymbol{z} | \boldsymbol{\theta})\)</span>, as described in Section <a href="3-1-statistical-modelling.html#sec:stat_model">3.1</a>.</p>
+                <p>In fact, the problem of inferring a subset of latent variables <span class="math inline">\(\boldsymbol{z}\)</span> of the statistical model for the raw detector readouts of a collider experiment <span class="math inline">\(\boldsymbol{x}\)</span>, or from any deterministic function of it <span class="math inline">\(\boldsymbol{s}(\boldsymbol{x})\)</span>, can be cast as a supervised learning problem. The learning set <span class="math inline">\(S\)</span> would consist of simulated observations <span class="math inline">\(\boldsymbol{x}_i\)</span> (or a summary of it <span class="math inline">\(\boldsymbol{s}(\boldsymbol{x}_i)\)</span>), and a matching subset of interest of the latent variables <span class="math inline">\(\boldsymbol{y}_i \in \mathcal{Y} \subseteq \mathcal{Z}\)</span>. The supervised learning task can then be viewed as the estimation of the conditional expectation value <span class="math inline">\(\mathbb{E}_{p(\boldsymbol{y} | \boldsymbol{x} = \boldsymbol{x}_i)} [\boldsymbol{y}]\)</span> for each given input observation <span class="math inline">\(\boldsymbol{x}_i\)</span>, thus characterising the probability distribution <span class="math inline">\(p(\boldsymbol{y} | \boldsymbol{x})\)</span>.</p>
+                <p>While several performance measures <span class="math inline">\(P\)</span> are possible for a given task <span class="math inline">\(T\)</span>, for supervised learning is common to use performance measures that estimate the expected prediction error, or risk <span class="math inline">\(R\)</span>, of a given predictor function <span class="math inline">\(f(\boldsymbol{x})\)</span>, which can normally be expressed as: <span id="eq:exp_pred_err"><span class="math display">\[
+                R(f) = \mathop{\mathbb{E}}_{
+                (\boldsymbol{x},\boldsymbol{y}) \sim p(\boldsymbol{x},\boldsymbol{y})}
+                \left [ L(\boldsymbol{y}, f(\boldsymbol{x})) \right ]
+                \qquad(4.1)\]</span></span> where <span class="math inline">\(L\)</span> is a <em>loss function</em> that quantifies the discrepancy between the true output and the prediction. The quantity defined in Equation <a href="4-1-problem-description.html#eq:exp_pred_err">4.1</a> is often also referred to as <em>risk</em>, <em>test error</em>, or also as <em>generalisation error</em>.</p>
+                <p>The optimal model for a given task <span class="math inline">\(T\)</span> thus depends on the definition of its loss function <span class="math inline">\(L\)</span>, if the objective is minimising the expected prediction error. In practice, the expected prediction error cannot be estimated analytically because <span class="math inline">\(p(\boldsymbol{x}, \boldsymbol{y})\)</span> is not known, or not tractable in the case of a generative simulation model. The generalisation error has thus to be estimated from a subset of labelled samples <span class="math inline">\(S'=\{(\boldsymbol{x}_0,\boldsymbol{y}_0),...,(\boldsymbol{x}_{n'},\boldsymbol{y}_{n'})\}\)</span> as follows: <span id="eq:erm"><span class="math display">\[
+                R(f) \approx R_\textrm{S'} = \frac{1}{n'}
+                \sum_{(\boldsymbol{x}_i,\boldsymbol{y}_i) \in S'} L(\boldsymbol{y}_i,f(\boldsymbol{x}_i))
+                \qquad(4.2)\]</span></span> which is also commonly referred to as <em>empirical risk</em> approximation <span class="math inline">\(R_\textrm{S'}\)</span>(f) based on the set <span class="math inline">\(S'\)</span>. The supervised learning problem can then be stated as one of finding the function <span class="math inline">\(\hat{f}\)</span> from a class of functions <span class="math inline">\(\mathcal{F}\)</span>, which depends on the particularities of the algorithm, that minimises the empirical risk over the learning set <span class="math inline">\(S\)</span>: <span id="eq:learning_erm"><span class="math display">\[
+                \hat{f} = \mathop{\textrm{arg min}}_{f \in \mathcal{F}} R_S(f)
+                \qquad(4.3)\]</span></span> which is referred to as empirical risk minimisation (ERM) <span class="citation">[<a href="references.html#ref-vapnik1999overview" role="doc-biblioref">112</a>]</span>, and it is at core of most of the existing learning techniques, such as those described in Section <a href="4-2-machine-learning-techniques.html#sec:ml_techniques">4.2</a>. However, the ultimate goal of a learning algorithm is to find a function <span class="math inline">\(f^*\)</span> that minimises the risk or expected prediction error <span class="math inline">\(R(f)\)</span>: <span id="eq:learning_rm"><span class="math display">\[
+                f^* = \mathop{\textrm{arg min}}_{f \in \mathcal{F}} R(f)
+                \qquad(4.4)\]</span></span> where <span class="math inline">\(R(f)\)</span> is the quantity defined in Equation <a href="4-1-problem-description.html#eq:exp_pred_err">4.1</a>, corresponding to the generalisation error, or average expected performance on unseen observations sampled from <span class="math inline">\(p(\boldsymbol{x}, \boldsymbol{y})\)</span>. The previous equation can be used to define the optimal prediction function <span class="math inline">\(f_B(\boldsymbol{x})\)</span>, also referred as <em>Bayes model</em>, which represents the minimal error that any supervised learning algorithm can achieve due to the intrinsic statistical fluctuations and properties in the data. The Bayes model can be expressed as: <span id="eq:bayes_optimal_model"><span class="math display">\[
+                f_B(\boldsymbol{x}) = \mathop{\textrm{arg min}}_{\boldsymbol{y} \in \mathcal{Y}}  \mathop{\mathbb{E}}_{
+                \boldsymbol{y} \sim p(\boldsymbol{y} | \boldsymbol{x})}
+                \left [ L(\boldsymbol{y}, f(\boldsymbol{x})) \right ]
+                \qquad(4.5)\]</span></span> where the last term indicates the optimal choice of target <span class="math inline">\(\boldsymbol{y}\)</span> for each value of <span class="math inline">\(\boldsymbol{x}\)</span>. The previous expression can be obtained by explicitly considering the conditional expectation in the risk term described in Equation <a href="4-1-problem-description.html#eq:learning_rm">4.4</a>, that is <span class="math inline">\(R(h) = \mathbb{E}_{\boldsymbol{x} \sim p(\boldsymbol{x} | \boldsymbol{y})} \left [ \mathbb{E}_{\boldsymbol{y} \sim p(\boldsymbol{y} | \boldsymbol{x})} \left [ L(\boldsymbol{y}, f(\boldsymbol{x})) \right ] \right ]\)</span>, that can be obtained using Bayes theorem. The Bayes model <span class="math inline">\(f_B(\boldsymbol{x})\)</span>, and its corresponding risk <span class="math inline">\(R(f_B)\)</span>, also referred as <em>residual error</em>, can only be estimated if <span class="math inline">\(p(\boldsymbol{x},\boldsymbol{y})\)</span> is known and the expectation can be computed analytically. Even though the Bayes optimal model cannot be obtained for real world problems, it can be useful nevertheless when benchmarking techniques in synthetic datasets or for theoretical studies.</p>
+                <p>Because most learning algorithms optimise <span class="math inline">\(f\)</span>, or its parameters, using the learning set <span class="math inline">\(S\)</span>, the empirical risk <span class="math inline">\(R_\textrm{S}(f)\)</span> is not a good estimator of the expected generalisation error <span class="math inline">\(R(f)\)</span>. In general, <span class="math inline">\(R_\textrm{S}(f)\)</span> underestimates <span class="math inline">\(R_\textrm{S}(f)\)</span> because the statistical fluctuations of the finite number of observations in <span class="math inline">\(S\)</span> can be learnt to increase the performance on <span class="math inline">\(S\)</span>, while they are not useful for prediction on a new set of observations. If the family of functions <span class="math inline">\(\mathcal{F}\)</span> considered in the learning algorithm is flexible enough, which is often the case, it is possible to achieve <span class="math inline">\(R_\textrm{S}(f)=0\)</span> for the learning set <span class="math inline">\(S\)</span> while the generalisation error <span class="math inline">\(R(f)\)</span> is well away from zero. This effect can actually lead to a degradation of the generalisation error while the empirical risk in the learning set is decreasing during the learning procedure, which is often referred to as <em>over-fitting</em>.</p>
+                <p>To compare different prediction functions or to realistically evaluate the generalised performance of a given prediction model <span class="math inline">\(f\)</span>, it is useful to be able to compute unbiased estimates of <span class="math inline">\(R(f)\)</span>. The simplest way to obtain such estimate is to divide the learning set <span class="math inline">\(S\)</span> into two disjoint random subsets <span class="math inline">\(S_\textrm{train}\)</span> and <span class="math inline">\(S_\textrm{test}\)</span>. The train subset <span class="math inline">\(S_\textrm{train}\)</span> will be used by the learning algorithm to optimise the prediction function <span class="math inline">\(f\)</span> by means of empirical risk minimisation, as described in Equation <a href="4-1-problem-description.html#eq:learning_erm">4.3</a>. The hold-out or test subset <span class="math inline">\(S_\textrm{test}\)</span> can then be used to obtain an unbiased estimation of the performance of <span class="math inline">\(f\)</span> on unseen observations.</p>
+                <p>For many learning algorithms, the learning process, or <em>training</em>, is iterative: the function <span class="math inline">\(f\)</span> is optimised incrementally based on the training data. In those cases, an estimation of the generalisation error as the training evolves may be useful to stop the training procedure and avoid the degradation of generalisation due over-fitting, in what is referred as <em>early stopping</em>. In those cases, as well as to compare and ensemble the results of various predictor functions and model configurations, is useful to hold out a fraction of <span class="math inline">\(S_\textrm{train}\)</span> which is commonly referred as validation set <span class="math inline">\(S_\textrm{valid}\)</span>. Alternative approaches to estimate the generalisation error exist, including <em>cross-validation</em> and its variations <span class="citation">[<a href="references.html#ref-friedman2001elements" role="doc-biblioref">113</a>]</span>, which are usually preferred when the amount of training data is reduced.</p>
+                <p>Another important concept for most machine learning techniques is that of <em>hyper-parameters</em>. The majority of machine learning algorithms depend on a set of parameters that regulate the flexibility of the family of functions <span class="math inline">\(\mathcal{F}\)</span> to consider for empirical risk minimisation as well as the details of the optimisation procedure followed to solve the task presented in Equation <a href="4-1-problem-description.html#eq:learning_erm">4.3</a>. The expected performance of a given model depends on these parameters, however their optimal value depends on the particularities of the data (e.g. number of input dimensions or number of size of the data size). This motivates the notion of <em>hyper-parameter optimisation</em>, where the performance of the various choices of hyper-parameters is evaluated on the validation set or by means of cross-validation techniques, in order to select the best configuration.</p>
+                <p>The loss function <span class="math inline">\(L\)</span> of a supervised learning algorithm, which quantifies the discrepancies between the prediction and the true output target, depends on the task <span class="math inline">\(T\)</span> and formally defines it. A principled loss function for classification is the <em>zero-one loss</em>, which is defined as zero when the prediction <span class="math inline">\(f(\boldsymbol{x})\)</span> matches the target <span class="math inline">\(y\)</span> and one otherwise. The zero-one risk can then be expressed as: <span id="eq:zero_one_risk"><span class="math display">\[
+                R_{0-1}(f) = \mathop{\mathbb{E}}_{
+                (\boldsymbol{x},y) \sim p(\boldsymbol{x},y)}
+                \left [ \mathbb{1}(y \neq f(\boldsymbol{x})) \right ]
+                \qquad(4.6)\]</span></span> where <span class="math inline">\(\mathbb{1}(y \neq f(\boldsymbol{x}))\)</span> is an indicator function, which was defined in Equation <a href="3-1-statistical-modelling.html#eq:indicator">3.6</a>. The zero-one loss is non-differentiable when <span class="math inline">\(y =f(\boldsymbol{x})\)</span> and its gradients are zero elsewhere; in addition, it is not convex, a property which makes the minimisation task in Equation <a href="4-1-problem-description.html#eq:learning_erm">4.3</a> hard to tackle by optimisation algorithms. In fact, it can be proven that finding the function <span class="math inline">\(f\)</span> in <span class="math inline">\(F\)</span> that minimises directly the <span class="math inline">\(R_{0-1}\)</span> empirical risk with a training sample is a NP-hard problem <span class="citation">[<a href="references.html#ref-nguyen2013algorithms" role="doc-biblioref">114</a>]</span>. The Bayes optimal classifier for the 0-1 loss can nevertheless be easily obtained from Equation <a href="4-1-problem-description.html#eq:bayes_optimal">4.7</a> as a function of the conditional expectation: <span id="eq:bayes_optimal"><span class="math display">\[
+                f_B(\boldsymbol{x}) = \mathop{\textrm{arg min}}_{y \in \mathcal{Y}}  \mathop{\mathbb{E}}_{
+                y \sim p(\boldsymbol{y} | \boldsymbol{x})}
+                \left [ \mathbb{1}(y \neq f(\boldsymbol{x})) \right ] =
+                \mathop{\textrm{arg max}}_{y \in \mathcal{Y}} p(y | \boldsymbol{x})
+                \qquad(4.7)\]</span></span> thus the optimal classifier amounts to the prediction of the most likely output category <span class="math inline">\(y\)</span> for a given input <span class="math inline">\(\boldsymbol{x}\)</span>. The previous problem is normally referred to as <em>hard classification</em>, where the objective is to assign a category for each input observation. Because most problem in high-energy physics that can be cast as supervised learning are ultimate inference problems as will be reviewed in Section <a href="4-3-applications-in-high-energy-physics.html#sec:ml_hep">4.3</a>, it is generally more useful to consider the problem of <em>soft classification</em>, which instead amounts to estimate the class probability for each input <span class="math inline">\(\boldsymbol{x}\)</span>.</p>
+                <p>Soft classification is especially useful when the classes are not separable, which is often the case for applications in collider experiments. Luckily, soft classification is also a consequence of most convex relaxations of the zero-one loss of Equation <a href="4-1-problem-description.html#eq:zero_one_risk">4.6</a>. For a two-class classification problem, e.g signal versus background, a useful approximation of the zero-one loss is the binary cross entropy, defined as: <span id="eq:binary_xe"><span class="math display">\[
+                L_\textrm{BCE} ( y , f(\boldsymbol{x})) = -y \log (f(\boldsymbol{x})) - (1-y) \log (1 - f(\boldsymbol{x}))
+                \qquad(4.8)\]</span></span> where now the one-dimensional output prediction <span class="math inline">\(f(\boldsymbol{x})\)</span>, when bounded between 0 and 1 (e.g. using a sigmoid/logistic function), will effectively approximate the conditional probability <span class="math inline">\(p(\boldsymbol{y} = 1 | \boldsymbol{x})\)</span>. In fact, the Bayes optimal model for a binary cross-entropy classifier is: <span id="eq:bayes_optimal_bce"><span class="math display">\[ \begin{aligned}
+                f_B(\boldsymbol{x}) &amp;= \mathop{\mathbb{E}}_{
+                (\boldsymbol{x},y) \sim p(\boldsymbol{x},y)}
+                \left [ L_\textrm{BCE} ( y , f(\boldsymbol{x}))  \right ] =
+                p(y = 1| \boldsymbol{x}) \\
+                &amp;= \frac{p(\boldsymbol{x} | y = 1) p(y = 1)}{
+                \sum_{\forall y_i \in \{0,1\}}p(\boldsymbol{x} | y = y_i) p(y = y_i)} =
+                \left ( 1 +
+                \frac{p(\boldsymbol{x} | y = 0) p(y = 0)}{
+                p(\boldsymbol{x} | y = 1) p(y = 1)} \right )^{-1}
+                \end{aligned}
+                \qquad(4.9)\]</span></span> where the second line in the equation is a direct consequence of Bayes theorem and from the last term it can be clearly seen that the prediction output is monotonic with the density ratio between the probability density functions for each category. Similar results can be obtained for the Bayes optimal classifier when using other soft relaxations of the zero-one function. Machine learning binary classifiers will effectively approximate this quantity directly from empirical samples, where the prior probabilities of each class represent the relative presence of observations from each category.</p>
+                <p>Binary cross entropy is a subclass of the more general <em>cross entropy</em> loss function, that can be used for <span class="math inline">\(k\)</span>-categories classification, commonly referred to as multi-class classification. In these cases, a k-dimensional vector target <span class="math inline">\(\boldsymbol{y}\)</span> is often constructed, where each component <span class="math inline">\(y_i\)</span> is one if the observation belongs to the class <span class="math inline">\(i\)</span> or zero otherwise, and the output of the prediction function <span class="math inline">\(\boldsymbol{\hat{y}} = f(\boldsymbol{x})\)</span> is also a vector of <span class="math inline">\(k\)</span> components. Within this framework, the cross entropy loss can then be defined as: <span id="eq:general_ce"><span class="math display">\[
+                L_\textrm{CE} ( \boldsymbol{y} , f(\boldsymbol{x})) = - \sum_i y_i \log \hat{y}_i
+                \qquad(4.10)\]</span></span> which can be used to recover Equation <a href="4-1-problem-description.html#eq:binary_xe">4.8</a> when <span class="math inline">\(k=2\)</span>, considering the one-dimensional target and prediction as the i=1 elements and that <span class="math inline">\(y_0=1-y\)</span> and <span class="math inline">\(\hat{y}_0=1-f(x)\)</span>. If the prediction output is to generally represent exclusive class probabilities, as is the goal of soft classification, the prediction sum is expected to be one. A simple way to ensure the aforementioned property is to apply a function that ensures that the prediction outputs are in the range <span class="math inline">\([0,1]\)</span> and normalised so <span class="math inline">\(\sum_i \hat{y}_i=1\)</span>. The <em>softmax function</em> is a common choice to achieving the mentioned transformation within the field of machine learning. It is a generalisation of the logistic function to <span class="math inline">\(k\)</span> dimensions, and is defined as: <span id="eq:softmax_function"><span class="math display">\[
+                \hat{y}_i = \frac{e^{f_i(\boldsymbol{x})/\tau}}
+                                  {\sum_{j=0}^{k} e^{f_j(\boldsymbol{x})/\tau}}
+                \qquad(4.11)\]</span></span> where <span class="math inline">\(f_i\)</span> and <span class="math inline">\(f_j\)</span> refer to the <span class="math inline">\(i\)</span> and <span class="math inline">\(j\)</span> elements of the vector function <span class="math inline">\(f(\boldsymbol{x})\)</span> and <span class="math inline">\(\tau\)</span> is the temperature, a parameter that regulates the softness of the operator which is often omitted (i.e. <span class="math inline">\(\tau=1\)</span>). In the limit of <span class="math inline">\(\tau \rightarrow 0^{+}\)</span>, the probability of the largest component will tend to 1 while others to 0. The softmax output can be used to represent the probability distribution of a categorical distribution in a differentiable way, where the outcome represent the probabilities of each of the <span class="math inline">\(k\)</span> possible outcomes. We will make use of this function in Chapter <a href="6-inference-aware-neural-optimisation.html#sec:inferno">6</a>. When the softmax function and the cross entropy loss are used together for multiclass classification, the optimal Bayes model is: <span id="eq:bayes_optimal_ce"><span class="math display">\[
+                \begin{aligned}
+                {f_{B,i}} (\boldsymbol{x}) &amp;= \mathop{\mathbb{E}}_{
+                (\boldsymbol{x},y) \sim p(\boldsymbol{x},y)}
+                \left [ L_\textrm{CE} ( y , f(\boldsymbol{x}))  \right ] =
+                p(y = y_i| \boldsymbol{x}) \\
+                &amp;= \frac{p(\boldsymbol{x} | y = y_i) p(y = y_i)}{
+                \sum_{\forall y_i \in \{0,..., k-1\}}p(\boldsymbol{x} | y = y_i)
+                p(y = y_i)}
+                \end{aligned}
+                \qquad(4.12)\]</span></span> which can also be expressed as a function of a sum of density ratios of the categories.</p>
+                </div>
+                </div>
+                </section></div>
+          </div>
+        </div>
+        
+        
+      <a href="4-2-machine-learning-techniques.html" class="navigation navigation-next" aria-label="Next page">
+                <i class="fa fa-angle-right"></i></a><a href="4-machine-learning-in-high-energy-physics.html" class="navigation navigation-prev" aria-label="Previous page">
+                <i class="fa fa-angle-left"></i></a></div>
+    </div>
+    
+
+    <script src="libs/gitbook/js/app.min.js"></script><script src="libs/gitbook/js/lunr.js"></script><script src="libs/gitbook/js/plugin-search.js"></script><script src="libs/gitbook/js/plugin-sharing.js"></script><script src="libs/gitbook/js/plugin-fontsettings.js"></script><script src="libs/gitbook/js/plugin-bookdown.js"></script><script src="libs/gitbook/js/jquery.highlight.js"></script><script>
+      gitbook.require(["gitbook"], function(gitbook) {
+        gitbook.start({
+"sharing": {
+"github": true,
+"facebook": false,
+"twitter": true,
+"google": false,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"all": ["facebook","twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"history": {
+"link": null,
+"text": null
+},
+"download": ["thesis.pdf"],
+"toc": {
+"collapse": "none"
+}
+});
+});
+    </script><script>
+      (function () {
+        var script = document.createElement("script");
+        script.type = "text/javascript";
+        var src = "true";
+        if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+        if (location.protocol !== "file:" && /^https?:/.test(src))
+          src = src.replace(/^https?:/, '');
+        script.src = src;
+        document.getElementsByTagName("head")[0].appendChild(script);
+      })();
+    </script><script src="https://hypothes.is/embed.js" async></script><link href="css/annotator.css" rel="stylesheet"></body></html>
